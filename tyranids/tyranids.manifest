@@ -199,7 +199,7 @@
           ]
         },
         "rules": {
-          "Adjusted Power Level": {
+          "adjusted power level": {
             "evals": [
               {
                 "paths": [
@@ -241,7 +241,7 @@
                   [
                     "{self}",
                     "rules",
-                    "Adjusted Power Level",
+                    "adjusted power level",
                     "evals",
                     "1",
                     "result",
@@ -251,7 +251,7 @@
                 "value": [
                   "{self}",
                   "rules",
-                  "Adjusted Power Level",
+                  "adjusted power level",
                   "evals",
                   "1",
                   "result",
@@ -267,7 +267,7 @@
                   [
                     "{self}",
                     "rules",
-                    "Adjusted Power Level",
+                    "adjusted power level",
                     "evals",
                     "1",
                     "result",
@@ -277,7 +277,7 @@
                 "min": [
                   "{self}",
                   "rules",
-                  "Adjusted Power Level",
+                  "adjusted power level",
                   "evals",
                   "1",
                   "result",
@@ -293,7 +293,7 @@
                   [
                     "{self}",
                     "rules",
-                    "Adjusted Power Level",
+                    "adjusted power level",
                     "evals",
                     "2",
                     "result",
@@ -302,7 +302,7 @@
                   [
                     "{self}",
                     "rules",
-                    "Adjusted Power Level",
+                    "adjusted power level",
                     "evals",
                     "3",
                     "result",
@@ -320,7 +320,7 @@
                   [
                     "{self}",
                     "rules",
-                    "Adjusted Power Level",
+                    "adjusted power level",
                     "evals",
                     "1",
                     "result",
@@ -329,7 +329,7 @@
                   [
                     "{self}",
                     "rules",
-                    "Adjusted Power Level",
+                    "adjusted power level",
                     "evals",
                     "4",
                     "result",
@@ -367,7 +367,7 @@
                 "value": [
                   "{self}",
                   "rules",
-                  "Adjusted Power Level",
+                  "adjusted power level",
                   "evals",
                   "5",
                   "result",
@@ -544,57 +544,6 @@
                 "actionType": "set",
                 "value": "always",
                 "iterations": 1
-              }
-            ]
-          },
-          "reset points": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "processed",
-                    "numeric",
-                    "default"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Converting the default Points value into a negative number.",
-                "equation": {
-                  "operator": "T*O",
-                  "value": -1
-                }
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "order": 1,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "value"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": [
-                  "{self}",
-                  "rules",
-                  "Reset Points",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ],
-                "iterations": 1,
-                "note": "Removing the default Points value, because this default value is used for display purposes."
               }
             ]
           },
@@ -812,6 +761,83 @@
                   "rank",
                   "current"
                 ],
+                "iterations": 1
+              }
+            ]
+          },
+          "use points": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Mode",
+                    "value"
+                  ]
+                ],
+                "value": "Points",
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
+                "iterations": 1
+              }
+            ]
+          },
+          "use power level": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Mode",
+                    "value"
+                  ]
+                ],
+                "value": "Power Level",
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "visibility"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Model",
+                    "stats",
+                    "Points",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -2858,6 +2884,11 @@
           }
         },
         "classification": "Model",
+        "assets": {
+          "traits": [
+            "Weapons§Hormagaunt talons"
+          ]
+        },
         "designation": "Hormagaunt"
       },
       "Model§Lictor": {
@@ -3157,7 +3188,7 @@
         "classification": "Model",
         "designation": "Zoanthrope"
       },
-      "Roster§Roster": {
+      "Roster§Army": {
         "classification": "Roster",
         "aspects": {
           "Lock Qty": true,
@@ -3245,20 +3276,18 @@
           },
           "Mode": {
             "statType": "rank",
+            "value": "Points",
             "ranks": {
-              "0": {
-                "order": 0,
-                "format": "Power Level"
+              "Points": {
+                "order": 0
               },
-              "1": {
-                "order": 1,
-                "format": "Points"
+              "Power Level": {
+                "order": 1
               }
             },
             "statOrder": 4,
             "visibility": "active",
-            "dynamic": true,
-            "value": "1"
+            "dynamic": true
           }
         },
         "allowed": {
@@ -3267,132 +3296,6 @@
           ]
         },
         "rules": {
-          "Set maxes": {
-            "evals": [],
-            "failState": "pass",
-            "evaluate": "OR",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Power Level",
-                    "max"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "tracked",
-                  "maxPowerLevel"
-                ],
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "max"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "tracked",
-                  "maxPoints"
-                ],
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Detachment",
-                    "max"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "tracked",
-                  "maxDetachments"
-                ],
-                "iterations": 1
-              }
-            ]
-          },
-          "use Power Level": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Mode",
-                    "value"
-                  ]
-                ],
-                "value": "0",
-                "operator": "AND",
-                "not": false
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "visibility"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "hidden",
-                "iterations": 1
-              }
-            ]
-          },
-          "use Points": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Mode",
-                    "value"
-                  ]
-                ],
-                "value": "1",
-                "operator": "AND",
-                "not": false
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Power Level",
-                    "visibility"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "hidden",
-                "iterations": 1
-              }
-            ]
-          },
           "calculate command points": {
             "evals": [
               {
@@ -3467,9 +3370,162 @@
                 "iterations": 1
               }
             ]
+          },
+          "set maxes": {
+            "evals": [],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 1,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "max"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "tracked",
+                  "maxPowerLevel"
+                ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "max"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "tracked",
+                  "maxPoints"
+                ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "max"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "tracked",
+                  "maxDetachments"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "use power level": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mode",
+                    "value"
+                  ]
+                ],
+                "value": "Power Level",
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Points",
+                    "max"
+                  ]
+                ],
+                "actionType": "set",
+                "value": null,
+                "iterations": 1
+              }
+            ]
+          },
+          "use points": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mode",
+                    "value"
+                  ]
+                ],
+                "value": "Points",
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "max"
+                  ]
+                ],
+                "actionType": "set",
+                "value": null,
+                "iterations": 1
+              }
+            ]
           }
         },
-        "designation": "Roster"
+        "designation": "Army"
       },
       "Statline§Barbed Hierodule": {
         "stats": {
@@ -5517,9 +5573,6 @@
           "Power Level": {
             "value": 4
           },
-          "Points": {
-            "value": 75
-          },
           "model": {
             "value": "Model§Tyranid Warrior"
           },
@@ -5617,6 +5670,10 @@
             },
             "visibility": "active",
             "dynamic": true
+          },
+          "Points": {
+            "statType": "numeric",
+            "value": 0
           }
         },
         "keywords": {
