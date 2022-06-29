@@ -1,10 +1,10 @@
 {
-  "name": "40k Tyranid",
+  "name": "40k Tyranids",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
-  "publisher": "GW",
-  "url": "",
-  "notes": "",
+  "publisher": "Games Workshop",
+  "url": "https://warhammer40000.com/",
+  "notes": "This manifest is provided for the purposes of testing Rosterizer and is not intended for distribution.",
   "manifest": {
     "assetTaxonomy": {
       "Detachment": {
@@ -20,9 +20,48 @@
           ]
         },
         "stats": {
+          "Command Cost": {
+            "statType": "numeric",
+            "value": null,
+            "statOrder": -1,
+            "tracked": true
+          },
+          "Hive Fleet": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Behemoth": {
+                "order": 1
+              },
+              "Gorgon": {
+                "order": 2
+              },
+              "Hydra": {
+                "order": 3
+              },
+              "Jormungandr": {
+                "order": 4
+              },
+              "Kraken": {
+                "order": 5
+              },
+              "Kronos": {
+                "order": 6
+              },
+              "Leviathan": {
+                "order": 7
+              }
+            },
+            "dynamic": true
+          },
           "HQ": {
             "statType": "numeric",
             "value": null,
+            "icons": [
+              "crowned-skull"
+            ],
             "statOrder": 1,
             "visibility": "active",
             "tracked": true
@@ -30,6 +69,9 @@
           "Troops": {
             "statType": "numeric",
             "value": null,
+            "icons": [
+              "triangle-target"
+            ],
             "statOrder": 3,
             "visibility": "active",
             "tracked": true
@@ -37,13 +79,29 @@
           "Elites": {
             "statType": "numeric",
             "value": null,
+            "icons": [
+              "pirate-flag"
+            ],
             "statOrder": 5,
+            "visibility": "active",
+            "tracked": true
+          },
+          "Dedicated Transport": {
+            "statType": "numeric",
+            "value": null,
+            "icons": [
+              "arrow-dunk"
+            ],
+            "statOrder": 13,
             "visibility": "active",
             "tracked": true
           },
           "Fast Attack": {
             "statType": "numeric",
             "value": null,
+            "icons": [
+              "power-lightning"
+            ],
             "statOrder": 7,
             "visibility": "active",
             "tracked": true
@@ -51,6 +109,9 @@
           "Heavy Support": {
             "statType": "numeric",
             "value": null,
+            "icons": [
+              "mine-explosion"
+            ],
             "statOrder": 9,
             "visibility": "active",
             "tracked": true
@@ -58,21 +119,11 @@
           "Flyer": {
             "statType": "numeric",
             "value": null,
+            "icons": [
+              "bat-blade"
+            ],
             "statOrder": 11,
             "visibility": "active",
-            "tracked": true
-          },
-          "Dedicated Transport": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 13,
-            "visibility": "active",
-            "tracked": true
-          },
-          "Command Cost": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": -1,
             "tracked": true
           }
         },
@@ -122,78 +173,32 @@
             "tracked": true,
             "statType": "numeric"
           },
-          "Unit": {
-            "statType": "numeric",
-            "value": 1,
-            "visibility": "hidden",
-            "tracked": true
-          },
           "model": {
-            "value": "",
+            "value": null,
             "statType": "term",
+            "visibility": "hidden"
+          },
+          "Display individually": {
+            "statType": "rank",
+            "value": 0,
+            "ranks": {
+              "0": {
+                "order": 0
+              },
+              "1": {
+                "order": 1
+              }
+            },
             "visibility": "hidden"
           }
         },
         "keywords": {
-          "Faction Keywords": []
+          "Faction Keywords": [],
+          "Tags": [
+            "Unit"
+          ]
         },
         "rules": {
-          "1 model per model": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Collecting my name so i can look at how many of me my counting stat says for iterations and adding models."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "model",
-                    "value"
-                  ]
-                ],
-                "min": 1,
-                "operator": "SUM",
-                "not": false,
-                "note": "If i don't have a thing to add specified, don't try to add anything."
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "order": 10,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "actionType": "add",
-                "value": [
-                  "{self}",
-                  "stats",
-                  "model",
-                  "term"
-                ],
-                "iterations": [
-                  "{self}",
-                  "stats",
-                  "{0string}",
-                  "value"
-                ]
-              }
-            ]
-          },
           "Adjusted Power Level": {
             "evals": [
               {
@@ -372,6 +377,62 @@
               }
             ]
           },
+          "1 model per model": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false,
+                "note": "Collecting my name so i can look at how many of me my counting stat says for iterations and adding models."
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Display individually",
+                    "value"
+                  ]
+                ],
+                "value": 1,
+                "operator": "AND",
+                "not": false,
+                "note": "If i don't have a thing to add specified, don't try to add anything."
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 10,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "actionType": "add",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "model",
+                  "value"
+                ],
+                "iterations": [
+                  "{self}",
+                  "stats",
+                  "{0string}",
+                  "value"
+                ]
+              }
+            ]
+          },
           "1 quantity per model": {
             "evals": [
               {
@@ -390,18 +451,28 @@
                 "paths": [
                   [
                     "{self}",
-                    "rules",
-                    "1 model per model",
-                    "evals",
-                    "1",
-                    "result",
-                    "truthy"
+                    "stats",
+                    "Display individually",
+                    "value"
                   ]
                 ],
-                "value": false,
+                "value": "0",
                 "operator": "AND",
                 "not": false,
                 "note": "Only adjusting quanitity if we're not adding 1 model per model."
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "model",
+                    "value"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
               }
             ],
             "failState": "pass",
@@ -413,8 +484,8 @@
                   [
                     "{self}",
                     "traits",
-                    "classification",
-                    "Model",
+                    "item",
+                    "{2string}",
                     "quantity"
                   ]
                 ],
@@ -429,7 +500,54 @@
               }
             ]
           },
-          "Reset Points": {
+          "flesh hooks visibility": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Flesh hooks",
+                    "value"
+                  ]
+                ],
+                "value": "✅",
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 15,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Flesh Hooks",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Flesh hooks",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "always",
+                "iterations": 1
+              }
+            ]
+          },
+          "reset points": {
             "evals": [
               {
                 "paths": [
@@ -480,7 +598,7 @@
               }
             ]
           },
-          "Calculate Toxin Sacs": {
+          "calculate toxin sacs": {
             "evals": [
               {
                 "paths": [
@@ -491,7 +609,7 @@
                     "value"
                   ]
                 ],
-                "value": "1",
+                "value": "✅",
                 "operator": "AND",
                 "not": false
               },
@@ -537,8 +655,8 @@
                   "{self}",
                   "stats",
                   "Toxin sacs",
-                  "numbers",
-                  "value",
+                  "processed",
+                  "numeric",
                   "current"
                 ],
                 "iterations": [
@@ -547,10 +665,23 @@
                   "{1string}",
                   "value"
                 ]
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Toxin sacs",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "always",
+                "iterations": 1
               }
             ]
           },
-          "Calculate Adrenal glands": {
+          "calculate adrenal glands": {
             "evals": [
               {
                 "paths": [
@@ -561,7 +692,7 @@
                     "value"
                   ]
                 ],
-                "value": "1",
+                "value": "✅",
                 "operator": "AND",
                 "not": false
               },
@@ -607,8 +738,8 @@
                   "{self}",
                   "stats",
                   "Adrenal glands",
-                  "numbers",
-                  "value",
+                  "processed",
+                  "numeric",
                   "current"
                 ],
                 "iterations": [
@@ -617,11 +748,38 @@
                   "{1string}",
                   "value"
                 ]
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Adrenal glands",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "normal",
+                "iterations": 1
               }
             ]
           },
-          "Set Adrenal glands Value": {
-            "evals": [],
+          "hive fleet replacement": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true
+              }
+            ],
             "failState": "pass",
             "evaluate": "OR",
             "actions": [
@@ -629,13 +787,31 @@
                 "paths": [
                   [
                     "{self}",
-                    "stats",
-                    "Adrenal glands",
-                    "value"
+                    "keywords",
+                    "Faction Keywords"
                   ]
                 ],
-                "actionType": "set",
-                "value": null,
+                "actionType": "remove",
+                "value": "<Hive Fleet>",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction Keywords"
+                  ]
+                ],
+                "actionType": "add",
+                "value": [
+                  "{parent}",
+                  "stats",
+                  "Hive Fleet",
+                  "processed",
+                  "rank",
+                  "current"
+                ],
                 "iterations": 1
               }
             ]
@@ -658,18 +834,13 @@
             "statOrder": 3,
             "statType": "numeric"
           },
-          "Base": {
-            "value": "",
-            "statOrder": 10,
-            "statType": "term"
-          },
           "Ld": {
             "value": 0,
             "statOrder": 8,
             "statType": "numeric"
           },
           "M": {
-            "value": "",
+            "value": null,
             "format": "{t}",
             "statOrder": 1,
             "statType": "term"
@@ -700,6 +871,12 @@
             "value": 0,
             "statOrder": 2,
             "statType": "numeric"
+          },
+          "Base": {
+            "statType": "term",
+            "value": null,
+            "statOrder": 10,
+            "visibility": "active"
           }
         }
       },
@@ -764,17 +941,17 @@
             "statType": "numeric"
           },
           "Range": {
-            "value": "",
+            "value": null,
             "statOrder": 1,
             "statType": "term"
           },
           "S": {
-            "value": "",
+            "value": null,
             "statOrder": 3,
             "statType": "term"
           },
           "Type": {
-            "value": "",
+            "value": null,
             "statOrder": 2,
             "statType": "term"
           }
@@ -786,9 +963,6 @@
         "stats": {
           "Power Level": {
             "value": 7
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -811,51 +985,11 @@
       "Detachment§Auxiliary Support Detachment": {
         "classification": "Detachment",
         "stats": {
-          "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Troops": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Elites": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Heavy Support": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Dedicated Transport": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
           "Command Cost": {
-            "statType": "numeric",
-            "value": 2,
-            "tracked": true
+            "value": 2
           },
           "Unit": {
-            "value": null,
-            "statType": "numeric",
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 1
           }
         },
@@ -865,59 +999,32 @@
         "classification": "Detachment",
         "stats": {
           "Command Cost": {
-            "value": 3,
-            "statType": "numeric",
-            "statOrder": -1,
-            "tracked": true
+            "value": 3
           },
           "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 7,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Heavy Support": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 9,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 11,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "HQ": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 1,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 2,
             "max": 3
           },
           "Troops": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 3,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 6
           },
           "Elites": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 5,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 6
           }
         },
@@ -927,61 +1034,34 @@
         "classification": "Detachment",
         "stats": {
           "Command Cost": {
-            "value": 4,
-            "statType": "numeric",
-            "statOrder": -1,
-            "tracked": true
+            "value": 4
           },
           "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 11,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "HQ": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 1,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 5
           },
           "Troops": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 3,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 6,
             "max": 12
           },
           "Elites": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 5,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 8
           },
           "Fast Attack": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 7,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 5
           },
           "Heavy Support": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 9,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 5
           }
@@ -991,51 +1071,11 @@
       "Detachment§Fortification Network": {
         "classification": "Detachment",
         "stats": {
-          "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Troops": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Elites": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Heavy Support": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Dedicated Transport": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
           "Command Cost": {
-            "statType": "numeric",
-            "value": 1,
-            "tracked": true
+            "value": 1
           },
           "Fortification": {
-            "value": null,
-            "statType": "numeric",
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 1,
             "max": 3
           }
@@ -1052,58 +1092,31 @@
         "classification": "Detachment",
         "stats": {
           "Command Cost": {
-            "value": 3,
-            "statType": "numeric",
-            "statOrder": -1,
-            "tracked": true
+            "value": 3
           },
           "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 1,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 1,
             "max": 2
           },
           "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 11,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Troops": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 3,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 3
           },
           "Elites": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 5,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Heavy Support": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 9,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Fast Attack": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 7,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 6
           }
@@ -1114,59 +1127,32 @@
         "classification": "Detachment",
         "stats": {
           "Command Cost": {
-            "value": 2,
-            "statType": "numeric",
-            "statOrder": -1,
-            "tracked": true
+            "value": 2
           },
           "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 1,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 1,
             "max": 2
           },
           "Troops": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 3,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 1,
             "max": 3
           },
           "Elites": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 5,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 7,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Heavy Support": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 9,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 11,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           }
         },
@@ -1176,58 +1162,31 @@
         "classification": "Detachment",
         "stats": {
           "Command Cost": {
-            "value": 3,
-            "statType": "numeric",
-            "statOrder": -1,
-            "tracked": true
+            "value": 3
           },
           "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 1,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 1,
             "max": 2
           },
           "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 7,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": 11,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Troops": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 3,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 3
           },
           "Elites": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 5,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "max": 2
           },
           "Heavy Support": {
-            "value": null,
-            "statType": "numeric",
-            "statOrder": 9,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 6
           }
@@ -1237,53 +1196,13 @@
       "Detachment§Super-Heavy Auxiliary Detachment": {
         "classification": "Detachment",
         "stats": {
-          "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Troops": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Elites": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Heavy Support": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Dedicated Transport": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
           "Lord of War": {
-            "value": null,
-            "statType": "numeric",
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 1,
             "max": 1
           },
           "Command Cost": {
-            "statType": "numeric",
-            "value": 3,
-            "tracked": true
+            "value": 3
           }
         },
         "allowed": {
@@ -1313,46 +1232,8 @@
             "tracked": true,
             "value": "3"
           },
-          "HQ": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Troops": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Elites": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Fast Attack": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Heavy Support": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Flyer": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
-          "Dedicated Transport": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "hidden"
-          },
           "Lord of War": {
-            "statType": "numeric",
-            "value": null,
-            "visibility": "active",
-            "tracked": true,
+            "value": 0,
             "min": 3,
             "max": 5
           }
@@ -1688,9 +1569,6 @@
         "stats": {
           "Power Level": {
             "value": 5
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1716,9 +1594,6 @@
         "stats": {
           "Power Level": {
             "value": 5
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1745,9 +1620,6 @@
         "stats": {
           "Power Level": {
             "value": 9
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1771,9 +1643,6 @@
         "stats": {
           "Power Level": {
             "value": 4
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1797,9 +1666,6 @@
         "stats": {
           "Power Level": {
             "value": 9
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1824,9 +1690,6 @@
         "stats": {
           "Power Level": {
             "value": 2
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1851,9 +1714,6 @@
         "stats": {
           "Power Level": {
             "value": 8
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1879,9 +1739,6 @@
         "stats": {
           "Power Level": {
             "value": 8
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1907,9 +1764,6 @@
         "stats": {
           "Power Level": {
             "value": 5
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1936,9 +1790,6 @@
         "stats": {
           "Power Level": {
             "value": 7
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1963,9 +1814,6 @@
         "stats": {
           "Power Level": {
             "value": 14
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -1987,9 +1835,6 @@
         "stats": {
           "Power Level": {
             "value": 7
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2014,9 +1859,6 @@
         "stats": {
           "Power Level": {
             "value": 3
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2038,9 +1880,6 @@
       "Fast Attack§Mucolid Spores": {
         "stats": {
           "Power Level": {
-            "value": 1
-          },
-          "Unit": {
             "value": 1
           }
         },
@@ -2064,9 +1903,6 @@
         "stats": {
           "Power Level": {
             "value": 4
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2091,9 +1927,6 @@
         "stats": {
           "Power Level": {
             "value": 4
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2117,9 +1950,6 @@
         "stats": {
           "Power Level": {
             "value": 2
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2141,9 +1971,6 @@
         "stats": {
           "Power Level": {
             "value": 2
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2165,9 +1992,6 @@
       "Fast Attack§Spore Mines": {
         "stats": {
           "Power Level": {
-            "value": 1
-          },
-          "Unit": {
             "value": 1
           }
         },
@@ -2191,9 +2015,6 @@
         "stats": {
           "Power Level": {
             "value": 8
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2218,9 +2039,6 @@
         "stats": {
           "Power Level": {
             "value": 9
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2244,9 +2062,6 @@
         "stats": {
           "Power Level": {
             "value": 8
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2271,9 +2086,6 @@
         "stats": {
           "Power Level": {
             "value": 6
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2295,9 +2107,6 @@
         "stats": {
           "Power Level": {
             "value": 14
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2319,9 +2128,6 @@
         "stats": {
           "Power Level": {
             "value": 3
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2343,9 +2149,6 @@
         "stats": {
           "Power Level": {
             "value": 7
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2372,9 +2175,6 @@
         "stats": {
           "Power Level": {
             "value": 9
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2396,9 +2196,6 @@
         "stats": {
           "Power Level": {
             "value": 9
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2422,9 +2219,6 @@
         "stats": {
           "Power Level": {
             "value": 7
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2450,9 +2244,6 @@
         "stats": {
           "Power Level": {
             "value": 12
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2474,9 +2265,6 @@
         "stats": {
           "Power Level": {
             "value": 6
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2499,9 +2287,6 @@
         "stats": {
           "Power Level": {
             "value": 7
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2527,9 +2312,6 @@
         "stats": {
           "Power Level": {
             "value": 10
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2554,9 +2336,6 @@
         "stats": {
           "Power Level": {
             "value": 6
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2587,9 +2366,6 @@
         "stats": {
           "Power Level": {
             "value": 9
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2624,9 +2400,6 @@
         "stats": {
           "Power Level": {
             "value": 8
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2657,9 +2430,6 @@
         "stats": {
           "Power Level": {
             "value": 5
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2692,9 +2462,6 @@
         "stats": {
           "Power Level": {
             "value": 11
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2725,9 +2492,6 @@
         "stats": {
           "Power Level": {
             "value": 11
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2760,9 +2524,6 @@
         "stats": {
           "Power Level": {
             "value": 11
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2795,9 +2556,6 @@
         "stats": {
           "Power Level": {
             "value": 10
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2830,9 +2588,6 @@
         "stats": {
           "Power Level": {
             "value": 5
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2866,9 +2621,6 @@
         "stats": {
           "Power Level": {
             "value": 11
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2905,9 +2657,6 @@
         "stats": {
           "Power Level": {
             "value": 35
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -2933,9 +2682,6 @@
         "stats": {
           "Power Level": {
             "value": 43
-          },
-          "Unit": {
-            "value": 1
           }
         },
         "keywords": {
@@ -3026,6 +2772,11 @@
           }
         },
         "classification": "Model",
+        "assets": {
+          "traits": [
+            "Weapons§Fleshborer"
+          ]
+        },
         "designation": "Gargoyle"
       },
       "Model§Genestealer": {
@@ -3489,7 +3240,8 @@
               }
             },
             "statOrder": 3,
-            "dynamic": true
+            "dynamic": true,
+            "value": "Strike Force"
           },
           "Mode": {
             "statType": "rank",
@@ -3505,7 +3257,8 @@
             },
             "statOrder": 4,
             "visibility": "active",
-            "dynamic": true
+            "dynamic": true,
+            "value": "1"
           }
         },
         "allowed": {
@@ -5523,9 +5276,6 @@
           "Power Level": {
             "value": 4
           },
-          "Unit": {
-            "value": 1
-          },
           "Gargoyles": {
             "value": 10,
             "statType": "numeric",
@@ -5536,6 +5286,9 @@
             "dynamic": true,
             "min": 10,
             "max": 30
+          },
+          "model": {
+            "value": "Model§Gargoyle"
           }
         },
         "keywords": {
@@ -5570,67 +5323,70 @@
           "Power Level": {
             "value": 4
           },
-          "Unit": {
-            "value": 1
+          "model": {
+            "value": "Model§Hormagaunt"
           },
           "Hormagaunts": {
-            "value": 10,
             "statType": "numeric",
             "increment": {
               "value": 10
             },
+            "value": 10,
+            "statOrder": -1,
             "visibility": "always",
             "dynamic": true,
             "min": 10,
             "max": 30
           },
-          "Toxin sacs": {
-            "dynamic": true,
-            "statType": "rank",
-            "ranks": {
-              "0": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ],
-                "format": "{i0} {v}",
-                "number": 1
-              },
-              "1": {
-                "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
-                "format": "{i0} {v}",
-                "text": "Hits of 6 auto wound.",
-                "number": 1
-              }
-            },
-            "value": "0"
-          },
           "Adrenal glands": {
             "statType": "rank",
+            "value": "❌",
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
+                "number": 2,
                 "icons": [
                   "cancel"
                 ],
-                "format": "{i0} {v}",
-                "number": 2
+                "format": "{i} 2 pts × qty"
               },
-              "1": {
+              "✅": {
                 "order": 1,
+                "number": 2,
                 "icons": [
                   "confirmed"
                 ],
-                "format": "{i0} {v}",
-                "text": "+1″ movement characteristic, +1 strength characteristic.",
-                "number": 2
+                "format": "{i} 2 pts × qty",
+                "text": "+1″ movement characteristic, +1 strength characteristic."
               }
             },
-            "dynamic": true,
-            "value": "0"
+            "visibility": "active",
+            "dynamic": true
+          },
+          "Toxin sacs": {
+            "statType": "rank",
+            "value": "❌",
+            "ranks": {
+              "❌": {
+                "order": 0,
+                "number": 1,
+                "icons": [
+                  "cancel"
+                ],
+                "format": "{i} 1 pt × qty"
+              },
+              "✅": {
+                "order": 1,
+                "number": 1,
+                "icons": [
+                  "confirmed"
+                ],
+                "format": "{i} 1 pt × qty",
+                "text": "Hits of 6 auto-wound."
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
           }
         },
         "keywords": {
@@ -5664,67 +5420,70 @@
           "Power Level": {
             "value": 4
           },
-          "Unit": {
-            "value": 1
+          "model": {
+            "value": "Model§Termagaunt"
           },
           "Termagaunts": {
-            "value": 10,
             "statType": "numeric",
             "increment": {
               "value": 10
             },
+            "value": 10,
+            "statOrder": -1,
             "visibility": "always",
             "dynamic": true,
             "min": 10,
             "max": 30
           },
-          "Toxin sacs": {
-            "dynamic": true,
-            "statType": "rank",
-            "ranks": {
-              "0": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ],
-                "format": "{i0} {v}",
-                "number": 1
-              },
-              "1": {
-                "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
-                "format": "{i0} {v}",
-                "text": "Hits of 6 auto wound.",
-                "number": 1
-              }
-            },
-            "value": "0"
-          },
           "Adrenal glands": {
-            "dynamic": true,
             "statType": "rank",
+            "value": "❌",
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
+                "number": 1,
                 "icons": [
                   "cancel"
                 ],
-                "format": "{i0} {v}",
-                "number": 1
+                "format": "{i} 1 pt × qty"
               },
-              "1": {
+              "✅": {
                 "order": 1,
+                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
-                "format": "{i0} {v}",
-                "text": "+1″ movement characteristic, +1 strength characteristic.",
-                "number": 1
+                "format": "{i} 1 pt × qty",
+                "text": "+1″ movement characteristic, +1 strength characteristic."
               }
             },
-            "value": "0"
+            "visibility": "active",
+            "dynamic": true
+          },
+          "Toxin sacs": {
+            "statType": "rank",
+            "value": "❌",
+            "ranks": {
+              "❌": {
+                "order": 0,
+                "number": 1,
+                "icons": [
+                  "cancel"
+                ],
+                "format": "{i} 1 pt × qty"
+              },
+              "✅": {
+                "order": 1,
+                "number": 1,
+                "icons": [
+                  "confirmed"
+                ],
+                "format": "{i} 1 pt × qty",
+                "text": "Hits of 6 auto-wound."
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
           }
         },
         "keywords": {
@@ -5761,18 +5520,19 @@
           "Points": {
             "value": 75
           },
-          "Unit": {
-            "value": 1
-          },
           "model": {
             "value": "Model§Tyranid Warrior"
           },
+          "Display individually": {
+            "value": "1"
+          },
           "Tyranid Warriors": {
-            "value": 3,
             "statType": "numeric",
             "increment": {
               "value": 3
             },
+            "value": 3,
+            "statOrder": -1,
             "visibility": "always",
             "dynamic": true,
             "min": 3,
@@ -5780,80 +5540,83 @@
           },
           "Adrenal glands": {
             "statType": "rank",
+            "value": "❌",
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
                 "icons": [
                   "cancel"
                 ],
-                "format": "{i0} {v}"
+                "format": "{i} 15 pts"
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "tracking": {
-                  "Points": 15
-                },
                 "icons": [
                   "confirmed"
                 ],
-                "format": "{i0} {v}",
+                "format": "{i} 15 pts",
                 "text": "+1″ movement characteristic, +1 strength characteristic.",
-                "number": 0
+                "tracking": {
+                  "Points": 15
+                }
               }
             },
-            "dynamic": true,
-            "value": "0"
+            "visibility": "active",
+            "dynamic": true
           },
           "Flesh hooks": {
             "statType": "rank",
+            "value": "❌",
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
                 "icons": [
                   "cancel"
                 ],
-                "format": "{i0} {v}"
+                "format": "{i} 5 pts"
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "tracking": {
-                  "Points": 5
-                },
+                "number": 0,
                 "icons": [
                   "confirmed"
                 ],
-                "format": "{i0} {v}",
-                "number": 0
+                "format": "{i} 5 pts",
+                "text": "When the bearer’s unit makes a Normal Move, Advances or Falls Back, the bearer does not count any vertical distance it moves against the total that it can move this turn.",
+                "tracking": {
+                  "Points": 5
+                }
               }
             },
-            "dynamic": true,
-            "value": "0"
+            "visibility": "active",
+            "dynamic": true
           },
           "Toxin sacs": {
             "statType": "rank",
+            "value": "❌",
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
                 "icons": [
                   "cancel"
                 ],
-                "format": "{i0} {v}"
+                "format": "{i} 10 pts"
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "tracking": {
-                  "Points": 10
-                },
+                "number": 0,
                 "icons": [
                   "confirmed"
                 ],
-                "format": "{i0} {v}",
-                "text": "+1″ movement characteristic, +1 strength characteristic.",
-                "number": 0
+                "format": "{i} 10 pts",
+                "text": "Hits of 6 auto-wound.",
+                "tracking": {
+                  "Points": 10
+                }
               }
             },
-            "dynamic": true,
-            "value": "0"
+            "visibility": "active",
+            "dynamic": true
           }
         },
         "keywords": {
@@ -7971,5 +7734,5 @@
     "gameModes": {},
     "theme": {}
   },
-  "revision": "1"
+  "revision": "0.1"
 }
