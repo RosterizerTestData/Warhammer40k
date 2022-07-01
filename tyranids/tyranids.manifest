@@ -20,42 +20,6 @@
           ]
         },
         "stats": {
-          "Command Cost": {
-            "statType": "numeric",
-            "value": null,
-            "statOrder": -1,
-            "tracked": true
-          },
-          "Hive Fleet": {
-            "statType": "rank",
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Behemoth": {
-                "order": 1
-              },
-              "Gorgon": {
-                "order": 2
-              },
-              "Hydra": {
-                "order": 3
-              },
-              "Jormungandr": {
-                "order": 4
-              },
-              "Kraken": {
-                "order": 5
-              },
-              "Kronos": {
-                "order": 6
-              },
-              "Leviathan": {
-                "order": 7
-              }
-            },
-            "dynamic": true
-          },
           "HQ": {
             "statType": "numeric",
             "value": null,
@@ -125,6 +89,45 @@
             "statOrder": 11,
             "visibility": "active",
             "tracked": true
+          },
+          "Hive Fleet": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Behemoth": {
+                "order": 1
+              },
+              "Gorgon": {
+                "order": 2
+              },
+              "Hydra": {
+                "order": 3
+              },
+              "Jormungandr": {
+                "order": 4
+              },
+              "Kraken": {
+                "order": 5
+              },
+              "Kronos": {
+                "order": 6
+              },
+              "Leviathan": {
+                "order": 7
+              }
+            },
+            "visibility": "always",
+            "dynamic": true
+          },
+          "Command Cost": {
+            "statType": "numeric",
+            "value": null,
+            "statOrder": -1,
+            "visibility": "always",
+            "tracked": true
           }
         },
         "rules": {
@@ -152,19 +155,42 @@
                 "iterations": 1
               }
             ]
+          },
+          "populate faction": {
+            "evals": [],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "traits",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Hive Fleet",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Hive Fleet",
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
           }
         }
       },
       "Unit": {
         "stats": {
-          "Power Level": {
-            "value": null,
-            "format": "{v}",
-            "group": "Cost",
-            "groupOrder": -3,
-            "tracked": true,
-            "statType": "numeric"
-          },
           "Points": {
             "value": 0,
             "format": "{v}",
@@ -178,17 +204,38 @@
             "statType": "term",
             "visibility": "hidden"
           },
-          "Display individually": {
-            "statType": "rank",
-            "value": 0,
-            "ranks": {
-              "0": {
-                "order": 0
-              },
-              "1": {
-                "order": 1
-              }
-            },
+          "Power Level": {
+            "statType": "numeric",
+            "format": "{v}",
+            "value": null,
+            "group": "Cost",
+            "groupOrder": -1,
+            "visibility": "always",
+            "tracked": true
+          },
+          "power1": {
+            "statType": "numeric",
+            "value": null,
+            "visibility": "hidden"
+          },
+          "power3": {
+            "statType": "numeric",
+            "value": null,
+            "visibility": "hidden"
+          },
+          "power2": {
+            "statType": "numeric",
+            "value": null,
+            "visibility": "hidden"
+          },
+          "power4": {
+            "statType": "numeric",
+            "value": null,
+            "visibility": "hidden"
+          },
+          "poweri": {
+            "statType": "numeric",
+            "value": null,
             "visibility": "hidden"
           }
         },
@@ -199,307 +246,6 @@
           ]
         },
         "rules": {
-          "adjusted power level": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Collecting my name to reference my model count stat."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "{0string}",
-                    "value"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Dividing my model count by my minimum unit size.",
-                "equation": {
-                  "operator": "T/O",
-                  "value": [
-                    "{self}",
-                    "stats",
-                    "{0string}",
-                    "min"
-                  ]
-                }
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "rules",
-                    "adjusted power level",
-                    "evals",
-                    "1",
-                    "result",
-                    "integer"
-                  ]
-                ],
-                "value": [
-                  "{self}",
-                  "rules",
-                  "adjusted power level",
-                  "evals",
-                  "1",
-                  "result",
-                  "float"
-                ],
-                "operator": "AND",
-                "not": true,
-                "actionable": false,
-                "note": "Check if the was rounding."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "rules",
-                    "adjusted power level",
-                    "evals",
-                    "1",
-                    "result",
-                    "float"
-                  ]
-                ],
-                "min": [
-                  "{self}",
-                  "rules",
-                  "adjusted power level",
-                  "evals",
-                  "1",
-                  "result",
-                  "integer"
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Checking if the division rounded up or down."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "rules",
-                    "adjusted power level",
-                    "evals",
-                    "2",
-                    "result",
-                    "truthy"
-                  ],
-                  [
-                    "{self}",
-                    "rules",
-                    "adjusted power level",
-                    "evals",
-                    "3",
-                    "result",
-                    "truthy"
-                  ]
-                ],
-                "value": 2,
-                "operator": "SUM",
-                "not": false,
-                "actionable": false,
-                "note": "If there was rounding, and we rounded down, return true."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "rules",
-                    "adjusted power level",
-                    "evals",
-                    "1",
-                    "result",
-                    "integer"
-                  ],
-                  [
-                    "{self}",
-                    "rules",
-                    "adjusted power level",
-                    "evals",
-                    "4",
-                    "result",
-                    "truthy"
-                  ]
-                ],
-                "operator": "SUM",
-                "not": false,
-                "actionable": false,
-                "note": "Multiply power level by base power level, the number of unit sections this unit currently has, and if rounded down +1.",
-                "equation": {
-                  "operator": "T*O",
-                  "value": [
-                    "self",
-                    "stats",
-                    "Power Level",
-                    "value"
-                  ]
-                }
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Power Level",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "rules",
-                  "adjusted power level",
-                  "evals",
-                  "5",
-                  "result",
-                  "integer"
-                ],
-                "iterations": 1
-              }
-            ]
-          },
-          "1 model per model": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Collecting my name so i can look at how many of me my counting stat says for iterations and adding models."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Display individually",
-                    "value"
-                  ]
-                ],
-                "value": 1,
-                "operator": "AND",
-                "not": false,
-                "note": "If i don't have a thing to add specified, don't try to add anything."
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "order": 10,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "actionType": "add",
-                "value": [
-                  "{self}",
-                  "stats",
-                  "model",
-                  "value"
-                ],
-                "iterations": [
-                  "{self}",
-                  "stats",
-                  "{0string}",
-                  "value"
-                ]
-              }
-            ]
-          },
-          "1 quantity per model": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "note": "Checking my name so i know the correct model to find."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Display individually",
-                    "value"
-                  ]
-                ],
-                "value": "0",
-                "operator": "AND",
-                "not": false,
-                "note": "Only adjusting quanitity if we're not adding 1 model per model."
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "model",
-                    "value"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "order": 11,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "traits",
-                    "item",
-                    "{2string}",
-                    "quantity"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "stats",
-                  "{0string}",
-                  "value"
-                ],
-                "iterations": 1
-              }
-            ]
-          },
           "flesh hooks visibility": {
             "evals": [
               {
@@ -543,172 +289,6 @@
                 ],
                 "actionType": "set",
                 "value": "always",
-                "iterations": 1
-              }
-            ]
-          },
-          "calculate toxin sacs": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Toxin sacs",
-                    "value"
-                  ]
-                ],
-                "value": "✅",
-                "operator": "AND",
-                "not": false
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "order": 15,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "keywords",
-                    "General"
-                  ]
-                ],
-                "actionType": "add",
-                "value": "Toxin Sacs",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "value"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": [
-                  "{self}",
-                  "stats",
-                  "Toxin sacs",
-                  "processed",
-                  "numeric",
-                  "current"
-                ],
-                "iterations": [
-                  "{self}",
-                  "stats",
-                  "{1string}",
-                  "value"
-                ]
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Toxin sacs",
-                    "visibility"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "always",
-                "iterations": 1
-              }
-            ]
-          },
-          "calculate adrenal glands": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Adrenal glands",
-                    "value"
-                  ]
-                ],
-                "value": "✅",
-                "operator": "AND",
-                "not": false
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "OR",
-            "order": 15,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "keywords",
-                    "General"
-                  ]
-                ],
-                "actionType": "add",
-                "value": "Adrenal Glands",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Points",
-                    "value"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": [
-                  "{self}",
-                  "stats",
-                  "Adrenal glands",
-                  "processed",
-                  "numeric",
-                  "current"
-                ],
-                "iterations": [
-                  "{self}",
-                  "stats",
-                  "{1string}",
-                  "value"
-                ]
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Adrenal glands",
-                    "visibility"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "normal",
                 "iterations": 1
               }
             ]
@@ -841,10 +421,380 @@
                 "iterations": 1
               }
             ]
+          },
+          "1 quantity per model": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false,
+                "note": "Checking my name so i know the correct model to find."
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "model",
+                    "value"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 11,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "{1string}",
+                    "quantity"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "{0string}",
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "adjust power": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "power1",
+                  "value"
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "power2",
+                  "value"
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "power3",
+                  "value"
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "power4",
+                  "value"
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "adjust power",
+                    "evals",
+                    "0",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{self}",
+                    "rules",
+                    "adjust power",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{self}",
+                    "rules",
+                    "adjust power",
+                    "evals",
+                    "2",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{self}",
+                    "rules",
+                    "adjust power",
+                    "evals",
+                    "3",
+                    "result",
+                    "truthy"
+                  ]
+                ],
+                "operator": "SUM",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 13,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "value"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "poweri",
+                  "value"
+                ],
+                "iterations": [
+                  "{self}",
+                  "rules",
+                  "adjust power",
+                  "evals",
+                  "4",
+                  "result",
+                  "integer"
+                ]
+              }
+            ]
+          },
+          "calculate toxin sacs": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Toxin sacs",
+                    "value"
+                  ]
+                ],
+                "value": "✅",
+                "operator": "AND",
+                "not": false
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 15,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Toxin Sacs",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "traits",
+                    "classification",
+                    "Model",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Toxin sacs",
+                  "processed",
+                  "numeric",
+                  "current"
+                ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Toxin sacs",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "always",
+                "iterations": 1
+              }
+            ]
+          },
+          "calculate adrenal glands": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Adrenal glands",
+                    "value"
+                  ]
+                ],
+                "value": "✅",
+                "operator": "AND",
+                "not": false
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 15,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Toxin Sacs",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "traits",
+                    "classification",
+                    "Model",
+                    "stats",
+                    "Points",
+                    "value"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Adrenal glands",
+                  "processed",
+                  "numeric",
+                  "current"
+                ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Toxin sacs",
+                      "Adrenal glands"
+                    ],
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "always",
+                "iterations": 1
+              }
+            ]
           }
         },
         "aspects": {
-          "Type": "game piece"
+          "Type": "game piece",
+          "Group Traits": true,
+          "Group Includes": true
         }
       },
       "Statline": {
@@ -852,57 +802,99 @@
           "A": {
             "value": 0,
             "statOrder": 7,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "BS": {
             "format": "{v}+",
             "value": 0,
             "statOrder": 3,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "Ld": {
             "value": 0,
             "statOrder": 8,
-            "statType": "numeric"
-          },
-          "M": {
-            "value": null,
-            "format": "{t}",
-            "statOrder": 1,
-            "statType": "term"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "S": {
             "value": 0,
             "statOrder": 4,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "Sv": {
             "format": "{v}+",
             "value": 0,
             "statOrder": 9,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "T": {
             "value": 0,
             "statOrder": 5,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "W": {
             "value": 0,
             "statOrder": 6,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "WS": {
             "format": "{v}+",
             "value": 0,
             "statOrder": 2,
-            "statType": "numeric"
+            "statType": "numeric",
+            "visibility": "always"
           },
           "Base": {
             "statType": "term",
             "value": null,
             "statOrder": 10,
             "visibility": "active"
+          },
+          "M": {
+            "statType": "term",
+            "format": "{t}",
+            "value": null,
+            "statOrder": 1,
+            "visibility": "always"
+          }
+        },
+        "rules": {
+          "remove tally": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "order": 1,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "{0string}"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": -1,
+                "iterations": 1
+              }
+            ]
           }
         }
       },
@@ -925,7 +917,8 @@
         "templateClass": "Unit"
       },
       "Troops": {
-        "templateClass": "Unit"
+        "templateClass": "Unit",
+        "aspects": {}
       },
       "Elites": {
         "templateClass": "Unit"
@@ -981,10 +974,184 @@
             "statOrder": 2,
             "statType": "term"
           }
+        },
+        "aspects": {
+          "Visibility": "active"
         }
-      }
+      },
+      "Wargear": {
+        "stats": {
+          "keyword?": {
+            "statType": "rank",
+            "value": "0",
+            "ranks": {
+              "0": {
+                "order": 0
+              },
+              "1": {
+                "order": 1
+              }
+            },
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "add keyword": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "designation"
+                ],
+                "contains": true,
+                "operator": "AND",
+                "not": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "keyword?",
+                    "value"
+                  ]
+                ],
+                "value": "1",
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 12,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "actionType": "add",
+                "value": [
+                  "{self}",
+                  "designation"
+                ],
+                "iterations": 1
+              }
+            ]
+          }
+        },
+        "aspects": {
+          "Visibility": "active"
+        }
+      },
+      "Ability": {}
     },
     "assetCatalog": {
+      "Ability§Bounding Leap": {
+        "classification": "Ability",
+        "text": "Each time a model in this unit makes a pile-in move, it can move up to an additional 3\" (to a maximum of 9\").",
+        "designation": "Bounding Leap"
+      },
+      "Ability§Shadow in the Warp (Aura)": {
+        "classification": "Ability",
+        "text": "While an enemy ***PSYKER*** unit is within 18\" of this unit:\n\n* Subtract 1 from *Psychic tests* taken for that enemy unit.\n* Each time that enemy unit suffers *Perils of the Warp*, it suffers 1 additional *mortal wound*.",
+        "designation": "Shadow in the Warp (Aura)"
+      },
+      "Ability§Swarming Masses": {
+        "classification": "Ability",
+        "text": "Each time this unit fights, models in this unit can fight if:\n\n* They are within **Engagement Range** of any enemy units.\n* They are within 2½\" of any enemy units.\n\nIf, in the **Fight phase**, this unit is subject to any other rules that would reduce the number of models from this unit that are able to fight, then neither those rules nor the Swarming Masses rule take effect for that phase.",
+        "designation": "Swarming Masses"
+      },
+      "Ability§Synapse (Aura)": {
+        "classification": "Ability",
+        "stats": {
+          "Hive Fleet": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Behemoth": {
+                "order": 1
+              },
+              "Gorgon": {
+                "order": 2
+              },
+              "Hydra": {
+                "order": 3
+              },
+              "Jormungandr": {
+                "order": 4
+              },
+              "Kraken": {
+                "order": 5
+              },
+              "Kronos": {
+                "order": 6
+              },
+              "Leviathan": {
+                "order": 7
+              }
+            },
+            "text": "While a friendly **{r}** unit is within 6\" of this unit, that unit automatically passes *Morale tests*.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        },
+        "designation": "Synapse (Aura)"
+      },
+      "Ability§Warrior Spawning": {
+        "classification": "Ability",
+        "stats": {
+          "Hive Fleet": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Behemoth": {
+                "order": 1
+              },
+              "Gorgon": {
+                "order": 2
+              },
+              "Hydra": {
+                "order": 3
+              },
+              "Jormungandr": {
+                "order": 4
+              },
+              "Kraken": {
+                "order": 5
+              },
+              "Kronos": {
+                "order": 6
+              },
+              "Leviathan": {
+                "order": 7
+              }
+            },
+            "text": "If your army is *Battle-forged*, then for each *Detachment* that includes any **{r} TYRANID WARRIORS** units, one **{r} TYRANID PRIME** model can be included in that Detachment without taking up a *Battlefield Role* slot.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        },
+        "designation": "Warrior Spawning"
+      },
       "Dedicated Transport§Tyrannocyte": {
         "stats": {
           "Power Level": {
@@ -1017,6 +1184,9 @@
           "Unit": {
             "value": 0,
             "max": 1
+          },
+          "Hive Fleet": {
+            "value": "-"
           }
         },
         "designation": "Auxiliary Support Detachment"
@@ -3057,6 +3227,31 @@
         "stats": {
           "Points": {
             "value": 7
+          },
+          "option": {
+            "statType": "rank",
+            "value": 0,
+            "ranks": {
+              "Fleshborer": {
+                "order": 0,
+                "traits": [
+                  "Weapons§Fleshborer"
+                ]
+              },
+              "Spinefists": {
+                "order": 1,
+                "traits": [
+                  "Weapons§Termagaunt spinefists"
+                ]
+              },
+              "Devourer": {
+                "order": 2,
+                "traits": [
+                  "Weapons§Termagaunt devourer"
+                ]
+              }
+            },
+            "dynamic": true
           }
         },
         "classification": "Model",
@@ -3129,6 +3324,108 @@
         "stats": {
           "Points": {
             "value": 25
+          },
+          "option 1": {
+            "statType": "rank",
+            "label": "option",
+            "value": "Bone + Lash",
+            "ranks": {
+              "Bone + Lash": {
+                "order": 0,
+                "traits": [
+                  "Weapons§Bonesword",
+                  "Wargear§Lash whip"
+                ]
+              },
+              "Dual boneswords": {
+                "order": 1,
+                "traits": [
+                  "Weapons§Dual boneswords"
+                ]
+              },
+              "Rending Claws": {
+                "order": 2,
+                "traits": [
+                  {
+                    "item": "Weapons§Rending claw",
+                    "quantity": 2
+                  }
+                ]
+              },
+              "Scything Talons": {
+                "order": 3,
+                "traits": [
+                  {
+                    "item": "Weapons§Scything talon",
+                    "quantity": 2
+                  }
+                ]
+              }
+            },
+            "dynamic": true
+          },
+          "option 2": {
+            "statType": "rank",
+            "label": "option",
+            "value": "Devourer",
+            "ranks": {
+              "Devourer": {
+                "order": 0,
+                "traits": [
+                  "Weapons§Devourer"
+                ]
+              },
+              "Deathspitter": {
+                "order": 1,
+                "traits": [
+                  "Weapons§Deathspitter"
+                ]
+              },
+              "Spinefists": {
+                "order": 2,
+                "traits": [
+                  "Weapons§Spinefists"
+                ]
+              },
+              "Bonesword + Lash whip": {
+                "order": 3,
+                "traits": [
+                  "Weapons§Bonesword",
+                  "Wargear§Lash whip"
+                ]
+              },
+              "Dual boneswords": {
+                "order": 4,
+                "traits": [
+                  "Weapons§Dual boneswords"
+                ]
+              },
+              "Rending Claws": {
+                "order": 5,
+                "traits": [
+                  "Weapons§Rending claw"
+                ]
+              },
+              "Scything Talons": {
+                "order": 6,
+                "traits": [
+                  "Weapons§Scything talon"
+                ]
+              },
+              "Barbed strangler": {
+                "order": 7,
+                "traits": [
+                  "Weapons§Barbed strangler"
+                ]
+              },
+              "Venom cannon": {
+                "order": 8,
+                "traits": [
+                  "Weapons§Venom cannon"
+                ]
+              }
+            },
+            "dynamic": true
           }
         },
         "classification": "Model",
@@ -3195,7 +3492,8 @@
           "Unique": true,
           "Describe": true,
           "Rename": true,
-          "Type": "conceptual"
+          "Type": "conceptual",
+          "Collapse": true
         },
         "stats": {
           "Detachment": {
@@ -5332,19 +5630,25 @@
           "Power Level": {
             "value": 4
           },
+          "model": {
+            "value": "Model§Gargoyle"
+          },
           "Gargoyles": {
-            "value": 10,
             "statType": "numeric",
             "increment": {
               "value": 10
             },
+            "value": 10,
             "visibility": "always",
             "dynamic": true,
             "min": 10,
             "max": 30
           },
-          "model": {
-            "value": "Model§Gargoyle"
+          "poweri": {
+            "value": 4
+          },
+          "power1": {
+            "value": 11
           }
         },
         "keywords": {
@@ -5369,7 +5673,8 @@
             {
               "item": "Model§Gargoyle",
               "quantity": 10
-            }
+            },
+            "Ability§Swarming Masses"
           ]
         },
         "designation": "Gargoyles"
@@ -5443,6 +5748,15 @@
             },
             "visibility": "active",
             "dynamic": true
+          },
+          "power1": {
+            "value": 11
+          },
+          "power2": {
+            "value": 21
+          },
+          "poweri": {
+            "value": 4
           }
         },
         "keywords": {
@@ -5466,7 +5780,9 @@
             {
               "item": "Model§Hormagaunt",
               "quantity": 10
-            }
+            },
+            "Ability§Swarming Masses",
+            "Ability§Bounding Leap"
           ]
         },
         "designation": "Hormagaunts"
@@ -5563,7 +5879,8 @@
             {
               "item": "Model§Termagaunt",
               "quantity": 10
-            }
+            },
+            "Ability§Swarming Masses"
           ]
         },
         "designation": "Termagaunts"
@@ -5574,22 +5891,7 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Tyranid Warrior"
-          },
-          "Display individually": {
-            "value": "1"
-          },
-          "Tyranid Warriors": {
-            "statType": "numeric",
-            "increment": {
-              "value": 3
-            },
-            "value": 3,
-            "statOrder": -1,
-            "visibility": "always",
-            "dynamic": true,
-            "min": 3,
-            "max": 9
+            "value": null
           },
           "Adrenal glands": {
             "statType": "rank",
@@ -5674,6 +5976,25 @@
           "Points": {
             "statType": "numeric",
             "value": 0
+          },
+          "Tyranid Warrior": {
+            "statType": "numeric",
+            "label": "Tyranid Warriors",
+            "value": 0,
+            "statOrder": -1,
+            "visibility": "always",
+            "tracked": true,
+            "min": 3,
+            "max": 9
+          },
+          "power1": {
+            "value": 4
+          },
+          "power2": {
+            "value": 7
+          },
+          "poweri": {
+            "value": 4
           }
         },
         "keywords": {
@@ -5681,7 +6002,6 @@
           "General": [
             "Core",
             "Infantry",
-            "Lash Whip",
             "Synapse",
             "Tyranid Warriors"
           ],
@@ -5694,10 +6014,124 @@
         "classification": "Troops",
         "assets": {
           "traits": [
-            "Statline§Tyranid Warrior"
+            "Statline§Tyranid Warrior",
+            "Ability§Synapse (Aura)",
+            "Ability§Shadow in the Warp (Aura)",
+            "Ability§Warrior Spawning"
+          ],
+          "included": [
+            {
+              "item": "Model§Tyranid Warrior",
+              "quantity": 3
+            }
           ]
         },
+        "allowed": {
+          "items": [
+            "Model§Tyranid Warrior"
+          ]
+        },
+        "rules": {
+          "Only 1 of every 3 can have a Venom cannon.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Tyranid Warrior"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false,
+                "note": "track 1/3 of the models",
+                "equation": {
+                  "operator": "T/O",
+                  "value": 3
+                }
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Venom cannon"
+                  ]
+                ],
+                "max": [
+                  "{self}",
+                  "rules",
+                  "Only 1 of every 3 can have a Venom cannon.",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "operator": "AND",
+                "not": false,
+                "note": "compare 1/3 of models to option tally"
+              }
+            ],
+            "failState": "error",
+            "evaluate": "OR"
+          },
+          "Only 1 of every 3 can have a Barbed strangler.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Tyranid Warrior"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false,
+                "note": "track 1/3 of the models",
+                "equation": {
+                  "operator": "T/O",
+                  "value": 3
+                }
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Barbed strangler"
+                  ]
+                ],
+                "max": [
+                  "{self}",
+                  "rules",
+                  "Only 1 of every 3 can have a Barbed strangler.",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "operator": "AND",
+                "not": false,
+                "note": "compare 1/3 of models to option tally"
+              }
+            ],
+            "failState": "error",
+            "evaluate": "OR"
+          }
+        },
         "designation": "Tyranid Warriors"
+      },
+      "Wargear§Lash whip": {
+        "classification": "Wargear",
+        "text": "Each time the bearer makes a melee attack, re-roll a hit roll of 1.",
+        "stats": {
+          "keyword?": {
+            "value": "1"
+          }
+        },
+        "designation": "Lash whip"
       },
       "Weapons§Acid spray": {
         "stats": {
@@ -5750,7 +6184,7 @@
       "Weapons§Barbed strangler": {
         "stats": {
           "Points": {
-            "value": null
+            "value": 5
           },
           "Range": {
             "value": "36″"
@@ -7742,7 +8176,7 @@
       "Weapons§Venom cannon": {
         "stats": {
           "Points": {
-            "value": null
+            "value": 5
           },
           "Range": {
             "value": "36″"
