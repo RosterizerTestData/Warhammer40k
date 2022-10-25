@@ -27,7 +27,7 @@ processInfo = (data,factionKey) => {
     name: factionName,
     game: 'Warhammer 40,000',
     genre: 'sci-fi',
-    publisher: 'GW',
+    publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
     notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.',
     revision: '0.0.1',
@@ -550,7 +550,7 @@ processUnits = (data,assetCatalog) => {
 
     let wargearArr = data.wargear.composed.filter(wargear => wargear.datasheet_id == unitId).sort((a,b) => a.itemKey.localeCompare(b.itemKey));
     wargearArr.slice().forEach((gear,i) => {
-      if(wargearArr[i].itemKey?.includes(' (melee)') && wargearArr[i+1]?.includes(' (shooting)')){
+      if(wargearArr[i]?.itemKey?.includes(' (melee)') && wargearArr[i+1].itemKey?.includes(' (shooting)')){
         wargearArr[i].itemKey = wargearArr[i].itemKey.replace('Weapon§','Wargear§').replace(' (melee)','');
         delete wargearArr[i+1];
       }
