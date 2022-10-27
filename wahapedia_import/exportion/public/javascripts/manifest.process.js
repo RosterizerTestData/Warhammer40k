@@ -284,7 +284,7 @@ createWargearStat = (i,wargearArr,modelLoadout,assetCatalog) => {
   wargearArr.forEach((wargear,i) => {
     let wargearName = wargear.itemKey.split('§')[1];
     let actualTrait = assetCatalog[wargear.itemKey];
-    let assignedTrait = (actualTrait.stats?.Points?.value === undefined && !wargear.cost) || actualTrait.stats?.Points?.value == wargear.cost ? wargear.itemKey : {
+    let assignedTrait = (actualTrait?.stats?.Points?.value === undefined && !wargear.cost) || actualTrait?.stats?.Points?.value == wargear.cost ? wargear.itemKey : {
       item: wargear.itemKey,
       stats: {Points: {value: Number(wargear.cost)}}
     }
