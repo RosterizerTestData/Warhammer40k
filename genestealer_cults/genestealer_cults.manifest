@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -167,12 +166,7 @@
                 }
             },
             "Broodmind Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -257,40 +251,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Patriarch": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -484,40 +444,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Magus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -742,40 +668,6 @@
                     }
                 }
             },
-            "Statline§Primus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Acolyte Iconward": {
                 "stats": {
                     "Points": {
@@ -966,40 +858,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Acolyte Iconward": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -1550,40 +1408,6 @@
                     }
                 }
             },
-            "Statline§Acolyte Hybrid": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Acolyte Leader": {
                 "stats": {
                     "Points": {
@@ -2128,40 +1952,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Acolyte Leader": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2952,40 +2742,6 @@
                     }
                 }
             },
-            "Statline§Neophyte Hybrid": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Neophyte Leader": {
                 "stats": {
                     "Points": {
@@ -3773,40 +3529,6 @@
                     }
                 }
             },
-            "Statline§Neophyte Leader": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Hybrid Metamorph": {
                 "stats": {
                     "Points": {
@@ -4156,40 +3878,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Hybrid Metamorph": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -4545,40 +4233,6 @@
                     }
                 }
             },
-            "Statline§Metamorph Leader": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Aberrant": {
                 "stats": {
                     "Points": {
@@ -4691,40 +4345,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Aberrant": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 6
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -4882,40 +4502,6 @@
                     }
                 }
             },
-            "Statline§Aberrant Hypermorph": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 6
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Purestrain Genestealer": {
                 "stats": {
                     "Points": {
@@ -4996,40 +4582,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Purestrain Genestealer": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 6
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -5318,40 +4870,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Goliath Truck": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -5778,40 +5296,6 @@
                     }
                 }
             },
-            "Statline§Goliath Rockgrinder": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Abominant": {
                 "stats": {
                     "Points": {
@@ -5939,40 +5423,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Abominant": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 6
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -6169,40 +5619,6 @@
                     }
                 }
             },
-            "Statline§Jackal Alphus": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Clamavus": {
                 "stats": {
                     "Points": {
@@ -6283,40 +5699,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Clamavus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -6447,40 +5829,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Locus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -6638,40 +5986,6 @@
                     }
                 }
             },
-            "Statline§Sanctus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Kelermorph": {
                 "stats": {
                     "Points": {
@@ -6755,40 +6069,6 @@
                     }
                 }
             },
-            "Statline§Kelermorph": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Nexos": {
                 "stats": {
                     "Points": {
@@ -6869,40 +6149,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Nexos": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -7096,40 +6342,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Biophagus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -7355,40 +6567,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Achilles Ridgerunner": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -7687,40 +6865,6 @@
                     }
                 }
             },
-            "Statline§Atalan Jackal": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Atalan Leader": {
                 "stats": {
                     "Points": {
@@ -7758,79 +6902,11 @@
                     }
                 }
             },
-            "Statline§Atalan Leader": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Atalan Wolfquad": {
                 "stats": {
                     "Points": {
                         "value": 24
                     },
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
-            "Statline§Atalan Wolfquad": {
-                "stats": {
                     "M": {
                         "value": "14"
                     },
@@ -8227,40 +7303,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Reductus Saboteur": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -9948,14 +8990,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Patriarch",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Living Idol (Aura)",
                         "Ability§Swift and Deadly",
@@ -10030,14 +9064,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Magus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Spiritual Leader (Aura)",
@@ -10082,14 +9108,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Primus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Cult Demagogue (Aura)",
@@ -10129,14 +9147,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Acolyte Iconward",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Nexus of Devotion",
@@ -10167,7 +9177,7 @@
                     "Acolyte Hybrids": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 14,
@@ -10263,8 +9273,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Acolyte Hybrid",
-                        "Statline§Acolyte Leader",
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Crossfire",
@@ -10296,7 +9304,7 @@
                     "Neophyte Hybrids": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 19,
@@ -10354,8 +9362,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Neophyte Hybrid",
-                        "Statline§Neophyte Leader",
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Crossfire",
@@ -10387,7 +9393,7 @@
                     "Hybrid Metamorphs": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 14,
@@ -10483,8 +9489,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hybrid Metamorph",
-                        "Statline§Metamorph Leader",
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Crossfire",
@@ -10517,7 +9521,7 @@
                     "Aberrants": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -10545,8 +9549,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Aberrant",
-                        "Statline§Aberrant Hypermorph",
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Bestial Vigour",
@@ -10578,7 +9580,7 @@
                     "Purestrain Genestealers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 10,
@@ -10607,7 +9609,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Purestrain Genestealer",
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Swift and Deadly",
@@ -10649,14 +9650,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Goliath Truck",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Crossfire",
                         "Ability§Rugged Construction",
@@ -10698,14 +9691,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Goliath Rockgrinder",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Crossfire",
                         "Ability§Rugged Construction",
@@ -10745,14 +9730,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Abominant",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§The Chosen One",
@@ -10796,14 +9773,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Jackal Alphus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Crossfire",
@@ -10845,14 +9814,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Clamavus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Proclamation Hailer",
@@ -10893,14 +9854,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Locus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Preternatural Reflexes",
@@ -10942,14 +9895,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sanctus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Creeping Shadow",
@@ -10992,14 +9937,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Kelermorph",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Crossfire",
@@ -11042,14 +9979,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Nexos",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Battlefield Analysis",
@@ -11117,14 +10046,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Biophagus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Genomic Enhancement",
@@ -11155,7 +10076,7 @@
                     "Achilles Ridgerunners": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11292,7 +10213,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Achilles Ridgerunner",
                         "Ability§Conceal",
                         "Ability§Crossfire",
                         "Ability§Explodes",
@@ -11321,7 +10241,7 @@
                     "Atalan Jackals": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 7,
@@ -11352,8 +10272,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Atalan Jackal",
-                        "Statline§Atalan Leader",
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Crossfire",
@@ -11399,14 +10317,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Reductus Saboteur",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Conceal",
                         "Ability§Unquestioning Loyalty",
                         "Ability§Deploy Explosives",

@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -164,12 +163,7 @@
                 }
             },
             "Skeinwrought Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -332,40 +326,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Ûthar the Destined": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -594,40 +554,6 @@
                     }
                 }
             },
-            "Statline§Kâhl": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Einhyr Champion": {
                 "stats": {
                     "Points": {
@@ -821,40 +747,6 @@
                     }
                 }
             },
-            "Statline§Einhyr Champion": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Grimnyr": {
                 "stats": {
                     "Points": {
@@ -954,40 +846,6 @@
                     }
                 }
             },
-            "Statline§Grimnyr": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§CORV": {
                 "stats": {
                     "Points": {
@@ -1084,40 +942,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§CORV": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -1347,40 +1171,6 @@
                     }
                 }
             },
-            "Statline§Brôkhyr Iron-master": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Ironkin Assistant": {
                 "stats": {
                     "Points": {
@@ -1544,40 +1334,6 @@
                     }
                 }
             },
-            "Statline§Ironkin Assistant": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§E-COG": {
                 "stats": {
                     "Points": {
@@ -1738,40 +1494,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§E-COG": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -2316,40 +2038,6 @@
                     }
                 }
             },
-            "Statline§Hearthkyn Warrior": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Theyn": {
                 "stats": {
                     "Points": {
@@ -2891,40 +2579,6 @@
                     }
                 }
             },
-            "Statline§Theyn": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Hearthguard": {
                 "stats": {
                     "Points": {
@@ -3211,40 +2865,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Hearthguard": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -3537,40 +3157,6 @@
                     }
                 }
             },
-            "Statline§Hesyr": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Beserk": {
                 "stats": {
                     "Points": {
@@ -3699,40 +3285,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Beserk": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "28mm"
                     }
                 }
             },
@@ -4053,40 +3605,6 @@
                     }
                 }
             },
-            "Statline§Pioneer": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "90 x 52mm"
-                    }
-                }
-            },
             "Model§Sagitaur": {
                 "stats": {
                     "Points": {
@@ -4289,40 +3807,6 @@
                     }
                 }
             },
-            "Statline§Sagitaur": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Brôkhyr Thunderkyn": {
                 "stats": {
                     "Points": {
@@ -4435,40 +3919,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Brôkhyr Thunderkyn": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -5075,40 +4525,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Hekaton Land Fortress": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -6595,14 +6011,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ûthar the Destined",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -6718,14 +6126,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Kâhl",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -6841,14 +6241,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Einhyr Champion",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -6894,8 +6286,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Grimnyr",
-                        "Statline§CORV",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -6945,9 +6335,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Brôkhyr Iron-master",
-                        "Statline§Ironkin Assistant",
-                        "Statline§E-COG",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -6984,7 +6371,7 @@
                     "Hearthkyn Warriors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 19,
@@ -7101,8 +6488,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hearthkyn Warrior",
-                        "Statline§Theyn",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -7135,7 +6520,7 @@
                     "Einhyr Hearthguard": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -7237,8 +6622,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hearthguard",
-                        "Statline§Hesyr",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -7271,7 +6654,7 @@
                     "Cthonian Beserks": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 10,
@@ -7300,7 +6683,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Beserk",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -7333,7 +6715,7 @@
                     "Hernkyn Pioneers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -7451,7 +6833,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Pioneer",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -7483,7 +6864,7 @@
                     "Sagitaur": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 2,
@@ -7512,7 +6893,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sagitaur",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -7543,7 +6923,7 @@
                     "Brôkhyr Thunderkyn": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -7572,7 +6952,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Brôkhyr Thunderkyn",
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",
@@ -7649,14 +7028,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hekaton Land Fortress",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Eye of the Ancestors",
                         "Ability§Steady Advance",
                         "Ability§Void Armour",

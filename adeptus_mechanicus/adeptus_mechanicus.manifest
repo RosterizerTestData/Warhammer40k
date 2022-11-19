@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -444,40 +443,6 @@
                     }
                 }
             },
-            "Statline§Belisarius Cawl": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
-                    }
-                }
-            },
             "Model§Tech-Priest Dominus": {
                 "stats": {
                     "Points": {
@@ -735,40 +700,6 @@
                     }
                 }
             },
-            "Statline§Tech-Priest Dominus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Tech-Priest Enginseer": {
                 "stats": {
                     "Points": {
@@ -962,40 +893,6 @@
                     }
                 }
             },
-            "Statline§Tech-Priest Enginseer": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Kataphron Breacher": {
                 "stats": {
                     "Points": {
@@ -1171,40 +1068,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Kataphron Breacher": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -1386,40 +1249,6 @@
                     }
                 }
             },
-            "Statline§Kataphron Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Fulgurite Electro-Priest": {
                 "stats": {
                     "Points": {
@@ -1503,40 +1332,6 @@
                     }
                 }
             },
-            "Statline§Fulgurite Electro-Priest": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Corpuscarii Electro-Priest": {
                 "stats": {
                     "Points": {
@@ -1617,40 +1412,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Corpuscarii Electro-Priest": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -1879,40 +1640,6 @@
                     }
                 }
             },
-            "Statline§Kastelan Robot": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Cybernetica Datasmith": {
                 "stats": {
                     "Points": {
@@ -2040,40 +1767,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Cybernetica Datasmith": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2205,40 +1898,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Servitor": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -2497,40 +2156,6 @@
                     }
                 }
             },
-            "Statline§Skitarii Ranger": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Skitarii Ranger Alpha": {
                 "stats": {
                     "Points": {
@@ -2783,40 +2408,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Skitarii Ranger Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -3075,40 +2666,6 @@
                     }
                 }
             },
-            "Statline§Skitarii Vanguard": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Skitarii Vanguard Alpha": {
                 "stats": {
                     "Points": {
@@ -3364,40 +2921,6 @@
                     }
                 }
             },
-            "Statline§Skitarii Vanguard Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Sicarian Infiltrator": {
                 "stats": {
                     "Points": {
@@ -3594,40 +3117,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sicarian Infiltrator": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -3830,40 +3319,6 @@
                     }
                 }
             },
-            "Statline§Sicarian Infiltrator Princeps": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Sicarian Ruststalker": {
                 "stats": {
                     "Points": {
@@ -4015,40 +3470,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sicarian Ruststalker": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -4206,40 +3627,6 @@
                     }
                 }
             },
-            "Statline§Sicarian Ruststalker Princeps": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Ironstrider Ballistarius": {
                 "stats": {
                     "Points": {
@@ -4350,40 +3737,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Ironstrider Ballistarius": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
                     }
                 }
             },
@@ -4499,40 +3852,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sydonian Dragoon": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
                     }
                 }
             },
@@ -4863,40 +4182,6 @@
                     }
                 }
             },
-            "Statline§Onager Dunecrawler": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "130mm"
-                    }
-                }
-            },
             "Model§Secutarii Hoplite": {
                 "stats": {
                     "Points": {
@@ -5207,40 +4492,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Secutarii Hoplite": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -5557,40 +4808,6 @@
                     }
                 }
             },
-            "Statline§Hoplite Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Secutarii Peltast": {
                 "stats": {
                     "Points": {
@@ -5798,40 +5015,6 @@
                     }
                 }
             },
-            "Statline§Secutarii Peltast": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Peltast Alpha": {
                 "stats": {
                     "Points": {
@@ -6036,40 +5219,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Peltast Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -6409,40 +5558,6 @@
                     }
                 }
             },
-            "Statline§Terrax-pattern Termite": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Tech-Priest Manipulus": {
                 "stats": {
                     "Points": {
@@ -6665,40 +5780,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Tech-Priest Manipulus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -6963,40 +6044,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Skorpius Dunerider": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -7359,79 +6406,11 @@
                     }
                 }
             },
-            "Statline§Skorpius Disintegrator": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§X-101": {
                 "stats": {
                     "Points": {
                         "value": 25
                     },
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Statline§X-101": {
-                "stats": {
                     "M": {
                         "value": "5"
                     },
@@ -7750,40 +6729,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Serberys Sulphurhound": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
                     }
                 }
             },
@@ -8139,40 +7084,6 @@
                     }
                 }
             },
-            "Statline§Serberys Sulphurhound Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Serberys Raider": {
                 "stats": {
                     "Points": {
@@ -8395,40 +7306,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Serberys Raider": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
                     }
                 }
             },
@@ -8704,40 +7581,6 @@
                     }
                 }
             },
-            "Statline§Serberys Raider Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Pteraxii Sterylizor": {
                 "stats": {
                     "Points": {
@@ -8913,40 +7756,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Pteraxii Sterylizor": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -9175,40 +7984,6 @@
                     }
                 }
             },
-            "Statline§Pteraxii Sterylizor Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Pteraxii Skystalker": {
                 "stats": {
                     "Points": {
@@ -9321,40 +8096,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Pteraxii Skystalker": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -9509,40 +8250,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Pteraxii Skystalker Alpha": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -9838,40 +8545,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Archaeopter Transvector": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
                     }
                 }
             },
@@ -10241,40 +8914,6 @@
                     }
                 }
             },
-            "Statline§Archaeopter Stratoraptor": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Archaeopter Fusilave": {
                 "stats": {
                     "Points": {
@@ -10515,40 +9154,6 @@
                     }
                 }
             },
-            "Statline§Archaeopter Fusilave": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Technoarcheologist": {
                 "stats": {
                     "Points": {
@@ -10679,40 +9284,6 @@
                     }
                 }
             },
-            "Statline§Technoarcheologist": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Skitarii Marshal": {
                 "stats": {
                     "Points": {
@@ -10840,40 +9411,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Skitarii Marshal": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -13194,14 +11731,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Belisarius Cawl",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Refractor Field",
                         "Ability§Lord of the Machine Cult (Aura)",
@@ -13247,14 +11776,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tech-Priest Dominus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Master of Machines",
                         "Ability§Refractor Field",
@@ -13297,14 +11818,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tech-Priest Enginseer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Enhanced Bionics",
                         "Ability§Master of Machines",
@@ -13336,7 +11849,7 @@
                     "Kataphron Breachers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -13366,7 +11879,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kataphron Breacher",
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Bionics",
                         "Ability§Tracked Mobility",
@@ -13397,7 +11909,7 @@
                     "Kataphron Destroyers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -13427,7 +11939,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kataphron Destroyer",
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Tracked Mobility",
                         "Ability§Bionics",
@@ -13458,7 +11969,7 @@
                     "Fulgurite Electro-Priests": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 20,
@@ -13495,7 +12006,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Fulgurite Electro-Priest",
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Voltagheist Field",
                         "Ability§Voltagheist Blast",
@@ -13528,7 +12038,7 @@
                     "Corpuscarii Electro-Priests": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 20,
@@ -13565,7 +12075,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Corpuscarii Electro-Priest",
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Voltagheist Field",
                         "Ability§Voltagheist Blast",
@@ -13598,7 +12107,7 @@
                     "Kastelan Robots": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 6,
@@ -13631,7 +12140,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kastelan Robot",
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Battle Protocols",
                         "Ability§Repulsor Grid",
@@ -13675,14 +12183,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Cybernetica Datasmith",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Refractor Field",
                         "Ability§Master of Machines",
@@ -13724,7 +12224,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Servitor",
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Bionics",
                         "Ability§Mindlock",
@@ -13755,7 +12254,7 @@
                     "Skitarii Rangers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -13855,8 +12354,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Skitarii Ranger",
-                        "Statline§Skitarii Ranger Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Bionics",
                         "Ability§Rangers",
@@ -13888,7 +12385,7 @@
                     "Skitarii Vanguard": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -13988,8 +12485,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Skitarii Vanguard",
-                        "Statline§Skitarii Vanguard Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Bionics",
                         "Ability§Rad-saturation (Aura)",
@@ -14021,7 +12516,7 @@
                     "Sicarian Infiltrators": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -14052,8 +12547,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sicarian Infiltrator",
-                        "Statline§Sicarian Infiltrator Princeps",
                         "Ability§Doctrina Imperatives",
                         "Ability§Enhanced Bionics",
                         "Ability§Neurostatic Interference",
@@ -14087,7 +12580,7 @@
                     "Sicarian Ruststalkers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -14118,8 +12611,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sicarian Ruststalker",
-                        "Statline§Sicarian Ruststalker Princeps",
                         "Ability§Doctrina Imperatives",
                         "Ability§Optimised Gait",
                         "Ability§Enhanced Bionics",
@@ -14152,7 +12643,7 @@
                     "Ironstrider Ballistarii": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 6,
@@ -14178,7 +12669,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Ironstrider Ballistarius",
                         "Ability§Doctrina Imperatives",
                         "Ability§Bionics",
                         "Ability§Explodes",
@@ -14207,7 +12697,7 @@
                     "Sydonian Dragoons": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 6,
@@ -14233,7 +12723,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sydonian Dragoon",
                         "Ability§Doctrina Imperatives",
                         "Ability§Bionics",
                         "Ability§Explodes",
@@ -14309,14 +12798,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Onager Dunecrawler",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Emanatus Force Field",
                         "Ability§Explodes",
@@ -14347,7 +12828,7 @@
                     "Secutarii Hoplites": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -14476,8 +12957,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Secutarii Hoplite",
-                        "Statline§Hoplite Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Titan Guard",
                         "Ability§Kyropatris Field",
@@ -14510,7 +12989,7 @@
                     "Secutarii Peltasts": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -14604,8 +13083,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Secutarii Peltast",
-                        "Statline§Peltast Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Kyropatris Field",
                         "Ability§Secutarii",
@@ -14649,14 +13126,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Terrax-pattern Termite",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Subterranean Assault",
                         "Ability§Explodes",
@@ -14698,14 +13167,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tech-Priest Manipulus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Master of Machines",
                         "Ability§Refractor Field",
@@ -14748,14 +13209,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skorpius Dunerider",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Explodes",
                         "Ability§Broad Spectrum Data-tether",
@@ -14796,14 +13249,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skorpius Disintegrator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Explodes",
                         "Ability§Broad Spectrum Data-tether",
@@ -14841,14 +13286,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§X-101",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Mindlock",
                         "Ability§Salvage Protocols",
@@ -14879,7 +13316,7 @@
                     "Serberys Sulphurhounds": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 8,
@@ -14913,8 +13350,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Serberys Sulphurhound",
-                        "Statline§Serberys Sulphurhound Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Pistoleers",
                         "Ability§Enhanced Bionics",
@@ -14947,7 +13382,7 @@
                     "Serberys Raiders": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 8,
@@ -15010,8 +13445,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Serberys Raider",
-                        "Statline§Serberys Raider Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Enhanced Bionics",
                         "Ability§Skirmishing Line",
@@ -15044,7 +13477,7 @@
                     "Pteraxii Sterylizors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -15077,8 +13510,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Pteraxii Sterylizor",
-                        "Statline§Pteraxii Sterylizor Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Thermal Riders",
                         "Ability§Enhanced Bionics",
@@ -15112,7 +13543,7 @@
                     "Pteraxii Skystalkers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -15146,8 +13577,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Pteraxii Skystalker",
-                        "Statline§Pteraxii Skystalker Alpha",
                         "Ability§Doctrina Imperatives",
                         "Ability§Enhanced Bionics",
                         "Ability§Fleeting Barrage",
@@ -15258,14 +13687,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Archaeopter Transvector",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Combined Landing",
                         "Ability§Hard to Hit",
@@ -15377,14 +13798,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Archaeopter Stratoraptor",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Airborne",
                         "Ability§Manoeuvrable Craft",
@@ -15494,14 +13907,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Archaeopter Fusilave",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Bomb Rack",
                         "Ability§Airborne",
@@ -15547,14 +13952,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Technoarcheologist",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Canticles of the Omnissiah",
                         "Ability§Enhanced Bionics",
                         "Ability§Omni-scrambler",
@@ -15598,14 +13995,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skitarii Marshal",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Doctrina Imperatives",
                         "Ability§Control Edict",
                         "Ability§Servo-skull Uplink (Aura)",

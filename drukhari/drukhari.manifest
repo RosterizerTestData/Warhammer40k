@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -448,119 +447,11 @@
                     }
                 }
             },
-            "Statline§Archon (Archon)": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Archon",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Ur-Ghul (Ur-Ghul)": {
                 "stats": {
                     "Points": {
                         "value": 15
                     },
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Ur-Ghul",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Ur-Ghul (Ur-Ghul)": {
-                "stats": {
                     "M": {
                         "value": "8"
                     },
@@ -926,40 +817,6 @@
                     }
                 }
             },
-            "Statline§Succubus": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Lelith Hesperax": {
                 "stats": {
                     "Points": {
@@ -1040,40 +897,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Lelith Hesperax": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "7"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -1349,40 +1172,6 @@
                     }
                 }
             },
-            "Statline§Haemonculus": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Urien Rakarth": {
                 "stats": {
                     "Points": {
@@ -1576,40 +1365,6 @@
                     }
                 }
             },
-            "Statline§Urien Rakarth": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Drazhar": {
                 "stats": {
                     "Points": {
@@ -1690,40 +1445,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Drazhar": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -1996,40 +1717,6 @@
                     }
                 }
             },
-            "Statline§Kabalite Warrior": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Sybarite": {
                 "stats": {
                     "Points": {
@@ -2296,40 +1983,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sybarite": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -2602,40 +2255,6 @@
                     }
                 }
             },
-            "Statline§Kabalite Trueborn": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Dracon": {
                 "stats": {
                     "Points": {
@@ -2902,40 +2521,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Dracon": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -3440,40 +3025,6 @@
                     }
                 }
             },
-            "Statline§Wych": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Hekatrix": {
                 "stats": {
                     "Points": {
@@ -3975,40 +3526,6 @@
                     }
                 }
             },
-            "Statline§Hekatrix": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Hekatrix Bloodbride": {
                 "stats": {
                     "Points": {
@@ -4451,40 +3968,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Hekatrix Bloodbride": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -4933,40 +4416,6 @@
                     }
                 }
             },
-            "Statline§Syren": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Incubi": {
                 "stats": {
                     "Points": {
@@ -5066,40 +4515,6 @@
                     }
                 }
             },
-            "Statline§Incubi": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Klaivex": {
                 "stats": {
                     "Points": {
@@ -5196,40 +4611,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Klaivex": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "28mm"
                     }
                 }
             },
@@ -5363,40 +4744,6 @@
                     }
                 }
             },
-            "Statline§Mandrake": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Nightfiend": {
                 "stats": {
                     "Points": {
@@ -5524,40 +4871,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Nightfiend": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -5888,40 +5201,6 @@
                     }
                 }
             },
-            "Statline§Wrack": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Acothyst": {
                 "stats": {
                     "Points": {
@@ -6249,40 +5528,6 @@
                     }
                 }
             },
-            "Statline§Acothyst": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Grotesque": {
                 "stats": {
                     "Points": {
@@ -6437,40 +5682,6 @@
                     }
                 }
             },
-            "Statline§Grotesque": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 6
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Beastmaster (Beastmaster)": {
                 "stats": {
                     "Points": {
@@ -6621,60 +5832,6 @@
                     }
                 }
             },
-            "Statline§Beastmaster (Beastmaster)": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Beastmaster",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Clawed Fiend": {
                 "stats": {
                     "Points": {
@@ -6755,40 +5912,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Clawed Fiend": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -6875,40 +5998,6 @@
                     }
                 }
             },
-            "Statline§Khymera": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Razorwing Flock": {
                 "stats": {
                     "Points": {
@@ -6989,40 +6078,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Razorwing Flock": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 2
-                    },
-                    "T": {
-                        "value": 2
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -7359,40 +6414,6 @@
                     }
                 }
             },
-            "Statline§Raider": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Venom": {
                 "stats": {
                     "Points": {
@@ -7583,40 +6604,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Venom": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -7997,40 +6984,6 @@
                     }
                 }
             },
-            "Statline§Reaver": {
-                "stats": {
-                    "M": {
-                        "value": "18"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Arena Champion": {
                 "stats": {
                     "Points": {
@@ -8408,40 +7361,6 @@
                     }
                 }
             },
-            "Statline§Arena Champion": {
-                "stats": {
-                    "M": {
-                        "value": "18"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Hellion": {
                 "stats": {
                     "Points": {
@@ -8734,40 +7653,6 @@
                     }
                 }
             },
-            "Statline§Hellion": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Helliarch": {
                 "stats": {
                     "Points": {
@@ -9057,40 +7942,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Helliarch": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -9541,40 +8392,6 @@
                     }
                 }
             },
-            "Statline§Razorwing Jetfighter": {
-                "stats": {
-                    "M": {
-                        "value": "20-72"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Voidraven Bomber": {
                 "stats": {
                     "Points": {
@@ -9860,40 +8677,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Voidraven Bomber": {
-                "stats": {
-                    "M": {
-                        "value": "20-60"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -10375,40 +9158,6 @@
                     }
                 }
             },
-            "Statline§Scourge": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Solarite": {
                 "stats": {
                     "Points": {
@@ -10887,40 +9636,6 @@
                     }
                 }
             },
-            "Statline§Solarite": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Talos": {
                 "stats": {
                     "Points": {
@@ -11261,40 +9976,6 @@
                     }
                 }
             },
-            "Statline§Talos": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Cronos": {
                 "stats": {
                     "Points": {
@@ -11446,40 +10127,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Cronos": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -11816,40 +10463,6 @@
                     }
                 }
             },
-            "Statline§Ravager": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Reaper": {
                 "stats": {
                     "Points": {
@@ -12177,40 +10790,6 @@
                     }
                 }
             },
-            "Statline§Reaper": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Tantalus": {
                 "stats": {
                     "Points": {
@@ -12472,40 +11051,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Tantalus": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -12794,40 +11339,6 @@
                     }
                 }
             },
-            "Statline§Raven Strike Fighter": {
-                "stats": {
-                    "M": {
-                        "value": "20-70"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Archon (Archon (Legendary))": {
                 "stats": {
                     "Points": {
@@ -12885,119 +11396,11 @@
                     }
                 }
             },
-            "Statline§Archon (Archon (Legendary))": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Archon",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Beastmaster (Beastmaster (Legendary))": {
                 "stats": {
                     "Points": {
                         "value": 36
                     },
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Beastmaster",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Beastmaster (Beastmaster (Legendary))": {
-                "stats": {
                     "M": {
                         "value": "12"
                     },
@@ -13715,40 +12118,6 @@
                     }
                 }
             },
-            "Statline§Corsair Reaver": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Corsair Reaver Felarch": {
                 "stats": {
                     "Points": {
@@ -14411,40 +12780,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Corsair Reaver Felarch": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -15113,40 +13448,6 @@
                     }
                 }
             },
-            "Statline§Corsair Skyreaver": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Corsair Skyreaver Felarch": {
                 "stats": {
                     "Points": {
@@ -15812,40 +14113,6 @@
                     }
                 }
             },
-            "Statline§Corsair Skyreaver Felarch": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Corsair Cloud Dancer": {
                 "stats": {
                     "Points": {
@@ -16183,40 +14450,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Corsair Cloud Dancer": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -16560,40 +14793,6 @@
                     }
                 }
             },
-            "Statline§Corsair Cloud Dancer Felarch": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Lhamaean": {
                 "stats": {
                     "Points": {
@@ -16757,40 +14956,6 @@
                     }
                 }
             },
-            "Statline§Lhamaean": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Medusae": {
                 "stats": {
                     "Points": {
@@ -16951,40 +15116,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Medusae": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -17277,40 +15408,6 @@
                     }
                 }
             },
-            "Statline§Sslyth": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Ur-Ghul (Court of the Archon)": {
                 "stats": {
                     "Points": {
@@ -17471,60 +15568,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Ur-Ghul",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Ur-Ghul (Court of the Archon)": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 },
                 "rules": {
@@ -18029,79 +16072,11 @@
                     }
                 }
             },
-            "Statline§Corsair Voidscarred": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Voidscarred Felarch": {
                 "stats": {
                     "Points": {
                         "value": 12
                     },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
-            "Statline§Voidscarred Felarch": {
-                "stats": {
                     "M": {
                         "value": "7"
                     },
@@ -18171,40 +16146,6 @@
                     }
                 }
             },
-            "Statline§Shade Runner": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Soul Weaver": {
                 "stats": {
                     "Points": {
@@ -18242,79 +16183,11 @@
                     }
                 }
             },
-            "Statline§Soul Weaver": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Way Seeker": {
                 "stats": {
                     "Points": {
                         "value": 25
                     },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
-            "Statline§Way Seeker": {
-                "stats": {
                     "M": {
                         "value": "7"
                     },
@@ -18732,40 +16605,6 @@
                     }
                 }
             },
-            "Statline§Corsair Voidreaver": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
-                    }
-                }
-            },
             "Model§Voidreaver Felarch": {
                 "stats": {
                     "Points": {
@@ -19148,40 +16987,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Voidreaver Felarch": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
                     }
                 }
             },
@@ -21798,14 +19603,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Archon (Archon)",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Overlord (Aura)",
@@ -21845,14 +19642,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ur-Ghul (Ur-Ghul)",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Insensible To Pain",
                         "Ability§Ferocious Charge",
                         "Ability§Court of the Archon",
@@ -21891,14 +19680,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Succubus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Combat Drugs",
                         "Ability§Power From Pain",
@@ -21942,14 +19723,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Lelith Hesperax",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§At Last, a Challenge",
@@ -21993,14 +19766,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Haemonculus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Insensible to Pain",
                         "Ability§Power From Pain",
@@ -22043,14 +19808,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Urien Rakarth",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Insensible to Pain",
                         "Ability§Power From Pain",
@@ -22097,14 +19854,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Drazhar",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Murderous Assault",
@@ -22138,7 +19887,7 @@
                     "Kabalite Warriors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -22173,8 +19922,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kabalite Warrior",
-                        "Statline§Sybarite",
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         {
@@ -22205,7 +19952,7 @@
                     "Kabalite Trueborn": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -22227,8 +19974,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kabalite Trueborn",
-                        "Statline§Dracon",
                         "Ability§Power From Pain",
                         {
                             "item": "Model§Kabalite Trueborn",
@@ -22258,7 +20003,7 @@
                     "Wyches": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -22282,8 +20027,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Wych",
-                        "Statline§Hekatrix",
                         "Ability§Blade Artists",
                         "Ability§Combat Drugs",
                         "Ability§Power From Pain",
@@ -22317,7 +20060,7 @@
                     "Hekatrix Bloodbrides": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -22339,8 +20082,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hekatrix Bloodbride",
-                        "Statline§Syren",
                         "Ability§Power From Pain",
                         "Ability§Combat Drugs",
                         "Ability§Dodge",
@@ -22373,7 +20114,7 @@
                     "Incubi": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -22402,8 +20143,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Incubi",
-                        "Statline§Klaivex",
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Lethal Precision",
@@ -22436,7 +20175,7 @@
                     "Mandrakes": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -22464,8 +20203,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Mandrake",
-                        "Statline§Nightfiend",
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§From Out of the Shadows",
@@ -22500,7 +20237,7 @@
                     "Wracks": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -22535,8 +20272,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Wrack",
-                        "Statline§Acothyst",
                         "Ability§Blade Artists",
                         "Ability§Insensible to Pain",
                         "Ability§Power From Pain",
@@ -22568,7 +20303,7 @@
                     "Grotesques": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -22597,7 +20332,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Grotesque",
                         "Ability§Blade Artists",
                         "Ability§Insensible to Pain",
                         "Ability§Power From Pain",
@@ -22639,14 +20373,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Beastmaster (Beastmaster)",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Combat Drugs",
                         "Ability§Power From Pain",
@@ -22679,7 +20405,7 @@
                     "Clawed Fiends": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 6,
@@ -22701,7 +20427,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Clawed Fiend",
                         "Ability§Beasts of the Arena",
                         "Ability§Berserk Rage",
                         "Model§Clawed Fiend"
@@ -22728,7 +20453,7 @@
                     "Khymerae": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 6,
@@ -22760,7 +20485,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Khymera",
                         "Ability§Beasts of the Arena",
                         "Ability§Otherworldly",
                         {
@@ -22790,7 +20514,7 @@
                     "Razorwing Flocks": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 9,
@@ -22823,7 +20547,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Razorwing Flock",
                         "Ability§Beasts of the Arena",
                         {
                             "item": "Model§Razorwing Flock",
@@ -22977,14 +20700,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Raider",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Open-topped",
@@ -23085,14 +20800,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Venom",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Open-topped",
@@ -23125,7 +20832,7 @@
                     "Reavers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 11,
@@ -23217,8 +20924,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Reaver",
-                        "Statline§Arena Champion",
                         "Ability§Blade Artists",
                         "Ability§Combat Drugs",
                         "Ability§Power From Pain",
@@ -23251,7 +20956,7 @@
                     "Hellions": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 19,
@@ -23288,8 +20993,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hellion",
-                        "Statline§Helliarch",
                         "Ability§Blade Artists",
                         "Ability§Combat Drugs",
                         "Ability§Power From Pain",
@@ -23333,14 +21036,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Razorwing Jetfighter",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Power From Pain",
                         "Ability§Supersonic",
                         "Ability§Night Shield",
@@ -23419,14 +21114,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Voidraven Bomber",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Power From Pain",
                         "Ability§Supersonic",
                         "Ability§Night Shield",
@@ -23459,7 +21146,7 @@
                     "Scourges": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -23490,8 +21177,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Scourge",
-                        "Statline§Solarite",
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Ghostplate Armour",
@@ -23524,7 +21209,7 @@
                     "Talos": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23556,7 +21241,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Talos",
                         "Ability§Blade Artists",
                         "Ability§Insensible to Pain",
                         "Ability§Power From Pain",
@@ -23585,7 +21269,7 @@
                     "Cronos": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23645,7 +21329,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Cronos",
                         "Ability§Blade Artists",
                         "Ability§Insensible to Pain",
                         "Ability§Power From Pain",
@@ -23769,14 +21452,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ravager",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Blade Artists",
                         "Ability§Power From Pain",
                         "Ability§Night Shield",
@@ -23817,14 +21492,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Reaper",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Power From Pain",
                         "Ability§Hovering",
                         "Ability§Night Shield",
@@ -23865,14 +21532,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tantalus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Power From Pain",
                         "Ability§Open-topped",
                         "Ability§Hovering",
@@ -23916,14 +21575,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Raven Strike Fighter",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Supersonic",
                         "Ability§Hard to Hit",
@@ -23964,14 +21615,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Archon (Archon (Legendary))",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Power From Pain",
                         "Ability§Shadowfield",
                         "Ability§Overlord",
@@ -24012,14 +21655,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Beastmaster (Beastmaster (Legendary))",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Power From Pain",
                         "Ability§Combat Drugs",
                         "Ability§Beastmaster",
@@ -24049,7 +21684,7 @@
                     "Corsair Reaver Band": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 15,
@@ -24081,7 +21716,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Corsair Reaver",
                         "Ability§Reckless Abandon",
                         "Ability§Ally of Convenience",
                         {
@@ -24111,7 +21745,7 @@
                     "Corsair Skyreaver Band": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 15,
@@ -24145,7 +21779,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Corsair Skyreaver",
                         "Ability§Reckless Abandon",
                         "Ability§Ally of Convenience",
                         {
@@ -24175,7 +21808,7 @@
                     "Corsair Cloud Dancer Band": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 9,
@@ -24208,7 +21841,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Corsair Cloud Dancer",
                         "Ability§Ride the Wind",
                         "Ability§Reckless Abandon",
                         "Ability§Ally of Convenience",
@@ -24270,7 +21902,7 @@
                     "Court of the Archon": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 0,
                         "min": 0,
                         "max": 4,
@@ -24338,7 +21970,7 @@
                     "Corsair Voidscarred": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -24458,8 +22090,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Corsair Voidscarred",
-                        "Statline§Voidscarred Felarch",
                         "Ability§Lodestar helm",
                         "Ability§Shade Runner Assault",
                         "Ability§Reavers of the Void",
@@ -24493,7 +22123,7 @@
                     "Corsair Voidreavers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -24550,8 +22180,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Corsair Voidreaver",
-                        "Statline§Voidreaver Felarch",
                         "Ability§Reavers of the Void",
                         "Ability§Outcasts and Pirates",
                         {

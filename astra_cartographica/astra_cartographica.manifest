@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -244,40 +243,6 @@
                     }
                 }
             },
-            "Statline§Cartographica Rogue Trader": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Death Cult Executioner": {
                 "stats": {
                     "Points": {
@@ -504,40 +469,6 @@
                     }
                 }
             },
-            "Statline§Death Cult Executioner": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Lectro-Maester": {
                 "stats": {
                     "Points": {
@@ -701,40 +632,6 @@
                     }
                 }
             },
-            "Statline§Lectro-Maester": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Rejuvenat Adept": {
                 "stats": {
                     "Points": {
@@ -895,40 +792,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Rejuvenat Adept": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -1110,40 +973,6 @@
                     }
                 }
             },
-            "Statline§Voidsmen": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Voidmaster": {
                 "stats": {
                     "Points": {
@@ -1322,79 +1151,11 @@
                     }
                 }
             },
-            "Statline§Voidmaster": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Canid": {
                 "stats": {
                     "Points": {
                         "value": 10
                     },
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Statline§Canid": {
-                "stats": {
                     "M": {
                         "value": "8"
                     },
@@ -1821,40 +1582,6 @@
                     }
                 }
             },
-            "Statline§Navis Armsman": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Navis Sergeant-at-Arms": {
                 "stats": {
                     "Points": {
@@ -2127,40 +1854,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Navis Sergeant-at-Arms": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2699,7 +2392,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Cartographica Rogue Trader",
                         "Ability§Agent of the Imperium",
                         "Ability§Captain on Deck",
                         "Ability§Field Generators and Uncanny Reflexes",
@@ -2725,7 +2417,7 @@
                     "Voidsmen-at-arms": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 8,
@@ -2755,8 +2447,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Voidsmen",
-                        "Statline§Voidmaster",
                         "Ability§Agent of the Imperium",
                         "Ability§Masters of Close Confines",
                         "Ability§Shipborne Personnel",
@@ -2867,8 +2557,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Navis Armsman",
-                        "Statline§Navis Sergeant-at-Arms",
                         "Ability§Agent of the Imperium",
                         "Ability§Void Armour",
                         "Ability§Shipborne Personnel",

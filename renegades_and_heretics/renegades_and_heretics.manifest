@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -388,40 +387,6 @@
                     }
                 }
             },
-            "Statline§Renegade Commander": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Malefic Lord": {
                 "stats": {
                     "Points": {
@@ -505,79 +470,11 @@
                     }
                 }
             },
-            "Statline§Malefic Lord": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Rogue Psyker": {
                 "stats": {
                     "Points": {
                         "value": 35
                     },
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
-            "Statline§Rogue Psyker": {
-                "stats": {
                     "M": {
                         "value": "6"
                     },
@@ -773,40 +670,6 @@
                     }
                 }
             },
-            "Statline§Renegade Cultist": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Renegade Cultist Champion": {
                 "stats": {
                     "Points": {
@@ -967,40 +830,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Renegade Cultist Champion": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -1499,40 +1328,6 @@
                     }
                 }
             },
-            "Statline§Renegade Militia": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Renegade Militia Champion": {
                 "stats": {
                     "Points": {
@@ -2025,40 +1820,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Renegade Militia Champion": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -2557,40 +2318,6 @@
                     }
                 }
             },
-            "Statline§Renegade Militia Weapons Team": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Renegade Mutant": {
                 "stats": {
                     "Points": {
@@ -2982,40 +2709,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Renegade Mutant": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -3413,40 +3106,6 @@
                     }
                 }
             },
-            "Statline§Renegade Mutant Champion": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Chaos Spawn": {
                 "stats": {
                     "Points": {
@@ -3527,40 +3186,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Chaos Spawn": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "D6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -4044,60 +3669,6 @@
                     }
                 }
             },
-            "Statline§Renegade Disciples (Renegade Command Squad)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Renegade Disciples",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Renegade Disciple Weapon Team (Renegade Command Squad)": {
                 "stats": {
                     "Points": {
@@ -4555,60 +4126,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Renegade Disciple Weapon Team",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Renegade Disciple Weapon Team (Renegade Command Squad)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 },
                 "rules": {
@@ -5328,60 +4845,6 @@
                     }
                 }
             },
-            "Statline§Renegade Disciples (Renegade Disciple Squad)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Renegade Disciples",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Renegade Disciple Champion": {
                 "stats": {
                     "Points": {
@@ -6055,40 +5518,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Renegade Disciple Champion": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -6788,60 +6217,6 @@
                     }
                 }
             },
-            "Statline§Renegade Disciple Weapon Team (Renegade Disciple Squad)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Renegade Disciple Weapon Team",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Renegade Enforcer": {
                 "stats": {
                     "Points": {
@@ -7387,40 +6762,6 @@
                     }
                 }
             },
-            "Statline§Renegade Enforcer": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Marauder": {
                 "stats": {
                     "Points": {
@@ -7854,40 +7195,6 @@
                     }
                 }
             },
-            "Statline§Marauder": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Brute": {
                 "stats": {
                     "Points": {
@@ -8318,40 +7625,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Brute": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -9184,40 +8457,6 @@
                     }
                 }
             },
-            "Statline§Marauder Chief": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Ogryn Pack Master": {
                 "stats": {
                     "Points": {
@@ -9443,40 +8682,6 @@
                     }
                 }
             },
-            "Statline§Ogryn Pack Master": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Chaos Mauler Hounds": {
                 "stats": {
                     "Points": {
@@ -9605,40 +8810,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Chaos Mauler Hounds": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
                     }
                 }
             },
@@ -9796,40 +8967,6 @@
                     }
                 }
             },
-            "Statline§Ogryn Brute": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Plague Ogryn": {
                 "stats": {
                     "Points": {
@@ -9910,40 +9047,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Plague Ogryn": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -10500,40 +9603,6 @@
                     }
                 }
             },
-            "Statline§Renegade Heavy Weapons Team": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Chimera": {
                 "stats": {
                     "Points": {
@@ -10702,40 +9771,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chimera": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -11128,40 +10163,6 @@
                     }
                 }
             },
-            "Statline§Hellhound": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Devil Dog": {
                 "stats": {
                     "Points": {
@@ -11414,40 +10415,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Devil Dog": {
-                "stats": {
-                    "M": {
-                        "value": "0"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "0"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -11706,40 +10673,6 @@
                     }
                 }
             },
-            "Statline§Bane Wolf": {
-                "stats": {
-                    "M": {
-                        "value": "0"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "0"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Scout Sentinel": {
                 "stats": {
                     "Points": {
@@ -11944,40 +10877,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Scout Sentinel": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -12201,40 +11100,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Armoured Sentinel": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -12595,79 +11460,11 @@
                     }
                 }
             },
-            "Statline§Salamander Scout Tank": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Arvus Lighter": {
                 "stats": {
                     "Points": {
                         "value": 85
                     },
-                    "M": {
-                        "value": "20-30"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
-            "Statline§Arvus Lighter": {
-                "stats": {
                     "M": {
                         "value": "20-30"
                     },
@@ -12992,40 +11789,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Valkyrie": {
-                "stats": {
-                    "M": {
-                        "value": "20-45"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -13612,40 +12375,6 @@
                     }
                 }
             },
-            "Statline§Leman Russ Battle Tank": {
-                "stats": {
-                    "M": {
-                        "value": "0"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "0"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Basilisk": {
                 "stats": {
                     "Points": {
@@ -13987,40 +12716,6 @@
                     }
                 }
             },
-            "Statline§Basilisk": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Medusa Carriage": {
                 "stats": {
                     "Points": {
@@ -14101,40 +12796,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Medusa Carriage": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -14471,40 +13132,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Griffon Mortar Carrier": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -14849,40 +13476,6 @@
                     }
                 }
             },
-            "Statline§Wyvern": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Hydra": {
                 "stats": {
                     "Points": {
@@ -15224,40 +13817,6 @@
                     }
                 }
             },
-            "Statline§Hydra": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Colossus Bombard": {
                 "stats": {
                     "Points": {
@@ -15523,40 +14082,6 @@
                     }
                 }
             },
-            "Statline§Colossus Bombard": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Rapier Laser Destroyer": {
                 "stats": {
                     "Points": {
@@ -15750,40 +14275,6 @@
                     }
                 }
             },
-            "Statline§Rapier Laser Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "4"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Heavy Quad Launcher": {
                 "stats": {
                     "Points": {
@@ -15867,40 +14358,6 @@
                     }
                 }
             },
-            "Statline§Heavy Quad Launcher": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Heavy Mortar": {
                 "stats": {
                     "Points": {
@@ -15981,40 +14438,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Heavy Mortar": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -16501,40 +14924,6 @@
                     }
                 }
             },
-            "Statline§Malcador": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Minotaur": {
                 "stats": {
                     "Points": {
@@ -16796,40 +15185,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Minotaur": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -17238,40 +15593,6 @@
                     }
                 }
             },
-            "Statline§Malcador Defender": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Baneblade": {
                 "stats": {
                     "Points": {
@@ -17440,40 +15761,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Baneblade": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 9
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "9"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -17837,40 +16124,6 @@
                     }
                 }
             },
-            "Statline§Armageddon-pattern Medusa": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Earthshaker Carriage": {
                 "stats": {
                     "Points": {
@@ -17951,40 +16204,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Earthshaker Carriage": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -18624,40 +16843,6 @@
                     }
                 }
             },
-            "Statline§Macharius": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Macharius Omega": {
                 "stats": {
                     "Points": {
@@ -19010,40 +17195,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Macharius Omega": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -19683,40 +17834,6 @@
                     }
                 }
             },
-            "Statline§Macharius Vanquisher": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Macharius Vulcan": {
                 "stats": {
                     "Points": {
@@ -20353,40 +18470,6 @@
                     }
                 }
             },
-            "Statline§Macharius Vulcan": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Valdor Tank Hunter": {
                 "stats": {
                     "Points": {
@@ -20813,40 +18896,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Valdor Tank Hunter": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -22648,14 +20697,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Renegade Commander",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Fanatic (Aura)",
                         "Ability§Covenant of Chaos",
                         "Ability§Refractor Field",
@@ -22694,14 +20735,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Malefic Lord",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Master Witch",
                         "Ability§Covenant of Chaos",
                         "Ability§Warp Possession",
@@ -22741,7 +20774,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Rogue Psyker",
                         "Ability§Witches",
                         "Ability§Choir of Chaos",
                         "Ability§Covenant of Chaos",
@@ -22773,7 +20805,7 @@
                     "Renegade Cultists": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 29,
@@ -22795,8 +20827,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Renegade Cultist",
-                        "Statline§Renegade Cultist Champion",
                         "Ability§Covenant of Chaos",
                         "Ability§Minions of Chaos",
                         {
@@ -22827,7 +20857,7 @@
                     "Renegade Militia Squad": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 19,
@@ -22911,8 +20941,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Renegade Militia",
-                        "Statline§Renegade Militia Champion",
                         "Ability§Covenant of Chaos",
                         "Ability§Minions of Chaos",
                         {
@@ -22944,7 +20972,7 @@
                     "Renegade Mutant Rabble": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 29,
@@ -22967,8 +20995,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Renegade Mutant",
-                        "Statline§Renegade Mutant Champion",
                         "Ability§Curse of Mutation",
                         "Ability§Covenant of Chaos",
                         "Ability§Minions of Chaos",
@@ -23000,7 +21026,7 @@
                     "Renegade Chaos Spawn": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 5,
@@ -23036,7 +21062,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Chaos Spawn",
                         "Ability§Fearsome (Aura)",
                         "Ability§Covenant of Chaos",
                         "Ability§Mutated Beyond Reason",
@@ -23064,7 +21089,7 @@
                     "Renegade Command Squad": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 14
@@ -23176,7 +21201,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Renegade Disciples (Renegade Command Squad)",
                         "Ability§True Believers",
                         "Ability§Covenant of Chaos",
                         {
@@ -23206,7 +21230,7 @@
                     "Renegade Disciple Squad": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 14,
@@ -23293,8 +21317,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Renegade Disciples (Renegade Disciple Squad)",
-                        "Statline§Renegade Disciple Champion",
                         "Ability§True Believers",
                         "Ability§Covenant of Chaos",
                         {
@@ -23333,14 +21355,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Renegade Enforcer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Baleful Judge (Aura)",
                         "Ability§Refractor Field",
                         "Ability§Covenant of Chaos",
@@ -23370,7 +21384,7 @@
                     "Renegade Marauder Squad": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9
@@ -23395,8 +21409,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Marauder",
-                        "Statline§Marauder Chief",
                         "Ability§Stalkers",
                         "Ability§Murder Cultists",
                         "Ability§Covenant of Chaos",
@@ -23439,8 +21451,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Ogryn Pack Master",
-                        "Statline§Chaos Mauler Hounds",
                         "Ability§Avalanche of Rage",
                         "Model§Ogryn Pack Master",
                         {
@@ -23470,7 +21480,7 @@
                     "Renegade Ogryn Brutes": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 12,
@@ -23493,7 +21503,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Ogryn Brute",
                         "Ability§Avalanche of Rage",
                         "Ability§Combat Stimms",
                         {
@@ -23523,7 +21532,7 @@
                     "Renegade Plague Ogryns": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 9,
@@ -23556,7 +21565,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Plague Ogryn",
                         "Ability§Avalanche of Muscle",
                         "Ability§Covenant of Nurgle",
                         "Ability§Combat Stimms",
@@ -23587,7 +21595,7 @@
                     "Renegade Heavy Weapons Squad": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -23615,7 +21623,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Renegade Heavy Weapons Team",
                         {
                             "item": "Model§Renegade Heavy Weapons Team",
                             "quantity": 3
@@ -23651,14 +21658,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chimera",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
                         "Ability§Armour of Contempt",
@@ -23688,7 +21687,7 @@
                     "Hellhounds": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23709,7 +21708,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hellhound",
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
                         "Ability§Vehicle Squadron",
@@ -23738,7 +21736,7 @@
                     "Scout Sentinels": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23759,7 +21757,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Scout Sentinel",
                         "Ability§Explodes",
                         "Ability§Scout Vehicle",
                         "Ability§Smoke Launchers",
@@ -23788,7 +21785,7 @@
                     "Armoured Sentinels": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23809,7 +21806,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Armoured Sentinel",
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
                         "Ability§Armour of Contempt",
@@ -23837,7 +21833,7 @@
                     "Salamander Scout Tank": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23858,7 +21854,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Salamander Scout Tank",
                         "Ability§Scout Vehicle",
                         "Ability§Smoke Launchers",
                         "Ability§Vehicle Squadron",
@@ -23898,14 +21893,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Arvus Lighter",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Supersonic",
                         "Ability§Hard to Hit",
@@ -23938,7 +21925,7 @@
                     "Valkyries": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -23962,7 +21949,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Valkyrie",
                         "Ability§Vehicle Squadron",
                         "Ability§Grav-chute Insertion",
                         "Ability§Hover Jet",
@@ -23996,7 +21982,7 @@
                     "Leman Russ Battle Tanks": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24018,7 +22004,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Leman Russ Battle Tank",
                         "Ability§Grinding Advance",
                         "Ability§Vehicle Squadron",
                         "Ability§Explodes",
@@ -24049,7 +22034,7 @@
                     "Basilisks": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24070,7 +22055,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Basilisk",
                         "Ability§Vehicle Squadron",
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
@@ -24099,7 +22083,7 @@
                     "Medusa Carriage Battery": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24130,7 +22114,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Medusa Carriage",
                         "Ability§Artillery and Crew",
                         "Ability§Armour of Contempt",
                         "Model§Medusa Carriage"
@@ -24157,7 +22140,7 @@
                     "Griffon Mortar Carrier": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24187,7 +22170,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Griffon Mortar Carrier",
                         "Ability§Smoke Launchers",
                         "Ability§Vehicle Squadron",
                         "Ability§Explodes",
@@ -24216,7 +22198,7 @@
                     "Wyverns": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24237,7 +22219,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Wyvern",
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
                         "Ability§Vehicle Squadron",
@@ -24266,7 +22247,7 @@
                     "Hydras": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24287,7 +22268,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hydra",
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
                         "Ability§Vehicle Squadron",
@@ -24316,7 +22296,7 @@
                     "Colossus Bombards": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24346,7 +22326,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Colossus Bombard",
                         "Ability§Vehicle Squadron",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -24375,7 +22354,7 @@
                     "Rapier Laser Destroyer Battery": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24406,7 +22385,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Rapier Laser Destroyer",
                         "Ability§Artillery and Crew",
                         "Ability§Armour of Contempt",
                         "Model§Rapier Laser Destroyer"
@@ -24433,7 +22411,7 @@
                     "Heavy Quad Launcher Battery": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24464,7 +22442,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Heavy Quad Launcher",
                         "Ability§Artillery and Crew",
                         "Ability§Armour of Contempt",
                         "Model§Heavy Quad Launcher"
@@ -24491,7 +22468,7 @@
                     "Heavy Mortar Battery": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24522,7 +22499,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Heavy Mortar",
                         "Ability§Artillery and Crew",
                         "Ability§Armour of Contempt",
                         "Model§Heavy Mortar"
@@ -24556,14 +22532,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Malcador",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
@@ -24601,14 +22569,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Minotaur",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Steel Behemoth",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -24648,14 +22608,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Malcador Defender",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
@@ -24693,14 +22645,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Baneblade",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Smoke Launchers",
                         "Ability§Steel Behemoth",
@@ -24731,7 +22675,7 @@
                     "Armageddon-pattern Medusas": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24762,7 +22706,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Armageddon-pattern Medusa",
                         "Ability§Vehicle Squadron",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -24791,7 +22734,7 @@
                     "Earthshaker Carriage Battery": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -24822,7 +22765,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Earthshaker Carriage",
                         "Ability§Artillery and Crew",
                         "Ability§Armour of Contempt",
                         "Model§Earthshaker Carriage"
@@ -24857,14 +22799,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Macharius",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Steel Behemoth",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -24904,14 +22838,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Macharius Omega",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Smoke Launchers",
                         "Ability§Steel Behemoth",
                         "Ability§Explodes",
@@ -24951,14 +22877,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Macharius Vanquisher",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Steel Behemoth",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -24998,14 +22916,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Macharius Vulcan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Steel Behemoth",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -25044,14 +22954,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Valdor Tank Hunter",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Steel Behemoth",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",

@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -464,40 +463,6 @@
                     }
                 }
             },
-            "Statline§Commander in Coldstar Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Gun Drone (Tactical Drones)": {
                 "stats": {
                     "Points": {
@@ -647,60 +612,6 @@
                     }
                 }
             },
-            "Statline§Gun Drone (Tactical Drones)": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Marker Drone": {
                 "stats": {
                     "Points": {
@@ -784,79 +695,11 @@
                     }
                 }
             },
-            "Statline§Marker Drone": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Shield Drone": {
                 "stats": {
                     "Points": {
                         "value": 15
                     },
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
-            "Statline§Shield Drone": {
-                "stats": {
                     "M": {
                         "value": "10"
                     },
@@ -972,40 +815,6 @@
                     }
                 }
             },
-            "Statline§Ethereal": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Cadre Fireblade": {
                 "stats": {
                     "Points": {
@@ -1109,40 +918,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Cadre Fireblade": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -1273,40 +1048,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Commander Farsight": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -1732,40 +1473,6 @@
                     }
                 }
             },
-            "Statline§Commander Shadowsun": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Advanced Guardian Drone": {
                 "stats": {
                     "Points": {
@@ -1803,79 +1510,11 @@
                     }
                 }
             },
-            "Statline§Advanced Guardian Drone": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Command-link Drone": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
-            "Statline§Command-link Drone": {
-                "stats": {
                     "M": {
                         "value": "10"
                     },
@@ -1991,40 +1630,6 @@
                     }
                 }
             },
-            "Statline§Aun’Shi": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Aun’Va": {
                 "stats": {
                     "Points": {
@@ -2108,40 +1713,6 @@
                     }
                 }
             },
-            "Statline§Aun’Va": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 2
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Ethereal Guard": {
                 "stats": {
                     "Points": {
@@ -2222,40 +1793,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Ethereal Guard": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -2365,79 +1902,11 @@
                     }
                 }
             },
-            "Statline§Darkstrider": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Fire Warrior": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
-            "Statline§Fire Warrior": {
-                "stats": {
                     "M": {
                         "value": "6"
                     },
@@ -2672,40 +2141,6 @@
                     }
                 }
             },
-            "Statline§Fire Warrior Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Support Turret (Strike Team)": {
                 "stats": {
                     "Points": {
@@ -2763,99 +2198,11 @@
                     }
                 }
             },
-            "Statline§Support Turret (Strike Team)": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Support Turret",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Breacher Fire Warrior": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
-            "Statline§Breacher Fire Warrior": {
-                "stats": {
                     "M": {
                         "value": "6"
                     },
@@ -3066,99 +2413,11 @@
                     }
                 }
             },
-            "Statline§Breacher Fire Warrior Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Support Turret (Breacher Team)": {
                 "stats": {
                     "Points": {
                         "value": 10
                     },
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Support Turret",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Support Turret (Breacher Team)": {
-                "stats": {
                     "M": {
                         "value": "-"
                     },
@@ -3341,40 +2600,6 @@
                     }
                 }
             },
-            "Statline§Kroot": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Krootox Rider": {
                 "stats": {
                     "Points": {
@@ -3505,40 +2730,6 @@
                     }
                 }
             },
-            "Statline§Krootox Rider": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Kroot Hound": {
                 "stats": {
                     "Points": {
@@ -3619,40 +2810,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Kroot Hound": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -3858,40 +3015,6 @@
                     }
                 }
             },
-            "Statline§Kroot Shaper": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Stealth Shas’ui": {
                 "stats": {
                     "Points": {
@@ -4005,40 +3128,6 @@
                     }
                 }
             },
-            "Statline§Stealth Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Stealth Shas’vre": {
                 "stats": {
                     "Points": {
@@ -4149,40 +3238,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Stealth Shas’vre": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -4407,40 +3462,6 @@
                     }
                 }
             },
-            "Statline§Crisis Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Crisis Shas’vre": {
                 "stats": {
                     "Points": {
@@ -4659,40 +3680,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Crisis Shas’vre": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -4917,40 +3904,6 @@
                     }
                 }
             },
-            "Statline§Crisis Bodyguard Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Crisis Bodyguard Shas’vre": {
                 "stats": {
                     "Points": {
@@ -5169,40 +4122,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Crisis Bodyguard Shas’vre": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -5762,79 +4681,11 @@
                     }
                 }
             },
-            "Statline§Ghostkeel Shas’vre": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
-                    }
-                }
-            },
             "Model§Stealth Drone": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
-            "Statline§Stealth Drone": {
-                "stats": {
                     "M": {
                         "value": "10"
                     },
@@ -6374,40 +5225,6 @@
                     }
                 }
             },
-            "Statline§Riptide Shas’vre": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Pathfinder": {
                 "stats": {
                     "Points": {
@@ -6662,40 +5479,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Pathfinder": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -6956,40 +5739,6 @@
                     }
                 }
             },
-            "Statline§Pathfinder Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Piranha": {
                 "stats": {
                     "Points": {
@@ -7121,40 +5870,6 @@
                     }
                 }
             },
-            "Statline§Piranha": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Gun Drone (Piranhas)": {
                 "stats": {
                     "Points": {
@@ -7283,60 +5998,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Gun Drone (Piranhas)": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 },
                 "rules": {
@@ -7653,40 +6314,6 @@
                     }
                 }
             },
-            "Statline§Devilfish": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 13
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Gun Drone (Devilfish)": {
                 "stats": {
                     "Points": {
@@ -7843,60 +6470,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Gun Drone (Devilfish)": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 },
                 "rules": {
@@ -8335,40 +6908,6 @@
                     }
                 }
             },
-            "Statline§Razorshark Strike Fighter": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Sun Shark Bomber": {
                 "stats": {
                     "Points": {
@@ -8724,40 +7263,6 @@
                     }
                 }
             },
-            "Statline§Sun Shark Bomber": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Interceptor Drone": {
                 "stats": {
                     "Points": {
@@ -8884,40 +7389,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Interceptor Drone": {
-                "stats": {
-                    "M": {
-                        "value": "20"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -9051,40 +7522,6 @@
                     }
                 }
             },
-            "Statline§Vespid Stingwing": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Vespid Strain Leader": {
                 "stats": {
                     "Points": {
@@ -9212,40 +7649,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Vespid Strain Leader": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -9379,40 +7782,6 @@
                     }
                 }
             },
-            "Statline§Firesight Marksman": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Sniper Drone": {
                 "stats": {
                     "Points": {
@@ -9509,40 +7878,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sniper Drone": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -9879,40 +8214,6 @@
                     }
                 }
             },
-            "Statline§Sky Ray Gunship": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Gun Drone (Sky Ray Gunship)": {
                 "stats": {
                     "Points": {
@@ -10055,60 +8356,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Gun Drone (Sky Ray Gunship)": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 },
                 "rules": {
@@ -10457,40 +8704,6 @@
                     }
                 }
             },
-            "Statline§Longstrike": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Gun Drone (Longstrike)": {
                 "stats": {
                     "Points": {
@@ -10679,60 +8892,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Gun Drone (Longstrike)": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 },
                 "rules": {
@@ -11099,60 +9258,6 @@
                     }
                 }
             },
-            "Statline§Hammerhead Gunship (Hammerhead Gunship)": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Hammerhead Gunship",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Gun Drone (Hammerhead Gunship)": {
                 "stats": {
                     "Points": {
@@ -11341,60 +9446,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Gun Drone (Hammerhead Gunship)": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 },
                 "rules": {
@@ -11665,40 +9716,6 @@
                     }
                 }
             },
-            "Statline§Broadside Shas’ui": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Broadside Shas’vre": {
                 "stats": {
                     "Points": {
@@ -11943,40 +9960,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Broadside Shas’vre": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -13021,79 +11004,11 @@
                     }
                 }
             },
-            "Statline§Stormsurge": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Tidewall Droneport": {
                 "stats": {
                     "Points": {
                         "value": 80
                     },
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
-            "Statline§Tidewall Droneport": {
-                "stats": {
                     "M": {
                         "value": "-"
                     },
@@ -13163,79 +11078,11 @@
                     }
                 }
             },
-            "Statline§Tidewall Shieldline": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Tidewall Defence Platform": {
                 "stats": {
                     "Points": {
                         "value": 80
                     },
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
-            "Statline§Tidewall Defence Platform": {
-                "stats": {
                     "M": {
                         "value": "-"
                     },
@@ -13348,40 +11195,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Tidewall Gunrig": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -13536,40 +11349,6 @@
                     }
                 }
             },
-            "Statline§Shas’o R’myr": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Shas’o R’alai": {
                 "stats": {
                     "Points": {
@@ -13676,79 +11455,11 @@
                     }
                 }
             },
-            "Statline§Shas’o R’alai": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "65mm"
-                    }
-                }
-            },
             "Model§Blacklight Marker Drone": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
-            "Statline§Blacklight Marker Drone": {
-                "stats": {
                     "M": {
                         "value": "8"
                     },
@@ -14205,40 +11916,6 @@
                     }
                 }
             },
-            "Statline§Commander in XV81 Crisis Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§DX4 Technical Drone": {
                 "stats": {
                     "Points": {
@@ -14319,40 +11996,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§DX4 Technical Drone": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -14909,40 +12552,6 @@
                     }
                 }
             },
-            "Statline§Commander in XV84 Crisis Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§XV9 Hazard Battlesuit": {
                 "stats": {
                     "Points": {
@@ -15055,40 +12664,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§XV9 Hazard Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -15419,40 +12994,6 @@
                     }
                 }
             },
-            "Statline§XV109 Y’vahra Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "18"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§XV107 R’varna Battlesuit": {
                 "stats": {
                     "Points": {
@@ -15667,40 +13208,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§XV107 R’varna Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 15
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -16397,40 +13904,6 @@
                     }
                 }
             },
-            "Statline§KX139 Ta’unar Supremacy Armour": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "160mm"
-                    }
-                }
-            },
             "Model§Tetra": {
                 "stats": {
                     "Points": {
@@ -16534,40 +14007,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Tetra": {
-                "stats": {
-                    "M": {
-                        "value": "18"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -16758,40 +14197,6 @@
                     }
                 }
             },
-            "Statline§TX42 Piranha": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Heavy Gun Drone": {
                 "stats": {
                     "Points": {
@@ -16940,40 +14345,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Heavy Gun Drone": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -17135,40 +14506,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§DX-6 Remora Stealth Drone": {
-                "stats": {
-                    "M": {
-                        "value": "15-30"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -17624,40 +14961,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§AX-5-2 Barracuda": {
-                "stats": {
-                    "M": {
-                        "value": "20-65"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -18176,40 +15479,6 @@
                     }
                 }
             },
-            "Statline§Tiger Shark": {
-                "stats": {
-                    "M": {
-                        "value": "20-65"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "160mm"
-                    }
-                }
-            },
             "Model§AX-1-0 Tiger Shark": {
                 "stats": {
                     "Points": {
@@ -18629,40 +15898,6 @@
                     }
                 }
             },
-            "Statline§AX-1-0 Tiger Shark": {
-                "stats": {
-                    "M": {
-                        "value": "20-65"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "160mm"
-                    }
-                }
-            },
             "Model§Orca Dropship": {
                 "stats": {
                     "Points": {
@@ -18924,40 +16159,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Orca Dropship": {
-                "stats": {
-                    "M": {
-                        "value": "20-55"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 28
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -19622,40 +16823,6 @@
                     }
                 }
             },
-            "Statline§Manta": {
-                "stats": {
-                    "M": {
-                        "value": "20-60"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 60
-                    },
-                    "A": {
-                        "value": "12"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Remote Sensor Tower": {
                 "stats": {
                     "Points": {
@@ -19736,40 +16903,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Remote Sensor Tower": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": null
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": null
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -19946,40 +17079,6 @@
                     }
                 }
             },
-            "Statline§Drone Sentry Turret": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": null
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": null
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Knarloc Riders": {
                 "stats": {
                     "Points": {
@@ -20107,40 +17206,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Knarloc Riders": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "65mm"
                     }
                 }
             },
@@ -20272,40 +17337,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Great Knarloc": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "65mm"
                     }
                 }
             },
@@ -20516,40 +17547,6 @@
                     }
                 }
             },
-            "Statline§Commander in Crisis Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Commander in Enforcer Battlesuit": {
                 "stats": {
                     "Points": {
@@ -20757,79 +17754,11 @@
                     }
                 }
             },
-            "Statline§Commander in Enforcer Battlesuit": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Dahyak Grekh": {
                 "stats": {
                     "Points": {
                         "value": 40
                     },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Statline§Dahyak Grekh": {
-                "stats": {
                     "M": {
                         "value": "7"
                     },
@@ -21255,60 +18184,6 @@
                     }
                 }
             },
-            "Statline§Hammerhead Gunship (TX7 Hammerhead Gunship (Legendary))": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Hammerhead Gunship",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Gun Drone (TX7 Hammerhead Gunship (Legendary))": {
                 "stats": {
                     "Points": {
@@ -21570,99 +18445,11 @@
                     }
                 }
             },
-            "Statline§Gun Drone (TX7 Hammerhead Gunship (Legendary))": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Gun Drone",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§<b>Advanced Guardian Drone</b>, <b>Command-link Drone</b>, <b>Grav-inhibitor Drone</b>, <b>Guardian Drone</b>, <b>Gun Drone</b>, <b>Marker Drone</b>, <b>Missile Drone</b>, <b>Pulse Accelerator Drone</b>, <b>Sniper Drone</b> and <b>Stealth Drone</b>": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
-            "Statline§<b>Advanced Guardian Drone</b>, <b>Command-link Drone</b>, <b>Grav-inhibitor Drone</b>, <b>Guardian Drone</b>, <b>Gun Drone</b>, <b>Marker Drone</b>, <b>Missile Drone</b>, <b>Pulse Accelerator Drone</b>, <b>Sniper Drone</b> and <b>Stealth Drone</b>": {
-                "stats": {
                     "M": {
                         "value": "10"
                     },
@@ -21732,79 +18519,11 @@
                     }
                 }
             },
-            "Statline§<b>Shield Drone</b> and <b>Shielded Missile Drone</b>": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§<b>Interceptor Drone</b>": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "20"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
-            "Statline§<b>Interceptor Drone</b>": {
-                "stats": {
                     "M": {
                         "value": "20"
                     },
@@ -21981,40 +18700,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§<b>Recon Drone</b>": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -22432,40 +19117,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Kroot Farstalker": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -22978,40 +19629,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Kroot Kill-broker": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -26152,14 +22769,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Commander in Coldstar Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§High-altitude Manoeuvres",
@@ -26191,7 +22800,7 @@
                     "Tactical Drones": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 0,
                         "min": 0,
                         "max": 12,
@@ -26326,14 +22935,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ethereal",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Inspired to Greatness",
                         "Ability§Embodiments of the Empire",
                         "Ability§Failure Is Not An Option (Aura)",
@@ -26412,14 +23013,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Cadre Fireblade",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Volley Fire (Aura)",
                         "Ability§Target Sighted",
                         {
@@ -26460,14 +23053,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Commander Farsight",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Tactical Acumen",
@@ -26517,9 +23102,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Commander Shadowsun",
-                        "Statline§Advanced Guardian Drone",
-                        "Statline§Command-link Drone",
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Defender of the Greater Good",
@@ -26566,14 +23148,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Aun’Shi",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Inspired to Greatness",
                         "Ability§Shield Generator",
                         "Ability§Leadership Caste",
@@ -26615,8 +23189,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Aun’Va",
-                        "Statline§Ethereal Guard",
                         "Ability§Inspired to Greatness",
                         "Ability§Supreme Loyalty (Aura)",
                         "Ability§Paradox of Duality",
@@ -26694,14 +23266,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Darkstrider",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Structural Analyser",
                         "Ability§Target Uploaded",
                         "Ability§Drone Familiar Cluster",
@@ -26784,8 +23348,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Fire Warrior",
-                        "Statline§Fire Warrior Shas’ui",
                         "Ability§Set Up Turret",
                         "Ability§DS8 Support Turret",
                         {
@@ -26867,8 +23429,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Breacher Fire Warrior",
-                        "Statline§Breacher Fire Warrior Shas’ui",
                         "Ability§Set Up Turret",
                         "Ability§DS8 Support Turret",
                         {
@@ -26899,7 +23459,7 @@
                     "Kroot Carnivores": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 10,
                         "min": 10,
                         "max": 20,
@@ -26927,7 +23487,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kroot",
                         "Ability§Ambushing Predators",
                         "Ability§Stealthy Hunters",
                         "Ability§Kroot Pack",
@@ -26958,7 +23517,7 @@
                     "Krootox Riders": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -26989,7 +23548,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Krootox Rider",
                         "Ability§Ambushing Predators",
                         "Model§Krootox Rider"
                     ]
@@ -27015,7 +23573,7 @@
                     "Kroot Hounds": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 12,
@@ -27046,7 +23604,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kroot Hound",
                         "Ability§Ambushing Predators",
                         "Ability§Voracious Predators",
                         "Ability§Stealthy Hunter",
@@ -27086,14 +23643,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Kroot Shaper",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ambushing Predators",
                         "Ability§Wisest of Their Kind (Aura)",
                         "Ability§The Shaper Commands (Aura)",
@@ -27124,7 +23673,7 @@
                     "Stealth Battlesuits": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -27257,8 +23806,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Stealth Shas’ui",
-                        "Statline§Stealth Shas’vre",
                         "Ability§Battlesuits",
                         "Ability§Camouflage Fields",
                         "Ability§Infiltrators",
@@ -27290,7 +23837,7 @@
                     "Crisis Battlesuits": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -27564,8 +24111,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Crisis Shas’ui",
-                        "Statline§Crisis Shas’vre",
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         {
@@ -27596,7 +24141,7 @@
                     "Crisis Bodyguards": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 5,
@@ -27874,8 +24419,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Crisis Bodyguard Shas’ui",
-                        "Statline§Crisis Bodyguard Shas’vre",
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Sworn Protectors",
@@ -28022,8 +24565,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Ghostkeel Shas’vre",
-                        "Statline§Stealth Drone",
                         "Ability§Electrowarfare Suite",
                         "Ability§Infiltrator",
                         "Ability§Explodes",
@@ -28248,14 +24789,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Riptide Shas’vre",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Riptide Shield Generator",
                         "Ability§Explodes",
                         "Ability§Nova Reactor",
@@ -28409,8 +24942,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Pathfinder",
-                        "Statline§Pathfinder Shas’ui",
                         "Ability§Target Uploaded",
                         "Ability§Vanguard",
                         {
@@ -28441,7 +24972,7 @@
                     "Piranhas": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 5,
@@ -28480,8 +25011,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Piranha",
-                        "Statline§Gun Drone (Piranhas)",
                         "Ability§Drone Dock",
                         "Ability§Outflanking Harassers",
                         "Ability§Explodes",
@@ -28532,8 +25061,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Devilfish",
-                        "Statline§Gun Drone (Devilfish)",
                         "Ability§Drone Dock",
                         "Ability§Armoured Aggression",
                         "Ability§Hover Tank",
@@ -28583,14 +25110,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Razorshark Strike Fighter",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Hard to Hit",
                         "Ability§Supersonic",
@@ -28668,8 +25187,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sun Shark Bomber",
-                        "Statline§Interceptor Drone",
                         "Ability§Drone Dock",
                         "Ability§Pulse Bombs",
                         "Ability§Airborne",
@@ -28710,7 +25227,7 @@
                     "Vespid Stingwings": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 12,
@@ -28742,8 +25259,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Vespid Stingwing",
-                        "Statline§Vespid Strain Leader",
                         "Ability§Plunge From the Sky",
                         {
                             "item": "Model§Vespid Stingwing",
@@ -28820,8 +25335,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Firesight Marksman",
-                        "Statline§Sniper Drone",
                         "Ability§Drone Uplink",
                         "Ability§Marksman Stealth Field",
                         "Ability§Manta Strike",
@@ -28904,8 +25417,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sky Ray Gunship",
-                        "Statline§Gun Drone (Sky Ray Gunship)",
                         "Ability§Aerial Scanners",
                         "Ability§Targeting Array",
                         "Ability§Drone Dock",
@@ -28958,8 +25469,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Longstrike",
-                        "Statline§Gun Drone (Longstrike)",
                         "Ability§Drone Dock",
                         "Ability§Gunship Ace",
                         "Ability§Targeting Array",
@@ -29012,8 +25521,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hammerhead Gunship (Hammerhead Gunship)",
-                        "Statline§Gun Drone (Hammerhead Gunship)",
                         "Ability§Drone Dock",
                         "Ability§Targeting Array",
                         "Ability§Hover Tank",
@@ -29053,7 +25560,7 @@
                     "Broadside Battlesuits": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 0,
                         "min": 0,
                         "max": 2,
@@ -29259,7 +25766,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Broadside Shas’vre",
                         "Ability§Battlesuits",
                         "Model§Broadside Shas’vre"
                     ]
@@ -29504,14 +26010,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Stormsurge",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Stabilising Anchors",
                         "Ability§Walking Battleship",
                         "Ability§Explodes",
@@ -29557,14 +26055,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tidewall Droneport",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Set-up",
                         "Ability§Firing Positions",
                         "Ability§Drone Dock",
@@ -29610,7 +26100,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Tidewall Shieldline",
                         "Ability§Set-up",
                         "Ability§Firing Positions",
                         "Ability§Mobile Defences",
@@ -29648,14 +26137,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tidewall Gunrig",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Set-up",
                         "Ability§Firing Positions",
                         "Ability§Automated Weapons",
@@ -29698,14 +26179,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Shas’o R’myr",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§For the Greater Good",
                         "Ability§Master of War",
                         "Ability§Shield Generator",
@@ -29787,8 +26260,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Shas’o R’alai",
-                        "Statline§Blacklight Marker Drone",
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Master of War (Aura)",
@@ -29841,14 +26312,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Commander in XV81 Crisis Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§For the Greater Good",
                         "Ability§Master of War",
                         "Ability§Manta Strike",
@@ -29878,7 +26341,7 @@
                     "DX4 Technical Drones": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 10,
@@ -29915,7 +26378,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§DX4 Technical Drone",
                         "Ability§For the Greater Good",
                         "Ability§Saviour Protocols",
                         "Ability§Multi-function Surveyor",
@@ -29992,14 +26454,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Commander in XV84 Crisis Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§For the Greater Good",
                         "Ability§Master of War",
                         "Ability§Manta Strike",
@@ -30029,7 +26483,7 @@
                     "XV9 Hazard Battlesuits": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -30277,7 +26731,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§XV9 Hazard Battlesuit",
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Photon Casters",
@@ -30493,14 +26946,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§XV109 Y’vahra Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Y’vahra Shield Generator",
                         "Ability§Nova Reactor",
                         {
@@ -30715,14 +27160,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§XV107 R’varna Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§R’varna Shield Generator",
                         "Ability§Nova Reactor",
                         {
@@ -30759,14 +27196,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§KX139 Ta’unar Supremacy Armour",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ta’unar Shield Generator",
                         "Ability§Explodes",
                         "Ability§Titanic",
@@ -30796,7 +27225,7 @@
                     "Tetras": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 4,
@@ -30828,7 +27257,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Tetra",
                         "Ability§Outflank",
                         "Ability§High Intensity Markerlights",
                         {
@@ -30858,7 +27286,7 @@
                     "TX42 Piranhas": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 5,
@@ -30880,7 +27308,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§TX42 Piranha",
                         "Ability§Explodes",
                         "Model§TX42 Piranha"
                     ]
@@ -30906,7 +27333,7 @@
                     "Heavy Gun Drones": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 6,
@@ -30937,7 +27364,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Heavy Gun Drone",
                         "Ability§For the Greater Good",
                         "Ability§Threat Identification Protocols",
                         "Ability§Saviour Protocols",
@@ -30968,7 +27394,7 @@
                     "DX-6 Remora Stealth Drones": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 4,
@@ -31004,7 +27430,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§DX-6 Remora Stealth Drone",
                         "Ability§Airborne",
                         "Ability§Hard to Hit",
                         "Ability§Hover Drone",
@@ -31043,14 +27468,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§AX-5-2 Barracuda",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Supersonic",
                         "Ability§Hard to Hit",
@@ -31092,14 +27509,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tiger Shark",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Hard to Hit",
                         "Ability§Supersonic",
@@ -31140,14 +27549,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§AX-1-0 Tiger Shark",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Hard to Hit",
                         "Ability§Supersonic",
@@ -31189,14 +27590,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Orca Dropship",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Supersonic",
                         "Ability§Hard to Hit",
@@ -31240,14 +27633,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Manta",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Hard to Hit",
                         "Ability§Supersonic",
@@ -31288,14 +27673,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Remote Sensor Tower",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Positional Relay (Aura)",
                         {
                             "item": "Model§Remote Sensor Tower",
@@ -31323,7 +27700,7 @@
                     "Drone Sentry Turret": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 4,
@@ -31346,7 +27723,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Drone Sentry Turret",
                         "Ability§For the Greater Good",
                         "Ability§Threat Identification Protocols",
                         "Model§Drone Sentry Turret"
@@ -31373,7 +27749,7 @@
                     "Knarloc Riders": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -31400,7 +27776,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Knarloc Riders",
                         "Ability§Loping Stride",
                         "Ability§Thunderous Pounce",
                         {
@@ -31472,14 +27847,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Great Knarloc",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Loping Stride",
                         "Ability§Crushing Strike",
                         {
@@ -31756,14 +28123,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Commander in Crisis Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Master of War (Aura)",
@@ -31908,14 +28267,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Commander in Enforcer Battlesuit",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Battlesuits",
                         "Ability§Manta Strike",
                         "Ability§Hardened Armour",
@@ -31956,14 +28307,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Dahyak Grekh",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Tracker",
                         "Ability§Quarry Can’t Hide",
                         "Ability§Concealed Booby Traps",
@@ -32005,8 +28348,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Hammerhead Gunship (TX7 Hammerhead Gunship (Legendary))",
-                        "Statline§Gun Drone (TX7 Hammerhead Gunship (Legendary))",
                         "Ability§Drone Dock",
                         "Ability§Targeting Array",
                         "Ability§Hover Tank",
@@ -32176,8 +28517,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Kroot Farstalker",
-                        "Statline§Kroot Kill-broker",
                         "Ability§Ambushing Predators",
                         "Ability§Bounty Hunters",
                         "Ability§Stealthy Hunters",

@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -351,40 +350,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Warhound Titan": {
-                "stats": {
-                    "M": {
-                        "value": "20"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 50
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -840,40 +805,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Reaver Titan": {
-                "stats": {
-                    "M": {
-                        "value": "18"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 70
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -1618,40 +1549,6 @@
                     }
                 }
             },
-            "Statline§Warlord Titan": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 9
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 120
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Warbringer Nemesis Titan": {
                 "stats": {
                     "Points": {
@@ -2345,40 +2242,6 @@
                     }
                 }
             },
-            "Statline§Warbringer Nemesis Titan": {
-                "stats": {
-                    "M": {
-                        "value": "15"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 100
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Ability§Flank Speed": {
                 "text": "Each time this model Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 12\" to the Move characteristic of this model."
             },
@@ -2975,14 +2838,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Warhound Titan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Reactor Meltdown",
                         "Ability§Flank Speed",
                         "Ability§Battle Titan",
@@ -3023,14 +2878,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Reaver Titan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Reactor Meltdown",
                         "Ability§Battle Titan",
                         "Ability§Void Shields",
@@ -3070,14 +2917,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Warlord Titan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Reactor Meltdown",
                         "Ability§War Engine",
                         "Ability§Void Shields",
@@ -3117,14 +2956,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Warbringer Nemesis Titan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Reactor Meltdown",
                         "Ability§Battle Titan",
                         "Ability§Void Shields",

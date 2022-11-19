@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -170,12 +169,7 @@
                 }
             },
             "Powers of the C’tan": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -307,40 +301,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Imotekh the Stormlord": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -594,40 +554,6 @@
                     }
                 }
             },
-            "Statline§Overlord": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Lord": {
                 "stats": {
                     "Points": {
@@ -759,40 +685,6 @@
                     }
                 }
             },
-            "Statline§Lord": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Nemesor Zahndrekh": {
                 "stats": {
                     "Points": {
@@ -873,40 +765,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Nemesor Zahndrekh": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -993,40 +851,6 @@
                     }
                 }
             },
-            "Statline§Vargard Obyron": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Orikan the Diviner": {
                 "stats": {
                     "Points": {
@@ -1110,79 +934,11 @@
                     }
                 }
             },
-            "Statline§Orikan the Diviner": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Orikan Empowered": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
-            "Statline§Orikan Empowered": {
-                "stats": {
                     "M": {
                         "value": "5"
                     },
@@ -1345,40 +1101,6 @@
                     }
                 }
             },
-            "Statline§Anrakyr the Traveller": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Trazyn the Infinite": {
                 "stats": {
                     "Points": {
@@ -1459,40 +1181,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Trazyn the Infinite": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -1743,40 +1431,6 @@
                     }
                 }
             },
-            "Statline§Catacomb Command Barge": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Necron Warrior": {
                 "stats": {
                     "Points": {
@@ -1873,40 +1527,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Necron Warrior": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2009,40 +1629,6 @@
                     }
                 }
             },
-            "Statline§Immortal": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Lychguard": {
                 "stats": {
                     "Points": {
@@ -2142,40 +1728,6 @@
                     }
                 }
             },
-            "Statline§Lychguard": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Deathmarks": {
                 "stats": {
                     "Points": {
@@ -2259,40 +1811,6 @@
                     }
                 }
             },
-            "Statline§Deathmarks": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Flayed One": {
                 "stats": {
                     "Points": {
@@ -2373,40 +1891,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Flayed One": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 6
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
                     }
                 }
             },
@@ -2522,40 +2006,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Triarch Praetorian": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2871,40 +2321,6 @@
                     }
                 }
             },
-            "Statline§Triarch Stalker": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§C’tan Shard of the Nightbringer": {
                 "stats": {
                     "Points": {
@@ -2988,40 +2404,6 @@
                     }
                 }
             },
-            "Statline§C’tan Shard of the Nightbringer": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§C’tan Shard of the Deceiver": {
                 "stats": {
                     "Points": {
@@ -3102,40 +2484,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§C’tan Shard of the Deceiver": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -3307,40 +2655,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Ghost Ark": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -3558,40 +2872,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Night Scythe": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -3859,40 +3139,6 @@
                     }
                 }
             },
-            "Statline§Doom Scythe": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Canoptek Wraith": {
                 "stats": {
                     "Points": {
@@ -4052,40 +3298,6 @@
                     }
                 }
             },
-            "Statline§Canoptek Wraith": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Tomb Blades": {
                 "stats": {
                     "Points": {
@@ -4201,40 +3413,6 @@
                     }
                 }
             },
-            "Statline§Tomb Blades": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
-                    }
-                }
-            },
             "Model§Canoptek Spyder": {
                 "stats": {
                     "Points": {
@@ -4345,40 +3523,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Canoptek Spyder": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -4741,40 +3885,6 @@
                     }
                 }
             },
-            "Statline§Monolith": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "160mm"
-                    }
-                }
-            },
             "Model§Annihilation Barge": {
                 "stats": {
                     "Points": {
@@ -4926,40 +4036,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Annihilation Barge": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -5227,40 +4303,6 @@
                     }
                 }
             },
-            "Statline§Doomsday Ark": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Transcendent C’tan": {
                 "stats": {
                     "Points": {
@@ -5341,40 +4383,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Transcendent C’tan": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -5595,40 +4603,6 @@
                     }
                 }
             },
-            "Statline§Tesseract Vault": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Obelisk": {
                 "stats": {
                     "Points": {
@@ -5846,40 +4820,6 @@
                     }
                 }
             },
-            "Statline§Obelisk": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 28
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Canoptek Tombstalker": {
                 "stats": {
                     "Points": {
@@ -6041,40 +4981,6 @@
                     }
                 }
             },
-            "Statline§Canoptek Tombstalker": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Canoptek Acanthrite": {
                 "stats": {
                     "Points": {
@@ -6202,40 +5108,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Canoptek Acanthrite": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -6397,40 +5269,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Canoptek Tomb Sentinel": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -6651,40 +5489,6 @@
                     }
                 }
             },
-            "Statline§Night Shroud": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Sentry Pylon": {
                 "stats": {
                     "Points": {
@@ -6836,40 +5640,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sentry Pylon": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -7227,40 +5997,6 @@
                     }
                 }
             },
-            "Statline§Tesseract Ark": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Kutlakh the World Killer": {
                 "stats": {
                     "Points": {
@@ -7391,40 +6127,6 @@
                     }
                 }
             },
-            "Statline§Kutlakh the World Killer": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Toholk the Blinded": {
                 "stats": {
                     "Points": {
@@ -7552,40 +6254,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Toholk the Blinded": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 5
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
                     }
                 }
             },
@@ -7881,40 +6549,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Gauss Pylon": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -8230,40 +6864,6 @@
                     }
                 }
             },
-            "Statline§Seraptek": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 28
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Illuminor Szeras": {
                 "stats": {
                     "Points": {
@@ -8394,40 +6994,6 @@
                     }
                 }
             },
-            "Statline§Illuminor Szeras": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "80mm"
-                    }
-                }
-            },
             "Model§Plasmancer": {
                 "stats": {
                     "Points": {
@@ -8508,40 +7074,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Plasmancer": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -8738,40 +7270,6 @@
                     }
                 }
             },
-            "Statline§Skorpekh Lord": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Skorpekh Destroyer": {
                 "stats": {
                     "Points": {
@@ -8868,40 +7366,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Skorpekh Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -9035,40 +7499,6 @@
                     }
                 }
             },
-            "Statline§Cryptothrall": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Canoptek Reanimator": {
                 "stats": {
                     "Points": {
@@ -9199,40 +7629,6 @@
                     }
                 }
             },
-            "Statline§Canoptek Reanimator": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Scarab Swarm": {
                 "stats": {
                     "Points": {
@@ -9313,40 +7709,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Scarab Swarm": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -9614,40 +7976,6 @@
                     }
                 }
             },
-            "Statline§Canoptek Doomstalker": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "90mm"
-                    }
-                }
-            },
             "Model§Lokhust Heavy Destroyer (Lokhust Heavy Destroyers)": {
                 "stats": {
                     "Points": {
@@ -9767,60 +8095,6 @@
                     }
                 }
             },
-            "Statline§Lokhust Heavy Destroyer (Lokhust Heavy Destroyers)": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Lokhust Heavy Destroyer",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Royal Warden": {
                 "stats": {
                     "Points": {
@@ -9901,40 +8175,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Royal Warden": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -10069,40 +8309,6 @@
                     }
                 }
             },
-            "Statline§Lokhust Lord": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Technomancer": {
                 "stats": {
                     "Points": {
@@ -10186,40 +8392,6 @@
                     }
                 }
             },
-            "Statline§Technomancer": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Psychomancer": {
                 "stats": {
                     "Points": {
@@ -10300,40 +8472,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Psychomancer": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -10491,40 +8629,6 @@
                     }
                 }
             },
-            "Statline§Chronomancer": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Hexmark Destroyer": {
                 "stats": {
                     "Points": {
@@ -10608,40 +8712,6 @@
                     }
                 }
             },
-            "Statline§Hexmark Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Canoptek Plasmacyte": {
                 "stats": {
                     "Points": {
@@ -10722,40 +8792,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Canoptek Plasmacyte": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "28mm"
                     }
                 }
             },
@@ -10886,40 +8922,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§C’tan Shard of the Void Dragon": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "80mm"
                     }
                 }
             },
@@ -11074,40 +9076,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Ophydian Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -11268,40 +9236,6 @@
                     }
                 }
             },
-            "Statline§Lokhust Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
             "Model§Lokhust Heavy Destroyer (Lokhust Destroyers)": {
                 "stats": {
                     "Points": {
@@ -11456,60 +9390,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Lokhust Heavy Destroyer",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Lokhust Heavy Destroyer (Lokhust Destroyers)": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 },
                 "rules": {
@@ -11892,40 +9772,6 @@
                     }
                 }
             },
-            "Statline§Szarekh": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Triarchal Menhir": {
                 "stats": {
                     "Points": {
@@ -12054,40 +9900,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Triarchal Menhir": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -12308,79 +10120,11 @@
                     }
                 }
             },
-            "Statline§Starstele": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": null
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Tomb Ziggurat": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 9
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
-            "Statline§Tomb Ziggurat": {
-                "stats": {
                     "M": {
                         "value": "-"
                     },
@@ -12450,79 +10194,11 @@
                     }
                 }
             },
-            "Statline§Power Crucible": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 9
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Gun Emplacement Mount": {
                 "stats": {
                     "Points": {
                         "value": 0
                     },
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 9
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
-            "Statline§Gun Emplacement Mount": {
-                "stats": {
                     "M": {
                         "value": "-"
                     },
@@ -15572,14 +13248,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Imotekh the Stormlord",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§My Will Be Done",
@@ -15651,14 +13319,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Overlord",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Relentless March (Aura)",
@@ -15727,14 +13387,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Lord",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§The Lord’s Will",
@@ -15775,14 +13427,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Nemesor Zahndrekh",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§My Will Be Done",
@@ -15826,14 +13470,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Vargard Obyron",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dimensional Translocation",
@@ -15879,7 +13515,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Orikan the Diviner",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Master Chronomancer",
@@ -15915,14 +13550,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Anrakyr the Traveller",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§My Will Be Done",
@@ -15966,14 +13593,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Trazyn the Infinite",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Phase Shifter",
@@ -16054,14 +13673,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Catacomb Command Barge",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§My Will Be Done",
@@ -16095,7 +13706,7 @@
                     "Necron Warriors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 10,
                         "min": 10,
                         "max": 20,
@@ -16123,7 +13734,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Necron Warrior",
                         "Ability§Reanimation Protocols",
                         "Ability§Command Protocols",
                         "Ability§Their Number is Legion",
@@ -16154,7 +13764,7 @@
                     "Immortals": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 10,
@@ -16182,7 +13792,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Immortal",
                         "Ability§Reanimation Protocols",
                         "Ability§Command Protocols",
                         {
@@ -16212,7 +13821,7 @@
                     "Lychguard": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 10,
@@ -16275,7 +13884,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Lychguard",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -16307,7 +13915,7 @@
                     "Deathmarks": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 10,
@@ -16336,7 +13944,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Deathmarks",
                         "Ability§Reanimation Protocols",
                         "Ability§Command Protocols",
                         "Ability§Dimensional Translocation",
@@ -16367,7 +13974,7 @@
                     "Flayed Ones": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 20,
@@ -16401,7 +14008,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Flayed One",
                         "Ability§Reanimation Protocols",
                         "Ability§Command Protocols",
                         "Ability§Dimensional Translocation",
@@ -16434,7 +14040,7 @@
                     "Triarch Praetorians": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 5,
                         "min": 5,
                         "max": 10,
@@ -16464,7 +14070,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Triarch Praetorian",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -16505,14 +14110,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Triarch Stalker",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Quantum Shielding",
@@ -16553,14 +14150,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§C’tan Shard of the Nightbringer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Necrodermis",
                         "Ability§Enslaved Star God",
@@ -16606,14 +14195,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§C’tan Shard of the Deceiver",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Dimensional Translocation",
                         "Ability§Grand Illusion",
@@ -16663,14 +14244,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ghost Ark",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Quantum Shielding",
@@ -16714,14 +14287,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Night Scythe",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Supersonic",
@@ -16764,14 +14329,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Doom Scythe",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Supersonic",
@@ -16804,7 +14361,7 @@
                     "Canoptek Wraiths": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -16833,7 +14390,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Canoptek Wraith",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -16866,7 +14422,7 @@
                     "Tomb Blades": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 9,
@@ -16982,7 +14538,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Tomb Blades",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -17014,7 +14569,7 @@
                     "Canoptek Spyders": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -17110,7 +14665,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Canoptek Spyder",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -17149,14 +14703,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Monolith",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Death Descending",
@@ -17199,14 +14745,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Annihilation Barge",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Quantum Shielding",
@@ -17248,14 +14786,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Doomsday Ark",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Explodes",
@@ -17296,14 +14826,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Transcendent C’tan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Necrodermis",
                         "Ability§Enslaved Star God",
@@ -17351,14 +14873,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tesseract Vault",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Vengeance of the Enchained",
                         "Ability§Transtemporal Force Field",
@@ -17404,14 +14918,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Obelisk",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Death Descending",
@@ -17488,14 +14994,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Canoptek Tombstalker",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dimensional Translocation",
@@ -17525,7 +15023,7 @@
                     "Canoptek Acanthrites": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -17555,7 +15053,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Canoptek Acanthrite",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -17630,14 +15127,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Canoptek Tomb Sentinel",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dimensional Translocation",
@@ -17677,14 +15166,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Night Shroud",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Supersonic",
@@ -17718,7 +15199,7 @@
                     "Sentry Pylon": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -17785,7 +15266,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sentry Pylon",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Explodes",
@@ -17824,14 +15304,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tesseract Ark",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Explodes",
@@ -17909,14 +15381,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Kutlakh the World Killer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§My Will Be Done",
@@ -17959,14 +15423,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Toholk the Blinded",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dynastic Advisors",
@@ -18045,14 +15501,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Gauss Pylon",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Phase Shift Generator",
@@ -18092,14 +15540,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Seraptek",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Containment Field",
@@ -18141,14 +15581,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Illuminor Szeras",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Rites of Reanimation",
@@ -18192,14 +15624,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Plasmancer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Living Lightning",
@@ -18240,14 +15664,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skorpekh Lord",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§United in Destruction (Aura)",
@@ -18279,7 +15695,7 @@
                     "Skorpekh Destroyers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -18308,7 +15724,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Skorpekh Destroyer",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -18348,7 +15763,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Cryptothrall",
                         "Ability§Living Metal",
                         "Ability§Reanimation Protocols",
                         "Ability§Command Protocols",
@@ -18391,14 +15805,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Canoptek Reanimator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Explodes",
@@ -18429,7 +15835,7 @@
                     "Canoptek Scarab Swarms": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 9,
@@ -18461,7 +15867,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Scarab Swarm",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -18500,14 +15905,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Canoptek Doomstalker",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Containment Field",
@@ -18539,7 +15936,7 @@
                     "Lokhust Heavy Destroyers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -18572,7 +15969,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Lokhust Heavy Destroyer (Lokhust Heavy Destroyers)",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -18610,14 +16006,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Royal Warden",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Adaptive Strategy",
@@ -18728,14 +16116,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Lokhust Lord",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Hardwired for Destruction",
@@ -18839,14 +16219,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Technomancer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dynastic Advisors",
@@ -18887,14 +16259,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Psychomancer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dynastic Advisors",
@@ -18936,14 +16300,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chronomancer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dynastic Advisors",
@@ -18985,14 +16341,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hexmark Destroyer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Dimensional Translocation",
@@ -19034,14 +16382,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Canoptek Plasmacyte",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Dimensional Translocation",
                         "Ability§Command Protocols",
                         "Ability§Viral Construct",
@@ -19083,14 +16423,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§C’tan Shard of the Void Dragon",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Living Metal",
                         "Ability§Necrodermis",
                         "Ability§Enslaved Star God",
@@ -19127,7 +16459,7 @@
                     "Ophydian Destroyers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -19156,7 +16488,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Ophydian Destroyer",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -19191,7 +16522,7 @@
                     "Lokhust Destroyers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 6,
@@ -19216,7 +16547,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Lokhust Destroyer",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Reanimation Protocols",
@@ -19260,8 +16590,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Szarekh",
-                        "Statline§Triarchal Menhir",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Noctilith Beacons",
@@ -19315,7 +16643,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Starstele",
                         "Ability§Living Metal",
                         "Ability§Command Protocols",
                         "Ability§Convergence of Dominion",
@@ -19361,9 +16688,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Tomb Ziggurat",
-                        "Statline§Power Crucible",
-                        "Statline§Gun Emplacement Mount",
                         "Ability§Living Metal",
                         "Ability§Eternity Gate",
                         "Ability§Tomb Citadel",

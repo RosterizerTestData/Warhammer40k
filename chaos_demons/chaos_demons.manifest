@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -161,36 +160,16 @@
                 }
             },
             "Pandaemoniac Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             },
             "Warprot Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             },
             "Soulstain Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             },
             "Noctic Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -275,40 +254,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Karanak": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "75 x 25mm"
                     }
                 }
             },
@@ -576,40 +521,6 @@
                     }
                 }
             },
-            "Statline§Skarbrand": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Skulltaker": {
                 "stats": {
                     "Points": {
@@ -690,40 +601,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Skulltaker": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -857,40 +734,6 @@
                     }
                 }
             },
-            "Statline§Rendmaster on Blood Throne": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Flesh Hound": {
                 "stats": {
                     "Points": {
@@ -987,40 +830,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Flesh Hound": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
                     }
                 }
             },
@@ -1154,40 +963,6 @@
                     }
                 }
             },
-            "Statline§Gore Hound": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Bloodletter": {
                 "stats": {
                     "Points": {
@@ -1271,40 +1046,6 @@
                     }
                 }
             },
-            "Statline§Bloodletter": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Bloodreaper": {
                 "stats": {
                     "Points": {
@@ -1385,40 +1126,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Bloodreaper": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -1552,40 +1259,6 @@
                     }
                 }
             },
-            "Statline§Bloodcrusher": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "90 x 52mm"
-                    }
-                }
-            },
             "Model§Bloodhunter": {
                 "stats": {
                     "Points": {
@@ -1713,40 +1386,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Bloodhunter": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "90 x 52mm"
                     }
                 }
             },
@@ -1940,40 +1579,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Skull Cannon": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -2194,40 +1799,6 @@
                     }
                 }
             },
-            "Statline§Kairos Fateweaver": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§The Changeling": {
                 "stats": {
                     "Points": {
@@ -2311,79 +1882,11 @@
                     }
                 }
             },
-            "Statline§The Changeling": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§The Blue Scribes": {
                 "stats": {
                     "Points": {
                         "value": 90
                     },
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
-                    }
-                }
-            },
-            "Statline§The Blue Scribes": {
-                "stats": {
                     "M": {
                         "value": "12"
                     },
@@ -2665,40 +2168,6 @@
                     }
                 }
             },
-            "Statline§Lord of Change": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Flamer": {
                 "stats": {
                     "Points": {
@@ -2779,40 +2248,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Flamer": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2899,40 +2334,6 @@
                     }
                 }
             },
-            "Statline§Pyrocaster": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Exalted Flamer": {
                 "stats": {
                     "Points": {
@@ -3016,40 +2417,6 @@
                     }
                 }
             },
-            "Statline§Exalted Flamer": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "75 x 42mm"
-                    }
-                }
-            },
             "Model§Screamer": {
                 "stats": {
                     "Points": {
@@ -3130,40 +2497,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Screamer": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm flying base"
                     }
                 }
             },
@@ -3297,40 +2630,6 @@
                     }
                 }
             },
-            "Statline§Burning Chariot": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Epidemius": {
                 "stats": {
                     "Points": {
@@ -3458,40 +2757,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Epidemius": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -3981,40 +3246,6 @@
                     }
                 }
             },
-            "Statline§Great Unclean One": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "130mm"
-                    }
-                }
-            },
             "Model§Plaguebearer": {
                 "stats": {
                     "Points": {
@@ -4095,40 +3326,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Plaguebearer": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -4215,40 +3412,6 @@
                     }
                 }
             },
-            "Statline§Plagueridden": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Nurgling Swarm": {
                 "stats": {
                     "Points": {
@@ -4332,40 +3495,6 @@
                     }
                 }
             },
-            "Statline§Nurgling Swarm": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 2
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Beast of Nurgle": {
                 "stats": {
                     "Points": {
@@ -4446,40 +3575,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Beast of Nurgle": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -4708,40 +3803,6 @@
                     }
                 }
             },
-            "Statline§Plague Drone": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Plaguebringer": {
                 "stats": {
                     "Points": {
@@ -4967,40 +4028,6 @@
                     }
                 }
             },
-            "Statline§Plaguebringer": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§The Masque of Slaanesh": {
                 "stats": {
                     "Points": {
@@ -5081,40 +4108,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§The Masque of Slaanesh": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -5445,40 +4438,6 @@
                     }
                 }
             },
-            "Statline§Keeper of Secrets": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Tranceweaver": {
                 "stats": {
                     "Points": {
@@ -5562,79 +4521,11 @@
                     }
                 }
             },
-            "Statline§Tranceweaver": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Herald of Slaanesh on Steed": {
                 "stats": {
                     "Points": {
                         "value": 82
                     },
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
-            "Statline§Herald of Slaanesh on Steed": {
-                "stats": {
                     "M": {
                         "value": "14"
                     },
@@ -5857,40 +4748,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Tormentbringer on Seeker Chariot": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -6221,40 +5078,6 @@
                     }
                 }
             },
-            "Statline§Tormentbringer on Exalted Seeker Chariot": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Daemonette": {
                 "stats": {
                     "Points": {
@@ -6338,40 +5161,6 @@
                     }
                 }
             },
-            "Statline§Daemonette": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Alluress": {
                 "stats": {
                     "Points": {
@@ -6452,40 +5241,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Alluress": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -6619,40 +5374,6 @@
                     }
                 }
             },
-            "Statline§Fiend": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "75 x 42mm"
-                    }
-                }
-            },
             "Model§Blissbringer": {
                 "stats": {
                     "Points": {
@@ -6780,40 +5501,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Blissbringer": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "75 x 42mm"
                     }
                 }
             },
@@ -7089,40 +5776,6 @@
                     }
                 }
             },
-            "Statline§Hellflayer": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Seeker": {
                 "stats": {
                     "Points": {
@@ -7253,40 +5906,6 @@
                     }
                 }
             },
-            "Statline§Seeker": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Heartseeker": {
                 "stats": {
                     "Points": {
@@ -7414,40 +6033,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Heartseeker": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
                     }
                 }
             },
@@ -7641,40 +6226,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Seeker Chariot": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -8005,40 +6556,6 @@
                     }
                 }
             },
-            "Statline§Exalted Seeker Chariot": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Be’lakor": {
                 "stats": {
                     "Points": {
@@ -8256,40 +6773,6 @@
                     }
                 }
             },
-            "Statline§Be’lakor": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Daemon Prince of Chaos": {
                 "stats": {
                     "Points": {
@@ -8441,40 +6924,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Daemon Prince of Chaos": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -8924,40 +7373,6 @@
                     }
                 }
             },
-            "Statline§Soul Grinder": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Plague Hulk of Nurgle": {
                 "stats": {
                     "Points": {
@@ -9317,40 +7732,6 @@
                     }
                 }
             },
-            "Statline§Plague Hulk of Nurgle": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§An’ggrath the Unbound": {
                 "stats": {
                     "Points": {
@@ -9615,40 +7996,6 @@
                     }
                 }
             },
-            "Statline§An’ggrath the Unbound": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 10
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "130mm"
-                    }
-                }
-            },
             "Model§Uraka the Warfiend": {
                 "stats": {
                     "Points": {
@@ -9729,40 +8076,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Uraka the Warfiend": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -9996,40 +8309,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Samus": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "130mm"
                     }
                 }
             },
@@ -10297,40 +8576,6 @@
                     }
                 }
             },
-            "Statline§Zarakynel": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
-                    }
-                }
-            },
             "Model§Aetaos’rau’keres": {
                 "stats": {
                     "Points": {
@@ -10595,40 +8840,6 @@
                     }
                 }
             },
-            "Statline§Aetaos’rau’keres": {
-                "stats": {
-                    "M": {
-                        "value": "18"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 27
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "130mm"
-                    }
-                }
-            },
             "Model§Mamon Transfigured": {
                 "stats": {
                     "Points": {
@@ -10756,40 +8967,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Mamon Transfigured": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -11010,40 +9187,6 @@
                     }
                 }
             },
-            "Statline§Cor’bax Utterblight": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Plague Toad": {
                 "stats": {
                     "Points": {
@@ -11171,40 +9314,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Plague Toad": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -11398,40 +9507,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Pox Rider": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -11699,40 +9774,6 @@
                     }
                 }
             },
-            "Statline§Spined Chaos Beast": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": ""
-                    }
-                }
-            },
             "Model§Giant Chaos Spawn": {
                 "stats": {
                     "Points": {
@@ -11947,40 +9988,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Giant Chaos Spawn": {
-                "stats": {
-                    "M": {
-                        "value": "8+D6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "6+D6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "100mm"
                     }
                 }
             },
@@ -12311,40 +10318,6 @@
                     }
                 }
             },
-            "Statline§Scabeiathrax the Bloated": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 21
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Bloodmaster": {
                 "stats": {
                     "Points": {
@@ -12425,40 +10398,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Bloodmaster": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -12592,40 +10531,6 @@
                     }
                 }
             },
-            "Statline§Skullmaster": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Changecaster": {
                 "stats": {
                     "Points": {
@@ -12722,40 +10627,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Changecaster": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -12913,40 +10784,6 @@
                     }
                 }
             },
-            "Statline§Fateskimmer": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Fluxmaster": {
                 "stats": {
                     "Points": {
@@ -13098,40 +10935,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Fluxmaster": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "60mm flying base"
                     }
                 }
             },
@@ -13541,40 +11344,6 @@
                     }
                 }
             },
-            "Statline§Rotigus": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "130mm"
-                    }
-                }
-            },
             "Model§Horticulous Slimux": {
                 "stats": {
                     "Points": {
@@ -13705,40 +11474,6 @@
                     }
                 }
             },
-            "Statline§Horticulous Slimux": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
-                    }
-                }
-            },
             "Model§Poxbringer": {
                 "stats": {
                     "Points": {
@@ -13822,40 +11557,6 @@
                     }
                 }
             },
-            "Statline§Poxbringer": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Sloppity Bilepiper": {
                 "stats": {
                     "Points": {
@@ -13936,40 +11637,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sloppity Bilepiper": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -14166,40 +11833,6 @@
                     }
                 }
             },
-            "Statline§Spoilpox Scrivener": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Feculent Gnarlmaw": {
                 "stats": {
                     "Points": {
@@ -14237,79 +11870,11 @@
                     }
                 }
             },
-            "Statline§Feculent Gnarlmaw": {
-                "stats": {
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Skull Altar": {
                 "stats": {
                     "Points": {
                         "value": 50
                     },
-                    "M": {
-                        "value": "-"
-                    },
-                    "WS": {
-                        "value": null
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": null
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
-            "Statline§Skull Altar": {
-                "stats": {
                     "M": {
                         "value": "-"
                     },
@@ -14472,40 +12037,6 @@
                     }
                 }
             },
-            "Statline§Infernal Enrapturess": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "60 x 35mm"
-                    }
-                }
-            },
             "Model§Contorted Epitome": {
                 "stats": {
                     "Points": {
@@ -14633,40 +12164,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Contorted Epitome": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "75 x 42mm"
                     }
                 }
             },
@@ -14997,40 +12494,6 @@
                     }
                 }
             },
-            "Statline§Shalaxi Helbane": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Syll’Esske": {
                 "stats": {
                     "Points": {
@@ -15158,40 +12621,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Syll’Esske": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -15464,40 +12893,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Tormentbringer on Hellflayer": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -15837,40 +13232,6 @@
                     }
                 }
             },
-            "Statline§Bloodthirster": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Blue Horror (Blue Horrors)": {
                 "stats": {
                     "Points": {
@@ -15951,60 +13312,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Blue Horror",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Blue Horror (Blue Horrors)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 2
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 },
                 "rules": {
@@ -16131,60 +13438,6 @@
                     }
                 }
             },
-            "Statline§Brimstone Horror (Blue Horrors)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 1
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Brimstone Horror",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Pink Horror": {
                 "stats": {
                     "Points": {
@@ -16268,40 +13521,6 @@
                     }
                 }
             },
-            "Statline§Pink Horror": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Iridescent Horror": {
                 "stats": {
                     "Points": {
@@ -16382,40 +13601,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Iridescent Horror": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -16522,60 +13707,6 @@
                     }
                 }
             },
-            "Statline§Blue Horror (Pink Horrors)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 2
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Blue Horror",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Brimstone Horror (Pink Horrors)": {
                 "stats": {
                     "Points": {
@@ -16656,60 +13787,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Brimstone Horror",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Brimstone Horror (Pink Horrors)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 1
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 4
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 },
                 "rules": {
@@ -19705,14 +16782,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Karanak",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Brass Collar of Bloody Vengeance",
                         "Ability§Pack Leader (Aura)",
@@ -19756,14 +16825,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skarbrand",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Witchbane",
                         "Ability§Rage Embodied (Aura)",
@@ -19805,14 +16866,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skulltaker",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Skulls for Khorne",
                         "Ability§Herald of Khorne (Aura)",
@@ -19856,14 +16909,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Rendmaster on Blood Throne",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Champion Slayer",
                         "Ability§Herald of Khorne (Aura)",
@@ -19894,7 +16939,7 @@
                     "Flesh Hounds": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -19924,8 +16969,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Flesh Hound",
-                        "Statline§Gore Hound",
                         "Ability§Daemonic",
                         "Ability§Collar of Khorne",
                         "Ability§Savage Pounce",
@@ -20039,8 +17082,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Bloodletter",
-                        "Statline§Bloodreaper",
                         "Ability§Daemonic",
                         {
                             "item": "Model§Bloodletter",
@@ -20070,7 +17111,7 @@
                     "Bloodcrushers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -20173,8 +17214,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Bloodcrusher",
-                        "Statline§Bloodhunter",
                         "Ability§Daemonic",
                         {
                             "item": "Model§Bloodcrusher",
@@ -20214,14 +17253,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skull Cannon",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         {
                             "item": "Model§Skull Cannon",
@@ -20264,14 +17295,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Kairos Fateweaver",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Tzeentch (Aura)",
                         "Ability§One Head Looks Forward",
@@ -20321,14 +17344,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§The Changeling",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Formless Horror",
                         "Ability§Herald of Tzeentch (Aura)",
@@ -20376,14 +17391,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§The Blue Scribes",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§P’tarix's Sorcerous Syphon (Aura)",
                         "Ability§Xirat’p's Sorcerous Barrage",
@@ -20426,14 +17433,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Lord of Change",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Tzeentch (Aura)",
                         "Ability§Master of Magicks",
@@ -20469,7 +17468,7 @@
                     "Flamers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -20500,8 +17499,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Flamer",
-                        "Statline§Pyrocaster",
                         "Ability§Daemonic",
                         {
                             "item": "Model§Flamer",
@@ -20543,14 +17540,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Exalted Flamer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Manifestation of Destruction",
                         "Ability§Blazing Warpfire (Aura)",
@@ -20580,7 +17569,7 @@
                     "Screamers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -20611,7 +17600,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Screamer",
                         "Ability§Daemonic",
                         "Ability§Riders of the Immaterial Winds",
                         "Ability§Slashing Dive",
@@ -20689,14 +17677,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Burning Chariot",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Blazing Warpfire (Aura)",
                         {
@@ -20737,14 +17717,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Epidemius",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Nurgle (Aura)",
                         "Ability§Tally of Pestilence",
@@ -20856,14 +17828,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Great Unclean One",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Nurgle (Aura)",
                         {
@@ -20980,8 +17944,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Plaguebearer",
-                        "Statline§Plagueridden",
                         "Ability§Daemonic",
                         {
                             "item": "Model§Plaguebearer",
@@ -21011,7 +17973,7 @@
                     "Nurglings": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 9,
@@ -21043,7 +18005,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Nurgling Swarm",
                         "Ability§Daemonic",
                         "Ability§Bothersome Scamps",
                         "Ability§Mischief Makers",
@@ -21075,7 +18036,7 @@
                     "Beasts of Nurgle": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -21107,7 +18068,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Beast of Nurgle",
                         "Ability§Daemonic",
                         "Ability§Attention Seeker",
                         "Ability§Grotesque Regeneration",
@@ -21136,7 +18096,7 @@
                     "Plague Drones": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -21240,8 +18200,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Plague Drone",
-                        "Statline§Plaguebringer",
                         "Ability§Daemonic",
                         {
                             "item": "Model§Plague Drone",
@@ -21283,14 +18241,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§The Masque of Slaanesh",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§The Eternal Dance",
                         "Ability§Herald of Slaanesh (Aura)",
@@ -21438,14 +18388,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Keeper of Secrets",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Slaanesh (Aura)",
                         "Ability§Mesmerising Form",
@@ -21494,14 +18436,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tranceweaver",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Tranceweaver",
@@ -21548,14 +18482,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Herald of Slaanesh on Steed",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Quicksilver Swiftness",
                         "Ability§Daemonic Ritual",
@@ -21602,14 +18528,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tormentbringer on Seeker Chariot",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Tormentbringer",
@@ -21661,14 +18579,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tormentbringer on Exalted Seeker Chariot",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Tormentbringer",
@@ -21788,8 +18698,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Daemonette",
-                        "Statline§Alluress",
                         "Ability§Daemonic",
                         {
                             "item": "Model§Daemonette",
@@ -21819,7 +18727,7 @@
                     "Fiends": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -21849,8 +18757,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Fiend",
-                        "Statline§Blissbringer",
                         "Ability§Daemonic",
                         "Ability§Soporific Musk (Aura)",
                         {
@@ -21891,14 +18797,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hellflayer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Evasive Speed",
                         "Ability§Cutting Down the Foe",
@@ -21928,7 +18826,7 @@
                     "Seekers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -22031,8 +18929,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Seeker",
-                        "Statline§Heartseeker",
                         "Ability§Daemonic",
                         "Ability§Unholy Speed",
                         {
@@ -22073,14 +18969,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Seeker Chariot",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Evasive Speed",
                         "Ability§Scything Impact",
@@ -22120,14 +19008,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Exalted Seeker Chariot",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Evasive Speed",
                         "Ability§Scything Impact",
@@ -22175,14 +19055,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Be’lakor",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Shadow Form",
                         "Ability§Lord of Torment (Aura)",
@@ -22260,14 +19132,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Daemon Prince of Chaos",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Prince of Chaos (Aura)",
                         "Ability§Daemonic Rewards",
@@ -22314,14 +19178,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Soul Grinder",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Explodes",
                         "Ability§Daemonic Rewards",
@@ -22359,14 +19215,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Plague Hulk of Nurgle",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic Ritual",
                         "Ability§Daemonic",
                         "Ability§Disgustingly Resilient",
@@ -22412,14 +19260,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§An’ggrath the Unbound",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Scorn of the Blood God",
                         "Ability§Emissary of the Blood God (Aura)",
@@ -22460,14 +19300,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Uraka the Warfiend",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Unholy Frenzy",
                         "Ability§The Warfiend (Aura)",
@@ -22507,14 +19339,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Samus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic Ritual",
                         "Ability§Unstoppable Ferocity",
                         "Ability§Daemonic",
@@ -22559,14 +19383,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Zarakynel",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Dance of Serpents",
                         "Ability§Emissary of the Prince of Excess (Aura)",
@@ -22613,14 +19429,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Aetaos’rau’keres",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Master of Magics",
                         "Ability§Emissary of the Great Mutator (Aura)",
@@ -22663,14 +19471,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Mamon Transfigured",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§The Transfigured (Aura)",
                         {
@@ -22709,14 +19509,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Cor’bax Utterblight",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Swallow Whole",
                         "Ability§Noisome Tide of Flesh",
@@ -22748,7 +19540,7 @@
                     "Plague Toads": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -22776,7 +19568,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Plague Toad",
                         "Ability§Daemonic Ritual",
                         "Ability§Daemonic",
                         "Ability§Disgustingly Resilient",
@@ -22807,7 +19598,7 @@
                     "Pox Riders": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -22872,7 +19663,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Pox Rider",
                         "Ability§Daemonic Ritual",
                         "Ability§Daemonic",
                         "Ability§Disgustingly Resilient",
@@ -22912,14 +19702,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Spined Chaos Beast",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Warp Spines",
                         "Ability§Ephemeral Form",
@@ -22961,14 +19743,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Giant Chaos Spawn",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Fearsome (Aura)",
                         "Ability§Mutated Beyond Reason",
                         {
@@ -23011,14 +19785,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Scabeiathrax the Bloated",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Emissary of the Plague God (Aura)",
                         "Ability§Exhalations of the Plague Pit (Aura)",
@@ -23062,14 +19828,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Bloodmaster",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Khorne (Aura)",
                         "Ability§Bloodmaster",
@@ -23111,14 +19869,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skullmaster",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Khorne (Aura)",
                         "Ability§Skullmaster",
@@ -23161,14 +19911,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Changecaster",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Tzeentch (Aura)",
                         "Ability§Changecaster",
@@ -23246,14 +19988,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Fateskimmer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Tzeentch (Aura)",
                         "Ability§Fateskimmer",
@@ -23303,14 +20037,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Fluxmaster",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Tzeentch (Aura)",
                         "Ability§Fluxmaster",
@@ -23360,14 +20086,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Rotigus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Deluge of Nurgle",
                         "Ability§Daemon Lord of Nurgle (Aura)",
@@ -23415,14 +20133,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Horticulous Slimux",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Nurgle (Aura)",
                         "Ability§Beast Handler",
@@ -23466,14 +20176,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Poxbringer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Nurgle (Aura)",
                         "Ability§Poxbringer",
@@ -23521,14 +20223,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sloppity Bilepiper",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Nurgle (Aura)",
                         "Ability§Jolly Gutpipes",
@@ -23571,14 +20265,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Spoilpox Scrivener",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Nurgle (Aura)",
                         "Ability§Keep Counting! Meet Your Quota!",
@@ -23616,14 +20302,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Feculent Gnarlmaw",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§The Garden Grows",
                         "Ability§Sickness Blossoms",
@@ -23666,14 +20344,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Skull Altar",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Witchbane (Aura)",
                         "Ability§War Altar",
@@ -23717,14 +20387,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Infernal Enrapturess",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Discordant Disruption (Aura)",
@@ -23768,14 +20430,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Contorted Epitome",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Swallow Energy",
                         "Ability§Herald of Slaanesh (Aura)",
@@ -23861,14 +20515,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Shalaxi Helbane",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Slaanesh (Aura)",
                         "Ability§Mesmerising Form",
@@ -23920,14 +20566,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Syll’Esske",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Prince of Chaos (Aura)",
                         "Ability§Herald of Slaanesh (Aura)",
@@ -23977,14 +20615,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tormentbringer on Hellflayer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Tormentbringer",
@@ -24034,14 +20664,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Bloodthirster",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Khorne (Aura)",
                         "Ability§Relentless Carnage",
@@ -24082,7 +20704,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Blue Horror (Blue Horrors)",
                         "Ability§Daemonic",
                         "Ability§Capering Horrors",
                         "Ability§Split",
@@ -24196,8 +20817,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Pink Horror",
-                        "Statline§Iridescent Horror",
                         "Ability§Daemonic",
                         "Ability§Exploding Horrors",
                         "Ability§Split",

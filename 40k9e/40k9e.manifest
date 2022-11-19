@@ -1,5 +1,6 @@
 {
   "name": "40k9e",
+  "wip": true,
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -116,7 +117,9 @@
         },
         "aspects": {
           "Group Includes": true,
-          "Group Traits": true
+          "Group Traits": true,
+          "Rename": true,
+          "Describe": true
         },
         "allowed": {
           "classifications": [
@@ -769,121 +772,51 @@
             ],
             "failState": "error",
             "evaluate": "AND"
-          }
-        },
-        "aspects": {
-          "Type": "game piece",
-          "Lock Qty": true,
-          "Rename": true
-        }
-      },
-      "Statline": {
-        "stats": {
-          "A": {
-            "value": "0",
-            "statOrder": 7,
-            "group": "Stats",
-            "statType": "term",
-            "visibility": "always"
           },
-          "BS": {
-            "format": "{v}+",
-            "value": 0,
-            "statOrder": 3,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "Ld": {
-            "value": 0,
-            "statOrder": 8,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "S": {
-            "value": 0,
-            "statOrder": 4,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "Sv": {
-            "format": "{v}+",
-            "value": 0,
-            "statOrder": 9,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "T": {
-            "value": 0,
-            "statOrder": 5,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "W": {
-            "value": 0,
-            "statOrder": 6,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "WS": {
-            "format": "{v}+",
-            "value": 0,
-            "statOrder": 2,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "Base": {
-            "statType": "term",
-            "value": null,
-            "visibility": "active"
-          },
-          "M": {
-            "statType": "term",
-            "format": "{t}″",
-            "value": null,
-            "statOrder": 1,
-            "group": "Stats",
-            "visibility": "always"
-          }
-        },
-        "rules": {
-          "remove tally": {
+          "crusadeStats": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{self}",
-                    "designation"
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
                   ]
                 ],
+                "value": "Narrative",
                 "operator": "AND",
-                "not": false
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
-            "evaluate": "OR",
-            "order": 1,
+            "evaluate": "AND",
             "actions": [
               {
                 "paths": [
                   [
                     "{self}",
-                    "tally",
-                    "{0string}"
+                    "stats",
+                    [
+                      "Crusade Pts",
+                      "Experience",
+                      "Marked for Greatness"
+                    ],
+                    "visibility"
                   ]
                 ],
-                "actionType": "modify",
-                "value": -1,
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "conceptual",
+          "Lock Qty": true,
+          "Rename": true
         }
       },
       "Model": {
@@ -1262,6 +1195,24 @@
             "visibility": "active",
             "dynamic": false,
             "tracked": false
+          }
+        }
+      },
+      "Upgrade": {
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "format": "+{v}",
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
+          },
+          "Power Level": {
+            "statType": "numeric",
+            "format": "+{v}",
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
           }
         }
       }
@@ -2338,7 +2289,6 @@
     "gameModes": {},
     "theme": {}
   },
-  "revision": "0.1.1",
-  "dependencies": [],
-  "wip": true
+  "revision": "0.1.2",
+  "dependencies": []
 }

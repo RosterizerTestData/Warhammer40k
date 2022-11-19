@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -23,40 +22,6 @@
                     "Points": {
                         "value": 100
                     },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Statline§Vindicare Assassin": {
-                "stats": {
                     "M": {
                         "value": "7"
                     },
@@ -126,40 +91,6 @@
                     }
                 }
             },
-            "Statline§Callidus Assassin": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Eversor Assassin": {
                 "stats": {
                     "Points": {
@@ -197,79 +128,11 @@
                     }
                 }
             },
-            "Statline§Eversor Assassin": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Culexus Assassin": {
                 "stats": {
                     "Points": {
                         "value": 100
                     },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Statline§Culexus Assassin": {
-                "stats": {
                     "M": {
                         "value": "7"
                     },
@@ -621,14 +484,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Vindicare Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Agent of the Imperium",
                         "Ability§Execution Force",
                         "Ability§Independent Operative",
@@ -673,14 +528,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Callidus Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Agent of the Imperium",
                         "Ability§Execution Force",
                         "Ability§Independent Operative",
@@ -723,14 +570,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Eversor Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Agent of the Imperium",
                         "Ability§Execution Force",
                         "Ability§Independent Operative",
@@ -774,14 +613,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Culexus Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Agent of the Imperium",
                         "Ability§Execution Force",
                         "Ability§Independent Operative",

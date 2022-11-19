@@ -30,7 +30,7 @@ processInfo = (data,factionKey) => {
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
     notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.',
-    revision: '0.0.1',
+    revision: '0.0.2',
     dependencies: [
       {
         slug: "123456",
@@ -95,9 +95,6 @@ processModels = (data,assetCatalog) => {
     }
     assetCatalog[modelItemKey] = tempItem;
     // console.log(modelItemKey)
-    let tempStatline = JSON.parse(JSON.stringify(tempItem));
-    delete tempStatline.stats.Points;
-    assetCatalog[modelItemKey.replace('Model§','Statline§')] = tempStatline;
   });
 }
 dedupModels = (dupModels) => {
@@ -307,10 +304,7 @@ processPsychicPowers = (data,assetCatalog) => {
     }else{
       let powerName = 'Psychic Power§' + power.name.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
       let tempPower = {
-        text: formatText(power.description),
-        stats:{Roll:{
-          value: power.type + (power.roll ? (' ' + power.roll) : '')
-        }}
+        text: formatText(power.description)
       };
       assetCatalog[powerName] = tempPower;
     }
@@ -426,7 +420,7 @@ processUnits = (data,assetCatalog) => {
       tempItem.stats[datasheet.name] = {
         statType: 'numeric',
         dynamic: true,
-        visibility: 'always',
+        visibility: 'active',
       };
       let stat = tempItem.stats[datasheet.name];
       let range = models[0].models_per_unit.split('-');
@@ -469,10 +463,7 @@ processUnits = (data,assetCatalog) => {
     let modelList = [];
     models.forEach(model => {
       let [minQty,maxQty] = model.models_per_unit.split('-').map(qty => Number(qty));
-      let statlineName = model.itemKey.replace('Model§','Statline§');
       if(minQty){
-        let defaultStatline = assetCatalog[statlineName];
-        // console.log(defaultStatline)
         let tempTrait = {item: model.itemKey};
         if(minQty > 1) tempTrait.quantity = minQty;
         // console.log(datasheet.name,model.name,model.models_per_unit,models.length)
@@ -481,16 +472,11 @@ processUnits = (data,assetCatalog) => {
           tempTrait.stats.Points = tempTrait.stats.Points || {};
           tempTrait.stats.Points.visibility = 'hidden';
         }
-        let tempStatline = {...tempTrait,item: statlineName};
-        delete tempStatline.quantity;
         // console.log(tempTrait)
-        // console.log(tempStatline)
-        if(Object.keys(tempStatline).length === 1) tempStatline = statlineName;
         if(Object.keys(tempTrait).length === 1) tempTrait = model.itemKey;
         tempItem.assets.traits = tempItem.assets.traits || [];
         tempItem.assets.traits.push(tempTrait);
         modelList.push(model)
-        tempItem.assets.traits.push(tempStatline);
       }
       if(minQty > 1 || maxQty > 1){
         tempItem.allowed = tempItem.allowed || {};
@@ -507,7 +493,7 @@ processUnits = (data,assetCatalog) => {
       tempItem.assets.traits = tempItem.assets.traits || [];
       tempItem.assets.traits.push(ability.itemKey);
     });
-    const order = ['Statline§', 'Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
+    const order = ['Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
     tempItem.assets.traits.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
 
     if(datasheet.psyker?.includes('Smite')){
@@ -783,10 +769,7 @@ processPsychicClasses = (data,assetTaxonomy) => {
   data.psychicPowers.forEach(power => {
     if(power.type){
       assetTaxonomy[power.type] = assetTaxonomy[power.type] || {
-        templateClass: 'Psychic Power',
-        stats:{Roll:{
-          value: null
-        }}
+        templateClass: 'Psychic Power'
       }
     }
   });

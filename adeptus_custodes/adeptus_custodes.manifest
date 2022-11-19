@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -130,60 +129,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Custodian Guard",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Custodian Guard (Custodian Guard)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 },
                 "rules": {
@@ -429,40 +374,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Venerable Contemptor Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -799,40 +710,6 @@
                     }
                 }
             },
-            "Statline§Venerable Land Raider": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Trajann Valoris": {
                 "stats": {
                     "Points": {
@@ -960,40 +837,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Trajann Valoris": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -1125,40 +968,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Shield-Captain": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -1340,40 +1149,6 @@
                     }
                 }
             },
-            "Statline§Shield-Captain in Allarus Terminator Armour": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Shield-Captain on Dawneagle Jetbike": {
                 "stats": {
                     "Points": {
@@ -1552,40 +1327,6 @@
                     }
                 }
             },
-            "Statline§Shield-Captain on Dawneagle Jetbike": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "75 x 42mm"
-                    }
-                }
-            },
             "Model§Custodian Warden": {
                 "stats": {
                     "Points": {
@@ -1698,40 +1439,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Custodian Warden": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -1889,40 +1596,6 @@
                     }
                 }
             },
-            "Statline§Vexilus Praetor": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Vexilus Praetor in Allarus Terminator Armour": {
                 "stats": {
                     "Points": {
@@ -2050,40 +1723,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Vexilus Praetor in Allarus Terminator Armour": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -2265,40 +1904,6 @@
                     }
                 }
             },
-            "Statline§Allarus Custodian": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Vertus Praetor": {
                 "stats": {
                     "Points": {
@@ -2477,40 +2082,6 @@
                     }
                 }
             },
-            "Statline§Vertus Praetor": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "75 x 42mm"
-                    }
-                }
-            },
             "Model§Contemptor-Achillus Dreadnought": {
                 "stats": {
                     "Points": {
@@ -2686,40 +2257,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Contemptor-Achillus Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -3011,40 +2548,6 @@
                     }
                 }
             },
-            "Statline§Caladius Grav-tank": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Coronus Grav-carrier": {
                 "stats": {
                     "Points": {
@@ -3306,40 +2809,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Coronus Grav-carrier": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -3679,40 +3148,6 @@
                     }
                 }
             },
-            "Statline§Telemon Heavy Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§Contemptor-Galatus Dreadnought": {
                 "stats": {
                     "Points": {
@@ -3816,40 +3251,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Contemptor-Galatus Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -4079,40 +3480,6 @@
                     }
                 }
             },
-            "Statline§Aquilon Custodian": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "50mm"
-                    }
-                }
-            },
             "Model§Custodian Guard (Custodian Guard with Adrasite and Pyrithite Spears)": {
                 "stats": {
                     "Points": {
@@ -4225,60 +3592,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Custodian Guard",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Custodian Guard (Custodian Guard with Adrasite and Pyrithite Spears)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 },
                 "rules": {
@@ -4504,40 +3817,6 @@
                     }
                 }
             },
-            "Statline§Agamatus Custodians": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "65mm"
-                    }
-                }
-            },
             "Model§Venatari Custodian": {
                 "stats": {
                     "Points": {
@@ -4716,40 +3995,6 @@
                     }
                 }
             },
-            "Statline§Venatari Custodian": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Pallas Grav-attack": {
                 "stats": {
                     "Points": {
@@ -4830,40 +4075,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Pallas Grav-attack": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "105 x 70mm"
                     }
                 }
             },
@@ -4963,40 +4174,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Sagittarum Custodian": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -5327,40 +4504,6 @@
                     }
                 }
             },
-            "Statline§Orion Assault Dropship": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "160mm"
-                    }
-                }
-            },
             "Model§Ares Gunship": {
                 "stats": {
                     "Points": {
@@ -5656,40 +4799,6 @@
                     }
                 }
             },
-            "Statline§Ares Gunship": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 22
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "160mm"
-                    }
-                }
-            },
             "Model§Aleya": {
                 "stats": {
                     "Points": {
@@ -5789,40 +4898,6 @@
                     }
                 }
             },
-            "Statline§Aleya": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Blade Champion": {
                 "stats": {
                     "Points": {
@@ -5903,40 +4978,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Blade Champion": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -6036,40 +5077,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Valerian": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 7
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 11
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -6202,40 +5209,6 @@
                     }
                 }
             },
-            "Statline§Knight-Centura": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Prosecutor": {
                 "stats": {
                     "Points": {
@@ -6316,40 +5289,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Prosecutor": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -6436,40 +5375,6 @@
                     }
                 }
             },
-            "Statline§Prosecutor Sister Superior": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Vigilator": {
                 "stats": {
                     "Points": {
@@ -6550,40 +5455,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Vigilator": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -6670,40 +5541,6 @@
                     }
                 }
             },
-            "Statline§Vigilator Sister Superior": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Witchseeker": {
                 "stats": {
                     "Points": {
@@ -6787,40 +5624,6 @@
                     }
                 }
             },
-            "Statline§Witchseeker": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Witchseeker Sister Superior": {
                 "stats": {
                     "Points": {
@@ -6901,40 +5704,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Witchseeker Sister Superior": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -7168,40 +5937,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Anathema Psykana Rhino": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -8812,7 +7547,7 @@
                     "Custodian Guard": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 10
@@ -8867,7 +7602,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Custodian Guard (Custodian Guard)",
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         {
@@ -8907,14 +7641,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Venerable Contemptor Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Guardian Eternal",
                         "Ability§Unyielding Ancient",
                         "Ability§Atomantic Shielding",
@@ -8956,14 +7682,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Venerable Land Raider",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Unyielding Ancient",
                         "Ability§Explodes",
                         {
@@ -9002,14 +7720,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Trajann Valoris",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Adamantine Mantle",
@@ -9087,14 +7797,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Shield-Captain",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Inspirational Fighter (Aura)",
@@ -9136,14 +7838,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Shield-Captain in Allarus Terminator Armour",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§From Golden Light",
                         "Ability§Martial Ka’tah",
@@ -9185,14 +7879,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Shield-Captain on Dawneagle Jetbike",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Inspirational Fighter (Aura)",
@@ -9223,7 +7909,7 @@
                     "Custodian Wardens": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 10
@@ -9243,7 +7929,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Custodian Warden",
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Binding Oaths",
@@ -9425,14 +8110,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Vexilus Praetor",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Aquilane Relic",
@@ -9579,14 +8256,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Vexilus Praetor in Allarus Terminator Armour",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§From Golden Light",
                         "Ability§Martial Ka’tah",
@@ -9617,7 +8286,7 @@
                     "Allarus Custodians": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 6,
@@ -9643,7 +8312,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Allarus Custodian",
                         "Ability§Aegis of the Emperor",
                         "Ability§From Golden Light",
                         "Ability§Martial Ka’tah",
@@ -9672,7 +8340,7 @@
                     "Vertus Praetors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -9697,7 +8365,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Vertus Praetor",
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Implacable Vanguard",
@@ -9738,14 +8405,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Contemptor-Achillus Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Atomantic Shielding",
                         "Ability§Unyielding Ancient",
                         "Ability§Guardian Eternal",
@@ -9786,14 +8445,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Caladius Grav-tank",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Flare Shielding",
                         "Ability§Hover Tank",
                         "Ability§Explodes",
@@ -9834,14 +8485,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Coronus Grav-carrier",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Flare Shielding",
                         "Ability§Hover Tank",
                         "Ability§Explodes",
@@ -9880,14 +8523,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Telemon Heavy Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Unyielding Ancient",
                         "Ability§Guardian Eternal",
                         "Ability§Explodes",
@@ -9963,14 +8598,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Contemptor-Galatus Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Unyielding Ancient",
                         "Ability§Guardian Eternal",
                         "Ability§Explodes",
@@ -10000,7 +8627,7 @@
                     "Aquilon Custodians": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -10031,7 +8658,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Aquilon Custodian",
                         "Ability§Aegis of the Emperor",
                         "Ability§From Golden Light",
                         "Ability§Martial Ka’tah",
@@ -10062,7 +8688,7 @@
                     "Custodian Guard with Adrasite and Pyrithite Spears": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 5
@@ -10088,7 +8714,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Custodian Guard (Custodian Guard with Adrasite and Pyrithite Spears)",
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         {
@@ -10118,7 +8743,7 @@
                     "Agamatus Custodians": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -10148,7 +8773,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Agamatus Custodians",
                         "Ability§Aegis of the Emperor",
                         "Ability§Implacable Vanguard",
                         "Ability§Martial Ka’tah",
@@ -10179,7 +8803,7 @@
                     "Venatari Custodians": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 6,
@@ -10245,7 +8869,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Venatari Custodian",
                         "Ability§Aegis of the Emperor",
                         "Ability§Airborne Hunters",
                         "Ability§Martial Ka’tah",
@@ -10285,14 +8908,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Pallas Grav-attack",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Flare Shielding",
                         "Ability§Hover Tank",
                         "Ability§Explodes",
@@ -10322,7 +8937,7 @@
                     "Sagittarum Custodians": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 3,
                         "min": 3,
                         "max": 5
@@ -10348,7 +8963,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Sagittarum Custodian",
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         {
@@ -10390,14 +9004,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Orion Assault Dropship",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Supersonic",
                         "Ability§Explodes",
@@ -10476,14 +9082,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ares Gunship",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Airborne",
                         "Ability§Supersonic",
                         "Ability§Explodes",
@@ -10525,14 +9123,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Aleya",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daughters of the Abyss",
                         "Ability§Cadre Tactics (Aura)",
                         "Ability§Voidsheen Cloak",
@@ -10572,14 +9162,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Blade Champion",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Consummate Swordsman",
@@ -10622,14 +9204,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Valerian",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aegis of the Emperor",
                         "Ability§Martial Ka’tah",
                         "Ability§Inspirational Fighter (Aura)",
@@ -10669,14 +9243,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Knight-Centura",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daughters of the Abyss",
                         "Ability§Voidsheen Cloak",
                         "Ability§Cadre Tactics (Aura)",
@@ -10706,7 +9272,7 @@
                     "Prosecutors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -10734,8 +9300,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Prosecutor",
-                        "Statline§Prosecutor Sister Superior",
                         "Ability§Daughters of the Abyss",
                         {
                             "item": "Model§Prosecutor",
@@ -10765,7 +9329,7 @@
                     "Vigilators": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -10793,8 +9357,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Vigilator",
-                        "Statline§Vigilator Sister Superior",
                         "Ability§Daughters of the Abyss",
                         {
                             "item": "Model§Vigilator",
@@ -10824,7 +9386,7 @@
                     "Witchseekers": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -10852,8 +9414,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Witchseeker",
-                        "Statline§Witchseeker Sister Superior",
                         "Ability§Daughters of the Abyss",
                         "Ability§Seeker Cadre",
                         {
@@ -10893,14 +9453,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Anathema Psykana Rhino",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Anathema Psykana Dedicated Transport",
                         {

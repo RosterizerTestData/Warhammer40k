@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -176,12 +175,7 @@
                 }
             },
             "Warp Storm Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -592,40 +586,6 @@
                     }
                 }
             },
-            "Statline§Chaos Cerastus Knight Acheron": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Chaos Cerastus Knight Lancer": {
                 "stats": {
                     "Points": {
@@ -887,40 +847,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Cerastus Knight Lancer": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
                     }
                 }
             },
@@ -1248,40 +1174,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Cerastus Knight Castigator": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
                     }
                 }
             },
@@ -1641,40 +1533,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Cerastus Knight Atrapos": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
                     }
                 }
             },
@@ -2164,40 +2022,6 @@
                     }
                 }
             },
-            "Statline§Chaos Questoris Knight Magaera": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Chaos Acastus Knight Porphyrion": {
                 "stats": {
                     "Points": {
@@ -2684,40 +2508,6 @@
                     }
                 }
             },
-            "Statline§Chaos Acastus Knight Porphyrion": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Questoris Knight Styrix": {
                 "stats": {
                     "Points": {
@@ -3201,40 +2991,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Questoris Knight Styrix": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -3964,40 +3720,6 @@
                     }
                 }
             },
-            "Statline§Knight Despoiler": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Knight Tyrant": {
                 "stats": {
                     "Points": {
@@ -4722,40 +4444,6 @@
                     }
                 }
             },
-            "Statline§Knight Tyrant": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 28
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Knight Desecrator": {
                 "stats": {
                     "Points": {
@@ -5202,40 +4890,6 @@
                     }
                 }
             },
-            "Statline§Knight Desecrator": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Knight Rampager": {
                 "stats": {
                     "Points": {
@@ -5642,40 +5296,6 @@
                     }
                 }
             },
-            "Statline§Knight Rampager": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
-                    }
-                }
-            },
             "Model§Chaos Acastus Knight Asterius": {
                 "stats": {
                     "Points": {
@@ -6079,40 +5699,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Acastus Knight Asterius": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -6539,40 +6125,6 @@
                     }
                 }
             },
-            "Statline§War Dog Moirax": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§War Dog Executioner": {
                 "stats": {
                     "Points": {
@@ -6858,40 +6410,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§War Dog Executioner": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
                     }
                 }
             },
@@ -7318,40 +6836,6 @@
                     }
                 }
             },
-            "Statline§War Dog Stalker": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§War Dog Karnivore": {
                 "stats": {
                     "Points": {
@@ -7708,40 +7192,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§War Dog Karnivore": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
                     }
                 }
             },
@@ -8104,40 +7554,6 @@
                     }
                 }
             },
-            "Statline§War Dog Brigand": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
-                    }
-                }
-            },
             "Model§War Dog Huntsman": {
                 "stats": {
                     "Points": {
@@ -8494,40 +7910,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§War Dog Huntsman": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
                     }
                 }
             },
@@ -9029,40 +8411,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Knight Abominant": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 24
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "170 x 109mm"
                     }
                 }
             },
@@ -10669,14 +10017,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Cerastus Knight Acheron",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Ion Shield",
@@ -10719,14 +10059,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Cerastus Knight Lancer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Explodes",
@@ -10769,14 +10101,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Cerastus Knight Castigator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Ion Shield",
@@ -10819,14 +10143,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Cerastus Knight Atrapos",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Macro-extinction Protocols",
@@ -10870,14 +10186,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Questoris Knight Magaera",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Empyreal Preysight",
@@ -10921,14 +10229,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Acastus Knight Porphyrion",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Ion Shield",
@@ -10971,14 +10271,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Questoris Knight Styrix",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Ionic Flare Shield",
@@ -11022,14 +10314,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Knight Despoiler",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ion Shields",
                         "Ability§Super-heavy Walker",
                         "Ability§Harbingers of Dread",
@@ -11074,14 +10358,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Knight Tyrant",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ion Shields",
                         "Ability§Super-heavy Walker",
                         "Ability§Harbingers of Dread",
@@ -11125,14 +10401,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Knight Desecrator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ion Shields",
                         "Ability§Super-heavy Walker",
                         "Ability§Harbingers of Dread",
@@ -11177,14 +10445,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Knight Rampager",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ion Shields",
                         "Ability§Super-heavy Walker",
                         "Ability§Harbingers of Dread",
@@ -11228,14 +10488,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Acastus Knight Asterius",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Harbingers of Dread",
                         "Ability§Super-heavy Walker",
                         "Ability§Ion Shield",
@@ -11266,7 +10518,7 @@
                     "War Dog Moirax": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11300,7 +10552,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§War Dog Moirax",
                         "Ability§Harbingers of Dread",
                         "Ability§Ion Shield",
                         "Ability§War Dog Squadron",
@@ -11330,7 +10581,7 @@
                     "War Dog Executioner": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11365,7 +10616,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§War Dog Executioner",
                         "Ability§Ion Shields",
                         "Ability§Harbingers of Dread",
                         "Ability§War Dog Squadron",
@@ -11394,7 +10644,7 @@
                     "War Dog Stalker": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11430,7 +10680,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§War Dog Stalker",
                         "Ability§Ion Shields",
                         "Ability§Harbingers of Dread",
                         "Ability§War Dog Squadron",
@@ -11459,7 +10708,7 @@
                     "War Dog Karnivore": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11495,7 +10744,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§War Dog Karnivore",
                         "Ability§Ion Shields",
                         "Ability§Harbingers of Dread",
                         "Ability§War Dog Squadron",
@@ -11524,7 +10772,7 @@
                     "War Dog Brigand": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11560,7 +10808,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§War Dog Brigand",
                         "Ability§Ion Shields",
                         "Ability§Harbingers of Dread",
                         "Ability§War Dog Squadron",
@@ -11589,7 +10836,7 @@
                     "War Dog Huntsman": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 3,
@@ -11624,7 +10871,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§War Dog Huntsman",
                         "Ability§Ion Shields",
                         "Ability§Harbingers of Dread",
                         "Ability§War Dog Squadron",
@@ -11668,14 +10914,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Knight Abominant",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Ion Shields",
                         "Ability§Super-heavy Walker",
                         "Ability§Harbingers of Dread",

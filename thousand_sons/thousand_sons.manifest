@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -176,12 +175,7 @@
                 }
             },
             "Psychic Powers": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -668,60 +662,6 @@
                     }
                 }
             },
-            "Statline§Sorcerer (Sorcerer)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Sorcerer",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour)": {
                 "stats": {
                     "Points": {
@@ -986,99 +926,11 @@
                     }
                 }
             },
-            "Statline§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour)": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Sorcerer in Terminator Armour",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Sorcerer on Disc of Tzeentch": {
                 "stats": {
                     "Points": {
                         "value": 146
                     },
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
-            "Statline§Sorcerer on Disc of Tzeentch": {
-                "stats": {
                     "M": {
                         "value": "12"
                     },
@@ -1288,40 +1140,6 @@
                     }
                 }
             },
-            "Statline§Thousand Sons Cultist": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 5
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Thousand Sons Cultist Champion": {
                 "stats": {
                     "Points": {
@@ -1496,40 +1314,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Thousand Sons Cultist Champion": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -1709,40 +1493,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Rubric Marine": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -1993,40 +1743,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Aspiring Sorcerer": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -2460,40 +2176,6 @@
                     }
                 }
             },
-            "Statline§Helbrute": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Chaos Rhino": {
                 "stats": {
                     "Points": {
@@ -2759,40 +2441,6 @@
                     }
                 }
             },
-            "Statline§Chaos Rhino": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 10
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Spawn": {
                 "stats": {
                     "Points": {
@@ -2873,40 +2521,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Chaos Spawn": {
-                "stats": {
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "2D3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "50mm"
                     }
                 }
             },
@@ -3195,40 +2809,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Heldrake": {
-                "stats": {
-                    "M": {
-                        "value": "20-60"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -3592,40 +3172,6 @@
                     }
                 }
             },
-            "Statline§Chaos Land Raider": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Predator Destructor": {
                 "stats": {
                     "Points": {
@@ -3939,40 +3485,6 @@
                     }
                 }
             },
-            "Statline§Chaos Predator Destructor": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Vindicator": {
                 "stats": {
                     "Points": {
@@ -4251,40 +3763,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Vindicator": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -4576,40 +4054,6 @@
                     }
                 }
             },
-            "Statline§Forgefiend": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
-                    }
-                }
-            },
             "Model§Maulerfiend": {
                 "stats": {
                     "Points": {
@@ -4895,40 +4339,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Maulerfiend": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -5758,40 +5168,6 @@
                     }
                 }
             },
-            "Statline§Defiler": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Magnus the Red": {
                 "stats": {
                     "Points": {
@@ -6006,40 +5382,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Magnus the Red": {
-                "stats": {
-                    "M": {
-                        "value": "16"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "8"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "100mm"
                     }
                 }
             },
@@ -6352,40 +5694,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Ahriman": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -6926,40 +6234,6 @@
                     }
                 }
             },
-            "Statline§Exalted Sorcerer": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Tzaangor": {
                 "stats": {
                     "Points": {
@@ -7075,40 +6349,6 @@
                     }
                 }
             },
-            "Statline§Tzaangor": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "1"
-                    },
-                    "Ld": {
-                        "value": 6
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Twistbray": {
                 "stats": {
                     "Points": {
@@ -7221,40 +6461,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Twistbray": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -7505,40 +6711,6 @@
                     }
                 }
             },
-            "Statline§Scarab Occult Terminator": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Scarab Occult Sorcerer": {
                 "stats": {
                     "Points": {
@@ -7786,79 +6958,11 @@
                     }
                 }
             },
-            "Statline§Scarab Occult Sorcerer": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Thousand Sons Daemon Prince": {
                 "stats": {
                     "Points": {
                         "value": 140
                     },
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
-            "Statline§Thousand Sons Daemon Prince": {
-                "stats": {
                     "M": {
                         "value": "8"
                     },
@@ -8049,40 +7153,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Tzaangor Shaman": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -8343,40 +7413,6 @@
                     }
                 }
             },
-            "Statline§Enlightened": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Aviarch": {
                 "stats": {
                     "Points": {
@@ -8631,40 +7667,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Aviarch": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 2
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -8929,40 +7931,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Mutalith Vortex Beast": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "120 x 92mm"
                     }
                 }
             },
@@ -9275,40 +8243,6 @@
                     }
                 }
             },
-            "Statline§Chaos Vindicator Laser Destroyer": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Sorcerer (Sorcerer (Legendary))": {
                 "stats": {
                     "Points": {
@@ -9366,119 +8300,11 @@
                     }
                 }
             },
-            "Statline§Sorcerer (Sorcerer (Legendary))": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Sorcerer",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour (Legendary))": {
                 "stats": {
                     "Points": {
                         "value": 100
                     },
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Sorcerer in Terminator Armour",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour (Legendary))": {
-                "stats": {
                     "M": {
                         "value": "5"
                     },
@@ -9950,40 +8776,6 @@
                     }
                 }
             },
-            "Statline§Chaos Contemptor Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Chaos Land Raider Proteus": {
                 "stats": {
                     "Points": {
@@ -10353,40 +9145,6 @@
                     }
                 }
             },
-            "Statline§Chaos Land Raider Proteus": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Decimator": {
                 "stats": {
                     "Points": {
@@ -10681,40 +9439,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Decimator": {
-                "stats": {
-                    "M": {
-                        "value": "9"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "60mm"
                     }
                 }
             },
@@ -11109,40 +9833,6 @@
                     }
                 }
             },
-            "Statline§Chaos Terrax-pattern Termite": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Sicaran Punisher": {
                 "stats": {
                     "Points": {
@@ -11476,40 +10166,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Sicaran Punisher": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -11849,40 +10505,6 @@
                     }
                 }
             },
-            "Statline§Chaos Land Raider Achilles": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Whirlwind Scorpius": {
                 "stats": {
                     "Points": {
@@ -12129,40 +10751,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Whirlwind Scorpius": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -12502,40 +11090,6 @@
                     }
                 }
             },
-            "Statline§Hellforged Sicaran": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Sicaran Venator": {
                 "stats": {
                     "Points": {
@@ -12869,40 +11423,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Sicaran Venator": {
-                "stats": {
-                    "M": {
-                        "value": "14"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -13453,40 +11973,6 @@
                     }
                 }
             },
-            "Statline§Chaos Spartan": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Deredeo Dreadnought": {
                 "stats": {
                     "Points": {
@@ -13916,40 +12402,6 @@
                     }
                 }
             },
-            "Statline§Chaos Deredeo Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "80mm"
-                    }
-                }
-            },
             "Model§Chaos Rapier Carrier": {
                 "stats": {
                     "Points": {
@@ -14191,40 +12643,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Chaos Rapier Carrier": {
-                "stats": {
-                    "M": {
-                        "value": "4"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -14681,40 +13099,6 @@
                     }
                 }
             },
-            "Statline§Chaos Leviathan Dreadnought": {
-                "stats": {
-                    "M": {
-                        "value": "8"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "80mm"
-                    }
-                }
-            },
             "Model§Dreadclaw Drop Pod": {
                 "stats": {
                     "Points": {
@@ -14818,40 +13202,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Dreadclaw Drop Pod": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": null
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -15218,40 +13568,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Kharybdis Assault Claw": {
-                "stats": {
-                    "M": {
-                        "value": "15"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -15639,40 +13955,6 @@
                     }
                 }
             },
-            "Statline§Chaos Cerberus": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Typhon": {
                 "stats": {
                     "Points": {
@@ -16054,40 +14336,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Typhon": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 20
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -16880,40 +15128,6 @@
                     }
                 }
             },
-            "Statline§Chaos Fellblade": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Falchion": {
                 "stats": {
                     "Points": {
@@ -17560,40 +15774,6 @@
                     }
                 }
             },
-            "Statline§Chaos Falchion": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 26
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Chaos Mastodon": {
                 "stats": {
                     "Points": {
@@ -18179,40 +16359,6 @@
                     }
                 }
             },
-            "Statline§Chaos Mastodon": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 5
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 9
-                    },
-                    "T": {
-                        "value": 9
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Hell Blade": {
                 "stats": {
                     "Points": {
@@ -18323,40 +16469,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Hell Blade": {
-                "stats": {
-                    "M": {
-                        "value": "20-60"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 6
-                    },
-                    "W": {
-                        "value": 9
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -18712,40 +16824,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Hell Talon": {
-                "stats": {
-                    "M": {
-                        "value": "20-60"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 7
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 14
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -19200,40 +17278,6 @@
                     }
                 }
             },
-            "Statline§Chaos Storm Eagle Gunship": {
-                "stats": {
-                    "M": {
-                        "value": "20-45"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Chaos Fire Raptor Gunship": {
                 "stats": {
                     "Points": {
@@ -19678,40 +17722,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Fire Raptor Gunship": {
-                "stats": {
-                    "M": {
-                        "value": "20-45"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 18
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -20196,40 +18206,6 @@
                     }
                 }
             },
-            "Statline§Chaos Thunderhawk Gunship": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 10
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 30
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Chaos Sokar-pattern Stormbird": {
                 "stats": {
                     "Points": {
@@ -20557,40 +18533,6 @@
                     }
                 }
             },
-            "Statline§Chaos Sokar-pattern Stormbird": {
-                "stats": {
-                    "M": {
-                        "value": "20-50"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 10
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 40
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
-                    }
-                }
-            },
             "Model§Chaos Xiphon Interceptor": {
                 "stats": {
                     "Points": {
@@ -20852,40 +18794,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Xiphon Interceptor": {
-                "stats": {
-                    "M": {
-                        "value": "20-60"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 12
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "120 x 92mm flying base"
                     }
                 }
             },
@@ -21234,40 +19142,6 @@
                     }
                 }
             },
-            "Statline§Chaos Deimos Predator": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Infernal Master": {
                 "stats": {
                     "Points": {
@@ -21537,40 +19411,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Infernal Master": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "40mm"
                     }
                 }
             },
@@ -21884,40 +19724,6 @@
                                 "iterations": 1
                             }
                         ]
-                    }
-                }
-            },
-            "Statline§Chaos Predator Annihilator": {
-                "stats": {
-                    "M": {
-                        "value": "12"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 6
-                    },
-                    "T": {
-                        "value": 7
-                    },
-                    "W": {
-                        "value": 11
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 8
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "Use model"
                     }
                 }
             },
@@ -25375,14 +23181,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sorcerer (Sorcerer)",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Thrall",
                         "Ability§Armour of Contempt",
@@ -25432,14 +23230,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour)",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Malicious Volleys",
                         "Ability§Cabbalistic Rituals",
                         "Ability§Teleport Strike",
@@ -25491,14 +23281,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sorcerer on Disc of Tzeentch",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Death to the False Emperor",
                         "Ability§Favour of Tzeentch",
                         "Ability§Hateful Assault",
@@ -25536,7 +23318,7 @@
                     "Thousand Sons Cultists": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 29,
@@ -25567,8 +23349,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Thousand Sons Cultist",
-                        "Statline§Thousand Sons Cultist Champion",
                         {
                             "item": "Model§Thousand Sons Cultist",
                             "quantity": 9
@@ -25597,7 +23377,7 @@
                     "Rubric Marines": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -25665,8 +23445,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Rubric Marine",
-                        "Statline§Aspiring Sorcerer",
                         "Ability§Malicious Volleys",
                         "Ability§Cabbalistic Rituals",
                         "Ability§Sorcerous Master",
@@ -25714,14 +23492,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Helbrute",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Monstrous Resilience",
                         "Ability§Explodes",
                         "Ability§Frenzy",
@@ -25765,14 +23535,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Rhino",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
                         {
@@ -25801,7 +23563,7 @@
                     "Chaos Spawn": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 5,
@@ -25840,7 +23602,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Chaos Spawn",
                         "Ability§Fearsome (Aura)",
                         "Ability§Mutated Beyond Reason",
                         "Ability§Armour of Contempt",
@@ -25882,14 +23643,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Heldrake",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Airborne Predator",
                         "Ability§Supersonic",
@@ -25939,14 +23692,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Land Raider",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
                         {
@@ -25987,14 +23732,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Predator Destructor",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
                         {
@@ -26063,14 +23800,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Vindicator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
                         {
@@ -26111,14 +23840,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Forgefiend",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Infernal Regeneration",
                         "Ability§Explodes",
@@ -26161,14 +23882,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Maulerfiend",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Explodes",
                         "Ability§Infernal Regeneration",
@@ -26213,14 +23926,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Defiler",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic",
                         "Ability§Infernal Regeneration",
                         "Ability§Explodes",
@@ -26267,14 +23972,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Magnus the Red",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Daemon Primarch",
                         "Ability§Primarch of the Thousand Sons (Aura)",
@@ -26365,14 +24062,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ahriman",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Lord of the Thousand Sons (Aura)",
                         "Ability§Arch-Sorcerer of Tzeentch",
@@ -26460,14 +24149,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Exalted Sorcerer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Sigil of Corruption",
                         "Ability§Lord of the Thousand Sons (Aura)",
@@ -26504,7 +24185,7 @@
                     "Tzaangors": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 9,
                         "min": 9,
                         "max": 19,
@@ -26561,8 +24242,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Tzaangor",
-                        "Statline§Twistbray",
                         "Ability§Herd banner",
                         {
                             "item": "Model§Tzaangor",
@@ -26592,7 +24271,7 @@
                     "Scarab Occult Terminators": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 4,
                         "min": 4,
                         "max": 9,
@@ -26626,8 +24305,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Scarab Occult Terminator",
-                        "Statline§Scarab Occult Sorcerer",
                         "Ability§Malicious Volleys",
                         "Ability§Cabbalistic Rituals",
                         "Ability§Teleport Strike",
@@ -26708,14 +24385,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Thousand Sons Daemon Prince",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Chosen of Tzeentch",
                         "Ability§Lord of the Thousand Sons (Aura)",
@@ -26799,14 +24468,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Tzaangor Shaman",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Bestial Prophet (Aura)",
                         {
@@ -26836,7 +24497,7 @@
                     "Tzaangor Enlightened": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 2,
                         "min": 2,
                         "max": 5,
@@ -26901,8 +24562,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Enlightened",
-                        "Statline§Aviarch",
                         "Ability§Guided by Fate",
                         {
                             "item": "Model§Enlightened",
@@ -26942,14 +24601,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Mutalith Vortex Beast",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Aura of Dark Glory",
                         "Ability§Mutant Regeneration",
                         "Ability§Warp Explosion",
@@ -26993,14 +24644,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Vindicator Laser Destroyer",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
@@ -27041,14 +24684,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sorcerer (Sorcerer (Legendary))",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Death to the False Emperor",
                         "Ability§Favour of Tzeentch",
                         "Ability§Jump Pack Assault",
@@ -27099,14 +24734,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour (Legendary))",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Death to the False Emperor",
                         "Ability§Familiar",
                         "Ability§Terminator Armour",
@@ -27162,14 +24789,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Contemptor Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Relentless Hatred",
@@ -27273,14 +24892,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Land Raider Proteus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -27324,14 +24935,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Decimator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Daemon Engine",
                         "Ability§Decimator claws",
@@ -27375,14 +24978,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Terrax-pattern Termite",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Subterranean Assault",
                         "Ability§Explodes",
@@ -27427,14 +25022,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Sicaran Punisher",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -27479,14 +25066,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Land Raider Achilles",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Inviolate Armour",
                         "Ability§Explodes",
@@ -27530,14 +25109,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Whirlwind Scorpius",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -27582,14 +25153,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hellforged Sicaran",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -27634,14 +25197,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Sicaran Venator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -27687,14 +25242,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Spartan",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -27739,14 +25286,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Deredeo Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Relentless Hatred",
@@ -27791,14 +25330,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Rapier Carrier",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Artillery and Crew",
                         "Ability§Armour of Contempt",
@@ -27842,14 +25373,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Leviathan Dreadnought",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Relentless Hatred",
@@ -27930,14 +25453,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Dreadclaw Drop Pod",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Drop Pod Assault",
                         "Ability§Hover Transport",
@@ -28018,14 +25533,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Kharybdis Assault Claw",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Drop Pod Assault",
                         "Ability§Hover Transport",
@@ -28071,14 +25578,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Cerberus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Unstable Reactor",
@@ -28123,14 +25622,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Typhon",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -28175,14 +25666,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Fellblade",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -28227,14 +25710,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Falchion",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -28280,14 +25755,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Mastodon",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
@@ -28332,14 +25799,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hell Blade",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Airborne",
                         "Ability§Hard to Hit",
@@ -28421,14 +25880,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hell Talon",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Baleful Aberration",
                         "Ability§Airborne",
@@ -28477,14 +25928,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Storm Eagle Gunship",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Airborne",
@@ -28533,14 +25976,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Fire Raptor Gunship",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Airborne",
@@ -28625,14 +26060,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Thunderhawk Gunship",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Colossal Flyer",
                         "Ability§Airborne",
@@ -28683,14 +26110,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Sokar-pattern Stormbird",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Colossal Flyer",
@@ -28741,14 +26160,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Xiphon Interceptor",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Let the Galaxy Burn",
                         "Ability§Martial Legacy",
                         "Ability§Airborne",
@@ -28795,14 +26206,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Deimos Predator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Martial Legacy",
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
@@ -28845,14 +26248,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Infernal Master",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Cabbalistic Rituals",
                         "Ability§Armour of Contempt",
                         {
@@ -28894,14 +26289,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Chaos Predator Annihilator",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Explodes",
                         "Ability§Armour of Contempt",
                         {

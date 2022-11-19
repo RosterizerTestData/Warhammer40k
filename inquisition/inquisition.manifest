@@ -5,8 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.1",
-    "wip": true,
+    "revision": "0.0.2",
     "dependencies": [
         {
             "slug": "123456",
@@ -17,12 +16,7 @@
     "manifest": {
         "assetTaxonomy": {
             "Telethesia Discipline": {
-                "templateClass": "Psychic Power",
-                "stats": {
-                    "Roll": {
-                        "value": null
-                    }
-                }
+                "templateClass": "Psychic Power"
             }
         },
         "assetCatalog": {
@@ -394,40 +388,6 @@
                     }
                 }
             },
-            "Statline§Inquisitor Greyfax": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Inquisitor Karamazov": {
                 "stats": {
                     "Points": {
@@ -621,40 +581,6 @@
                     }
                 }
             },
-            "Statline§Inquisitor Karamazov": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 5
-                    },
-                    "T": {
-                        "value": 5
-                    },
-                    "W": {
-                        "value": 8
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "60mm"
-                    }
-                }
-            },
             "Model§Inquisitor Coteaz": {
                 "stats": {
                     "Points": {
@@ -845,40 +771,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Inquisitor Coteaz": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -2159,99 +2051,11 @@
                     }
                 }
             },
-            "Statline§Inquisitor (Inquisitor)": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Inquisitor",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
             "Model§Ordo Malleus Inquisitor in Terminator Armour": {
                 "stats": {
                     "Points": {
                         "value": 95
                     },
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
-            "Statline§Ordo Malleus Inquisitor in Terminator Armour": {
-                "stats": {
                     "M": {
                         "value": "6"
                     },
@@ -2870,40 +2674,6 @@
                     }
                 }
             },
-            "Statline§Acolyte": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 1
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 5
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Daemonhost": {
                 "stats": {
                     "Points": {
@@ -3034,40 +2804,6 @@
                     }
                 }
             },
-            "Statline§Daemonhost": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 4
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 4
-                    },
-                    "A": {
-                        "value": "3"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                }
-            },
             "Model§Jokaero Weaponsmith": {
                 "stats": {
                     "Points": {
@@ -3148,40 +2884,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Jokaero Weaponsmith": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 4
-                    },
-                    "S": {
-                        "value": 2
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 3
-                    },
-                    "A": {
-                        "value": "2"
-                    },
-                    "Ld": {
-                        "value": 7
-                    },
-                    "Sv": {
-                        "value": 7
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -3450,40 +3152,6 @@
                     }
                 }
             },
-            "Statline§Inquisition Land Raider Prometheus": {
-                "stats": {
-                    "M": {
-                        "value": "10"
-                    },
-                    "WS": {
-                        "value": 6
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 8
-                    },
-                    "T": {
-                        "value": 8
-                    },
-                    "W": {
-                        "value": 16
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "Use model"
-                    }
-                }
-            },
             "Model§Hector Rex": {
                 "stats": {
                     "Points": {
@@ -3614,40 +3282,6 @@
                     }
                 }
             },
-            "Statline§Hector Rex": {
-                "stats": {
-                    "M": {
-                        "value": "5"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 2
-                    },
-                    "Base": {
-                        "value": "40mm"
-                    }
-                }
-            },
             "Model§Solomon Lok": {
                 "stats": {
                     "Points": {
@@ -3744,40 +3378,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Solomon Lok": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "25mm"
                     }
                 }
             },
@@ -4053,99 +3653,11 @@
                     }
                 }
             },
-            "Statline§Inquisitor Eisenhorn": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 10
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Inquisitor (Inquisitor (Legendary))": {
                 "stats": {
                     "Points": {
                         "value": 55
                     },
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 4
-                    },
-                    "Base": {
-                        "value": "25mm"
-                    }
-                },
-                "rules": {
-                    "rename me": {
-                        "evals": [],
-                        "failState": "pass",
-                        "evaluate": "AND",
-                        "actions": [
-                            {
-                                "paths": [
-                                    [
-                                        "{self}",
-                                        "designation"
-                                    ]
-                                ],
-                                "actionType": "set",
-                                "value": "Inquisitor",
-                                "iterations": 1
-                            }
-                        ]
-                    }
-                }
-            },
-            "Statline§Inquisitor (Inquisitor (Legendary))": {
-                "stats": {
                     "M": {
                         "value": "6"
                     },
@@ -4349,40 +3861,6 @@
                     }
                 }
             },
-            "Statline§Lord Inquisitor Kyria Draxus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
             "Model§Erasmus Cartavolnus": {
                 "stats": {
                     "Points": {
@@ -4510,40 +3988,6 @@
                         },
                         "visibility": "active",
                         "dynamic": true
-                    }
-                }
-            },
-            "Statline§Erasmus Cartavolnus": {
-                "stats": {
-                    "M": {
-                        "value": "6"
-                    },
-                    "WS": {
-                        "value": 3
-                    },
-                    "BS": {
-                        "value": 3
-                    },
-                    "S": {
-                        "value": 3
-                    },
-                    "T": {
-                        "value": 3
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 3
-                    },
-                    "Base": {
-                        "value": "32mm"
                     }
                 }
             },
@@ -5915,14 +5359,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisitor Greyfax",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
@@ -5969,14 +5405,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisitor Karamazov",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
@@ -6019,14 +5447,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisitor Coteaz",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
@@ -6072,14 +5492,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisitor (Inquisitor)",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
@@ -6126,14 +5538,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Ordo Malleus Inquisitor in Terminator Armour",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Terminator Armour",
@@ -6171,7 +5575,7 @@
                     "Acolytes": {
                         "statType": "numeric",
                         "dynamic": true,
-                        "visibility": "always",
+                        "visibility": "active",
                         "value": 1,
                         "min": 1,
                         "max": 6,
@@ -6193,7 +5597,6 @@
                 },
                 "assets": {
                     "traits": [
-                        "Statline§Acolyte",
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Agent",
@@ -6228,14 +5631,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Daemonhost",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Daemonic Power",
                         "Ability§Daemonic",
                         {
@@ -6271,14 +5666,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Jokaero Weaponsmith",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Defence Orbs",
                         "Ability§Inconceivable Customisation",
@@ -6317,14 +5704,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisition Land Raider Prometheus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Quarry",
                         "Ability§Smoke Launchers",
                         "Ability§Explodes",
@@ -6367,14 +5746,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Hector Rex",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom",
@@ -6419,14 +5790,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Solomon Lok",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom",
@@ -6468,14 +5831,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisitor Eisenhorn",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
@@ -6521,14 +5876,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Inquisitor (Inquisitor (Legendary))",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Refractor Field",
@@ -6578,14 +5925,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Lord Inquisitor Kyria Draxus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
@@ -6633,14 +5972,6 @@
                 },
                 "assets": {
                     "traits": [
-                        {
-                            "item": "Statline§Erasmus Cartavolnus",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        },
                         "Ability§Authority of the Inquisition",
                         "Ability§Quarry",
                         "Ability§Unquestionable Wisdom (Aura)",
