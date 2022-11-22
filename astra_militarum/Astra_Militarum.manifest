@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.2",
+    "revision": "0.0.3",
     "dependencies": [
         {
             "slug": "123456",
@@ -72,7 +72,7 @@
                                     [
                                         "{self}",
                                         "stats",
-                                        "Brotherhood",
+                                        "Regiment",
                                         "value"
                                     ]
                                 ],
@@ -48918,6 +48918,7 @@
                 "assets": {
                     "traits": [
                         "Ability§It’s For Your Own Good",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Primaris Psyker",
                             "stats": {
@@ -48925,8 +48926,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Primaris Psyker is a single model armed with a laspistol and force stave.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power and two psychic powers from the **[Psykana discipline](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Psykana-Discipline)**.",
@@ -48975,11 +48975,11 @@
                 "assets": {
                     "traits": [
                         "Ability§Choir of Minds",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Wyrdvane Psyker",
                             "quantity": 3
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "This unit contains 3 Wyrdvane Psykers. It may contain up to 3 additional Wyrdvane Psykers (**Power Rating +1**) or up to 6 additional Wyrdvane Psykers (Power Rating +2**). Each model is armed with a laspistol and a Wyrdvane stave.\n\n\n\nThis unit can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power and one power from the [Psykana discipline](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Psykana-Discipline)**.\n\n\n\nWhen manifesting or denying a psychic power, first select a model in the unit – measure range, visibility etc. from this model. If this unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp), it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) as described in the core rules, but units within 6\" will only suffer damage if the Perils of the Warp causes the last model in the manifesting unit to be slain.\n\nERROR: there might be a problem with Power Rating that will require a custom rule.",
@@ -49019,6 +49019,7 @@
                     "traits": [
                         "Ability§Astral Divination",
                         "Ability§Telepathic Assault",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Astropath",
                             "stats": {
@@ -49026,8 +49027,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "An Astropath is a single model armed with a Telepathica stave.\n\n• This model may replace its Telepathica stave with a laspistol.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power and one power from the **[Psykana discipline](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Psykana-Discipline)**.",
@@ -49559,6 +49559,7 @@
                 "assets": {
                     "traits": [
                         "Ability§It’s For Your Own Good",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Aradia Madellan",
                             "stats": {
@@ -49566,8 +49567,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Aradia Madellan is a single model armed with a laspistol and force stave. Only one of this model can be included in your army.\n\n\n\nAradia Madellan can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. She knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and Psychic Augment powers.\n\n\n\n**Psychic Augment**:** Psychic Augment has a warp charge value of 8. If manifested, select a friendly **ASTRA MILITARUM** INFANTRY** unit within 12\" of the [psyker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Add 1 to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made by that unit until the\n\nstart of your next psychic phase.",

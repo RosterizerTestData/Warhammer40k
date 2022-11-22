@@ -1,11 +1,12 @@
 {
   "name": "40k9e",
-  "wip": true,
+  "revision": "0.1.3",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
   "notes": "This manifest is provided for the purposes of testing Rosterizer and is not intended for distribution.",
+  "wip": true,
   "manifest": {
     "assetTaxonomy": {
       "Detachment": {
@@ -1187,7 +1188,11 @@
           }
         }
       },
-      "Psychic Power": {},
+      "Psychic Power": {
+        "aspects": {
+          "Visibility": "active"
+        }
+      },
       "Warlord Trait": {
         "stats": {
           "Discipline": {
@@ -2289,6 +2294,5 @@
     "gameModes": {},
     "theme": {}
   },
-  "revision": "0.1.2",
   "dependencies": []
 }

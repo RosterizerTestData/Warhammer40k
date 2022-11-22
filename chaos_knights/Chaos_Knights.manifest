@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.2",
+    "revision": "0.0.3",
     "dependencies": [
         {
             "slug": "123456",
@@ -63,7 +63,7 @@
                                     [
                                         "{self}",
                                         "stats",
-                                        "Brotherhood",
+                                        "Dread Household",
                                         "value"
                                     ]
                                 ],
@@ -10918,6 +10918,7 @@
                         "Ability§Super-heavy Walker",
                         "Ability§Harbingers of Dread",
                         "Ability§Explodes",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Knight Abominant",
                             "stats": {
@@ -10925,8 +10926,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Knight Abominant is equipped with: diabolus heavy stubber; volkite combustor; balemace; electroscourge; titanic feet.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Warp Storm discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Warp-Storm-Discipline)**.",

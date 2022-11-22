@@ -30,7 +30,7 @@ processInfo = (data,factionKey) => {
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
     notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.',
-    revision: '0.0.2',
+    revision: '0.0.3',
     dependencies: [
       {
         slug: "123456",
@@ -493,14 +493,14 @@ processUnits = (data,assetCatalog) => {
       tempItem.assets.traits = tempItem.assets.traits || [];
       tempItem.assets.traits.push(ability.itemKey);
     });
-    const order = ['Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
-    tempItem.assets.traits.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
-
     if(datasheet.psyker?.includes('Smite')){
       tempItem.assets = tempItem.assets || {};
       tempItem.assets.traits = tempItem.assets.traits || [];
       tempItem.assets.traits.push('Psychic Power§Smite');
     }
+    const order = ['Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
+    tempItem.assets.traits.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
+
     Array.from(new Set(data.psychicPowers.map(power => power.type))).forEach(discipline => {
       // console.log(discipline)
       // console.log(datasheet.psyker)
@@ -674,7 +674,7 @@ processFactions = (data,assetTaxonomy) => {
           evals: [
             {
               paths: [
-                ["{self}","stats","Brotherhood","value"]
+                ["{self}","stats",subFacNames[fac],"value"]
               ],
               value: "-",
               operator: "AND",

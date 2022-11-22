@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.2",
+    "revision": "0.0.3",
     "dependencies": [
         {
             "slug": "123456",
@@ -63,7 +63,7 @@
                                     [
                                         "{self}",
                                         "stats",
-                                        "Brotherhood",
+                                        "Legion",
                                         "value"
                                     ]
                                 ],
@@ -55413,6 +55413,7 @@
                         "Ability§Daemonic",
                         "Ability§Fearsome (Aura)",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Heretic Astartes Daemon Prince",
                             "stats": {
@@ -55420,8 +55421,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Heretic Astartes Daemon Prince is equipped with: hellforged sword; malefic talons.\n\n• This model’s hellforged sword can be replaced with one of the following: 1 daemonic axe; 1 malefic talons.\n\n• This model can be equipped with 1 wings (**Power Rating +2**).\n\nIf this model has the TZEENTCH**, NURGLE** or SLAANESH** keywords, it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. Such a model knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**. If this model has the TZEENTCH** keyword, it also knows [Skeins of Fate](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline); if it has the NURGLE** keyword, it also knows [Putrid Miasma](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline); if it has the SLAANESH** keyword, it also knows [Delightful Agonies](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline).",
@@ -55460,6 +55460,7 @@
                     "traits": [
                         "Ability§Let the Galaxy Burn",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer (Sorcerer)",
                             "stats": {
@@ -55467,8 +55468,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer is equipped with: bolt pistol; force stave; frag grenades; krak grenades.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -55539,6 +55539,7 @@
                         "Ability§Warp Strike",
                         "Ability§Terminator Armour",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour)",
                             "stats": {
@@ -55546,8 +55547,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer in Terminator Armour is equipped with: combi-bolter; force stave.\n\n• This model’s combi-bolter can be replaced with one of the following: 1 combi-melta; 1 combi-plasma; 1 combi-flamer.\n\n• This model’s force stave can be replaced with one of the following: 1 force axe; 1 force sword.\n\n• This model can be equipped with 1 Chaos familiar.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -55587,6 +55587,7 @@
                         "Ability§Let the Galaxy Burn",
                         "Ability§Turbo-boost",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer on Bike",
                             "stats": {
@@ -55594,8 +55595,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer on Bike is a single model equipped with: bolt pistol; combi-bolter; force sword; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with one of the following: 1 weapon from the ***Melee weapons** list; 1 weapon from the Combi-weapons*** list; 1 lightning claw; 1 plasma pistol.\n\n• This model’s force sword can be replaced with one of the following: 1 force axe; 1 force stave.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and two psychic powers from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -55636,6 +55636,7 @@
                     "traits": [
                         "Ability§Let the Galaxy Burn",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer on Disc of Tzeentch",
                             "stats": {
@@ -55643,8 +55644,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer on Disc of Tzeentch is a single model equipped with: bolt pistol; disc’s blades; force sword; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with one of the following: 1 weapon from the ***Melee weapons** list; 1 weapon from the Combi-weapons*** list; 1 lightning claw; 1 plasma pistol.\n\n• This model’s force sword can be replaced with one of the following: 1 force axe; 1 force stave.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and two psychic powers from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -55684,6 +55684,7 @@
                     "traits": [
                         "Ability§Let the Galaxy Burn",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer on Palanquin of Nurgle",
                             "stats": {
@@ -55691,8 +55692,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer on Palanquin of Nurgle is a single model equipped with: bolt pistol; force sword; nurglings’ claws and teeth; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with one of the following: 1 weapon from the ***Melee weapons** list; 1 weapon from the Combi-weapons*** list; 1 lightning claw; 1 plasma pistol.\n\n• This model’s force sword can be replaced with one of the following: 1 force axe; 1 force stave.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and two psychic powers from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -55733,6 +55733,7 @@
                         "Ability§Let the Galaxy Burn",
                         "Ability§Unholy Speed",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer on Steed of Slaanesh",
                             "stats": {
@@ -55740,8 +55741,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer on Steed of Slaanesh is a single model equipped with: bolt pistol; force sword; lashing tongue; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with one of the following: 1 weapon from the ***Melee weapons** list; 1 weapon from the Combi-weapons*** list; 1 lightning claw; 1 plasma pistol.\n\n• This model’s force sword can be replaced with one of the following: 1 force axe; 1 force stave.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and two psychic powers from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -59115,6 +59115,7 @@
                         "Ability§Rites of Possession (Aura)",
                         "Ability§Sacrificial Dagger",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Master of Possession",
                             "stats": {
@@ -59122,8 +59123,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Master of Possession is equipped with: bolt pistol; staff of possession; frag grenades; krak grenades.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Malefic discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Malefic-Discipline)**.",
@@ -59406,6 +59406,7 @@
                         "Ability§Servants of the Abyss",
                         "Ability§Unrestrained Power",
                         "Ability§Slaves to Mallex",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Rogue Psyker",
                             "stats": {
@@ -59413,8 +59414,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Rogue Psyker is single model armed with a laspistol and Chaos stave. No more than two of these models can be included in your army.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power.",
@@ -59818,14 +59818,14 @@
                     "traits": [
                         "Ability§Faithful Flock",
                         "Ability§Iconarch (Aura)",
+                        "Psychic Power§Smite",
                         "Model§Cult Demagogue",
                         "Model§Mindwitch",
                         "Model§Iconarch",
                         {
                             "item": "Model§Blessed Blades",
                             "quantity": 2
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Cult Demagogue is equipped with: autopistol; Commune stave. A Mindwitch is equipped with: close combat weapon. An Iconarch is equipped with: autopistol. Each Blessed Blade is equipped with: Commune blade. Every model is equipped with: frag grenades; krak grenades.\n\n\n\nThis unit’s **MINDWITCH** model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**. Each time this unit’s MINDWITCH** model attempts to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch), [manifest a psychic power](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) or perform a [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions), measure distances and draw line of sight from that MINDWITCH** model. If enemy units have any abilities that require measuring distance or drawing line of sight to PSYKER** units, do so to this unit’s MINDWITCH** model.",
@@ -59945,12 +59945,12 @@
                         "Ability§Let the Galaxy Burn",
                         "Ability§Malicious Volleys",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Legionary",
                             "quantity": 4
                         },
-                        "Model§Aspiring Champion",
-                        "Psychic Power§Smite"
+                        "Model§Aspiring Champion"
                     ]
                 },
                 "text": "If this unit contains 6 or more models, it has **Power Rating 12**. Every model is equipped with: bolt pistol; boltgun; frag grenades; krak grenades.\n\n• The Aspiring Champion’s boltgun can be replaced with one of the following: 1 daemon blade; 1 plasma pistol (maximum 1 per model); 1 weapon from the ***Melee Weapons*** list.\n\n• The Aspiring Champion’s bolt pistol can be replaced with one of the following: 1 plasma pistol (maximum 1 per model); 1 weapon from the **Melee Weapons*** list.\n\n• One model can be equipped with 1 Chaos icon.\n\n• Any number of Legionaries can each have their boltgun replaced with 1 Astartes chainsword.\n\n• One Legionary’s boltgun can be replaced with 1 heavy chainaxe.\n\n• One Legionary’s boltgun can be replaced with 1 balefire tome.\n\n• For every 5 models in this unit, one Legionary’s boltgun can be replaced with one of the following: 1 plasma pistol; 1 weapon from the **Special Weapons** list; 1 weapon from the **Heavy Weapons*** list&ast;.\n\n \n\n* You cannot select the same Special Weapon or Heavy Weapon more than once per unit.*\n\nWhile this unit contains a model equipped with a balefire tome, this unit has the PSYKER** keyword and can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**. Each time this unit attempts to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch), manifest a psychic power or perform a [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions), measure distances and draw line of sight from the model in this unit equipped with a balefire tome. If enemy units have any abilities that require distances to be measured or line of sight to be drawn to PSYKER** units, do so to the model in this unit equipped with a balefire tome.",
@@ -60285,6 +60285,7 @@
                     "traits": [
                         "Ability§Let the Galaxy Burn",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer (Sorcerer (Legendary))",
                             "stats": {
@@ -60292,8 +60293,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer is equipped with: bolt pistol; force stave; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with one of the following: 1 weapon from the ***Combi-weapons***; 1 lightning claw; 1 plasma pistol.\n\n• This model’s force stave can be replaced with one of the following: 1 force axe; 1 force sword.\n\n• This model can be equipped with 1 jump pack (Power Rating +1**).\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -60364,6 +60364,7 @@
                         "Ability§Warp Strike",
                         "Ability§Terminator Armour",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Sorcerer in Terminator Armour (Sorcerer in Terminator Armour (Legendary))",
                             "stats": {
@@ -60371,8 +60372,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Sorcerer in Terminator Armour is equipped with: combi-bolter; force stave.\n\n• This model’s combi-bolter can be replaced with one of the following: 1 combi-melta; 1 combi-plasma; 1 combi-flamer.\n\n• This model’s force stave can be replaced with one of the following: 1 force axe; 1 force sword.\n\n• This model can be equipped with 1 Chaos familiar.\n\n• This model’s combi-bolter can be replaced with 1 weapon from the ***Melee weapons*** list (excluding 1 Astartes chainsword).\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",
@@ -60541,12 +60541,12 @@
                         "Ability§Arcane Automata",
                         "Ability§All Is Dust",
                         "Ability§Armour of Contempt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Rubric Marine",
                             "quantity": 4
                         },
-                        "Model§Aspiring Sorcerer",
-                        "Psychic Power§Smite"
+                        "Model§Aspiring Sorcerer"
                     ]
                 },
                 "text": "If this unit contains 6-10 models, it has **Power Rating 13**. The Aspiring Sorcerer is equipped with: inferno bolt pistol; force stave. Every Rubric Marine is equipped with: inferno boltgun.\n\n• The Aspiring Sorcerer’s inferno bolt pistol can be replaced with one of the following: 1 plasma pistol; 1 warpflame pistol.\n\n• Any number of Rubric Marines can each have their inferno boltgun replaced with 1 warpflamer.\n\n• 1 Rubric Marine can have its inferno boltgun replaced with 1 soulreaper cannon.\n\n• 1 Rubric Marine can be equipped with 1 icon of flame.\n\nThe Aspiring Sorcerer can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.",

@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.2",
+    "revision": "0.0.3",
     "dependencies": [
         {
             "slug": "123456",
@@ -48,7 +48,7 @@
                                     [
                                         "{self}",
                                         "stats",
-                                        "Brotherhood",
+                                        "Allegiance",
                                         "value"
                                     ]
                                 ],
@@ -17299,6 +17299,7 @@
                         "Ability§Daemon Lord of Tzeentch (Aura)",
                         "Ability§One Head Looks Forward",
                         "Ability§One Head Looks Back",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Kairos Fateweaver",
                             "stats": {
@@ -17306,8 +17307,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Kairos Fateweaver is equipped with: Staff of Tomorrow. Your army can only include one **KAIROS FATEWEAVER** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) three psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) three psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and all of the psychic powers from the [Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
@@ -17347,6 +17347,7 @@
                         "Ability§Daemonic",
                         "Ability§Formless Horror",
                         "Ability§Herald of Tzeentch (Aura)",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§The Changeling",
                             "stats": {
@@ -17354,8 +17355,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "The Changeling is equipped with: Trickster’s staff. Your army can only include one **THE CHANGELING** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
@@ -17436,6 +17436,7 @@
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Tzeentch (Aura)",
                         "Ability§Master of Magicks",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Lord of Change",
                             "stats": {
@@ -17443,8 +17444,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Lord of Change is equipped with: staff of Tzeentch.\n\n• This model can be equipped with one of the following: 1 baleful sword; 1 rod of sorcery.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) three psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and three psychic powers from the **[Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
@@ -17830,6 +17830,7 @@
                     "traits": [
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Nurgle (Aura)",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Great Unclean One",
                             "stats": {
@@ -17837,8 +17838,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Great Unclean One is equipped with: plague flail; putrid vomit; bilesword; Nurgling claws.\n\n• This model’s bilesword can be replaced with 1 doomsday bell.\n\n• This model’s plague flail can be replaced with 1 bileblade.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powersfrom the **[Warprot discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.",
@@ -18391,6 +18391,7 @@
                         "Ability§Daemonic",
                         "Ability§Daemon Lord of Slaanesh (Aura)",
                         "Ability§Mesmerising Form",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Keeper of Secrets",
                             "stats": {
@@ -18398,8 +18399,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Keeper of Secrets is equipped with: ritual knife; snapping daws; witstealer sword.\n\n• This model’s ritual knife can be replaced with one of the following: 1 living whip; 1 shining aegis; 1 sinistrous hand.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -18439,6 +18439,7 @@
                         "Ability§Daemonic",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Tranceweaver",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Tranceweaver",
                             "stats": {
@@ -18446,8 +18447,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Tranceweaver is equipped with: ravaging claws.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -18487,6 +18487,7 @@
                         "Ability§Daemonic Ritual",
                         "Ability§Locus of Slaanesh",
                         "Ability§Unholy Speed",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Herald of Slaanesh on Steed",
                             "stats": {
@@ -18494,8 +18495,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Herald of Slaanesh on Steed is a single model equipped with: lashing tongue; ravaging claws.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and one psychic power from the Slaanesh discipline.",
@@ -18533,6 +18533,7 @@
                         "Ability§Tormentbringer",
                         "Ability§Evasive Speed",
                         "Ability§Scything Impact",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Tormentbringer on Seeker Chariot",
                             "stats": {
@@ -18540,8 +18541,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Tormentbringer on Seeker Chariot is equipped with: lashes of torment; ravaging claws; Seeker tongues.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -18584,6 +18584,7 @@
                         "Ability§Tormentbringer",
                         "Ability§Evasive Speed",
                         "Ability§Scything Impact",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Tormentbringer on Exalted Seeker Chariot",
                             "stats": {
@@ -18591,8 +18592,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Tormentbringer on Exalted Seeker Chariot is equipped with: lashes of torment; exalted Seeker tongues; ravaging claws.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -19060,6 +19060,7 @@
                         "Ability§Lord of Torment (Aura)",
                         "Ability§The Dark Master (Aura)",
                         "Ability§Spiteful Jealousy",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Be’lakor",
                             "stats": {
@@ -19067,8 +19068,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Be’lakor is equipped with: the Blade of Shadows. Your army can only include one **BE’LAKOR** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Noctic discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Noctic-Discipline)**.",
@@ -19135,6 +19135,7 @@
                         "Ability§Daemonic",
                         "Ability§Prince of Chaos (Aura)",
                         "Ability§Daemonic Rewards",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Daemon Prince of Chaos",
                             "stats": {
@@ -19142,8 +19143,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Daemon Prince of Chaos is equipped with: hellforged sword; malefic talons.\n\n• This model’s hellforged sword can be replaced with one of the following: 1 daemonic axe; 1 malefic talons.\n\n• This model can be equipped with 1 wings (**Power Rating +2**).\n\nIf this model has the TZEENTCH**, NURGLE** or SLAANESH** keyword, it has the PSYKER** keyword. If this model is a PSYKER** it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and:\n\n<ul><li>If this model has the TZEENTCH** keyword, it knows one psychic power from the [Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.\n* If this model has the NURGLE** keyword, it knows one psychic power from the [Warprot discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.\n* If this model has the SLAANESH** keyword, it knows one psychic power from the [Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -19387,6 +19387,7 @@
                         "Ability§Dance of Serpents",
                         "Ability§Emissary of the Prince of Excess (Aura)",
                         "Ability§Sinistrous Talon",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Zarakynel",
                             "stats": {
@@ -19394,8 +19395,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Zarakynel is equipped with: slicing claws; the Souleater Blade. Your army can only include one **ZARAKYNEL** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Slaanesh discipline.",
@@ -19434,6 +19434,7 @@
                         "Ability§Emissary of the Great Mutator (Aura)",
                         "Ability§Spiteful Demise",
                         "Ability§Mantle of Twisted Fates",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Aetaos’rau’keres",
                             "stats": {
@@ -19441,8 +19442,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Aetaos’rau’keres is equipped with: the Staff of Cataclysm; warpfire talons. Your army can only include one **AETAOS’RAU’KERES** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) three psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Tzeentch discipline.",
@@ -19513,6 +19513,7 @@
                         "Ability§Swallow Whole",
                         "Ability§Noisome Tide of Flesh",
                         "Ability§Putrid Demise",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Cor’bax Utterblight",
                             "stats": {
@@ -19520,8 +19521,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Cor’bax Utterblight is equipped with: gaping maw. Your army can only include one **COR’BAX UTTERBLIGHT** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Nurgle discipline.",
@@ -19789,6 +19789,7 @@
                         "Ability§Emissary of the Plague God (Aura)",
                         "Ability§Exhalations of the Plague Pit (Aura)",
                         "Ability§Putrid Demise",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Scabeiathrax the Bloated",
                             "stats": {
@@ -19796,8 +19797,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Scabeiathrax the Bloated is equipped with: Blade of Decay; horrific vomit; nurglings claws. Your army can only include one **SCABEIATHRAX THE** BLOATED** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Nurgle discipline.",
@@ -19914,6 +19914,7 @@
                         "Ability§Daemonic",
                         "Ability§Herald of Tzeentch (Aura)",
                         "Ability§Changecaster",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Changecaster",
                             "stats": {
@@ -19921,8 +19922,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Changecaster is equipped with: ritual dagger.\n\n• This model’s ritual dagger can be replaced with 1 staff of change.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
@@ -19991,6 +19991,7 @@
                         "Ability§Daemonic",
                         "Ability§Herald of Tzeentch (Aura)",
                         "Ability§Fateskimmer",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Fateskimmer",
                             "stats": {
@@ -19998,8 +19999,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Fateskimmer is equipped with: ritual dagger; Screamer bites.\n\n• This model’s ritual dagger can be replaced with 1 staff of change.\n\n• This model can be equipped with 1 retinue of Horrors.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
@@ -20040,6 +20040,7 @@
                         "Ability§Daemonic",
                         "Ability§Herald of Tzeentch (Aura)",
                         "Ability§Fluxmaster",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Fluxmaster",
                             "stats": {
@@ -20047,8 +20048,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Fluxmaster is equipped with: Disc blades; ritual dagger.\n\n• This model can be equipped with 1 staff of change.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
@@ -20089,6 +20089,7 @@
                         "Ability§Daemonic",
                         "Ability§Deluge of Nurgle",
                         "Ability§Daemon Lord of Nurgle (Aura)",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Rotigus",
                             "stats": {
@@ -20096,8 +20097,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Rotigus is equipped with: streams of brackish filth; fanged maw; gnarlrod; Nurgling claws. Your army can only include one **ROTIGUS** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Warprot discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.",
@@ -20179,6 +20179,7 @@
                         "Ability§Daemonic",
                         "Ability§Herald of Nurgle (Aura)",
                         "Ability§Poxbringer",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Poxbringer",
                             "stats": {
@@ -20186,8 +20187,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Poxbringer is equipped with: foul balesword.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Warprot discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.",
@@ -20434,6 +20434,7 @@
                         "Ability§Swallow Energy",
                         "Ability§Herald of Slaanesh (Aura)",
                         "Ability§Horrible Fascination (Aura)",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Contorted Epitome",
                             "stats": {
@@ -20441,8 +20442,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Contorted Epitome is equipped with: coiled tentacles; ravaging claws.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -20520,6 +20520,7 @@
                         "Ability§Mesmerising Form",
                         "Ability§Cloak of Constriction",
                         "Ability§Monarch of the Hunt",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Shalaxi Helbane",
                             "stats": {
@@ -20527,8 +20528,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Shalaxi Helbane is equipped with: living whip; snapping claws; Soulpiercer. Your army can only include one **SHALAXI HELBANE** model.\n\n• This model’s living whip can be replaced with 1 shining aegis.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -20569,6 +20569,7 @@
                         "Ability§Daemonic",
                         "Ability§Prince of Chaos (Aura)",
                         "Ability§Herald of Slaanesh (Aura)",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Syll’Esske",
                             "stats": {
@@ -20576,8 +20577,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "Syll’Esske is equipped with: scourging whip; Axe of Dominion. Your army can only include one **SYLL’ESSKE** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",
@@ -20620,6 +20620,7 @@
                         "Ability§Tormentbringer",
                         "Ability§Evasive Speed",
                         "Ability§Cutting Down the Foe",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Tormentbringer on Hellflayer",
                             "stats": {
@@ -20627,8 +20628,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Tormentbringer on Hellflayer is equipped with: lashes of torment; bladed axle; ravaging claws; Seeker tongues.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Soulstain discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Soulstain-Discipline)**.",

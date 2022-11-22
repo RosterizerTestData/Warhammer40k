@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.2",
+    "revision": "0.0.3",
     "dependencies": [
         {
             "slug": "123456",
@@ -57,7 +57,7 @@
                                     [
                                         "{self}",
                                         "stats",
-                                        "Brotherhood",
+                                        "Hive Fleet",
                                         "value"
                                     ]
                                 ],
@@ -13445,6 +13445,7 @@
                         "Ability§Will of the Hive Mind",
                         "Ability§Psychic Barrier",
                         "Ability§Death Throes",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Hive Tyrant",
                             "stats": {
@@ -13452,8 +13453,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Hive Tyrant is equipped with: monstrous bonesword; 2 monstrous scything talons; lash whip.\n\n• This model’s monstrous bonesword and lash whip can be replaced with one of the following: 1 heavy venom cannon; 1 stranglethorn cannon.\n\n• This model’s 2 monstrous scything talons can be replaced with one of the following: 1 heavy venom cannon; 1 stranglethorn cannon. This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\n \n\n**Designer’s Note:** *This model cannot be equipped with more than 1 heavy venom cannon and cannot be equipped with more than 1 stranglethorn cannon.*\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -13497,6 +13497,7 @@
                         "Ability§Domination of the Hive Mind",
                         "Ability§Hive Commander",
                         "Ability§Death Throes",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§The Swarmlord",
                             "stats": {
@@ -13504,8 +13505,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "The Swarmlord is equipped with: bone sabres. Your army can only include one **THE SWARMLORD** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -13622,6 +13622,7 @@
                         "Ability§Lightning Reflexes",
                         "Ability§Vanguard Predator",
                         "Ability§Vicious Insight",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Broodlord",
                             "stats": {
@@ -13629,8 +13630,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Broodlord is equipped with: Broodlord claws and talons.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -13898,6 +13898,7 @@
                         "Ability§Brood Progenitor",
                         "Ability§Wall of Flesh",
                         "Ability§Death Throes",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Tervigon",
                             "stats": {
@@ -13905,8 +13906,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Tervigon is equipped with: stinger salvoes; massive scything talons.\n\n• This model’s massive scything talons can be replaced with 2 massive crushing claws.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -15063,6 +15063,7 @@
                         "Ability§Death Throes",
                         "Ability§Psychic Barrier",
                         "Ability§Psychic Overload",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Maleceptor",
                             "stats": {
@@ -15070,8 +15071,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Maleceptor is equipped with: massive scything talons.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -15132,11 +15132,11 @@
                         "Ability§Warp Blast",
                         "Ability§Psybrood Coterie",
                         "Ability§Warp Field",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Zoanthrope",
                             "quantity": 3
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "If this unit contains 4 or more models, it has **Power Rating 14**.\n\n\n\nThis unit can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -17294,6 +17294,7 @@
                         "Ability§Spirit Leech",
                         "Ability§Psychic Node",
                         "Ability§Warp Siphon",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Neurothrope",
                             "stats": {
@@ -17301,8 +17302,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "null\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
@@ -17830,6 +17830,7 @@
                         "Ability§Psychic Barrier",
                         "Ability§Death from Above",
                         "Ability§Death Throes",
+                        "Psychic Power§Smite",
                         {
                             "item": "Model§Winged Hive Tyrant",
                             "stats": {
@@ -17837,8 +17838,7 @@
                                     "visibility": "hidden"
                                 }
                             }
-                        },
-                        "Psychic Power§Smite"
+                        }
                     ]
                 },
                 "text": "A Winged Hive Tyrant is equipped with: monstrous bonesword; prehensile pincer tail; Tyrant talons; lash whip.\n\n• This model’s monstrous bonesword and lash whip can be replaced with one of the following: 1 heavy venom cannon; 1 stranglethorn cannon; 2 monstrous scything talons.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
