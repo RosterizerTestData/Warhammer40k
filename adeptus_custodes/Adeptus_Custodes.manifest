@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.3",
+    "revision": "0.0.4",
     "dependencies": [
         {
             "slug": "123456",
@@ -5941,7 +5941,7 @@
                 }
             },
             "Ability§Aegis of the Emperor": {
-                "text": "<ul><li>Models in this unit have a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time a model in this unit would lose a wound as a result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 6, that wound is not lost."
+                "text": "* Models in this unit have a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time a model in this unit would lose a wound as a result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 6, that wound is not lost."
             },
             "Ability§Unyielding Ancient": {
                 "text": "Each time this model would lose a wound, roll one D6: on a 6, that wound is not lost."
@@ -6007,10 +6007,10 @@
                 "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).\n\nERROR: The following text was found on another ability with the same name.\n\nEach time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
             },
             "Ability§Daughters of the Abyss": {
-                "text": "<ul><li>This unit cannot be targeted or affected by [psychic powers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Powers).\n* Each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for a unit, subtract 1 from the total for each unit with this ability within 18\" of that unit (to a maximum of -3).\n* Each time an attack made by a model in this unit targets an enemy [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) or DAEMON** unit within 6\" of it, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
+                "text": "* This unit cannot be targeted or affected by [psychic powers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Powers).\n* Each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for a unit, subtract 1 from the total for each unit with this ability within 18\" of that unit (to a maximum of -3).\n* Each time an attack made by a model in this unit targets an enemy [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) or DAEMON** unit within 6\" of it, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
             },
             "Ability§Martial Ka’tah": {
-                "text": "<div class=\"BreakInsideAvoid\">If every unit from your army has the **ADEPTUS** CUSTODES** keyword (excluding **ANATHEMA PSYKANA**, **AGENT OF** THE** IMPERIUM** and UNALIGNED** units), and every unit that is assigned to a [shield host](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Shield-Hosts) is assigned to the same shield host, this unit can use this ability and the following rules apply.\n\n\n\nAfter both sides have deployed, but before you have determined who will have the first turn, you must select a primary, secondary and tertiary martial ka’tah from the list below for your army to use in the battle. Note this down secretly on your [army roster](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battle-forged-Army-Roster).\n\n\n\nIn each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), so long as one is available, you must select one ka’tah stance to become active for your army. Each time you do so, units from your army with this ability benefit from it until the start of your next Command phase. When selecting a ka’tah stance to become active, the following rules apply:\n\n<ul><li>You cannot select a ka’tah stance more than once.\n* You must select a primary ka’tah stance first, and you cannot select a tertiary ka’tah stance until you have selected a secondary ka’tah stance.\n* Once you select a stance of a different martial ka’tah, you cannot select a stance of a previous martial ka’tah.Example:** *Every model in Emily’s army has the ADEPTUS** CUSTODES** keyword. She selects <span class=\"tt kwbu\">Rendax</span> as her primary ka’tah, <span class=\"tt kwbu\">Dacatarai</span> as her secondary ka’tah and <span class=\"tt kwbu\">Calistus</span> as her tertiary ka’tah. In her first command phase, she selects Rendax stance 2 to be active.\n\n\n\nIn her second Command phase, she can select Rendax stance 1 to be active, or she can instead select Dacatarai stance 1 or 2 to be active, as she has previously selected a primary ka’tah stance. She cannot select a Calistus stance, as she must select a secondary ka’tah’s stance before she can select a tertiary ka’tah’s stance. She selects Dacatarai stance 1 to be active.\n\n\n\nIn her third Command phase, she can select Dacatarai stance 2 to be active, or she can instead select Calistus stance 1 or 2 to be active, as she has previously selected a secondary ka’tah stance. She cannot select Rendax stance 1, as she cannot select a stance of a previous ka’tah. She selects Calistus stance 2 to be active.\n\n\n\nIn her fourth Command phase, she must select Calistus stance 1 to be active, as it is the only remaining stance she is able to select. Note that this means in the fifth Command phase, there would be no ka’tah stances available to her, so she does not select one.*</div>"
+                "text": "<div class=\"BreakInsideAvoid\">If every unit from your army has the **ADEPTUS** CUSTODES** keyword (excluding **ANATHEMA PSYKANA**, **AGENT OF** THE** IMPERIUM** and UNALIGNED** units), and every unit that is assigned to a [shield host](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Shield-Hosts) is assigned to the same shield host, this unit can use this ability and the following rules apply.\n\n\n\nAfter both sides have deployed, but before you have determined who will have the first turn, you must select a primary, secondary and tertiary martial ka’tah from the list below for your army to use in the battle. Note this down secretly on your [army roster](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battle-forged-Army-Roster).\n\n\n\nIn each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), so long as one is available, you must select one ka’tah stance to become active for your army. Each time you do so, units from your army with this ability benefit from it until the start of your next Command phase. When selecting a ka’tah stance to become active, the following rules apply:\n\n* You cannot select a ka’tah stance more than once.\n* You must select a primary ka’tah stance first, and you cannot select a tertiary ka’tah stance until you have selected a secondary ka’tah stance.\n* Once you select a stance of a different martial ka’tah, you cannot select a stance of a previous martial ka’tah.Example:** *Every model in Emily’s army has the ADEPTUS** CUSTODES** keyword. She selects <span class=\"tt kwbu\">Rendax</span> as her primary ka’tah, <span class=\"tt kwbu\">Dacatarai</span> as her secondary ka’tah and <span class=\"tt kwbu\">Calistus</span> as her tertiary ka’tah. In her first command phase, she selects Rendax stance 2 to be active.\n\n\n\nIn her second Command phase, she can select Rendax stance 1 to be active, or she can instead select Dacatarai stance 1 or 2 to be active, as she has previously selected a primary ka’tah stance. She cannot select a Calistus stance, as she must select a secondary ka’tah’s stance before she can select a tertiary ka’tah’s stance. She selects Dacatarai stance 1 to be active.\n\n\n\nIn her third Command phase, she can select Dacatarai stance 2 to be active, or she can instead select Calistus stance 1 or 2 to be active, as she has previously selected a secondary ka’tah stance. She cannot select Rendax stance 1, as she cannot select a stance of a previous ka’tah. She selects Calistus stance 2 to be active.\n\n\n\nIn her fourth Command phase, she must select Calistus stance 1 to be active, as it is the only remaining stance she is able to select. Note that this means in the fifth Command phase, there would be no ka’tah stances available to her, so she does not select one.*</div>"
             },
             "Ability§Adamantine Mantle": {
                 "text": "Each time this model would lose a wound, roll one D6: on a 5+, that wound is not lost."
@@ -6022,7 +6022,7 @@
                 "text": "While a friendly **ADEPTUS CUSTODES** CORE** unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1."
             },
             "Ability§Moment Shackle": {
-                "text": "Once per battle, you can do one of the following:\n\n<ul><li>At the end of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can [fight again](https://wahapedia.ru/wh40k9ed/the-rules/rules-appendix/#Fight-Again).\n* When a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this model, the Damage characteristic of that attack is changed to 0.\n* After an enemy unit has fought, if this model is eligible to fight, you can fight with it next."
+                "text": "Once per battle, you can do one of the following:\n\n* At the end of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can [fight again](https://wahapedia.ru/wh40k9ed/the-rules/rules-appendix/#Fight-Again).\n* When a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this model, the Damage characteristic of that attack is changed to 0.\n* After an enemy unit has fought, if this model is eligible to fight, you can fight with it next."
             },
             "Wargear§Praesidium shield": {
                 "text": "Add 1 to armour [saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for the bearer."
@@ -7457,7 +7457,7 @@
                 }
             },
             "Warlord Trait§Voice Of The Emperor": {
-                "text": "<ul><li>Add 3\" to the range of this **WARLORD**’s aura abilities to a maximum of 12\" (this has already been added to the Voice of the Emperor aura ability below).\n* This WARLORD** has the following ability: ‘Voice of the Emperor (Aura)**: While a friendly **ADEPTUS CUSTODES** or **ANATHEMA PSYKANA** unit is within 9\" of this model, add 1 to the Leadership characteristic of models in that unit.’",
+                "text": "* Add 3\" to the range of this **WARLORD**’s aura abilities to a maximum of 12\" (this has already been added to the Voice of the Emperor aura ability below).\n* This WARLORD** has the following ability: ‘Voice of the Emperor (Aura)**: While a friendly **ADEPTUS CUSTODES** or **ANATHEMA PSYKANA** unit is within 9\" of this model, add 1 to the Leadership characteristic of models in that unit.’",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits"
@@ -7465,7 +7465,7 @@
                 }
             },
             "Warlord Trait§Oblivion Knight": {
-                "text": "<ul><li>This **WARLORD** has the following ability: ‘Oblivion Knight (Aura)**:** Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for **ANATHEMA PSYKANA** INFANTRY** units while they are within 6\" of this model.’\n* Each time this WARLORD** makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+                "text": "* This **WARLORD** has the following ability: ‘Oblivion Knight (Aura)**:** Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for **ANATHEMA PSYKANA** INFANTRY** units while they are within 6\" of this model.’\n* Each time this WARLORD** makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 1"
@@ -7473,7 +7473,7 @@
                 }
             },
             "Warlord Trait§Silent Judge (aura)": {
-                "text": "While an enemy unit is within 3\" of this **WARLORD**:\n\n<ul><li>Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that enemy unit, subtract 1 from that Combat Attrition test.\n* That enemy unit loses the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
+                "text": "While an enemy unit is within 3\" of this **WARLORD**:\n\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that enemy unit, subtract 1 from that Combat Attrition test.\n* That enemy unit loses the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 2"
@@ -7481,7 +7481,7 @@
                 }
             },
             "Warlord Trait§Mistress Of Persecution (aura)": {
-                "text": "While a friendly **ANATHEMA PSYKANA** INFANTRY** unit is within 6 \" of this WARLORD**:\n\n<ul><li>Each time a model in that ANATHEMA** PSYKANA** INFANTRY** unit makes an attack, the target does not receive the benefits of [Heavy](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Heavy-Cover) or [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover) against that attack.\n* Add 3\" to the Range characteristic of ranged weapons models in that ANATHEMA** PSYKANA** INFANTRY** unit are equipped with.",
+                "text": "While a friendly **ANATHEMA PSYKANA** INFANTRY** unit is within 6 \" of this WARLORD**:\n\n* Each time a model in that ANATHEMA** PSYKANA** INFANTRY** unit makes an attack, the target does not receive the benefits of [Heavy](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Heavy-Cover) or [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover) against that attack.\n* Add 3\" to the Range characteristic of ranged weapons models in that ANATHEMA** PSYKANA** INFANTRY** unit are equipped with.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 3"
@@ -7489,7 +7489,7 @@
                 }
             },
             "Warlord Trait§Master Of Martial Strategy": {
-                "text": "<ul><li>While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem, you can roll one D6: on a 5+, that Command point is refunded.\n* Once per battle, in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if units from your army are using the [Martial Ka’tah](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Martial-Ka-tah) ability, before selecting a ka’tah stance for your army, you can change the order of your martial ka’tahs, i.e. primary, secondary or tertiary. Note that this does not allow you to select ka’tah stances more than once.",
+                "text": "* While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem, you can roll one D6: on a 5+, that Command point is refunded.\n* Once per battle, in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if units from your army are using the [Martial Ka’tah](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Martial-Ka-tah) ability, before selecting a ka’tah stance for your army, you can change the order of your martial ka’tahs, i.e. primary, secondary or tertiary. Note that this does not allow you to select ka’tah stances more than once.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 1"
@@ -7497,7 +7497,7 @@
                 }
             },
             "Warlord Trait§Champion Of The Imperium": {
-                "text": "<ul><li>This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6\" horizontally and 5\" vertically of any enemy unit.\n* Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6\" instead of 3\". All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* Each time this WARLORD** makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+                "text": "* This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6\" horizontally and 5\" vertically of any enemy unit.\n* Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6\" instead of 3\". All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* Each time this WARLORD** makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 2"
@@ -7513,7 +7513,7 @@
                 }
             },
             "Warlord Trait§Impregnable Mind": {
-                "text": "<ul><li>In your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this **WARLORD** can attempt to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) once as if it were a PSYKER** model. Each time a Deny the Witch test is taken for this WARLORD**, add 1 to the result.\n* This WARLORD** counts as two additional models when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers). This is cumulative with any other rules that make it count as additional models.",
+                "text": "* In your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this **WARLORD** can attempt to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) once as if it were a PSYKER** model. Each time a Deny the Witch test is taken for this WARLORD**, add 1 to the result.\n* This WARLORD** counts as two additional models when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers). This is cumulative with any other rules that make it count as additional models.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 4"
@@ -7529,7 +7529,7 @@
                 }
             },
             "Warlord Trait§Peerless Warrior": {
-                "text": "<ul><li>Each time this **WARLORD** makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage.\n* Each time an attack made by this WARLORD** is allocated to an enemy model, the [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be [re-rolled](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Re-rolls).",
+                "text": "* Each time this **WARLORD** makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage.\n* Each time an attack made by this WARLORD** is allocated to an enemy model, the [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be [re-rolled](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Re-rolls).",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 6"

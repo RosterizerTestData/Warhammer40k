@@ -30,7 +30,7 @@ processInfo = (data,factionKey) => {
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
     notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.',
-    revision: '0.0.3',
+    revision: '0.0.4',
     dependencies: [
       {
         slug: "123456",
@@ -381,6 +381,7 @@ formatText = (text,log = false) => {
   });
   // newText = newText.replace(/"/g,'″'); // too many html structures get screwed by this
   newText = newText.replace(/<ul[^>]+><li>/g,'* ');
+  newText = newText.replace(/<ul><li>/g,'* ');
   if(log) console.log(newText)
   newText = newText.replace(/<\/li><li>/g,'\n* ');
   if(log) console.log(newText)

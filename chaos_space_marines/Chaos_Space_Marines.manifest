@@ -5,7 +5,7 @@
     "publisher": "Games Workshop",
     "url": "https://warhammer40000.com/",
     "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.3",
+    "revision": "0.0.4",
     "dependencies": [
         {
             "slug": "123456",
@@ -48640,7 +48640,7 @@
                 "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves). In addition, this model cannot lose more than 3 wounds in the same phase. Any wounds that would be lost after that point are not lost."
             },
             "Ability§Mark of Chaos Ascendant": {
-                "text": "<ul><li>Each time this model makes a melee attack, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, add 1 to the Strength characteristic of that attack.\n* Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this model, the Damage characteristic of that attack is changed to 0.\n* Each time an attack is made against this model, if the Strength characteristic of that attack either equals or is at least double the Toughness characteristic of this model, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* If this model starts the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it fights first that phase."
+                "text": "* Each time this model makes a melee attack, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, add 1 to the Strength characteristic of that attack.\n* Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this model, the Damage characteristic of that attack is changed to 0.\n* Each time an attack is made against this model, if the Strength characteristic of that attack either equals or is at least double the Toughness characteristic of this model, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* If this model starts the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it fights first that phase."
             },
             "Ability§The Hamadrya": {
                 "text": "Once per battle, at the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this model can use its Hamadrya. If it does so, until the end of the phase, this model gains the **PSYKER** keyword and can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) either [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) or one psychic power from the [Dark Hereticus discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Dark-Hereticus-Discipline)**.\n\n\n\n*We recommend placing a Hamadrya model next to this model as a reminder, removing it once this ability has been used (a Hamadrya does not count as a model for any rules purposes).*"
@@ -48706,7 +48706,7 @@
                 "text": "Each time an attack with a Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made against that attack. In addition, models in this unit do not suffer the penalty to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) incurred for firing [Heavy weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#HEAVY) in the same turn that their unit has moved."
             },
             "Ability§Daemon Engine": {
-                "text": "<ul><li>This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model regains 1 lost wound."
+                "text": "* This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model regains 1 lost wound."
             },
             "Ability§Scuttling Gait": {
                 "text": "Each time this model Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6\" to the Move characteristic of this model."
@@ -48874,7 +48874,7 @@
                 "text": "If this model is reduced to 0 wounds, roll a dice before removing it from the battlefield; on a 5+ the warp energies contained within it burst out, and each unit within 3” suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
             },
             "Ability§Malicious Volleys": {
-                "text": "Instead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire bolt weapons make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) if any of the following apply:\n\n<ul><li>The shooting model’s target is within half the weapons range.\n* The shooting model is **INFANTRY** and its unit [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n* The shooting model is a TERMINATOR** or BIKER** model.For the purposes of this ability, a Rapid Fire bolt weapon is any [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Bolt-Weapons) with the Rapid Fire type.\n\nERROR: The following text was found on another ability with the same name.\n\nInstead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire bolt weapons make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) if any of the following apply:\n\n<ul><li>The shooting model’s target is within half the weapon’s range.\n* The shooting model is **INFANTRY** and its unit [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n* The shooting model is a TERMINATOR**.For the purposes of this ability, a Rapid Fire bolt weapon is any [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Bolt-Weapons) with the Rapid Fire type.\n\nERROR: The following text was found on another ability with the same name.\n\nInstead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire <span class=\"tt kwbu\">bolt <span class=\"tt kwbu\">weapons</span></span> make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) if any of the following apply:\n\n<ul><li>The shooting model’s target is within half the weapon’s range.\n* The shooting model is **INFANTRY** and its unit [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n* The shooting model is a TERMINATOR**.For the purposes of this ability, a Rapid Fire bolt weapon is any bolt weapon (as defined <span class=\"tt kwbu\">here</span>) with the [Rapid Fire](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE) type."
+                "text": "Instead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire bolt weapons make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) if any of the following apply:\n\n* The shooting model’s target is within half the weapons range.\n* The shooting model is **INFANTRY** and its unit [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n* The shooting model is a TERMINATOR** or BIKER** model.For the purposes of this ability, a Rapid Fire bolt weapon is any [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Bolt-Weapons) with the Rapid Fire type.\n\nERROR: The following text was found on another ability with the same name.\n\nInstead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire bolt weapons make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) if any of the following apply:\n\n* The shooting model’s target is within half the weapon’s range.\n* The shooting model is **INFANTRY** and its unit [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n* The shooting model is a TERMINATOR**.For the purposes of this ability, a Rapid Fire bolt weapon is any [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Bolt-Weapons) with the Rapid Fire type.\n\nERROR: The following text was found on another ability with the same name.\n\nInstead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire <span class=\"tt kwbu\">bolt <span class=\"tt kwbu\">weapons</span></span> make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) if any of the following apply:\n\n* The shooting model’s target is within half the weapon’s range.\n* The shooting model is **INFANTRY** and its unit [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n* The shooting model is a TERMINATOR**.For the purposes of this ability, a Rapid Fire bolt weapon is any bolt weapon (as defined <span class=\"tt kwbu\">here</span>) with the [Rapid Fire](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE) type."
             },
             "Ability§Devastating Charge": {
                 "text": "This model’s bladed horn weapon has a Strength characteristic of 7 if the bearer made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn."
@@ -48987,7 +48987,7 @@
                 "text": "Each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for this unit, it is automatically passed."
             },
             "Ability§Armour of Contempt": {
-                "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n<ul><li>Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
+                "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n* Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
             },
             "Ability§Warp Strike": {
                 "text": "During deployment, you can set up this unit in blasphemous reserves instead of setting it up on the battlefield. If you do so, then in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) you can set up this unit anywhere on the battlefield that is more than 9\" away from any enemy models."
@@ -48998,14 +48998,14 @@
                     "Legion": {
                         "statType": "term",
                         "value": "&lt;LEGION&gt;",
-                        "text": "If every unit from your army has the **TRAITORIS ASTARTES** keyword (excluding models with the **AGENT OF** CHAOS** or UNALIGNED** keyword) and every {v}** unit from your army (excluding **ABADDON THE** DESPOILER**) is from the same [Legion](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Legions), this unit gains the following rules:\n\n<ul><li>Each time a model in this unit shoots with a [flame weapon](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Flame-Weapons), when determining how many attacks are made with that weapon this phase, add 2 to the result (e.g. a model shooting with a flamer makes D6+2 attacks).\n* This unit gains a bonus (see below) depending on which wanton act it is engaged in, as follows:\n\n<ul><li>During the first battle round, your army (and every unit from it) is engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Destruction</span></span>.\n* During the second battle round, your army (and every unit from it) is engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span>.\n* At the start of the third battle round, select either <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span> or <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span>; until the end of that battle round, your army (and every unit from it) is engaged in the wanton act you selected.\n* During the fourth and subsequent [battle rounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Battle-Round), your army (and every unit from it) is engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span>.",
+                        "text": "If every unit from your army has the **TRAITORIS ASTARTES** keyword (excluding models with the **AGENT OF** CHAOS** or UNALIGNED** keyword) and every {v}** unit from your army (excluding **ABADDON THE** DESPOILER**) is from the same [Legion](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Legions), this unit gains the following rules:\n\n* Each time a model in this unit shoots with a [flame weapon](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines/#Flame-Weapons), when determining how many attacks are made with that weapon this phase, add 2 to the result (e.g. a model shooting with a flamer makes D6+2 attacks).\n* This unit gains a bonus (see below) depending on which wanton act it is engaged in, as follows:\n\n* During the first battle round, your army (and every unit from it) is engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Destruction</span></span>.\n* During the second battle round, your army (and every unit from it) is engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span>.\n* At the start of the third battle round, select either <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span> or <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span>; until the end of that battle round, your army (and every unit from it) is engaged in the wanton act you selected.\n* During the fourth and subsequent [battle rounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Battle-Round), your army (and every unit from it) is engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span>.",
                         "visibility": "hidden",
                         "dynamic": true
                     }
                 }
             },
             "Ability§The Despoiler (Aura)": {
-                "text": "While a friendly **CHAOS CORE** unit is within 6\" of this model:\n\n<ul><li>Add 1 to [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.\n* Each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
+                "text": "While a friendly **CHAOS CORE** unit is within 6\" of this model:\n\n* Add 1 to [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.\n* Each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
             },
             "Ability§Lord of the Traitor Legions": {
                 "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **HERETIC ASTARTES** CORE** or **HERETIC ASTARTES** CHARACTER** unit within 6\" of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) (if that unit is a **BLACK LEGION** unit, you can also re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll))."
@@ -49034,7 +49034,7 @@
                 }
             },
             "Ability§Surgeon Acolyte": {
-                "text": "While this unit contains a **SURGEON** ACOLYTE** model:\n\n<ul><li>Each time FABIUS** BILE** completes the Enhance Warriors [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions), roll two D3 instead of one D3 when determining the selected unit’s enhancement, and select one of the results.\n* The destruction of a SURGEON** ACOLYTE** model is ignored for the purposes of [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests).\n* If FABIUS** BILE** is ever destroyed, this unit’s SURGEON** ACOLYTE** model is also destroyed."
+                "text": "While this unit contains a **SURGEON** ACOLYTE** model:\n\n* Each time FABIUS** BILE** completes the Enhance Warriors [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions), roll two D3 instead of one D3 when determining the selected unit’s enhancement, and select one of the results.\n* The destruction of a SURGEON** ACOLYTE** model is ignored for the purposes of [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests).\n* If FABIUS** BILE** is ever destroyed, this unit’s SURGEON** ACOLYTE** model is also destroyed."
             },
             "Ability§Escape": {
                 "text": "Once per battle, at the end of any [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) or [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), you can remove this model from the battlefield and place it into [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves). If the battle ends and this model is not on the battlefield, it is destroyed."
@@ -49080,7 +49080,7 @@
                     "Legion": {
                         "statType": "term",
                         "value": "&lt;LEGION&gt;",
-                        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model can corrupt either one enemy **VEHICLE** model within 9\", or one friendly **{v} VEHICLE** model within 9\":\n\n<ul><li>If it corrupts an enemy model, roll a number of D6 equal to the Wounds characteristic of that model; for each 6, that model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (to a maximum of 6 mortal wounds).\n* If it corrupts a friendly model, until the start of your next Command phase, each time that model makes a melee attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).Each model can only be corrupted once per turn.",
+                        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model can corrupt either one enemy **VEHICLE** model within 9\", or one friendly **{v} VEHICLE** model within 9\":\n\n* If it corrupts an enemy model, roll a number of D6 equal to the Wounds characteristic of that model; for each 6, that model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (to a maximum of 6 mortal wounds).\n* If it corrupts a friendly model, until the start of your next Command phase, each time that model makes a melee attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).Each model can only be corrupted once per turn.",
                         "visibility": "hidden",
                         "dynamic": true
                     }
@@ -49148,7 +49148,7 @@
                 }
             },
             "Ability§Accursed Horde": {
-                "text": "This unit cannot perform [actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) and cannot [embark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within **TRANSPORT** models. At the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one of the following:\n\n<ul><li>Return up to 3 destroyed Mutant models to this unit.\n* Return 1 destroyed Torment model to this unit with its full wounds remaining."
+                "text": "This unit cannot perform [actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) and cannot [embark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within **TRANSPORT** models. At the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one of the following:\n\n* Return up to 3 destroyed Mutant models to this unit.\n* Return 1 destroyed Torment model to this unit with its full wounds remaining."
             },
             "Ability§Unnatural Regeneration": {
                 "text": "Each time a model in this unit would lose a wound, roll one D6: on a 6, that wound is not lost."
@@ -49271,7 +49271,7 @@
                 }
             },
             "Wargear§Mark of Tzeentch": {
-                "text": "<ul><li>Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this unit, the Damage characteristic of that attack is changed to 0.\n* If this unit has the **ICON** keyword, each time a model in this unit makes a ranged attack, improve the Armour Penetration characteristic of that attack by 1.",
+                "text": "* Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this unit, the Damage characteristic of that attack is changed to 0.\n* If this unit has the **ICON** keyword, each time a model in this unit makes a ranged attack, improve the Armour Penetration characteristic of that attack by 1.",
                 "stats": {
                     "Points": {
                         "value": 15
@@ -49279,7 +49279,7 @@
                 }
             },
             "Wargear§Mark of Nurgle": {
-                "text": "<ul><li>Each time an attack is made against this unit, if the Strength characteristic of that attack either equals or is at least double the Toughness characteristic of this unit, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* While this unit has the **ICON** keyword, each time a model in this unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+                "text": "* Each time an attack is made against this unit, if the Strength characteristic of that attack either equals or is at least double the Toughness characteristic of this unit, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* While this unit has the **ICON** keyword, each time a model in this unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
                 "stats": {
                     "Points": {
                         "value": 15
@@ -49311,7 +49311,7 @@
                 "text": "Each time an attack is allocated to this unit’s **TRAITOR** OGRYN** model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
             },
             "Ability§Big Target": {
-                "text": "<ul><li>Each time an attack targets this unit, if this unit contains a **TRAITOR** OGRYN** model, use that model’s Toughness characteristic when making [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for that attack.\n* Each time an attack is allocated to a model in this unit, if this unit contains a TRAITOR** OGRYN** model, that attack must be allocated to that model.\n* Each time a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) is inflicted on this unit, if this unit contains a TRAITOR** OGRYN** model, that model must suffer that mortal wound."
+                "text": "* Each time an attack targets this unit, if this unit contains a **TRAITOR** OGRYN** model, use that model’s Toughness characteristic when making [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for that attack.\n* Each time an attack is allocated to a model in this unit, if this unit contains a TRAITOR** OGRYN** model, that attack must be allocated to that model.\n* Each time a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) is inflicted on this unit, if this unit contains a TRAITOR** OGRYN** model, that model must suffer that mortal wound."
             },
             "Wargear§Vox-caster": {
                 "text": "While the bearer’s unit is within 24\" of a friendly **TRAITOR ENFORCER** unit, the bearer’s unit is treated as being in range of that TRAITOR** ENFORCER** unit’s Forward, For the Dark Gods!** ability."
@@ -54327,7 +54327,7 @@
                 }
             },
             "Dark Hereticus Discipline§Warptime": {
-                "text": "**Blessing:** *Warptime* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **&lt;LEGION&gt; INFANTRY** or **&lt;LEGION&gt; CHAOS** SPAWN** unit within 6\" of this PSYKER**.\n\n<ul><li>That unit can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) (if that unit [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), it still counts as having Advanced this turn).\n* Until the end of the turn, that unit is not eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).",
+                "text": "**Blessing:** *Warptime* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **&lt;LEGION&gt; INFANTRY** or **&lt;LEGION&gt; CHAOS** SPAWN** unit within 6\" of this PSYKER**.\n\n* That unit can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) (if that unit [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) in your previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), it still counts as having Advanced this turn).\n* Until the end of the turn, that unit is not eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).",
                 "stats": {
                     "Roll": {
                         "value": 6
@@ -54343,7 +54343,7 @@
                 }
             },
             "Malefic Discipline§Pact Of Flesh": {
-                "text": "**Blessing:** *Pact of Flesh* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **&lt;LEGION&gt; CORE**, **&lt;LEGION&gt; DAEMONKIN** or **&lt;LEGION&gt; CHARACTER** unit within 18\" of this PSYKER**.\n\n<ul><li>One model in that unit regains up to D3 lost wounds.\n* If you selected a CORE** or DAEMONKIN** unit and that unit is not at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units), one destroyed model is added back to that unit with its full wounds remaining.",
+                "text": "**Blessing:** *Pact of Flesh* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **&lt;LEGION&gt; CORE**, **&lt;LEGION&gt; DAEMONKIN** or **&lt;LEGION&gt; CHARACTER** unit within 18\" of this PSYKER**.\n\n* One model in that unit regains up to D3 lost wounds.\n* If you selected a CORE** or DAEMONKIN** unit and that unit is not at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units), one destroyed model is added back to that unit with its full wounds remaining.",
                 "stats": {
                     "Roll": {
                         "value": 2
@@ -54351,7 +54351,7 @@
                 }
             },
             "Malefic Discipline§Cursed Earth": {
-                "text": "**Blessing (Aura):** *Cursed Earth* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), while a friendly **&lt;LEGION&gt; DAEMONKIN** or **&lt;LEGION&gt; DAEMON** ENGINE** unit is within 6\" of this PSYKER**:\n\n<ul><li>DAEMONKIN** and DAEMON** ENGINE** models in that unit have a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time an enemy unit finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit, roll one D6: on a 2-4, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 5+, that enemy unit suffers D3 mortal wounds.",
+                "text": "**Blessing (Aura):** *Cursed Earth* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), while a friendly **&lt;LEGION&gt; DAEMONKIN** or **&lt;LEGION&gt; DAEMON** ENGINE** unit is within 6\" of this PSYKER**:\n\n* DAEMONKIN** and DAEMON** ENGINE** models in that unit have a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time an enemy unit finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit, roll one D6: on a 2-4, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 5+, that enemy unit suffers D3 mortal wounds.",
                 "stats": {
                     "Roll": {
                         "value": 3
@@ -54392,7 +54392,7 @@
                 "text": "**Blessing:** *Delightful Agonies* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **&lt;LEGION&gt; SLAANESH** unit within 18\" of this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time a model in that unit would lose a wound, roll one D6: on a 5+, that wound is not lost."
             },
             "Warlord Trait§The Voice Of Lorgar": {
-                "text": "<ul><li>Add 3\" to the range of this **WARLORD**’s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (excluding aura abilities that are psychic powers).\n* Each time this WARLORD** chants a prayer or uses an ability in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) that specifies a range, until the end of the phase, you can add 3\" to the range of that prayer or ability.",
+                "text": "* Add 3\" to the range of this **WARLORD**’s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (excluding aura abilities that are psychic powers).\n* Each time this WARLORD** chants a prayer or uses an ability in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) that specifies a range, until the end of the phase, you can add 3\" to the range of that prayer or ability.",
                 "stats": {
                     "Discipline": {
                         "value": "Word Bearers 1"
@@ -54400,7 +54400,7 @@
                 }
             },
             "Warlord Trait§Exalted Possession": {
-                "text": "<ul><li>This **WARLORD** gains the DAEMON** and DAEMONKIN** keywords (if it doesn’t already have them).\n* This WARLORD** has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n* Add 1 to the Strength, Attacks and Wounds characteristics of this WARLORD**.\n* Add 2\" to the Move characteristic of this WARLORD**.",
+                "text": "* This **WARLORD** gains the DAEMON** and DAEMONKIN** keywords (if it doesn’t already have them).\n* This WARLORD** has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n* Add 1 to the Strength, Attacks and Wounds characteristics of this WARLORD**.\n* Add 2\" to the Move characteristic of this WARLORD**.",
                 "stats": {
                     "Discipline": {
                         "value": "Word Bearers 2"
@@ -54416,7 +54416,7 @@
                 }
             },
             "Warlord Trait§Master Of The Union": {
-                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **WORD BEARERS** DAEMONKIN** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n<ul><li>Add 1 to the Strength characteristic of models in that unit.\n* Each time a model in that unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1.",
+                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **WORD BEARERS** DAEMONKIN** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n* Add 1 to the Strength characteristic of models in that unit.\n* Each time a model in that unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1.",
                 "stats": {
                     "Discipline": {
                         "value": "Word Bearers 4"
@@ -54424,7 +54424,7 @@
                 }
             },
             "Warlord Trait§Diabolist": {
-                "text": "<ul><li>Each time an attack is made against this **WARLORD**, your opponent cannot re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
+                "text": "* Each time an attack is made against this **WARLORD**, your opponent cannot re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
                 "stats": {
                     "Discipline": {
                         "value": "Word Bearers 5"
@@ -54432,7 +54432,7 @@
                 }
             },
             "Warlord Trait§Hate-fuelled Demagogue": {
-                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **WORD** BEARERS** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n<ul><li>If that unit is a CULTISTS** unit, it gains the <span class=\"tt kwbu\">Let <span class=\"tt kwbu\">the</span> <span class=\"tt kwbu\">Galaxy</span> <span class=\"tt kwbu\">Burn</span></span> ability, and models in that unit are considered to have the **HERETIC ASTARTES** keyword for the purposes of that ability.\n* Each time a model in that unit makes an attack, if your army is engaged in either <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Destruction</span></span> or <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span>, that unit is considered to be engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span> for that attack instead.",
+                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **WORD** BEARERS** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n* If that unit is a CULTISTS** unit, it gains the <span class=\"tt kwbu\">Let <span class=\"tt kwbu\">the</span> <span class=\"tt kwbu\">Galaxy</span> <span class=\"tt kwbu\">Burn</span></span> ability, and models in that unit are considered to have the **HERETIC ASTARTES** keyword for the purposes of that ability.\n* Each time a model in that unit makes an attack, if your army is engaged in either <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Destruction</span></span> or <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span>, that unit is considered to be engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span> for that attack instead.",
                 "stats": {
                     "Discipline": {
                         "value": "Word Bearers 6"
@@ -54448,7 +54448,7 @@
                 }
             },
             "Warlord Trait§One Piece At A Time": {
-                "text": "<ul><li>Each time this **WARLORD** is selected to fight, after it has finished making its attacks, if any enemy models were destroyed by those attacks but their unit was not destroyed, select one of those enemy units. Until the end of the next [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), subtract 1 from [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) taken for that enemy unit.\n* Each time this WARLORD** makes a [consolidation move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate), models in its unit can move in any direction, and can do so even if they are already touching an enemy model, provided each model finishes its move within 3\" of an enemy unit.",
+                "text": "* Each time this **WARLORD** is selected to fight, after it has finished making its attacks, if any enemy models were destroyed by those attacks but their unit was not destroyed, select one of those enemy units. Until the end of the next [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), subtract 1 from [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) taken for that enemy unit.\n* Each time this WARLORD** makes a [consolidation move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate), models in its unit can move in any direction, and can do so even if they are already touching an enemy model, provided each model finishes its move within 3\" of an enemy unit.",
                 "stats": {
                     "Discipline": {
                         "value": "Night Lords 2"
@@ -54464,7 +54464,7 @@
                 }
             },
             "Warlord Trait§Killing Fury": {
-                "text": "<ul><li>Each time this **WARLORD** is selected to fight, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, until that fight is resolved, add D3 to the Attacks characteristic of this WARLORD**.\n* Each time this WARLORD** makes a melee attack, it is considered to be engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span> for that attack, instead of any other wanton act it is engaged in.",
+                "text": "* Each time this **WARLORD** is selected to fight, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, until that fight is resolved, add D3 to the Attacks characteristic of this WARLORD**.\n* Each time this WARLORD** makes a melee attack, it is considered to be engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span> for that attack, instead of any other wanton act it is engaged in.",
                 "stats": {
                     "Discipline": {
                         "value": "Night Lords 4"
@@ -54472,7 +54472,7 @@
                 }
             },
             "Warlord Trait§One With The Shadows": {
-                "text": "Each time an attack is made against this **WARLORD**:\n\n<ul><li>Your opponent cannot re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Subtract 1 from that attack’s hit roll.",
+                "text": "Each time an attack is made against this **WARLORD**:\n\n* Your opponent cannot re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Subtract 1 from that attack’s hit roll.",
                 "stats": {
                     "Discipline": {
                         "value": "Night Lords 5"
@@ -54488,7 +54488,7 @@
                 }
             },
             "Warlord Trait§I Am Alpharius": {
-                "text": "<ul><li>After nominating this model to be your **WARLORD**, randomly determine one additional Warlord Trait for them (re-rolling duplicate results) from a Warlord Traits table of your choice that this model has access to.\n* If this WARLORD** is destroyed, you can immediately select one other **ALPHA LEGION** CHARACTER** model from your army that does not have a Warlord Trait, and select a Warlord Trait for that model to gain (this must be a Warlord Trait no other model from your army has, it must be one that model can have, and it cannot be I Am Alpharius). Until the end of the battle, that model counts as your WARLORD** for all rules purposes. If any mission objective, [secondary objective](https://wahapedia.ru/wh40k9ed/the-rules/matched-play/#Secondary-Objectives) or [Agenda](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Agendas) rules are triggered when your WARLORD** is destroyed, those rules are not triggered until this new WARLORD** is destroyed.",
+                "text": "* After nominating this model to be your **WARLORD**, randomly determine one additional Warlord Trait for them (re-rolling duplicate results) from a Warlord Traits table of your choice that this model has access to.\n* If this WARLORD** is destroyed, you can immediately select one other **ALPHA LEGION** CHARACTER** model from your army that does not have a Warlord Trait, and select a Warlord Trait for that model to gain (this must be a Warlord Trait no other model from your army has, it must be one that model can have, and it cannot be I Am Alpharius). Until the end of the battle, that model counts as your WARLORD** for all rules purposes. If any mission objective, [secondary objective](https://wahapedia.ru/wh40k9ed/the-rules/matched-play/#Secondary-Objectives) or [Agenda](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Agendas) rules are triggered when your WARLORD** is destroyed, those rules are not triggered until this new WARLORD** is destroyed.",
                 "stats": {
                     "Discipline": {
                         "value": "Alpha Legion 1"
@@ -54496,7 +54496,7 @@
                 }
             },
             "Warlord Trait§Clandestine": {
-                "text": "<ul><li>Each time an attack is made against this **WARLORD**, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have.\n* Each time an attack is allocated to this WARLORD** while it is receiving the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover), add an additional 1 to any armour [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made against that attack.",
+                "text": "* Each time an attack is made against this **WARLORD**, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have.\n* Each time an attack is allocated to this WARLORD** while it is receiving the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover), add an additional 1 to any armour [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made against that attack.",
                 "stats": {
                     "Discipline": {
                         "value": "Alpha Legion 2"
@@ -54504,7 +54504,7 @@
                 }
             },
             "Warlord Trait§Headhunter": {
-                "text": "Each time you select a target for an attack made with a ranged weapon by this **WARLORD**, if that weapon is a [Rapid Fire](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE) or [Pistol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PISTOL) weapon:\n\n<ul><li>You can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule.\n* You can re-roll that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* On an unmodified wound roll of 6, the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to any normal damage.",
+                "text": "Each time you select a target for an attack made with a ranged weapon by this **WARLORD**, if that weapon is a [Rapid Fire](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE) or [Pistol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PISTOL) weapon:\n\n* You can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule.\n* You can re-roll that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* On an unmodified wound roll of 6, the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to any normal damage.",
                 "stats": {
                     "Discipline": {
                         "value": "Alpha Legion 3"
@@ -54520,7 +54520,7 @@
                 }
             },
             "Warlord Trait§Cult Leader": {
-                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **ALPHA LEGION** CULTISTS** unit within 9\" of this WARLORD**. Until the start of your next Command phase, each time a model in that unit makes an attack:\n\n<ul><li>Add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Improve the Armour Penetration characteristic of that attack by 1.",
+                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **ALPHA LEGION** CULTISTS** unit within 9\" of this WARLORD**. Until the start of your next Command phase, each time a model in that unit makes an attack:\n\n* Add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Improve the Armour Penetration characteristic of that attack by 1.",
                 "stats": {
                     "Discipline": {
                         "value": "Alpha Legion 5"
@@ -54528,7 +54528,7 @@
                 }
             },
             "Warlord Trait§Covert Control": {
-                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **ALPHA LEGION** CORE** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n<ul><li>That unit can shoot while [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) without that action failing.\n* That unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
+                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **ALPHA LEGION** CORE** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n* That unit can shoot while [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) without that action failing.\n* That unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
                 "stats": {
                     "Discipline": {
                         "value": "Alpha Legion 6"
@@ -54552,7 +54552,7 @@
                 }
             },
             "Warlord Trait§Unyielding Mettle": {
-                "text": "<ul><li>Add 1 to the Toughness characteristic of this **WARLORD**.\n* Each time this WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
+                "text": "* Add 1 to the Toughness characteristic of this **WARLORD**.\n* Each time this WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
                 "stats": {
                     "Discipline": {
                         "value": "Iron Warriors 3"
@@ -54560,7 +54560,7 @@
                 }
             },
             "Warlord Trait§Bastion": {
-                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **IRON WARRIORS** CORE** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n<ul><li>Each time an enemy unit [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) against that unit, if that unit is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can either [Hold Steady](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible).\n* That unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
+                "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **IRON WARRIORS** CORE** unit within 6\" of this WARLORD**. Until the start of your next Command phase:\n\n* Each time an enemy unit [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) against that unit, if that unit is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can either [Hold Steady](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible).\n* That unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
                 "stats": {
                     "Discipline": {
                         "value": "Iron Warriors 4"
@@ -54584,7 +54584,7 @@
                 }
             },
             "Warlord Trait§Stimulated By Pain": {
-                "text": "<ul><li>Each time this **WARLORD** loses a wound, add 1 to its Attacks characteristic (to a maximum of +3). Each time this WARLORD** regains a lost wound, subtract 1 from its Attacks characteristic.\n* When this WARLORD** is destroyed, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units and it has not already fought this phase, do not remove it from play: it can, after the attacking model’s unit has finished making its attacks, be selected to fight. After that fight has been resolved, this WARLORD** is then removed from play.",
+                "text": "* Each time this **WARLORD** loses a wound, add 1 to its Attacks characteristic (to a maximum of +3). Each time this WARLORD** regains a lost wound, subtract 1 from its Attacks characteristic.\n* When this WARLORD** is destroyed, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units and it has not already fought this phase, do not remove it from play: it can, after the attacking model’s unit has finished making its attacks, be selected to fight. After that fight has been resolved, this WARLORD** is then removed from play.",
                 "stats": {
                     "Discipline": {
                         "value": "Emperor’s Children 1"
@@ -54608,7 +54608,7 @@
                 }
             },
             "Warlord Trait§Faultless Duellist": {
-                "text": "<ul><li>Each time this **WARLORD** makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* While an enemy [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, subtract 1 from the Attacks characteristic of that enemy model.",
+                "text": "* Each time this **WARLORD** makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* While an enemy [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, subtract 1 from the Attacks characteristic of that enemy model.",
                 "stats": {
                     "Discipline": {
                         "value": "Emperor’s Children 4"
@@ -54616,7 +54616,7 @@
                 }
             },
             "Warlord Trait§Glutton For Punishment": {
-                "text": "<ul><li>Each time an attack is allocated to this **WARLORD**, if this WARLORD** does not have the VEHICLE** keyword, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).\n* Each time this WARLORD** would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 5+, that wound is not lost.",
+                "text": "* Each time an attack is allocated to this **WARLORD**, if this WARLORD** does not have the VEHICLE** keyword, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).\n* Each time this WARLORD** would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 5+, that wound is not lost.",
                 "stats": {
                     "Discipline": {
                         "value": "Emperor’s Children 5"
@@ -54624,7 +54624,7 @@
                 }
             },
             "Warlord Trait§Loathsome Grace": {
-                "text": "<ul><li>Add 2\" to the Move characteristic of this **WARLORD**.\n* You can re-roll [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this WARLORD**.",
+                "text": "* Add 2\" to the Move characteristic of this **WARLORD**.\n* You can re-roll [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this WARLORD**.",
                 "stats": {
                     "Discipline": {
                         "value": "Emperor’s Children 6"
@@ -54672,7 +54672,7 @@
                 }
             },
             "Warlord Trait§Battle-lust": {
-                "text": "<ul><li>This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6\" horizontally and 5\" vertically of any enemy unit, instead of 3\" horizontally and 5\" vertically. Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6\" instead of 3\". All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
+                "text": "* This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6\" horizontally and 5\" vertically of any enemy unit, instead of 3\" horizontally and 5\" vertically. Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6\" instead of 3\". All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
                 "stats": {
                     "Discipline": {
                         "value": "World Eaters 6"
@@ -54680,7 +54680,7 @@
                 }
             },
             "Warlord Trait§Flames Of Spite": {
-                "text": "<ul><li>Each time this **WARLORD** makes a melee attack, you can re-roll that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** makes an attack, on an unmodified wound roll of 6, the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to any normal damage.",
+                "text": "* Each time this **WARLORD** makes a melee attack, you can re-roll that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** makes an attack, on an unmodified wound roll of 6, the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to any normal damage.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 1"
@@ -54696,7 +54696,7 @@
                 }
             },
             "Warlord Trait§Hatred Incarnate": {
-                "text": "<ul><li>Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, until that fight is resolved, add 1 to the Strength and Attacks characteristics of this WARLORD**.\n* Each time this WARLORD** makes a melee attack, you can re-roll that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+                "text": "* Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, until that fight is resolved, add 1 to the Strength and Attacks characteristics of this WARLORD**.\n* Each time this WARLORD** makes a melee attack, you can re-roll that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 3"
@@ -54704,7 +54704,7 @@
                 }
             },
             "Warlord Trait§Lord Of Terror (aura)": {
-                "text": "While an enemy unit is within 6\" of this **WARLORD**:\n\n<ul><li>Each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for that unit, your opponent must roll one additional D6 and discard the lowest result.\n* If that unit fails a Morale test, until the end of the phase, it is considered to be below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) for the purposes of [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests).",
+                "text": "While an enemy unit is within 6\" of this **WARLORD**:\n\n* Each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for that unit, your opponent must roll one additional D6 and discard the lowest result.\n* If that unit fails a Morale test, until the end of the phase, it is considered to be below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) for the purposes of [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests).",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 4"
@@ -54720,7 +54720,7 @@
                 }
             },
             "Warlord Trait§Gaze Of The Gods": {
-                "text": "<ul><li>This **WARLORD** has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time this WARLORD** makes an attack, it is considered to be engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span>, <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Destruction</span></span> and <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span>.",
+                "text": "* This **WARLORD** has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time this WARLORD** makes an attack, it is considered to be engaged in <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Slaughter</span></span>, <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Destruction</span></span> and <span class=\"tt kwbu\">Wanton <span class=\"tt kwbu\">Massacre</span></span>.",
                 "stats": {
                     "Discipline": {
                         "value": "Warlord Traits 6"
@@ -54800,7 +54800,7 @@
                 }
             },
             "Warlord Trait§Soul-eater": {
-                "text": "<ul><li>Each time this **WARLORD** makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** fights, after it has finished making its attacks, if one or more enemy models were destroyed by those attacks, this WARLORD** regains up to D3 lost wounds.",
+                "text": "* Each time this **WARLORD** makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** fights, after it has finished making its attacks, if one or more enemy models were destroyed by those attacks, this WARLORD** regains up to D3 lost wounds.",
                 "stats": {
                     "Discipline": {
                         "value": "Black Legion 4"
@@ -54816,7 +54816,7 @@
                 }
             },
             "Warlord Trait§Paragon Of Hatred": {
-                "text": "<ul><li>You can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* Each time this WARLORD** fights, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, then until that fight is resolved, add 1 to the Attacks characteristic of this WARLORD** (if any of those enemy units have the IMPERIUM** keyword, add D3 instead of 1).",
+                "text": "* You can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* Each time this WARLORD** fights, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, then until that fight is resolved, add 1 to the Attacks characteristic of this WARLORD** (if any of those enemy units have the IMPERIUM** keyword, add D3 instead of 1).",
                 "stats": {
                     "Discipline": {
                         "value": "Black Legion 6"
