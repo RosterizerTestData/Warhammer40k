@@ -35,11 +35,12 @@ router.get('/:faction', async function (req, res, next) {
   allResults.factions = await getFactions(req.params.faction);
   allResults.datasheets = await getDatasheets(req.params.faction);
   let datasheetList = Array.from(new Set(allResults.datasheets.map(datasheet => datasheet.datasheet_id)));
-  console.log(datasheetList)
+  // console.log(datasheetList)
   allResults.keywords = await getKeywords(datasheetList);
   allResults.models = await getModels(datasheetList);
   allResults.damage = await getDamage(datasheetList);
   allResults.wargear = await getWargear(datasheetList);
+  allResults.relics = await getRelics(req.params.faction);
   allResults.abilities = await getAbilities(datasheetList);
   allResults.options = await getOptions(datasheetList);
   allResults.psychicPowers = await getPsychicPowers(req.params.faction);
@@ -135,6 +136,7 @@ let getDamage = async (datasheets) => {
 
 let getWargear = async (datasheets) => {
   let sql = SqlString.format("SELECT * FROM datasheets_wargear WHERE datasheet_id in (?)",[datasheets]);
+  console.log('query',sql)
   let datasheets_wargear = await new Promise((resolve, reject) => pool.query(sql, (error, results) => {
     if(error) {
       console.log(error);
@@ -170,6 +172,37 @@ let getWargear = async (datasheets) => {
     datasheets_wargear:datasheets_wargear,
     wargear_list:wargear_list,
     wargear:wargear,
+  };
+}
+
+let getRelics = async (fac) => {
+  sql = SqlString.format("SELECT * FROM wargear WHERE faction_id = ? && is_relic = 1",fac);
+  console.log('query',sql)
+  let relics = await new Promise((resolve, reject) => pool.query(sql, (error, results) => {
+    if(error) {
+      console.log(error);
+      reject(error);
+      return;
+    }else{
+      resolve(results);
+    }
+  }));
+  let relicIDs = Array.from(new Set(relics?.map(relic => relic?.wargear_id)));
+  sql = SqlString.format("SELECT * FROM wargear_list WHERE wargear_id in (?)",[relicIDs]);
+  console.log('query',sql)
+  let relic_list = relicIDs.length ? await new Promise((resolve, reject) => pool.query(sql, (error, results) => {
+    if(error) {
+      console.log(error);
+      reject(error);
+      return;
+    }else{
+      resolve(results);
+    }
+  })) : [];
+  // console.log('models',results)
+  return {
+    relic_list:relic_list,
+    relics:relics,
   };
 }
 

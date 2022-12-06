@@ -1,6 +1,6 @@
 {
   "name": "40k9e",
-  "revision": "0.2.0",
+  "revision": "0.2.1",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1798,6 +1798,12 @@
         "aspects": {
           "Describe": true
         }
+      },
+      "Relic Weapon": {
+        "templateClass": "Weapon"
+      },
+      "Relic": {
+        "templateClass": "Weapon"
       }
     },
     "assetCatalog": {

@@ -30,7 +30,7 @@ processInfo = (data,factionKey) => {
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
     notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.',
-    revision: '0.0.4',
+    revision: '0.0.5',
     dependencies: [
       {
         slug: "123456",
@@ -47,6 +47,7 @@ processItems = (data) => {
   processModels(data,assetCatalog);
   processAbilities(data,assetCatalog);
   processWargear(data,assetCatalog);
+  processRelics(data,assetCatalog);
   processPsychicPowers(data,assetCatalog);
   processWarlordTraits(data,assetCatalog);
   processUnits(data,assetCatalog);
@@ -56,6 +57,7 @@ processClasses = data => {
   let assetTaxonomy = {};
   processFactions(data,assetTaxonomy);
   processPsychicClasses(data,assetTaxonomy);
+  processRelicClasses(data,assetTaxonomy);
   return assetTaxonomy
 }
 processModels = (data,assetCatalog) => {
@@ -246,10 +248,10 @@ processWargear = (data,assetCatalog) => {
         assetCatalog['Wargear§'+bareName].stats.Points = assetCatalog['Wargear§'+bareName].stats.Points || {};
         assetCatalog['Wargear§'+bareName].stats.Points.value = assetCatalog['Weapon§'+shooter.name].stats.Points.value;
         delete assetCatalog['Weapon§'+shooter.name].stats;
-        delete assetCatalog['Weapon§'+bareName+' (melee)'].stats;
+        delete assetCatalog['Weapon§'+bareName+' (melee)']?.stats;
       }
     }
-  })
+  });
   data.wargear.composed = [];
   data.wargear.datasheets_wargear.forEach((wargear) => {
     let wargearArr = data.wargear.wargear_list.filter(wargear_list => wargear_list.wargear_id == wargear.wargear_id);
@@ -291,6 +293,61 @@ createWargearStat = (i,wargearArr,modelLoadout,assetCatalog) => {
     }
   });
   return tempStat
+}
+processRelics = (data,assetCatalog) => {
+  console.log(data.relics.relic_list)
+  data.relics.relic_list?.forEach(relic => {
+    let weapName = relic.name.replace(/(1: |2: |3: )/,'').replace(/в/g,'d').replace(/^"*(.*[^"])"*$/g,'$1').replace(/^\s*(.*[^\s])\s*$/g,'$1');
+    let tempWeapon = {stats:{
+      AP: {value: relic.armor_piercing},
+      D: {value: relic.damage},
+      S: {value: relic.strength},
+      Type: {value: relic.type},
+      Range: {value: relic.weapon_range},
+    }};
+    if(relic.abilities) tempWeapon.text = formatText(relic.abilities);
+    let relicsArr = data.relics.relic_list.filter(relic_list => relic_list.wargear_id == relic.wargear_id).map(relic => 'Relic Weapon§' + relic.name);
+    let relicType = data.relics.relics.filter(gear => gear.wargear_id == relic.wargear_id)[0].type;
+    let relicName = data.relics.relics.filter(gear => gear.wargear_id == relic.wargear_id)[0].name;
+    let itemKey = relicType + '§' + relicName;
+    if(relicsArr.length === 1){
+      assetCatalog[itemKey] = tempWeapon;
+    }else if(relicsArr.length > 1){
+      assetCatalog['Relic Weapon§' + weapName] = tempWeapon;
+      // console.log(relicsArr,weapName)
+      assetCatalog[itemKey] = assetCatalog[itemKey] || {};
+      assetCatalog[itemKey].assets = assetCatalog[itemKey].assets || {};
+      assetCatalog[itemKey].assets.traits = assetCatalog[itemKey].assets.traits || [];
+      assetCatalog[itemKey].assets.traits.push('Relic Weapon§' + weapName);
+    }
+  });
+  let shootingMelee = data.relics.relic_list.filter(relics => relics.name.includes('(shooting)') || relics.name.includes('(melee)'));
+  let shooting = shootingMelee.filter(relics => relics.name.includes('(shooting)'));
+  let melee = shootingMelee.filter(relics => relics.name.includes('(melee)'));
+  shooting.forEach(shooter => {
+    let bareName = shooter.name.replace(' (shooting)','');
+    if(melee.filter(meleer => meleer.name.includes(bareName))){
+      let relicType = data.relics.relics.filter(gear => gear.wargear_id == shooter.wargear_id)[0].type;
+      assetCatalog[relicType+'§'+bareName] = {
+        assets: {traits:[
+          'Relic Weapon§'+bareName+' (melee)',
+          'Relic Weapon§'+bareName+' (shooting)',
+        ]}
+      }
+      if(assetCatalog['Relic Weapon§'+shooter.name].stats?.Points?.value){
+        assetCatalog[relicType+'§'+bareName].stats = assetCatalog[relicType+'§'+bareName].stats || {};
+        assetCatalog[relicType+'§'+bareName].stats.Points = assetCatalog[relicType+'§'+bareName].stats.Points || {};
+        assetCatalog[relicType+'§'+bareName].stats.Points.value = assetCatalog['Relic Weapon§'+shooter.name].stats.Points.value;
+        delete assetCatalog['Relic Weapon§'+shooter.name].stats;
+        delete assetCatalog['Relic Weapon§'+bareName+' (melee)'].stats;
+      }
+    }
+  });
+  data.relics.relics.forEach(relic => {
+    let itemKey = relic.type + '§' + relic.name;
+    assetCatalog[itemKey] = assetCatalog[itemKey] || {};
+    if(relic.description) assetCatalog[itemKey].text = formatText(relic.description);
+  });
 }
 processPsychicPowers = (data,assetCatalog) => {
   data.psychicPowers.forEach(power => {
@@ -771,6 +828,15 @@ processPsychicClasses = (data,assetTaxonomy) => {
     if(power.type){
       assetTaxonomy[power.type] = assetTaxonomy[power.type] || {
         templateClass: 'Psychic Power'
+      }
+    }
+  });
+}
+processRelicClasses = (data,assetTaxonomy) => {
+  data.relics.relics.forEach(relic => {
+    if(relic.type){
+      assetTaxonomy[relic.type] = assetTaxonomy[relic.type] || {
+        templateClass: 'Relic'
       }
     }
   });

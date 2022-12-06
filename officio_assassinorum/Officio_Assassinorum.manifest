@@ -1,641 +1,641 @@
 {
-    "name": "Officio Assassinorum",
-    "game": "Warhammer 40,000",
-    "genre": "sci-fi",
-    "publisher": "Games Workshop",
-    "url": "https://warhammer40000.com/",
-    "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-    "revision": "0.0.4",
-    "dependencies": [
-        {
-            "slug": "123456",
-            "name": "40k9e",
-            "game": "Warhammer 40,000"
-        }
-    ],
-    "manifest": {
-        "assetTaxonomy": {},
-        "assetCatalog": {
-            "Roster§Army": {},
-            "Model§Vindicare Assassin": {
-                "stats": {
-                    "Points": {
-                        "value": 100
-                    },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Model§Callidus Assassin": {
-                "stats": {
-                    "Points": {
-                        "value": 100
-                    },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "5"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Model§Eversor Assassin": {
-                "stats": {
-                    "Points": {
-                        "value": 100
-                    },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 6
-                    },
-                    "A": {
-                        "value": "6"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Model§Culexus Assassin": {
-                "stats": {
-                    "Points": {
-                        "value": 100
-                    },
-                    "M": {
-                        "value": "7"
-                    },
-                    "WS": {
-                        "value": 2
-                    },
-                    "BS": {
-                        "value": 2
-                    },
-                    "S": {
-                        "value": 4
-                    },
-                    "T": {
-                        "value": 4
-                    },
-                    "W": {
-                        "value": 5
-                    },
-                    "A": {
-                        "value": "4"
-                    },
-                    "Ld": {
-                        "value": 9
-                    },
-                    "Sv": {
-                        "value": 6
-                    },
-                    "Base": {
-                        "value": "32mm"
-                    }
-                }
-            },
-            "Ability§Independent Operative": {
-                "text": "This model can never have a [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits). During deployment, you can set this model up in concealment instead of placing it on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can reveal its position – set it up anywhere on the battlefield that is more than 9\" away from any enemy models."
-            },
-            "Ability§Lightning Reflexes": {
-                "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
-            },
-            "Ability§Deadshot": {
-                "text": "Each time you select a target for a weapon this model is making an attack with, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule. In addition, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 for an attack made with an exitus pistol or exitus rifle, change the Damage characteristic of that weapon to D6 for that attack."
-            },
-            "Ability§Spymask": {
-                "text": "When resolving an attack made with a ranged weapon by this model, the target does not receive the [benefit of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) to its [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw)."
-            },
-            "Ability§Stealth Suit": {
-                "text": "When resolving an attack made with a ranged weapon against this model, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). If this model is on or in a [terrain](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-Features-1) feature, subtract 2 from the hit roll instead."
-            },
-            "Ability§Polymorphine": {
-                "text": "During deployment, you can set up this model in disguise instead of setting it up on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can revert to its true form – set it up anywhere on the battlefield that is more than D6+3\" away from any enemy models. For example, if you roll a 4, the model can be set up anywhere that is more than 7\" away from any enemy model."
-            },
-            "Ability§Hit and Run": {
-                "text": "This model can shoot and charge in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back)."
-            },
-            "Ability§Reign of Confusion": {
-                "text": "If you have any models with this ability in your army, then in the first battle round, roll one D6 each time your opponent spends [Command Points](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) (CPs) to use a Stratagem. On a 4+ your opponent must spend one additional CP to use that Stratagem, or else it has no effect (any CPs spent so far are lost). This ability cannot affect Stratagems used before the battle."
-            },
-            "Ability§Bio-meltdown": {
-                "text": "If this model is destroyed, before removing the model from the battlefield, roll one D6 for each enemy unit that is within 6\" of this model. On a 4+ that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
-            },
-            "Ability§Frenzon": {
-                "text": "When making a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for this model, roll 3D6 rather than 2D6. In addition, add 2 to this model’s Attacks characteristic if it charged or made a [Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn."
-            },
-            "Ability§Sentinel Array": {
-                "text": "Each time an enemy unit [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) whilst within 1\" of this model, before moving any models, this model can shoot as if it were its [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). These attacks must target the unit that is Falling Back."
-            },
-            "Ability§Abomination": {
-                "text": "This model can never be targeted or affected by psychic powers in any way. [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) units that are within 18\" of any **CULEXUS ASSASSINS** must subtract 2 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) and [Deny the Witch tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) they take."
-            },
-            "Ability§Life Drain": {
-                "text": "When resolving an attack made with a melee weapon by this model, a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be made unless it is an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
-            },
-            "Ability§Etherium": {
-                "text": "When resolving an attack that targets this model, the attacking model is treated as having a Weapon Skill and Ballistic Skill characteristic of 6+."
-            },
-            "Ability§Psychic Assassin": {
-                "text": "Attacks made by this model can target a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) [CHARACTER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) even if it is not the closest enemy unit. In addition, this model can shoot with its psyk-out grenades in the same phase that it shoots with its animus speculum."
-            },
-            "Ability§Execution Force": {
-                "text": "If your [Warlord](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the IMPERIUM keyword (excluding **FALLEN**), you can include this unit in your army as part of a [Vanguard Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Vanguard-Detachment) even if that Detachment contains no HQ units. If you do so, that Detachment’s [Command Benefits](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Benefits) are changed to ‘None’ and its [Restrictions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Restrictions) are changed to ‘This Detachment cannot include the same datasheet more than once.’"
-            },
-            "Ability§Faultless Aim": {
-                "text": "Attacks made with ranged weapons by this model always hit on a 2+ if this model did not move this turn ([hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 are still required when firing [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch))."
-            },
-            "Ability§Head Shot": {
-                "text": "If, after resolving an attack with an exitus pistol or exitus rifle by this model, a model in an enemy unit lost any wounds as a result of that attack but was not destroyed, roll one D6; on a 3+ that model suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and, if that model is not destroyed, you can roll one more D6. This time, that model suffers 1 mortal wound on a 4+. Keep rolling one D6, increasing the result required to cause a mortal wound by 1 each time, until the model in the enemy unit being rolled for is destroyed or the roll is failed."
-            },
-            "Ability§Killing Rampage": {
-                "text": "Each time a model in an enemy unit is destroyed as the result of an attack made with a melee weapon by this model, you can immediately make one additional attack with a melee weapon this model is equipped with against the same unit. These additional attacks cannot themselves generate further attacks. In addition, this model can [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate) up to 6\" instead of up to 3\"."
-            },
-            "Ability§Agent of the Imperium": {
-                "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can include 1 **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM (excluding FALLEN**) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment) and [Brigade Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) in your army without those units taking up slots in those Detachments. The inclusion of an AGENT OF THE IMPERIUM unit does not prevent other units from their Detachment from benefiting from Detachment abilities (e.g. Chapter Tactics**, Defenders of Humanity** etc.), and it does not prevent other units from your army benefiting from abilities that require every model in your army to have that ability (e.g. Combat Doctrines**). An AGENT OF THE IMPERIUM unit included in a Patrol, Battalion or Brigade Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common (e.g. in a [matched play](https://wahapedia.ru/wh40k9ed/the-rules/matched-play) game) and when determining your Army Faction."
-            },
-            "Weapon§Animus speculum": {
-                "stats": {
-                    "AP": {
-                        "value": "-4"
-                    },
-                    "D": {
-                        "value": "1"
-                    },
-                    "S": {
-                        "value": "5"
-                    },
-                    "Type": {
-                        "value": "Assault D3"
-                    },
-                    "Range": {
-                        "value": "18″"
-                    }
-                },
-                "text": "Whilst there are any enemy [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) units within 18\" of the bearer, change this weapon’s Type characteristic to [Assault D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT)."
-            },
-            "Weapon§Blind grenade": {
-                "stats": {
-                    "AP": {
-                        "value": "*"
-                    },
-                    "D": {
-                        "value": "*"
-                    },
-                    "S": {
-                        "value": "*"
-                    },
-                    "Type": {
-                        "value": "Grenade D6"
-                    },
-                    "Range": {
-                        "value": "12″"
-                    }
-                },
-                "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon does not inflict any damage (do not make any [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)). Instead, if a unit is hit by any blind grenades, subtract 1 from all [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made by that unit until the end of the turn."
-            },
-            "Weapon§Executioner pistol": {
-                "stats": {
-                    "AP": {
-                        "value": "-1"
-                    },
-                    "D": {
-                        "value": "1"
-                    },
-                    "S": {
-                        "value": "4"
-                    },
-                    "Type": {
-                        "value": "Pistol 4"
-                    },
-                    "Range": {
-                        "value": "12″"
-                    }
-                },
-                "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon that target INFANTRY units."
-            },
-            "Weapon§Exitus pistol": {
-                "stats": {
-                    "AP": {
-                        "value": "-3"
-                    },
-                    "D": {
-                        "value": "D3"
-                    },
-                    "S": {
-                        "value": "4"
-                    },
-                    "Type": {
-                        "value": "Pistol 1"
-                    },
-                    "Range": {
-                        "value": "12″"
-                    }
-                },
-                "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made. Attacks made with this weapon wound INFANTRY units on a 2+."
-            },
-            "Weapon§Exitus rifle": {
-                "stats": {
-                    "AP": {
-                        "value": "-3"
-                    },
-                    "D": {
-                        "value": "D3"
-                    },
-                    "S": {
-                        "value": "5"
-                    },
-                    "Type": {
-                        "value": "Heavy 1"
-                    },
-                    "Range": {
-                        "value": "72″"
-                    }
-                },
-                "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made. Attacks made with this weapon wound INFANTRY units on a 2+."
-            },
-            "Weapon§Melta bombs": {
-                "stats": {
-                    "AP": {
-                        "value": "-4"
-                    },
-                    "D": {
-                        "value": "D6"
-                    },
-                    "S": {
-                        "value": "8"
-                    },
-                    "Type": {
-                        "value": "Grenade 1"
-                    },
-                    "Range": {
-                        "value": "4″"
-                    }
-                },
-                "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon that target VEHICLE units."
-            },
-            "Weapon§Neural shredder": {
-                "stats": {
-                    "AP": {
-                        "value": "*"
-                    },
-                    "D": {
-                        "value": "*"
-                    },
-                    "S": {
-                        "value": "*"
-                    },
-                    "Type": {
-                        "value": "Assault 1"
-                    },
-                    "Range": {
-                        "value": "9″"
-                    }
-                },
-                "text": "When resolving an attack with this weapon, if a hit is scored, do not make a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll): instead roll 3D6; if the result is equal to or greater than the target unit’s highest Leadership characteristic, it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
-            },
-            "Weapon§Psyk-out grenades": {
-                "stats": {
-                    "AP": {
-                        "value": "0"
-                    },
-                    "D": {
-                        "value": "1"
-                    },
-                    "S": {
-                        "value": "2"
-                    },
-                    "Type": {
-                        "value": "Grenade D3"
-                    },
-                    "Range": {
-                        "value": "6″"
-                    }
-                },
-                "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). When resolving an attack made with this weapon against a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) or DAEMON unit, a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6+ inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target and the attack sequence ends."
-            },
-            "Weapon§Neuro-gauntlet": {
-                "stats": {
-                    "AP": {
-                        "value": "-1"
-                    },
-                    "D": {
-                        "value": "1"
-                    },
-                    "S": {
-                        "value": "+1"
-                    },
-                    "Type": {
-                        "value": "Melee"
-                    },
-                    "Range": {
-                        "value": "Melee"
-                    }
-                },
-                "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon."
-            },
-            "Weapon§Phase sword": {
-                "stats": {
-                    "AP": {
-                        "value": "-3"
-                    },
-                    "D": {
-                        "value": "2"
-                    },
-                    "S": {
-                        "value": "User"
-                    },
-                    "Type": {
-                        "value": "Melee"
-                    },
-                    "Range": {
-                        "value": "Melee"
-                    }
-                },
-                "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made."
-            },
-            "Weapon§Poison blades": {
-                "stats": {
-                    "AP": {
-                        "value": "-1"
-                    },
-                    "D": {
-                        "value": "1"
-                    },
-                    "S": {
-                        "value": "2"
-                    },
-                    "Type": {
-                        "value": "Melee"
-                    },
-                    "Range": {
-                        "value": "Melee"
-                    }
-                },
-                "text": "When the bearer fights, it makes 1 additional attack with this weapon. Attacks made with this weapon wound on a 3+ unless the target is a VEHICLE unit."
-            },
-            "Weapon§Power sword": {
-                "stats": {
-                    "AP": {
-                        "value": "-3"
-                    },
-                    "D": {
-                        "value": "1"
-                    },
-                    "S": {
-                        "value": "+1"
-                    },
-                    "Type": {
-                        "value": "Melee"
-                    },
-                    "Range": {
-                        "value": "Melee"
-                    }
-                }
-            },
-            "Elites§Vindicare Assassin": {
-                "stats": {
-                    "Power Level": {
-                        "value": 5
-                    }
-                },
-                "keywords": {
-                    "Keywords": [
-                        "Agent of the Imperium",
-                        "Character",
-                        "Infantry",
-                        "Vindicare Assassin"
-                    ],
-                    "Faction": [
-                        "Imperium",
-                        "Officio Assassinorum"
-                    ]
-                },
-                "assets": {
-                    "traits": [
-                        "Ability§Agent of the Imperium",
-                        "Ability§Execution Force",
-                        "Ability§Independent Operative",
-                        "Ability§Lightning Reflexes",
-                        "Ability§Deadshot",
-                        "Ability§Faultless Aim",
-                        "Ability§Head Shot",
-                        "Ability§Spymask",
-                        "Ability§Stealth Suit",
-                        {
-                            "item": "Model§Vindicare Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        }
-                    ]
-                },
-                "text": "A Vindicare Assassin is a single model equipped with: exitus pistol; exitus rifle; blind grenades.\n\n\n\nnull",
-                "meta": {
-                    "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
-                }
-            },
-            "Elites§Callidus Assassin": {
-                "stats": {
-                    "Power Level": {
-                        "value": 5
-                    }
-                },
-                "keywords": {
-                    "Keywords": [
-                        "Agent of the Imperium",
-                        "Callidus Assassin",
-                        "Character",
-                        "Infantry"
-                    ],
-                    "Faction": [
-                        "Imperium",
-                        "Officio Assassinorum"
-                    ]
-                },
-                "assets": {
-                    "traits": [
-                        "Ability§Agent of the Imperium",
-                        "Ability§Execution Force",
-                        "Ability§Independent Operative",
-                        "Ability§Lightning Reflexes",
-                        "Ability§Polymorphine",
-                        "Ability§Hit and Run",
-                        "Ability§Reign of Confusion",
-                        {
-                            "item": "Model§Callidus Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        }
-                    ]
-                },
-                "text": "A Callidus Assassin is a single model equipped with: neural shredder; phase sword; poison blades.\n\n\n\nnull",
-                "meta": {
-                    "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
-                }
-            },
-            "Elites§Eversor Assassin": {
-                "stats": {
-                    "Power Level": {
-                        "value": 5
-                    }
-                },
-                "keywords": {
-                    "Keywords": [
-                        "Agent of the Imperium",
-                        "Character",
-                        "Eversor Assassin",
-                        "Infantry"
-                    ],
-                    "Faction": [
-                        "Imperium",
-                        "Officio Assassinorum"
-                    ]
-                },
-                "assets": {
-                    "traits": [
-                        "Ability§Agent of the Imperium",
-                        "Ability§Execution Force",
-                        "Ability§Independent Operative",
-                        "Ability§Lightning Reflexes",
-                        "Ability§Bio-meltdown",
-                        "Ability§Sentinel Array",
-                        "Ability§Frenzon",
-                        "Ability§Killing Rampage",
-                        {
-                            "item": "Model§Eversor Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        }
-                    ]
-                },
-                "text": "An Eversor Assassin is a single model equipped with: executioner pistol; neuro-gauntlet; power sword; melta bombs.\n\n\n\nnull",
-                "meta": {
-                    "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
-                }
-            },
-            "Elites§Culexus Assassin": {
-                "stats": {
-                    "Power Level": {
-                        "value": 5
-                    }
-                },
-                "keywords": {
-                    "Keywords": [
-                        "Agent of the Imperium",
-                        "Character",
-                        "Culexus Assassin",
-                        "Infantry"
-                    ],
-                    "Faction": [
-                        "Imperium",
-                        "Officio Assassinorum"
-                    ]
-                },
-                "assets": {
-                    "traits": [
-                        "Ability§Agent of the Imperium",
-                        "Ability§Execution Force",
-                        "Ability§Independent Operative",
-                        "Ability§Lightning Reflexes",
-                        "Ability§Abomination",
-                        "Ability§Life Drain",
-                        "Ability§Etherium",
-                        "Ability§Psychic Assassin",
-                        {
-                            "item": "Model§Culexus Assassin",
-                            "stats": {
-                                "Points": {
-                                    "visibility": "hidden"
-                                }
-                            }
-                        }
-                    ]
-                },
-                "text": "A Culexus Assassin is a single model equipped with: animus speculum; psyk-out grenades.\n\n\n\nnull",
-                "meta": {
-                    "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
-                }
-            }
-        }
+  "name": "Officio Assassinorum",
+  "game": "Warhammer 40,000",
+  "genre": "sci-fi",
+  "publisher": "Games Workshop",
+  "url": "https://warhammer40000.com/",
+  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
+  "revision": "0.0.5",
+  "dependencies": [
+    {
+      "slug": "123456",
+      "name": "40k9e",
+      "game": "Warhammer 40,000"
     }
+  ],
+  "manifest": {
+    "assetTaxonomy": {},
+    "assetCatalog": {
+      "Roster§Army": {},
+      "Model§Vindicare Assassin": {
+        "stats": {
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": "7"
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": "5"
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
+          }
+        }
+      },
+      "Model§Callidus Assassin": {
+        "stats": {
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": "7"
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": "5"
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
+          }
+        }
+      },
+      "Model§Eversor Assassin": {
+        "stats": {
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": "7"
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 6
+          },
+          "A": {
+            "value": "6"
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
+          }
+        }
+      },
+      "Model§Culexus Assassin": {
+        "stats": {
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": "7"
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": "4"
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
+          }
+        }
+      },
+      "Ability§Independent Operative": {
+        "text": "This model can never have a [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits). During deployment, you can set this model up in concealment instead of placing it on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can reveal its position – set it up anywhere on the battlefield that is more than 9\" away from any enemy models."
+      },
+      "Ability§Lightning Reflexes": {
+        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Deadshot": {
+        "text": "Each time you select a target for a weapon this model is making an attack with, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule. In addition, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 for an attack made with an exitus pistol or exitus rifle, change the Damage characteristic of that weapon to D6 for that attack."
+      },
+      "Ability§Spymask": {
+        "text": "When resolving an attack made with a ranged weapon by this model, the target does not receive the [benefit of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) to its [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw)."
+      },
+      "Ability§Stealth Suit": {
+        "text": "When resolving an attack made with a ranged weapon against this model, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). If this model is on or in a [terrain](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-Features-1) feature, subtract 2 from the hit roll instead."
+      },
+      "Ability§Polymorphine": {
+        "text": "During deployment, you can set up this model in disguise instead of setting it up on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can revert to its true form – set it up anywhere on the battlefield that is more than D6+3\" away from any enemy models. For example, if you roll a 4, the model can be set up anywhere that is more than 7\" away from any enemy model."
+      },
+      "Ability§Hit and Run": {
+        "text": "This model can shoot and charge in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back)."
+      },
+      "Ability§Reign of Confusion": {
+        "text": "If you have any models with this ability in your army, then in the first battle round, roll one D6 each time your opponent spends [Command Points](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) (CPs) to use a Stratagem. On a 4+ your opponent must spend one additional CP to use that Stratagem, or else it has no effect (any CPs spent so far are lost). This ability cannot affect Stratagems used before the battle."
+      },
+      "Ability§Bio-meltdown": {
+        "text": "If this model is destroyed, before removing the model from the battlefield, roll one D6 for each enemy unit that is within 6\" of this model. On a 4+ that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      },
+      "Ability§Frenzon": {
+        "text": "When making a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for this model, roll 3D6 rather than 2D6. In addition, add 2 to this model’s Attacks characteristic if it charged or made a [Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn."
+      },
+      "Ability§Sentinel Array": {
+        "text": "Each time an enemy unit [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) whilst within 1\" of this model, before moving any models, this model can shoot as if it were its [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). These attacks must target the unit that is Falling Back."
+      },
+      "Ability§Abomination": {
+        "text": "This model can never be targeted or affected by psychic powers in any way. [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) units that are within 18\" of any **CULEXUS ASSASSINS** must subtract 2 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) and [Deny the Witch tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) they take."
+      },
+      "Ability§Life Drain": {
+        "text": "When resolving an attack made with a melee weapon by this model, a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be made unless it is an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Etherium": {
+        "text": "When resolving an attack that targets this model, the attacking model is treated as having a Weapon Skill and Ballistic Skill characteristic of 6+."
+      },
+      "Ability§Psychic Assassin": {
+        "text": "Attacks made by this model can target a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) [CHARACTER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) even if it is not the closest enemy unit. In addition, this model can shoot with its psyk-out grenades in the same phase that it shoots with its animus speculum."
+      },
+      "Ability§Execution Force": {
+        "text": "If your [Warlord](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the IMPERIUM keyword (excluding **FALLEN**), you can include this unit in your army as part of a [Vanguard Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Vanguard-Detachment) even if that Detachment contains no HQ units. If you do so, that Detachment’s [Command Benefits](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Benefits) are changed to ‘None’ and its [Restrictions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Restrictions) are changed to ‘This Detachment cannot include the same datasheet more than once.’"
+      },
+      "Ability§Faultless Aim": {
+        "text": "Attacks made with ranged weapons by this model always hit on a 2+ if this model did not move this turn ([hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 are still required when firing [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch))."
+      },
+      "Ability§Head Shot": {
+        "text": "If, after resolving an attack with an exitus pistol or exitus rifle by this model, a model in an enemy unit lost any wounds as a result of that attack but was not destroyed, roll one D6; on a 3+ that model suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and, if that model is not destroyed, you can roll one more D6. This time, that model suffers 1 mortal wound on a 4+. Keep rolling one D6, increasing the result required to cause a mortal wound by 1 each time, until the model in the enemy unit being rolled for is destroyed or the roll is failed."
+      },
+      "Ability§Killing Rampage": {
+        "text": "Each time a model in an enemy unit is destroyed as the result of an attack made with a melee weapon by this model, you can immediately make one additional attack with a melee weapon this model is equipped with against the same unit. These additional attacks cannot themselves generate further attacks. In addition, this model can [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate) up to 6\" instead of up to 3\"."
+      },
+      "Ability§Agent of the Imperium": {
+        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can include 1 **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM (excluding FALLEN**) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment) and [Brigade Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) in your army without those units taking up slots in those Detachments. The inclusion of an AGENT OF THE IMPERIUM unit does not prevent other units from their Detachment from benefiting from Detachment abilities (e.g. Chapter Tactics**, Defenders of Humanity** etc.), and it does not prevent other units from your army benefiting from abilities that require every model in your army to have that ability (e.g. Combat Doctrines**). An AGENT OF THE IMPERIUM unit included in a Patrol, Battalion or Brigade Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common (e.g. in a [matched play](https://wahapedia.ru/wh40k9ed/the-rules/matched-play) game) and when determining your Army Faction."
+      },
+      "Weapon§Animus speculum": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": "1"
+          },
+          "S": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Assault D3"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        },
+        "text": "Whilst there are any enemy [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) units within 18\" of the bearer, change this weapon’s Type characteristic to [Assault D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT)."
+      },
+      "Weapon§Blind grenade": {
+        "stats": {
+          "AP": {
+            "value": "*"
+          },
+          "D": {
+            "value": "*"
+          },
+          "S": {
+            "value": "*"
+          },
+          "Type": {
+            "value": "Grenade D6"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon does not inflict any damage (do not make any [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)). Instead, if a unit is hit by any blind grenades, subtract 1 from all [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made by that unit until the end of the turn."
+      },
+      "Weapon§Executioner pistol": {
+        "stats": {
+          "AP": {
+            "value": "-1"
+          },
+          "D": {
+            "value": "1"
+          },
+          "S": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 4"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon that target INFANTRY units."
+      },
+      "Weapon§Exitus pistol": {
+        "stats": {
+          "AP": {
+            "value": "-3"
+          },
+          "D": {
+            "value": "D3"
+          },
+          "S": {
+            "value": "4"
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made. Attacks made with this weapon wound INFANTRY units on a 2+."
+      },
+      "Weapon§Exitus rifle": {
+        "stats": {
+          "AP": {
+            "value": "-3"
+          },
+          "D": {
+            "value": "D3"
+          },
+          "S": {
+            "value": "5"
+          },
+          "Type": {
+            "value": "Heavy 1"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made. Attacks made with this weapon wound INFANTRY units on a 2+."
+      },
+      "Weapon§Melta bombs": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": "D6"
+          },
+          "S": {
+            "value": "8"
+          },
+          "Type": {
+            "value": "Grenade 1"
+          },
+          "Range": {
+            "value": "4″"
+          }
+        },
+        "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon that target VEHICLE units."
+      },
+      "Weapon§Neural shredder": {
+        "stats": {
+          "AP": {
+            "value": "*"
+          },
+          "D": {
+            "value": "*"
+          },
+          "S": {
+            "value": "*"
+          },
+          "Type": {
+            "value": "Assault 1"
+          },
+          "Range": {
+            "value": "9″"
+          }
+        },
+        "text": "When resolving an attack with this weapon, if a hit is scored, do not make a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll): instead roll 3D6; if the result is equal to or greater than the target unit’s highest Leadership characteristic, it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      },
+      "Weapon§Psyk-out grenades": {
+        "stats": {
+          "AP": {
+            "value": "0"
+          },
+          "D": {
+            "value": "1"
+          },
+          "S": {
+            "value": "2"
+          },
+          "Type": {
+            "value": "Grenade D3"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). When resolving an attack made with this weapon against a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) or DAEMON unit, a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6+ inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target and the attack sequence ends."
+      },
+      "Weapon§Neuro-gauntlet": {
+        "stats": {
+          "AP": {
+            "value": "-1"
+          },
+          "D": {
+            "value": "1"
+          },
+          "S": {
+            "value": "+1"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon."
+      },
+      "Weapon§Phase sword": {
+        "stats": {
+          "AP": {
+            "value": "-3"
+          },
+          "D": {
+            "value": "2"
+          },
+          "S": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made."
+      },
+      "Weapon§Poison blades": {
+        "stats": {
+          "AP": {
+            "value": "-1"
+          },
+          "D": {
+            "value": "1"
+          },
+          "S": {
+            "value": "2"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When the bearer fights, it makes 1 additional attack with this weapon. Attacks made with this weapon wound on a 3+ unless the target is a VEHICLE unit."
+      },
+      "Weapon§Power sword": {
+        "stats": {
+          "AP": {
+            "value": "-3"
+          },
+          "D": {
+            "value": "1"
+          },
+          "S": {
+            "value": "+1"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Elites§Vindicare Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Infantry",
+            "Vindicare Assassin"
+          ],
+          "Faction": [
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Execution Force",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Deadshot",
+            "Ability§Faultless Aim",
+            "Ability§Head Shot",
+            "Ability§Spymask",
+            "Ability§Stealth Suit",
+            {
+              "item": "Model§Vindicare Assassin",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "A Vindicare Assassin is a single model equipped with: exitus pistol; exitus rifle; blind grenades.\n\n\n\nnull",
+        "meta": {
+          "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
+        }
+      },
+      "Elites§Callidus Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Callidus Assassin",
+            "Character",
+            "Infantry"
+          ],
+          "Faction": [
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Execution Force",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Polymorphine",
+            "Ability§Hit and Run",
+            "Ability§Reign of Confusion",
+            {
+              "item": "Model§Callidus Assassin",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "A Callidus Assassin is a single model equipped with: neural shredder; phase sword; poison blades.\n\n\n\nnull",
+        "meta": {
+          "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
+        }
+      },
+      "Elites§Eversor Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Eversor Assassin",
+            "Infantry"
+          ],
+          "Faction": [
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Execution Force",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Bio-meltdown",
+            "Ability§Sentinel Array",
+            "Ability§Frenzon",
+            "Ability§Killing Rampage",
+            {
+              "item": "Model§Eversor Assassin",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "An Eversor Assassin is a single model equipped with: executioner pistol; neuro-gauntlet; power sword; melta bombs.\n\n\n\nnull",
+        "meta": {
+          "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
+        }
+      },
+      "Elites§Culexus Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Culexus Assassin",
+            "Infantry"
+          ],
+          "Faction": [
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Execution Force",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Abomination",
+            "Ability§Life Drain",
+            "Ability§Etherium",
+            "Ability§Psychic Assassin",
+            {
+              "item": "Model§Culexus Assassin",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "A Culexus Assassin is a single model equipped with: animus speculum; psyk-out grenades.\n\n\n\nnull",
+        "meta": {
+          "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
+        }
+      }
+    }
+  }
 }
