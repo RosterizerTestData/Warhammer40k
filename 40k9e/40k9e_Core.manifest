@@ -1,6 +1,6 @@
 {
   "name": "40k9e",
-  "revision": "0.1.3",
+  "revision": "0.2.0",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -182,6 +182,34 @@
             "value": 0,
             "visibility": "normal",
             "dynamic": true,
+            "tracked": true
+          },
+          "Rank": {
+            "value": "Battle-ready",
+            "statType": "rank",
+            "ranks": {
+              "Battle-ready": {
+                "order": 0
+              },
+              "Blooded": {
+                "order": 1,
+                "tracking": {}
+              },
+              "Battle-hardened": {
+                "order": 2,
+                "tracking": {}
+              },
+              "Heroic": {
+                "order": 3,
+                "tracking": {}
+              },
+              "Legendary": {
+                "order": 4,
+                "tracking": {}
+              }
+            },
+            "visibility": "normal",
+            "dynamic": false,
             "tracked": false
           },
           "Experience": {
@@ -189,14 +217,17 @@
             "value": 0,
             "visibility": "normal",
             "dynamic": true,
-            "tracked": false
+            "tracked": false,
+            "increment": {
+              "value": 1
+            }
           },
-          "Marked for Greatness": {
-            "statType": "numeric",
+          "Battle Honours": {
             "value": 0,
-            "visibility": "active",
-            "dynamic": true,
-            "tracked": false
+            "statType": "numeric",
+            "statOrder": 4,
+            "visibility": "normal",
+            "tracked": true
           }
         },
         "keywords": {
@@ -802,7 +833,8 @@
                     [
                       "Crusade Pts",
                       "Experience",
-                      "Marked for Greatness"
+                      "Battle Honours",
+                      "Rank"
                     ],
                     "visibility"
                   ]
@@ -812,12 +844,425 @@
                 "iterations": 1
               }
             ]
+          },
+          "rank1": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "max": 15,
+                "min": 6,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Blooded",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 1,
+                "iterations": 1
+              }
+            ]
+          },
+          "rank2": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "max": 30,
+                "min": 16,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Battle-hardened",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 2,
+                "iterations": 1
+              }
+            ]
+          },
+          "rank3": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "max": 50,
+                "min": 31,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Heroic",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 3,
+                "iterations": 1
+              }
+            ]
+          },
+          "rank4": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 51,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Legendary",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 4,
+                "iterations": 1
+              }
+            ]
+          },
+          "crusadePts": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "value"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Battle Honours"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "crusadePtsPL11": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "value"
+                  ]
+                ],
+                "min": 11,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "value"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": [
+                  "{self}",
+                  "tally",
+                  "Battle Honours"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "This unit has unspent traits.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Battle Honours",
+                  "max"
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "warning",
+            "evaluate": "AND"
           }
         },
         "aspects": {
           "Type": "conceptual",
           "Lock Qty": true,
           "Rename": true
+        },
+        "removed": {
+          "stats": {
+            "Marked for Greatness": {}
+          }
         }
       },
       "Model": {
@@ -1083,6 +1528,7 @@
       "Order of Battle": {
         "allowed": {
           "classifications": [
+            "Requisition",
             "Unit"
           ]
         },
@@ -1153,6 +1599,56 @@
                 "iterations": 1
               }
             ]
+          },
+          "requisitionCalc": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Tally",
+                    "value"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Requisition"
+                  ]
+                }
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Requisition Points",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "rules",
+                  "requisitionCalc",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "iterations": 1
+              }
+            ]
           }
         },
         "stats": {
@@ -1176,15 +1672,31 @@
           },
           "Battle Tally": {
             "value": 0,
-            "statType": "numeric"
+            "statType": "numeric",
+            "increment": {
+              "value": 1
+            },
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": false
           },
           "Battles Won": {
             "value": 0,
-            "statType": "numeric"
+            "statType": "numeric",
+            "increment": {
+              "value": 1
+            },
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": false
           },
           "Requisition Points": {
-            "value": 0,
-            "statType": "numeric"
+            "value": 5,
+            "statType": "numeric",
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true,
+            "max": 5
           }
         }
       },
@@ -1219,6 +1731,72 @@
             "dynamic": false,
             "tracked": true
           }
+        }
+      },
+      "Battle Trait": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Character Trait": {
+        "templateClass": "Battle Trait"
+      },
+      "Vehicle Trait": {
+        "templateClass": "Battle Trait"
+      },
+      "Monster Trait": {
+        "templateClass": "Battle Trait"
+      },
+      "Weapon Enhancement": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Melee Enhancement": {
+        "templateClass": "Weapon Enhancement"
+      },
+      "Ranged Enhancement": {
+        "templateClass": "Weapon Enhancement"
+      },
+      "Psychic Fortitude": {
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Crusade Relic": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Artificer Relic": {
+        "templateClass": "Crusade Relic"
+      },
+      "Antiquity Relic": {
+        "templateClass": "Artificer Relic"
+      },
+      "Legendary Relic": {
+        "templateClass": "Artificer Relic"
+      },
+      "Requisition": {
+        "aspects": {
+          "Describe": true
         }
       }
     },
@@ -1804,18 +2382,6 @@
             "statType": "numeric",
             "tracked": true
           },
-          "Points": {
-            "value": 0,
-            "statType": "numeric",
-            "statOrder": -5,
-            "tracked": true
-          },
-          "Power Level": {
-            "value": 0,
-            "statType": "numeric",
-            "statOrder": -6,
-            "tracked": true
-          },
           "Mode": {
             "statType": "rank",
             "value": "Points",
@@ -1885,24 +2451,6 @@
             "statOrder": 3,
             "dynamic": true
           },
-          "Play": {
-            "statType": "rank",
-            "value": "Matched",
-            "ranks": {
-              "Open": {
-                "order": 0
-              },
-              "Matched": {
-                "order": 1
-              },
-              "Narrative": {
-                "order": 2
-              }
-            },
-            "statOrder": 4,
-            "visibility": "active",
-            "dynamic": true
-          },
           "Battle-forged": {
             "statType": "rank",
             "value": 0,
@@ -1934,6 +2482,55 @@
             "dynamic": false,
             "tracked": true,
             "max": 1
+          },
+          "Power Level": {
+            "statType": "numeric",
+            "value": 0,
+            "statOrder": 2,
+            "group": "Cost",
+            "groupOrder": -1,
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
+          },
+          "Points": {
+            "statType": "numeric",
+            "value": 0,
+            "statOrder": 2,
+            "group": "Cost",
+            "groupOrder": -1,
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "value": 0,
+            "statOrder": 4,
+            "group": "Cost",
+            "groupOrder": -1,
+            "visibility": "always",
+            "dynamic": false,
+            "tracked": true
+          },
+          "Play": {
+            "statType": "rank",
+            "value": "Matched",
+            "ranks": {
+              "Open": {
+                "order": 0
+              },
+              "Matched": {
+                "order": 1
+              },
+              "Narrative": {
+                "order": 2
+              }
+            },
+            "statOrder": 4,
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": false
           }
         },
         "allowed": {
@@ -2289,6 +2886,78 @@
       },
       "Psychic Power§Smite": {
         "text": "*Smite* has a warp charge value of 5. Add 1 to the warp charge value of this psychic power for each other attempt that has been made to *manifest* this power by a unit from your army in this phase, whether that attempt was successful or not. If manifested, the closest enemy unit within 18\" of and visible to the psyker suffers D3 *mortal wounds*. If the result of the *Psychic test* was 11 or more, that unit suffers D6 mortal wounds instead.\n\n**Warp Charge 5**: A Psychic test of 5+ is required to manifest *Smite*.\nWarp charge increases by 1 for each other attempt to manifest *Smite* made in this phase.\nIf manifested, closest visible enemy unit in 18\" suffers D3 mortal wounds.\nIf manifested with a Psychic test result of 11+, enemy instead suffers D6 mortal wounds."
+      },
+      "Character Trait§Swift and Agile": {},
+      "Character Trait§Heroic Constitution": {},
+      "Character Trait§Deadly Charge": {},
+      "Character Trait§Tactical Experience": {},
+      "Character Trait§Resilient": {},
+      "Character Trait§Inspiring Hero": {},
+      "Monster Trait§Unstoppable": {},
+      "Monster Trait§Apex Predator": {},
+      "Monster Trait§Thickened Hide": {},
+      "Monster Trait§Frenzied": {},
+      "Monster Trait§Regenerates": {},
+      "Monster Trait§Terrifying": {},
+      "Vehicle Trait§Enhanced Engines": {},
+      "Vehicle Trait§Elite Crew": {},
+      "Vehicle Trait§Improved Shielding": {},
+      "Vehicle Trait§Armourbane": {},
+      "Vehicle Trait§Repair Systems": {},
+      "Vehicle Trait§Blessed Hull": {},
+      "Battle Trait§Fleet of Foot": {},
+      "Battle Trait§Veteran Warriors": {},
+      "Battle Trait§Grizzled": {},
+      "Battle Trait§Headhunters": {},
+      "Battle Trait§Cool-headed": {},
+      "Battle Trait§Battle-tested": {},
+      "Ranged Enhancement§Auto-loader": {},
+      "Ranged Enhancement§Armour Piercing": {},
+      "Ranged Enhancement§High Calibre": {},
+      "Ranged Enhancement§Improved Sights": {},
+      "Ranged Enhancement§Accelerator": {},
+      "Ranged Enhancement§Master-worked": {},
+      "Melee Enhancement§Heirloom": {},
+      "Melee Enhancement§Razor-edged": {},
+      "Melee Enhancement§Brutal": {},
+      "Melee Enhancement§Finely Balanced": {},
+      "Melee Enhancement§Shredder": {},
+      "Melee Enhancement§Fleshbane": {},
+      "Psychic Fortitude§Psychic Might": {},
+      "Psychic Fortitude§Adamantium Will": {},
+      "Psychic Fortitude§Master of Lore": {},
+      "Requisition§Increase Supply Limit": {
+        "rules": {
+          "increaseSupplyLimit": {
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Power Level",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 5,
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
+      "Requisition§Fresh Recruits": {},
+      "Requisition§Rearm and Resupply": {},
+      "Requisition§Repair and Recuperate": {},
+      "Requisition§Psychic Meditations": {},
+      "Requisition§Specialist Reinforcements": {},
+      "Requisition§Warlord Trait": {},
+      "Requisition§Relic": {},
+      "Warlord Trait§Inspiring Leader": {
+        "text": "Add 1 to the Leadership characteristic of friendly units while they are within 6″ of this **WARLORD**."
       }
     },
     "gameModes": {},
