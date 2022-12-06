@@ -362,7 +362,7 @@ else:
       for row in csvF:
         query+="(%s,%s,%s,%s,%s,%s,%s),"
         data = data + [
-          row[indexer["ability_id"]], # ability_id
+          re.sub("[a-zA-Z]*","",row[indexer["ability_id"]]), # ability_id
           row[indexer["type"]], # type
           row[indexer["name"]], # name
           row[indexer["legend"]], # legend
@@ -408,9 +408,9 @@ else:
       for row in csvF:
         query+="(%s,%s,%s,%s,%s,%s),"
         data = data + [
-          row[indexer["datasheet_id"]], # datasheet_id
+          re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["line"]], # line
-          row[indexer["ability_id"]], # ability_id
+          re.sub("[a-zA-Z]*","",row[indexer["ability_id"]]), # ability_id
           1 if row[indexer["is_index_wargear"]] == "true" else 0 if row[indexer["is_index_wargear"]] == "false" else -1, # is_index_wargear, boolean
           row[indexer["cost"]], # cost
           row[indexer["model"]], # model
@@ -456,7 +456,7 @@ else:
         query+="(%s,%s,%s,%s,%s,%s,%s),"
         # input data is out of order (doesn't start with id) and contains duplicate information
         data = data + [
-          row[indexer["psychic_power_id"]], # psychic_power_id
+          re.sub("[a-zA-Z]*","",row[indexer["psychic_power_id"]]), # psychic_power_id
           row[indexer["roll"]], # roll
           row[indexer["name"]], # name
           row[indexer["faction_id"]], # faction_id
@@ -554,13 +554,13 @@ else:
         query+="(%s,%s,%s,%s,%s,%s,%s,%s),"
         # input data is out of order (doesn't start with id)
         data = data + [
-          row[indexer["strategem_id"]], # strategem_id
+          re.sub("[a-zA-Z]*","",row[indexer["strategem_id"]]), # strategem_id
           row[indexer["faction_id"]], # faction_id
           row[indexer["name"]], # name
           row[indexer["type"]], # type
           row[indexer["cp_cost"]], # cp_cost
           row[indexer["legend"]], # legend
-          row[indexer["source_id"]], # source_id
+          re.sub("[a-zA-Z]*","",row[indexer["source_id"]]), # source_id
           row[indexer["description"]], # description
         ]
       query = query[:-1] + " ON DUPLICATE KEY UPDATE check_me=1"
@@ -604,7 +604,7 @@ else:
         query+="(%s,%s,%s,%s,%s,%s,%s),"
         # every col column is highly variable
         data = data + [
-          row[indexer["datasheet_id"]], # datasheet_id
+          re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["line"]], # line
           row[indexer["col1"]].replace('+', ''), # col1
           row[indexer["col2"]].replace('+', ''), # col2
@@ -646,7 +646,7 @@ else:
       for row in csvF:
         query+="(%s,%s,%s,%s),"
         data = data + [
-          row[indexer["datasheet_id"]], # datasheet_id
+          re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["keyword"]], # keyword
           row[indexer["model"]] if row[indexer["model"]] != '' else None, # model
           1 if row[indexer["is_faction_keyword"]] == "true" else 0 if row[indexer["is_faction_keyword"]] == "false" else -1, # is_faction_keyword, boolean
@@ -713,7 +713,7 @@ else:
       for row in csvF:
         query+="(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s),"
         data = data + [
-          row[indexer["datasheet_id"]], # datasheet_id
+          re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["line"]], # line
           row[indexer["name"]], # name
           row[indexer["movement"]].replace('"', ''), # movement
@@ -768,7 +768,7 @@ else:
       for row in csvF:
         query+="(%s,%s,%s,%s,%s),"
         data = data + [
-          row[indexer["datasheet_id"]], # datasheet_id
+          re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["line"]], # line
           row[indexer["button"]], # button
           row[indexer["description"]], # description
@@ -815,9 +815,9 @@ else:
         query+="(%s,%s,%s,%s,%s,%s,%s),"
         # MySQL doesn't support booleans, so we're re-using an INT (-1 is data isn't boolean)
         data = data + [
-          row[indexer["datasheet_id"]], # datasheet_id
+          re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["line"]], # line
-          row[indexer["wargear_id"]], # wargear_id
+          re.sub("[a-zA-Z]*","",row[indexer["wargear_id"]]), # wargear_id
           row[indexer["cost"]], # cost
           1 if row[indexer["is_index_wargear"]] == "true" else 0 if row[indexer["is_index_wargear"]] == "false" else -1, # is_index_wargear, boolean
           row[indexer["model"]], # model
