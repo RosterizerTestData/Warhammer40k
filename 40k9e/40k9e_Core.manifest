@@ -1,12 +1,13 @@
 {
-  "name": "40k9ed",
-  "revision": "0.2.1",
+  "name": "40k9e",
+  "revision": "0.2.2",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
   "notes": "This manifest is provided for the purposes of testing Rosterizer and is not intended for distribution.",
   "wip": true,
+  "dependencies": [],
   "manifest": {
     "assetTaxonomy": {
       "Ability": {
@@ -40,6 +41,23 @@
       },
       "Artificer Relic": {
         "templateClass": "Crusade Relic"
+      },
+      "Battle Scar": {
+        "aspects": {
+          "Unique": true
+        }
+      },
+      "Battle Scar—Character": {
+        "templateClass": "Battle Scar"
+      },
+      "Battle Scar—Monster": {
+        "templateClass": "Battle Scar"
+      },
+      "Battle Scar—Other": {
+        "templateClass": "Battle Scar"
+      },
+      "Battle Scar—Vehicle": {
+        "templateClass": "Battle Scar"
       },
       "Battle Trait": {
         "aspects": {
@@ -1194,46 +1212,6 @@
             "failState": "error",
             "evaluate": "AND"
           },
-          "crusadeStats": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Play",
-                    "value"
-                  ]
-                ],
-                "value": "Narrative",
-                "operator": "AND",
-                "not": true,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    [
-                      "Crusade Pts",
-                      "Experience",
-                      "Battle Honours",
-                      "Rank"
-                    ],
-                    "visibility"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "hidden",
-                "iterations": 1
-              }
-            ]
-          },
           "rank1": {
             "evals": [
               {
@@ -1641,6 +1619,266 @@
             ],
             "failState": "warning",
             "evaluate": "AND"
+          },
+          "crusadeStats": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    [
+                      "Crusade Pts",
+                      "Experience",
+                      "Battle Honours",
+                      "Rank"
+                    ],
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowCharacterBattleScars": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Battle Scar—Character",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowMonsterBattleScars": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Monster",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Battle Scar—Monster",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowVehicleBattleScars": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Battle Scar—Vehicle",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowOtherBattleScars": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle",
+                "contains": true,
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character",
+                "contains": true,
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Monster",
+                "contains": true,
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Battle Scar—Other",
+                "iterations": 1
+              }
+            ]
           }
         },
         "aspects": {
@@ -1814,6 +2052,78 @@
       }
     },
     "assetCatalog": {
+      "Battle Scar—Character§Blind in One Eye": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by **CHARACTER** models in this unit."
+      },
+      "Battle Scar—Character§Chest Wound": {
+        "text": "Reduce the Wounds characteristic of one **CHARACTER** model in this unit by 1 (to a minimum of 1)."
+      },
+      "Battle Scar—Character§Deep Concussion": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      },
+      "Battle Scar—Character§Deep Scars": {
+        "text": "This unit cannot perform any actions or psychic actions, and it cannot make Heroic Interventions."
+      },
+      "Battle Scar—Character§Loss of Reputation": {
+        "text": "If this unit has any aura abilities on its datasheet, the range of those aura abilities is reduced by 3″. If this reduces the range of an aura ability to 0″ or less, then the unit loses that aura ability while it has this Battle Scar. If this unit has no aura abilities on its datasheet, then it is unaffected by the aura abilities of any friendly units."
+      },
+      "Battle Scar—Character§Lost Leg": {
+        "text": "Subtract 1″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and Charge rolls made for this unit."
+      },
+      "Battle Scar—Monster§Crippled Limb": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by **MONSTER** models in this unit."
+      },
+      "Battle Scar—Monster§Crippling Injury": {
+        "text": "Subtract 2″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit."
+      },
+      "Battle Scar—Monster§Critical Wound": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by MONSTER models in this unit."
+      },
+      "Battle Scar—Monster§Enraged and Unreasoning": {
+        "text": "If this unit has any aura abilities on its datasheet, the range of those aura abilities is reduced by 3″. If this reduces the range of an aura ability to 0\" or less, then the unit loses that aura ability while it has this Battle Scar. If this unit has no aura abilities on its datasheet, then it is unaffected by the aura abilities of any friendly units."
+      },
+      "Battle Scar—Monster§Fractured Skull": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      },
+      "Battle Scar—Monster§Tissue Damage": {
+        "text": "Subtract 1 from the Attacks characteristic of one **MONSTER** model in this unit (to a minimum of 1)."
+      },
+      "Battle Scar—Other§Battle-weary": {
+        "text": "This unit cannot perform any actions or psychic actions, and it cannot gain more than 1 experience point at the end of a battle for any reason (any additional experience points gained are lost)."
+      },
+      "Battle Scar—Other§Disgraced": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      },
+      "Battle Scar—Other§Fatigued": {
+        "text": "This unit cannot control objective markers. When determining which player controls an objective marker, ignore all models in this unit."
+      },
+      "Battle Scar—Other§Mark of Shame": {
+        "text": "This unit is unaffected by the aura abilities of any friendly units."
+      },
+      "Battle Scar—Other§Shell Shock": {
+        "text": "Subtract 1 from this unit’s Leadership characteristic. In addition, subtract 1 from Combat Attrition tests taken for this unit."
+      },
+      "Battle Scar—Other§Walking Wounded": {
+        "text": "Subtract 1″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit."
+      },
+      "Battle Scar—Vehicle§Angered Machine Spirit": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      },
+      "Battle Scar—Vehicle§Engine Fault": {
+        "text": "Subtract 2″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit."
+      },
+      "Battle Scar—Vehicle§Targeter’s Cracked": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by a **VEHICLE** model in this unit."
+      },
+      "Battle Scar—Vehicle§Vox Comms Destroyed": {
+        "text": "This unit is unaffected by the aura abilities of any friendly units."
+      },
+      "Battle Scar—Vehicle§Weakened Armor": {
+        "text": "Each time this unit is hit by a weapon with a Strength characteristic of 8 or more, this unit suffers 1 mortal wound in addition to any normal damage."
+      },
+      "Battle Scar—Vehicle§Weapon Damaged": {
+        "text": "Select one weapon equipped by a **VEHICLE** model in this unit (if this unit has any ranged weapons, you must select one of them, and if any of those are Heavy, then you must select one of them). Subtract 1 from hit and wound rolls when resolving attacks with that weapon."
+      },
       "Battle Trait§Battle-tested": {},
       "Battle Trait§Cool-headed": {},
       "Battle Trait§Fleet of Foot": {},
@@ -2975,6 +3285,5 @@
     },
     "gameModes": {},
     "theme": {}
-  },
-  "dependencies": []
+  }
 }
