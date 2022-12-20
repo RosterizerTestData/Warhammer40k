@@ -100,6 +100,12 @@ processModels = (data,assetCatalog) => {
     // console.log(modelItemKey)
   });
 }
+numerize = (value) => {
+  let initialValue = (value + '').replace(/^([0-9]*)"/g,'$1″').replace(/^([0-9]*)\+/g,'$1');
+  let numberTest = Number(initialValue);
+  if(numberTest + '' !== initialValue) return initialValue
+  return numberTest
+}
 dedupModels = (dupModels) => {
   let deduped = dupModels[0];
   let props = ['attacks','ballistic_skill','base_size','cost','leadership','movement','save','strength','toughness','weapon_skill','wounds'];
@@ -109,17 +115,17 @@ dedupModels = (dupModels) => {
   });
   return {
     stats: {
-      Points: {value: deduped.cost},
-      M: {value: deduped.movement},
-      WS: {value: deduped.weapon_skill},
-      BS: {value: deduped.ballistic_skill},
-      S: {value: deduped.strength},
-      T: {value: deduped.toughness},
-      W: {value: deduped.wounds},
-      A: {value: deduped.attacks},
-      Ld: {value: deduped.leadership},
-      Sv: {value: deduped.save},
-      Base: {value: deduped.base_size},
+      Points: {value: numerize(deduped.cost)},
+      M: {value: numerize(deduped.movement)},
+      WS: {value: numerize(deduped.weapon_skill)},
+      BS: {value: numerize(deduped.ballistic_skill)},
+      S: {value: numerize(deduped.strength)},
+      T: {value: numerize(deduped.toughness)},
+      W: {value: numerize(deduped.wounds)},
+      A: {value: numerize(deduped.attacks)},
+      Ld: {value: numerize(deduped.leadership)},
+      Sv: {value: numerize(deduped.save)},
+      Base: {value: numerize(deduped.base_size)},
     }
   }
 }
@@ -171,7 +177,7 @@ processAbilities = (data,assetCatalog) => {
       itemKey = 'Wargear§' + ability.name;
       let abilityCostArr = data.abilities.datasheets_abilities.filter(datasheets_ability => datasheets_ability.ability_id === ability.ability_id).map(datasheets_ability => datasheets_ability.cost);
       let costMode = findMode(abilityCostArr);
-      if(costMode) tempAbility.stats = {Points: {value: costMode}};
+      if(costMode) tempAbility.stats = {Points: {value: numerize(costMode)}};
       if(!assetCatalog[itemKey]) assetCatalog[itemKey] = tempAbility;
       else assetCatalog[itemKey].text += '\n\nERROR: The following text was found on another wargear with the same name.\n\n' + formatText(ability.description,shouldLog);
     }
@@ -205,11 +211,11 @@ processWargear = (data,assetCatalog) => {
   data.wargear.wargear_list.forEach(wargear => {
     let weapName = wargear.name.replace(/(1: |2: |3: )/,'').replace(/в/g,'d');
     let tempWeapon = {stats:{
-      AP: {value: wargear.armor_piercing},
-      D: {value: wargear.damage},
-      S: {value: wargear.strength},
-      Type: {value: wargear.type},
-      Range: {value: wargear.weapon_range},
+      AP: {value: numerize(wargear.armor_piercing)},
+      D: {value: numerize(wargear.damage)},
+      S: {value: numerize(wargear.strength)},
+      Type: {value: numerize(wargear.type)},
+      Range: {value: numerize(wargear.weapon_range)},
     }};
     if(wargear.abilities) tempWeapon.text = formatText(wargear.abilities);
     let wargearArr = data.wargear.wargear_list.filter(wargear_list => wargear_list.wargear_id == wargear.wargear_id).map(wargear => 'Weapon§' + wargear.name);
@@ -217,7 +223,7 @@ processWargear = (data,assetCatalog) => {
     let cost = findMode(costArr);
     // console.log(wargear.wargear_id,cost,costArr)
     if(wargearArr.length == 1 && cost){
-      tempWeapon.stats.Points = {value: cost};
+      tempWeapon.stats.Points = {value: numerize(cost)};
     }
     assetCatalog['Weapon§' + weapName] = tempWeapon;
     if(wargearArr.length > 1){
@@ -228,7 +234,7 @@ processWargear = (data,assetCatalog) => {
       assetCatalog[itemKey].assets.traits = assetCatalog[itemKey].assets.traits || [];
       assetCatalog[itemKey].assets.traits.push('Weapon§' + weapName);
       if(cost){
-        assetCatalog[itemKey].stats = {Points: {value: cost}};
+        assetCatalog[itemKey].stats = {Points: {value: numerize(cost)}};
       }
     }
   });
@@ -286,7 +292,7 @@ createWargearStat = (i,wargearArr,modelLoadout,assetCatalog) => {
     let actualTrait = assetCatalog[wargear.itemKey];
     let assignedTrait = (actualTrait?.stats?.Points?.value === undefined && !wargear.cost) || actualTrait?.stats?.Points?.value == wargear.cost ? wargear.itemKey : {
       item: wargear.itemKey,
-      stats: {Points: {value: Number(wargear.cost)}}
+      stats: {Points: {value: numerize(wargear.cost)}}
     }
     tempStat.ranks[wargearName] = {
       order: i+1,
@@ -300,11 +306,11 @@ processRelics = (data,assetCatalog) => {
   data.relics.relic_list?.forEach(relic => {
     let weapName = relic.name.replace(/(1: |2: |3: )/,'').replace(/в/g,'d').replace(/^"*(.*[^"])"*$/g,'$1').replace(/^\s*(.*[^\s])\s*$/g,'$1');
     let tempWeapon = {stats:{
-      AP: {value: relic.armor_piercing},
-      D: {value: relic.damage},
-      S: {value: relic.strength},
-      Type: {value: relic.type},
-      Range: {value: relic.weapon_range},
+      AP: {value: numerize(relic.armor_piercing)},
+      D: {value: numerize(relic.damage)},
+      S: {value: numerize(relic.strength)},
+      Type: {value: numerize(relic.type)},
+      Range: {value: numerize(relic.weapon_range)},
     }};
     if(relic.abilities) tempWeapon.text = formatText(relic.abilities);
     let relicsArr = data.relics.relic_list.filter(relic_list => relic_list.wargear_id == relic.wargear_id).map(relic => 'Relic Weapon§' + relic.name);
@@ -357,7 +363,7 @@ processPsychicPowers = (data,assetCatalog) => {
       let tempPower = {
         text: formatText(power.description)
       };
-      if(power.roll) tempPower.stats = {Roll:{value: power.roll}};
+      if(power.roll) tempPower.stats = {Roll:{value: numerize(power.roll)}};
       assetCatalog[powerName] = tempPower;
     }else{
       let powerName = 'Psychic Power§' + power.name.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -455,7 +461,7 @@ processUnits = (data,assetCatalog) => {
     let unitId = datasheet.datasheet_id;
     let tempItem = {stats:{
       'Power Level': {
-        value: Number(datasheet.power_points)
+        value: numerize(datasheet.power_points)
       }
     },keywords:{},assets:{}};
 
@@ -484,11 +490,11 @@ processUnits = (data,assetCatalog) => {
       let basePlThresh = stat.min;
       if(!(stat.max % stat.min)){
         // console.log(datasheet.name,'has a clean threshold')
-        stat.increment = {value: stat.min};
+        stat.increment = {value: numerize(stat.min)};
       }
       else if(!((stat.max + 1) % (stat.min + 1)) && models[1]?.models_per_unit == 1){
         // console.log(datasheet.name,'has a sergeant')
-        stat.increment = {value: stat.min + 1};
+        stat.increment = {value: numerize(stat.min) + 1};
         // console.log(stat)
         basePlThresh ++;
       }else tempItem.text += '\n\nERROR: there might be a problem with incrementation that will require inputting by hand.';
@@ -570,7 +576,7 @@ processUnits = (data,assetCatalog) => {
       let tempWargear = wargear.cost === assetCatalog[wargear.itemKey].stats?.Points?.value ? wargear.itemKey : {
         item: wargear.itemKey,
         stats: {
-          Points: {value: wargear.cost}
+          Points: {value: numerize(wargear.cost)}
         }
       };
       tempItem.stats = tempItem.stats || {};
@@ -648,8 +654,8 @@ processUnits = (data,assetCatalog) => {
       let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0].itemKey;
       // console.log(unitId,modelItemKey)
       assetCatalog[modelItemKey].stats['W'] = {
-        value: assetCatalog[modelItemKey].stats['W'].value,
-        max: assetCatalog[modelItemKey].stats['W'].value,
+        value: numerize(assetCatalog[modelItemKey].stats['W'].value),
+        max: numerize(assetCatalog[modelItemKey].stats['W'].value),
         min: 1,
         dynamic: true,
         increment: {value: 1},
@@ -688,7 +694,7 @@ generateDamageRule = (damageRows,currentRow) => {
           ['{self}','stats',damageRows.col2,'value']
         ],
         actionType: 'set',
-        value: typeof currentRow.col2 === 'number' ? currentRow.col2 : currentRow.col2?.replace('"',''),
+        value: numerize(currentRow.col2),
         iterations: 1
       },
       {
@@ -696,7 +702,7 @@ generateDamageRule = (damageRows,currentRow) => {
           ['{self}','stats',damageRows.col3,'value']
         ],
         actionType: 'set',
-        value: typeof currentRow.col3 === 'number' ? currentRow.col3 : currentRow.col3?.replace('"',''),
+        value: numerize(currentRow.col3),
         iterations: 1
       },
       {
@@ -704,7 +710,7 @@ generateDamageRule = (damageRows,currentRow) => {
           ['{self}','stats',damageRows.col4,'value']
         ],
         actionType: 'set',
-        value: typeof currentRow.col4 === 'number' ? currentRow.col4 : currentRow.col4?.replace('"',''),
+        value: numerize(currentRow.col4),
         iterations: 1
       }
     ]
