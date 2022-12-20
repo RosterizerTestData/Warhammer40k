@@ -463,7 +463,7 @@ processUnits = (data,assetCatalog) => {
     // console.log(unitId,models)
     if(models[0]?.line === 1 && models[0]?.models_per_unit.includes('-')){
       tempItem.stats.model = {
-        value: 'Model§' + data.models.filter(model => model.datasheet_id === unitId && model.line === 1)[0].name
+        value: data.models.filter(model => model.datasheet_id === unitId && model.line === 1)[0].itemKey
       }
     }
 
