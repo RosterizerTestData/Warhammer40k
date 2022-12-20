@@ -1,11 +1,12 @@
 {
   "name": "Titan Legions",
+  "revision": "0.0.6",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.",
-  "revision": "0.0.5",
+  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "wip": true,
   "dependencies": [
     {
       "slug": "123456",
@@ -16,341 +17,200 @@
   "manifest": {
     "assetTaxonomy": {},
     "assetCatalog": {
-      "Roster§Army": {},
-      "Model§Warhound Titan": {
+      "Ability§Battle Titan": {
+        "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models excluding **MONSTER** and VEHICLE** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them."
+      },
+      "Ability§Flank Speed": {
+        "text": "Each time this model Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 12″ to the Move characteristic of this model."
+      },
+      "Ability§Reactor Meltdown": {
+        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 4D6″ suffers 3D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 3D6″ suffers 2D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      },
+      "Ability§Void Shields": {
+        "text": "This model has 2 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 6 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 8 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 4 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points."
+      },
+      "Ability§War Engine": {
+        "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models (excluding **TITANIC** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them."
+      },
+      "Lords of War§Reaver Titan": {
         "stats": {
-          "Points": {
-            "value": 2000
-          },
-          "M": {
-            "value": "20"
-          },
-          "WS": {
-            "value": 4
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 8
-          },
-          "T": {
-            "value": 8
-          },
-          "W": {
-            "value": 50,
-            "max": 50,
-            "min": 1,
-            "dynamic": true,
-            "increment": {
-              "value": 1
-            },
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "A": {
-            "value": "4"
-          },
-          "Ld": {
-            "value": 10
-          },
-          "Sv": {
-            "value": 2
-          },
-          "Base": {
-            "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Warhound vulcan megabolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Warhound plasma blastgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warhound plasma blastgun"
-                  }
-                ]
-              },
-              "Warhound feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound feet"
-                  }
-                ]
-              },
-              "Warhound inferno gun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound inferno gun"
-                  }
-                ]
-              },
-              "Warhound turbo-laser destructor": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound turbo-laser destructor"
-                  }
-                ]
-              },
-              "Warhound vulcan megabolter": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound vulcan megabolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Warhound feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Warhound plasma blastgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warhound plasma blastgun"
-                  }
-                ]
-              },
-              "Warhound feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound feet"
-                  }
-                ]
-              },
-              "Warhound inferno gun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound inferno gun"
-                  }
-                ]
-              },
-              "Warhound turbo-laser destructor": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound turbo-laser destructor"
-                  }
-                ]
-              },
-              "Warhound vulcan megabolter": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound vulcan megabolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Warhound plasma blastgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warhound plasma blastgun"
-                  }
-                ]
-              },
-              "Warhound feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound feet"
-                  }
-                ]
-              },
-              "Warhound inferno gun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound inferno gun"
-                  }
-                ]
-              },
-              "Warhound turbo-laser destructor": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound turbo-laser destructor"
-                  }
-                ]
-              },
-              "Warhound vulcan megabolter": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warhound vulcan megabolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
+          "Power Level": {
+            "value": 150
           }
         },
-        "rules": {
-          "dynamicDamageMid": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": "37",
-                "min": "26",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "God-engine",
+            "Reaver Titan",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Titan Legion>",
+            "Adeptus Titanicus",
+            "Imperium"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§Battle Titan",
+            "Ability§Void Shields",
+            {
+              "item": "Model§Reaver Titan",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
               }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "16",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "WS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "5",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "4",
-                "iterations": 1
-              }
-            ]
-          },
-          "dynamicDamageLow": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": "25",
-                "min": "13",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "12",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "WS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "5",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "4",
-                "iterations": 1
-              }
-            ]
+            }
+          ]
+        },
+        "text": "A Reaver Titan is equipped with: 2 Reaver gatling blaster; Reaver apocalypse launcher; Reaver feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon; 1 Reaver power fist.",
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+        }
+      },
+      "Lords of War§Warbringer Nemesis Titan": {
+        "stats": {
+          "Power Level": {
+            "value": 190
           }
+        },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "God-engine",
+            "Titanic",
+            "Vehicle",
+            "Warbringer Nemesis Titan"
+          ],
+          "Faction": [
+            "<Titan Legion>",
+            "Adeptus Titanicus",
+            "Imperium"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§Battle Titan",
+            "Ability§Void Shields",
+            {
+              "item": "Model§Warbringer Nemesis Titan",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "A Warbringer Nemesis Titan is equipped with: 3 ardex-defensor maulers; 2 Anvillus defence batteries; Nemesis quake cannon; 2 Reaver gatling blaster; Warbringer Nemesis feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon.\n\n• This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.",
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+        }
+      },
+      "Lords of War§Warhound Titan": {
+        "stats": {
+          "Power Level": {
+            "value": 100
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "God-engine",
+            "Titanic",
+            "Vehicle",
+            "Warhound Titan"
+          ],
+          "Faction": [
+            "<Titan Legion>",
+            "Adeptus Titanicus",
+            "Imperium"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§Flank Speed",
+            "Ability§Battle Titan",
+            "Ability§Void Shields",
+            {
+              "item": "Model§Warhound Titan",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "A Warhound Titan is equipped with: 2 Warhound vulcan mega-bolters; Warhound feet.\n\n• This model’s Warhound vulcan mega-bolters can each be replaced with one of the following: 1 Warhound inferno gun; 1 Warhound plasma blastgun; 1 Warhound turbo-laser destructor.",
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+        }
+      },
+      "Lords of War§Warlord Titan": {
+        "stats": {
+          "Power Level": {
+            "value": 275
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "God-engine",
+            "Titanic",
+            "Vehicle",
+            "Warlord Titan"
+          ],
+          "Faction": [
+            "<Titan Legion>",
+            "Adeptus Titanicus",
+            "Imperium"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§War Engine",
+            "Ability§Void Shields",
+            {
+              "item": "Model§Warlord Titan",
+              "stats": {
+                "Points": {
+                  "visibility": "hidden"
+                }
+              }
+            }
+          ]
+        },
+        "text": "A Warlord Titan is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; 2 arioch power claws; Warlord feet.\n\n• This model’s 2 apocalypse launchers can be replaced with 2 laser blasters.\n\n• This model’s arioch power claws can each be replaced with one of the following: 1 belicosa volcano cannon; 1 macro gatling blaster; 1 mori quake cannon; 1 sunfury plasma annihilator.",
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
       "Model§Reaver Titan": {
@@ -359,7 +219,7 @@
             "value": 3000
           },
           "M": {
-            "value": "18"
+            "value": 18
           },
           "WS": {
             "value": 4
@@ -385,7 +245,7 @@
             "visibility": "always"
           },
           "A": {
-            "value": "4"
+            "value": 4
           },
           "Ld": {
             "value": 10
@@ -713,7 +573,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "14",
+                "value": 14,
                 "iterations": 1
               },
               {
@@ -726,7 +586,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "4",
+                "value": 4,
                 "iterations": 1
               },
               {
@@ -739,7 +599,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "4",
+                "value": 4,
                 "iterations": 1
               }
             ]
@@ -775,7 +635,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "10",
+                "value": 10,
                 "iterations": 1
               },
               {
@@ -788,7 +648,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "5",
+                "value": 5,
                 "iterations": 1
               },
               {
@@ -801,7 +661,1036 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "4",
+                "value": 4,
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
+      "Model§Warbringer Nemesis Titan": {
+        "stats": {
+          "Points": {
+            "value": 3800
+          },
+          "M": {
+            "value": 15
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "T": {
+            "value": 8
+          },
+          "W": {
+            "value": 100,
+            "max": 100,
+            "min": 1,
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "statType": "numeric",
+            "visibility": "always"
+          },
+          "A": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 10
+          },
+          "Sv": {
+            "value": 2
+          },
+          "Base": {
+            "value": "Use model"
+          },
+          "loadout1": {
+            "value": "Ardex-defensor mauler",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Anvillus defence battery": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Anvillus defence battery"
+                  }
+                ]
+              },
+              "Ardex-defensor mauler": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Ardex-defensor mauler"
+                  }
+                ]
+              },
+              "Nemesis quake cannon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis quake cannon"
+                  }
+                ]
+              },
+              "Nemesis volcano cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis volcano cannon"
+                  }
+                ]
+              },
+              "Reaver gatling blaster": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver gatling blaster"
+                  }
+                ]
+              },
+              "Reaver laser blaster": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver laser blaster"
+                  }
+                ]
+              },
+              "Reaver melta cannon": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver melta cannon"
+                  }
+                ]
+              },
+              "Reaver volcano cannon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver volcano cannon"
+                  }
+                ]
+              },
+              "Warbringer Nemesis feet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warbringer Nemesis feet"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Anvillus defence battery",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Anvillus defence battery": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Anvillus defence battery"
+                  }
+                ]
+              },
+              "Ardex-defensor mauler": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Ardex-defensor mauler"
+                  }
+                ]
+              },
+              "Nemesis quake cannon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis quake cannon"
+                  }
+                ]
+              },
+              "Nemesis volcano cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis volcano cannon"
+                  }
+                ]
+              },
+              "Reaver gatling blaster": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver gatling blaster"
+                  }
+                ]
+              },
+              "Reaver laser blaster": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver laser blaster"
+                  }
+                ]
+              },
+              "Reaver melta cannon": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver melta cannon"
+                  }
+                ]
+              },
+              "Reaver volcano cannon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver volcano cannon"
+                  }
+                ]
+              },
+              "Warbringer Nemesis feet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warbringer Nemesis feet"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "Nemesis quake cannon",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Anvillus defence battery": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Anvillus defence battery"
+                  }
+                ]
+              },
+              "Ardex-defensor mauler": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Ardex-defensor mauler"
+                  }
+                ]
+              },
+              "Nemesis quake cannon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis quake cannon"
+                  }
+                ]
+              },
+              "Nemesis volcano cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis volcano cannon"
+                  }
+                ]
+              },
+              "Reaver gatling blaster": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver gatling blaster"
+                  }
+                ]
+              },
+              "Reaver laser blaster": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver laser blaster"
+                  }
+                ]
+              },
+              "Reaver melta cannon": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver melta cannon"
+                  }
+                ]
+              },
+              "Reaver volcano cannon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver volcano cannon"
+                  }
+                ]
+              },
+              "Warbringer Nemesis feet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warbringer Nemesis feet"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout4": {
+            "value": "Reaver gatling blaster",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 4,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Anvillus defence battery": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Anvillus defence battery"
+                  }
+                ]
+              },
+              "Ardex-defensor mauler": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Ardex-defensor mauler"
+                  }
+                ]
+              },
+              "Nemesis quake cannon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis quake cannon"
+                  }
+                ]
+              },
+              "Nemesis volcano cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis volcano cannon"
+                  }
+                ]
+              },
+              "Reaver gatling blaster": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver gatling blaster"
+                  }
+                ]
+              },
+              "Reaver laser blaster": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver laser blaster"
+                  }
+                ]
+              },
+              "Reaver melta cannon": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver melta cannon"
+                  }
+                ]
+              },
+              "Reaver volcano cannon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver volcano cannon"
+                  }
+                ]
+              },
+              "Warbringer Nemesis feet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warbringer Nemesis feet"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout5": {
+            "value": "Warbringer Nemesis feet",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 5,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Anvillus defence battery": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Anvillus defence battery"
+                  }
+                ]
+              },
+              "Ardex-defensor mauler": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Ardex-defensor mauler"
+                  }
+                ]
+              },
+              "Nemesis quake cannon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis quake cannon"
+                  }
+                ]
+              },
+              "Nemesis volcano cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis volcano cannon"
+                  }
+                ]
+              },
+              "Reaver gatling blaster": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver gatling blaster"
+                  }
+                ]
+              },
+              "Reaver laser blaster": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver laser blaster"
+                  }
+                ]
+              },
+              "Reaver melta cannon": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver melta cannon"
+                  }
+                ]
+              },
+              "Reaver volcano cannon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver volcano cannon"
+                  }
+                ]
+              },
+              "Warbringer Nemesis feet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warbringer Nemesis feet"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout6": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 6,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Anvillus defence battery": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Anvillus defence battery"
+                  }
+                ]
+              },
+              "Ardex-defensor mauler": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Ardex-defensor mauler"
+                  }
+                ]
+              },
+              "Nemesis quake cannon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis quake cannon"
+                  }
+                ]
+              },
+              "Nemesis volcano cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis volcano cannon"
+                  }
+                ]
+              },
+              "Reaver gatling blaster": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver gatling blaster"
+                  }
+                ]
+              },
+              "Reaver laser blaster": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver laser blaster"
+                  }
+                ]
+              },
+              "Reaver melta cannon": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver melta cannon"
+                  }
+                ]
+              },
+              "Reaver volcano cannon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Reaver volcano cannon"
+                  }
+                ]
+              },
+              "Warbringer Nemesis feet": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warbringer Nemesis feet"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "rules": {
+          "dynamicDamageMid": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": "75",
+                "min": "51",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 12,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "WS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 5,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 4,
+                "iterations": 1
+              }
+            ]
+          },
+          "dynamicDamageLow": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": "50",
+                "min": "26",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 9,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "WS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 5,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 4,
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
+      "Model§Warhound Titan": {
+        "stats": {
+          "Points": {
+            "value": 2000
+          },
+          "M": {
+            "value": 20
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "T": {
+            "value": 8
+          },
+          "W": {
+            "value": 50,
+            "max": 50,
+            "min": 1,
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "statType": "numeric",
+            "visibility": "always"
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "Sv": {
+            "value": 2
+          },
+          "Base": {
+            "value": "Use model"
+          },
+          "loadout1": {
+            "value": "Warhound vulcan megabolter",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Warhound plasma blastgun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Warhound plasma blastgun"
+                  }
+                ]
+              },
+              "Warhound feet": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound feet"
+                  }
+                ]
+              },
+              "Warhound inferno gun": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound inferno gun"
+                  }
+                ]
+              },
+              "Warhound turbo-laser destructor": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound turbo-laser destructor"
+                  }
+                ]
+              },
+              "Warhound vulcan megabolter": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound vulcan megabolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Warhound feet",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Warhound plasma blastgun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Warhound plasma blastgun"
+                  }
+                ]
+              },
+              "Warhound feet": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound feet"
+                  }
+                ]
+              },
+              "Warhound inferno gun": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound inferno gun"
+                  }
+                ]
+              },
+              "Warhound turbo-laser destructor": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound turbo-laser destructor"
+                  }
+                ]
+              },
+              "Warhound vulcan megabolter": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound vulcan megabolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Warhound plasma blastgun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Warhound plasma blastgun"
+                  }
+                ]
+              },
+              "Warhound feet": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound feet"
+                  }
+                ]
+              },
+              "Warhound inferno gun": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound inferno gun"
+                  }
+                ]
+              },
+              "Warhound turbo-laser destructor": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound turbo-laser destructor"
+                  }
+                ]
+              },
+              "Warhound vulcan megabolter": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Warhound vulcan megabolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "rules": {
+          "dynamicDamageMid": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": "37",
+                "min": "26",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 16,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "WS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 5,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 4,
+                "iterations": 1
+              }
+            ]
+          },
+          "dynamicDamageLow": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": "25",
+                "min": "13",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 12,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "WS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 5,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 4,
                 "iterations": 1
               }
             ]
@@ -814,7 +1703,7 @@
             "value": 5500
           },
           "M": {
-            "value": "12"
+            "value": 12
           },
           "WS": {
             "value": 4
@@ -840,7 +1729,7 @@
             "visibility": "always"
           },
           "A": {
-            "value": "4"
+            "value": 4
           },
           "Ld": {
             "value": 10
@@ -1454,7 +2343,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "10",
+                "value": 10,
                 "iterations": 1
               },
               {
@@ -1467,7 +2356,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "4",
+                "value": 4,
                 "iterations": 1
               },
               {
@@ -1480,7 +2369,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "4",
+                "value": 4,
                 "iterations": 1
               }
             ]
@@ -1516,7 +2405,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "8",
+                "value": 8,
                 "iterations": 1
               },
               {
@@ -1529,7 +2418,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "5",
+                "value": 5,
                 "iterations": 1
               },
               {
@@ -1542,859 +2431,21 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "4",
+                "value": 4,
                 "iterations": 1
               }
             ]
           }
         }
       },
-      "Model§Warbringer Nemesis Titan": {
-        "stats": {
-          "Points": {
-            "value": 3800
-          },
-          "M": {
-            "value": "15"
-          },
-          "WS": {
-            "value": 4
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 8
-          },
-          "T": {
-            "value": 8
-          },
-          "W": {
-            "value": 100,
-            "max": 100,
-            "min": 1,
-            "dynamic": true,
-            "increment": {
-              "value": 1
-            },
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "A": {
-            "value": "3"
-          },
-          "Ld": {
-            "value": 10
-          },
-          "Sv": {
-            "value": 2
-          },
-          "Base": {
-            "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Ardex-defensor mauler",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Anvillus defence battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Anvillus defence battery"
-                  }
-                ]
-              },
-              "Ardex-defensor mauler": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ardex-defensor mauler"
-                  }
-                ]
-              },
-              "Nemesis quake cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis quake cannon"
-                  }
-                ]
-              },
-              "Nemesis volcano cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis volcano cannon"
-                  }
-                ]
-              },
-              "Reaver gatling blaster": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver gatling blaster"
-                  }
-                ]
-              },
-              "Reaver laser blaster": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver laser blaster"
-                  }
-                ]
-              },
-              "Reaver melta cannon": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver melta cannon"
-                  }
-                ]
-              },
-              "Reaver volcano cannon": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver volcano cannon"
-                  }
-                ]
-              },
-              "Warbringer Nemesis feet": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warbringer Nemesis feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Anvillus defence battery",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Anvillus defence battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Anvillus defence battery"
-                  }
-                ]
-              },
-              "Ardex-defensor mauler": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ardex-defensor mauler"
-                  }
-                ]
-              },
-              "Nemesis quake cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis quake cannon"
-                  }
-                ]
-              },
-              "Nemesis volcano cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis volcano cannon"
-                  }
-                ]
-              },
-              "Reaver gatling blaster": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver gatling blaster"
-                  }
-                ]
-              },
-              "Reaver laser blaster": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver laser blaster"
-                  }
-                ]
-              },
-              "Reaver melta cannon": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver melta cannon"
-                  }
-                ]
-              },
-              "Reaver volcano cannon": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver volcano cannon"
-                  }
-                ]
-              },
-              "Warbringer Nemesis feet": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warbringer Nemesis feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Nemesis quake cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Anvillus defence battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Anvillus defence battery"
-                  }
-                ]
-              },
-              "Ardex-defensor mauler": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ardex-defensor mauler"
-                  }
-                ]
-              },
-              "Nemesis quake cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis quake cannon"
-                  }
-                ]
-              },
-              "Nemesis volcano cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis volcano cannon"
-                  }
-                ]
-              },
-              "Reaver gatling blaster": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver gatling blaster"
-                  }
-                ]
-              },
-              "Reaver laser blaster": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver laser blaster"
-                  }
-                ]
-              },
-              "Reaver melta cannon": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver melta cannon"
-                  }
-                ]
-              },
-              "Reaver volcano cannon": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver volcano cannon"
-                  }
-                ]
-              },
-              "Warbringer Nemesis feet": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warbringer Nemesis feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Reaver gatling blaster",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Anvillus defence battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Anvillus defence battery"
-                  }
-                ]
-              },
-              "Ardex-defensor mauler": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ardex-defensor mauler"
-                  }
-                ]
-              },
-              "Nemesis quake cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis quake cannon"
-                  }
-                ]
-              },
-              "Nemesis volcano cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis volcano cannon"
-                  }
-                ]
-              },
-              "Reaver gatling blaster": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver gatling blaster"
-                  }
-                ]
-              },
-              "Reaver laser blaster": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver laser blaster"
-                  }
-                ]
-              },
-              "Reaver melta cannon": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver melta cannon"
-                  }
-                ]
-              },
-              "Reaver volcano cannon": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver volcano cannon"
-                  }
-                ]
-              },
-              "Warbringer Nemesis feet": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warbringer Nemesis feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "Warbringer Nemesis feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Anvillus defence battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Anvillus defence battery"
-                  }
-                ]
-              },
-              "Ardex-defensor mauler": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ardex-defensor mauler"
-                  }
-                ]
-              },
-              "Nemesis quake cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis quake cannon"
-                  }
-                ]
-              },
-              "Nemesis volcano cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis volcano cannon"
-                  }
-                ]
-              },
-              "Reaver gatling blaster": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver gatling blaster"
-                  }
-                ]
-              },
-              "Reaver laser blaster": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver laser blaster"
-                  }
-                ]
-              },
-              "Reaver melta cannon": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver melta cannon"
-                  }
-                ]
-              },
-              "Reaver volcano cannon": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver volcano cannon"
-                  }
-                ]
-              },
-              "Warbringer Nemesis feet": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warbringer Nemesis feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout6": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 6,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Anvillus defence battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Anvillus defence battery"
-                  }
-                ]
-              },
-              "Ardex-defensor mauler": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ardex-defensor mauler"
-                  }
-                ]
-              },
-              "Nemesis quake cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis quake cannon"
-                  }
-                ]
-              },
-              "Nemesis volcano cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis volcano cannon"
-                  }
-                ]
-              },
-              "Reaver gatling blaster": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver gatling blaster"
-                  }
-                ]
-              },
-              "Reaver laser blaster": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver laser blaster"
-                  }
-                ]
-              },
-              "Reaver melta cannon": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver melta cannon"
-                  }
-                ]
-              },
-              "Reaver volcano cannon": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reaver volcano cannon"
-                  }
-                ]
-              },
-              "Warbringer Nemesis feet": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warbringer Nemesis feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          }
-        },
-        "rules": {
-          "dynamicDamageMid": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": "75",
-                "min": "51",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "12",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "WS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "5",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "4",
-                "iterations": 1
-              }
-            ]
-          },
-          "dynamicDamageLow": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": "50",
-                "min": "26",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "9",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "WS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "5",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "4",
-                "iterations": 1
-              }
-            ]
-          }
+      "Roster§Army": {},
+      "Wargear§Arioch power claw": {
+        "assets": {
+          "traits": [
+            "Weapon§Arioch power claw (melee)",
+            "Weapon§Arioch power claw (shooting)"
+          ]
         }
-      },
-      "Ability§Flank Speed": {
-        "text": "Each time this model Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 12\" to the Move characteristic of this model."
-      },
-      "Ability§Void Shields": {
-        "text": "This model has 2 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 6 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 8 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 4 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points."
-      },
-      "Ability§Reactor Meltdown": {
-        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 4D6\" suffers 3D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 3D6\" suffers 2D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
-      },
-      "Ability§Battle Titan": {
-        "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models excluding **MONSTER** and VEHICLE** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them."
-      },
-      "Ability§War Engine": {
-        "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models (excluding **TITANIC** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them."
-      },
-      "Weapon§Ardex-defensor mauler": {
-        "stats": {
-          "AP": {
-            "value": "-2"
-          },
-          "D": {
-            "value": "2"
-          },
-          "S": {
-            "value": "6"
-          },
-          "Type": {
-            "value": "Heavy 6"
-          },
-          "Range": {
-            "value": "36″"
-          }
-        },
-        "text": "Each time an attack is made with this weapon profile when firing [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch), that attack hits on a roll of 5 or 6."
-      },
-      "Weapon§Belicosa volcano cannon": {
-        "stats": {
-          "AP": {
-            "value": "-5"
-          },
-          "D": {
-            "value": "12"
-          },
-          "S": {
-            "value": "20"
-          },
-          "Type": {
-            "value": "Heavy 3D3"
-          },
-          "Range": {
-            "value": "120″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
-      },
-      "Weapon§Mori quake cannon": {
-        "stats": {
-          "AP": {
-            "value": "-5"
-          },
-          "D": {
-            "value": "6"
-          },
-          "S": {
-            "value": "14"
-          },
-          "Type": {
-            "value": "Heavy 3D6"
-          },
-          "Range": {
-            "value": "280″"
-          }
-        },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
-      },
-      "Weapon§Reaver gatling blaster": {
-        "stats": {
-          "AP": {
-            "value": "-3"
-          },
-          "D": {
-            "value": "3"
-          },
-          "S": {
-            "value": "8"
-          },
-          "Type": {
-            "value": "Heavy 12"
-          },
-          "Range": {
-            "value": "72″"
-          }
-        }
-      },
-      "Weapon§Reaver laser blaster": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "D6+3"
-          },
-          "S": {
-            "value": "16"
-          },
-          "Type": {
-            "value": "Heavy 3D3"
-          },
-          "Range": {
-            "value": "72″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
-      },
-      "Weapon§Reaver melta cannon": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "8"
-          },
-          "S": {
-            "value": "16"
-          },
-          "Type": {
-            "value": "Heavy 2D6"
-          },
-          "Range": {
-            "value": "48″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of 12."
-      },
-      "Weapon§Standard": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "4"
-          },
-          "S": {
-            "value": "9"
-          },
-          "Type": {
-            "value": "Heavy 2D6"
-          },
-          "Range": {
-            "value": "72″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
       },
       "Wargear§Sunfury plasma annihilator": {
         "assets": {
@@ -2404,45 +2455,13 @@
           ]
         }
       },
-      "Weapon§Supercharge": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "5"
-          },
-          "S": {
-            "value": "10"
-          },
-          "Type": {
-            "value": "Heavy 2D6"
-          },
-          "Range": {
-            "value": "72″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). Each time an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1 is made for an attack with this weapon profile, the bearer suffers 2 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) after shooting with this weapon."
-      },
-      "Weapon§Reaver power fist": {
-        "stats": {
-          "AP": {
-            "value": "-5"
-          },
-          "D": {
-            "value": "12"
-          },
-          "S": {
-            "value": "x2"
-          },
-          "Type": {
-            "value": "Melee"
-          },
-          "Range": {
-            "value": "Melee"
-          }
-        },
-        "text": "Each time a **VEHICLE** or MONSTER** model is destroyed as a result of an attack made with this weapon, you can select one enemy unit within 9\" and roll one D6; on a 4+ that unit suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      "Wargear§Warhound plasma blastgun": {
+        "assets": {
+          "traits": [
+            "Weapon§Standard",
+            "Weapon§Supercharge"
+          ]
+        }
       },
       "Weapon§Anvillus defence battery": {
         "stats": {
@@ -2450,10 +2469,10 @@
             "value": "-1"
           },
           "D": {
-            "value": "2"
+            "value": 2
           },
           "S": {
-            "value": "8"
+            "value": 8
           },
           "Type": {
             "value": "Heavy 8"
@@ -2464,223 +2483,16 @@
         },
         "text": "Attacks made with this weapon can only target units that can [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying)."
       },
-      "Weapon§Nemesis quake cannon": {
-        "stats": {
-          "AP": {
-            "value": "-5"
-          },
-          "D": {
-            "value": "6"
-          },
-          "S": {
-            "value": "14"
-          },
-          "Type": {
-            "value": "Heavy 3D6"
-          },
-          "Range": {
-            "value": "24″-480″"
-          }
-        },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
-      },
-      "Weapon§Reaver volcano cannon": {
-        "stats": {
-          "AP": {
-            "value": "-5"
-          },
-          "D": {
-            "value": "12"
-          },
-          "S": {
-            "value": "18"
-          },
-          "Type": {
-            "value": "Heavy D6"
-          },
-          "Range": {
-            "value": "120″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
-      },
-      "Weapon§Warhound inferno gun": {
-        "stats": {
-          "AP": {
-            "value": "-3"
-          },
-          "D": {
-            "value": "3"
-          },
-          "S": {
-            "value": "7"
-          },
-          "Type": {
-            "value": "Heavy 4D6"
-          },
-          "Range": {
-            "value": "24″"
-          }
-        },
-        "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
-      },
-      "Wargear§Warhound plasma blastgun": {
-        "assets": {
-          "traits": [
-            "Weapon§Standard",
-            "Weapon§Supercharge"
-          ]
-        }
-      },
-      "Weapon§Warhound turbo-laser destructor": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "D6+3"
-          },
-          "S": {
-            "value": "16"
-          },
-          "Type": {
-            "value": "Heavy 2D3"
-          },
-          "Range": {
-            "value": "72″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
-      },
-      "Weapon§Warhound vulcan megabolter": {
-        "stats": {
-          "AP": {
-            "value": "-2"
-          },
-          "D": {
-            "value": "2"
-          },
-          "S": {
-            "value": "6"
-          },
-          "Type": {
-            "value": "Heavy 20"
-          },
-          "Range": {
-            "value": "48″"
-          }
-        }
-      },
-      "Weapon§Warhound feet": {
-        "stats": {
-          "AP": {
-            "value": "-3"
-          },
-          "D": {
-            "value": "3"
-          },
-          "S": {
-            "value": "User"
-          },
-          "Type": {
-            "value": "Melee"
-          },
-          "Range": {
-            "value": "Melee"
-          }
-        },
-        "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
-      },
-      "Weapon§Reaver apocalypse launcher": {
-        "stats": {
-          "AP": {
-            "value": "-2"
-          },
-          "D": {
-            "value": "2"
-          },
-          "S": {
-            "value": "7"
-          },
-          "Type": {
-            "value": "Heavy 2D6"
-          },
-          "Range": {
-            "value": "24″-200″"
-          }
-        },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
-      },
-      "Weapon§Reaver feet": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "4"
-          },
-          "S": {
-            "value": "User"
-          },
-          "Type": {
-            "value": "Melee"
-          },
-          "Range": {
-            "value": "Melee"
-          }
-        },
-        "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
-      },
-      "Weapon§Warbringer Nemesis feet": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "4"
-          },
-          "S": {
-            "value": "User"
-          },
-          "Type": {
-            "value": "Melee"
-          },
-          "Range": {
-            "value": "Melee"
-          }
-        },
-        "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
-      },
-      "Weapon§Nemesis volcano cannon": {
-        "stats": {
-          "AP": {
-            "value": "-5"
-          },
-          "D": {
-            "value": "12"
-          },
-          "S": {
-            "value": "18"
-          },
-          "Type": {
-            "value": "Heavy 3D3"
-          },
-          "Range": {
-            "value": "24″-120″"
-          }
-        },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
-      },
       "Weapon§Apocalypse launcher": {
         "stats": {
           "AP": {
             "value": "-2"
           },
           "D": {
-            "value": "2"
+            "value": 2
           },
           "S": {
-            "value": "8"
+            "value": 8
           },
           "Type": {
             "value": "Heavy 2D6"
@@ -2700,7 +2512,7 @@
             "value": "D6"
           },
           "S": {
-            "value": "9"
+            "value": 9
           },
           "Type": {
             "value": "Heavy 1"
@@ -2711,44 +2523,25 @@
         },
         "text": "Each time an attack is made with this weapon profile when firing [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch), that attack hits on a roll of 5 or 6."
       },
-      "Weapon§Arioch power claw (shooting)": {
+      "Weapon§Ardex-defensor mauler": {
         "stats": {
           "AP": {
             "value": "-2"
           },
           "D": {
-            "value": "2"
+            "value": 2
           },
           "S": {
-            "value": "6"
+            "value": 6
           },
           "Type": {
-            "value": "Heavy 20"
+            "value": "Heavy 6"
           },
           "Range": {
-            "value": "48″"
-          }
-        }
-      },
-      "Weapon§Laser blaster": {
-        "stats": {
-          "AP": {
-            "value": "-4"
-          },
-          "D": {
-            "value": "D6+3"
-          },
-          "S": {
-            "value": "16"
-          },
-          "Type": {
-            "value": "Heavy 3D3"
-          },
-          "Range": {
-            "value": "72″"
+            "value": "36″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+        "text": "Each time an attack is made with this weapon profile when firing [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch), that attack hits on a roll of 5 or 6."
       },
       "Weapon§Arioch power claw (melee)": {
         "stats": {
@@ -2756,7 +2549,7 @@
             "value": "-5"
           },
           "D": {
-            "value": "18"
+            "value": 18
           },
           "S": {
             "value": "x2"
@@ -2768,15 +2561,173 @@
             "value": "Melee"
           }
         },
-        "text": "Each time a **VEHICLE** or MONSTER** model is destroyed as a result of an attack made with this weapon, you can select one enemy unit within 9\" and roll one D6; on a 4+ that unit suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+        "text": "Each time a **VEHICLE** or MONSTER** model is destroyed as a result of an attack made with this weapon, you can select one enemy unit within 9″ and roll one D6; on a 4+ that unit suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
-      "Weapon§Warlord feet": {
+      "Weapon§Arioch power claw (shooting)": {
+        "stats": {
+          "AP": {
+            "value": "-2"
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Heavy 20"
+          },
+          "Range": {
+            "value": "48″"
+          }
+        }
+      },
+      "Weapon§Belicosa volcano cannon": {
+        "stats": {
+          "AP": {
+            "value": "-5"
+          },
+          "D": {
+            "value": 12
+          },
+          "S": {
+            "value": 20
+          },
+          "Type": {
+            "value": "Heavy 3D3"
+          },
+          "Range": {
+            "value": "120″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Laser blaster": {
         "stats": {
           "AP": {
             "value": "-4"
           },
           "D": {
-            "value": "5"
+            "value": "D6+3"
+          },
+          "S": {
+            "value": 16
+          },
+          "Type": {
+            "value": "Heavy 3D3"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Macro gatling blaster": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 4
+          },
+          "S": {
+            "value": 9
+          },
+          "Type": {
+            "value": "Heavy 12"
+          },
+          "Range": {
+            "value": "100″"
+          }
+        }
+      },
+      "Weapon§Mori quake cannon": {
+        "stats": {
+          "AP": {
+            "value": "-5"
+          },
+          "D": {
+            "value": 6
+          },
+          "S": {
+            "value": 14
+          },
+          "Type": {
+            "value": "Heavy 3D6"
+          },
+          "Range": {
+            "value": "280″"
+          }
+        },
+        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+      },
+      "Weapon§Nemesis quake cannon": {
+        "stats": {
+          "AP": {
+            "value": "-5"
+          },
+          "D": {
+            "value": 6
+          },
+          "S": {
+            "value": 14
+          },
+          "Type": {
+            "value": "Heavy 3D6"
+          },
+          "Range": {
+            "value": "24″-480″"
+          }
+        },
+        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+      },
+      "Weapon§Nemesis volcano cannon": {
+        "stats": {
+          "AP": {
+            "value": "-5"
+          },
+          "D": {
+            "value": 12
+          },
+          "S": {
+            "value": 18
+          },
+          "Type": {
+            "value": "Heavy 3D3"
+          },
+          "Range": {
+            "value": "24″-120″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Reaver apocalypse launcher": {
+        "stats": {
+          "AP": {
+            "value": "-2"
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 7
+          },
+          "Type": {
+            "value": "Heavy 2D6"
+          },
+          "Range": {
+            "value": "24″-200″"
+          }
+        },
+        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+      },
+      "Weapon§Reaver feet": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 4
           },
           "S": {
             "value": "User"
@@ -2790,189 +2741,263 @@
         },
         "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
       },
-      "Weapon§Macro gatling blaster": {
+      "Weapon§Reaver gatling blaster": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": "-3"
           },
           "D": {
-            "value": "4"
+            "value": 3
           },
           "S": {
-            "value": "9"
+            "value": 8
           },
           "Type": {
             "value": "Heavy 12"
           },
           "Range": {
-            "value": "100″"
+            "value": "72″"
           }
         }
       },
-      "Wargear§Arioch power claw": {
-        "assets": {
-          "traits": [
-            "Weapon§Arioch power claw (melee)",
-            "Weapon§Arioch power claw (shooting)"
-          ]
-        }
-      },
-      "Lords of War§Warhound Titan": {
+      "Weapon§Reaver laser blaster": {
         "stats": {
-          "Power Level": {
-            "value": 100
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": "D6+3"
+          },
+          "S": {
+            "value": 16
+          },
+          "Type": {
+            "value": "Heavy 3D3"
+          },
+          "Range": {
+            "value": "72″"
           }
         },
-        "keywords": {
-          "Keywords": [
-            "God-engine",
-            "Titanic",
-            "Vehicle",
-            "Warhound Titan"
-          ],
-          "Faction": [
-            "<Titan Legion>",
-            "Adeptus Titanicus",
-            "Imperium"
-          ]
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Reaver melta cannon": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 8
+          },
+          "S": {
+            "value": 16
+          },
+          "Type": {
+            "value": "Heavy 2D6"
+          },
+          "Range": {
+            "value": "48″"
+          }
         },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§Flank Speed",
-            "Ability§Battle Titan",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Warhound Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of 12."
+      },
+      "Weapon§Reaver power fist": {
+        "stats": {
+          "AP": {
+            "value": "-5"
+          },
+          "D": {
+            "value": 12
+          },
+          "S": {
+            "value": "x2"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
         },
-        "text": "A Warhound Titan is equipped with: 2 Warhound vulcan mega-bolters; Warhound feet.\n\n• This model’s Warhound vulcan mega-bolters can each be replaced with one of the following: 1 Warhound inferno gun; 1 Warhound plasma blastgun; 1 Warhound turbo-laser destructor.\n\nnull",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+        "text": "Each time a **VEHICLE** or MONSTER** model is destroyed as a result of an attack made with this weapon, you can select one enemy unit within 9″ and roll one D6; on a 4+ that unit suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      },
+      "Weapon§Reaver volcano cannon": {
+        "stats": {
+          "AP": {
+            "value": "-5"
+          },
+          "D": {
+            "value": 12
+          },
+          "S": {
+            "value": 18
+          },
+          "Type": {
+            "value": "Heavy D6"
+          },
+          "Range": {
+            "value": "120″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Standard": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 4
+          },
+          "S": {
+            "value": 9
+          },
+          "Type": {
+            "value": "Heavy 2D6"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Supercharge": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 5
+          },
+          "S": {
+            "value": 10
+          },
+          "Type": {
+            "value": "Heavy 2D6"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). Each time an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1 is made for an attack with this weapon profile, the bearer suffers 2 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) after shooting with this weapon."
+      },
+      "Weapon§Warbringer Nemesis feet": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 4
+          },
+          "S": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
+      },
+      "Weapon§Warhound feet": {
+        "stats": {
+          "AP": {
+            "value": "-3"
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
+      },
+      "Weapon§Warhound inferno gun": {
+        "stats": {
+          "AP": {
+            "value": "-3"
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": 7
+          },
+          "Type": {
+            "value": "Heavy 4D6"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        },
+        "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
+      },
+      "Weapon§Warhound turbo-laser destructor": {
+        "stats": {
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": "D6+3"
+          },
+          "S": {
+            "value": 16
+          },
+          "Type": {
+            "value": "Heavy 2D3"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Warhound vulcan megabolter": {
+        "stats": {
+          "AP": {
+            "value": "-2"
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Heavy 20"
+          },
+          "Range": {
+            "value": "48″"
+          }
         }
       },
-      "Lords of War§Reaver Titan": {
+      "Weapon§Warlord feet": {
         "stats": {
-          "Power Level": {
-            "value": 150
+          "AP": {
+            "value": "-4"
+          },
+          "D": {
+            "value": 5
+          },
+          "S": {
+            "value": "User"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
           }
         },
-        "keywords": {
-          "Keywords": [
-            "God-engine",
-            "Reaver Titan",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Titan Legion>",
-            "Adeptus Titanicus",
-            "Imperium"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§Battle Titan",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Reaver Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Reaver Titan is equipped with: 2 Reaver gatling blaster; Reaver apocalypse launcher; Reaver feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon; 1 Reaver power fist.\n\nnull",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Warlord Titan": {
-        "stats": {
-          "Power Level": {
-            "value": 275
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "God-engine",
-            "Titanic",
-            "Vehicle",
-            "Warlord Titan"
-          ],
-          "Faction": [
-            "<Titan Legion>",
-            "Adeptus Titanicus",
-            "Imperium"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§War Engine",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Warlord Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Warlord Titan is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; 2 arioch power claws; Warlord feet.\n\n• This model’s 2 apocalypse launchers can be replaced with 2 laser blasters.\n\n• This model’s arioch power claws can each be replaced with one of the following: 1 belicosa volcano cannon; 1 macro gatling blaster; 1 mori quake cannon; 1 sunfury plasma annihilator.\n\nnull",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Warbringer Nemesis Titan": {
-        "stats": {
-          "Power Level": {
-            "value": 190
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "God-engine",
-            "Titanic",
-            "Vehicle",
-            "Warbringer Nemesis Titan"
-          ],
-          "Faction": [
-            "<Titan Legion>",
-            "Adeptus Titanicus",
-            "Imperium"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§Battle Titan",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Warbringer Nemesis Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Warbringer Nemesis Titan is equipped with: 3 ardex-defensor maulers; 2 Anvillus defence batteries; Nemesis quake cannon; 2 Reaver gatling blaster; Warbringer Nemesis feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon.\n\n• This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.\n\nnull",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
+        "text": "Each time an attack is made with this weapon profile, make 2 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
       }
     }
   }

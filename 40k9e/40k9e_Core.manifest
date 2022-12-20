@@ -1,5 +1,5 @@
 {
-  "name": "40k9e",
+  "name": "40k9ed",
   "revision": "0.2.1",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
@@ -9,6 +9,64 @@
   "wip": true,
   "manifest": {
     "assetTaxonomy": {
+      "Ability": {
+        "aspects": {
+          "Visibility": "active"
+        },
+        "rules": {
+          "Error in this Ability’s text": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "text"
+                  ]
+                ],
+                "value": "ERROR",
+                "contains": true,
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "error",
+            "evaluate": "AND"
+          }
+        }
+      },
+      "Antiquity Relic": {
+        "templateClass": "Artificer Relic"
+      },
+      "Artificer Relic": {
+        "templateClass": "Crusade Relic"
+      },
+      "Battle Trait": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Character Trait": {
+        "templateClass": "Battle Trait"
+      },
+      "Crusade Relic": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Dedicated Transport": {
+        "templateClass": "Unit"
+      },
       "Detachment": {
         "stats": {
           "HQ": {
@@ -124,9 +182,339 @@
         },
         "allowed": {
           "classifications": [
-            "Unit"
+            "HQ",
+            "Troops",
+            "Dedicated Transport",
+            "Elites",
+            "Fast Attack",
+            "Flyers",
+            "Heavy Support",
+            "Lords of War",
+            "Fortifications"
           ]
         }
+      },
+      "Elites": {
+        "templateClass": "Unit"
+      },
+      "Fast Attack": {
+        "templateClass": "Unit"
+      },
+      "Flyers": {
+        "templateClass": "Unit"
+      },
+      "Fortifications": {
+        "templateClass": "Unit"
+      },
+      "Heavy Support": {
+        "templateClass": "Unit"
+      },
+      "HQ": {
+        "templateClass": "Unit",
+        "text": ""
+      },
+      "Legendary Relic": {
+        "templateClass": "Artificer Relic"
+      },
+      "Lords of War": {
+        "templateClass": "Unit"
+      },
+      "Melee Enhancement": {
+        "templateClass": "Weapon Enhancement"
+      },
+      "Model": {
+        "stats": {
+          "Points": {
+            "value": null,
+            "format": "{v}",
+            "group": "Cost",
+            "groupOrder": -1,
+            "tracked": true,
+            "statType": "numeric"
+          },
+          "A": {
+            "value": 0,
+            "statOrder": 7,
+            "group": "Stats",
+            "statType": "term",
+            "visibility": "normal"
+          },
+          "BS": {
+            "format": "{v}+",
+            "value": 0,
+            "statOrder": 3,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 0,
+            "statOrder": 8,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": 0,
+            "statOrder": 4,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "format": "{v}+",
+            "value": 0,
+            "statOrder": 9,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "T": {
+            "value": 0,
+            "statOrder": 5,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": 0,
+            "statOrder": 6,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "WS": {
+            "format": "{v}+",
+            "value": 0,
+            "statOrder": 2,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "Base": {
+            "statType": "term",
+            "value": null,
+            "visibility": "active"
+          },
+          "M": {
+            "statType": "term",
+            "format": "{t}″",
+            "value": null,
+            "statOrder": 1,
+            "group": "Stats",
+            "visibility": "normal"
+          }
+        },
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "Monster Trait": {
+        "templateClass": "Battle Trait"
+      },
+      "Order of Battle": {
+        "allowed": {
+          "classifications": [
+            "Requisition",
+            "Unit"
+          ]
+        },
+        "aspects": {
+          "Group Includes": true
+        },
+        "rules": {
+          "hide enclosed assets": {
+            "evals": [],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "aspects",
+                    "Visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "active",
+                "iterations": 1
+              }
+            ]
+          },
+          "noPoints": {
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Points"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 0,
+                "iterations": 1
+              }
+            ]
+          },
+          "supplyUsedLimit": {
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power Level",
+                    "max"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Supply Limit",
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "requisitionCalc": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Tally",
+                    "value"
+                  ]
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": false,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Requisition"
+                  ]
+                }
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Requisition Points",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "rules",
+                  "requisitionCalc",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "iterations": 1
+              }
+            ]
+          }
+        },
+        "stats": {
+          "Supply Limit": {
+            "statType": "numeric",
+            "increment": {
+              "value": 1
+            },
+            "value": 50,
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": false
+          },
+          "Power Level": {
+            "statType": "numeric",
+            "label": "Supply Used",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
+          },
+          "Battle Tally": {
+            "value": 0,
+            "statType": "numeric",
+            "increment": {
+              "value": 1
+            },
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": false
+          },
+          "Battles Won": {
+            "value": 0,
+            "statType": "numeric",
+            "increment": {
+              "value": 1
+            },
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": false
+          },
+          "Requisition Points": {
+            "value": 5,
+            "statType": "numeric",
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true,
+            "max": 5
+          }
+        }
+      },
+      "Psychic Fortitude": {
+        "keywords": {
+          "Tags": [
+            "Battle Honours"
+          ]
+        }
+      },
+      "Psychic Power": {
+        "aspects": {
+          "Visibility": "active"
+        }
+      },
+      "Ranged Enhancement": {
+        "templateClass": "Weapon Enhancement"
+      },
+      "Relic": {
+        "templateClass": "Weapon"
+      },
+      "Relic Weapon": {
+        "templateClass": "Weapon"
+      },
+      "Requisition": {
+        "aspects": {
+          "Describe": true
+        }
+      },
+      "Troops": {
+        "templateClass": "Unit"
       },
       "Unit": {
         "stats": {
@@ -231,6 +619,7 @@
           }
         },
         "keywords": {
+          "Source": [],
           "Tags": [
             "Unit"
           ],
@@ -1260,125 +1649,116 @@
           "Rename": true
         },
         "removed": {
-          "stats": {
-            "Marked for Greatness": {}
+          "stats": {}
+        }
+      },
+      "Upgrade": {
+        "stats": {
+          "Points": {
+            "statType": "numeric",
+            "format": "+{v}",
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
+          },
+          "Power Level": {
+            "statType": "numeric",
+            "format": "+{v}",
+            "visibility": "normal",
+            "dynamic": false,
+            "tracked": true
           }
         }
       },
-      "Model": {
+      "Vehicle Trait": {
+        "templateClass": "Battle Trait"
+      },
+      "Wargear": {
         "stats": {
-          "Points": {
-            "value": null,
-            "format": "{v}",
-            "group": "Cost",
-            "groupOrder": -1,
-            "tracked": true,
-            "statType": "numeric"
-          },
-          "A": {
-            "value": "0",
-            "statOrder": 7,
-            "group": "Stats",
-            "statType": "term",
-            "visibility": "normal"
-          },
-          "BS": {
-            "format": "{v}+",
+          "keyword?": {
+            "statType": "rank",
             "value": 0,
-            "statOrder": 3,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "Ld": {
-            "value": 0,
-            "statOrder": 8,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "S": {
-            "value": 0,
-            "statOrder": 4,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "Sv": {
-            "format": "{v}+",
-            "value": 0,
-            "statOrder": 9,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "T": {
-            "value": 0,
-            "statOrder": 5,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "W": {
-            "value": 0,
-            "statOrder": 6,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "WS": {
-            "format": "{v}+",
-            "value": 0,
-            "statOrder": 2,
-            "group": "Stats",
-            "statType": "numeric",
-            "visibility": "normal"
-          },
-          "Base": {
-            "statType": "term",
-            "value": null,
-            "visibility": "active"
-          },
-          "M": {
-            "statType": "term",
-            "format": "{t}″",
-            "value": null,
-            "statOrder": 1,
-            "group": "Stats",
-            "visibility": "normal"
+            "ranks": {
+              "0": {
+                "order": 0
+              },
+              "1": {
+                "order": 1
+              }
+            },
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "add keyword": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "designation"
+                ],
+                "contains": true,
+                "operator": "AND",
+                "not": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "keyword?",
+                    "value"
+                  ]
+                ],
+                "value": 1,
+                "operator": "AND",
+                "not": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 12,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "keywords",
+                    "General"
+                  ]
+                ],
+                "actionType": "add",
+                "value": [
+                  "{self}",
+                  "designation"
+                ],
+                "iterations": 1
+              }
+            ]
           }
         },
         "aspects": {
-          "Type": "game piece"
+          "Visibility": "always"
         }
       },
-      "HQ": {
-        "templateClass": "Unit",
-        "text": ""
-      },
-      "Troops": {
-        "templateClass": "Unit"
-      },
-      "Elites": {
-        "templateClass": "Unit"
-      },
-      "Fast Attack": {
-        "templateClass": "Unit"
-      },
-      "Flyers": {
-        "templateClass": "Unit"
-      },
-      "Heavy Support": {
-        "templateClass": "Unit"
-      },
-      "Fortifications": {
-        "templateClass": "Unit"
-      },
-      "Dedicated Transport": {
-        "templateClass": "Unit"
-      },
-      "Lords of War": {
-        "templateClass": "Unit"
+      "Warlord Trait": {
+        "stats": {
+          "Discipline": {
+            "statType": "term",
+            "visibility": "active",
+            "dynamic": false,
+            "tracked": false
+          }
+        }
       },
       "Weapon": {
         "stats": {
@@ -1422,336 +1802,6 @@
           "Visibility": "always"
         }
       },
-      "Wargear": {
-        "stats": {
-          "keyword?": {
-            "statType": "rank",
-            "value": "0",
-            "ranks": {
-              "0": {
-                "order": 0
-              },
-              "1": {
-                "order": 1
-              }
-            },
-            "visibility": "hidden"
-          }
-        },
-        "rules": {
-          "add keyword": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{parent}",
-                    "{parent}",
-                    "keywords",
-                    "General"
-                  ]
-                ],
-                "value": [
-                  "{self}",
-                  "designation"
-                ],
-                "contains": true,
-                "operator": "AND",
-                "not": true
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "keyword?",
-                    "value"
-                  ]
-                ],
-                "value": "1",
-                "operator": "AND",
-                "not": false
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "order": 12,
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{parent}",
-                    "{parent}",
-                    "keywords",
-                    "General"
-                  ]
-                ],
-                "actionType": "add",
-                "value": [
-                  "{self}",
-                  "designation"
-                ],
-                "iterations": 1
-              }
-            ]
-          }
-        },
-        "aspects": {
-          "Visibility": "always"
-        }
-      },
-      "Ability": {
-        "aspects": {
-          "Visibility": "active"
-        },
-        "rules": {
-          "Error in this Ability’s text": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "text"
-                  ]
-                ],
-                "value": "ERROR",
-                "contains": true,
-                "operator": "AND",
-                "not": true,
-                "actionable": true
-              }
-            ],
-            "failState": "error",
-            "evaluate": "AND"
-          }
-        }
-      },
-      "Order of Battle": {
-        "allowed": {
-          "classifications": [
-            "Requisition",
-            "Unit"
-          ]
-        },
-        "aspects": {
-          "Group Includes": true
-        },
-        "rules": {
-          "hide enclosed assets": {
-            "evals": [],
-            "failState": "pass",
-            "evaluate": "OR",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "assets",
-                    "templateClass",
-                    "Unit",
-                    "aspects",
-                    "Visibility"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "active",
-                "iterations": 1
-              }
-            ]
-          },
-          "noPoints": {
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Points"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 0,
-                "iterations": 1
-              }
-            ]
-          },
-          "supplyUsedLimit": {
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Power Level",
-                    "max"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "stats",
-                  "Supply Limit",
-                  "value"
-                ],
-                "iterations": 1
-              }
-            ]
-          },
-          "requisitionCalc": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Battle Tally",
-                    "value"
-                  ]
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": false,
-                "equation": {
-                  "operator": "T-O",
-                  "value": [
-                    "{self}",
-                    "tally",
-                    "Requisition"
-                  ]
-                }
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Requisition Points",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": [
-                  "{self}",
-                  "rules",
-                  "requisitionCalc",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ],
-                "iterations": 1
-              }
-            ]
-          }
-        },
-        "stats": {
-          "Supply Limit": {
-            "statType": "numeric",
-            "increment": {
-              "value": 1
-            },
-            "value": 50,
-            "visibility": "normal",
-            "dynamic": true,
-            "tracked": false
-          },
-          "Power Level": {
-            "statType": "numeric",
-            "label": "Supply Used",
-            "value": 0,
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": true
-          },
-          "Battle Tally": {
-            "value": 0,
-            "statType": "numeric",
-            "increment": {
-              "value": 1
-            },
-            "visibility": "normal",
-            "dynamic": true,
-            "tracked": false
-          },
-          "Battles Won": {
-            "value": 0,
-            "statType": "numeric",
-            "increment": {
-              "value": 1
-            },
-            "visibility": "normal",
-            "dynamic": true,
-            "tracked": false
-          },
-          "Requisition Points": {
-            "value": 5,
-            "statType": "numeric",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": true,
-            "max": 5
-          }
-        }
-      },
-      "Psychic Power": {
-        "aspects": {
-          "Visibility": "active"
-        }
-      },
-      "Warlord Trait": {
-        "stats": {
-          "Discipline": {
-            "statType": "term",
-            "visibility": "active",
-            "dynamic": false,
-            "tracked": false
-          }
-        }
-      },
-      "Upgrade": {
-        "stats": {
-          "Points": {
-            "statType": "numeric",
-            "format": "+{v}",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": true
-          },
-          "Power Level": {
-            "statType": "numeric",
-            "format": "+{v}",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": true
-          }
-        }
-      },
-      "Battle Trait": {
-        "aspects": {
-          "Unique": true
-        },
-        "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
-        }
-      },
-      "Character Trait": {
-        "templateClass": "Battle Trait"
-      },
-      "Vehicle Trait": {
-        "templateClass": "Battle Trait"
-      },
-      "Monster Trait": {
-        "templateClass": "Battle Trait"
-      },
       "Weapon Enhancement": {
         "aspects": {
           "Unique": true
@@ -1761,52 +1811,21 @@
             "Battle Honours"
           ]
         }
-      },
-      "Melee Enhancement": {
-        "templateClass": "Weapon Enhancement"
-      },
-      "Ranged Enhancement": {
-        "templateClass": "Weapon Enhancement"
-      },
-      "Psychic Fortitude": {
-        "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
-        }
-      },
-      "Crusade Relic": {
-        "aspects": {
-          "Unique": true
-        },
-        "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
-        }
-      },
-      "Artificer Relic": {
-        "templateClass": "Crusade Relic"
-      },
-      "Antiquity Relic": {
-        "templateClass": "Artificer Relic"
-      },
-      "Legendary Relic": {
-        "templateClass": "Artificer Relic"
-      },
-      "Requisition": {
-        "aspects": {
-          "Describe": true
-        }
-      },
-      "Relic Weapon": {
-        "templateClass": "Weapon"
-      },
-      "Relic": {
-        "templateClass": "Weapon"
       }
     },
     "assetCatalog": {
+      "Battle Trait§Battle-tested": {},
+      "Battle Trait§Cool-headed": {},
+      "Battle Trait§Fleet of Foot": {},
+      "Battle Trait§Grizzled": {},
+      "Battle Trait§Headhunters": {},
+      "Battle Trait§Veteran Warriors": {},
+      "Character Trait§Deadly Charge": {},
+      "Character Trait§Heroic Constitution": {},
+      "Character Trait§Inspiring Hero": {},
+      "Character Trait§Resilient": {},
+      "Character Trait§Swift and Agile": {},
+      "Character Trait§Tactical Experience": {},
       "Detachment§Auxiliary Support Detachment": {
         "stats": {
           "Command Cost": {
@@ -2041,7 +2060,7 @@
             },
             "dynamic": true,
             "tracked": true,
-            "value": "3"
+            "value": 3
           },
           "Lord of War": {
             "value": 0,
@@ -2078,7 +2097,7 @@
                     "value"
                   ]
                 ],
-                "value": "3",
+                "value": 3,
                 "operator": "AND",
                 "not": false
               }
@@ -2371,7 +2390,61 @@
           }
         }
       },
+      "Melee Enhancement§Brutal": {},
+      "Melee Enhancement§Finely Balanced": {},
+      "Melee Enhancement§Fleshbane": {},
+      "Melee Enhancement§Heirloom": {},
+      "Melee Enhancement§Razor-edged": {},
+      "Melee Enhancement§Shredder": {},
+      "Monster Trait§Apex Predator": {},
+      "Monster Trait§Frenzied": {},
+      "Monster Trait§Regenerates": {},
+      "Monster Trait§Terrifying": {},
+      "Monster Trait§Thickened Hide": {},
+      "Monster Trait§Unstoppable": {},
       "Order of Battle§Order of Battle": {},
+      "Psychic Fortitude§Adamantium Will": {},
+      "Psychic Fortitude§Master of Lore": {},
+      "Psychic Fortitude§Psychic Might": {},
+      "Psychic Power§Smite": {
+        "text": "*Smite* has a warp charge value of 5. Add 1 to the warp charge value of this psychic power for each other attempt that has been made to *manifest* this power by a unit from your army in this phase, whether that attempt was successful or not. If manifested, the closest enemy unit within 18″ of and visible to the psyker suffers D3 *mortal wounds*. If the result of the *Psychic test* was 11 or more, that unit suffers D6 mortal wounds instead.\n\n**Warp Charge 5**: A Psychic test of 5+ is required to manifest *Smite*.\nWarp charge increases by 1 for each other attempt to manifest *Smite* made in this phase.\nIf manifested, closest visible enemy unit in 18″ suffers D3 mortal wounds.\nIf manifested with a Psychic test result of 11+, enemy instead suffers D6 mortal wounds."
+      },
+      "Ranged Enhancement§Accelerator": {},
+      "Ranged Enhancement§Armour Piercing": {},
+      "Ranged Enhancement§Auto-loader": {},
+      "Ranged Enhancement§High Calibre": {},
+      "Ranged Enhancement§Improved Sights": {},
+      "Ranged Enhancement§Master-worked": {},
+      "Requisition§Fresh Recruits": {},
+      "Requisition§Increase Supply Limit": {
+        "rules": {
+          "increaseSupplyLimit": {
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Power Level",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 5,
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
+      "Requisition§Psychic Meditations": {},
+      "Requisition§Rearm and Resupply": {},
+      "Requisition§Relic": {},
+      "Requisition§Repair and Recuperate": {},
+      "Requisition§Specialist Reinforcements": {},
+      "Requisition§Warlord Trait": {},
       "Roster§Army": {
         "aspects": {
           "Lock Qty": true,
@@ -2890,78 +2963,12 @@
           }
         }
       },
-      "Psychic Power§Smite": {
-        "text": "*Smite* has a warp charge value of 5. Add 1 to the warp charge value of this psychic power for each other attempt that has been made to *manifest* this power by a unit from your army in this phase, whether that attempt was successful or not. If manifested, the closest enemy unit within 18\" of and visible to the psyker suffers D3 *mortal wounds*. If the result of the *Psychic test* was 11 or more, that unit suffers D6 mortal wounds instead.\n\n**Warp Charge 5**: A Psychic test of 5+ is required to manifest *Smite*.\nWarp charge increases by 1 for each other attempt to manifest *Smite* made in this phase.\nIf manifested, closest visible enemy unit in 18\" suffers D3 mortal wounds.\nIf manifested with a Psychic test result of 11+, enemy instead suffers D6 mortal wounds."
-      },
-      "Character Trait§Swift and Agile": {},
-      "Character Trait§Heroic Constitution": {},
-      "Character Trait§Deadly Charge": {},
-      "Character Trait§Tactical Experience": {},
-      "Character Trait§Resilient": {},
-      "Character Trait§Inspiring Hero": {},
-      "Monster Trait§Unstoppable": {},
-      "Monster Trait§Apex Predator": {},
-      "Monster Trait§Thickened Hide": {},
-      "Monster Trait§Frenzied": {},
-      "Monster Trait§Regenerates": {},
-      "Monster Trait§Terrifying": {},
-      "Vehicle Trait§Enhanced Engines": {},
-      "Vehicle Trait§Elite Crew": {},
-      "Vehicle Trait§Improved Shielding": {},
       "Vehicle Trait§Armourbane": {},
-      "Vehicle Trait§Repair Systems": {},
       "Vehicle Trait§Blessed Hull": {},
-      "Battle Trait§Fleet of Foot": {},
-      "Battle Trait§Veteran Warriors": {},
-      "Battle Trait§Grizzled": {},
-      "Battle Trait§Headhunters": {},
-      "Battle Trait§Cool-headed": {},
-      "Battle Trait§Battle-tested": {},
-      "Ranged Enhancement§Auto-loader": {},
-      "Ranged Enhancement§Armour Piercing": {},
-      "Ranged Enhancement§High Calibre": {},
-      "Ranged Enhancement§Improved Sights": {},
-      "Ranged Enhancement§Accelerator": {},
-      "Ranged Enhancement§Master-worked": {},
-      "Melee Enhancement§Heirloom": {},
-      "Melee Enhancement§Razor-edged": {},
-      "Melee Enhancement§Brutal": {},
-      "Melee Enhancement§Finely Balanced": {},
-      "Melee Enhancement§Shredder": {},
-      "Melee Enhancement§Fleshbane": {},
-      "Psychic Fortitude§Psychic Might": {},
-      "Psychic Fortitude§Adamantium Will": {},
-      "Psychic Fortitude§Master of Lore": {},
-      "Requisition§Increase Supply Limit": {
-        "rules": {
-          "increaseSupplyLimit": {
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Power Level",
-                    "max"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": 5,
-                "iterations": 1
-              }
-            ]
-          }
-        }
-      },
-      "Requisition§Fresh Recruits": {},
-      "Requisition§Rearm and Resupply": {},
-      "Requisition§Repair and Recuperate": {},
-      "Requisition§Psychic Meditations": {},
-      "Requisition§Specialist Reinforcements": {},
-      "Requisition§Warlord Trait": {},
-      "Requisition§Relic": {},
+      "Vehicle Trait§Elite Crew": {},
+      "Vehicle Trait§Enhanced Engines": {},
+      "Vehicle Trait§Improved Shielding": {},
+      "Vehicle Trait§Repair Systems": {},
       "Warlord Trait§Inspiring Leader": {
         "text": "Add 1 to the Leadership characteristic of friendly units while they are within 6″ of this **WARLORD**."
       }

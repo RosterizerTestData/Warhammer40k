@@ -29,8 +29,9 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.',
-    revision: '0.0.5',
+    notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.6',
+    wip: true,
     dependencies: [
       {
         slug: "123456",
@@ -466,11 +467,6 @@ processUnits = (data,assetCatalog) => {
       }
     }
 
-    let keywords = data.keywords.filter(keyword => keyword.datasheet_id === unitId && !keyword.is_faction_keyword);
-    if(keywords.length) tempItem.keywords.Keywords = keywords.map(keyword => keyword.keyword);
-    let factionKeywords = data.keywords.filter(keyword => keyword.datasheet_id === unitId && keyword.is_faction_keyword);
-    if(factionKeywords.length) tempItem.keywords.Faction = factionKeywords.map(keyword => keyword.keyword);
-
     let options = data.options.filter(option => option.datasheet_id === unitId);
     tempItem.text = formatText(datasheet.unit_composition + '\n\n' + options.map(option => (option.button || '') + ' ' + option.description).join('\n\n') + '\n\n' + datasheet.psyker);
 
@@ -638,8 +634,14 @@ processUnits = (data,assetCatalog) => {
       let errataDate = source.errata_date.split(' ')[0].split('.').reverse().join('-');
       tempItem.meta = tempItem.meta || {};
       tempItem.meta.Publication = `[${source.name} (${source.type}) ${ordinalize(source.edition)} ed. – ${source.version || ''} @${errataDate}](${source.errata_link})`;
+      tempItem.keywords.Source = [`${source.type}—${source.name}${source.version ? ('—'+source.version) : ''}`];
+      if(source.edition) tempItem.keywords.Edition = [ordinalize(source.edition)];
     }
-    // TODO implement dynamic stats
+
+    let keywordList = data.keywords.filter(keyword => keyword.datasheet_id === unitId && !keyword.is_faction_keyword);
+    if(keywordList.length) tempItem.keywords.Keywords = keywordList.map(keyword => keyword.keyword);
+    let factionKeywords = data.keywords.filter(keyword => keyword.datasheet_id === unitId && keyword.is_faction_keyword);
+    if(factionKeywords.length) tempItem.keywords.Faction = factionKeywords.map(keyword => keyword.keyword);
 
     let modelDamage = data.damage.filter(dmgLine => dmgLine.datasheet_id == unitId);
     if(modelDamage.length){
