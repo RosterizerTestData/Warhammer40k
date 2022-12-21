@@ -689,7 +689,7 @@ processUnits = (data,assetCatalog) => {
   data.datasheets.forEach(datasheet => {
     let unitId = datasheet.datasheet_id;
     let models = data.models.filter(model => model.datasheet_id === unitId);
-    console.log(unitId,data.models,unitId)
+    // console.log(unitId,data.models,unitId)
     let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0]?.itemKey;
     let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
     if(singleModelUnit && modelItemKey) delete assetCatalog[modelItemKey];

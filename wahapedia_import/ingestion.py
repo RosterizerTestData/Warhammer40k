@@ -606,11 +606,11 @@ else:
         data = data + [
           re.sub("[a-zA-Z]*","",row[indexer["datasheet_id"]]), # datasheet_id
           row[indexer["line"]], # line
-          row[indexer["col1"]].replace('+', ''), # col1
-          row[indexer["col2"]].replace('+', ''), # col2
-          row[indexer["col3"]].replace('+', ''), # col3
-          row[indexer["col4"]].replace('+', ''), # col4
-          row[indexer["col5"]].replace('+', ''), # col5
+          row[indexer["col1"]].replace('+', '').replace('"',''), # col1
+          row[indexer["col2"]].replace('+', '').replace('"',''), # col2
+          row[indexer["col3"]].replace('+', '').replace('"',''), # col3
+          row[indexer["col4"]].replace('+', '').replace('"',''), # col4
+          row[indexer["col5"]].replace('+', '').replace('"',''), # col5
         ]
       query = query[:-1] + " ON DUPLICATE KEY UPDATE check_me=1"
       cur.execute(query,data)
