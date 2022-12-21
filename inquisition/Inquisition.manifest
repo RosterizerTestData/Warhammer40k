@@ -1,11 +1,11 @@
 {
   "name": "Inquisition",
-  "revision": "0.0.6",
+  "revision": "0.0.7",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -28,13 +28,13 @@
         "text": "If this unit contains 1 **ACOLYTE** model at the start of the battle, it gains the [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) keyword."
       },
       "Ability§Authority of the Inquisition": {
-        "text": "**INFANTRY** units with this ability can [embark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) aboard any **IMPERIUM TRANSPORT** model, even if that model normally only permits models with other Faction keywords to do so. All other restrictions apply normally (e.g. TERMINATOR** models can only embark aboard [Transports](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports) that allow TERMINATOR** models to do so).\n\n\n\nIf your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), the following rules apply:\n\n* No more than one INQUISITOR** unit can be included in any INQUISITION** Detachment (that is, a Detachment that includes only INQUISITION** units).\n* You can include one **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM** (excluding FALLEN**) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment) and [Brigade Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) in your army without those units taking up slots in those Detachments. The inclusion of an AGENT** OF** THE** IMPERIUM** unit does not prevent other units from their Detachment from benefiting from Detachment abilities (e.g. Chapter Tactics, etc.), and it does not prevent other units from your army from benefiting from abilities that require every model in your army to have that ability (e.g. <span class=\"tt kwbu\">Combat <span class=\"tt kwbu\">Doctrines</span></span>, etc.). An AGENT** OF** THE** IMPERIUM** unit included in a Patrol, Battalion or Brigade Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common, and when determining your [Army Faction](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Army-Faction)."
+        "text": "**INFANTRY** units with this ability can [embark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) aboard any **IMPERIUM TRANSPORT** model, even if that model normally only permits models with other Faction keywords to do so. All other restrictions apply normally (e.g. TERMINATOR** models can only embark aboard [Transports](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports) that allow TERMINATOR** models to do so).\n\n\n\nIf your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), the following rules apply:\n\n* No more than one INQUISITOR** unit can be included in any INQUISITION** Detachment (that is, a Detachment that includes only INQUISITION** units).\n* You can include one **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM** (excluding FALLEN**) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment) and [Brigade Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) in your army without those units taking up slots in those Detachments. The inclusion of an AGENT** OF** THE** IMPERIUM** unit does not prevent other units from their Detachment from benefiting from Detachment abilities (e.g. Chapter Tactics, etc.), and it does not prevent other units from your army from benefiting from abilities that require every model in your army to have that ability (e.g. **Combat Doctrines**, etc.). An AGENT** OF** THE** IMPERIUM** unit included in a Patrol, Battalion or Brigade Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common, and when determining your [Army Faction](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Army-Faction)."
       },
       "Ability§Daemonic": {
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Daemonic Power": {
-        "text": "At the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), roll one D6 for each model with this ability and apply the following result:\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">**D6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Result**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">1-2**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Daemonic Speed:** Until the start of your next turn, this model has a Move characteristic of 12″ and can <span class=\"tt kwbu\">FLY**</span>.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">3-4**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Re-knit Host Form:** This model regains all its lost wounds.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">5-6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Energy Torrent:** Roll one D6 for each enemy unit within 3″ of this model; on a 2+ that enemy unit suffers D3 <span class=\"tt kwbu\">mortal <span class=\"tt kwbu\">wounds</span></span>.</td></tr></tbody></table></td></tr></tbody></table>"
+        "text": "At the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), roll one D6 for each model with this ability and apply the following result:\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">**D6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Result**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">1-2**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Daemonic Speed:** Until the start of your next turn, this model has a Move characteristic of 12″ and can **FLY**.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">3-4**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Re-knit Host Form:** This model regains all its lost wounds.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">5-6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Energy Torrent:** Roll one D6 for each enemy unit within 3″ of this model; on a 2+ that enemy unit suffers D3 **mortal wounds**.</td></tr></tbody></table></td></tr></tbody></table>"
       },
       "Ability§Defence Orbs": {
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
@@ -46,19 +46,19 @@
         "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Ability§Inconceivable Customisation": {
-        "text": "At the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), you can select one friendly **&lt;ORDO&gt;** unit within 3″ of this model and roll one D6: apply the result from the table below to the selected unit until the end of the turn. A unit can be affected by more than one source of this ability (e.g. from multiple **JOKAERO WEAPONSMITHS**) in the same Shooting phase, but duplicated results will have no effect.\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">D6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Result**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">1-2**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Augmented Targeting:** When resolving an attack made by a model in this unit, you can re-roll the <span class=\"tt kwbu\">hit <span class=\"tt kwbu\">roll</span></span>.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">3-4**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Augmented Penetration:** When resolving an attack made by a model in this unit, you can re-roll the <span class=\"tt kwbu\">wound <span class=\"tt kwbu\">roll</span></span>.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">5-6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Total Augmentation:** When resolving an attack made by a model in this unit, you can re-roll the <span class=\"tt kwbu\">hit <span class=\"tt kwbu\">roll</span></span> and you can re-roll the <span class=\"tt kwbu\">wound <span class=\"tt kwbu\">roll</span></span>.</td></tr></tbody></table></td></tr></tbody></table>"
+        "text": "At the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), you can select one friendly **&lt;ORDO&gt;** unit within 3″ of this model and roll one D6: apply the result from the table below to the selected unit until the end of the turn. A unit can be affected by more than one source of this ability (e.g. from multiple **JOKAERO WEAPONSMITHS**) in the same Shooting phase, but duplicated results will have no effect.\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">D6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Result**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">1-2**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Augmented Targeting:** When resolving an attack made by a model in this unit, you can re-roll the **hit roll**.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">3-4**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Augmented Penetration:** When resolving an attack made by a model in this unit, you can re-roll the **wound roll**.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">5-6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Total Augmentation:** When resolving an attack made by a model in this unit, you can re-roll the **hit roll** and you can re-roll the **wound roll**.</td></tr></tbody></table></td></tr></tbody></table>"
       },
       "Ability§Indomitable": {
         "text": "When a [Deny the Witch test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) is taken for this model, add 1 to the total."
       },
       "Ability§Iron Will": {
-        "text": "If this model is not a [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and a psychic power manifested by an enemy model targets this model, roll 2D6: if the total is greater than or equal to the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) total, this model is not affected by that power (other models are still affected normally).\n\nERROR: The following text was found on another ability with the same name.\n\nIf a psychic power [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by an enemy model targets this model, roll 2D6: if the total is greater than or equal to the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) total, this model is not affected by that power (other models are still affected normally)."
+        "text": "If this model is not a [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and a psychic power manifested by an enemy model targets this model, roll 2D6: if the total is greater than or equal to the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) total, this model is not affected by that power (other models are still affected normally).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIf a psychic power [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by an enemy model targets this model, roll 2D6: if the total is greater than or equal to the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) total, this model is not affected by that power (other models are still affected normally)."
       },
       "Ability§Loyal Servant": {
         "text": "When a friendly **&lt;ORDO&gt; INQUISITOR** model within 3″ of this unit would lose any wounds as a result of an attack made against that model, this unit can attempt to intercept that attack. Roll one D6; on a 2+ that model does not lose those wounds and one model from this unit is destroyed. Only one attempt can be made to intercept each attack."
       },
       "Ability§Malus Codicium": {
-        "text": "Once per battle, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can use this ability. If you do so, this model loses the <span class=\"tt kwbu\">Unquestionable <span class=\"tt kwbu\">Wisdom</span></span> ability. Set up a **DAEMONHOST** model within 6″ of this model and more than 9″ away from any enemy models. Add 2 to that model’s Strength, Toughness, Wounds and Attacks characteristics. If this model is destroyed, that DAEMONHOST** model is also destroyed."
+        "text": "Once per battle, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can use this ability. If you do so, this model loses the **Unquestionable Wisdom** ability. Set up a DAEMONHOST** model within 6″ of this model and more than 9″ away from any enemy models. Add 2 to that model’s Strength, Toughness, Wounds and Attacks characteristics. If this model is destroyed, that DAEMONHOST** model is also destroyed."
       },
       "Ability§No Stranger to Pain": {
         "text": "When this model would lose a wound, roll one D6; on a 6, that wound is not lost."
@@ -79,7 +79,7 @@
         "text": "Whilst the **DAEMONHOST** model that was set up with this model’s Malus Codicium** ability is within 6″ of this model, when resolving an attack made by that model, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll), and when resolving an attack made against that model, add 1 to its [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) forthat attack."
       },
       "Ability§Refractor Field": {
-        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Shang": {
         "text": "When this model [manifests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power, you can select one enemy unit within 18″ and visible to this model to be affected, instead of the closest enemy unit."
@@ -129,6 +129,8 @@
             "statType": "numeric",
             "dynamic": true,
             "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
             "value": 1,
             "min": 1,
             "max": 6,
@@ -157,7 +159,7 @@
             "Model§Acolyte"
           ]
         },
-        "text": "This unit’s **Power Rating** is equal to the number of models in this unit. Every model is equipped with: laspistol; chainsword.\n\n• Any model can be equipped with 1 weapon from the ***Pistol Weapons*** list instead of 1 laspistol.\n\n• Any model can be equipped with 1 weapon from the **Melee Weapons** or **Ranged Weapons*** lists instead of 1 chainsword.\n\n\nERROR: there might be a problem with Power Rating that will require a custom rule.",
+        "text": "This unit’s **Power Rating** is equal to the number of models in this unit. Every model is equipped with: laspistol; chainsword.\n\n• Any model can be equipped with 1 weapon from the ***Pistol Weapons*** list instead of 1 laspistol.\n\n• Any model can be equipped with 1 weapon from the **Melee Weapons** or **Ranged Weapons*** lists instead of 1 chainsword.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
         "allowed": {
           "items": [
             "Model§Acolyte"
@@ -168,1237 +170,7 @@
         "stats": {
           "Power Level": {
             "value": 1
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Character",
-            "Daemon",
-            "Daemonhost",
-            "Infantry"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Daemonic Power",
-            "Ability§Daemonic",
-            {
-              "item": "Model§Daemonhost",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Daemonhost is equipped with: unholy gaze; warp grasp."
-      },
-      "Elites§Jokaero Weaponsmith": {
-        "stats": {
-          "Power Level": {
-            "value": 1
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Character",
-            "Infantry",
-            "Jokaero Weaponsmith"
-          ],
-          "Faction": [
-            "<Ordo>",
-            "Imperium",
-            "Inquisition",
-            "Jokaero"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Defence Orbs",
-            "Ability§Inconceivable Customisation",
-            {
-              "item": "Model§Jokaero Weaponsmith",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Jokaero Weaponsmith is equipped with: Jokaero weapons."
-      },
-      "Heavy Support§Inquisition Land Raider Prometheus": {
-        "stats": {
-          "Power Level": {
-            "value": 16
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Warhammer Legends: Forge World—1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Assault Launchers",
-            "Inquisition Land Raider Prometheus",
-            "Land Raider",
-            "Machine Spirit",
-            "Transport",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Ordo>",
-            "Imperium",
-            "Inquisition"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Quarry",
-            "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            {
-              "item": "Model§Inquisition Land Raider Prometheus",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "An Inquisition Land Raider Prometheus is equipped with: 2 quad heavy bolters.\n\n• This model can be equipped with 1 multi-melta.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 hunter-killer missile.",
-        "meta": {
-          "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
-        }
-      },
-      "HQ§Inquisitor": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Infantry",
-            "Inquisitor",
-            "Psyker"
-          ],
-          "Faction": [
-            "<Ordo>",
-            "Imperium",
-            "Inquisition"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Refractor Field",
-            "Ability§Iron Will",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Inquisitor (Inquisitor)",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "An Inquisitor is equipped with: bolt pistol; chainsword; frag grenades; krak grenades.\n\n• This model can have the [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) keyword. If it does, it can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 weapon from the **Pistol Weapons** list; 1 weapon from the **Ranged Weapons*** list.\n\n• This model can be equipped with 1 weapon from the **Melee Weapons*** list instead of 1 chainsword.\n\nIf this model is a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        }
-      },
-      "HQ§Inquisitor (Legendary)": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Datasheet—Warhammer Legends: Inquisition"
-          ],
-          "Edition": [
-            "8th"
-          ],
-          "Keywords": [
-            "Character",
-            "Infantry",
-            "Inquisitor",
-            "Psyker"
-          ],
-          "Faction": [
-            "<Ordo>",
-            "Imperium",
-            "Inquisition"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Refractor Field",
-            "Ability§Unquestionable Wisdom",
-            "Ability§Iron Will",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Inquisitor (Inquisitor (Legendary))",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "An Inquisitor is a single model equipped with: bolt pistol; chainsword; frag grenades; krak grenades.\n\n• This model can have the [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) keyword. If it does, it can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 weapon from the **Pistol Weapons*** list, 1 weapon from the Ranged Weapons list.\n\n• This model can be equipped with 1 weapon from the **Melee Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with 1 null rod instead of 1 chainsword.\n\nIf this model is a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        },
-        "meta": {
-          "Publication": "[Warhammer Legends: Inquisition (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/bd01e2da.pdf)"
-        }
-      },
-      "HQ§Inquisitor Coteaz": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Coteaz",
-            "Infantry",
-            "Inquisitor",
-            "Psyker"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Malleus"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Refractor Field",
-            "Ability§Spy Network",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Inquisitor Coteaz",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Inquisitor Coteaz is equipped with: bolt pistol; psyber-eagle; master-crafted Nemesis daemon hammer. Your army can only include one **COTEAZ** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic powerfrom the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        }
-      },
-      "HQ§Inquisitor Eisenhorn": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Eisenhorn",
-            "Infantry",
-            "Inquisitor",
-            "Psyker"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Xenos"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Malus Codicium",
-            "Ability§Radical Bond (Aura)",
-            "Ability§No Stranger to Pain",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Inquisitor Eisenhorn",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Inquisitor Eisenhorn is equipped with: artificer bolt pistol; Barbarisater; runestaff; electrobane grenades. Your army can only include one **EISENHORN** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        }
-      },
-      "HQ§Inquisitor Erasmus Cartavolnus": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Datasheet—Warhammer Store Anniversary 2022: Inquisitor Erasmus Cartavolnus"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Erasmus Cartavolnus",
-            "Infantry",
-            "Inquisitor",
-            "Psyker"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Malleus"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Refractor Field",
-            "Ability§Warding Sigils",
-            "Ability§The Black Iconoclasts (Aura)",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Erasmus Cartavolnus",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Erasmus Cartavolnus is equipped with: bolt pistol; Cartavolnus’ force sword. Your army can only include one **ERASMUS CARTAVOLNUS** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and [Ritual Shackle](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Ritual-Shackle-) psychic powers.",
-        "meta": {
-          "Publication": "[Warhammer Store Anniversary 2022: Inquisitor Erasmus Cartavolnus (Datasheet) 9th ed. –  @2022-01-03](null)"
-        }
-      },
-      "HQ§Inquisitor Greyfax": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Greyfax",
-            "Infantry",
-            "Inquisitor",
-            "Psyker"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Hereticus"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Refractor Field",
-            "Ability§Indomitable",
-            "Ability§Psyocculum",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Inquisitor Greyfax",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Inquisitor Greyfax is equipped with: master-crafted condemnor boltgun; master-crafted power sword; frag grenades; krak grenades; psyk-out grenades. Your army can only include one **GREYFAX** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        }
-      },
-      "HQ§Inquisitor Karamazov": {
-        "stats": {
-          "Power Level": {
-            "value": 6
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Inquisitor",
-            "Karamazov",
-            "Vehicle"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Hereticus"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Supreme Will (Aura)",
-            "Ability§Throne of Judgement",
-            "Ability§Iron Will",
-            "Ability§Dread Reputation (Aura)",
-            {
-              "item": "Model§Inquisitor Karamazov",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Inquisitor Karamazov is equipped with: master-crafted multi-melta; master-crafted power sword; Throne of Judgement’s stomping feet. Your army can only include one **KARAMAZOV** model."
-      },
-      "HQ§Inquisitor Solomon Lok": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Infantry",
-            "Inquisitor",
-            "Solomon Lok"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Xenos"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom",
-            {
-              "item": "Model§Solomon Lok",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Solomon Lok is equipped with: psi bolt pistol, Blade of Surety. Your army can only include one **SOLOMON LOK** model.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "HQ§Lord Inquisitor Hector Rex": {
-        "stats": {
-          "Power Level": {
-            "value": 5
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Hector Rex",
-            "Infantry",
-            "Inquisitor",
-            "Psyker",
-            "Terminator"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Malleus"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom",
-            "Ability§Teleport Strike",
-            "Ability§Psychic Hood",
-            "Ability§The Sanctic Shield",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Hector Rex",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Hector Rex is equipped with: masterwork bolt pistol; Arias. Your army can only include one **HECTOR REX** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Telesthesia discipline.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "HQ§Lord Inquisitor Kyria Draxus": {
-        "stats": {
-          "Power Level": {
-            "value": 4
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Infantry",
-            "Inquisitor",
-            "Kyria Draxus",
-            "Psyker"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Xenos"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Unquestionable Wisdom (Aura)",
-            "Ability§Refractor Field",
-            "Ability§Shang",
-            "Ability§Paralysis Grenades",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Lord Inquisitor Kyria Draxus",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "Lord Inquisitor Kyria Draxus is equipped with: Dirgesinger; power fist. Your army can only include one **KYRIA DRAXUS** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. She knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        }
-      },
-      "HQ§Ordo Malleus Inquisitor in Terminator Armour": {
-        "stats": {
-          "Power Level": {
-            "value": 6
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Expansion—Psychic Awakening: Pariah—Indomitus 1.2"
-          ],
-          "Edition": [
-            "8th"
-          ],
-          "Keywords": [
-            "Agent of the Imperium",
-            "Character",
-            "Infantry",
-            "Inquisitor",
-            "Psyker",
-            "Terminator"
-          ],
-          "Faction": [
-            "Imperium",
-            "Inquisition",
-            "Ordo Malleus"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Authority of the Inquisition",
-            "Ability§Quarry",
-            "Ability§Terminator Armour",
-            "Ability§Unquestionable Wisdom",
-            "Ability§Teleport Strike",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Ordo Malleus Inquisitor in Terminator Armour",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "An Ordo Malleus Inquisitor in Terminator Armour is a single model equipped with: storm bolter; Nemesis Daemon hammer; psyk-out grenades.\n\n• This model can be equipped with one of the following instead of 1 storm bolter: 1 combi-flamer; 1 combi-melta; 1 combi-plasma; 1 psycannon.\n\n• This model can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 Nemesis Daemon hammer.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Telethesia Discipline"
-          ]
-        },
-        "meta": {
-          "Publication": "[Psychic Awakening: Pariah (Expansion) 8th ed. – Indomitus 1.2 @2021-06-02](https://www.warhammer-community.com/wp-content/uploads/2020/07/mmAFGPOiu0rTo1yJ.pdf)"
-        }
-      },
-      "Model§Acolyte": {
-        "stats": {
-          "Points": {
-            "value": 10
           },
-          "M": {
-            "value": 6
-          },
-          "WS": {
-            "value": 4
-          },
-          "BS": {
-            "value": 4
-          },
-          "S": {
-            "value": 3
-          },
-          "T": {
-            "value": 3
-          },
-          "W": {
-            "value": 1
-          },
-          "A": {
-            "value": 2
-          },
-          "Ld": {
-            "value": 7
-          },
-          "Sv": {
-            "value": 5
-          },
-          "Base": {
-            "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Laspistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Combi-flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-flamer"
-                  }
-                ]
-              },
-              "Combi-melta": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-melta"
-                  }
-                ]
-              },
-              "Combi-plasma": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-plasma"
-                  }
-                ]
-              },
-              "Condemnor boltgun": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Condemnor boltgun"
-                  }
-                ]
-              },
-              "Plasma gun": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasma gun"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasma pistol"
-                  }
-                ]
-              },
-              "Bolt pistol": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bolt pistol"
-                  }
-                ]
-              },
-              "Boltgun": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              },
-              "Chainsword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Chainsword"
-                  }
-                ]
-              },
-              "Flamer": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flamer"
-                  }
-                ]
-              },
-              "Hot-shot lasgun": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hot-shot lasgun"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Inferno pistol": {
-                "order": 13,
-                "traits": [
-                  {
-                    "trait": "Weapon§Inferno pistol"
-                  }
-                ]
-              },
-              "Laspistol": {
-                "order": 14,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laspistol"
-                  }
-                ]
-              },
-              "Meltagun": {
-                "order": 15,
-                "traits": [
-                  {
-                    "trait": "Weapon§Meltagun"
-                  }
-                ]
-              },
-              "Needle pistol": {
-                "order": 16,
-                "traits": [
-                  {
-                    "trait": "Weapon§Needle pistol"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 17,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power fist"
-                  }
-                ]
-              },
-              "Power maul": {
-                "order": 18,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power maul"
-                  }
-                ]
-              },
-              "Power sword": {
-                "order": 19,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 20,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 21,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thunder hammer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Chainsword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Combi-flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-flamer"
-                  }
-                ]
-              },
-              "Combi-melta": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-melta"
-                  }
-                ]
-              },
-              "Combi-plasma": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-plasma"
-                  }
-                ]
-              },
-              "Condemnor boltgun": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Condemnor boltgun"
-                  }
-                ]
-              },
-              "Plasma gun": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasma gun"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasma pistol"
-                  }
-                ]
-              },
-              "Bolt pistol": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bolt pistol"
-                  }
-                ]
-              },
-              "Boltgun": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              },
-              "Chainsword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Chainsword"
-                  }
-                ]
-              },
-              "Flamer": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flamer"
-                  }
-                ]
-              },
-              "Hot-shot lasgun": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hot-shot lasgun"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Inferno pistol": {
-                "order": 13,
-                "traits": [
-                  {
-                    "trait": "Weapon§Inferno pistol"
-                  }
-                ]
-              },
-              "Laspistol": {
-                "order": 14,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laspistol"
-                  }
-                ]
-              },
-              "Meltagun": {
-                "order": 15,
-                "traits": [
-                  {
-                    "trait": "Weapon§Meltagun"
-                  }
-                ]
-              },
-              "Needle pistol": {
-                "order": 16,
-                "traits": [
-                  {
-                    "trait": "Weapon§Needle pistol"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 17,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power fist"
-                  }
-                ]
-              },
-              "Power maul": {
-                "order": 18,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power maul"
-                  }
-                ]
-              },
-              "Power sword": {
-                "order": 19,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 20,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 21,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thunder hammer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Combi-flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-flamer"
-                  }
-                ]
-              },
-              "Combi-melta": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-melta"
-                  }
-                ]
-              },
-              "Combi-plasma": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Wargear§Combi-plasma"
-                  }
-                ]
-              },
-              "Condemnor boltgun": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Condemnor boltgun"
-                  }
-                ]
-              },
-              "Plasma gun": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasma gun"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasma pistol"
-                  }
-                ]
-              },
-              "Bolt pistol": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bolt pistol"
-                  }
-                ]
-              },
-              "Boltgun": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              },
-              "Chainsword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Chainsword"
-                  }
-                ]
-              },
-              "Flamer": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flamer"
-                  }
-                ]
-              },
-              "Hot-shot lasgun": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hot-shot lasgun"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Inferno pistol": {
-                "order": 13,
-                "traits": [
-                  {
-                    "trait": "Weapon§Inferno pistol"
-                  }
-                ]
-              },
-              "Laspistol": {
-                "order": 14,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laspistol"
-                  }
-                ]
-              },
-              "Meltagun": {
-                "order": 15,
-                "traits": [
-                  {
-                    "trait": "Weapon§Meltagun"
-                  }
-                ]
-              },
-              "Needle pistol": {
-                "order": 16,
-                "traits": [
-                  {
-                    "trait": "Weapon§Needle pistol"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 17,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power fist"
-                  }
-                ]
-              },
-              "Power maul": {
-                "order": 18,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power maul"
-                  }
-                ]
-              },
-              "Power sword": {
-                "order": 19,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 20,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 21,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thunder hammer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          }
-        }
-      },
-      "Model§Daemonhost": {
-        "stats": {
           "Points": {
             "value": 25
           },
@@ -1525,45 +297,67 @@
             "visibility": "active",
             "dynamic": true
           }
-        }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Daemon",
+            "Daemonhost",
+            "Infantry"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Daemonic Power",
+            "Ability§Daemonic"
+          ]
+        },
+        "text": "A Daemonhost is equipped with: unholy gaze; warp grasp.\n\n\n\nnull"
       },
-      "Model§Erasmus Cartavolnus": {
+      "Elites§Jokaero Weaponsmith": {
         "stats": {
+          "Power Level": {
+            "value": 1
+          },
           "Points": {
-            "value": 80
+            "value": 20
           },
           "M": {
             "value": 6
           },
           "WS": {
-            "value": 3
+            "value": 6
           },
           "BS": {
-            "value": 3
+            "value": 4
           },
           "S": {
-            "value": 3
+            "value": 2
           },
           "T": {
             "value": 3
           },
           "W": {
-            "value": 5
-          },
-          "A": {
-            "value": 4
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
             "value": 3
           },
+          "A": {
+            "value": 2
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 7
+          },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
-            "value": "Bolt pistol",
+            "value": "Jokaero weapons",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 1,
@@ -1573,19 +367,11 @@
               "-": {
                 "order": 0
               },
-              "Bolt pistol": {
+              "Jokaero weapons": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Bolt pistol"
-                  }
-                ]
-              },
-              "Cartavolnus’ force sword": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cartavolnus’ force sword"
+                    "trait": "Wargear§Jokaero weapons"
                   }
                 ]
               }
@@ -1594,7 +380,7 @@
             "dynamic": true
           },
           "loadout2": {
-            "value": "Cartavolnus’ force sword",
+            "value": "-",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 2,
@@ -1604,50 +390,11 @@
               "-": {
                 "order": 0
               },
-              "Bolt pistol": {
+              "Jokaero weapons": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Bolt pistol"
-                  }
-                ]
-              },
-              "Cartavolnus’ force sword": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cartavolnus’ force sword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bolt pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bolt pistol"
-                  }
-                ]
-              },
-              "Cartavolnus’ force sword": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cartavolnus’ force sword"
+                    "trait": "Wargear§Jokaero weapons"
                   }
                 ]
               }
@@ -1655,140 +402,34 @@
             "visibility": "active",
             "dynamic": true
           }
-        }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Infantry",
+            "Jokaero Weaponsmith"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Imperium",
+            "Inquisition",
+            "Jokaero"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Defence Orbs",
+            "Ability§Inconceivable Customisation"
+          ]
+        },
+        "text": "A Jokaero Weaponsmith is equipped with: Jokaero weapons.\n\n\n\nnull"
       },
-      "Model§Hector Rex": {
+      "Heavy Support§Inquisition Land Raider Prometheus": {
         "stats": {
-          "Points": {
-            "value": 100
+          "Power Level": {
+            "value": 16
           },
-          "M": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 4
-          },
-          "T": {
-            "value": 3
-          },
-          "W": {
-            "value": 6
-          },
-          "A": {
-            "value": 4
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 2
-          },
-          "Base": {
-            "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Masterwork bolt pistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arias": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arias"
-                  }
-                ]
-              },
-              "Masterwork bolt pistol": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Masterwork bolt pistol"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Arias",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arias": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arias"
-                  }
-                ]
-              },
-              "Masterwork bolt pistol": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Masterwork bolt pistol"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arias": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arias"
-                  }
-                ]
-              },
-              "Masterwork bolt pistol": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Masterwork bolt pistol"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          }
-        }
-      },
-      "Model§Inquisition Land Raider Prometheus": {
-        "stats": {
           "Points": {
             "value": 295
           },
@@ -1925,6 +566,35 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Warhammer Legends: Forge World—1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Assault Launchers",
+            "Inquisition Land Raider Prometheus",
+            "Land Raider",
+            "Machine Spirit",
+            "Transport",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Quarry",
+            "Ability§Smoke Launchers",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "An Inquisition Land Raider Prometheus is equipped with: 2 quad heavy bolters.\n\n• This model can be equipped with 1 multi-melta.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 hunter-killer missile.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -1957,7 +627,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 5,
+                "value": "5″",
                 "iterations": 1
               },
               {
@@ -2019,7 +689,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 3,
+                "value": "3″",
                 "iterations": 1
               },
               {
@@ -2050,67 +720,16 @@
               }
             ]
           }
-        }
-      },
-      "Model§Inquisitor (Inquisitor (Legendary))": {
-        "stats": {
-          "Points": {
-            "value": 55
-          },
-          "M": {
-            "value": 6
-          },
-          "WS": {
-            "value": 3
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 3
-          },
-          "T": {
-            "value": 3
-          },
-          "W": {
-            "value": 5
-          },
-          "A": {
-            "value": 4
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 4
-          },
-          "Base": {
-            "value": "25mm"
-          }
         },
-        "rules": {
-          "rename me": {
-            "evals": [],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "designation"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "Inquisitor",
-                "iterations": 1
-              }
-            ]
-          }
+        "meta": {
+          "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
       },
-      "Model§Inquisitor (Inquisitor)": {
+      "HQ§Inquisitor": {
         "stats": {
+          "Power Level": {
+            "value": 4
+          },
           "Points": {
             "value": 60
           },
@@ -3365,6 +1984,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Refractor Field",
+            "Ability§Iron Will",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "An Inquisitor is equipped with: bolt pistol; chainsword; frag grenades; krak grenades.\n\n• This model can have the [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) keyword. If it does, it can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 weapon from the **Pistol Weapons** list; 1 weapon from the **Ranged Weapons*** list.\n\n• This model can be equipped with 1 weapon from the **Melee Weapons*** list instead of 1 chainsword.\n\nIf this model is a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
         "rules": {
           "rename me": {
             "evals": [],
@@ -3386,8 +2035,109 @@
           }
         }
       },
-      "Model§Inquisitor Coteaz": {
+      "HQ§Inquisitor (Legendary)": {
         "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 55
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm"
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Datasheet—Warhammer Legends: Inquisition"
+          ],
+          "Edition": [
+            "8th"
+          ],
+          "Keywords": [
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Refractor Field",
+            "Ability§Unquestionable Wisdom",
+            "Ability§Iron Will",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "An Inquisitor is a single model equipped with: bolt pistol; chainsword; frag grenades; krak grenades.\n\n• This model can have the [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) keyword. If it does, it can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 weapon from the **Pistol Weapons*** list, 1 weapon from the Ranged Weapons list.\n\n• This model can be equipped with 1 weapon from the **Melee Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with 1 null rod instead of 1 chainsword.\n\nIf this model is a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "rules": {
+          "rename me": {
+            "evals": [],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Inquisitor",
+                "iterations": 1
+              }
+            ]
+          }
+        },
+        "meta": {
+          "Publication": "[Warhammer Legends: Inquisition (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/bd01e2da.pdf)"
+        }
+      },
+      "HQ§Inquisitor Coteaz": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
           "Points": {
             "value": 95
           },
@@ -3577,10 +2327,44 @@
             "visibility": "active",
             "dynamic": true
           }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Coteaz",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Malleus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Refractor Field",
+            "Ability§Spy Network",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "Inquisitor Coteaz is equipped with: bolt pistol; psyber-eagle; master-crafted Nemesis daemon hammer. Your army can only include one **COTEAZ** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic powerfrom the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
         }
       },
-      "Model§Inquisitor Eisenhorn": {
+      "HQ§Inquisitor Eisenhorn": {
         "stats": {
+          "Power Level": {
+            "value": 4
+          },
           "Points": {
             "value": 85
           },
@@ -3849,10 +2633,214 @@
             "visibility": "active",
             "dynamic": true
           }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Eisenhorn",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Xenos"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Malus Codicium",
+            "Ability§Radical Bond (Aura)",
+            "Ability§No Stranger to Pain",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "Inquisitor Eisenhorn is equipped with: artificer bolt pistol; Barbarisater; runestaff; electrobane grenades. Your army can only include one **EISENHORN** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
         }
       },
-      "Model§Inquisitor Greyfax": {
+      "HQ§Inquisitor Erasmus Cartavolnus": {
         "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 80
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 3
+          },
+          "Base": {
+            "value": "32mm"
+          },
+          "loadout1": {
+            "value": "Bolt pistol",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Bolt pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Cartavolnus’ force sword": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Cartavolnus’ force sword"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Cartavolnus’ force sword",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Bolt pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Cartavolnus’ force sword": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Cartavolnus’ force sword"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Bolt pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Cartavolnus’ force sword": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Cartavolnus’ force sword"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Datasheet—Warhammer Store Anniversary 2022: Inquisitor Erasmus Cartavolnus"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Erasmus Cartavolnus",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Malleus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Refractor Field",
+            "Ability§Warding Sigils",
+            "Ability§The Black Iconoclasts (Aura)",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "Erasmus Cartavolnus is equipped with: bolt pistol; Cartavolnus’ force sword. Your army can only include one **ERASMUS CARTAVOLNUS** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and [Ritual Shackle](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Ritual-Shackle-) psychic powers.",
+        "meta": {
+          "Publication": "[Warhammer Store Anniversary 2022: Inquisitor Erasmus Cartavolnus (Datasheet) 9th ed. –  @2022-01-03](null)"
+        }
+      },
+      "HQ§Inquisitor Greyfax": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
           "Points": {
             "value": 90
           },
@@ -4216,10 +3204,45 @@
             "visibility": "active",
             "dynamic": true
           }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Greyfax",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Hereticus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Refractor Field",
+            "Ability§Indomitable",
+            "Ability§Psyocculum",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "Inquisitor Greyfax is equipped with: master-crafted condemnor boltgun; master-crafted power sword; frag grenades; krak grenades; psyk-out grenades. Your army can only include one **GREYFAX** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
         }
       },
-      "Model§Inquisitor Karamazov": {
+      "HQ§Inquisitor Karamazov": {
         "stats": {
+          "Power Level": {
+            "value": 6
+          },
           "Points": {
             "value": 125
           },
@@ -4409,45 +3432,74 @@
             "visibility": "active",
             "dynamic": true
           }
-        }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Inquisitor",
+            "Karamazov",
+            "Vehicle"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Hereticus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Supreme Will (Aura)",
+            "Ability§Throne of Judgement",
+            "Ability§Iron Will",
+            "Ability§Dread Reputation (Aura)"
+          ]
+        },
+        "text": "Inquisitor Karamazov is equipped with: master-crafted multi-melta; master-crafted power sword; Throne of Judgement’s stomping feet. Your army can only include one **KARAMAZOV** model.\n\n\n\nnull"
       },
-      "Model§Jokaero Weaponsmith": {
+      "HQ§Inquisitor Solomon Lok": {
         "stats": {
+          "Power Level": {
+            "value": 4
+          },
           "Points": {
-            "value": 20
+            "value": 75
           },
           "M": {
             "value": 6
           },
           "WS": {
-            "value": 6
+            "value": 3
           },
           "BS": {
-            "value": 4
+            "value": 3
           },
           "S": {
-            "value": 2
+            "value": 3
           },
           "T": {
             "value": 3
           },
           "W": {
-            "value": 3
+            "value": 5
           },
           "A": {
-            "value": 2
+            "value": 4
           },
           "Ld": {
-            "value": 7
+            "value": 9
           },
           "Sv": {
-            "value": 7
+            "value": 3
           },
           "Base": {
             "value": "25mm"
           },
           "loadout1": {
-            "value": "Jokaero weapons",
+            "value": "Blade of Surety",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 1,
@@ -4457,11 +3509,19 @@
               "-": {
                 "order": 0
               },
-              "Jokaero weapons": {
+              "Blade of Surety": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Wargear§Jokaero weapons"
+                    "trait": "Weapon§Blade of Surety"
+                  }
+                ]
+              },
+              "Psibolt pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psibolt pistol"
                   }
                 ]
               }
@@ -4480,11 +3540,19 @@
               "-": {
                 "order": 0
               },
-              "Jokaero weapons": {
+              "Blade of Surety": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Wargear§Jokaero weapons"
+                    "trait": "Weapon§Blade of Surety"
+                  }
+                ]
+              },
+              "Psibolt pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psibolt pistol"
                   }
                 ]
               }
@@ -4492,10 +3560,214 @@
             "visibility": "active",
             "dynamic": true
           }
+        },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Solomon Lok"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Xenos"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom"
+          ]
+        },
+        "text": "Solomon Lok is equipped with: psi bolt pistol, Blade of Surety. Your army can only include one **SOLOMON LOK** model.\n\n\n\nnull",
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Lord Inquisitor Kyria Draxus": {
+      "HQ§Lord Inquisitor Hector Rex": {
         "stats": {
+          "Power Level": {
+            "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": 5
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 6
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 2
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "loadout1": {
+            "value": "Masterwork bolt pistol",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Arias": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Arias"
+                  }
+                ]
+              },
+              "Masterwork bolt pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Masterwork bolt pistol"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Arias",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Arias": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Arias"
+                  }
+                ]
+              },
+              "Masterwork bolt pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Masterwork bolt pistol"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Arias": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Arias"
+                  }
+                ]
+              },
+              "Masterwork bolt pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Masterwork bolt pistol"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Hector Rex",
+            "Infantry",
+            "Inquisitor",
+            "Psyker",
+            "Terminator"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Malleus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom",
+            "Ability§Teleport Strike",
+            "Ability§Psychic Hood",
+            "Ability§The Sanctic Shield",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "Hector Rex is equipped with: masterwork bolt pistol; Arias. Your army can only include one **HECTOR REX** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Telesthesia discipline.",
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+        }
+      },
+      "HQ§Lord Inquisitor Kyria Draxus": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
           "Points": {
             "value": 85
           },
@@ -4643,10 +3915,45 @@
             "visibility": "active",
             "dynamic": true
           }
+        },
+        "keywords": {
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Kyria Draxus",
+            "Psyker"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Xenos"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Refractor Field",
+            "Ability§Shang",
+            "Ability§Paralysis Grenades",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "Lord Inquisitor Kyria Draxus is equipped with: Dirgesinger; power fist. Your army can only include one **KYRIA DRAXUS** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. She knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
         }
       },
-      "Model§Ordo Malleus Inquisitor in Terminator Armour": {
+      "HQ§Ordo Malleus Inquisitor in Terminator Armour": {
         "stats": {
+          "Power Level": {
+            "value": 6
+          },
           "Points": {
             "value": 95
           },
@@ -4680,21 +3987,61 @@
           "Base": {
             "value": "40mm"
           }
+        },
+        "keywords": {
+          "Source": [
+            "Expansion—Psychic Awakening: Pariah—Indomitus 1.2"
+          ],
+          "Edition": [
+            "8th"
+          ],
+          "Keywords": [
+            "Agent of the Imperium",
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Psyker",
+            "Terminator"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition",
+            "Ordo Malleus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Terminator Armour",
+            "Ability§Unquestionable Wisdom",
+            "Ability§Teleport Strike",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "An Ordo Malleus Inquisitor in Terminator Armour is a single model equipped with: storm bolter; Nemesis Daemon hammer; psyk-out grenades.\n\n• This model can be equipped with one of the following instead of 1 storm bolter: 1 combi-flamer; 1 combi-melta; 1 combi-plasma; 1 psycannon.\n\n• This model can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 Nemesis Daemon hammer.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/inquisition/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "meta": {
+          "Publication": "[Psychic Awakening: Pariah (Expansion) 8th ed. – Indomitus 1.2 @2021-06-02](https://www.warhammer-community.com/wp-content/uploads/2020/07/mmAFGPOiu0rTo1yJ.pdf)"
         }
       },
-      "Model§Solomon Lok": {
+      "Model§Acolyte": {
         "stats": {
           "Points": {
-            "value": 75
+            "value": 10
           },
           "M": {
             "value": 6
           },
           "WS": {
-            "value": 3
+            "value": 4
           },
           "BS": {
-            "value": 3
+            "value": 4
           },
           "S": {
             "value": 3
@@ -4703,22 +4050,22 @@
             "value": 3
           },
           "W": {
-            "value": 5
+            "value": 1
           },
           "A": {
-            "value": 4
+            "value": 2
           },
           "Ld": {
-            "value": 9
+            "value": 7
           },
           "Sv": {
-            "value": 3
+            "value": 5
           },
           "Base": {
             "value": "25mm"
           },
           "loadout1": {
-            "value": "Blade of Surety",
+            "value": "Laspistol",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 1,
@@ -4728,19 +4075,171 @@
               "-": {
                 "order": 0
               },
-              "Blade of Surety": {
+              "Combi-flamer": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Blade of Surety"
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
-              "Psibolt pistol": {
+              "Combi-melta": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Psibolt pistol"
+                    "trait": "Wargear§Combi-melta"
+                  }
+                ]
+              },
+              "Combi-plasma": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-plasma"
+                  }
+                ]
+              },
+              "Condemnor boltgun": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Wargear§Condemnor boltgun"
+                  }
+                ]
+              },
+              "Plasma gun": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Plasma pistol": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Boltgun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hot-shot lasgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hot-shot lasgun"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Inferno pistol"
+                  }
+                ]
+              },
+              "Laspistol": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Laspistol"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 17,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 18,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 19,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 20,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 21,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
                   }
                 ]
               }
@@ -4749,7 +4248,7 @@
             "dynamic": true
           },
           "loadout2": {
-            "value": "-",
+            "value": "Chainsword",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 2,
@@ -4759,19 +4258,354 @@
               "-": {
                 "order": 0
               },
-              "Blade of Surety": {
+              "Combi-flamer": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Blade of Surety"
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
-              "Psibolt pistol": {
+              "Combi-melta": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Psibolt pistol"
+                    "trait": "Wargear§Combi-melta"
+                  }
+                ]
+              },
+              "Combi-plasma": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-plasma"
+                  }
+                ]
+              },
+              "Condemnor boltgun": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Wargear§Condemnor boltgun"
+                  }
+                ]
+              },
+              "Plasma gun": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Plasma pistol": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Boltgun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hot-shot lasgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hot-shot lasgun"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Inferno pistol"
+                  }
+                ]
+              },
+              "Laspistol": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Laspistol"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 17,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 18,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 19,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 20,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 21,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-flamer"
+                  }
+                ]
+              },
+              "Combi-melta": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-melta"
+                  }
+                ]
+              },
+              "Combi-plasma": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-plasma"
+                  }
+                ]
+              },
+              "Condemnor boltgun": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Wargear§Condemnor boltgun"
+                  }
+                ]
+              },
+              "Plasma gun": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Plasma pistol": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Boltgun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hot-shot lasgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hot-shot lasgun"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Inferno pistol"
+                  }
+                ]
+              },
+              "Laspistol": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Laspistol"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 17,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 18,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 19,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 20,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 21,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
                   }
                 ]
               }
@@ -4787,13 +4621,13 @@
       "Relics of the Inquisition§Blade of the Ordo": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D3"
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -4810,7 +4644,7 @@
       "Relics of the Inquisition§Ignis Judicium": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -4830,13 +4664,13 @@
       "Relics of the Inquisition§Tainted Blade": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+3"
+            "value": 3
           },
           "Type": {
             "value": "Melee"
@@ -4892,7 +4726,7 @@
         }
       },
       "Telethesia Discipline§Ritual Shackle": {
-        "text": "**Malediction:** *Ritual Shackle* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of this [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Until your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Subtract 1 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) made for that enemy unit.\n* Each time a model in that unit makes a melee attack, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).If the result of the Psychic test was 10 or more, you can select one enemy unit within 24″ of this PSYKER**, instead of within 18″.",
+        "text": "**Malediction:** *Ritual Shackle* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of this [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Until your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Subtract 1 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) made for that enemy unit.\n* Each time a model in that unit makes a melee attack, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).If the result of the Psychic test was 10 or more, you can select one enemy unit within 24″ of this PSYKER**, instead of within 18\".",
         "stats": {
           "Roll": {
             "value": 1
@@ -4998,7 +4832,7 @@
         }
       },
       "Warlord Trait§Formidable Resolve": {
-        "text": "* Add 1 to this **WARLORD**’s Leadership characteristic.\n* Increase the range of this WARLORD**’s <span class=\"tt kwbu\">Unquestionable <span class=\"tt kwbu\">Wisdom</span></span> ability by 6″.",
+        "text": "* Add 1 to this **WARLORD**’s Leadership characteristic.\n* Increase the range of this WARLORD**’s **Unquestionable Wisdom** ability by 6\".",
         "stats": {
           "Discipline": {
             "value": "Warlord Traits 3"
@@ -5048,13 +4882,13 @@
       "Weapon§Arias": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -5068,7 +4902,7 @@
       "Weapon§Artificer bolt pistol": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -5087,13 +4921,13 @@
       "Weapon§Barbarisater": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D3"
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -5107,13 +4941,13 @@
       "Weapon§Blade of Surety": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -5164,13 +4998,13 @@
       "Weapon§Cartavolnus’ force sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
           },
           "S": {
-            "value": "+2"
+            "value": 2
           },
           "Type": {
             "value": "Melee"
@@ -5204,7 +5038,7 @@
       "Weapon§Condemnor stake": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -5244,7 +5078,7 @@
       "Weapon§Electrobane grenades": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -5287,7 +5121,7 @@
       "Weapon§Focused strike": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
@@ -5306,13 +5140,13 @@
       "Weapon§Force axe": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": "D3"
           },
           "S": {
-            "value": "+2"
+            "value": 2
           },
           "Type": {
             "value": "Melee"
@@ -5328,13 +5162,13 @@
       "Weapon§Force stave": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": "D3"
           },
           "S": {
-            "value": "+3"
+            "value": 3
           },
           "Type": {
             "value": "Melee"
@@ -5350,13 +5184,13 @@
       "Weapon§Force sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D3"
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -5392,7 +5226,7 @@
       "Weapon§Hot-shot lasgun": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
@@ -5411,7 +5245,7 @@
       "Weapon§Hunter-killer missile": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": "D6"
@@ -5434,7 +5268,7 @@
       "Weapon§Incinerator": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -5454,7 +5288,7 @@
       "Weapon§Inferno pistol": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -5474,7 +5308,7 @@
       "Weapon§Krak grenade": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": "D3"
@@ -5512,7 +5346,7 @@
       "Weapon§Master-crafted boltgun": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -5531,7 +5365,7 @@
       "Weapon§Master-crafted multi-melta": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -5551,7 +5385,7 @@
       "Weapon§Master-crafted Nemesis Daemon hammer": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
@@ -5570,13 +5404,13 @@
       "Weapon§Master-crafted power sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -5589,7 +5423,7 @@
       "Weapon§Masterwork bolt pistol": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -5608,7 +5442,7 @@
       "Weapon§Meltagun": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -5631,7 +5465,7 @@
       "Weapon§Multi-melta": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -5674,7 +5508,7 @@
       "Weapon§Nemesis daemon hammer": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -5697,7 +5531,7 @@
       "Weapon§Null rod": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
@@ -5720,7 +5554,7 @@
       "Weapon§Plasma gun (standard)": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
@@ -5739,7 +5573,7 @@
       "Weapon§Plasma gun (supercharge)": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -5759,7 +5593,7 @@
       "Weapon§Power fist": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -5782,13 +5616,13 @@
       "Weapon§Power maul": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+3"
+            "value": 3
           },
           "Type": {
             "value": "Melee"
@@ -5804,13 +5638,13 @@
       "Weapon§Power sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -5826,7 +5660,7 @@
       "Weapon§Psibolt pistol": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -5864,7 +5698,7 @@
       "Weapon§Psycannon": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -5906,7 +5740,7 @@
       "Weapon§Quad heavy bolter": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -5925,13 +5759,13 @@
       "Weapon§Runestaff": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": "D3"
           },
           "S": {
-            "value": "+3"
+            "value": 3
           },
           "Type": {
             "value": "Melee"
@@ -5944,7 +5778,7 @@
       "Weapon§Scatter shot": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -5963,7 +5797,7 @@
       "Weapon§Standard": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
@@ -6004,7 +5838,7 @@
       "Weapon§Supercharge": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -6024,7 +5858,7 @@
       "Weapon§Throne of Judgement’s stomping feet": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -6044,7 +5878,7 @@
       "Weapon§Thunder hammer": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -6067,7 +5901,7 @@
       "Weapon§Unholy gaze": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -6087,7 +5921,7 @@
       "Weapon§Warp grasp": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1

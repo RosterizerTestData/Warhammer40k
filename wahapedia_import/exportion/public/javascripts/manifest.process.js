@@ -29,8 +29,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: 'This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.6',
+    notes: '0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.7',
     wip: true,
     dependencies: [
       {
@@ -172,14 +172,14 @@ processAbilities = (data,assetCatalog) => {
     if(!ability.is_other_wargear){
       itemKey = 'Ability§' + ability.name;
       if(!assetCatalog[itemKey]) assetCatalog[itemKey] = tempAbility;
-      else assetCatalog[itemKey].text += '\n\nERROR: The following text was found on another ability with the same name.\n\n' + formatText(ability.description,shouldLog);
+      else assetCatalog[itemKey].text += '\n\n***ERROR***—*The following text was found on another ability with the same name:*  \n' + formatText(ability.description,shouldLog);
     }else{
       itemKey = 'Wargear§' + ability.name;
       let abilityCostArr = data.abilities.datasheets_abilities.filter(datasheets_ability => datasheets_ability.ability_id === ability.ability_id).map(datasheets_ability => datasheets_ability.cost);
       let costMode = findMode(abilityCostArr);
       if(costMode) tempAbility.stats = {Points: {value: numerize(costMode)}};
       if(!assetCatalog[itemKey]) assetCatalog[itemKey] = tempAbility;
-      else assetCatalog[itemKey].text += '\n\nERROR: The following text was found on another wargear with the same name.\n\n' + formatText(ability.description,shouldLog);
+      else assetCatalog[itemKey].text += '\n\n***ERROR***—*The following text was found on another wargear with the same name:*  \n' + formatText(ability.description,shouldLog);
     }
     let subFactTest = new RegExp(`&lt;${data.factCurrent}&gt;`, 'gi');
     if(subFactTest.test(assetCatalog[itemKey].text)){
@@ -302,7 +302,7 @@ createWargearStat = (i,wargearArr,modelLoadout,assetCatalog) => {
   return tempStat
 }
 processRelics = (data,assetCatalog) => {
-  console.log(data.relics.relic_list)
+  // console.log(data.relics.relic_list)
   data.relics.relic_list?.forEach(relic => {
     let weapName = relic.name.replace(/(1: |2: |3: )/,'').replace(/в/g,'d').replace(/^"*(.*[^"])"*$/g,'$1').replace(/^\s*(.*[^\s])\s*$/g,'$1');
     let tempWeapon = {stats:{
@@ -402,6 +402,8 @@ formatText = (text,log = false) => {
     boldPattern2: [/<span[\s]+class="kwb">((?:.(?!\<\/span\>))*.)<\/span>/g,'<b>$1</b>'],
     underPattern2: [/<span[\s]+class="kwbu">((?:.(?!\<\/span\>))*.)<\/span>/g,'<i>$1<i>'],
     ttPattern2: [/<span[\s]+class="tt">((?:.(?!\<\/span\>))*.)<\/span>/g,'<b>$1</b>'],
+    ttPattern3: [/<span[\s]+class="tt kwbu">((?:.(?!\<\/span\>))*.)<\/span>/g,'<b>$1</b>'],
+    ttPattern4: [/<span[\s]+class="tt kwbu">((?:.(?!\<\/span\>))*.)<\/span>/g,'<b>$1</b>'],
     h_customPattern: [/<span[\s]+class="h_custom">((?:.(?!\<\/span\>))*.)<\/span>/g,'<b>$1</b>'],
     redfontPattern: [/<span[\s]+class="redfont">((?:.(?!\<\/span\>))*.)<\/span>/g,'<b>$1</b>'],
   }
@@ -413,7 +415,8 @@ formatText = (text,log = false) => {
     boldTranslationPattern: [/<\/?b>/g,'**'],
     doubleBoldPattern: [/\*\*\*\*/g,''],
     doubleBoldPattern2: [/\*\*\s\*\*/g,' '],
-    italicsTranslationPattern: [/<\/?i>/g,'*']
+    italicsTranslationPattern: [/<\/?i>/g,'*'],
+    doublePrime: [/\s([0-9]+)"(\.*)\s/g,' $1″$2 '],  
   }
   newText = text.replace(/kwb2/g,'kwb');
   if(log) console.log(newText)
@@ -466,84 +469,33 @@ processUnits = (data,assetCatalog) => {
     },keywords:{},assets:{}};
 
     let models = data.models.filter(model => model.datasheet_id === unitId);
-    // console.log(unitId,models)
+    let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
     if(models[0]?.line === 1 && models[0]?.models_per_unit.includes('-')){
       tempItem.stats.model = {
         value: data.models.filter(model => model.datasheet_id === unitId && model.line === 1)[0].itemKey
       }
     }
 
+    let modelDamage = data.damage.filter(dmgLine => dmgLine.datasheet_id == unitId);
+    if(modelDamage.length){
+      let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0].itemKey;
+      // console.log(unitId,modelItemKey)
+      assetCatalog[modelItemKey].stats['W'] = {
+        value: numerize(assetCatalog[modelItemKey].stats['W'].value),
+        max: numerize(assetCatalog[modelItemKey].stats['W'].value),
+        min: 1,
+        dynamic: true,
+        increment: {value: 1},
+        statType: 'numeric',
+        visibility: 'always',
+      }
+      assetCatalog[modelItemKey].rules = assetCatalog[modelItemKey].rules || {};
+      assetCatalog[modelItemKey].rules.dynamicDamageMid = generateDamageRule(modelDamage[0],modelDamage[2]);
+      assetCatalog[modelItemKey].rules.dynamicDamageLow = generateDamageRule(modelDamage[0],modelDamage[3]);
+    }
+
     let options = data.options.filter(option => option.datasheet_id === unitId);
     tempItem.text = formatText(datasheet.unit_composition + '\n\n' + options.map(option => (option.button || '') + ' ' + option.description).join('\n\n') + '\n\n' + datasheet.psyker);
-
-    if(models[0]?.models_per_unit?.includes('-')){
-      tempItem.stats[datasheet.name] = {
-        statType: 'numeric',
-        dynamic: true,
-        visibility: 'active',
-      };
-      let stat = tempItem.stats[datasheet.name];
-      let range = models[0].models_per_unit.split('-');
-      stat.value = Number(range[0]);
-      stat.min = Number(range[0]);
-      stat.max = Number(range[1]);
-      let basePlThresh = stat.min;
-      if(!(stat.max % stat.min)){
-        // console.log(datasheet.name,'has a clean threshold')
-        stat.increment = {value: numerize(stat.min)};
-      }
-      else if(!((stat.max + 1) % (stat.min + 1)) && models[1]?.models_per_unit == 1){
-        // console.log(datasheet.name,'has a sergeant')
-        stat.increment = {value: numerize(stat.min) + 1};
-        // console.log(stat)
-        basePlThresh ++;
-      }else tempItem.text += '\n\nERROR: there might be a problem with incrementation that will require inputting by hand.';
-      let PLArr = datasheet.unit_composition.split(/(\<b\>Power Rating |\<\/b\>)/).map(el => Number(el.replace('+','plus'))).filter(el => !isNaN(el));
-      if(PLArr.length){
-        let tempInc = PLArr[0] - datasheet.power_points;
-        // console.log(datasheet.name,basePlThresh,tempInc,PLArr)
-        for (let i = 0; i < PLArr.length; i++) {
-          if(PLArr[i] !== ((i+1) * tempInc) + Number(datasheet.power_points)){
-            // console.log(PLArr[i],tempInc,Number(datasheet.power_points), ((i+1) * tempInc) + Number(datasheet.power_points))
-            tempItem.text += '\n\nERROR: there might be a problem with Power Rating that will require a custom rule.';
-            tempInc = 0;
-            break;
-          }
-        }
-        if(tempInc){
-          tempItem.stats.poweri = {value:tempInc};
-          for (let i = 0; i < PLArr.length; i++) {
-            tempItem.stats['power'+(i+1)] = {
-              "value": (basePlThresh * (i + 1)) + 1
-            }
-          }
-        }
-      }else if(datasheet.unit_composition.includes('Power Rating')) tempItem.text += '\n\nERROR: there might be a problem with Power Rating that will require a custom rule.';
-    }
-    let modelList = [];
-    models.forEach(model => {
-      let [minQty,maxQty] = model.models_per_unit.split('-').map(qty => Number(qty));
-      if(minQty){
-        let tempTrait = {item: model.itemKey};
-        if(minQty > 1) tempTrait.quantity = minQty;
-        // console.log(datasheet.name,model.name,model.models_per_unit,models.length)
-        if(model.models_per_unit == 1 && models.length == 1){
-          tempTrait.stats = tempTrait.stats || {};
-          tempTrait.stats.Points = tempTrait.stats.Points || {};
-          tempTrait.stats.Points.visibility = 'hidden';
-        }
-        // console.log(tempTrait)
-        if(Object.keys(tempTrait).length === 1) tempTrait = model.itemKey;
-        tempItem.assets.traits = tempItem.assets.traits || [];
-        tempItem.assets.traits.push(tempTrait);
-        modelList.push(model)
-      }
-      if(minQty > 1 || maxQty > 1){
-        tempItem.allowed = tempItem.allowed || {};
-        tempItem.allowed.items = tempItem.allowed.items || [];
-        tempItem.allowed.items.push(model.itemKey)
-      }
-    });
 
     let abilities = data.abilities.composed.filter(ability => ability.datasheet_id === unitId);
     let abilityList = abilities.filter(ability => ability.datasheet_id === unitId && !ability.is_other_wargear);
@@ -559,7 +511,7 @@ processUnits = (data,assetCatalog) => {
       tempItem.assets.traits.push('Psychic Power§Smite');
     }
     const order = ['Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
-    tempItem.assets.traits.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
+    tempItem.assets.traits?.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
 
     Array.from(new Set(data.psychicPowers.map(power => power.type))).forEach(discipline => {
       // console.log(discipline)
@@ -584,6 +536,8 @@ processUnits = (data,assetCatalog) => {
         value: 0,
         statType: 'rank',
         statOrder: 10,
+        group: 'Loadout',
+        groupOrder: 2,
         ranks: {
           0: {order: 0,number: 0,icons: ['cancel']},
           1: {order: 1,number: 1,icons: ['confirmed'],traits: [{trait: tempWargear}]}
@@ -634,6 +588,87 @@ processUnits = (data,assetCatalog) => {
       }
     });
 
+    if(models[0]?.models_per_unit?.includes('-')){
+      tempItem.stats[datasheet.name] = {
+        statType: 'numeric',
+        dynamic: true,
+        visibility: 'active',
+        group: 'Loadout',
+        groupOrder: 2,
+      };
+      let stat = tempItem.stats[datasheet.name];
+      let range = models[0].models_per_unit.split('-');
+      stat.value = Number(range[0]);
+      stat.min = Number(range[0]);
+      stat.max = Number(range[1]);
+      let basePlThresh = stat.min;
+      if(!(stat.max % stat.min)){
+        // console.log(datasheet.name,'has a clean threshold')
+        stat.increment = {value: numerize(stat.min)};
+      }
+      else if(!((stat.max + 1) % (stat.min + 1)) && models[1]?.models_per_unit == 1){
+        // console.log(datasheet.name,'has a sergeant')
+        stat.increment = {value: numerize(stat.min) + 1};
+        // console.log(stat)
+        basePlThresh ++;
+      }else tempItem.text += '\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*';
+      let PLArr = datasheet.unit_composition.split(/(\<b\>Power Rating |\<\/b\>)/).map(el => Number(el.replace('+','plus'))).filter(el => !isNaN(el));
+      if(PLArr.length){
+        let tempInc = PLArr[0] - datasheet.power_points;
+        // console.log(datasheet.name,basePlThresh,tempInc,PLArr)
+        for (let i = 0; i < PLArr.length; i++) {
+          if(PLArr[i] !== ((i+1) * tempInc) + Number(datasheet.power_points)){
+            // console.log(PLArr[i],tempInc,Number(datasheet.power_points), ((i+1) * tempInc) + Number(datasheet.power_points))
+            tempItem.text += '\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*';
+            tempInc = 0;
+            break;
+          }
+        }
+        if(tempInc){
+          tempItem.stats.poweri = {value:tempInc};
+          for (let i = 0; i < PLArr.length; i++) {
+            tempItem.stats['power'+(i+1)] = {
+              "value": (basePlThresh * (i + 1)) + 1
+            }
+          }
+        }
+      }else if(datasheet.unit_composition.includes('Power Rating')) tempItem.text += '\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*';
+    }
+    models.forEach(model => {
+      let [minQty,maxQty] = model.models_per_unit.split('-').map(qty => Number(qty));
+      if(minQty){
+        // console.log(datasheet.name,model.name,model.models_per_unit,models.length)
+        if(singleModelUnit){
+          let modelAsset = assetCatalog[model.itemKey];
+          // console.log(modelAsset)
+          tempItem = {
+            ...tempItem,
+            stats: {
+              ...tempItem.stats,
+              ...modelAsset.stats,
+            },
+            rules: {
+              ...tempItem.rules,
+              ...modelAsset.rules,
+            }
+          }
+          if(!Object.keys(tempItem.rules).length) delete tempItem.rules;
+        }else{
+          let tempTrait = {item: model.itemKey};
+          if(minQty > 1) tempTrait.quantity = minQty;
+          // console.log(tempTrait)
+          if(Object.keys(tempTrait).length === 1) tempTrait = model.itemKey;
+          tempItem.assets.traits = tempItem.assets.traits || [];
+          tempItem.assets.traits.push(tempTrait);
+        }
+      }
+      if(minQty > 1 || maxQty > 1 || !minQty){
+        tempItem.allowed = tempItem.allowed || {};
+        tempItem.allowed.items = tempItem.allowed.items || [];
+        tempItem.allowed.items.push(model.itemKey)
+      }
+    });
+
     let source = data.sources.filter(source => source.source_id == datasheet.source_id)[0];
     // console.log(source)
     if(source){
@@ -649,25 +684,15 @@ processUnits = (data,assetCatalog) => {
     let factionKeywords = data.keywords.filter(keyword => keyword.datasheet_id === unitId && keyword.is_faction_keyword);
     if(factionKeywords.length) tempItem.keywords.Faction = factionKeywords.map(keyword => keyword.keyword);
 
-    let modelDamage = data.damage.filter(dmgLine => dmgLine.datasheet_id == unitId);
-    if(modelDamage.length){
-      let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0].itemKey;
-      // console.log(unitId,modelItemKey)
-      assetCatalog[modelItemKey].stats['W'] = {
-        value: numerize(assetCatalog[modelItemKey].stats['W'].value),
-        max: numerize(assetCatalog[modelItemKey].stats['W'].value),
-        min: 1,
-        dynamic: true,
-        increment: {value: 1},
-        statType: 'numeric',
-        visibility: 'always',
-      }
-      assetCatalog[modelItemKey].rules = assetCatalog[modelItemKey].rules || {};
-      assetCatalog[modelItemKey].rules.dynamicDamageMid = generateDamageRule(modelDamage[0],modelDamage[2]);
-      assetCatalog[modelItemKey].rules.dynamicDamageLow = generateDamageRule(modelDamage[0],modelDamage[3]);
-    }
-
     assetCatalog[datasheet.role + '§' + datasheet.name] = tempItem;
+  });
+  data.datasheets.forEach(datasheet => {
+    let unitId = datasheet.datasheet_id;
+    let models = data.models.filter(model => model.datasheet_id === unitId);
+    console.log(unitId,data.models,unitId)
+    let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0]?.itemKey;
+    let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
+    if(singleModelUnit && modelItemKey) delete assetCatalog[modelItemKey];
   });
 }
 generateDamageRule = (damageRows,currentRow) => {

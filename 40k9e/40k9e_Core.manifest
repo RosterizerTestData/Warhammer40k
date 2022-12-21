@@ -1,6 +1,6 @@
 {
   "name": "40k9e",
-  "revision": "0.2.2",
+  "revision": "0.2.7",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -543,6 +543,78 @@
             "groupOrder": -1,
             "tracked": true,
             "statType": "numeric"
+          },
+          "A": {
+            "value": null,
+            "statOrder": 7,
+            "group": "Stats",
+            "statType": "term",
+            "visibility": "normal"
+          },
+          "BS": {
+            "format": "{v}+",
+            "value": null,
+            "statOrder": 3,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": null,
+            "statOrder": 8,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "S": {
+            "value": null,
+            "statOrder": 4,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "Sv": {
+            "format": "{v}+",
+            "value": null,
+            "statOrder": 9,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "T": {
+            "value": null,
+            "statOrder": 5,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "W": {
+            "value": null,
+            "statOrder": 6,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "WS": {
+            "format": "{v}+",
+            "value": null,
+            "statOrder": 2,
+            "group": "Stats",
+            "statType": "numeric",
+            "visibility": "normal"
+          },
+          "Base": {
+            "statType": "term",
+            "value": null,
+            "visibility": "active"
+          },
+          "M": {
+            "statType": "term",
+            "format": "{t}″",
+            "value": null,
+            "statOrder": 1,
+            "group": "Stats",
+            "visibility": "normal"
           },
           "model": {
             "value": null,
@@ -1581,45 +1653,6 @@
               }
             ]
           },
-          "This unit has unspent traits.": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Play",
-                    "value"
-                  ]
-                ],
-                "value": "Narrative",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Battle Honours",
-                    "value"
-                  ]
-                ],
-                "min": [
-                  "{self}",
-                  "stats",
-                  "Battle Honours",
-                  "max"
-                ],
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "warning",
-            "evaluate": "AND"
-          },
           "crusadeStats": {
             "evals": [
               {
@@ -1879,6 +1912,45 @@
                 "iterations": 1
               }
             ]
+          },
+          "This unit has unspent traits.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Battle Honours",
+                  "max"
+                ],
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "warning",
+            "evaluate": "OR"
           }
         },
         "aspects": {

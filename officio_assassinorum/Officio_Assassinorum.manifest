@@ -1,11 +1,11 @@
 {
   "name": "Officio Assassinorum",
-  "revision": "0.0.6",
+  "revision": "0.0.7",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -51,7 +51,7 @@
         "text": "This model can never have a [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits). During deployment, you can set this model up in concealment instead of placing it on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can reveal its position – set it up anywhere on the battlefield that is more than 9″ away from any enemy models."
       },
       "Ability§Killing Rampage": {
-        "text": "Each time a model in an enemy unit is destroyed as the result of an attack made with a melee weapon by this model, you can immediately make one additional attack with a melee weapon this model is equipped with against the same unit. These additional attacks cannot themselves generate further attacks. In addition, this model can [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate) up to 6″ instead of up to 3″."
+        "text": "Each time a model in an enemy unit is destroyed as the result of an attack made with a melee weapon by this model, you can immediately make one additional attack with a melee weapon this model is equipped with against the same unit. These additional attacks cannot themselves generate further attacks. In addition, this model can [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate) up to 6″ instead of up to 3\"."
       },
       "Ability§Life Drain": {
         "text": "When resolving an attack made with a melee weapon by this model, a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be made unless it is an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
@@ -60,7 +60,7 @@
         "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Polymorphine": {
-        "text": "During deployment, you can set up this model in disguise instead of setting it up on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can revert to its true form – set it up anywhere on the battlefield that is more than D6+3″ away from any enemy models. For example, if you roll a 4, the model can be set up anywhere that is more than 7″ away from any enemy model."
+        "text": "During deployment, you can set up this model in disguise instead of setting it up on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can revert to its true form – set it up anywhere on the battlefield that is more than D6+3\" away from any enemy models. For example, if you roll a 4, the model can be set up anywhere that is more than 7″ away from any enemy model."
       },
       "Ability§Psychic Assassin": {
         "text": "Attacks made by this model can target a [PSYKER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) [CHARACTER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) even if it is not the closest enemy unit. In addition, this model can shoot with its psyk-out grenades in the same phase that it shoots with its animus speculum."
@@ -81,6 +81,39 @@
         "stats": {
           "Power Level": {
             "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
           }
         },
         "keywords": {
@@ -109,18 +142,10 @@
             "Ability§Lightning Reflexes",
             "Ability§Polymorphine",
             "Ability§Hit and Run",
-            "Ability§Reign of Confusion",
-            {
-              "item": "Model§Callidus Assassin",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
+            "Ability§Reign of Confusion"
           ]
         },
-        "text": "A Callidus Assassin is a single model equipped with: neural shredder; phase sword; poison blades.",
+        "text": "A Callidus Assassin is a single model equipped with: neural shredder; phase sword; poison blades.\n\n\n\nnull",
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }
@@ -129,6 +154,39 @@
         "stats": {
           "Power Level": {
             "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
           }
         },
         "keywords": {
@@ -158,18 +216,10 @@
             "Ability§Abomination",
             "Ability§Life Drain",
             "Ability§Etherium",
-            "Ability§Psychic Assassin",
-            {
-              "item": "Model§Culexus Assassin",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
+            "Ability§Psychic Assassin"
           ]
         },
-        "text": "A Culexus Assassin is a single model equipped with: animus speculum; psyk-out grenades.",
+        "text": "A Culexus Assassin is a single model equipped with: animus speculum; psyk-out grenades.\n\n\n\nnull",
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }
@@ -178,6 +228,39 @@
         "stats": {
           "Power Level": {
             "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 6
+          },
+          "A": {
+            "value": 6
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
           }
         },
         "keywords": {
@@ -207,18 +290,10 @@
             "Ability§Bio-meltdown",
             "Ability§Sentinel Array",
             "Ability§Frenzon",
-            "Ability§Killing Rampage",
-            {
-              "item": "Model§Eversor Assassin",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
+            "Ability§Killing Rampage"
           ]
         },
-        "text": "An Eversor Assassin is a single model equipped with: executioner pistol; neuro-gauntlet; power sword; melta bombs.",
+        "text": "An Eversor Assassin is a single model equipped with: executioner pistol; neuro-gauntlet; power sword; melta bombs.\n\n\n\nnull",
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }
@@ -227,6 +302,39 @@
         "stats": {
           "Power Level": {
             "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm"
           }
         },
         "keywords": {
@@ -257,175 +365,19 @@
             "Ability§Faultless Aim",
             "Ability§Head Shot",
             "Ability§Spymask",
-            "Ability§Stealth Suit",
-            {
-              "item": "Model§Vindicare Assassin",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
+            "Ability§Stealth Suit"
           ]
         },
-        "text": "A Vindicare Assassin is a single model equipped with: exitus pistol; exitus rifle; blind grenades.",
+        "text": "A Vindicare Assassin is a single model equipped with: exitus pistol; exitus rifle; blind grenades.\n\n\n\nnull",
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
-        }
-      },
-      "Model§Callidus Assassin": {
-        "stats": {
-          "Points": {
-            "value": 100
-          },
-          "M": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 4
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 5
-          },
-          "A": {
-            "value": 5
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 6
-          },
-          "Base": {
-            "value": "32mm"
-          }
-        }
-      },
-      "Model§Culexus Assassin": {
-        "stats": {
-          "Points": {
-            "value": 100
-          },
-          "M": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 4
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 5
-          },
-          "A": {
-            "value": 4
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 6
-          },
-          "Base": {
-            "value": "32mm"
-          }
-        }
-      },
-      "Model§Eversor Assassin": {
-        "stats": {
-          "Points": {
-            "value": 100
-          },
-          "M": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 4
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 6
-          },
-          "A": {
-            "value": 6
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 6
-          },
-          "Base": {
-            "value": "32mm"
-          }
-        }
-      },
-      "Model§Vindicare Assassin": {
-        "stats": {
-          "Points": {
-            "value": 100
-          },
-          "M": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 4
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 5
-          },
-          "A": {
-            "value": 5
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 6
-          },
-          "Base": {
-            "value": "32mm"
-          }
         }
       },
       "Roster§Army": {},
       "Weapon§Animus speculum": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 1
@@ -465,7 +417,7 @@
       "Weapon§Executioner pistol": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -485,7 +437,7 @@
       "Weapon§Exitus pistol": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D3"
@@ -505,7 +457,7 @@
       "Weapon§Exitus rifle": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D3"
@@ -525,7 +477,7 @@
       "Weapon§Melta bombs": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -565,13 +517,13 @@
       "Weapon§Neuro-gauntlet": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -585,7 +537,7 @@
       "Weapon§Phase sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -605,7 +557,7 @@
       "Weapon§Poison blades": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -625,13 +577,13 @@
       "Weapon§Power sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"

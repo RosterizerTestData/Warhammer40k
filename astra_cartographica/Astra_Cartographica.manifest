@@ -1,11 +1,11 @@
 {
   "name": "Astra Cartographica",
-  "revision": "0.0.6",
+  "revision": "0.0.7",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -18,7 +18,7 @@
     "assetTaxonomy": {},
     "assetCatalog": {
       "Ability§Agent of the Imperium": {
-        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can include one **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM** (excluding FALLEN** units) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment) and [Brigade Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) in your army without those units taking up [Battlefield Role slots](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role-Slots) in those Detachments. The inclusion of an AGENT** OF** THE** IMPERIUM** unit does not prevent other units from their Detachment benefiting from [Detachment abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachment-Abilities) (e.g. [Chapter Tactics](https://wahapedia.ru/wh40k9ed/factions/space-marines/#Chapter-Tactics-1), [Defenders of Humanity](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Defenders-of-Humanity), etc.), and it does not prevent other units from your army benefiting from abilities that require every model in your army to have that ability (e.g. Combat Doctrines**). An AGENT** OF** THE** IMPERIUM** unit included in a Patrol, Battalion or Brigade Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common (e.g. in a [matched play](https://wahapedia.ru/wh40k9ed/the-rules/matched-play) game), and when determining your [Army Faction](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Army-Faction)."
+        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can include one **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM** (excluding FALLEN** units) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment) and [Brigade Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) in your army without those units taking up [Battlefield Role slots](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role-Slots) in those Detachments. The inclusion of an AGENT** OF** THE** IMPERIUM** unit does not prevent other units from their Detachment benefiting from [Detachment abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachment-Abilities) (e.g. [Chapter Tactics](https://wahapedia.ru/wh40k9ed/factions/space-marines/#Chapter-Tactics-1), Defenders of Humanity, etc.), and it does not prevent other units from your army benefiting from abilities that require every model in your army to have that ability (e.g. Combat Doctrines**). An AGENT** OF** THE** IMPERIUM** unit included in a Patrol, Battalion or Brigade Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common (e.g. in a [matched play](https://wahapedia.ru/wh40k9ed/the-rules/matched-play) game), and when determining your [Army Faction](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Army-Faction)."
       },
       "Ability§Captain on Deck": {
         "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **NAVIS IMPERIALIS** CORE** unit within 9″ of this unit’s Cartographica Rogue Trader model. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -83,7 +83,14 @@
             "Model§Cartographica Rogue Trader"
           ]
         },
-        "text": "Increase this unit’s **Power Rating** by +1** for every model it includes other than the Cartographica Rogue Trader.\n\n• The Cartographica Rogue Trader is equipped with: household pistol; monomolecular cane-rapier.\n\n• The Death Cult Executioner is equipped with: dartmask; Death Cult power blade.\n\n• The Lectro-Maester is equipped with: voltaic pistol.\n\n• The Rejuvenat Adept is equipped with: laspistol.",
+        "text": "Increase this unit’s **Power Rating** by +1** for every model it includes other than the Cartographica Rogue Trader.\n\n• The Cartographica Rogue Trader is equipped with: household pistol; monomolecular cane-rapier.\n\n• The Death Cult Executioner is equipped with: dartmask; Death Cult power blade.\n\n• The Lectro-Maester is equipped with: voltaic pistol.\n\n• The Rejuvenat Adept is equipped with: laspistol.\n\n\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§Death Cult Executioner",
+            "Model§Lectro-Maester",
+            "Model§Rejuvenat Adept"
+          ]
+        },
         "meta": {
           "Publication": "[Kill Team: Annual 2022 – Elucidian Starstriders (Datasheet) 9th ed. –  @2022-09-28](https://www.warhammer-community.com/wp-content/uploads/2022/09/RLuPWfAupdlNlFKd.pdf)"
         }
@@ -100,7 +107,7 @@
             "value": 3
           },
           "BS": {
-            "value": null
+            "value": "null"
           },
           "S": {
             "value": 4
@@ -121,7 +128,7 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           }
         }
       },
@@ -158,7 +165,7 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Household pistol",
@@ -384,7 +391,7 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Dartmask",
@@ -610,7 +617,7 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Voltaic pistol",
@@ -773,7 +780,7 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Navis shotgun",
@@ -1167,7 +1174,7 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Navis shotgun",
@@ -1442,7 +1449,7 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Laspistol",
@@ -1605,7 +1612,7 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Artificer shotgun",
@@ -1783,7 +1790,7 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Lasgun",
@@ -1938,6 +1945,8 @@
             "value": 0,
             "statType": "rank",
             "statOrder": 10,
+            "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "0": {
                 "order": 0,
@@ -1973,6 +1982,8 @@
             "value": 0,
             "statType": "rank",
             "statOrder": 10,
+            "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "0": {
                 "order": 0,
@@ -2035,7 +2046,7 @@
             "Model§Navis Sergeant-at-Arms"
           ]
         },
-        "text": "• One Navis Armsman model is equipped with: Navis las-volley.\n\n• One Navis Armsman model is equipped with: Navis heavy shotgun; endurant shield.\n\n• Every other model is equipped with: Navis shotgun.\n\n• The Navis Sergeant-at-Arms’ Navis shotgun can be replaced with one of the following: 1 autopistol and 1 chainsword; 1 bolt pistol and 1 power sword.\n\n• 1 Navis Armsman’s Navis las-volley can be replaced with one of the following: 1 meltagun; 1 plasma gun.\n\n• 1 Navis Armsman’s Navis shotgun can be replaced with 1 autopistol and 1 power axe.\n\n• 1 Navis Armsman’s Navis shotgun can be replaced with 1 autopistol and 1 chainfist.\n\n• 1 Navis Armsman can be equipped with 1 demolition charge, 1 frag grenades and 1 smoke grenades.",
+        "text": "• One Navis Armsman model is equipped with: Navis las-volley.\n\n• One Navis Armsman model is equipped with: Navis heavy shotgun; endurant shield.\n\n• Every other model is equipped with: Navis shotgun.\n\n• The Navis Sergeant-at-Arms’ Navis shotgun can be replaced with one of the following: 1 autopistol and 1 chainsword; 1 bolt pistol and 1 power sword.\n\n• 1 Navis Armsman’s Navis las-volley can be replaced with one of the following: 1 meltagun; 1 plasma gun.\n\n• 1 Navis Armsman’s Navis shotgun can be replaced with 1 autopistol and 1 power axe.\n\n• 1 Navis Armsman’s Navis shotgun can be replaced with 1 autopistol and 1 chainfist.\n\n• 1 Navis Armsman can be equipped with 1 demolition charge, 1 frag grenades and 1 smoke grenades.\n\nnull",
         "allowed": {
           "items": [
             "Model§Navis Armsman"
@@ -2057,6 +2068,8 @@
             "statType": "numeric",
             "dynamic": true,
             "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
             "value": 4,
             "min": 4,
             "max": 8,
@@ -2102,10 +2115,11 @@
             "Model§Voidmaster"
           ]
         },
-        "text": "If this unit contains 6 or more models, it has **Power Rating 4**.\n\n• For every 5 models in this unit, one Voidsman model is equipped with: laspistol; Voidsman rotor cannon.\n\n• Every other Voidsman model is equipped with: lasgun; laspistol.\n\n• The Voidmaster is equipped with: artificer shotgun; laspistol.",
+        "text": "If this unit contains 6 or more models, it has **Power Rating 4**.\n\n• For every 5 models in this unit, one Voidsman model is equipped with: laspistol; Voidsman rotor cannon.\n\n• Every other Voidsman model is equipped with: lasgun; laspistol.\n\n• The Voidmaster is equipped with: artificer shotgun; laspistol.\n\n\n\nnull",
         "allowed": {
           "items": [
-            "Model§Voidsmen"
+            "Model§Voidsmen",
+            "Model§Canid"
           ]
         },
         "meta": {
@@ -2210,7 +2224,7 @@
       "Weapon§Chainfist": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D3"
@@ -2250,7 +2264,7 @@
       "Weapon§Dartmask": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
@@ -2270,13 +2284,13 @@
       "Weapon§Death Cult power blade": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -2289,7 +2303,7 @@
       "Weapon§Demolition charge": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -2329,7 +2343,7 @@
       "Weapon§Household pistol": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -2386,7 +2400,7 @@
       "Weapon§Meltagun": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -2406,13 +2420,13 @@
       "Weapon§Monomolecular cane-rapier": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -2445,7 +2459,7 @@
       "Weapon§Navis las-volley": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -2483,13 +2497,13 @@
       "Weapon§Power axe": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+2"
+            "value": 2
           },
           "Type": {
             "value": "Melee"
@@ -2502,13 +2516,13 @@
       "Weapon§Power sword": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
           },
           "S": {
-            "value": "+1"
+            "value": 1
           },
           "Type": {
             "value": "Melee"
@@ -2521,7 +2535,7 @@
       "Weapon§Standard": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 1
@@ -2540,7 +2554,7 @@
       "Weapon§Supercharge": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -2560,7 +2574,7 @@
       "Weapon§Voidsman rotor cannon": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1

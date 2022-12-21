@@ -1,11 +1,11 @@
 {
   "name": "Heretic Titan Legions",
-  "revision": "0.0.6",
+  "revision": "0.0.7",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -24,10 +24,10 @@
         "text": "Each time this model Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 12″ to the Move characteristic of this model."
       },
       "Ability§Reactor Meltdown": {
-        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 4D6″ suffers 3D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 3D6″ suffers 2D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 4D6\" suffers 3D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 3D6\" suffers 2D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Ability§Void Shields": {
-        "text": "This model has 2 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 6 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 8 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model has 4 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points."
+        "text": "This model has 2 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model has 6 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model has 8 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model has 4 void shields. Each void shield has 3 shield points. While this model has any void shields, it has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks.\n\n\n\nEach time a saving throw is failed for this model against a ranged attack, if it has any void shields, it does not suffer any damage. Instead, for each point of damage inflicted, one of its void shields loses 1 shield point. Once a void shield has lost a shield point, it must continue to lose shield points due to any further damage inflicted until it collapses. Each time an attack causes a void shield to be reduced to 0 shield points, that void shield collapses: this model loses that void shield and any excess damage inflicted by that attack is lost. Void shields can never be used to prevent [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (each mortal wound inflicted on a model with void shields causes that model to lose one wound as normal).\n\n\n\nAt the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model has a void shield that has fewer than 3 shield points remaining, that void shield is restored to 3 shield points."
       },
       "Ability§War Engine": {
         "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models (excluding **TITANIC** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them."
@@ -36,185 +36,7 @@
         "stats": {
           "Power Level": {
             "value": 150
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Chaos Reaver Titan",
-            "God-engine",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Heretic Titan Legion>",
-            "Chaos",
-            "Titanicus Traitoris"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§Battle Titan",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Chaos Reaver Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Reaver Titan is equipped with: 2 Reaver gatling blasters; Reaver apocalypse launcher; Reaver feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon; 1 Reaver power fist.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Warbringer Nemesis Titan": {
-        "stats": {
-          "Power Level": {
-            "value": 190
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Chaos Warbringer Nemesis Titan",
-            "God-engine",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Heretic Titan Legion>",
-            "Chaos",
-            "Chaos Reaver Titan"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§Battle Titan",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Chaos Warbringer Nemesis Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Warbringer Nemesis Titan is equipped with: 3 ardex-defensor maulers; 2 anvillus defence batteries; nemesis quake cannon; 2 Reaver gatling blasters; Warbringer Nemesis feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon.\n\n• This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Warhound Titan": {
-        "stats": {
-          "Power Level": {
-            "value": 100
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Chaos Warhound Titan",
-            "God-engine",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Heretic Titan Legion>",
-            "Chaos",
-            "Titanicus Traitoris"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§Flank Speed",
-            "Ability§Battle Titan",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Chaos Warhound Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Warhound Titan is equipped with: 2 Warhound vulcan mega-bolters; Warhound feet.\n\n• This model’s Warhound vulcan mega-bolters can each be replaced with one of the following: 1 Warhound inferno gun; 1 Warhound plasma blastgun; 1 Warhound turbo-laser destructor.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Warlord Titan": {
-        "stats": {
-          "Power Level": {
-            "value": 275
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Chaos Warlord Titan",
-            "God-engine",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Heretic Titan Legion>",
-            "Chaos",
-            "Titanicus Traitoris"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Reactor Meltdown",
-            "Ability§War Engine",
-            "Ability§Void Shields",
-            {
-              "item": "Model§Chaos Warlord Titan",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Warlord Titan is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; 2 arioch power claws; Warlord feet.\n\n• This model’s 2 apocalypse launchers can be replaced with 2 laser blasters.\n\n• This model’s arioch power claws can each be replaced with one of the following: 1 belicosa volcano cannon; 1 macro gatling blaster; 1 mori quake cannon; 1 sunfury plasma annihilator.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Model§Chaos Reaver Titan": {
-        "stats": {
+          },
           "Points": {
             "value": 3000
           },
@@ -222,10 +44,10 @@
             "value": 0
           },
           "WS": {
-            "value": null
+            "value": "null"
           },
           "BS": {
-            "value": null
+            "value": "null"
           },
           "S": {
             "value": 8
@@ -541,6 +363,33 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Chaos Reaver Titan",
+            "God-engine",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Heretic Titan Legion>",
+            "Chaos",
+            "Titanicus Traitoris"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§Battle Titan",
+            "Ability§Void Shields"
+          ]
+        },
+        "text": "A Chaos Reaver Titan is equipped with: 2 Reaver gatling blasters; Reaver apocalypse launcher; Reaver feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon; 1 Reaver power fist.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -573,7 +422,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 14,
+                "value": "14″",
                 "iterations": 1
               },
               {
@@ -635,7 +484,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -666,10 +515,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Warbringer Nemesis Titan": {
+      "Lords of War§Chaos Warbringer Nemesis Titan": {
         "stats": {
+          "Power Level": {
+            "value": 190
+          },
           "Points": {
             "value": 3800
           },
@@ -677,10 +532,10 @@
             "value": 0
           },
           "WS": {
-            "value": null
+            "value": "null"
           },
           "BS": {
-            "value": null
+            "value": "null"
           },
           "S": {
             "value": 8
@@ -1234,6 +1089,33 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Chaos Warbringer Nemesis Titan",
+            "God-engine",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Heretic Titan Legion>",
+            "Chaos",
+            "Chaos Reaver Titan"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§Battle Titan",
+            "Ability§Void Shields"
+          ]
+        },
+        "text": "A Chaos Warbringer Nemesis Titan is equipped with: 3 ardex-defensor maulers; 2 anvillus defence batteries; nemesis quake cannon; 2 Reaver gatling blasters; Warbringer Nemesis feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon.\n\n• This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -1266,7 +1148,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 12,
+                "value": "12″",
                 "iterations": 1
               },
               {
@@ -1328,7 +1210,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 9,
+                "value": "9″",
                 "iterations": 1
               },
               {
@@ -1359,10 +1241,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Warhound Titan": {
+      "Lords of War§Chaos Warhound Titan": {
         "stats": {
+          "Power Level": {
+            "value": 100
+          },
           "Points": {
             "value": 2000
           },
@@ -1370,10 +1258,10 @@
             "value": 0
           },
           "WS": {
-            "value": null
+            "value": "null"
           },
           "BS": {
-            "value": null
+            "value": "null"
           },
           "S": {
             "value": 8
@@ -1570,6 +1458,34 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Chaos Warhound Titan",
+            "God-engine",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Heretic Titan Legion>",
+            "Chaos",
+            "Titanicus Traitoris"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§Flank Speed",
+            "Ability§Battle Titan",
+            "Ability§Void Shields"
+          ]
+        },
+        "text": "A Chaos Warhound Titan is equipped with: 2 Warhound vulcan mega-bolters; Warhound feet.\n\n• This model’s Warhound vulcan mega-bolters can each be replaced with one of the following: 1 Warhound inferno gun; 1 Warhound plasma blastgun; 1 Warhound turbo-laser destructor.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -1602,7 +1518,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 16,
+                "value": "16″",
                 "iterations": 1
               },
               {
@@ -1664,7 +1580,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 12,
+                "value": "12″",
                 "iterations": 1
               },
               {
@@ -1695,10 +1611,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Warlord Titan": {
+      "Lords of War§Chaos Warlord Titan": {
         "stats": {
+          "Power Level": {
+            "value": 275
+          },
           "Points": {
             "value": 5500
           },
@@ -1706,10 +1628,10 @@
             "value": 0
           },
           "WS": {
-            "value": null
+            "value": "null"
           },
           "BS": {
-            "value": null
+            "value": "null"
           },
           "S": {
             "value": 9
@@ -2311,6 +2233,33 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Chaos Warlord Titan",
+            "God-engine",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Heretic Titan Legion>",
+            "Chaos",
+            "Titanicus Traitoris"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Reactor Meltdown",
+            "Ability§War Engine",
+            "Ability§Void Shields"
+          ]
+        },
+        "text": "A Chaos Warlord Titan is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; 2 arioch power claws; Warlord feet.\n\n• This model’s 2 apocalypse launchers can be replaced with 2 laser blasters.\n\n• This model’s arioch power claws can each be replaced with one of the following: 1 belicosa volcano cannon; 1 macro gatling blaster; 1 mori quake cannon; 1 sunfury plasma annihilator.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -2343,7 +2292,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -2405,7 +2354,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -2436,6 +2385,9 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
       "Roster§Army": {},
@@ -2466,7 +2418,7 @@
       "Weapon§Anvillus defence battery": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -2486,7 +2438,7 @@
       "Weapon§Apocalypse launcher": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -2501,12 +2453,12 @@
             "value": "24″-200″"
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Ardex-defensor lascannon": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D6"
@@ -2526,7 +2478,7 @@
       "Weapon§Ardex-defensor mauler": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -2546,7 +2498,7 @@
       "Weapon§Arioch power claw (melee)": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 18
@@ -2566,7 +2518,7 @@
       "Weapon§Arioch power claw (shooting)": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -2585,7 +2537,7 @@
       "Weapon§Belicosa volcano cannon": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 12
@@ -2605,7 +2557,7 @@
       "Weapon§Laser blaster": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6+3"
@@ -2625,7 +2577,7 @@
       "Weapon§Macro gatling blaster": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 4
@@ -2644,7 +2596,7 @@
       "Weapon§Mori quake cannon": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 6
@@ -2659,12 +2611,12 @@
             "value": "280″"
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Nemesis quake cannon": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 6
@@ -2679,12 +2631,12 @@
             "value": "24″-480″"
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Nemesis volcano cannon": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 12
@@ -2704,7 +2656,7 @@
       "Weapon§Reaver apocalypse launcher": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -2719,12 +2671,12 @@
             "value": "24″-200″"
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Reaver feet": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 4
@@ -2744,7 +2696,7 @@
       "Weapon§Reaver gatling blaster": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
@@ -2763,7 +2715,7 @@
       "Weapon§Reaver laser blaster": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6+3"
@@ -2783,7 +2735,7 @@
       "Weapon§Reaver melta cannon": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 8
@@ -2803,7 +2755,7 @@
       "Weapon§Reaver power fist": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 12
@@ -2823,7 +2775,7 @@
       "Weapon§Reaver volcano cannon": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": 12
@@ -2843,7 +2795,7 @@
       "Weapon§Standard": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 4
@@ -2863,7 +2815,7 @@
       "Weapon§Supercharge": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 5
@@ -2883,7 +2835,7 @@
       "Weapon§Warbringer Nemesis feet": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 4
@@ -2903,7 +2855,7 @@
       "Weapon§Warhound feet": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
@@ -2923,7 +2875,7 @@
       "Weapon§Warhound inferno gun": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
@@ -2943,7 +2895,7 @@
       "Weapon§Warhound turbo-laser destructor": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6+3"
@@ -2963,7 +2915,7 @@
       "Weapon§Warhound vulcan megabolter": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -2982,7 +2934,7 @@
       "Weapon§Warlord feet": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 5

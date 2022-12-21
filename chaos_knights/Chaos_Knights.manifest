@@ -1,11 +1,11 @@
 {
   "name": "Chaos Knights",
-  "revision": "0.0.6",
+  "revision": "0.0.7",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "This manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -202,7 +202,7 @@
         "text": "Each time this model fights, if it is equipped with both a warpstrike claw and a reaper chainsword (including any Relic that replaces such a weapon), and if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, then until that fight is resolved, add 1 to the Attacks characteristic of this model."
       },
       "Ability§Explodes": {
-        "text": "When a model in this unit is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\nERROR: The following text was found on another ability with the same name.\n\nWhen this model is destroyed, roll two D6 before removing it from play. If either of the dice are a 6, it explodes, and each unit within 2D6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (if both of the dice are a 6, each unit within 3D6″ suffers D6 mortal wounds instead)."
+        "text": "When a model in this unit is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+ it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll two D6 before removing it from play. If either of the dice are a 6, it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (if both of the dice are a 6, each unit within 3D6\" suffers D6 mortal wounds instead)."
       },
       "Ability§Frenzied Rampage (Aura)": {
         "text": "",
@@ -217,13 +217,13 @@
         }
       },
       "Ability§Harbingers of Dread": {
-        "text": "Where Chaos Knights tread, the skies grow unnaturally dark and the dread of the warp permeates the battlefield. None are immune to its shadowy touch, for those it does not paralyse with fear and despair are wracked with hallucinations and driven mad.If every unit from your army has the **CHAOS KNIGHTS** keyword (excluding units with the UNALIGNED** or [AGENT** OF** CHAOS**](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Fallen-Hero) keywords), then this unit gains a bonus (see below) depending on which <span class=\"tt kwbu\">Harbinger <span class=\"tt kwbu\">abilities</span></span> are active for your army. At the start of each battle round, you must select one Harbinger ability (either a Despair, Doom or Darkness Harbinger ability) from the corresponding choices for that battle round in the table shown below. Note that when making a selection:\n\n* During the first and fifth [battle rounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Battle-Round), you must select the Doom ability.\n* You can only select the Despair ability if you selected the Despair or Doom ability in the previous battle round.\n* You can only select the Darkness ability if you selected the Darkness or Doom ability in the previous battle round.\n\n<div class=\" img-opa\"><img border=\"0\" src=\"/wh40k9ed/img/CK/CK_Diagram.png\" style=\"margin:4px\">\n\nOnce you have selected a Harbinger ability, it becomes active for the remainder of the battle and applies to all units in your army with this ability. Some rules can make additional Harbinger abilities become active for one or more units during the battle. Duplicated active Harbinger abilities on the same unit have no additional effect.</div>"
+        "text": "Where Chaos Knights tread, the skies grow unnaturally dark and the dread of the warp permeates the battlefield. None are immune to its shadowy touch, for those it does not paralyse with fear and despair are wracked with hallucinations and driven mad.If every unit from your army has the **CHAOS KNIGHTS** keyword (excluding units with the UNALIGNED** or [AGENT** OF** CHAOS**](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Fallen-Hero) keywords), then this unit gains a bonus (see below) depending on which **Harbinger abilities** are active for your army. At the start of each battle round, you must select one Harbinger ability (either a Despair, Doom or Darkness Harbinger ability) from the corresponding choices for that battle round in the table shown below. Note that when making a selection:\n\n* During the first and fifth [battle rounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Battle-Round), you must select the Doom ability.\n* You can only select the Despair ability if you selected the Despair or Doom ability in the previous battle round.\n* You can only select the Darkness ability if you selected the Darkness or Doom ability in the previous battle round.\n\n<div class=\" img-opa\"><img border=\"0\" src=\"/wh40k9ed/img/CK/CK_Diagram.png\" style=\"margin:4px\">\n\nOnce you have selected a Harbinger ability, it becomes active for the remainder of the battle and applies to all units in your army with this ability. Some rules can make additional Harbinger abilities become active for one or more units during the battle. Duplicated active Harbinger abilities on the same unit have no additional effect.</div>"
       },
       "Ability§Ion Gauntlet Shield": {
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves). This model has a 4+ invulnerable save against melee attacks. Each time a **TITANIC** unit makes a melee attack that targets this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Ability§Ion Shield": {
-        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against attacks made with ranged weapons.\n\nERROR: The following text was found on another ability with the same name.\n\nModels in this unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged weapons."
+        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against attacks made with ranged weapons.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nModels in this unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged weapons."
       },
       "Ability§Ion Shields": {
         "text": "Models in this unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks."
@@ -247,7 +247,7 @@
         }
       },
       "Ability§Super-heavy Walker": {
-        "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models (excluding **MONSTER** and VEHICLE** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them.\n\nERROR: The following text was found on another ability with the same name.\n\nThis model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back), it can be moved across other models (excluding **MONSTER** and VEHICLE** models) as if they were not there."
+        "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or Falls Back, it can be moved across other models (excluding **MONSTER** and VEHICLE** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back), it can be moved across other models (excluding **MONSTER** and VEHICLE** models) as if they were not there."
       },
       "Ability§Taskmaster (Aura)": {
         "text": "",
@@ -268,1063 +268,7 @@
         "stats": {
           "Power Level": {
             "value": 38
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Acastus Class",
-            "Character",
-            "Knight Asterius",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Ion Shield",
-            "Ability§Explodes",
-            {
-              "item": "Model§Chaos Acastus Knight Asterius",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Acastus Knight Asterius is equipped with: 2 Asterius volkite culverins; karacnos mortar battery; 2 twin conversion beam cannons; titanic feet.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Acastus Knight Porphyrion": {
-        "stats": {
-          "Power Level": {
-            "value": 40
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Acastus Class",
-            "Character",
-            "Knight Porphyrion",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Ion Shield",
-            "Ability§Explodes",
-            {
-              "item": "Model§Chaos Acastus Knight Porphyrion",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "An Chaos Acastus Knight Porphyrion is equipped with: 2 Acastus autocannons; ironstorm missile pod; 2 twin magna lascannons; titanic feet.\n\n• This model's Acastus autocannons can each be replaced with 1 Acastus lascannon.\n\n• This model’s ironstorm missile pod can be replaced with helios defence missiles.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Cerastus Knight Acheron": {
-        "stats": {
-          "Power Level": {
-            "value": 24
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Cerastus Class",
-            "Character",
-            "Knight Acheron",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Ion Shield",
-            "Ability§Explodes",
-            {
-              "item": "Model§Chaos Cerastus Knight Acheron",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Cerastus Knight Acheron is equipped with: Acheron flame cannon; Acheron twin heavy bolter; reaper chainfist; titanic feet.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Cerastus Knight Atrapos": {
-        "stats": {
-          "Power Level": {
-            "value": 26
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Cerastus Class",
-            "Character",
-            "Knight Atrapos",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Macro-extinction Protocols",
-            "Ability§Explodes",
-            "Ability§Ionic Flare Shield",
-            {
-              "item": "Model§Chaos Cerastus Knight Atrapos",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Cerastus Knight Atrapos is equipped with: Atrapos lascutter; graviton singularity cannon; titanic feet.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Cerastus Knight Castigator": {
-        "stats": {
-          "Power Level": {
-            "value": 23
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Cerastus Class",
-            "Character",
-            "Knight Castigator",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Ion Shield",
-            "Ability§Explodes",
-            {
-              "item": "Model§Chaos Cerastus Knight Castigator",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Cerastus Knight Castigator is equipped with: Castigator bolt cannon; tempest warblade; titanic feet.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Cerastus Knight Lancer": {
-        "stats": {
-          "Power Level": {
-            "value": 22
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Cerastus Class",
-            "Character",
-            "Knight Lancer",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Explodes",
-            "Ability§Ion Gauntlet Shield",
-            {
-              "item": "Model§Chaos Cerastus Knight Lancer",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Cerastus Knight Lancer is equipped with: Cerastus shock lance; titanic feet.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Questoris Knight Magaera": {
-        "stats": {
-          "Power Level": {
-            "value": 25
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Abhorrent-class",
-            "Character",
-            "Knight Magaera",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Empyreal Preysight",
-            "Ability§Ionic Flare Shield",
-            "Ability§Explodes",
-            {
-              "item": "Model§Chaos Questoris Knight Magaera",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Questoris Knight Magaera is equipped with: lightning cannon; phased plasma-fusil; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Chaos Questoris Knight Styrix": {
-        "stats": {
-          "Power Level": {
-            "value": 24
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Abhorrent-class",
-            "Character",
-            "Knight Styrix",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Super-heavy Walker",
-            "Ability§Ionic Flare Shield",
-            "Ability§Empyreal Preysight",
-            "Ability§Explodes",
-            {
-              "item": "Model§Chaos Questoris Knight Styrix",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Chaos Questoris Knight Styrix is equipped with: graviton crusher; reaper chainsword; titanic feet; volkite chieorovile.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.",
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§Knight Abominant": {
-        "stats": {
-          "Power Level": {
-            "value": 22
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Abhorrent-class",
-            "Character",
-            "Core",
-            "Knight Abominant",
-            "Psyker",
-            "Pterrorshades",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Super-heavy Walker",
-            "Ability§Harbingers of Dread",
-            "Ability§Explodes",
-            "Psychic Power§Smite",
-            {
-              "item": "Model§Knight Abominant",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Knight Abominant is equipped with: diabolus heavy stubber; volkite combustor; balemace; electroscourge; titanic feet.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Warp Storm discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Warp-Storm-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Warp Storm Discipline"
-          ]
-        },
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§Knight Desecrator": {
-        "stats": {
-          "Power Level": {
-            "value": 20
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Abhorrent-class",
-            "Character",
-            "Core",
-            "Knight Desecrator",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Super-heavy Walker",
-            "Ability§Harbingers of Dread",
-            "Ability§Taskmaster (Aura)",
-            "Ability§Explodes",
-            {
-              "item": "Model§Knight Desecrator",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Knight Desecrator is equipped with: Desecrator laser destructor; diabolus heavy stubber; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 warpstrike claw.",
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§Knight Despoiler": {
-        "stats": {
-          "Power Level": {
-            "value": 24
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Abhorrent-class",
-            "Character",
-            "Knight Despoiler",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Super-heavy Walker",
-            "Ability§Harbingers of Dread",
-            "Ability§Dread Dominion (Aura)",
-            "Ability§Engine of Destruction",
-            "Ability§Explodes",
-            {
-              "item": "Model§Knight Despoiler",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Knight Despoiler is equipped with: daemonbreath meltagun; reaper chainsword; titanic feet; warpstrike claw.\n\n\n\n*If this model is equipped with 2 daemonbreath thermal cannons, 2 despoiler battle cannons,\n\n2 despoiler gatling cannons, or 1 reaper chainsword and 1 warpstrike claw, its unit cost is increased by 20 pts.*\n\n• This model’s daemonbreath meltagun can be replaced with 1 diabolus heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 of the following:\n\n○ 1 daemonbreath thermal cannon\n\n○ 1 despoiler gatling cannon and 1 heavy darkflamer\n\n○ 1 despoiler battle cannon and 1 diabolus heavy stubber\n\n• This model’s warpstrike claw can be replaced with 1 of the following:\n\n○ 1 daemonbreath thermal cannon\n\n○ 1 despoiler gatling cannon and 1 heavy darkflamer\n\n○ 1 despoiler battle cannon and 1 diabolus heavy stubber\n\n• This model can be equipped with one of the following: 1 havoc missile pod; 1 ruinspear rocket pod; 1 twin hellstorm autocannon.",
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§Knight Rampager": {
-        "stats": {
-          "Power Level": {
-            "value": 20
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Abhorrent-class",
-            "Character",
-            "Core",
-            "Knight Rampager",
-            "Titanic",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Super-heavy Walker",
-            "Ability§Harbingers of Dread",
-            "Ability§Frenzied Rampage (Aura)",
-            "Ability§Explodes",
-            {
-              "item": "Model§Knight Rampager",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Knight Rampager is equipped with: diabolus heavy stubber; reaper chainsword; titanic feet; warpstrike claw.",
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§Knight Tyrant": {
-        "stats": {
-          "Power Level": {
-            "value": 31
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Knight Tyrant",
-            "Titanic",
-            "Tyrant-class",
-            "Vehicle"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Super-heavy Walker",
-            "Ability§Harbingers of Dread",
-            "Ability§Explodes",
-            {
-              "item": "Model§Knight Tyrant",
-              "stats": {
-                "Points": {
-                  "visibility": "hidden"
-                }
-              }
-            }
-          ]
-        },
-        "text": "A Knight Tyrant is equipped with: brimstone volcano lance; ectoplasma decimator; 4 gheiststrike missiles; 2 twin daemonbreath meltaguns; twin desecrator cannon; titanic feet.\n\n• This model’s brimstone volcano lance and ectoplasma decimator can be replaced with 1 darkflame cannon and 1 warpshock harpoon.\n\n• This model’s 4 gheiststrike missiles and twin desecrator cannon can be replaced with 2 gheiststrike missiles and 2 twin desecrator cannons.",
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§War Dog Brigand": {
-        "stats": {
-          "Power Level": {
-            "value": 8
           },
-          "model": {
-            "value": "Model§War Dog Brigand"
-          },
-          "War Dog Brigand": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
-          },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Core",
-            "Pterrorshades",
-            "Vehicle",
-            "War Dog Brigand",
-            "War Dog-class"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Harbingers of Dread",
-            "Ability§War Dog Squadron",
-            "Ability§Explodes",
-            "Model§War Dog Brigand"
-          ]
-        },
-        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: avenger chaincannon; daemonbreath spear; havoc multi-launcher.\n\n• Any number of models can each have their havoc multi-launcher replaced with 1 diabolus heavy stubber.",
-        "allowed": {
-          "items": [
-            "Model§War Dog Brigand"
-          ]
-        },
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§War Dog Executioner": {
-        "stats": {
-          "Power Level": {
-            "value": 8
-          },
-          "model": {
-            "value": "Model§War Dog Executioner"
-          },
-          "War Dog Executioner": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
-          },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Core",
-            "Vehicle",
-            "War Dog Executioner",
-            "War Dog-class"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Harbingers of Dread",
-            "Ability§War Dog Squadron",
-            "Ability§Explodes",
-            "Model§War Dog Executioner"
-          ]
-        },
-        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: daemonbreath meltagun; 2 War Dog autocannons.\n\n• Any number of models can each have their daemonbreath meltagun replaced with 1 diabolus heavy stubber.",
-        "allowed": {
-          "items": [
-            "Model§War Dog Executioner"
-          ]
-        },
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§War Dog Huntsman": {
-        "stats": {
-          "Power Level": {
-            "value": 8
-          },
-          "model": {
-            "value": "Model§War Dog Huntsman"
-          },
-          "War Dog Huntsman": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
-          },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Core",
-            "Vehicle",
-            "War Dog Huntsman",
-            "War Dog-class"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Harbingers of Dread",
-            "Ability§War Dog Squadron",
-            "Ability§Explodes",
-            "Model§War Dog Huntsman"
-          ]
-        },
-        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: daemonbreath spear; daemonbreath meltagun; reaper chaintalon.\n\n• Any number of models can each have their daemonbreath meltagun replaced with 1 diabolus heavy stubber.",
-        "allowed": {
-          "items": [
-            "Model§War Dog Huntsman"
-          ]
-        },
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§War Dog Karnivore": {
-        "stats": {
-          "Power Level": {
-            "value": 8
-          },
-          "model": {
-            "value": "Model§War Dog Karnivore"
-          },
-          "War Dog Karnivore": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
-          },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Core",
-            "Pterrorshades",
-            "Vehicle",
-            "War Dog Karnivore",
-            "War Dog-class"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Harbingers of Dread",
-            "Ability§War Dog Squadron",
-            "Ability§Explodes",
-            "Model§War Dog Karnivore"
-          ]
-        },
-        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: havoc multi-launcher; reaper chaintalon; slaughterclaw.\n\n• Any number of models can each have their havoc multi-launcher replaced with 1 diabolus heavy stubber.",
-        "allowed": {
-          "items": [
-            "Model§War Dog Karnivore"
-          ]
-        },
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Lords of War§War Dog Moirax": {
-        "stats": {
-          "Power Level": {
-            "value": 8
-          },
-          "model": {
-            "value": "Model§War Dog Moirax"
-          },
-          "War Dog Moirax": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
-          },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Vehicle",
-            "War Dog Moirax",
-            "War Dog-class"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harbingers of Dread",
-            "Ability§Ion Shield",
-            "Ability§War Dog Squadron",
-            "Ability§Explodes",
-            "Ability§Protection Protocols",
-            "Model§War Dog Moirax"
-          ]
-        },
-        "text": "If this unit contains 2 War Dog Moirax it has **Power Rating 16**. If this unit contains 3 War Dog Moirax it has Power Rating 24**. Every model is equipped with: rad cleanser; siege claw; volkite veuglaire.\n\n• Any number of models can each have their volkite veuglaire replaced with one of the following: 1 siege claw and 1 rad cleanser; 1 graviton pulsar; 1 lightning lock; 1 moirax conversion beam cannon.\n\n• Any number of models can each have their siege claw and rad cleanser replaced with one of the following: 1 graviton pulsar; 1 lightning lock; 1 moirax conversion beam cannon; 1 volkite veuglaire.",
-        "allowed": {
-          "items": [
-            "Model§War Dog Moirax"
-          ]
-        },
-        "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
-        }
-      },
-      "Lords of War§War Dog Stalker": {
-        "stats": {
-          "Power Level": {
-            "value": 8
-          },
-          "model": {
-            "value": "Model§War Dog Stalker"
-          },
-          "War Dog Stalker": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
-          },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Chaos Knights—Indomitus 1.0"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Character",
-            "Core",
-            "Pterrorshades",
-            "Vehicle",
-            "War Dog Stalker",
-            "War Dog-class"
-          ],
-          "Faction": [
-            "<Dread Household>",
-            "<Questor Traitoris>",
-            "Chaos",
-            "Chaos Knights"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ion Shields",
-            "Ability§Harbingers of Dread",
-            "Ability§War Dog Squadron",
-            "Ability§Explodes",
-            "Model§War Dog Stalker"
-          ]
-        },
-        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: avenger chaincannon; havoc multi-launcher; slaughterclaw.\n\n• Any number of models can each have their havoc multi-launcher replaced with 1 diabolus heavy stubber.\n\n• Any number of models can each have their slaughterclaw replaced with 1 reaper chaintalon.\n\n• Any number of models can each have their avenger chaincannon replaced with 1 daemonbreath spear.",
-        "allowed": {
-          "items": [
-            "Model§War Dog Stalker"
-          ]
-        },
-        "meta": {
-          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
-        }
-      },
-      "Model§Chaos Acastus Knight Asterius": {
-        "stats": {
           "Points": {
             "value": 750
           },
@@ -1602,6 +546,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Acastus Class",
+            "Character",
+            "Knight Asterius",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Ion Shield",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Chaos Acastus Knight Asterius is equipped with: 2 Asterius volkite culverins; karacnos mortar battery; 2 twin conversion beam cannons; titanic feet.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -1634,7 +608,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -1696,7 +670,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 4,
+                "value": "4″",
                 "iterations": 1
               },
               {
@@ -1727,10 +701,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Acastus Knight Porphyrion": {
+      "Lords of War§Chaos Acastus Knight Porphyrion": {
         "stats": {
+          "Power Level": {
+            "value": 40
+          },
           "Points": {
             "value": 780
           },
@@ -2088,6 +1068,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Acastus Class",
+            "Character",
+            "Knight Porphyrion",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Ion Shield",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "An Chaos Acastus Knight Porphyrion is equipped with: 2 Acastus autocannons; ironstorm missile pod; 2 twin magna lascannons; titanic feet.\n\n• This model's Acastus autocannons can each be replaced with 1 Acastus lascannon.\n\n• This model’s ironstorm missile pod can be replaced with helios defence missiles.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -2120,7 +1130,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -2182,7 +1192,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 4,
+                "value": "4″",
                 "iterations": 1
               },
               {
@@ -2213,10 +1223,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Cerastus Knight Acheron": {
+      "Lords of War§Chaos Cerastus Knight Acheron": {
         "stats": {
+          "Power Level": {
+            "value": 24
+          },
           "Points": {
             "value": 480
           },
@@ -2494,6 +1510,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Cerastus Class",
+            "Character",
+            "Knight Acheron",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Ion Shield",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Chaos Cerastus Knight Acheron is equipped with: Acheron flame cannon; Acheron twin heavy bolter; reaper chainfist; titanic feet.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -2526,7 +1572,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -2588,7 +1634,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -2619,10 +1665,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Cerastus Knight Atrapos": {
+      "Lords of War§Chaos Cerastus Knight Atrapos": {
         "stats": {
+          "Power Level": {
+            "value": 26
+          },
           "Points": {
             "value": 520
           },
@@ -2853,6 +1905,37 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Cerastus Class",
+            "Character",
+            "Knight Atrapos",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Macro-extinction Protocols",
+            "Ability§Explodes",
+            "Ability§Ionic Flare Shield"
+          ]
+        },
+        "text": "A Chaos Cerastus Knight Atrapos is equipped with: Atrapos lascutter; graviton singularity cannon; titanic feet.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -2885,7 +1968,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -2947,7 +2030,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -2978,10 +2061,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Cerastus Knight Castigator": {
+      "Lords of War§Chaos Cerastus Knight Castigator": {
         "stats": {
+          "Power Level": {
+            "value": 23
+          },
           "Points": {
             "value": 460
           },
@@ -3180,6 +2269,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Cerastus Class",
+            "Character",
+            "Knight Castigator",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Ion Shield",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Chaos Cerastus Knight Castigator is equipped with: Castigator bolt cannon; tempest warblade; titanic feet.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -3212,7 +2331,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -3274,7 +2393,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -3305,10 +2424,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Cerastus Knight Lancer": {
+      "Lords of War§Chaos Cerastus Knight Lancer": {
         "stats": {
+          "Power Level": {
+            "value": 22
+          },
           "Points": {
             "value": 440
           },
@@ -3444,6 +2569,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Cerastus Class",
+            "Character",
+            "Knight Lancer",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Explodes",
+            "Ability§Ion Gauntlet Shield"
+          ]
+        },
+        "text": "A Chaos Cerastus Knight Lancer is equipped with: Cerastus shock lance; titanic feet.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -3476,7 +2631,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 12,
+                "value": "12″",
                 "iterations": 1
               },
               {
@@ -3538,7 +2693,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -3569,10 +2724,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Questoris Knight Magaera": {
+      "Lords of War§Chaos Questoris Knight Magaera": {
         "stats": {
+          "Power Level": {
+            "value": 25
+          },
           "Points": {
             "value": 500
           },
@@ -3930,6 +3091,37 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Abhorrent-class",
+            "Character",
+            "Knight Magaera",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Empyreal Preysight",
+            "Ability§Ionic Flare Shield",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Chaos Questoris Knight Magaera is equipped with: lightning cannon; phased plasma-fusil; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -3962,7 +3154,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 9,
+                "value": "9″",
                 "iterations": 1
               },
               {
@@ -4024,7 +3216,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -4055,10 +3247,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Chaos Questoris Knight Styrix": {
+      "Lords of War§Chaos Questoris Knight Styrix": {
         "stats": {
+          "Power Level": {
+            "value": 24
+          },
           "Points": {
             "value": 475
           },
@@ -4416,6 +3614,37 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Abhorrent-class",
+            "Character",
+            "Knight Styrix",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Super-heavy Walker",
+            "Ability§Ionic Flare Shield",
+            "Ability§Empyreal Preysight",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Chaos Questoris Knight Styrix is equipped with: graviton crusher; reaper chainsword; titanic feet; volkite chieorovile.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -4448,7 +3677,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 9,
+                "value": "9″",
                 "iterations": 1
               },
               {
@@ -4510,7 +3739,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -4541,10 +3770,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
         }
       },
-      "Model§Knight Abominant": {
+      "Lords of War§Knight Abominant": {
         "stats": {
+          "Power Level": {
+            "value": 22
+          },
           "Points": {
             "value": 430
           },
@@ -4917,6 +4152,45 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Abhorrent-class",
+            "Character",
+            "Core",
+            "Knight Abominant",
+            "Psyker",
+            "Pterrorshades",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Super-heavy Walker",
+            "Ability§Harbingers of Dread",
+            "Ability§Explodes",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "A Knight Abominant is equipped with: diabolus heavy stubber; volkite combustor; balemace; electroscourge; titanic feet.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Warp Storm discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Warp-Storm-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Warp Storm Discipline"
+          ]
+        },
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -4949,7 +4223,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -5011,7 +4285,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -5042,10 +4316,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
         }
       },
-      "Model§Knight Desecrator": {
+      "Lords of War§Knight Desecrator": {
         "stats": {
+          "Power Level": {
+            "value": 20
+          },
           "Points": {
             "value": 400
           },
@@ -5363,6 +4643,38 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Abhorrent-class",
+            "Character",
+            "Core",
+            "Knight Desecrator",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Super-heavy Walker",
+            "Ability§Harbingers of Dread",
+            "Ability§Taskmaster (Aura)",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Knight Desecrator is equipped with: Desecrator laser destructor; diabolus heavy stubber; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 warpstrike claw.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -5395,7 +4707,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -5457,7 +4769,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -5488,10 +4800,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
         }
       },
-      "Model§Knight Despoiler": {
+      "Lords of War§Knight Despoiler": {
         "stats": {
+          "Power Level": {
+            "value": 24
+          },
           "Points": {
             "value": 375
           },
@@ -6089,6 +5407,38 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Abhorrent-class",
+            "Character",
+            "Knight Despoiler",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Super-heavy Walker",
+            "Ability§Harbingers of Dread",
+            "Ability§Dread Dominion (Aura)",
+            "Ability§Engine of Destruction",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Knight Despoiler is equipped with: daemonbreath meltagun; reaper chainsword; titanic feet; warpstrike claw.\n\n\n\n*If this model is equipped with 2 daemonbreath thermal cannons, 2 despoiler battle cannons,\n\n2 despoiler gatling cannons, or 1 reaper chainsword and 1 warpstrike claw, its unit cost is increased by 20 pts.*\n\n• This model’s daemonbreath meltagun can be replaced with 1 diabolus heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 of the following:\n\n○ 1 daemonbreath thermal cannon\n\n○ 1 despoiler gatling cannon and 1 heavy darkflamer\n\n○ 1 despoiler battle cannon and 1 diabolus heavy stubber\n\n• This model’s warpstrike claw can be replaced with 1 of the following:\n\n○ 1 daemonbreath thermal cannon\n\n○ 1 despoiler gatling cannon and 1 heavy darkflamer\n\n○ 1 despoiler battle cannon and 1 diabolus heavy stubber\n\n• This model can be equipped with one of the following: 1 havoc missile pod; 1 ruinspear rocket pod; 1 twin hellstorm autocannon.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -6121,7 +5471,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -6183,7 +5533,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -6214,10 +5564,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
         }
       },
-      "Model§Knight Rampager": {
+      "Lords of War§Knight Rampager": {
         "stats": {
+          "Power Level": {
+            "value": 20
+          },
           "Points": {
             "value": 400
           },
@@ -6495,6 +5851,38 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Abhorrent-class",
+            "Character",
+            "Core",
+            "Knight Rampager",
+            "Titanic",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Super-heavy Walker",
+            "Ability§Harbingers of Dread",
+            "Ability§Frenzied Rampage (Aura)",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Knight Rampager is equipped with: diabolus heavy stubber; reaper chainsword; titanic feet; warpstrike claw.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -6527,7 +5915,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -6589,7 +5977,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -6620,10 +6008,16 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
         }
       },
-      "Model§Knight Tyrant": {
+      "Lords of War§Knight Tyrant": {
         "stats": {
+          "Power Level": {
+            "value": 31
+          },
           "Points": {
             "value": 585
           },
@@ -7219,6 +6613,36 @@
             "dynamic": true
           }
         },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Knight Tyrant",
+            "Titanic",
+            "Tyrant-class",
+            "Vehicle"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Super-heavy Walker",
+            "Ability§Harbingers of Dread",
+            "Ability§Explodes"
+          ]
+        },
+        "text": "A Knight Tyrant is equipped with: brimstone volcano lance; ectoplasma decimator; 4 gheiststrike missiles; 2 twin daemonbreath meltaguns; twin desecrator cannon; titanic feet.\n\n• This model’s brimstone volcano lance and ectoplasma decimator can be replaced with 1 darkflame cannon and 1 warpshock harpoon.\n\n• This model’s 4 gheiststrike missiles and twin desecrator cannon can be replaced with 2 gheiststrike missiles and 2 twin desecrator cannons.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -7251,7 +6675,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 6,
+                "value": "6″",
                 "iterations": 1
               },
               {
@@ -7313,7 +6737,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 4,
+                "value": "4″",
                 "iterations": 1
               },
               {
@@ -7344,6 +6768,438 @@
               }
             ]
           }
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
+        }
+      },
+      "Lords of War§War Dog Brigand": {
+        "stats": {
+          "Power Level": {
+            "value": 8
+          },
+          "model": {
+            "value": "Model§War Dog Brigand"
+          },
+          "War Dog Brigand": {
+            "statType": "numeric",
+            "dynamic": true,
+            "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
+            "value": 1,
+            "min": 1,
+            "max": 3,
+            "increment": {
+              "value": 1
+            }
+          },
+          "poweri": {
+            "value": 8
+          },
+          "power1": {
+            "value": 2
+          },
+          "power2": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Core",
+            "Pterrorshades",
+            "Vehicle",
+            "War Dog Brigand",
+            "War Dog-class"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Harbingers of Dread",
+            "Ability§War Dog Squadron",
+            "Ability§Explodes",
+            "Model§War Dog Brigand"
+          ]
+        },
+        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: avenger chaincannon; daemonbreath spear; havoc multi-launcher.\n\n• Any number of models can each have their havoc multi-launcher replaced with 1 diabolus heavy stubber.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§War Dog Brigand"
+          ]
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
+        }
+      },
+      "Lords of War§War Dog Executioner": {
+        "stats": {
+          "Power Level": {
+            "value": 8
+          },
+          "model": {
+            "value": "Model§War Dog Executioner"
+          },
+          "War Dog Executioner": {
+            "statType": "numeric",
+            "dynamic": true,
+            "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
+            "value": 1,
+            "min": 1,
+            "max": 3,
+            "increment": {
+              "value": 1
+            }
+          },
+          "poweri": {
+            "value": 8
+          },
+          "power1": {
+            "value": 2
+          },
+          "power2": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Core",
+            "Vehicle",
+            "War Dog Executioner",
+            "War Dog-class"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Harbingers of Dread",
+            "Ability§War Dog Squadron",
+            "Ability§Explodes",
+            "Model§War Dog Executioner"
+          ]
+        },
+        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: daemonbreath meltagun; 2 War Dog autocannons.\n\n• Any number of models can each have their daemonbreath meltagun replaced with 1 diabolus heavy stubber.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§War Dog Executioner"
+          ]
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
+        }
+      },
+      "Lords of War§War Dog Huntsman": {
+        "stats": {
+          "Power Level": {
+            "value": 8
+          },
+          "model": {
+            "value": "Model§War Dog Huntsman"
+          },
+          "War Dog Huntsman": {
+            "statType": "numeric",
+            "dynamic": true,
+            "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
+            "value": 1,
+            "min": 1,
+            "max": 3,
+            "increment": {
+              "value": 1
+            }
+          },
+          "poweri": {
+            "value": 8
+          },
+          "power1": {
+            "value": 2
+          },
+          "power2": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Core",
+            "Vehicle",
+            "War Dog Huntsman",
+            "War Dog-class"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Harbingers of Dread",
+            "Ability§War Dog Squadron",
+            "Ability§Explodes",
+            "Model§War Dog Huntsman"
+          ]
+        },
+        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: daemonbreath spear; daemonbreath meltagun; reaper chaintalon.\n\n• Any number of models can each have their daemonbreath meltagun replaced with 1 diabolus heavy stubber.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§War Dog Huntsman"
+          ]
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
+        }
+      },
+      "Lords of War§War Dog Karnivore": {
+        "stats": {
+          "Power Level": {
+            "value": 8
+          },
+          "model": {
+            "value": "Model§War Dog Karnivore"
+          },
+          "War Dog Karnivore": {
+            "statType": "numeric",
+            "dynamic": true,
+            "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
+            "value": 1,
+            "min": 1,
+            "max": 3,
+            "increment": {
+              "value": 1
+            }
+          },
+          "poweri": {
+            "value": 8
+          },
+          "power1": {
+            "value": 2
+          },
+          "power2": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Core",
+            "Pterrorshades",
+            "Vehicle",
+            "War Dog Karnivore",
+            "War Dog-class"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Harbingers of Dread",
+            "Ability§War Dog Squadron",
+            "Ability§Explodes",
+            "Model§War Dog Karnivore"
+          ]
+        },
+        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: havoc multi-launcher; reaper chaintalon; slaughterclaw.\n\n• Any number of models can each have their havoc multi-launcher replaced with 1 diabolus heavy stubber.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§War Dog Karnivore"
+          ]
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
+        }
+      },
+      "Lords of War§War Dog Moirax": {
+        "stats": {
+          "Power Level": {
+            "value": 8
+          },
+          "model": {
+            "value": "Model§War Dog Moirax"
+          },
+          "War Dog Moirax": {
+            "statType": "numeric",
+            "dynamic": true,
+            "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
+            "value": 1,
+            "min": 1,
+            "max": 3,
+            "increment": {
+              "value": 1
+            }
+          },
+          "poweri": {
+            "value": 8
+          },
+          "power1": {
+            "value": 2
+          },
+          "power2": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Vehicle",
+            "War Dog Moirax",
+            "War Dog-class"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harbingers of Dread",
+            "Ability§Ion Shield",
+            "Ability§War Dog Squadron",
+            "Ability§Explodes",
+            "Ability§Protection Protocols",
+            "Model§War Dog Moirax"
+          ]
+        },
+        "text": "If this unit contains 2 War Dog Moirax it has **Power Rating 16**. If this unit contains 3 War Dog Moirax it has Power Rating 24**. Every model is equipped with: rad cleanser; siege claw; volkite veuglaire.\n\n• Any number of models can each have their volkite veuglaire replaced with one of the following: 1 siege claw and 1 rad cleanser; 1 graviton pulsar; 1 lightning lock; 1 moirax conversion beam cannon.\n\n• Any number of models can each have their siege claw and rad cleanser replaced with one of the following: 1 graviton pulsar; 1 lightning lock; 1 moirax conversion beam cannon; 1 volkite veuglaire.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§War Dog Moirax"
+          ]
+        },
+        "meta": {
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+        }
+      },
+      "Lords of War§War Dog Stalker": {
+        "stats": {
+          "Power Level": {
+            "value": 8
+          },
+          "model": {
+            "value": "Model§War Dog Stalker"
+          },
+          "War Dog Stalker": {
+            "statType": "numeric",
+            "dynamic": true,
+            "visibility": "active",
+            "group": "Loadout",
+            "groupOrder": 2,
+            "value": 1,
+            "min": 1,
+            "max": 3,
+            "increment": {
+              "value": 1
+            }
+          },
+          "poweri": {
+            "value": 8
+          },
+          "power1": {
+            "value": 2
+          },
+          "power2": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Codex—Chaos Knights—Indomitus 1.0"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Character",
+            "Core",
+            "Pterrorshades",
+            "Vehicle",
+            "War Dog Stalker",
+            "War Dog-class"
+          ],
+          "Faction": [
+            "<Dread Household>",
+            "<Questor Traitoris>",
+            "Chaos",
+            "Chaos Knights"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ion Shields",
+            "Ability§Harbingers of Dread",
+            "Ability§War Dog Squadron",
+            "Ability§Explodes",
+            "Model§War Dog Stalker"
+          ]
+        },
+        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: avenger chaincannon; havoc multi-launcher; slaughterclaw.\n\n• Any number of models can each have their havoc multi-launcher replaced with 1 diabolus heavy stubber.\n\n• Any number of models can each have their slaughterclaw replaced with 1 reaper chaintalon.\n\n• Any number of models can each have their avenger chaincannon replaced with 1 daemonbreath spear.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§War Dog Stalker"
+          ]
+        },
+        "meta": {
+          "Publication": "[Chaos Knights (Codex) 9th ed. – Indomitus 1.0 @2022-05-07](https://www.warhammer-community.com/wp-content/uploads/2022/06/Fzz1k6HMLwZA4S3M.pdf)"
         }
       },
       "Model§War Dog Brigand": {
@@ -7610,7 +7466,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -7672,7 +7528,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -7898,7 +7754,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -7960,7 +7816,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -8257,7 +8113,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -8319,7 +8175,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -8616,7 +8472,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 12,
+                "value": "12″",
                 "iterations": 1
               },
               {
@@ -8678,7 +8534,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -9039,7 +8895,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -9101,7 +8957,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -9462,7 +9318,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 10,
+                "value": "10″",
                 "iterations": 1
               },
               {
@@ -9524,7 +9380,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": 8,
+                "value": "8″",
                 "iterations": 1
               },
               {
@@ -9560,7 +9416,7 @@
       "Relic Weapon§Strike": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 8
@@ -9579,13 +9435,13 @@
       "Relic Weapon§Sweep": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
           },
           "S": {
-            "value": "+2"
+            "value": 2
           },
           "Type": {
             "value": "Melee"
@@ -9599,7 +9455,7 @@
       "Relics of Tyranny§Annihilatum": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -9646,7 +9502,7 @@
       "Relics of Tyranny§Serpentstrike": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -9667,7 +9523,7 @@
         "text": "**HOUSE** LUCARIS** model only. Select one daemonbreath meltagun, twin daemonbreath meltagun, daemonbreath spear or daemonbreath thermal cannon that model is equipped with.\n\n* That weapon is now a Relic for all rules purposes.\n* Delete that weapon’s abilities.\n* Add 1 to that weapon’s Strength characteristic.\n* Add 2 to that weapon’s Damage characteristic."
       },
       "Relics of Tyranny§Soul-raptor Swarm": {
-        "text": "**PTERRORSHADES** model only.\n\n* Each time the bearer would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), unless that wound was inflicted by the [Daemonic Surge](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Infernal-Household:-Daemonic-Surge) ability, roll one D6: on a 4+, that wound is not lost.\n* The bearer has the following ability: ‘Soul-Raptor (Dreaded)**:** Whilst an enemy unit is within <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">range</span></span> of the bearer, each time a model [flees](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) from that unit, the bearer regains 1 lost wound (to a maximum of 3 regained wounds per phase).’"
+        "text": "**PTERRORSHADES** model only.\n\n* Each time the bearer would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), unless that wound was inflicted by the [Daemonic Surge](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Infernal-Household:-Daemonic-Surge) ability, roll one D6: on a 4+, that wound is not lost.\n* The bearer has the following ability: ‘Soul-Raptor (Dreaded)**:** Whilst an enemy unit is within **Dread range** of the bearer, each time a model [flees](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) from that unit, the bearer regains 1 lost wound (to a maximum of 3 regained wounds per phase).’"
       },
       "Relics of Tyranny§The Blasphemous Engine": {
         "text": "**INFERNAL HOUSEHOLD** ABHORRENT-CLASS** or **INFERNAL HOUSEHOLD** WAR** DOG-CLASS** model only.\n\n* Each time the bearer would lose a wound as a result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) while using its [Daemonic Surge](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Infernal-Household:-Daemonic-Surge) Traitoris Ambition, roll one D6: on a 2+, that wound is not lost.\n* The bearer is considered to have double the number of wounds remaining for the purposes of determining what characteristics on its profile to use."
@@ -9675,7 +9531,7 @@
       "Relics of Tyranny§The Diamonas": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": "D3+6"
@@ -9711,7 +9567,7 @@
         "text": "Model equipped with a reaper chainsword only. This Relic replaces a reaper chainsword and has the following profile:\n\n\n\nEach time the bearer fights, it makes one additional attack with this weapon. Each time an attack is made with this weapon, select one of the profiles below to make that attack with."
       },
       "Relics of Tyranny§The Traitor’s Mark": {
-        "text": "* The bearer has the following ability: ‘**Traitor’s Mark (Dreaded)**:** Whilst an enemy unit is within <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">range</span></span> of the bearer, your opponent cannot select that unit to use the [Insane Bravery](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems) Stratagem on, nor can they use any rule that would let them re-roll a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests).’\n* Once per battle, at the start of any battle round after the first, after you have selected a <span class=\"tt kwbu\">Harbinger <span class=\"tt kwbu\">ability</span></span> to be active for your army (if any), you can select one other Harbinger ability from that battle round, regardless of what Harbinger ability was selected in the previous battle round. The selected Har"
+        "text": "* The bearer has the following ability: ‘**Traitor’s Mark (Dreaded)**:** Whilst an enemy unit is within **Dread range** of the bearer, your opponent cannot select that unit to use the [Insane Bravery](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems) Stratagem on, nor can they use any rule that would let them re-roll a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests).’\n* Once per battle, at the start of any battle round after the first, after you have selected a **Harbinger ability** to be active for your army (if any), you can select one other Harbinger ability from that battle round, regardless of what Harbinger ability was selected in the previous battle round. The selected Har"
       },
       "Relics of Tyranny§The Twisted Mask": {
         "text": "**PSYKER** model only.\n\n* The bearer knows one additional psychic power from the [Warp Storm discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Warp-Storm-Discipline)**.\n* Add 1 to [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for the bearer."
@@ -9838,7 +9694,7 @@
         }
       },
       "Warlord Trait§Aura Of Terror (dreaded)": {
-        "text": "While an enemy unit is within <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">range</span></span> of this **WARLORD**, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) or <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">test</span></span> is taken for that unit, your opponent must roll one additional D6 and discard the lowest result.",
+        "text": "While an enemy unit is within **Dread range** of this WARLORD**, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) or **Dread test** is taken for that unit, your opponent must roll one additional D6 and discard the lowest result.",
         "stats": {
           "Discipline": {
             "value": "Warlord Traits 6"
@@ -9878,7 +9734,7 @@
         }
       },
       "Warlord Trait§Harbinger Of Scrapcode": {
-        "text": "In the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), select one enemy **VEHICLE** unit within 18″ of this WARLORD**. That unit must take a <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">test</span></span>. If the test is failed:\n\n* That unit suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* Until the start of the next Morale phase, models in that unit whose characteristics can change as they suffer damage are considered to have half the number of wounds remaining for the purposes of determining what those characteristics are (models in that unit whose characteristics do not change as they suffer damage instead reduce their Ballistic Skill and Weapon Skill characteristics by 1).",
+        "text": "In the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), select one enemy **VEHICLE** unit within 18″ of this WARLORD**. That unit must take a **Dread test**. If the test is failed:\n\n* That unit suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* Until the start of the next Morale phase, models in that unit whose characteristics can change as they suffer damage are considered to have half the number of wounds remaining for the purposes of determining what those characteristics are (models in that unit whose characteristics do not change as they suffer damage instead reduce their Ballistic Skill and Weapon Skill characteristics by 1).",
         "stats": {
           "Discipline": {
             "value": "Warlord Traits 2"
@@ -9902,7 +9758,7 @@
         }
       },
       "Warlord Trait§Lord Of Dread": {
-        "text": "* Add 3″ to the range of this [**WARLORD**’s](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\").\n* Add 3″ to the range of this WARLORD**’s <span class=\"tt kwbu\">Dreaded <span class=\"tt kwbu\">abilities</span></span>.",
+        "text": "* Add 3″ to the range of this [**WARLORD**’s](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\").\n* Add 3″ to the range of this WARLORD**’s **Dreaded abilities**.",
         "stats": {
           "Discipline": {
             "value": "Warlord Traits"
@@ -9910,7 +9766,7 @@
         }
       },
       "Warlord Trait§Maddened Cries (aura)": {
-        "text": "While an enemy unit is within 9″ of this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), at the start of each [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), it must take a <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">test</span></span>. If that test is failed, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "text": "While an enemy unit is within 9″ of this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), at the start of each [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), it must take a **Dread test**. If that test is failed, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
         "stats": {
           "Discipline": {
             "value": "Warlord Traits"
@@ -9942,7 +9798,7 @@
         }
       },
       "Warp Storm Discipline§Cyclonic Lamentation": {
-        "text": "**Witchfire:** *Cyclonic Lamentation* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), every enemy unit within 12″ of this PSYKER** must take a <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">test</span></span>. Each unit that fails this test suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (if the result of the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) was 11+, each unit that fails their subsequent Dread test instead suffers D3 mortal wounds).",
+        "text": "**Witchfire:** *Cyclonic Lamentation* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), every enemy unit within 12″ of this PSYKER** must take a **Dread test**. Each unit that fails this test suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (if the result of the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) was 11+, each unit that fails their subsequent Dread test instead suffers D3 mortal wounds).",
         "stats": {
           "Roll": {
             "value": 4
@@ -9966,7 +9822,7 @@
         }
       },
       "Warp Storm Discipline§Vortex Terrors": {
-        "text": "**Malediction:** *Vortex Terrors* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* Each time that unit is selected to shoot or fight, it must first take a <span class=\"tt kwbu\">Dread <span class=\"tt kwbu\">test</span></span>. If that test is failed, then until the end of the current phase, reduce the Weapon Skill and Ballistic Skill characteristics of models in that enemy unit by 1.",
+        "text": "**Malediction:** *Vortex Terrors* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* Each time that unit is selected to shoot or fight, it must first take a **Dread test**. If that test is failed, then until the end of the current phase, reduce the Weapon Skill and Ballistic Skill characteristics of models in that enemy unit by 1.",
         "stats": {
           "Roll": {
             "value": 2
@@ -9984,7 +9840,7 @@
       "Weapon§Acastus autocannon": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -10003,7 +9859,7 @@
       "Weapon§Acastus lascannon": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D6"
@@ -10025,7 +9881,7 @@
       "Weapon§Acheron flame cannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -10045,7 +9901,7 @@
       "Weapon§Acheron twin heavy bolter": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -10084,7 +9940,7 @@
       "Weapon§Atrapos lascutter (shooting)": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 6
@@ -10104,7 +9960,7 @@
       "Weapon§Avenger chaincannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
@@ -10123,7 +9979,7 @@
       "Weapon§Balemace": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -10143,7 +9999,7 @@
       "Weapon§Brimstone volcano lance": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": "D6+8"
@@ -10166,7 +10022,7 @@
       "Weapon§Castigator bolt cannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -10185,7 +10041,7 @@
       "Weapon§Cerastus shock lance (shooting)": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": "D3"
@@ -10204,7 +10060,7 @@
       "Weapon§Charged": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 8
@@ -10223,7 +10079,7 @@
       "Weapon§Contained": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
@@ -10242,7 +10098,7 @@
       "Weapon§Crush": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 6
@@ -10262,7 +10118,7 @@
       "Weapon§Daemonbreath meltagun": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -10285,7 +10141,7 @@
       "Weapon§Daemonbreath spear": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -10305,7 +10161,7 @@
       "Weapon§Daemonbreath thermal cannon": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6+2"
@@ -10328,7 +10184,7 @@
       "Weapon§Darkflame cannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -10348,7 +10204,7 @@
       "Weapon§Desecrator laser destructor": {
         "stats": {
           "AP": {
-            "value": "-5"
+            "value": -5
           },
           "D": {
             "value": "D3+6"
@@ -10367,7 +10223,7 @@
       "Weapon§Despoiler battle cannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -10390,7 +10246,7 @@
       "Weapon§Despoiler gatling cannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -10431,7 +10287,7 @@
       "Weapon§Electroscourge": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -10451,7 +10307,7 @@
       "Weapon§Focus": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 6
@@ -10471,7 +10327,7 @@
       "Weapon§Gheiststrike missile": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -10491,7 +10347,7 @@
       "Weapon§Graviton crusher": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -10511,7 +10367,7 @@
       "Weapon§Graviton pulsar": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -10531,7 +10387,7 @@
       "Weapon§Havoc missile pod": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -10549,7 +10405,7 @@
             "value": 20
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Havoc multi-launcher": {
         "stats": {
@@ -10572,12 +10428,12 @@
             "value": 5
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Heavy darkflamer": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -10597,7 +10453,7 @@
       "Weapon§Helios defence missiles": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -10620,7 +10476,7 @@
       "Weapon§Ironstorm missile pod": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -10635,12 +10491,12 @@
             "value": "72″"
           }
         },
-        "text": "<span class=\"tt kwbu\">Indirect <span class=\"tt kwbu\">Fire</span></span>. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Karacnos mortar battery": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 1
@@ -10660,7 +10516,7 @@
       "Weapon§Lightning cannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -10680,7 +10536,7 @@
       "Weapon§Lightning lock": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 1
@@ -10703,7 +10559,7 @@
       "Weapon§Long range": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 4
@@ -10723,7 +10579,7 @@
       "Weapon§Medium range": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 3
@@ -10743,7 +10599,7 @@
       "Weapon§Phased plasma-fusil": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 2
@@ -10782,7 +10638,7 @@
       "Weapon§Ruinspear rocket pod": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": "D6"
@@ -10804,7 +10660,7 @@
       "Weapon§Saw": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 6
@@ -10843,7 +10699,7 @@
       "Weapon§Siege claw": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D6"
@@ -10863,7 +10719,7 @@
       "Weapon§Singularity": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 3
@@ -10883,7 +10739,7 @@
       "Weapon§Slaughterclaw": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D3+3"
@@ -10902,7 +10758,7 @@
       "Weapon§Standard": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 2
@@ -10922,7 +10778,7 @@
       "Weapon§Strike": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 8
@@ -10941,7 +10797,7 @@
       "Weapon§Supercharge": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": 3
@@ -10961,13 +10817,13 @@
       "Weapon§Sweep": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
           },
           "S": {
-            "value": "+2"
+            "value": 2
           },
           "Type": {
             "value": "Melee"
@@ -10981,13 +10837,13 @@
       "Weapon§Tempest warblade": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 3
           },
           "S": {
-            "value": "+6"
+            "value": 6
           },
           "Type": {
             "value": "Melee"
@@ -11001,7 +10857,7 @@
       "Weapon§Titanic feet": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 2
@@ -11020,7 +10876,7 @@
       "Weapon§Twin daemonbreath meltagun": {
         "stats": {
           "AP": {
-            "value": "-4"
+            "value": -4
           },
           "D": {
             "value": "D6"
@@ -11040,7 +10896,7 @@
       "Weapon§Twin desecrator cannon": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -11063,7 +10919,7 @@
       "Weapon§Twin hellstorm autocannon": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -11086,7 +10942,7 @@
       "Weapon§Twin magna lascannon": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": 6
@@ -11126,7 +10982,7 @@
       "Weapon§Volkite chieorovile": {
         "stats": {
           "AP": {
-            "value": "-3"
+            "value": -3
           },
           "D": {
             "value": "D6"
@@ -11146,7 +11002,7 @@
       "Weapon§Volkite combustor": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 3
@@ -11166,7 +11022,7 @@
       "Weapon§Volkite veuglaire": {
         "stats": {
           "AP": {
-            "value": "-1"
+            "value": -1
           },
           "D": {
             "value": 2
@@ -11189,7 +11045,7 @@
       "Weapon§War Dog autocannon": {
         "stats": {
           "AP": {
-            "value": "-2"
+            "value": -2
           },
           "D": {
             "value": 3
@@ -11208,7 +11064,7 @@
       "Weapon§Warpshock harpoon": {
         "stats": {
           "AP": {
-            "value": "-6"
+            "value": -6
           },
           "D": {
             "value": 10
