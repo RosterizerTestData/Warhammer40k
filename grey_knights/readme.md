@@ -1,5 +1,5 @@
 # Grey Knights!
 
-https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/master/grey_knights/Grey_Knights.manifest
+https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/main/grey_knights/Grey_Knights.manifest
 
 Info about the manifest (the hash should perhaps be published here when versions are complete, so as to be googlable by people who want to match data versions)

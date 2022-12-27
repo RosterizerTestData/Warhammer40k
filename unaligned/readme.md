@@ -1,5 +1,5 @@
 # Unaligned!
 
-https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/master/unaligned/Unaligned.manifest
+https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/main/unaligned/Unaligned.manifest
 
 Info about the manifest (the hash should perhaps be published here when versions are complete, so as to be googlable by people who want to match data versions)
