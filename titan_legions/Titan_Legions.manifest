@@ -1,11 +1,11 @@
 {
   "name": "Titan Legions",
-  "revision": "0.0.7",
+  "revision": "0.0.8",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -402,8 +402,8 @@
                     "value"
                   ]
                 ],
-                "max": "52",
-                "min": "36",
+                "max": 52,
+                "min": 36,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -464,8 +464,8 @@
                     "value"
                   ]
                 ],
-                "max": "35",
-                "min": "18",
+                "max": 35,
+                "min": 18,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1128,8 +1128,8 @@
                     "value"
                   ]
                 ],
-                "max": "75",
-                "min": "51",
+                "max": 75,
+                "min": 51,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1190,8 +1190,8 @@
                     "value"
                   ]
                 ],
-                "max": "50",
-                "min": "26",
+                "max": 50,
+                "min": 26,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1498,8 +1498,8 @@
                     "value"
                   ]
                 ],
-                "max": "37",
-                "min": "26",
+                "max": 37,
+                "min": 26,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1560,8 +1560,8 @@
                     "value"
                   ]
                 ],
-                "max": "25",
-                "min": "13",
+                "max": 25,
+                "min": 13,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2272,8 +2272,8 @@
                     "value"
                   ]
                 ],
-                "max": "90",
-                "min": "61",
+                "max": 90,
+                "min": 61,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2334,8 +2334,8 @@
                     "value"
                   ]
                 ],
-                "max": "60",
-                "min": "31",
+                "max": 60,
+                "min": 31,
                 "operator": "AND",
                 "not": false,
                 "actionable": true

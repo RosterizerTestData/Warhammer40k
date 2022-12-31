@@ -13,6 +13,7 @@ const subFacNames = {
   DRU: 'Kabal', // Wych Cult, Haemunculous Coven
   GC: 'Cult',
   GK: 'Brotherhood',
+  LoV: 'League',
   QI: 'Noble Household', // Questor Allegiance
   NEC: 'Dynasty',
   ORK: 'Clan',
@@ -29,8 +30,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.7',
+    notes: '0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.8',
     wip: true,
     dependencies: [
       {
@@ -704,8 +705,8 @@ generateDamageRule = (damageRows,currentRow) => {
         paths: [
           ['{self}','stats','W','value']
         ],
-        max: max,
-        min: min,
+        max: Number(max),
+        min: Number(min),
         operator: 'AND',
         not: false,
         actionable: true

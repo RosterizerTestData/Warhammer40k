@@ -1,11 +1,11 @@
 {
   "name": "Leagues of Votann",
-  "revision": "0.0.7",
+  "revision": "0.0.8",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -21,7 +21,7 @@
       },
       "Detachment": {
         "stats": {
-          "undefined": {
+          "League": {
             "statType": "rank",
             "value": "-",
             "ranks": {
@@ -55,7 +55,7 @@
                   [
                     "{self}",
                     "stats",
-                    null,
+                    "League",
                     "value"
                   ]
                 ],
@@ -79,7 +79,7 @@
                     "classification",
                     "Ability",
                     "stats",
-                    null,
+                    "League",
                     "value"
                   ]
                 ],
@@ -87,7 +87,7 @@
                 "value": [
                   "{self}",
                   "stats",
-                  null,
+                  "League",
                   "value"
                 ],
                 "iterations": 1
@@ -108,7 +108,7 @@
                   [
                     "{parent}",
                     "stats",
-                    null,
+                    "League",
                     "value"
                   ]
                 ],
@@ -124,7 +124,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<undefined>",
+                "value": "<League>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -143,7 +143,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<undefined>",
+                "value": "<League>",
                 "iterations": 1
               },
               {
@@ -158,7 +158,7 @@
                 "value": [
                   "{parent}",
                   "stats",
-                  null,
+                  "League",
                   "processed",
                   "rank",
                   "current"
@@ -184,7 +184,16 @@
         "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Brôkhyr’s Guild": {
-        "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this unit can repair one friendly **&lt;LEAGUE&gt; VEHICLE** or **&lt;LEAGUE&gt; EXO-FRAME** model within 3″ of it. That model regains up to D3 lost wounds. Each model can only be repaired once per turn."
+        "text": "",
+        "stats": {
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this unit can repair one friendly **{v} VEHICLE** or **{v} EXO-FRAME** model within 3″ of it. That model regains up to D3 lost wounds. Each model can only be repaired once per turn.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§CORV Support": {
         "text": "Each time this unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp), if this unit contains 1 or more <span class=\"kwbs\">CORV</span> models, 1 of those models is destroyed and the effect(s) of that Perils of the Warp is ignored.\n\n\n\nThe destruction of a <span class=\"kwbs\">CORV</span> model is ignored for the purposes of [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests). If this unit’s **GRIMNYR** model is ever destroyed, all of this unit’s remaining <span class=\"kwbs\">CORV</span> models are also destroyed."
@@ -196,7 +205,16 @@
         "text": "Each time this unit uses its **Brôkhyr’s Guild** ability, if this unit contains 1 or more <span class=\"kwbs\">E-COG</span> models, the model being repaired regains 1 additional lost wound. The destruction of an <span class=\"kwbs\">E-COG</span> is ignored for the purposes of [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests). If this unit’s BRÔKHYR** IRON-MASTER** model is ever destroyed, all of this unit’s remaining <span class=\"kwbs\">E-COG</span> models are also destroyed."
       },
       "Ability§Exemplar of the Einhyr (Aura)": {
-        "text": "While a friendly **&lt;LEAGUE&gt; HEARTHGUARD** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1."
+        "text": "",
+        "stats": {
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "While a friendly **{v} HEARTHGUARD** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§Exo-armour": {
         "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
@@ -211,7 +229,16 @@
         "text": "In each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if every unit from your army is from the same [League](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#The-Leagues) (excluding models with the **UNALIGNED** keyword), you can select one enemy unit that is visible to this model. If you do so, that enemy unit gains one **Judgement token**."
       },
       "Ability§Grimnyrs’ Regard (Aura)": {
-        "text": "While a friendly **&lt;LEAGUE&gt; CORE** unit is within 6″ of this unit, add 1 to [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) taken for that unit."
+        "text": "",
+        "stats": {
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "While a friendly **{v} CORE** unit is within 6″ of this unit, add 1 to [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) taken for that unit.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§High Kâhl": {
         "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **GREATER THURIAN** LEAGUE** CORE** or **GREATER THURIAN** LEAGUE** CHARACTER** unit within 6″ of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -220,7 +247,16 @@
         "text": "While this unit contains an **IRONKIN** ASSISTANT** model, this unit can [perform actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) even if it has [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), and it can shoot without its action failing."
       },
       "Ability§Kindred Hero (Aura)": {
-        "text": "While a friendly **GREATER THURIAN** LEAGUE** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhile a friendly **&lt;LEAGUE&gt; CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
+        "text": "",
+        "stats": {
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "While a friendly **GREATER THURIAN** LEAGUE** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhile a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§Mass Driver Accelerators": {
         "text": "Each time this model ends a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this model and roll one D6: if the result is an unmodified 6, or if it equals or beats the highest Toughness characteristic in that enemy unit, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
@@ -229,7 +265,16 @@
         "text": "If this unit contains two models, then before the battle, at the start of the Declare Reserves and Transports step of the mission sequence, you can select one **HEARTHKYN WARRIORS** or BESERKS** unit that contains 10 models. If you do so, that unit is split into two units, each containing 5 models (when splitting a unit using this ability, make a note of which models form each of the two new units), which must start the battle [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within one of these two SAGITAUR** models. If you are playing a Crusade mission, the [Split Unit](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Split-Units) rules do not apply to INFANTRY** units that split using this ability: if that unit has any [Battle Honours](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Battle-Honours) or [Battle Scars](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Battle-Scars), both its split units count as having those Battle Honours and Scars, and you only need to take an [Out of Action](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Out-of-Action) test for that unit if both its split units are destroyed during the battle."
       },
       "Ability§Multispectral Visor": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this unit contains a **BRÔKHYR** IRON-MASTER** model, you can select one friendly **&lt;LEAGUE&gt; CORE** or **&lt;LEAGUE&gt; VEHICLE** unit within 9″ of this unit. If you do so, until the start of your next Command phase, each time a model in that friendly unit makes an attack with a ranged weapon, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+        "text": "",
+        "stats": {
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this unit contains a **BRÔKHYR** IRON-MASTER** model, you can select one friendly **{v} CORE** or **{v} VEHICLE** unit within 9″ of this unit. If you do so, until the start of your next Command phase, each time a model in that friendly unit makes an attack with a ranged weapon, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§Omni-visors": {
         "text": "Each time a model in this unit makes an attack with a ranged weapon, the target does not receive the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover) against that attack."
@@ -1541,8 +1586,8 @@
                     "value"
                   ]
                 ],
-                "max": "8",
-                "min": "5",
+                "max": 8,
+                "min": 5,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1603,8 +1648,8 @@
                     "value"
                   ]
                 ],
-                "max": "4",
-                "min": "1",
+                "max": 4,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -6065,10 +6110,17 @@
         }
       },
       "Wargear§Multiwave comms array": {
-        "text": "The bearer’s unit gains the **COMMS** keyword. Whilst the bearer’s unit is within 24″ of a friendly **&lt;LEAGUE&gt; KÂHL** model, the bearer’s unit is considered to be within range of that model’s Kindred Hero** aura ability.",
+        "text": "",
         "stats": {
           "Points": {
             "value": 5
+          },
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "The bearer’s unit gains the **COMMS** keyword. Whilst the bearer’s unit is within 24″ of a friendly **{v} KÂHL** model, the bearer’s unit is considered to be within range of that model’s Kindred Hero** aura ability.",
+            "visibility": "hidden",
+            "dynamic": true
           }
         }
       },
@@ -6081,7 +6133,16 @@
         }
       },
       "Wargear§Rampart crest": {
-        "text": "**Rampart Shield (Aura)**:** While a friendly **GREATER THURIAN** LEAGUE** INFANTRY** or **GREATER THURIAN** LEAGUE** BIKER** unit is within 6″ of this model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. The range of this ability cannot be increased by any means (e.g. [Ancestral Bearing](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Warlord-Traits))\n\n***ERROR***—*The following text was found on another wargear with the same name:*  \nThe bearer’s unit gains the **SHIELD CREST** keyword. In addition, the bearer has the following ability:‘Rampart Shield (Aura)**:** While a friendly **&lt;LEAGUE&gt; INFANTRY** or **&lt;LEAGUE&gt; BIKER** unit is within 6″ of this model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. The range of this ability cannot be increased by any means (e.g. [Ancestral Bearing](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Warlord-Traits)).’"
+        "text": "",
+        "stats": {
+          "League": {
+            "statType": "term",
+            "value": "&lt;LEAGUE&gt;",
+            "text": "**Rampart Shield (Aura)**:** While a friendly **GREATER THURIAN** LEAGUE** INFANTRY** or **GREATER THURIAN** LEAGUE** BIKER** unit is within 6″ of this model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. The range of this ability cannot be increased by any means (e.g. [Ancestral Bearing](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Warlord-Traits))\n\n***ERROR***—*The following text was found on another wargear with the same name:*  \nThe bearer’s unit gains the **SHIELD CREST** keyword. In addition, the bearer has the following ability:‘Rampart Shield (Aura)**:** While a friendly **{v} INFANTRY** or **{v} BIKER** unit is within 6″ of this model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. The range of this ability cannot be increased by any means (e.g. [Ancestral Bearing](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Warlord-Traits)).’",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Wargear§Rollbar searchlight": {
         "text": "The bearer’s unit gains the **SEARCHLIGHT** keyword. In addition, each time a model in the bearer’s unit makes an attack with a ranged weapon, the target does not receive the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover) against that attack.",

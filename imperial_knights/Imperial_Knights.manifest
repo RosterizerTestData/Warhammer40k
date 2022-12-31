@@ -1,11 +1,11 @@
 {
   "name": "Imperial Knights",
-  "revision": "0.0.7",
+  "revision": "0.0.8",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -839,8 +839,8 @@
                     "value"
                   ]
                 ],
-                "max": "15",
-                "min": "8",
+                "max": 15,
+                "min": 8,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -901,8 +901,8 @@
                     "value"
                   ]
                 ],
-                "max": "7",
-                "min": "1",
+                "max": 7,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1396,8 +1396,8 @@
                     "value"
                   ]
                 ],
-                "max": "15",
-                "min": "8",
+                "max": 15,
+                "min": 8,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -1458,8 +1458,8 @@
                     "value"
                   ]
                 ],
-                "max": "7",
-                "min": "1",
+                "max": 7,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2034,8 +2034,8 @@
                     "value"
                   ]
                 ],
-                "max": "13",
-                "min": "7",
+                "max": 13,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2096,8 +2096,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2430,8 +2430,8 @@
                     "value"
                   ]
                 ],
-                "max": "13",
-                "min": "7",
+                "max": 13,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2492,8 +2492,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2793,8 +2793,8 @@
                     "value"
                   ]
                 ],
-                "max": "13",
-                "min": "7",
+                "max": 13,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -2855,8 +2855,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -3093,8 +3093,8 @@
                     "value"
                   ]
                 ],
-                "max": "13",
-                "min": "7",
+                "max": 13,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -3155,8 +3155,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -3741,8 +3741,8 @@
                     "value"
                   ]
                 ],
-                "max": "14",
-                "min": "8",
+                "max": 14,
+                "min": 8,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -3803,8 +3803,8 @@
                     "value"
                   ]
                 ],
-                "max": "7",
-                "min": "1",
+                "max": 7,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -4567,8 +4567,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -4629,8 +4629,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5250,8 +5250,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5312,8 +5312,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5893,8 +5893,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5955,8 +5955,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -6647,8 +6647,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -6709,8 +6709,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -7295,8 +7295,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -7357,8 +7357,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -7943,8 +7943,8 @@
                     "value"
                   ]
                 ],
-                "max": "14",
-                "min": "8",
+                "max": 14,
+                "min": 8,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -8005,8 +8005,8 @@
                     "value"
                   ]
                 ],
-                "max": "7",
-                "min": "1",
+                "max": 7,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -8769,8 +8769,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -8831,8 +8831,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -9292,8 +9292,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -9354,8 +9354,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -9815,8 +9815,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -9877,8 +9877,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -10130,8 +10130,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "4",
+                "max": 6,
+                "min": 4,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -10192,8 +10192,8 @@
                     "value"
                   ]
                 ],
-                "max": "3",
-                "min": "1",
+                "max": 3,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -10521,8 +10521,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "4",
+                "max": 6,
+                "min": 4,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -10583,8 +10583,8 @@
                     "value"
                   ]
                 ],
-                "max": "3",
-                "min": "1",
+                "max": 3,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -10912,8 +10912,8 @@
                     "value"
                   ]
                 ],
-                "max": "12",
-                "min": "7",
+                "max": 12,
+                "min": 7,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -10974,8 +10974,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "1",
+                "max": 6,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -11335,8 +11335,8 @@
                     "value"
                   ]
                 ],
-                "max": "6",
-                "min": "4",
+                "max": 6,
+                "min": 4,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -11397,8 +11397,8 @@
                     "value"
                   ]
                 ],
-                "max": "3",
-                "min": "1",
+                "max": 3,
+                "min": 1,
                 "operator": "AND",
                 "not": false,
                 "actionable": true
