@@ -1,11 +1,11 @@
 {
   "name": "Renegades and Heretics",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -22,9 +22,6 @@
       },
       "Ability§Airborne Assault": {
         "text": "During deployment, you can set up this unit high in the skies instead of setting it up on the battlefield. If you do so, then in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models."
-      },
-      "Ability§Armour of Contempt": {
-        "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n* Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
       },
       "Ability§Armoured Cockpit": {
         "text": "Each time a ranged attack with a Damage characteristic of 1 is allocated to a model in this unit, add 1 to the armour [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made against that attack."
@@ -2514,7 +2511,6 @@
             "Ability§Smoke Launchers",
             "Ability§Vehicle Squadron",
             "Ability§Explodes",
-            "Ability§Armour of Contempt",
             "Model§Salamander Scout Tank"
           ]
         },
@@ -2663,8 +2659,7 @@
             "Ability§Supersonic",
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "An Arvus Lighter has no equipment.\n\n\n\nnull",
@@ -3120,7 +3115,6 @@
             "Ability§Vehicle Squadron",
             "Ability§Smoke Launchers",
             "Ability§Explodes",
-            "Ability§Armour of Contempt",
             "Model§Armageddon-pattern Medusa"
           ]
         },
@@ -3593,7 +3587,6 @@
             "Ability§Vehicle Squadron",
             "Ability§Smoke Launchers",
             "Ability§Explodes",
-            "Ability§Armour of Contempt",
             "Model§Colossus Bombard"
           ]
         },
@@ -3658,7 +3651,6 @@
         "assets": {
           "traits": [
             "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt",
             "Model§Earthshaker Carriage"
           ]
         },
@@ -3724,7 +3716,6 @@
             "Ability§Smoke Launchers",
             "Ability§Vehicle Squadron",
             "Ability§Explodes",
-            "Ability§Armour of Contempt",
             "Model§Griffon Mortar Carrier"
           ]
         },
@@ -3789,7 +3780,6 @@
         "assets": {
           "traits": [
             "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt",
             "Model§Heavy Mortar"
           ]
         },
@@ -3854,7 +3844,6 @@
         "assets": {
           "traits": [
             "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt",
             "Model§Heavy Quad Launcher"
           ]
         },
@@ -4762,8 +4751,7 @@
         "assets": {
           "traits": [
             "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Malcador is equipped with: 2 autocannons; battle cannon; heavy bolter.\n\n• This model's 2 autocannons can be replaced with 2 heavy bolters or 2 lascannons.\n\n• This model’s heavy bolter can be replaced with 1 autocannon or 1 lascannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
@@ -5177,8 +5165,7 @@
         "assets": {
           "traits": [
             "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Malcador Defender is equipped with: demolisher cannon; 7 heavy bolters.\n\n• This model can have 2 of its heavy bolters replaced with one of the following: 2 autocannons; 2 lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
@@ -5363,7 +5350,6 @@
         "assets": {
           "traits": [
             "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt",
             "Model§Medusa Carriage"
           ]
         },
@@ -5428,7 +5414,6 @@
         "assets": {
           "traits": [
             "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt",
             "Model§Rapier Laser Destroyer"
           ]
         },
@@ -8050,8 +8035,7 @@
           "traits": [
             "Ability§Steel Behemoth",
             "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Macharius is equipped with: 2 heavy stubbers; Macharius twin battle cannon; twin heavy stubber; adamantium tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
@@ -8438,8 +8422,7 @@
           "traits": [
             "Ability§Smoke Launchers",
             "Ability§Steel Behemoth",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Macharius Omega is equipped with: Omega-pattern plasma blastgun.\n\n• This model can be equipped with one of the following: 2 autocannons; 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 heavy stubber; 1 storm bolter.\n\nnull",
@@ -9107,8 +9090,7 @@
           "traits": [
             "Ability§Steel Behemoth",
             "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Macharius Vanquisher is equipped with: 2 heavy stubbers; Macharius twin vanquisher cannon; twin heavy stubber; adamantium tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
@@ -9776,8 +9758,7 @@
           "traits": [
             "Ability§Steel Behemoth",
             "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Macharius Vulcan is equipped with: 2 heavy stubbers; Macharius vulcan mega-bolter; twin heavy stubber; adamantium tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
@@ -10073,8 +10054,7 @@
             "Ability§Steel Behemoth",
             "Ability§Smoke Launchers",
             "Ability§Explodes",
-            "Ability§Armoured Frontis",
-            "Ability§Armour of Contempt"
+            "Ability§Armoured Frontis"
           ]
         },
         "text": "A Minotaur is equipped with: Minotaur twin earthshaker cannon; adamantium tracks.\n\n\n\nnull",
@@ -10513,8 +10493,7 @@
           "traits": [
             "Ability§Steel Behemoth",
             "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Valdor is equipped with: autocannon; Valdor neutron laser.\n\n• This model's autocannon can be replaced with one of the following: 1 heavy bolter; 1 heavy flamer; 1 lascannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
@@ -11041,7 +11020,7 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "80mm"
           },
           "loadout1": {
             "value": "Militarum multi-laser",
@@ -22142,7 +22121,7 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm"
+            "value": "80mm"
           },
           "loadout1": {
             "value": "Militarum multi-laser",
@@ -23084,7 +23063,7 @@
             "value": "240″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer. Each time an attack is made with this weapon, the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer. Each time an attack is made with this weapon, the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack."
       },
       "Weapon§Demolisher battle cannon": {
         "stats": {
@@ -23144,7 +23123,7 @@
             "value": "240″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Eradicator nova cannon": {
         "stats": {
@@ -23287,7 +23266,7 @@
             "value": "48″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer. Each time an attack is made with this weapon, the target does not receive the [benefit of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) to its saving throw."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer. Each time an attack is made with this weapon, the target does not receive the [benefit of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) to its saving throw."
       },
       "Weapon§Heavy bolter": {
         "stats": {
@@ -23346,7 +23325,7 @@
             "value": "48″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Heavy quad launcher": {
         "stats": {
@@ -23366,7 +23345,7 @@
             "value": "48″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Heavy stubber": {
         "stats": {
@@ -23765,7 +23744,7 @@
             "value": "36″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Melta cannon": {
         "stats": {
@@ -23847,7 +23826,7 @@
             "value": "240″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Mortar": {
         "stats": {
@@ -23870,7 +23849,7 @@
             "value": 10
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       },
       "Weapon§Multi-melta": {
         "stats": {
@@ -24384,7 +24363,7 @@
             "value": "48″"
           }
         },
-        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
+        "text": "**Indirect Fire**. [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). This weapon can target units that are not visible to the bearer."
       }
     }
   }

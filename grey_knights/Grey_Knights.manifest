@@ -1,15 +1,15 @@
 {
   "name": "Grey Knights",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
-      "slug": "123456",
+      "slug": "NZWZG9",
       "name": "40k9e",
       "game": "Warhammer 40,000"
     }
@@ -188,9 +188,6 @@
       },
       "Ability§And They Shall Know No Fear": {
         "text": "Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for this unit, ignore any or all modifiers."
-      },
-      "Ability§Armour of Contempt": {
-        "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n* Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
       },
       "Ability§Awaken the Machine Spirits": {
         "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model can awaken one friendly **GREY KNIGHTS** VEHICLE** model within 3″ of it. Until the start of your next Command phase, each time that VEHICLE** model makes a ranged attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Each model can only be awakened once per turn."
@@ -403,16 +400,8 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 2,
-                "traits": [
-                  {
                     "trait": {
-                      "item": "Weapon§Storm bolter",
+                      "item": "Weapon§Hunter-killer missile",
                       "stats": {
                         "Points": {
                           "value": 5
@@ -422,18 +411,19 @@
                   }
                 ]
               },
+              "Storm bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
               "Twin assault cannon": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin assault cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 25
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin assault cannon"
                   }
                 ]
               },
@@ -449,14 +439,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -479,16 +462,8 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 2,
-                "traits": [
-                  {
                     "trait": {
-                      "item": "Weapon§Storm bolter",
+                      "item": "Weapon§Hunter-killer missile",
                       "stats": {
                         "Points": {
                           "value": 5
@@ -498,18 +473,19 @@
                   }
                 ]
               },
+              "Storm bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
               "Twin assault cannon": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin assault cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 25
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin assault cannon"
                   }
                 ]
               },
@@ -525,14 +501,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -543,7 +512,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -563,8 +532,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Razorback is equipped with: twin heavy bolter.\n\n• This model’s twin heavy bolter can be replaced with one of the following: 1 twin lascannon; 1 twin assault cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\nnull",
@@ -713,7 +681,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Dedicated Transport§Razorback (Legendary)": {
@@ -777,14 +745,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Hunter-killer missile",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Hunter-killer missile"
                   }
                 ]
               },
@@ -847,14 +808,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Hunter-killer missile",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Hunter-killer missile"
                   }
                 ]
               },
@@ -925,8 +879,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Razorback is equipped with: twin heavy bolter.\n\n• This model may replace its twin heavy bolter with a twin lascannon or a twin assault cannon.\n\n• This model may take a hunter-killer missile.\n\n• This model may take a storm bolter.\n\n• This model’s twin heavy bolter can be replaced with 1 Razorback twin psycannon.\n\nnull",
@@ -1139,7 +1092,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Hunter-killer missile"
+                    "trait": {
+                      "item": "Weapon§Hunter-killer missile",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -1147,14 +1107,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               }
@@ -1177,7 +1130,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Hunter-killer missile"
+                    "trait": {
+                      "item": "Weapon§Hunter-killer missile",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -1185,14 +1145,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               }
@@ -1203,7 +1156,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -1223,8 +1176,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Rhino is equipped with: storm bolter.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 additional storm bolter.\n\nnull",
@@ -1355,7 +1307,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Dominus Discipline§Empyric Amplification": {
@@ -1412,7 +1364,7 @@
             "value": 5
           },
           "Points": {
-            "value": 100
+            "value": 90
           },
           "M": {
             "value": 5
@@ -1475,14 +1427,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -1529,14 +1474,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -1583,14 +1521,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -1637,14 +1568,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -1663,7 +1587,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -1690,7 +1614,6 @@
             "Ability§Teleport Strike",
             "Ability§Crux Terminatus",
             "Ability§Sacred Banner (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -1701,7 +1624,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Brotherhood Apothecary": {
@@ -1710,7 +1633,7 @@
             "value": 6
           },
           "Points": {
-            "value": 100
+            "value": 90
           },
           "M": {
             "value": 5
@@ -2029,7 +1952,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -2057,7 +1980,6 @@
             "Ability§Crux Terminatus",
             "Ability§Combat Restoratives",
             "Ability§Narthecium (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -2068,7 +1990,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Dreadnought": {
@@ -2171,14 +2093,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -2194,14 +2109,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -2271,14 +2179,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -2294,14 +2195,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -2371,14 +2265,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -2394,14 +2281,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -2471,14 +2351,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -2494,14 +2367,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -2512,7 +2378,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -2536,7 +2402,6 @@
             "Ability§Knights of Titan",
             "Ability§Explodes",
             "Ability§Duty Eternal",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -2567,7 +2432,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Dreadnought (IA:Legendary)": {
@@ -3091,7 +2956,6 @@
             "Ability§Knights of Titan",
             "Ability§Explodes",
             "Ability§Duty Eternal",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -3190,7 +3054,6 @@
             "Ability§Smoke Launchers",
             "Ability§Bolter Discipline",
             "Ability§Shock Assault",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -3230,7 +3093,7 @@
             "value": 6
           },
           "Points": {
-            "value": 110
+            "value": 100
           },
           "M": {
             "value": 5
@@ -3301,14 +3164,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -3316,14 +3172,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -3386,14 +3235,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -3401,14 +3243,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -3471,14 +3306,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -3486,14 +3314,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -3556,14 +3377,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Nemesis falchion",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Nemesis falchion"
                   }
                 ]
               },
@@ -3571,14 +3385,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -3605,7 +3412,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3633,7 +3440,6 @@
             "Ability§Sacred Banner (Aura)",
             "Ability§Crux Terminatus",
             "Ability§Chapter Banner",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -3644,7 +3450,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Paladin Squad": {
@@ -3674,7 +3480,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3701,7 +3507,6 @@
             "Ability§Combat Squads",
             "Ability§Teleport Strike",
             "Ability§Crux Terminatus",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Paladin",
@@ -3720,7 +3525,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Purifier Squad": {
@@ -3753,7 +3558,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3779,7 +3584,6 @@
             "Ability§Combat Squads",
             "Ability§Teleport Strike",
             "Ability§Cleansing Flame",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Purifier",
@@ -3798,7 +3602,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Servitors": {
@@ -3809,7 +3613,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3828,7 +3632,6 @@
         "assets": {
           "traits": [
             "Ability§Mindlock",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Servitor",
               "quantity": 4
@@ -3842,7 +3645,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Venerable Dreadnought": {
@@ -3945,14 +3748,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -3968,14 +3764,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -4045,14 +3834,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -4068,14 +3850,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -4145,14 +3920,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -4168,14 +3936,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -4245,14 +4006,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -4268,14 +4022,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -4286,7 +4033,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -4312,7 +4059,6 @@
             "Ability§Explodes",
             "Ability§Duty Eternal",
             "Ability§Unyielding Ancient",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -4343,7 +4089,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Elites§Venerable Dreadnought (Legendary)": {
@@ -4413,7 +4159,6 @@
             "Ability§Unyielding Ancient",
             "Ability§Bolter Discipline",
             "Ability§Shock Assault",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -4477,7 +4222,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -4503,7 +4248,6 @@
             "Ability§Combat Squads",
             "Ability§Teleport Strike",
             "Ability§Personal Teleporters",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Interceptor",
@@ -4522,7 +4266,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Flyers§Stormhawk Interceptor": {
@@ -4926,7 +4670,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -4949,8 +4693,7 @@
             "Ability§Airborne",
             "Ability§Supersonic",
             "Ability§Hard to Hit",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Storm hawk Interceptor is equipped with: 2 assault cannons; las-talon; skyhammer missile launcher; infernum halo-launcher.\n\n• This model’s skyhammer missile launcher can be replaced with one of the following: 2 heavy bolters; 1 typhoon missile launcher.\n\n• This model’s las-talon can be replaced with 1 Icarus stormcannon.\n\nnull",
@@ -5081,7 +4824,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Flyers§Stormraven Gunship": {
@@ -5153,14 +4896,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Typhoon missile launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Typhoon missile launcher"
                   }
                 ]
               },
@@ -5168,14 +4904,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Hurricane bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Hurricane bolter"
                   }
                 ]
               },
@@ -5191,14 +4920,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin assault cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin assault cannon"
                   }
                 ]
               },
@@ -5214,14 +4936,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               },
@@ -5260,14 +4975,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Typhoon missile launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Typhoon missile launcher"
                   }
                 ]
               },
@@ -5275,14 +4983,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Hurricane bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Hurricane bolter"
                   }
                 ]
               },
@@ -5298,14 +4999,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin assault cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin assault cannon"
                   }
                 ]
               },
@@ -5321,14 +5015,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               },
@@ -5367,14 +5054,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Typhoon missile launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Typhoon missile launcher"
                   }
                 ]
               },
@@ -5382,14 +5062,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Hurricane bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Hurricane bolter"
                   }
                 ]
               },
@@ -5405,14 +5078,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin assault cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin assault cannon"
                   }
                 ]
               },
@@ -5428,14 +5094,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               },
@@ -5474,14 +5133,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Typhoon missile launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Typhoon missile launcher"
                   }
                 ]
               },
@@ -5489,14 +5141,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Hurricane bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Hurricane bolter"
                   }
                 ]
               },
@@ -5512,14 +5157,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin assault cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin assault cannon"
                   }
                 ]
               },
@@ -5535,14 +5173,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               },
@@ -5561,7 +5192,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -5587,8 +5218,7 @@
             "Ability§Supersonic",
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Stormraven Gunship is equipped with: 2 stormstrike missile launchers; twin assault cannon; typhoon missile launcher.\n\n• This model’s twin assault cannon can be replaced with one of the following: 1 twin heavy plasma cannon; 1 twin lascannon.\n\n• This model’s typhoon missile launcher can be replaced with one of the following: 1 twin heavy bolter; 1 twin multi-melta.\n\n• This model can be equipped with 2 hurricane bolters.\n\nnull",
@@ -5719,7 +5349,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Flyers§Stormtalon Gunship": {
@@ -5799,14 +5429,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lascannon"
                   }
                 ]
               },
@@ -5861,14 +5484,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lascannon"
                   }
                 ]
               },
@@ -5923,14 +5539,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lascannon"
                   }
                 ]
               },
@@ -5957,7 +5566,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -5981,8 +5590,7 @@
             "Ability§Supersonic",
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Stormtalon Gunship is equipped with: skyhammer missile launcher; twin assault cannon.\n\n• This model’s skyhammer missile launcher can be replaced with one of the following: 2 heavy bolters; 2 lascannons; 1 typhoon missile launcher.\n\nnull",
@@ -6113,7 +5721,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Heavy Support§Land Raider": {
@@ -6193,14 +5801,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -6255,14 +5856,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -6317,14 +5911,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -6351,7 +5938,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -6372,8 +5959,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Land Raider is equipped with: twin heavy bolter; 2 twin lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
@@ -6504,7 +6090,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Heavy Support§Land Raider Banisher": {
@@ -6591,14 +6177,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -6606,14 +6185,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -6667,14 +6239,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -6682,14 +6247,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -6743,14 +6301,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -6758,14 +6309,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -6807,8 +6351,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Land Raider Banisher is equipped with: 2 heavy incinerators; twin psycannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
@@ -7027,14 +6570,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -7089,14 +6625,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -7151,14 +6680,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -7177,7 +6699,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -7200,8 +6722,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Land Raider Crusader is equipped with: 2 hurricane bolters; twin assault cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
@@ -7332,7 +6853,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Heavy Support§Land Raider Redeemer": {
@@ -7420,14 +6941,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -7482,14 +6996,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -7544,14 +7051,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               },
@@ -7570,7 +7070,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -7593,8 +7093,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Land Raider Redeemer is equipped with: 2 flamestorm cannons; twin assault cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
@@ -7725,7 +7224,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Heavy Support§Nemesis Dreadknight": {
@@ -7755,7 +7254,14 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Dreadknight teleporter"
+                    "trait": {
+                      "item": "Wargear§Dreadknight teleporter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -7933,7 +7439,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -8093,7 +7599,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Heavy Support§Purgation Squad": {
@@ -8126,7 +7632,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -8150,7 +7656,6 @@
             "Ability§Knights of Titan",
             "Ability§Combat Squads",
             "Ability§Teleport Strike",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Purgator",
@@ -8169,10 +7674,605 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Brother-Captain": {
+        "stats": {
+          "Power Level": {
+            "value": 6
+          },
+          "Points": {
+            "value": 100
+          },
+          "M": {
+            "value": 5
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 6
+          },
+          "A": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 2
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "loadout1": {
+            "value": "Master-crafted storm bolter",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Frag grenades": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Master-crafted storm bolter": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Master-crafted storm bolter"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Nemesis falchion": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis falchion"
+                  }
+                ]
+              },
+              "Nemesis force halberd": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force halberd"
+                  }
+                ]
+              },
+              "Nemesis force sword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force sword"
+                  }
+                ]
+              },
+              "Nemesis warding stave": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis warding stave"
+                  }
+                ]
+              },
+              "Psilencer": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psilencer"
+                  }
+                ]
+              },
+              "Psycannon": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psycannon"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Nemesis force sword",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Frag grenades": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Master-crafted storm bolter": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Master-crafted storm bolter"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Nemesis falchion": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis falchion"
+                  }
+                ]
+              },
+              "Nemesis force halberd": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force halberd"
+                  }
+                ]
+              },
+              "Nemesis force sword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force sword"
+                  }
+                ]
+              },
+              "Nemesis warding stave": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis warding stave"
+                  }
+                ]
+              },
+              "Psilencer": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psilencer"
+                  }
+                ]
+              },
+              "Psycannon": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psycannon"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "Frag grenades",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Frag grenades": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Master-crafted storm bolter": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Master-crafted storm bolter"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Nemesis falchion": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis falchion"
+                  }
+                ]
+              },
+              "Nemesis force halberd": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force halberd"
+                  }
+                ]
+              },
+              "Nemesis force sword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force sword"
+                  }
+                ]
+              },
+              "Nemesis warding stave": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis warding stave"
+                  }
+                ]
+              },
+              "Psilencer": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psilencer"
+                  }
+                ]
+              },
+              "Psycannon": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psycannon"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout4": {
+            "value": "Krak grenades",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 4,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Frag grenades": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Master-crafted storm bolter": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Master-crafted storm bolter"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Nemesis falchion": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis falchion"
+                  }
+                ]
+              },
+              "Nemesis force halberd": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force halberd"
+                  }
+                ]
+              },
+              "Nemesis force sword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force sword"
+                  }
+                ]
+              },
+              "Nemesis warding stave": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis warding stave"
+                  }
+                ]
+              },
+              "Psilencer": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psilencer"
+                  }
+                ]
+              },
+              "Psycannon": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psycannon"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout5": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 5,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Frag grenades": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Master-crafted storm bolter": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Master-crafted storm bolter"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Nemesis falchion": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis falchion"
+                  }
+                ]
+              },
+              "Nemesis force halberd": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force halberd"
+                  }
+                ]
+              },
+              "Nemesis force sword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis force sword"
+                  }
+                ]
+              },
+              "Nemesis warding stave": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis warding stave"
+                  }
+                ]
+              },
+              "Psilencer": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psilencer"
+                  }
+                ]
+              },
+              "Psycannon": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Psycannon"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "keywords": {
+          "Source": [
+            "Codex—Grey Knights—Indomitus 1.2"
+          ],
+          "Edition": [
+            "9th"
+          ],
+          "Keywords": [
+            "Brother-Captain",
+            "Character",
+            "Infantry",
+            "Psyk-out Grenades",
+            "Psyker",
+            "Terminator"
+          ],
+          "Faction": [
+            "<Brotherhood>",
+            "Grey Knights",
+            "Imperium",
+            "Sanctic Astartes"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Knights of Titan",
+            "Ability§Teleport Strike",
+            "Ability§Iron Halo",
+            "Ability§Tactical Precision (Aura)",
+            "Psychic Power§Smite"
+          ]
+        },
+        "text": "A Brother-Captain is equipped with: master-crafted storm bolter; Nemesis force sword; frag grenades; krak grenades.\n\n• This model’s Nemesis force sword can be replaced with 1 weapon from the ***Melee Weapons*** list.\n\n• This model’s master-crafted storm bolter can be replaced with 1 weapon from the **Special Weapons*** list.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Dominus Discipline"
+          ]
+        },
+        "meta": {
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
+        }
+      },
+      "HQ§Brother-Captain Stern": {
         "stats": {
           "Power Level": {
             "value": 6
@@ -8199,637 +8299,6 @@
             "value": 6
           },
           "A": {
-            "value": 5
-          },
-          "Ld": {
-            "value": 9
-          },
-          "Sv": {
-            "value": 2
-          },
-          "Base": {
-            "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Master-crafted storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis daemon hammer": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis daemon hammer"
-                  }
-                ]
-              },
-              "Nemesis falchion": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis falchion"
-                  }
-                ]
-              },
-              "Nemesis force halberd": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force halberd"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Nemesis warding stave": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis warding stave"
-                  }
-                ]
-              },
-              "Psilencer": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              "Psycannon": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Psycannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Nemesis force sword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis daemon hammer": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis daemon hammer"
-                  }
-                ]
-              },
-              "Nemesis falchion": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis falchion"
-                  }
-                ]
-              },
-              "Nemesis force halberd": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force halberd"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Nemesis warding stave": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis warding stave"
-                  }
-                ]
-              },
-              "Psilencer": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              "Psycannon": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Psycannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis daemon hammer": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis daemon hammer"
-                  }
-                ]
-              },
-              "Nemesis falchion": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis falchion"
-                  }
-                ]
-              },
-              "Nemesis force halberd": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force halberd"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Nemesis warding stave": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis warding stave"
-                  }
-                ]
-              },
-              "Psilencer": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              "Psycannon": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Psycannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis daemon hammer": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis daemon hammer"
-                  }
-                ]
-              },
-              "Nemesis falchion": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis falchion"
-                  }
-                ]
-              },
-              "Nemesis force halberd": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force halberd"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Nemesis warding stave": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis warding stave"
-                  }
-                ]
-              },
-              "Psilencer": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              "Psycannon": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Psycannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Incinerator": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Incinerator"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis daemon hammer": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis daemon hammer"
-                  }
-                ]
-              },
-              "Nemesis falchion": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis falchion"
-                  }
-                ]
-              },
-              "Nemesis force halberd": {
-                "order": 7,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force halberd"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Nemesis warding stave": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis warding stave"
-                  }
-                ]
-              },
-              "Psilencer": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              "Psycannon": {
-                "order": 12,
-                "traits": [
-                  {
-                    "trait": "Weapon§Psycannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
-          ],
-          "Edition": [
-            "9th"
-          ],
-          "Keywords": [
-            "Brother-Captain",
-            "Character",
-            "Infantry",
-            "Psyk-out Grenades",
-            "Psyker",
-            "Terminator"
-          ],
-          "Faction": [
-            "<Brotherhood>",
-            "Grey Knights",
-            "Imperium",
-            "Sanctic Astartes"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Knights of Titan",
-            "Ability§Teleport Strike",
-            "Ability§Iron Halo",
-            "Ability§Tactical Precision (Aura)",
-            "Ability§Armour of Contempt",
-            "Psychic Power§Smite"
-          ]
-        },
-        "text": "A Brother-Captain is equipped with: master-crafted storm bolter; Nemesis force sword; frag grenades; krak grenades.\n\n• This model’s Nemesis force sword can be replaced with 1 weapon from the ***Melee Weapons*** list.\n\n• This model’s master-crafted storm bolter can be replaced with 1 weapon from the **Special Weapons*** list.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
-        "allowed": {
-          "classifications": [
-            "Dominus Discipline"
-          ]
-        },
-        "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
-        }
-      },
-      "HQ§Brother-Captain Stern": {
-        "stats": {
-          "Power Level": {
-            "value": 6
-          },
-          "Points": {
-            "value": 120
-          },
-          "M": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 4
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 6
-          },
-          "A": {
             "value": 6
           },
           "Ld": {
@@ -9079,7 +8548,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -9108,7 +8577,6 @@
             "Ability§Iron Halo",
             "Ability§Tactical Precision (Aura)",
             "Ability§Zone of Banishment",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -9119,7 +8587,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Brotherhood Champion": {
@@ -9128,7 +8596,7 @@
             "value": 4
           },
           "Points": {
-            "value": 70
+            "value": 100
           },
           "M": {
             "value": 6
@@ -9398,7 +8866,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -9424,7 +8892,6 @@
             "Ability§Iron Halo",
             "Ability§Martial Superiority",
             "Ability§Honour or Death",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -9435,7 +8902,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Brotherhood Chaplain": {
@@ -9714,7 +9181,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -9741,7 +9208,6 @@
             "Ability§Teleport Strike",
             "Ability§Rosarius",
             "Ability§Spiritual Leaders (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -9752,7 +9218,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Brotherhood Librarian": {
@@ -9761,7 +9227,7 @@
             "value": 6
           },
           "Points": {
-            "value": 105
+            "value": 95
           },
           "M": {
             "value": 5
@@ -9888,14 +9354,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               }
@@ -9998,14 +9457,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               }
@@ -10108,14 +9560,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               }
@@ -10218,14 +9663,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Storm bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Storm bolter"
                   }
                 ]
               }
@@ -10236,7 +9674,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -10263,7 +9701,6 @@
             "Ability§Teleport Strike",
             "Ability§Crux Terminatus",
             "Ability§Psychic Hood",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -10274,7 +9711,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Brotherhood Techmarine": {
@@ -10283,7 +9720,7 @@
             "value": 4
           },
           "Points": {
-            "value": 80
+            "value": 70
           },
           "M": {
             "value": 6
@@ -10950,7 +10387,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -10975,7 +10412,6 @@
             "Ability§Knights of Titan",
             "Ability§Blessing of the Omnissiah",
             "Ability§Awaken the Machine Spirits",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -10986,7 +10422,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Castellan Crowe": {
@@ -10995,7 +10431,7 @@
             "value": 5
           },
           "Points": {
-            "value": 90
+            "value": 85
           },
           "M": {
             "value": 6
@@ -11265,7 +10701,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -11294,7 +10730,6 @@
             "Ability§Cleansing Flame",
             "Ability§Martial Superiority",
             "Ability§Honour or Death",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -11306,7 +10741,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Grand Master": {
@@ -11315,7 +10750,7 @@
             "value": 8
           },
           "Points": {
-            "value": 135
+            "value": 120
           },
           "M": {
             "value": 5
@@ -11434,14 +10869,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -11544,14 +10972,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -11654,14 +11075,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -11764,14 +11178,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -11874,14 +11281,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -11900,7 +11300,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -11926,7 +11326,6 @@
             "Ability§Teleport Strike",
             "Ability§Iron Halo",
             "Ability§Rites of Battle (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -11937,7 +11336,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Grand Master in Nemesis Dreadknight": {
@@ -11967,7 +11366,14 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Dreadknight teleporter"
+                    "trait": {
+                      "item": "Wargear§Dreadknight teleporter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -12145,7 +11551,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -12307,7 +11713,7 @@
           }
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Grand Master Voldus": {
@@ -12316,7 +11722,7 @@
             "value": 8
           },
           "Points": {
-            "value": 150
+            "value": 135
           },
           "M": {
             "value": 5
@@ -12586,7 +11992,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -12613,7 +12019,6 @@
             "Ability§Teleport Strike",
             "Ability§Iron Halo",
             "Ability§Rites of Battle (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -12624,7 +12029,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Kaldor Draigo": {
@@ -12670,7 +12075,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 180
+            "value": 165
           },
           "M": {
             "value": 5
@@ -12987,7 +12392,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -13014,7 +12419,6 @@
             "Ability§Teleport Strike",
             "Ability§Rites of Battle (Aura)",
             "Ability§Supreme Grand Master",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -13025,7 +12429,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "HQ§Techmarine (Legendary)": {
@@ -13094,7 +12498,6 @@
             "Ability§Blessing of the Omnissiah",
             "Ability§Bolter Discipline",
             "Ability§Shock Assault",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -13497,8 +12900,7 @@
             "Ability§Hover Jet",
             "Ability§Supersonic",
             "Ability§Colossal Flyer",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Grey Knights Thunderhawk Gunship is equipped with: 2 lascannons; Thunderhawk heavy cannon; 4 twin heavy bolters; Thunderhawk cluster bombs.\n\n• This model’s Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor.\n\n• This model's Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery.\n\nnull",
@@ -13635,7 +13037,7 @@
       "Model§Brotherhood Terminator": {
         "stats": {
           "Points": {
-            "value": 40
+            "value": 35
           },
           "M": {
             "value": 5
@@ -13746,14 +13148,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -13856,14 +13251,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -13966,14 +13354,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -14076,14 +13457,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -14186,14 +13560,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -14222,7 +13589,7 @@
       "Model§Grey Knight": {
         "stats": {
           "Points": {
-            "value": 22
+            "value": 20
           },
           "M": {
             "value": 6
@@ -14277,14 +13644,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -14348,14 +13708,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -14394,14 +13747,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -14465,14 +13811,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -14511,14 +13850,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -14582,14 +13914,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -14628,14 +13953,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -14699,14 +14017,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -14745,14 +14056,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -14816,14 +14120,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -14844,7 +14141,7 @@
       "Model§Interceptor": {
         "stats": {
           "Points": {
-            "value": 26
+            "value": 24
           },
           "M": {
             "value": 12
@@ -14899,14 +14196,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -14970,14 +14260,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15016,14 +14299,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15087,14 +14363,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15133,14 +14402,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15204,14 +14466,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15250,14 +14505,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15321,14 +14569,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15367,14 +14608,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15438,14 +14672,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15466,7 +14693,7 @@
       "Model§Interceptor Justicar": {
         "stats": {
           "Points": {
-            "value": 26
+            "value": 24
           },
           "M": {
             "value": 12
@@ -15521,14 +14748,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15592,14 +14812,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15638,14 +14851,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15709,14 +14915,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15755,14 +14954,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15826,14 +15018,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15872,14 +15057,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -15943,14 +15121,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -15989,14 +15160,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16060,14 +15224,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16088,7 +15245,7 @@
       "Model§Justicar": {
         "stats": {
           "Points": {
-            "value": 22
+            "value": 20
           },
           "M": {
             "value": 6
@@ -16143,14 +15300,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16214,14 +15364,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16260,14 +15403,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16331,14 +15467,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16377,14 +15506,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16448,14 +15570,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16494,14 +15609,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16565,14 +15673,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16611,14 +15712,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16682,14 +15776,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16765,14 +15852,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16836,14 +15916,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16882,14 +15955,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -16953,14 +16019,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -16999,14 +16058,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -17070,14 +16122,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -17116,14 +16161,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -17187,14 +16225,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -17233,14 +16264,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -17304,14 +16328,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -17443,14 +16460,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -17553,14 +16563,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -17663,14 +16666,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -17773,14 +16769,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -17883,14 +16872,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -18030,14 +17012,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -18140,14 +17115,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -18250,14 +17218,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -18360,14 +17321,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -18470,14 +17424,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -18561,14 +17508,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -18632,14 +17572,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -18678,14 +17611,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -18749,14 +17675,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -18795,14 +17714,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -18866,14 +17778,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -18912,14 +17817,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -18983,14 +17881,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19029,14 +17920,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19100,14 +17984,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19183,14 +18060,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19254,14 +18124,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19300,14 +18163,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19371,14 +18227,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19417,14 +18266,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19488,14 +18330,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19534,14 +18369,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19605,14 +18433,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19651,14 +18472,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19722,14 +18536,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19805,14 +18612,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19876,14 +18676,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -19922,14 +18715,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -19993,14 +18779,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -20039,14 +18818,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -20110,14 +18882,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -20156,14 +18921,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -20227,14 +18985,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -20273,14 +19024,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Incinerator",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Incinerator"
                   }
                 ]
               },
@@ -20344,14 +19088,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psycannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psycannon"
                   }
                 ]
               },
@@ -20427,14 +19164,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Heavy bolter"
                   }
                 ]
               },
@@ -20442,14 +19172,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -20488,14 +19211,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Heavy bolter"
                   }
                 ]
               },
@@ -20503,14 +19219,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Multi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Multi-melta"
                   }
                 ]
               },
@@ -20531,7 +19240,7 @@
       "Model§Terminator Justicar": {
         "stats": {
           "Points": {
-            "value": 40
+            "value": 35
           },
           "M": {
             "value": 5
@@ -20642,14 +19351,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -20752,14 +19454,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -20862,14 +19557,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -20972,14 +19660,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -21082,14 +19763,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Psilencer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Psilencer"
                   }
                 ]
               },
@@ -21327,7 +20001,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -21353,7 +20027,6 @@
             "Ability§Combat Squads",
             "Ability§Teleport Strike",
             "Ability§Crux Terminatus",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Brotherhood Terminator",
@@ -21372,7 +20045,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Troops§Strike Squad": {
@@ -21405,7 +20078,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Grey Knights—Indomitus 1.1"
+            "Codex—Grey Knights—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -21429,7 +20102,6 @@
             "Ability§Knights of Titan",
             "Ability§Combat Squads",
             "Ability§Teleport Strike",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Grey Knight",
@@ -21448,7 +20120,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/G7vWyfiCnNxmorGC.pdf)"
+          "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
       },
       "Wargear§Combi-flamer": {
@@ -21457,11 +20129,6 @@
             "Weapon§Boltgun",
             "Weapon§Flamer"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Combi-melta": {
@@ -21470,11 +20137,6 @@
             "Weapon§Boltgun",
             "Weapon§Meltagun"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Combi-plasma": {
@@ -21484,20 +20146,10 @@
             "Weapon§Plasma gun (standard)",
             "Weapon§Plasma gun (supercharge)"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Dreadknight teleporter": {
-        "text": "The bearer has the **TELEPORTER** keyword.",
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        }
+        "text": "The bearer has the **TELEPORTER** keyword."
       },
       "Wargear§Heavy plasma cannon": {
         "assets": {
@@ -21585,15 +20237,10 @@
             "Weapon§Frag missile",
             "Weapon§Krak missile"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
         }
       },
       "Warlord Trait§Daemon-slayer": {
-        "text": "* Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, then until that fight is resolved, add 1 to its Attacks characteristic.\n* Each time this WARLORD** makes a melee attack against a DAEMON** unit, [invulnerable saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made against that attack.",
+        "text": "* Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, then until that fight is resolved, add 1 to its Attacks characteristic.\n* Each time this WARLORD** makes a melee attack against a DAEMON** unit, **Daemonic saving** throws** cannot be made against that attack.",
         "stats": {
           "Discipline": {
             "value": "Warlord Traits 1"
@@ -21958,9 +20605,6 @@
           },
           "Range": {
             "value": "36″"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
@@ -21980,9 +20624,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 10
           }
         },
         "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
@@ -22068,9 +20709,6 @@
           },
           "Range": {
             "value": "48″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "The bearer can only shoot with each hunter-killer missile it is equipped with once per battle."
@@ -22130,9 +20768,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
@@ -22191,9 +20826,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 25
           }
         }
       },
@@ -22332,9 +20964,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 25
           }
         },
         "text": "Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+2."
@@ -22688,9 +21317,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 10
           }
         }
       },
@@ -22990,9 +21616,6 @@
           },
           "Range": {
             "value": "48″"
-          },
-          "Points": {
-            "value": 20
           }
         }
       },
@@ -23073,9 +21696,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 20
           }
         },
         "text": "Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+2."

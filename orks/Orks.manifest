@@ -1,11 +1,11 @@
 {
   "name": "Orks",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -2698,7 +2698,14 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Ammo runt"
+                    "trait": {
+                      "item": "Wargear§Ammo runt",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -2802,7 +2809,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 70
+            "value": 60
           },
           "M": {
             "value": 5
@@ -3056,7 +3063,14 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Grot-lash"
+                    "trait": {
+                      "item": "Wargear§Grot-lash",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -3086,7 +3100,14 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Squig hound"
+                    "trait": {
+                      "item": "Wargear§Squig hound",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -13052,7 +13073,7 @@
             "value": 9
           },
           "Points": {
-            "value": 170
+            "value": 150
           },
           "M": {
             "value": 10
@@ -20574,7 +20595,7 @@
             "value": 24
           },
           "Points": {
-            "value": 460
+            "value": 420
           },
           "M": {
             "value": 10
@@ -20872,7 +20893,7 @@
             "value": 19
           },
           "Points": {
-            "value": 365
+            "value": 330
           },
           "M": {
             "value": 8
@@ -22227,7 +22248,7 @@
             "value": 40
           },
           "Points": {
-            "value": 700
+            "value": 675
           },
           "M": {
             "value": 10
@@ -23392,7 +23413,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 350
+            "value": 315
           },
           "M": {
             "value": 8
@@ -25940,7 +25961,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -25955,7 +25976,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -25981,14 +26002,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -26027,7 +26041,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -26039,7 +26060,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26093,7 +26114,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26108,7 +26129,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26134,14 +26155,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -26180,7 +26194,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -26192,7 +26213,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26246,7 +26267,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26261,7 +26282,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26287,14 +26308,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -26333,7 +26347,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -26345,7 +26366,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26399,7 +26420,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26414,7 +26435,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -26440,14 +26461,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -26486,7 +26500,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -26498,7 +26519,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27303,7 +27324,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27318,7 +27339,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27329,14 +27350,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -27352,7 +27366,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -27364,7 +27385,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -27418,7 +27439,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27433,7 +27454,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27444,14 +27465,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -27467,7 +27481,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -27479,7 +27500,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -27533,7 +27554,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27548,7 +27569,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27559,14 +27580,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -27582,7 +27596,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -27594,7 +27615,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -27648,7 +27669,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27663,7 +27684,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -27674,14 +27695,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -27697,7 +27711,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -27709,7 +27730,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -28278,7 +28299,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -28363,7 +28391,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -28448,7 +28483,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -29638,7 +29680,7 @@
       "Model§Flash Git": {
         "stats": {
           "Points": {
-            "value": 25
+            "value": 20
           },
           "M": {
             "value": 5
@@ -30202,7 +30244,7 @@
       "Model§Kaptin": {
         "stats": {
           "Points": {
-            "value": 25
+            "value": 20
           },
           "M": {
             "value": 5
@@ -30380,7 +30422,7 @@
       "Model§Killa Kan": {
         "stats": {
           "Points": {
-            "value": 35
+            "value": 30
           },
           "M": {
             "value": 6
@@ -30455,7 +30497,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 10
                         }
                       }
                     }
@@ -30524,7 +30566,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 10
                         }
                       }
                     }
@@ -32753,7 +32795,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -32768,7 +32810,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -32779,14 +32821,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -32802,7 +32837,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -32814,7 +32856,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -32868,7 +32910,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -32883,7 +32925,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -32894,14 +32936,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -32917,7 +32952,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -32929,7 +32971,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -32983,7 +33025,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -32998,7 +33040,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33009,14 +33051,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -33032,7 +33067,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33044,7 +33086,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -33098,7 +33140,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33113,7 +33155,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33124,14 +33166,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big choppa",
-                      "stats": {
-                        "Points": {
-                          "value": 3
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big choppa"
                   }
                 ]
               },
@@ -33147,7 +33182,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Killsaw"
+                    "trait": {
+                      "item": "Weapon§Killsaw",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33159,7 +33201,7 @@
                       "item": "Weapon§Power klaw",
                       "stats": {
                         "Points": {
-                          "value": 8
+                          "value": 5
                         }
                       }
                     }
@@ -33300,7 +33342,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33385,7 +33434,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33470,7 +33526,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33542,7 +33605,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33557,7 +33620,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33583,14 +33646,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -33629,7 +33685,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33641,7 +33704,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33695,7 +33758,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33710,7 +33773,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33736,14 +33799,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -33782,7 +33838,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33794,7 +33857,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33848,7 +33911,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33863,7 +33926,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -33889,14 +33952,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -33935,7 +33991,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -33947,7 +34010,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -34001,7 +34064,7 @@
                       "item": "Wargear§Kombi-rokkit",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -34016,7 +34079,7 @@
                       "item": "Wargear§Kombi-skorcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -34042,14 +34105,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Big shoota",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Big shoota"
                   }
                 ]
               },
@@ -34088,7 +34144,14 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": "Weapon§Power stabba"
+                    "trait": {
+                      "item": "Weapon§Power stabba",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -34100,7 +34163,7 @@
                       "item": "Weapon§Rokkit launcha",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 5
                         }
                       }
                     }
@@ -34940,14 +35003,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35049,14 +35105,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35158,14 +35207,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35267,14 +35309,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35376,14 +35411,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35522,14 +35550,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35631,14 +35652,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35740,14 +35754,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -35849,14 +35856,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power stabba",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power stabba"
                   }
                 ]
               },
@@ -37789,7 +37789,7 @@
         }
       },
       "Wargear§Grot Orderly": {
-        "text": "Once per battle, if a 1 is rolled when using the bearer’s **Sawbonez** ability you can re-roll the dice.\n\n\n\n*We recommend placing a Grot Orderly model next to the unit os a reminder, removing it once this ability has been used (a Grot Orderly does not count as a model for any rules purposes).*",
+        "text": "Once per battle, if a 1 is rolled when using the bearer’s **Sawbonez** ability you can re-roll the dice.\n\n\n\n*We recommend placing a Grot Orderly model next to the unit as a reminder, removing it once this ability has been used (a Grot Orderly does not count as a model for any rules purposes).*",
         "stats": {
           "Points": {
             "value": 5
@@ -37797,12 +37797,7 @@
         }
       },
       "Wargear§Grot-lash": {
-        "text": "The bearer gains the following ability: ‘**Grot Lash (Aura)**:** While a friendly **GRETCHIN INFANTRY** unit is within 3″ of any models equipped with a grot-lash, add 1″ to the Move characteristic of models in that unit.’",
-        "stats": {
-          "Points": {
-            "value": 5
-          }
-        }
+        "text": "The bearer gains the following ability: ‘**Grot Lash (Aura)**:** While a friendly **GRETCHIN INFANTRY** unit is within 3″ of any models equipped with a grot-lash, add 1″ to the Move characteristic of models in that unit.’"
       },
       "Wargear§Kannon": {
         "assets": {
@@ -37887,12 +37882,7 @@
         }
       },
       "Wargear§Squig hound": {
-        "text": "The bearer gains the following ability: ‘**Squig Hound (Aura)**:** While a friendly **GRETCHIN INFANTRY** unit is within 3″ of the bearer, models in that unit ignore modifiers to [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests).’",
-        "stats": {
-          "Points": {
-            "value": 5
-          }
-        }
+        "text": "The bearer gains the following ability: ‘**Squig Hound (Aura)**:** While a friendly **GRETCHIN INFANTRY** unit is within 3″ of the bearer, models in that unit ignore modifiers to [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests).’"
       },
       "Wargear§Squig mine": {
         "text": "Once per turn, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this unit has any squig mines remaining, this unit can release one. Select one enemy **VEHICLE** unit that is within 6″ of this unit and roll one D6: on a 3-5, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). On a 6, that unit suffers D6 mortal wounds instead. The number of squig mines this unit is equipped with is then reduced by 1."
@@ -39657,9 +39647,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },

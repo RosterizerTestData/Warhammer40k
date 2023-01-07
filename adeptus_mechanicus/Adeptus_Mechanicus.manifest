@@ -1,15 +1,15 @@
 {
   "name": "Adeptus Mechanicus",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
-      "slug": "123456",
+      "slug": "NZWZG9",
       "name": "40k9e",
       "game": "Warhammer 40,000"
     }
@@ -199,7 +199,7 @@
         "text": "This unit receives a bonus depending on which protocol is active for it. At the start of the battle, the Aegis Protocol (see below) is active for this unit. To change the unit's active protocol see the [Cybernetica Datasmith](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/Cybernetica-Datasmith) datasheet. The available protocols are:\n\n* **Aegis Protocol:** While this protocol is active for this unit, models in this unit have a Sv characteristic of 2+.\n* Conqueror Protocol:** While this protocol is active for this unit, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for it and models in this unit have a WS characteristic of 2+.\n* Protector Protocol:** While this protocol is active for this unit, it cannot move (except to [pile in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) or [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate)) and models in this unit have a BS characteristic of 3+."
       },
       "Ability§Bionics": {
-        "text": "Models in this unit have a 6+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+        "text": "Models in this unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Blind Barrage": {
         "text": "Once per battle, instead of shooting in the [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), this unit can fire a blind barrage. If it does, then until the start of your next Shooting phase, each time a ranged attack is made against this unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -749,7 +749,7 @@
             "value": 5
           },
           "Points": {
-            "value": 95
+            "value": 85
           },
           "M": {
             "value": 12
@@ -1494,7 +1494,7 @@
             "value": 2
           },
           "Points": {
-            "value": 40
+            "value": 35
           },
           "M": {
             "value": 6
@@ -1763,14 +1763,7 @@
                 ],
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Enhanced data-tether",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Enhanced data-tether"
                   }
                 ]
               }
@@ -1938,14 +1931,7 @@
                 ],
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Enhanced data-tether",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Enhanced data-tether"
                   }
                 ]
               }
@@ -4097,7 +4083,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 115
+            "value": 100
           },
           "M": {
             "value": 8
@@ -4160,14 +4146,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Cognis heavy stubber",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Cognis heavy stubber"
                   }
                 ]
               },
@@ -4238,14 +4217,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Cognis heavy stubber",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Cognis heavy stubber"
                   }
                 ]
               },
@@ -4459,7 +4431,7 @@
             "value": 8
           },
           "Points": {
-            "value": 145
+            "value": 125
           },
           "M": {
             "value": 12
@@ -4852,7 +4824,7 @@
             "value": 9
           },
           "Points": {
-            "value": 180
+            "value": 160
           },
           "M": {
             "value": 6
@@ -5164,7 +5136,7 @@
             "value": 3
           },
           "Points": {
-            "value": 55
+            "value": 50
           },
           "M": {
             "value": 6
@@ -5329,7 +5301,7 @@
             "value": 4
           },
           "Points": {
-            "value": 75
+            "value": 70
           },
           "M": {
             "value": 6
@@ -5622,7 +5594,7 @@
             "value": 3
           },
           "Points": {
-            "value": 55
+            "value": 50
           },
           "M": {
             "value": 6
@@ -5852,7 +5824,7 @@
             "value": 4
           },
           "Points": {
-            "value": 80
+            "value": 70
           },
           "M": {
             "value": 6
@@ -6113,7 +6085,7 @@
             "value": 3
           },
           "Points": {
-            "value": 55
+            "value": 50
           },
           "M": {
             "value": 6
@@ -6278,7 +6250,7 @@
       "Model§Corpuscarii Electro-Priest": {
         "stats": {
           "Points": {
-            "value": 14
+            "value": 12
           },
           "M": {
             "value": 6
@@ -6361,7 +6333,7 @@
       "Model§Fulgurite Electro-Priest": {
         "stats": {
           "Points": {
-            "value": 14
+            "value": 12
           },
           "M": {
             "value": 6
@@ -6499,14 +6471,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc maul",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc maul"
                   }
                 ]
               },
@@ -6522,14 +6487,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -6537,14 +6495,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -6591,14 +6542,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc maul",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc maul"
                   }
                 ]
               },
@@ -6614,14 +6558,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -6629,14 +6566,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -6683,14 +6613,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc maul",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc maul"
                   }
                 ]
               },
@@ -6706,14 +6629,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -6721,14 +6637,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -6870,7 +6779,7 @@
       "Model§Kastelan Robot": {
         "stats": {
           "Points": {
-            "value": 90
+            "value": 85
           },
           "M": {
             "value": 8
@@ -7506,7 +7415,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7522,14 +7438,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -7537,7 +7446,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Power sword"
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7591,7 +7507,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7607,14 +7530,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -7622,7 +7538,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Power sword"
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7658,7 +7581,7 @@
       "Model§Pteraxii Skystalker": {
         "stats": {
           "Points": {
-            "value": 17
+            "value": 16
           },
           "M": {
             "value": 12
@@ -7773,7 +7696,7 @@
       "Model§Pteraxii Skystalker Alpha": {
         "stats": {
           "Points": {
-            "value": 17
+            "value": 16
           },
           "M": {
             "value": 12
@@ -8385,14 +8308,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc maul",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc maul"
                   }
                 ]
               },
@@ -8408,14 +8324,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -8423,14 +8332,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -8477,14 +8379,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc maul",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc maul"
                   }
                 ]
               },
@@ -8500,14 +8395,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -8515,14 +8403,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -8569,14 +8450,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc maul",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc maul"
                   }
                 ]
               },
@@ -8592,14 +8466,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -8607,14 +8474,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -8698,7 +8558,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8714,14 +8581,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -8729,7 +8589,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Power sword"
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8783,7 +8650,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8799,14 +8673,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Phosphor blast pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Phosphor blast pistol"
                   }
                 ]
               },
@@ -8814,7 +8681,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Power sword"
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9347,7 +9221,7 @@
       "Model§Serberys Sulphurhound": {
         "stats": {
           "Points": {
-            "value": 20
+            "value": 18
           },
           "M": {
             "value": 12
@@ -9394,7 +9268,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9418,7 +9299,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9457,7 +9345,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9481,7 +9376,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9520,7 +9422,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9544,7 +9453,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9583,7 +9499,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9607,7 +9530,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9636,7 +9566,7 @@
       "Model§Serberys Sulphurhound Alpha": {
         "stats": {
           "Points": {
-            "value": 20
+            "value": 18
           },
           "M": {
             "value": 12
@@ -9683,7 +9613,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9707,7 +9644,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9746,7 +9690,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9770,7 +9721,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9809,7 +9767,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9833,7 +9798,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9872,7 +9844,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9896,7 +9875,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9935,7 +9921,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Arc maul"
+                    "trait": {
+                      "item": "Weapon§Arc maul",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9959,7 +9952,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Phosphor blast pistol"
+                    "trait": {
+                      "item": "Weapon§Phosphor blast pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10119,7 +10119,7 @@
       "Model§Sicarian Infiltrator": {
         "stats": {
           "Points": {
-            "value": 19
+            "value": 17
           },
           "M": {
             "value": 8
@@ -10174,14 +10174,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -10228,14 +10221,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -10282,14 +10268,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -10318,7 +10297,7 @@
       "Model§Sicarian Infiltrator Princeps": {
         "stats": {
           "Points": {
-            "value": 19
+            "value": 17
           },
           "M": {
             "value": 8
@@ -10373,14 +10352,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -10427,14 +10399,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -10481,14 +10446,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power sword",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power sword"
                   }
                 ]
               },
@@ -10517,7 +10475,7 @@
       "Model§Sicarian Ruststalker": {
         "stats": {
           "Points": {
-            "value": 18
+            "value": 16
           },
           "M": {
             "value": 8
@@ -10671,7 +10629,7 @@
       "Model§Sicarian Ruststalker Princeps": {
         "stats": {
           "Points": {
-            "value": 18
+            "value": 16
           },
           "M": {
             "value": 8
@@ -10888,14 +10846,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -10943,14 +10894,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -10997,14 +10941,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11052,14 +10989,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11143,14 +11073,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11198,14 +11121,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11252,14 +11168,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11307,14 +11216,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11398,14 +11300,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11453,14 +11348,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11507,14 +11395,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11562,14 +11443,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11653,14 +11527,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11708,14 +11575,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11762,14 +11622,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Arc pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Arc pistol"
                   }
                 ]
               },
@@ -11817,14 +11670,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Taser goad",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Taser goad"
                   }
                 ]
               },
@@ -11845,7 +11691,7 @@
       "Model§Sydonian Dragoon": {
         "stats": {
           "Points": {
-            "value": 55
+            "value": 50
           },
           "M": {
             "value": 10
@@ -11995,6 +11841,7 @@
           ],
           "Keywords": [
             "Biker",
+            "Core",
             "Kataphron Breachers",
             "Kataphron Servitors"
           ],
@@ -12063,6 +11910,7 @@
           ],
           "Keywords": [
             "Biker",
+            "Core",
             "Kataphron Destroyers",
             "Kataphron Servitors"
           ],
@@ -12154,14 +12002,7 @@
                 ],
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Omnispex",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Omnispex"
                   }
                 ]
               }
@@ -12297,14 +12138,7 @@
                 ],
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Omnispex",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Omnispex"
                   }
                 ]
               }
@@ -12420,7 +12254,7 @@
         "text": "While the bearer is on the battlefield:\n\n* The bearer’s unit gains the **DATA-TETHER** keyword.\n* Add 1 to the Leadership characteristic of models in the bearer’s unit.",
         "stats": {
           "Points": {
-            "value": 10
+            "value": 5
           }
         }
       },
@@ -12446,11 +12280,6 @@
             "Weapon§Focused",
             "Weapon§Dissipated"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 5
-          }
         }
       },
       "Wargear§Galvanic caster": {
@@ -12470,7 +12299,7 @@
         },
         "stats": {
           "Points": {
-            "value": 10
+            "value": 5
           }
         }
       },
@@ -12494,7 +12323,7 @@
         },
         "stats": {
           "Points": {
-            "value": 10
+            "value": 5
           }
         }
       },
@@ -12705,9 +12534,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon against a **VEHICLE** unit, that attack has a Damage characteristic of 2 and an unmodified wound roll of 4+ successfully wounds the target."
@@ -12750,7 +12576,7 @@
             "value": "30″"
           },
           "Points": {
-            "value": 10
+            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon against a **VEHICLE** unit, that attack has a Damage characteristic of 3 and an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 4+ successfully wounds the target."
@@ -12889,9 +12715,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
@@ -13421,9 +13244,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, the target does not receive the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover) against that attack."
@@ -13642,9 +13462,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). Each time an attack is made with this weapon, the target does not receive the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover) against that attack."
@@ -13705,9 +13522,6 @@
           },
           "Range": {
             "value": "18″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, the target does not receive the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover) against that attack."
@@ -13768,9 +13582,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
@@ -14050,7 +13861,7 @@
             "value": "Melee"
           },
           "Points": {
-            "value": 15
+            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 2 additional hits."
@@ -14192,9 +14003,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, that attack automatically hits the target. Each time an attack is made with this weapon, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage."
@@ -14237,7 +14045,7 @@
             "value": "60″"
           },
           "Points": {
-            "value": 15
+            "value": 10
           }
         },
         "text": "Each time you select a target for this weapon, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule. Each time an attack is made with this weapon, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage."

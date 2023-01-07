@@ -1,11 +1,11 @@
 {
   "name": "Thousand Sons",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -198,9 +198,6 @@
       "Ability§Arch-Sorcerer of Tzeentch": {
         "text": "Each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for this model, you can re-roll that test."
       },
-      "Ability§Armour of Contempt": {
-        "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n* Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
-      },
       "Ability§Artillery and Crew": {
         "text": "Each Rapier Carrier and its crew are treated as a single model for all rules purposes (crew models must remain within 1″ of their Rapier Carrier model). This means that the crew models cannot be targeted or attacked separately and that visibility and all ranges are measured to and from the Rapier Carrier’s model, not the crew models. This unit cannot [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), is never eligible to [charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE) or [Heroically Intervene](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention), and cannot make [pile-in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) or [consolidation moves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate)."
       },
@@ -214,7 +211,7 @@
         "text": "While a friendly **BRAY** or ENLIGHTENED** unit is within 6″ of this model, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Ability§Cabbalistic Rituals": {
-        "text": "<div class=\"BreakInsideAvoid\">If every unit from your army (excluding **UNALIGNED** units) has the THOUSAND** SONS** keyword, your army becomes a Cabal of Sorcerers. At the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), if your army is a Cabal of Sorcerers, generate Cabal points for your army for each model with this ability that is on the battlefield:\n\n\n\n<div class=\"BreakInsideAvoid\"  style=\"\"\"><table width=\"0\" border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable tablefont\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:1px 0 0 1px;background-color:rgb(16,16,16);color:rgb(254,254,254);vertical-align:middle;font-size:22px;width:400px;height:0px;\">MODEL**</td><td style=\"border-width:1px 1px 0 0;background-color:rgb(16,16,16);color:rgb(254,254,254);text-align:center;vertical-align:middle;font-size:22px;width:200px;height:0px;\">CABAL POINTS**</td></tr><tr><td style=\"border-width:0 0 0 1px;text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Magnus the Red](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Magnus-the-Red)</td><td style=\"border-width:0 1px 0 0;text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">4**</td></tr><tr><td style=\"border-width:0 0 0 1px;background-color:var(--row-bg);text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Ahriman](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Ahriman), [Exalted Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Exalted-Sorcerer) and [Thousand Sons Daemon Prince](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Thousand-Sons-Daemon-Prince)</td><td style=\"border-width:0 1px 0 0;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">3**</td></tr><tr><td style=\"border-width:0 0 0 1px;text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Sorcerer), [Sorcerer in Terminator Armour](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Sorcerer-in-Terminator-Armour) and [Infernal Master](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Infernal-Master)</td><td style=\"border-width:0 1px 0 0;text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">2**</td></tr><tr><td style=\"border-width:0 0 1px 1px;background-color:var(--row-bg);text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Scarab Occult Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Scarab-Occult-Terminators), [Aspiring Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Rubric-Marines) and [Tzaangor Shaman](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Tzaangor-Shaman)</td><td style=\"border-width:0 1px 1px 0;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">1**</td></tr></tbody></table></td></tr></tbody></table>\n\n</div>In your Psychic phase, you can spend any Cabal points you have to use Cabbalistic Rituals from the list below. Each time you do, reduce the total amount of Cabal points you have by the amount shown. At the end of your Psychic phase, any unspent Cabal points are lost.\n\n\n\nIn your Psychic phase, unless otherwise specified, you can use each Cabbalistic Ritual once, and each unit from your army can only benefit from one Cabbalistic Ritual. A unit can only benefit from a Cabbalistic Ritual if it has this ability.</div>\n\nIMBUED MANIFESTATION**\n\n<span class=\"hi_custom\">4 Cabal Points</span>\n\nLike flame leaping along a trail of spilled promethium, the Thousand Sons’ magicks feed upon the latent energies clouding the air and race hungrily away through them towards the foe.Use this Cabbalistic Ritual when a psychic power is successfully [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by a unit from your army. Add 6″ to the range of that psychic power’s effects (if that psychic power specifies multiple ranges, e.g. *Astral Blast*, add 6″ to the first range specified in that psychic power).\n\n\n\nMALEVOLENT CHARGE**\n\n<span class=\"hi_custom\">4 Cabal Points</span>\n\nThe malefic energies of dark sorcery flow together in ever more lethal concentrations into fiery, mutating storms.Use this Cabbalistic Ritual when a psychic power is successfully manifested by a unit from your army. If the psychic power inflicts [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on enemy units, after inflicting the mortal wounds select one of those units and inflict D3 additional mortal wounds on that unit.\n\n\n\nKINDRED SORCERERS**\n\n<span class=\"hi_custom\">5 Cabal Points</span>\n\nFor an instant, the chanting voices of the Thousand Sons’ champions achieve perfect synchronisation, words of malign incantation rolling out like the peal of some cursed bell.Use this Cabbalistic Ritual after taking a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) for a unit from your army. Add 1 to that Psychic test.\n\n\n\nWARP SIGHT**\n\n<span class=\"hi_custom\">3 Cabal Points</span>\n\nWith their tainted souls melded as one amidst the empyrean, what one champion of the cabal sees, all their fellows see also.Use this Cabbalistic Ritual when a psychic power is successfully manifested by a unit from your army. If the psychic power requires you to select a unit visible to the PSYKER**, for that manifestation you can select a unit visible to any friendly unit with the Cabbalistic Rituals ability.\n\n\n\nECHOES FROM THE WARP**\n\n<span class=\"hi_custom\">4 Cabal Points</span>\n\nPlucked from amidst the howling winds of the immaterium and the gibbering of countless damned voices come whispers of invaluable daemonic prophecy.Use this Cabbalistic Ritual in your Psychic phase. Select one PSYKER** unit from your army. Until the end of the phase, that unit can perform the following [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions): Echoes From the Warp (Psychic Action - Warp Charge 3):** If successful, gain 1 [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points).\n\n\n\n<div class=\"BreakInsideAvoid\">PACT FROM BEYOND**\n\n<span class=\"hi_custom\">7 Cabal Points</span>\n\nThough it is always perilous to make deals with the entities of the warp, the support of one’s cabal ameliorates the risks somewhat.Use this Cabbalistic Ritual when attempting to [manifest a psychic power](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) with a unit from your army. Do not make a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests): that Psychic test is passed at the minimum required warp charge value.\n\n\n\nCABBALISTIC FOCUS**\n\n<span class=\"hi_custom\">8 Cabal Points</span>\n\nWith the champions of the cabal incanting as one, their sorceries become an unstoppable tidal wave.Use this Cabbalistic Ritual after a Psychic test made for a unit from your army is passed. That psychic power or [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions) cannot be [denied](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch).\n\n\n\nPSYCHIC MAELSTROM**\n\n<span class=\"hi_custom\">8 Cabal Points</span>\n\nBy establishing a recursive temporal loop, the cabal are able to lash the enemy with the same terrible moment of loss over and over again.Use this Cabbalistic Ritual when a unit from your army is selected to manifest psychic powers. Until the end of the phase, that unit can attempt to manifest one Witchfire psychic power that another PSYKER** in your army has already attempted to manifest during the phase, even though the same psychic power cannot normally be attempted more than once per Psychic phase, and even if that unit does not know that psychic power.\n\n\n\nWRATH OF THE IMMATERIUM**\n\n<span class=\"hi_custom\">9 Cabal Points</span>\n\nSuch is the aura of latent energy roiling at the cabal’s command, it is as though the daemons of the warp lend their own unnatural power to the champions’ conjurations.Use this Cabbalistic Ritual after taking a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) for a unit from your army. Add 2 to that Psychic test.</div>"
+        "text": "<div class=\"BreakInsideAvoid\">If every unit from your army (excluding **UNALIGNED** units) has the THOUSAND** SONS** keyword, your army becomes a Cabal of Sorcerers. At the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), if your army is a Cabal of Sorcerers, generate Cabal points for your army for each model with this ability that is on the battlefield:\n\n\n\n<div class=\"BreakInsideAvoid\"  style=\"\"\"><table width=\"0\" border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable tablefont\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:1px 0 0 1px;background-color:rgb(16,16,16);color:rgb(254,254,254);vertical-align:middle;font-size:22px;width:400px;height:0px;\">MODEL**</td><td style=\"border-width:1px 1px 0 0;background-color:rgb(16,16,16);color:rgb(254,254,254);text-align:center;vertical-align:middle;font-size:22px;width:200px;height:0px;\">CABAL POINTS**</td></tr><tr><td style=\"border-width:0 0 0 1px;text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Magnus the Red](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Magnus-the-Red)</td><td style=\"border-width:0 1px 0 0;text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">4**</td></tr><tr><td style=\"border-width:0 0 0 1px;background-color:var(--row-bg);text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Ahriman](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Ahriman), [Exalted Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Exalted-Sorcerer) and [Thousand Sons Daemon Prince](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Thousand-Sons-Daemon-Prince)</td><td style=\"border-width:0 1px 0 0;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">3**</td></tr><tr><td style=\"border-width:0 0 0 1px;text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Sorcerer), [Sorcerer in Terminator Armour](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Sorcerer-in-Terminator-Armour) and [Infernal Master](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Infernal-Master)</td><td style=\"border-width:0 1px 0 0;text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">2**</td></tr><tr><td style=\"border-width:0 0 1px 1px;background-color:var(--row-bg);text-align:left;vertical-align:middle;font-size:18px;width:400px;height:0px;\">[Scarab Occult Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Scarab-Occult-Terminators), [Aspiring Sorcerer](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Rubric-Marines) and [Tzaangor Shaman](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/Tzaangor-Shaman)</td><td style=\"border-width:0 1px 1px 0;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:200px;height:0px;\">1**</td></tr></tbody></table></td></tr></tbody></table>\n\n</div>In your Psychic phase, you can spend any Cabal points you have to use Cabbalistic Rituals from the list below. Each time you do, reduce the total amount of Cabal points you have by the amount shown. At the end of your Psychic phase, any unspent Cabal points are lost.\n\n\n\nIn your Psychic phase, unless otherwise specified, you can use each Cabbalistic Ritual once, and each unit from your army can only benefit from one Cabbalistic Ritual. A unit can only benefit from a Cabbalistic Ritual if it has this ability.\n\n\n\nNote that when a Cabbalistic Ritual specifies a ‘unit from your army’ with regard to when it can be used (e.g. ‘when a unit from your army is selected to manifest psychic powers’), that Cabbalistic Ritual can only be used if that unit has the **THOUSAND SONS** keyword.</div>\n\nIMBUED MANIFESTATION**\n\n<span class=\"hi_custom\">4 Cabal Points</span>\n\nLike flame leaping along a trail of spilled promethium, the Thousand Sons’ magicks feed upon the latent energies clouding the air and race hungrily away through them towards the foe.Use this Cabbalistic Ritual when a psychic power is successfully [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by a unit from your army. Add 6″ to the range of that psychic power’s effects (if that psychic power specifies multiple ranges, e.g. *Astral Blast*, add 6″ to the first range specified in that psychic power).\n\n\n\nMALEVOLENT CHARGE**\n\n<span class=\"hi_custom\">4 Cabal Points</span>\n\nThe malefic energies of dark sorcery flow together in ever more lethal concentrations into fiery, mutating storms.Use this Cabbalistic Ritual when a psychic power is successfully manifested by a unit from your army. If the psychic power inflicts [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on enemy units, after inflicting the mortal wounds select one of those units and inflict D3 additional mortal wounds on that unit.\n\n\n\nKINDRED SORCERERS**\n\n<span class=\"hi_custom\">5 Cabal Points</span>\n\nFor an instant, the chanting voices of the Thousand Sons’ champions achieve perfect synchronisation, words of malign incantation rolling out like the peal of some cursed bell.Use this Cabbalistic Ritual after taking a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) for a unit from your army. Add 1 to that Psychic test.\n\n\n\nWARP SIGHT**\n\n<span class=\"hi_custom\">3 Cabal Points</span>\n\nWith their tainted souls melded as one amidst the empyrean, what one champion of the cabal sees, all their fellows see also.Use this Cabbalistic Ritual when a psychic power is successfully manifested by a unit from your army. If the psychic power requires you to select a unit visible to the PSYKER**, for that manifestation you can select a unit visible to any friendly unit with the Cabbalistic Rituals ability.\n\n\n\nECHOES FROM THE WARP**\n\n<span class=\"hi_custom\">4 Cabal Points</span>\n\nPlucked from amidst the howling winds of the immaterium and the gibbering of countless damned voices come whispers of invaluable daemonic prophecy.Use this Cabbalistic Ritual in your Psychic phase. Select one PSYKER** unit from your army. Until the end of the phase, that unit can perform the following [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions): Echoes From the Warp (Psychic Action - Warp Charge 3):** If successful, gain 1 [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points).\n\n\n\n<div class=\"BreakInsideAvoid\">PACT FROM BEYOND**\n\n<span class=\"hi_custom\">7 Cabal Points</span>\n\nThough it is always perilous to make deals with the entities of the warp, the support of one’s cabal ameliorates the risks somewhat.Use this Cabbalistic Ritual when attempting to [manifest a psychic power](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) with a unit from your army. Do not make a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests): that Psychic test is passed at the minimum required warp charge value.\n\n\n\nCABBALISTIC FOCUS**\n\n<span class=\"hi_custom\">8 Cabal Points</span>\n\nWith the champions of the cabal incanting as one, their sorceries become an unstoppable tidal wave.Use this Cabbalistic Ritual after a Psychic test made for a unit from your army is passed. That psychic power or [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions) cannot be [denied](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch).\n\n\n\nPSYCHIC MAELSTROM**\n\n<span class=\"hi_custom\">8 Cabal Points</span>\n\nBy establishing a recursive temporal loop, the cabal are able to lash the enemy with the same terrible moment of loss over and over again.Use this Cabbalistic Ritual when a unit from your army is selected to manifest psychic powers. Until the end of the phase, that unit can attempt to manifest one Witchfire psychic power that another PSYKER** in your army has already attempted to manifest during the phase, even though the same psychic power cannot normally be attempted more than once per Psychic phase, and even if that unit does not know that psychic power.\n\n\n\nWRATH OF THE IMMATERIUM**\n\n<span class=\"hi_custom\">9 Cabal Points</span>\n\nSuch is the aura of latent energy roiling at the cabal’s command, it is as though the daemons of the warp lend their own unnatural power to the champions’ conjurations.Use this Cabbalistic Ritual after taking a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) for a unit from your army. Add 2 to that Psychic test.</div>"
       },
       "Ability§Chosen of Tzeentch": {
         "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
@@ -241,7 +238,7 @@
         "text": "If this model is equipped with 2 decimator claws, each time it fights, it makes one additional attack with 1 decimator claw."
       },
       "Ability§Drop Pod Assault": {
-        "text": "During deployment, you must set up this unit high in the skies instead of setting it up on the battlefield, but neither it, nor any units embarked within it, are counted towards any limits that the mission you are playing places on the maximum number of [Reinforcement units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Reinforcement-Units) you can have in your army. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your first, second or third [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), regardless of any mission rules, you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models. Any units embarked within this transport can immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) after it has been set up on the battlefield for the first time, and if they do so, they must be set up more than 9″ away from any enemy models."
+        "text": "During deployment, you must set up this unit high in the skies instead of setting it up on the battlefield, but neither it, nor any units embarked within it, are counted towards any limits that the mission you are playing places on the maximum number of [Reinforcement units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) you can have in your army. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your first, second or third [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), regardless of any mission rules, you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models. Any units embarked within this transport can immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) after it has been set up on the battlefield for the first time, and if they do so, they must be set up more than 9″ away from any enemy models."
       },
       "Ability§Explodes": {
         "text": "When this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers 2D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers 2D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play and before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark). On a 6 it explodes, and each unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within D6+6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n\n\n***Designers Note:** If this model does not have a base, before deploying this model, both players must agree the footprint of this model’s ‘base’ in the same way they would for an [Area Terrain](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Area-Terrain) feature. We suggest that an imaginary straight line should be drawn from each point on this model which would touch the battlefield when it is placed on a flat surface. The area within these lines should be considered to be this model’s ‘base’.\n\n\n\nIf the model has been posed with one or more of its legs raised, agree with your opponent the point where that leg would touch the battlefield, and use this to advise the shape of the models ‘base’.*\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
@@ -272,9 +269,6 @@
       },
       "Ability§Hellforged Atomantic Shielding": {
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
-      },
-      "Ability§Herd banner": {
-        "text": "Each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for the bearer’s unit, you can re-roll that test."
       },
       "Ability§Hover Jet": {
         "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model can hover. If it does, then until the start of your next Command phase, its Move characteristic becomes 20″ and it loses the **Airborne**, Hard to Hit** and Supersonic** abilities.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model can hover. If it does, then until the start of your next Command phase, its Move characteristic becomes 20″ and it loses the **Airborne Predator**, Hard to Hit** and Supersonic** abilities."
@@ -524,7 +518,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -546,8 +540,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Rhino is equipped with: inferno combi-bolter.\n\n• This model can be equipped with one of the following: 1 inferno combi-bolter; 1 inferno combi-flamer; 1 inferno combi-melta.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -678,7 +671,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Dedicated Transport§Chaos Terrax-pattern Termite": {
@@ -973,8 +966,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Subterranean Assault",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Terrax-pattern Termite is equipped with: Terrax melta cutter; 2 Terrax combi-bolters; Termite drill.\n\n• This model’s 2 Terrax combi-bolters can be replaced with one of the following: 2 Terrax heavy flamers; 2 twin Terrax volkite chargers.\n\nnull",
@@ -1560,8 +1552,7 @@
             "Ability§Martial Legacy",
             "Ability§Relentless Hatred",
             "Ability§Hellforged Atomantic Shielding",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Contemptor Dreadnought is equipped with: 2 hellforged heavy plasma cannons.\n\n• Each of this model’s hellforged heavy plasma cannons can be replaced with one of the following: 1 conversion beam cannon; 1 hellforged kheres-pattern assault cannon; 1 multi-melta; 1 twin hellforged autocannon; 1 twin heavy bolter; 1 twin lascannon; 1 twin volkite culverin; 1 hellforged Dreadnought chainfist and 1 combi-bolter; 1 hellforged Dreadnought combat weapon and 1 combi-bolter.\n\n• Each of this model’s combi-bolters can be replaced with one of the following: 1 graviton blaster; 1 heavy flamer; 1 hellforged plasma blaster.\n\n• This model can be equipped with 1 hellforged cyclone missile launcher.\n\nnull",
@@ -1903,8 +1894,7 @@
             "Ability§Martial Legacy",
             "Ability§Relentless Hatred",
             "Ability§Hellforged Atomantic Shielding",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Deredeo Dreadnought is equipped with: anvillus autocannon battery; twin heavy bolter.\n\n• This model’s anvillus autocannon battery can be replaced with one of the following: 1 arachnus heavy lascannon battery; 1 hellfire plasma carronade; 1 volkite falconet battery.\n\n• This model’s twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 aiolos missile launcher; boreas air defence missiles.\n\nnull",
@@ -2396,8 +2386,7 @@
             "Ability§Martial Legacy",
             "Ability§Relentless Hatred",
             "Ability§Hellforged Atomantic Shielding",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Leviathan Dreadnought is equipped with: 2 heavy flamers; 2 grav-flux bombards.\n\n• Each of this model’s grav-flux bombards can be replaced with one of the following: 1 cyclonic melta lance; 1 storm cannon; 1 meltagun and 1 Leviathan siege claw; 1 meltagun and 1 Leviathan siege drill.\n\n• This model’s 2 heavy flamers can be replaced with 2 twin volkite calivers.\n\n• This model can be equipped with 3 hellforged hunter-killer missiles.\n\nnull",
@@ -2731,8 +2720,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Daemon Engine",
             "Ability§Decimator claws",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Decimator is equipped with 2 Decimator butcher cannons.\n\n• Each of this model's Decimator butcher cannons can be replaced with one of the following: Decimator conversion beamer; soulburner petard; storm laser; 1 hellflamer and 1 Decimator claw.\n\nnull",
@@ -2931,7 +2919,7 @@
                       "item": "Weapon§Heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 0
                         }
                       }
                     }
@@ -2978,7 +2966,7 @@
                       "item": "Weapon§Multi-melta",
                       "stats": {
                         "Points": {
-                          "value": 5
+                          "value": 0
                         }
                       }
                     }
@@ -3005,14 +2993,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -3024,7 +3005,7 @@
                       "item": "Weapon§Twin lascannon",
                       "stats": {
                         "Points": {
-                          "value": 20
+                          "value": 10
                         }
                       }
                     }
@@ -3062,7 +3043,7 @@
                       "item": "Weapon§Heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 0
                         }
                       }
                     }
@@ -3109,7 +3090,7 @@
                       "item": "Weapon§Multi-melta",
                       "stats": {
                         "Points": {
-                          "value": 5
+                          "value": 0
                         }
                       }
                     }
@@ -3136,14 +3117,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -3155,7 +3129,7 @@
                       "item": "Weapon§Twin lascannon",
                       "stats": {
                         "Points": {
-                          "value": 20
+                          "value": 10
                         }
                       }
                     }
@@ -3193,7 +3167,7 @@
                       "item": "Weapon§Heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 0
                         }
                       }
                     }
@@ -3240,7 +3214,7 @@
                       "item": "Weapon§Multi-melta",
                       "stats": {
                         "Points": {
-                          "value": 5
+                          "value": 0
                         }
                       }
                     }
@@ -3267,14 +3241,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -3286,7 +3253,7 @@
                       "item": "Weapon§Twin lascannon",
                       "stats": {
                         "Points": {
-                          "value": 20
+                          "value": 10
                         }
                       }
                     }
@@ -3300,7 +3267,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3323,13 +3290,12 @@
           "traits": [
             "Ability§Monstrous Resilience",
             "Ability§Explodes",
-            "Ability§Frenzy",
-            "Ability§Armour of Contempt"
+            "Ability§Frenzy"
           ]
         },
         "text": "A Helbrute is equipped with: missile launcher; twin heavy bolter.\n\n• This model’s twin heavy bolter can be replaced with one of the following: 1 Helbrute plasma cannon; 1 multi-melta; 1 reaper autocannon; 1 twin lascannon; 1 Helbrute fist.\n\n• This model’s missile launcher can be replaced with one of the following: 1 Helbrute fist; 1 Helbrute hammer; 1 power scourge.\n\n• For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 heavy flamer; 1 inferno combi-bolter. That Helbrute fist cannot then be replaced.\n\nnull",
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Elites§Scarab Occult Terminators": {
@@ -3362,7 +3328,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3392,7 +3358,6 @@
             "Ability§Terminator Armour",
             "Ability§Arcane Automata",
             "Ability§All Is Dust",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Scarab Occult Terminator",
@@ -3408,7 +3373,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Elites§Tzaangor Shaman": {
@@ -3454,7 +3419,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 70
+            "value": 60
           },
           "M": {
             "value": 12
@@ -3613,7 +3578,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3641,7 +3606,7 @@
         },
         "text": "A Tzaangor Shaman is equipped with: disc blades; force stave; Disc of Tzeentch.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Discipline of Change](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Discipline-of-Change)**.",
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Fast Attack§Chaos Spawn": {
@@ -3683,7 +3648,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -3704,7 +3669,6 @@
           "traits": [
             "Ability§Fearsome (Aura)",
             "Ability§Mutated Beyond Reason",
-            "Ability§Armour of Contempt",
             "Model§Chaos Spawn"
           ]
         },
@@ -3715,7 +3679,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Fast Attack§Dreadclaw Drop Pod": {
@@ -3890,8 +3854,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Drop Pod Assault",
             "Ability§Hover Transport",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Dreadclaw Drop Pod is equipped with: blade struts; thermal jets.\n\n\n\nnull",
@@ -3966,7 +3929,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -4000,7 +3963,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Flyers§Chaos Fire Raptor Gunship": {
@@ -4357,8 +4320,7 @@
             "Ability§Hard to Hit",
             "Ability§Supersonic",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Fire Raptor Gunship is equipped with: twin avenger bolt cannon; 2 twin hellforged autocannons; 2 twin hellstrike launchers.\n\n• This model’s 2 twin hellstrike launchers can be replaced with 2 twin lascannons.\n\n• This model’s 2 twin hellforged autocannons can be replaced with 2 quad heavy bolters.\n\nnull",
@@ -4851,8 +4813,7 @@
             "Ability§Hard to Hit",
             "Ability§Supersonic",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Storm Eagle Gunship is equipped with: twin heavy bolter; 2 twin hellstrike launchers; vengeance launcher.\n\n• This model’s twin heavy bolter can be replaced with one of the following: 1 Storm Eagle multi-melta; 1 hellforged typhoon missile launcher.\n\n• This model’s 2 twin hellstrike launchers can be replaced with 2 twin lascannons.\n\nnull",
@@ -5156,8 +5117,7 @@
             "Ability§Airborne",
             "Ability§Hard to Hit",
             "Ability§Supersonic",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Xiphon Interceptor is equipped with: 2 twin lascannons; Xiphon missile battery.\n\n\n\nnull",
@@ -5457,7 +5417,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -5487,8 +5447,7 @@
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
             "Ability§Infernal Regeneration",
-            "Ability§Hunter in the Skies",
-            "Ability§Armour of Contempt"
+            "Ability§Hunter in the Skies"
           ]
         },
         "text": "A Heldrake is equipped with: hades autocannon; Heldrake claws.\n\n• This model’s hades autocannon can be replaced with 1 baleflamer.\n\nnull",
@@ -5619,7 +5578,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Flyers§Hell Blade": {
@@ -5766,8 +5725,7 @@
             "Ability§Hard to Hit",
             "Ability§Baleful Aberration",
             "Ability§Explodes",
-            "Ability§Supersonic",
-            "Ability§Armour of Contempt"
+            "Ability§Supersonic"
           ]
         },
         "text": "A Hell Blade is equipped with: 2 twin autocannons.\n\n• This model’s 2 twin autocannons can be replaced with 2 lascannons.\n\nnull",
@@ -5881,14 +5839,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -5927,14 +5878,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -5973,14 +5917,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -6019,14 +5956,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -6072,8 +6002,7 @@
             "Ability§Airborne",
             "Ability§Supersonic",
             "Ability§Hard to Hit",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Hell Talon is equipped with: Havoc autocannon; 2 infernal bombs; twin lascannon.\n\n• This model’s Havoc autocannon can be replaced with 1 havoc launcher.\n\nnull",
@@ -6453,8 +6382,7 @@
         "assets": {
           "traits": [
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Deimos Predator is equipped with: plasma destroyer.\n\n• This model’s plasma destroyer can be replaced with one of the following: 1 conversion beam cannon; 1 infernus cannon; 1 magna-melta cannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 heavy flamers; 2 lascannons.\n\n• This model can be equipped with 1 combi-bolter.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\nnull",
@@ -6826,7 +6754,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -6849,8 +6777,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Land Raider is equipped with: twin heavy bolter; 2 twin lascannons.\n\n• This model can be equipped with one of the following: 1 inferno combi-bolter; 1 inferno combi-flamer; 1 inferno combi-melta.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -6981,7 +6908,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Chaos Land Raider Achilles": {
@@ -7223,8 +7150,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Inviolate Armour",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Land Raider Achilles is equipped with: quad launcher; 2 twin hellforged multi-meltas.\n\n• This model’s 2 twin helIforged multi-meltas can be replaced with 2 twin volkite culverins.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -7691,8 +7617,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Land Raider Proteus is equipped with: 2 twin lascannons.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 multi-melta; 1 twin heavy bolter; 1 twin heavy flamer.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\n• This model can be equipped with one of the following: 1 explorator augury web; 1 heavy armour.\n\nnull",
@@ -7911,7 +7836,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7927,7 +7859,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7982,7 +7921,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -7998,7 +7944,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8017,7 +7970,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -8038,8 +7991,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Predator Annihilator is equipped with: twin lascannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with one of the following: 1 inferno combi-bolter; 1 inferno combi-flamer; 1 inferno combi-melta.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -8170,7 +8122,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Chaos Predator Destructor": {
@@ -8258,7 +8210,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8274,7 +8233,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8329,7 +8295,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8345,7 +8318,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8364,7 +8344,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -8385,8 +8365,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Predator Destructor is equipped with: Predator autocannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with one of the following: 1 inferno combi-bolter; 1 inferno combi-flamer; 1 inferno combi-melta.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -8517,7 +8496,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Chaos Rapier Carrier": {
@@ -8790,8 +8769,7 @@
         "assets": {
           "traits": [
             "Ability§Let the Galaxy Burn",
-            "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt"
+            "Ability§Artillery and Crew"
           ]
         },
         "text": "A Chaos Rapier Carrier is equipped with: boltgun; quad heavy bolter. A Chaos Rapier Carrier unit has 1 separate Chaos Space Marine crew model.\n\n• The Chaos Rapier Carrier's quad heavy bolter can be replaced with one of the following: 1 graviton cannon; 1 laser destroyer; 1 quad launcher.\n\nnull",
@@ -9038,8 +9016,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Sicaran Battle Tank is equipped with: heavy bolter; Herakles-pattern autocannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -9412,8 +9389,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Sicaran Punisher is equipped with: heavy bolter; punisher rotary cannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -9786,8 +9762,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Sicaran Venator is equipped with: heavy bolter; Sicaran laser cannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -10012,7 +9987,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Wargear§Inferno combi-flamer"
+                    "trait": {
+                      "item": "Wargear§Inferno combi-flamer",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10020,7 +10002,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Wargear§Inferno combi-melta"
+                    "trait": {
+                      "item": "Wargear§Inferno combi-melta",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10036,7 +10025,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Havoc launcher"
+                    "trait": {
+                      "item": "Weapon§Havoc launcher",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10044,7 +10040,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Inferno combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Inferno combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -10067,7 +10070,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Wargear§Inferno combi-flamer"
+                    "trait": {
+                      "item": "Wargear§Inferno combi-flamer",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10075,7 +10085,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Wargear§Inferno combi-melta"
+                    "trait": {
+                      "item": "Wargear§Inferno combi-melta",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10091,7 +10108,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Havoc launcher"
+                    "trait": {
+                      "item": "Weapon§Havoc launcher",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10099,7 +10123,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Inferno combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Inferno combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -10110,7 +10141,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -10131,8 +10162,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Vindicator is equipped with: demolisher cannon.\n\n• This model can be equipped with one of the following: 1 inferno combi-bolter; 1 inferno combi-flamer; 1 inferno combi-melta.\n\n• This model can be equipped with 1 havoc launcher.\n\n• This model can be equipped with 1 Vindicator siege shield.\n\nnull",
@@ -10263,7 +10293,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Chaos Vindicator Laser Destroyer": {
@@ -10475,8 +10505,7 @@
         "assets": {
           "traits": [
             "Ability§Let the Galaxy Burn",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Vindicator Laser Destroyer is equipped with: combi-bolter; laser volley cannon.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\nnull",
@@ -10761,8 +10790,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Whirlwind Scorpius is equipped with: Scorpius multi-launcher.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -10902,7 +10930,7 @@
             "value": 10
           },
           "Points": {
-            "value": 165
+            "value": 175
           },
           "M": {
             "value": 8
@@ -10997,14 +11025,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -11028,14 +11049,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -11047,7 +11061,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -11058,14 +11072,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -11128,14 +11135,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -11159,14 +11159,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -11178,7 +11171,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -11189,14 +11182,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -11259,14 +11245,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -11290,14 +11269,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -11309,7 +11281,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -11320,14 +11292,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -11390,14 +11355,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -11421,14 +11379,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -11440,7 +11391,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -11451,14 +11402,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -11521,14 +11465,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -11552,14 +11489,7 @@
                 "order": 9,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -11571,7 +11501,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -11582,14 +11512,7 @@
                 "order": 11,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -11600,7 +11523,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -11624,8 +11547,7 @@
           "traits": [
             "Ability§Daemonic",
             "Ability§Infernal Regeneration",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Defiler is equipped with: Defiler cannon; reaper autocannon; twin heavy flamer; Defiler claws.\n\n• This model’s twin heavy flamer can be replaced with one of the following: 1 havoc launcher; 1 Defiler scourge.\n\n• This model’s reaper autocannon can be replaced with one of the following: 1 twin heavy bolter; 1 twin lascannon.\n\n• This model can be equipped with one of the following: 1 inferno combi-bolter; 1 inferno combi-flamer; 1 inferno combi-melta.\n\nnull",
@@ -11756,7 +11678,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Forgefiend": {
@@ -11925,7 +11847,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -11948,8 +11870,7 @@
           "traits": [
             "Ability§Daemonic",
             "Ability§Infernal Regeneration",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Forgefiend is equipped with: 2 heavy hades autocannons; Forgefiend jaws.\n\n• This model’s 2 heavy hades autocannons can be replaced with 2 ectoplasma cannons.\n\n• This model’s Forgefiend jaws can be replaced with 1 ectoplasma cannon.\n\nnull",
@@ -12080,7 +12001,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Maulerfiend": {
@@ -12249,7 +12170,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -12273,8 +12194,7 @@
             "Ability§Daemonic",
             "Ability§Explodes",
             "Ability§Infernal Regeneration",
-            "Ability§Siege Crawler",
-            "Ability§Armour of Contempt"
+            "Ability§Siege Crawler"
           ]
         },
         "text": "A Maulerfiend is equipped with: magma cutters; Maulerfiend fists.\n\n• This model’s magma cutters can be replaced with lasher tendrils.\n\nnull",
@@ -12405,7 +12325,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Heavy Support§Mutalith Vortex Beast": {
@@ -12414,7 +12334,7 @@
             "value": 7
           },
           "Points": {
-            "value": 145
+            "value": 130
           },
           "M": {
             "value": 10
@@ -12550,7 +12470,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -12572,8 +12492,7 @@
             "Ability§Aura of Dark Glory",
             "Ability§Mutant Regeneration",
             "Ability§Warp Explosion",
-            "Ability§Warp Vortex",
-            "Ability§Armour of Contempt"
+            "Ability§Warp Vortex"
           ]
         },
         "text": "A Mutalith Vortex Beast is equipped with: betentacled maw; Mutalith claws.\n\n\n\nnull",
@@ -12704,7 +12623,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "HQ§Ahriman": {
@@ -13060,7 +12979,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -13088,7 +13007,6 @@
             "Ability§Lord of the Thousand Sons (Aura)",
             "Ability§Arch-Sorcerer of Tzeentch",
             "Ability§Sigil of Corruption",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -13099,7 +13017,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "HQ§Exalted Sorcerer": {
@@ -13192,14 +13110,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -13247,14 +13158,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Prosperine khopesh",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Prosperine khopesh"
                   }
                 ]
               },
@@ -13262,14 +13166,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -13292,14 +13189,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -13347,14 +13237,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Prosperine khopesh",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Prosperine khopesh"
                   }
                 ]
               },
@@ -13362,14 +13245,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -13392,14 +13268,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -13447,14 +13316,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Prosperine khopesh",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Prosperine khopesh"
                   }
                 ]
               },
@@ -13462,14 +13324,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -13492,14 +13347,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -13547,14 +13395,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Prosperine khopesh",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Prosperine khopesh"
                   }
                 ]
               },
@@ -13562,14 +13403,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -13592,14 +13426,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -13647,14 +13474,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Prosperine khopesh",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Prosperine khopesh"
                   }
                 ]
               },
@@ -13662,14 +13482,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -13680,7 +13493,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -13707,7 +13520,6 @@
             "Ability§Cabbalistic Rituals",
             "Ability§Sigil of Corruption",
             "Ability§Lord of the Thousand Sons (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -13718,7 +13530,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "HQ§Infernal Master": {
@@ -13997,7 +13809,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -14020,13 +13832,12 @@
         "assets": {
           "traits": [
             "Ability§Cabbalistic Rituals",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
         "text": "An Infernal Master is equipped with: inferno bolt pistol; force stave; frag grenades; krak grenades.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Discipline of Change](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Discipline-of-Change)** or the [Discipline of Vengeance](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Discipline-of-Vengeance)**.",
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "HQ§Sorcerer": {
@@ -14082,14 +13893,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -14137,14 +13941,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -14167,14 +13964,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -14222,14 +14012,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -14252,14 +14035,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -14307,14 +14083,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -14337,14 +14106,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -14392,14 +14154,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -14422,14 +14177,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Plasma pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Plasma pistol"
                   }
                 ]
               },
@@ -14477,14 +14225,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Warpflame pistol",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Warpflame pistol"
                   }
                 ]
               }
@@ -14495,7 +14236,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -14519,7 +14260,6 @@
           "traits": [
             "Ability§Cabbalistic Rituals",
             "Ability§Thrall",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -14550,7 +14290,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "HQ§Sorcerer (Legendary)": {
@@ -14619,7 +14359,6 @@
             "Ability§Jump Pack Assault",
             "Ability§Hateful Assault",
             "Ability§Malicious Volleys",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -14706,14 +14445,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Inferno combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Inferno combi-melta"
                   }
                 ]
               },
@@ -14737,14 +14469,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -14775,14 +14500,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Inferno combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Inferno combi-melta"
                   }
                 ]
               },
@@ -14806,14 +14524,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -14844,14 +14555,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Inferno combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Inferno combi-melta"
                   }
                 ]
               },
@@ -14875,14 +14579,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -14901,7 +14598,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -14929,7 +14626,6 @@
             "Ability§Teleport Strike",
             "Ability§Terminator Armour",
             "Ability§Thrall",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -14960,7 +14656,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "HQ§Sorcerer in Terminator Armour (Legendary)": {
@@ -15031,7 +14727,6 @@
             "Ability§Teleport Strike",
             "Ability§Hateful Assault",
             "Ability§Malicious Volleys",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -15132,7 +14827,6 @@
             "Ability§Favour of Tzeentch",
             "Ability§Hateful Assault",
             "Ability§Malicious Volleys",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -15217,7 +14911,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -15244,7 +14938,6 @@
             "Ability§Cabbalistic Rituals",
             "Ability§Chosen of Tzeentch",
             "Ability§Lord of the Thousand Sons (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -15255,7 +14948,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Lords of War§Chaos Cerberus": {
@@ -15545,8 +15238,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Unstable Reactor",
-            "Ability§Armour of Contempt"
+            "Ability§Unstable Reactor"
           ]
         },
         "text": "A Chaos Cerberus is equipped with: Cerberus neutron pulse array; crushing tracks.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -16229,8 +15921,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Falchion is equipped with: 2 quad lascannons; twin heavy bolter; twin Falchion volcano cannon; crushing tracks.\n\n• This model's 2 quad lascannons can be replaced with 2 laser destroyers.\n\n• This model's twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -17056,8 +16747,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Fellblade is equipped with: demolisher siege cannon; Fellblade accelerator cannon; 2 quad lascannons; twin heavy bolter; crushing tracks.\n\n• This model's 2 quad lascannons can be replaced with 2 laser destroyers.\n\n• This model’s twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -17681,8 +17371,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
             "Ability§Explodes",
-            "Ability§Void Shields",
-            "Ability§Armour of Contempt"
+            "Ability§Void Shields"
           ]
         },
         "text": "A Chaos Mastodon is equipped with: 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; crushing tracks.\n\n\n\nnull",
@@ -18054,8 +17743,7 @@
             "Ability§Supersonic",
             "Ability§Hover Jet",
             "Ability§Explodes",
-            "Ability§Void Shields",
-            "Ability§Armour of Contempt"
+            "Ability§Void Shields"
           ]
         },
         "text": "A Chaos Sokar-pattern Stormbird is equipped with: hellstrike missile battery; 3 twin heavy bolters; 4 twin lascannons.\n\n\n\nnull",
@@ -18640,8 +18328,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Spartan is equipped with: 2 quad lascannons; twin heavy bolter; crushing tracks.\n\n• This model's 2 quad lascannons can be replaced with 2 laser destroyers.\n\n• This model's twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -19201,8 +18888,7 @@
             "Ability§Hard to Hit",
             "Ability§Supersonic",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Thunderhawk Gunship is equipped with: 2 lascannons; Thunderhawk heavy cannon; 4 twin heavy bolters; Thunderhawk cluster bombs.\n\n• This model’s Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor.\n\n• This model’s Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery.\n\nnull",
@@ -19623,8 +19309,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Typhon is equipped with: dreadhammer siege cannon; crushing tracks.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -20065,8 +19750,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Drop Pod Assault",
             "Ability§Hover Transport",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Kharybdis Assault Claw is equipped with: 5 Kharybdis storm launchers; blade struts; melta array; thermal jet array.\n\n\n\nnull",
@@ -20295,7 +19979,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -20327,7 +20011,6 @@
             "Ability§Crown of the Crimson King",
             "Ability§Gaze of Magnus",
             "Ability§Unearthly Power",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -20464,7 +20147,7 @@
           }
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Model§Aspiring Sorcerer": {
@@ -20977,7 +20660,7 @@
       "Model§Chaos Spawn": {
         "stats": {
           "Points": {
-            "value": 23
+            "value": 21
           },
           "M": {
             "value": 7
@@ -21567,14 +21250,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -21637,14 +21313,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -21707,14 +21376,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -21814,14 +21476,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -21884,14 +21539,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -21954,14 +21602,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Inferno combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Inferno combi-bolter"
                   }
                 ]
               },
@@ -22061,14 +21702,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flamer"
                   }
                 ]
               },
@@ -22131,14 +21765,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flamer"
                   }
                 ]
               },
@@ -22238,14 +21865,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flamer"
                   }
                 ]
               },
@@ -22308,14 +21928,7 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flamer"
                   }
                 ]
               },
@@ -23073,7 +22686,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -23100,7 +22713,6 @@
             "Ability§Sorcerous Master",
             "Ability§Arcane Automata",
             "Ability§All Is Dust",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite",
             {
               "item": "Model§Rubric Marine",
@@ -23116,7 +22728,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Troops§Thousand Sons Cultists": {
@@ -23152,7 +22764,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -23183,7 +22795,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Troops§Tzaangors": {
@@ -23216,7 +22828,51 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Brayhorn"
+                    "trait": {
+                      "item": "Wargear§Brayhorn",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "Herd banner": {
+            "value": 0,
+            "statType": "rank",
+            "statOrder": 10,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "0": {
+                "order": 0,
+                "number": 0,
+                "icons": [
+                  "cancel"
+                ]
+              },
+              "1": {
+                "order": 1,
+                "number": 1,
+                "icons": [
+                  "confirmed"
+                ],
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Wargear§Herd banner",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -23246,7 +22902,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Thousand Sons—Indomitus 1.1"
+            "Codex—Thousand Sons—Indomitus 1.2"
           ],
           "Edition": [
             "9th"
@@ -23264,7 +22920,6 @@
         },
         "assets": {
           "traits": [
-            "Ability§Herd banner",
             {
               "item": "Model§Tzaangor",
               "quantity": 9
@@ -23279,16 +22934,11 @@
           ]
         },
         "meta": {
-          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/eBNLlgiaUtiWZCn2.pdf)"
+          "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
       },
       "Wargear§Brayhorn": {
-        "text": "Add 1 to [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for the bearer’s unit.",
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        }
+        "text": "Add 1 to [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for the bearer’s unit."
       },
       "Wargear§Conversion beam cannon": {
         "assets": {
@@ -23390,6 +23040,9 @@
           ]
         }
       },
+      "Wargear§Herd banner": {
+        "text": "Each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for the bearer’s unit, you can re-roll that test."
+      },
       "Wargear§Icon of Flame": {
         "text": "At the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), if your army is a **Cabal of** Sorcerers** and the bearer is on the battlefield, you generate 1 additional Cabal point."
       },
@@ -23402,11 +23055,6 @@
             "Weapon§Inferno boltgun",
             "Weapon§Flamer"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Inferno combi-melta": {
@@ -23415,11 +23063,6 @@
             "Weapon§Inferno boltgun",
             "Weapon§Meltagun"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Kharybdis storm launcher": {
@@ -24052,9 +23695,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 10
           }
         },
         "text": "Each time the bearer fights, it makes 3 additional attacks with this weapon."
@@ -24454,9 +24094,6 @@
           },
           "Range": {
             "value": "48″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
@@ -24564,9 +24201,6 @@
           },
           "Range": {
             "value": "36″"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
@@ -24936,9 +24570,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },

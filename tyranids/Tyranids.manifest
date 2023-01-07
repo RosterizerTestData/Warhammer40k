@@ -1,11 +1,11 @@
 {
   "name": "Tyranids",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -193,7 +193,7 @@
         }
       },
       "Ability§Aerial Seeding": {
-        "text": "During deployment, this unit must be set up high in the skies instead of setting it up on the battlefield, neither it, nor any units embarked within it, are counted towards any limits that the mission you are playing places on the maximum number of [Reinforcement units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Reinforcement-Units) you can have in your army. This [**TRANSPORT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports) model can be set up in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your first, second or third [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), regardless of any mission rules, anywhere on the battlefield that is more than 9″ away from any enemy models. Any units embarked within this TRANSPORT** model must immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) after it has been set up on the battlefield, and they must be set up more than 9″ away from any enemy models. After this TRANSPORT** model has been set up on the battlefield, no units can embark within it."
+        "text": "During deployment, this unit must be set up high in the skies instead of setting it up on the battlefield, neither it, nor any units embarked within it, are counted towards any limits that the mission you are playing places on the maximum number of [Reinforcement units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) you can have in your army. This [**TRANSPORT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports) model can be set up in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your first, second or third [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), regardless of any mission rules, anywhere on the battlefield that is more than 9″ away from any enemy models. Any units embarked within this TRANSPORT** model must immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) after it has been set up on the battlefield, and they must be set up more than 9″ away from any enemy models. After this TRANSPORT** model has been set up on the battlefield, no units can embark within it."
       },
       "Ability§Airborne": {
         "text": "You cannot [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) with this model, and it can only be chosen as a target of a charge if the unit making the charge can [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying). You can only fight with this model if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units that can FLY**, and this model can only make melee attacks against units that can FLY**. Enemy units can only make melee attacks against this model if they can FLY**."
@@ -508,10 +508,10 @@
         "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model regenerates and regains up to D3 lost wounds. Each model can only be regenerated once per turn."
       },
       "Ability§Seed Spore Mines": {
-        "text": "This unit can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Seed Spore Mines (Action):** At the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), one BIOVORES** unit from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). The action is completed at the end of that phase. When it is completed, set up a new friendly **SPORE MINES** unit on the battlefield more than 6″ away from any enemy units and [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 48″ of this unit. That SPORE** MINES** unit contains D3 models for each BIOVORES** model in this unit, and, if you are playing a game that uses a [points limit](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Points-Limit), does not cost any [Reinforcement points](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Reinforcement-Points)."
+        "text": "This unit can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Seed Spore Mines (Action):** At the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), one BIOVORES** unit from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). The action is completed at the end of that phase. When it is completed, set up a new friendly **SPORE MINES** unit on the battlefield more than 6″ away from any enemy units and [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 48″ of this unit."
       },
       "Ability§Seed Spores": {
-        "text": "This model can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Seed Spores (Action):** At the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), one SPOROCYST** model from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). The action is completed at the end of that phase. When it is completed, set up a new friendly **SPORE MINES** unit containing 6 models or a new friendly **MUCOLID SPORES** unit containing 1 model on the battlefield. That unit must be set up more than 6″ away from any enemy units and [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 18″ of this model. If you are playing a game that uses a [points limit](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Points-Limit), that unit does not cost any [Reinforcement points](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Reinforcement-Points)."
+        "text": "This model can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Seed Spores (Action):** At the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), one SPOROCYST** model from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). The action is completed at the end of that phase. When it is completed, set up a new friendly **SPORE MINES** unit containing 6 models or a new friendly **MUCOLID SPORES** unit containing 1 model on the battlefield. That unit must be set up more than 6″ away from any enemy units and [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 18″ of this model."
       },
       "Ability§Serpentine Bodies": {
         "text": "Each time a melee attack is made against this unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -553,7 +553,7 @@
         }
       },
       "Ability§Spore Mine Cysts": {
-        "text": "Once per turn, after this model has moved in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can select one unit it moved across or one point on the battlefield it moved across.\n\n* If you select a unit, roll six D6s for each **VEHICLE** or MONSTER** model in that unit and roll one D6 for each other model in that unit (to a maximum of ten D6s): for each 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If you select a point on the battlefield, set up a new friendly **SPORE MINES** unit of 3 models on the battlefield not within 6″ of any enemy units and within 1″ of the selected point. If you are playing a game that uses a [points limit](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Points-Limit), this unit does not cost any [Reinforcement points](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Reinforcement-Points)."
+        "text": "Once per turn, after this model has moved in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can select one unit it moved across or one point on the battlefield it moved across.\n\n* If you select a unit, roll six D6s for each **VEHICLE** or MONSTER** model in that unit and roll one D6 for each other model in that unit (to a maximum of ten D6s): for each 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If you select a point on the battlefield, set up a new friendly **SPORE MINES** unit of 3 models on the battlefield not within 6″ of any enemy units and within 1″ of the selected point."
       },
       "Ability§Superior Chameleonic Skin": {
         "text": "* Each time an attack is made against this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* While this model is receiving the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover), it cannot be selected as the target of a ranged attack if the attacker is more than 12″ away.\n* This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
@@ -1033,7 +1033,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -1184,7 +1184,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Deathleaper": {
@@ -1334,7 +1334,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -1364,7 +1364,7 @@
         },
         "text": "A Deathleaper is equipped with: Lictor claws and talons; flesh hooks. Your army can only include one **DEATHLEAPER** model.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Genestealers": {
@@ -1568,7 +1568,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -1607,7 +1607,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Haruspex": {
@@ -1815,7 +1815,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -1967,7 +1967,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Lictor": {
@@ -2117,7 +2117,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -2143,7 +2143,7 @@
         },
         "text": "A Lictor is equipped with: Lictor claws and talons; flesh hooks.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Maleceptor": {
@@ -2241,7 +2241,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -2403,7 +2403,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Pyrovores": {
@@ -2476,7 +2476,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -2507,7 +2507,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Toxicrene": {
@@ -2605,7 +2605,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -2760,7 +2760,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Tyrant Guard": {
@@ -2904,7 +2904,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -2941,7 +2941,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Venomthropes": {
@@ -2974,7 +2974,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -3012,7 +3012,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Elites§Zoanthropes": {
@@ -3045,7 +3045,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -3088,7 +3088,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Dimachaeron": {
@@ -3670,7 +3670,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -3825,7 +3825,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Meiotic Spores": {
@@ -3928,7 +3928,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -3959,7 +3959,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Parasite of Mortrex": {
@@ -4096,7 +4096,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -4126,7 +4126,7 @@
         },
         "text": "A Parasite of Mortrex is equipped with: clawed limbs; barbed ovipositor.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Raveners": {
@@ -4162,7 +4162,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -4197,7 +4197,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Ripper Swarms": {
@@ -4233,7 +4233,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -4266,7 +4266,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Sky-slasher Swarms": {
@@ -4370,7 +4370,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -4404,7 +4404,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fast Attack§Trygon": {
@@ -4561,7 +4561,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 145
+            "value": 160
           },
           "M": {
             "value": 10
@@ -4760,7 +4760,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -4913,7 +4913,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Flyers§Harpy": {
@@ -4977,7 +4977,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy venom cannon"
+                    "trait": {
+                      "item": "Weapon§Heavy venom cannon",
+                      "stats": {
+                        "Points": {
+                          "value": 30
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -5031,7 +5038,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy venom cannon"
+                    "trait": {
+                      "item": "Weapon§Heavy venom cannon",
+                      "stats": {
+                        "Points": {
+                          "value": 30
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -5085,7 +5099,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy venom cannon"
+                    "trait": {
+                      "item": "Weapon§Heavy venom cannon",
+                      "stats": {
+                        "Points": {
+                          "value": 30
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -5139,7 +5160,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy venom cannon"
+                    "trait": {
+                      "item": "Weapon§Heavy venom cannon",
+                      "stats": {
+                        "Points": {
+                          "value": 30
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -5181,7 +5209,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -5336,7 +5364,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Flyers§Hive Crone": {
@@ -5718,7 +5746,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -5874,7 +5902,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Fortifications§Sporocyst": {
@@ -6067,7 +6095,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -6218,7 +6246,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Barbed Hierodule": {
@@ -6516,7 +6544,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -6544,7 +6572,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Carnifexes": {
@@ -6804,7 +6832,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -6840,7 +6868,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Exocrine": {
@@ -6985,7 +7013,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -7134,7 +7162,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Hive Guard": {
@@ -7234,7 +7262,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -7268,7 +7296,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Screamer-Killers": {
@@ -7394,7 +7422,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -7430,7 +7458,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Scythed Hierodule": {
@@ -8033,7 +8061,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -8070,7 +8098,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Heavy Support§Tyrannofex": {
@@ -8139,7 +8167,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 170
+            "value": 185
           },
           "M": {
             "value": 9
@@ -8402,7 +8430,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -8553,7 +8581,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Hive Mind Discipline§Catalyst": {
@@ -8712,7 +8740,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -8747,7 +8775,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Hive Tyrant": {
@@ -9091,7 +9119,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -9256,7 +9284,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Malanthrope": {
@@ -9384,7 +9412,7 @@
             "value": 5
           },
           "Points": {
-            "value": 100
+            "value": 110
           },
           "M": {
             "value": 6
@@ -9419,7 +9447,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -9457,7 +9485,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Old One Eye": {
@@ -9503,7 +9531,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 235
+            "value": 250
           },
           "M": {
             "value": 8
@@ -9733,7 +9761,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -9762,7 +9790,7 @@
         },
         "text": "Old One Eye is equipped with: 2 monstrous crushing claws; 2 monstrous scything talons; thresher scythe; chitin thorns. Your army can only include one **OLD ONE** EYE** model.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Tervigon": {
@@ -9831,7 +9859,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 215
+            "value": 235
           },
           "M": {
             "value": 8
@@ -9991,7 +10019,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -10155,7 +10183,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§The Swarmlord": {
@@ -10253,7 +10281,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -10418,7 +10446,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Trygon Prime": {
@@ -10735,7 +10763,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -10893,7 +10921,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Tyranid Prime": {
@@ -11475,7 +11503,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -11505,7 +11533,7 @@
         },
         "text": "A Tyranid Prime is equipped with: devourer; bonesword; lash whip.\n\n• This model’s bonesword and lash whip can be replaced with one of the following: 1 dual boneswords; 2 rending claws; 2 scything talons.\n\n• This model’s devourer can be replaced with one of the following: 1 barbed strangler; 1 deathspitter; 1 spinefists; 1 venom cannon; 1 bonesword and 1 lash whip; 1 dual boneswords; 2 rending claws; 2 scything talons.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 flesh hooks.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "HQ§Winged Hive Tyrant": {
@@ -11655,7 +11683,7 @@
             "dynamic": true
           },
           "Points": {
-            "value": 210
+            "value": 230
           },
           "M": {
             "value": 16
@@ -11973,7 +12001,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -12141,7 +12169,7 @@
           }
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Lords of War§Harridan": {
@@ -13022,7 +13050,7 @@
       "Model§Carnifex": {
         "stats": {
           "Points": {
-            "value": 115
+            "value": 125
           },
           "M": {
             "value": 8
@@ -13471,7 +13499,7 @@
       "Model§Hive Guard": {
         "stats": {
           "Points": {
-            "value": 50
+            "value": 55
           },
           "M": {
             "value": 6
@@ -13888,7 +13916,7 @@
       "Model§Ravener": {
         "stats": {
           "Points": {
-            "value": 35
+            "value": 45
           },
           "M": {
             "value": 12
@@ -14841,7 +14869,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Barbed strangler"
+                    "trait": {
+                      "item": "Weapon§Barbed strangler",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14849,7 +14884,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Bonesword"
+                    "trait": {
+                      "item": "Weapon§Bonesword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14857,7 +14899,14 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Deathspitter"
+                    "trait": {
+                      "item": "Weapon§Deathspitter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14873,7 +14922,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Dual boneswords"
+                    "trait": {
+                      "item": "Weapon§Dual boneswords",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14935,7 +14991,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Barbed strangler"
+                    "trait": {
+                      "item": "Weapon§Barbed strangler",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14943,7 +15006,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Bonesword"
+                    "trait": {
+                      "item": "Weapon§Bonesword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14951,7 +15021,14 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Deathspitter"
+                    "trait": {
+                      "item": "Weapon§Deathspitter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -14967,7 +15044,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Dual boneswords"
+                    "trait": {
+                      "item": "Weapon§Dual boneswords",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15029,7 +15113,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Barbed strangler"
+                    "trait": {
+                      "item": "Weapon§Barbed strangler",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15037,7 +15128,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Bonesword"
+                    "trait": {
+                      "item": "Weapon§Bonesword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15045,7 +15143,14 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Deathspitter"
+                    "trait": {
+                      "item": "Weapon§Deathspitter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15061,7 +15166,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Dual boneswords"
+                    "trait": {
+                      "item": "Weapon§Dual boneswords",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15123,7 +15235,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Barbed strangler"
+                    "trait": {
+                      "item": "Weapon§Barbed strangler",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15131,7 +15250,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Bonesword"
+                    "trait": {
+                      "item": "Weapon§Bonesword",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15139,7 +15265,14 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Deathspitter"
+                    "trait": {
+                      "item": "Weapon§Deathspitter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15155,7 +15288,14 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": "Weapon§Dual boneswords"
+                    "trait": {
+                      "item": "Weapon§Dual boneswords",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -15207,7 +15347,7 @@
       "Model§Tyrant Guard": {
         "stats": {
           "Points": {
-            "value": 40
+            "value": 45
           },
           "M": {
             "value": 6
@@ -15385,7 +15525,7 @@
       "Model§Venomthrope": {
         "stats": {
           "Points": {
-            "value": 35
+            "value": 40
           },
           "M": {
             "value": 8
@@ -15468,7 +15608,7 @@
       "Model§Zoanthrope": {
         "stats": {
           "Points": {
-            "value": 50
+            "value": 70
           },
           "M": {
             "value": 6
@@ -15533,7 +15673,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -15567,7 +15707,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Troops§Hormagaunts": {
@@ -15677,7 +15817,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -15713,7 +15853,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Troops§Termagants": {
@@ -15823,7 +15963,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -15858,7 +15998,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Troops§Termagants (Legendary)": {
@@ -16094,7 +16234,7 @@
         },
         "keywords": {
           "Source": [
-            "Codex—Tyranids—Indomitus 1.0"
+            "Codex—Tyranids—Indomitus 1.1"
           ],
           "Edition": [
             "9th"
@@ -16133,7 +16273,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.0 @2022-05-13](https://www.warhammer-community.com/wp-content/uploads/2019/09/MlX8DsXkD19YhnUE.pdf)"
+          "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
       "Wargear§Acid maw": {

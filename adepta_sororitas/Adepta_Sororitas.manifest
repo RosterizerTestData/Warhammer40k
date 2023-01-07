@@ -1,11 +1,11 @@
 {
   "name": "Adepta Sororitas",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -185,9 +185,6 @@
       },
       "Ability§Anguish of the Unredeemed": {
         "text": "Each time a model in this unit is destroyed by a melee attack, if this unit has not yet been selected to fight this phase, roll one D6 before removing that model from play. On a 4+. do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks. After doing so, any other rules that affect this model ‘when it is destroyed’ are triggered (if any) and then the model is removed from play."
-      },
-      "Ability§Armour of Contempt": {
-        "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n* Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
       },
       "Ability§Auto-Tapestry of the Emperor’s Judgement": {
         "text": "Once per battle, in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), **AESTRED** THURGA** can plant this banner. If she does, until the start of your next Command phase, AESTRED** THURGA** has the following ability: ‘The Emperor Resplendent (Aura)**:** While a friendly **ADEPTA SORORITAS** CORE** unit is within 6″ of this model, all 6 **sacred rites** are active for that unit.’"
@@ -552,7 +549,7 @@
             "value": 7
           },
           "Points": {
-            "value": 100
+            "value": 90
           },
           "M": {
             "value": 12
@@ -784,8 +781,7 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "An Immolator is equipped with: immolation flamers; heavy bolter.\n\n• This model’s immolation flamers can be replaced with one of the following: 1 twin heavy bolter; 1 twin multi-melta.\n\n• This model can be equipped with 1 hunter-killer missile.\n\nnull",
@@ -1208,8 +1204,7 @@
             "Ability§Shield of Faith",
             "Ability§Smoke Launchers",
             "Ability§Explodes",
-            "Ability§Firing Points",
-            "Ability§Armour of Contempt"
+            "Ability§Firing Points"
           ]
         },
         "text": "A Repressor is equipped with: Repressor heavy flamer; storm bolter; dozer ram.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 Repressor heavy flamer; 1 storm bolter.\n\nnull",
@@ -1492,8 +1487,7 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Sororitas Rhino is equipped with: storm bolter.\n\n• This model can be equipped with 1 hunter-killer missile.\n\nnull",
@@ -1666,7 +1660,6 @@
             "Ability§Auto-Tapestry of the Emperor’s Judgement",
             "Ability§Order Pronatus",
             "Ability§Hagiolatry",
-            "Ability§Armour of Contempt",
             "Model§Aestred Thurga",
             "Model§Agathae Dolan"
           ]
@@ -1977,7 +1970,6 @@
             "Ability§Shield of Faith",
             "Ability§Bodyguard",
             "Ability§Sworn Protectors",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Celestian (Celestian Squad)",
               "quantity": 4
@@ -2116,7 +2108,6 @@
             "Ability§Shield of Faith",
             "Ability§Bodyguard",
             "Ability§Sworn Protectors",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Celestian (Celestian Squad (Legendary))",
               "quantity": 5
@@ -2436,8 +2427,7 @@
             "Ability§Shield of Faith",
             "Ability§Laud Hailer (Aura)",
             "Ability§Non-militant Order",
-            "Ability§Stirring Rhetoric (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Stirring Rhetoric (Aura)"
           ]
         },
         "text": "A Dialogus is equipped with: bolt pistol; Dialogus staff.\n\n\n\nnull",
@@ -2745,8 +2735,7 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Sacred Task (Aura)",
-            "Ability§Unflinching Determination",
-            "Ability§Armour of Contempt"
+            "Ability§Unflinching Determination"
           ]
         },
         "text": "A Dogmata is equipped with: bolt pistol; mace of the righteous; frag grenades; krak grenades.\n\n\n\nnull",
@@ -2987,8 +2976,7 @@
             "Ability§Shield of Faith",
             "Ability§Non-militant Order",
             "Ability§Medicus Ministorum (Aura)",
-            "Ability§Sacred Healing",
-            "Ability§Armour of Contempt"
+            "Ability§Sacred Healing"
           ]
         },
         "text": "A Hospitaller is equipped with: bolt pistol; chirurgeon’s tools.\n\n\n\nnull",
@@ -3215,8 +3203,7 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Litany of Deeds",
-            "Ability§Armour of Contempt"
+            "Ability§Litany of Deeds"
           ]
         },
         "text": "An Imagifier is equipped with: boltgun; frag grenades; krak grenades.\n\n\n\nnull",
@@ -3256,7 +3243,6 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Paragon Warsuit",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Paragon",
               "quantity": 2
@@ -3854,8 +3840,7 @@
             "Ability§Shield of Faith",
             "Ability§Scourge of the Penitent",
             "Ability§Driven Onwards",
-            "Ability§Overseer of Redemption (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Overseer of Redemption (Aura)"
           ]
         },
         "text": "A Repentia Superior is equipped with: neural whips; frag grenades; krak grenades.\n\n• This model can be equipped with 1 bolt pistol.\n\nnull",
@@ -3915,7 +3900,6 @@
             "Ability§Zealot",
             "Ability§Solace in Anguish",
             "Ability§Martyrdom",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Sister Repentia",
               "quantity": 4
@@ -4059,7 +4043,6 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Holy Vanguard",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Dominion (Dominion Squad)",
               "quantity": 4
@@ -4197,7 +4180,6 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Vanguard",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Dominion (Dominion Squad (Legendary))",
               "quantity": 4
@@ -4271,7 +4253,6 @@
             "Ability§Shield of Faith",
             "Ability§Angelic Visage",
             "Ability§Sky Strike",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Seraphim",
               "quantity": 4
@@ -4375,7 +4356,6 @@
             "Ability§Shield of Faith",
             "Ability§Angelic Visage",
             "Ability§Sky Strike",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Zephyrim",
               "quantity": 4
@@ -4455,8 +4435,7 @@
           "traits": [
             "Ability§Terrain Feature",
             "Ability§Consecrated Ground (Aura)",
-            "Ability§Prayers to the Saint",
-            "Ability§Armour of Contempt"
+            "Ability§Prayers to the Saint"
           ]
         },
         "text": "A Battle Sanctum is a single model.\n\n\n\nnull",
@@ -4722,8 +4701,7 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Castigator is equipped with: Castigator autocannons; 3 heavy bolters.\n\n• This model’s Castigator autocannons can be replaced with 1 Castigator battle cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\nnull",
@@ -4863,7 +4841,7 @@
             "value": 8
           },
           "Points": {
-            "value": 130
+            "value": 120
           },
           "M": {
             "value": 12
@@ -5070,8 +5048,7 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "An Exorcist is equipped with: Exorcist missile launcher; heavy bolter.\n\n• This model’s Exorcist missile launcher can be replaced with 1 Exorcist conflagration rocket.\n\n• This model can be equipped with 1 hunter-killer missile.\n\nnull",
@@ -5295,7 +5272,6 @@
             "Ability§Wrath of the Penitent",
             "Ability§Berserk Killing Machines",
             "Ability§Instrument of Pain and Penance",
-            "Ability§Armour of Contempt",
             "Model§Mortifier"
           ]
         },
@@ -5508,7 +5484,6 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Storm of Retribution",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Retributor (Retributor Squad)",
               "quantity": 4
@@ -5647,7 +5622,6 @@
             "Ability§Shield of Faith",
             "Ability§Faithful Advance",
             "Ability§Rites of Fire",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Retributor (Retributor Squad (Legendary))",
               "quantity": 4
@@ -6618,8 +6592,7 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Rosarius",
-            "Ability§Lead the Righteous (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Lead the Righteous (Aura)"
           ]
         },
         "text": "A Canoness is equipped with: plasma pistol; power sword; rod of office; frag grenades; krak grenades.\n\n• This model’s plasma pistol, power sword and rod of office can be replaced with one of the following:\n\n○ 1 condemnor boltgun and one of the following: 1 blessed blade; 1 chainsword, 1 power sword,\n\n○ 1 weapon from the ***Pistols*** list and one of the following: 1 blessed blade; 1 chainsword; 1 power sword.\n\n• If this model is equipped with a chainsword, it can be equipped with one of the following: 1 brazier of holy fire; 1 null rod.\n\nnull",
@@ -6815,8 +6788,7 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Rosarius",
-            "Ability§Lead the Righteous (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Lead the Righteous (Aura)"
           ]
         },
         "text": "A Canoness is a single model equipped with: bolt pistol; chainsword; frag grenades; krak grenades.\n\n• This model can be equipped with 1 boltgun and 1 power sword instead of 1 bolt pistol and 1 chainsword. If this model is equipped with 1 boltgun and 1 power sword, it additionally has a rod of office.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 condemnor boltgun; 1 weapon from the ***Pistols*** list.\n\n• This model can be equipped with one of the following instead of 1 chainsword: 1 power sword; 1 blessed blade.\n\n• If this model is equipped with 1 chainsword, it can have a brazier of holy fire or a null rod.\n\n• This model can be equipped with 1 boltgun instead of 1 bolt pistol.\n\n• This model can be equipped with one of the following instead of 1 chainsword: 1 eviscerator; 1 power axe; 1 power maul.\n\n• This model can be equipped with one of the following instead of either 1 bolt pistol or 1 chainsword: 1 boltgun; 1 combi-flamer; 1 combi-melta; 1 combi-plasma; 1 condemnor boltgun; 1 inferno pistol; 1 plasma pistol; 1 storm bolter.\n\nnull",
@@ -6886,7 +6858,6 @@
             "Ability§Sky Strike",
             "Ability§Angelic Saviour",
             "Ability§Healing Tears",
-            "Ability§Armour of Contempt",
             "Model§Celestine",
             {
               "item": "Model§Geminae Superia",
@@ -6942,7 +6913,6 @@
             "Ability§Daemonifuge (Aura)",
             "Ability§Bolts of Holy Judgement",
             "Ability§Unexpected Allies",
-            "Ability§Armour of Contempt",
             "Model§Ephrael Stern",
             "Model§Kyganil"
           ]
@@ -7115,8 +7085,7 @@
             "Ability§Fiery Conviction",
             "Ability§The Pulpit of Saint Holline’s Basilica (Aura)",
             "Ability§Lead the Righteous (Aura)",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "Junith Eruita is equipped with: 2 Ministorum heavy flamers; Mace of Castigation. Your army can only include 1 **JUNITH ERUITA** model.\n\n\n\nnull",
@@ -7944,8 +7913,7 @@
             "Ability§High Lord of the Imperium",
             "Ability§Abbess Sanctorum (Aura)",
             "Ability§Commander of the Adepta Sororitas",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "Morvenn Vahl is equipped with: Fidelis; Paragon missile launcher; Lance of Illumination. Your army can only include 1 **MORVENN VAHL** model.\n\n\n\nnull",
@@ -8292,8 +8260,7 @@
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
             "Ability§Rosarius",
-            "Ability§Fury of the Righteous (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Fury of the Righteous (Aura)"
           ]
         },
         "text": "A Palatine is equipped with: bolt pistol; power sword; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with 1 plasma pistol.\n\nnull",
@@ -8779,8 +8746,7 @@
             "Ability§Simulacrum of the Ebon Chalice",
             "Ability§Petals of the Bloody Rose",
             "Ability§Icon of the Valorous Heart",
-            "Ability§Simulacrum of the Argent Shroud",
-            "Ability§Armour of Contempt"
+            "Ability§Simulacrum of the Argent Shroud"
           ]
         },
         "text": "The Triumph of Saint Katherine is equipped with: 6 bolt pistols; Martyr’s Sword; relic weapons; frag grenades; krak grenades. Your army can only include 1 **TRIUMPH OF** SAINT** KATHERINE** model.\n\n\n\nnull",
@@ -18060,7 +18026,7 @@
       "Model§Mortifier": {
         "stats": {
           "Points": {
-            "value": 60
+            "value": 55
           },
           "M": {
             "value": 8
@@ -24744,7 +24710,7 @@
       "Model§Sister Repentia": {
         "stats": {
           "Points": {
-            "value": 14
+            "value": 16
           },
           "M": {
             "value": 6
@@ -27341,7 +27307,6 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Battle Sister (Battle Sister Squad (Legendary))",
               "quantity": 4
@@ -27491,7 +27456,6 @@
             "Ability§Acts of Faith",
             "Ability§Sacred Rites",
             "Ability§Shield of Faith",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Battle Sister (Battle Sisters Squad)",
               "quantity": 4
@@ -27615,7 +27579,6 @@
             "Ability§Shield of Faith",
             "Ability§Impetuous Fervour",
             "Ability§Sisters Novitiate",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Sister Novitiate",
               "quantity": 9

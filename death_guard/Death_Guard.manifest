@@ -1,15 +1,15 @@
 {
   "name": "Death Guard",
-  "revision": "0.0.8",
+  "revision": "0.0.9",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
-      "slug": "123456",
+      "slug": "NZWZG9",
       "name": "40k9e",
       "game": "Warhammer 40,000"
     }
@@ -183,9 +183,6 @@
       "Ability§Airborne": {
         "text": "You cannot [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) with this model, and it can only be chosen as a target of a charge if the unit making the charge can [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying). You can only fight with this model if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units that can FLY**, and this model can only make melee attacks against units that can FLY**. Enemy units can only make melee attacks against this model if they can FLY**."
       },
-      "Ability§Armour of Contempt": {
-        "text": "Each time an attack is allocated to an **ASTRA MILITARUM** VEHICLE**, **ADEPTUS ASTARTES**, **SANCTIC ASTARTES**, **HERETIC ASTARTES** or **ADEPTA SORORITAS** model, worsen the Armour Penetration characteristic of that attack by 1.\n\nThis rule does not apply to any of the following:\n\n* Models equipped with a storm shield, a relic shield or a combat shield (or a Relic that replaces one of these shields).\n* Models with either the Sacresant Shield** or Force Shielding** ability (**CELESTIAN SACRESANT** and **NEMESIS DREADKNIGHT** units).\n* Models that are under the effects of any other rule that worsens or reduces the Armour Penetration characteristic of an attack."
-      },
       "Ability§Artillery and Crew": {
         "text": "Each Rapier Carrier and its crew are treated as a single model for all rules purposes (crew models must remain within 1″ of their Rapier Carrier model). This means that the crew models cannot be targeted or attacked separately and that visibility and all ranges are measured to and from the Rapier Carrier’s model, not the crew models. This unit cannot [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), is never eligible to [charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE) or [Heroically Intervene](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention), and cannot make [pile-in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) or [consolidation moves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate)."
       },
@@ -241,7 +238,7 @@
         "text": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
       },
       "Ability§Drop Pod Assault": {
-        "text": "During deployment, you must set up this unit high in the skies instead of setting it up on the battlefield, but neither it, nor any units embarked within it, are counted towards any limits that the mission you are playing places on the maximum number of [Reinforcement units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Reinforcement-Units) you can have in your army. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your first, second or third [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), regardless of any mission rules, you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models. Any units embarked within this transport can immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) after it has been set up on the battlefield for the first time, and if they do so, they must be set up more than 9″ away from any enemy models."
+        "text": "During deployment, you must set up this unit high in the skies instead of setting it up on the battlefield, but neither it, nor any units embarked within it, are counted towards any limits that the mission you are playing places on the maximum number of [Reinforcement units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) you can have in your army. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your first, second or third [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), regardless of any mission rules, you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models. Any units embarked within this transport can immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) after it has been set up on the battlefield for the first time, and if they do so, they must be set up more than 9″ away from any enemy models."
       },
       "Ability§Empyric Malaise (Aura)": {
         "text": "While an enemy **PSYKER** unit is within 6″ of this model, subtract 1 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for that unit."
@@ -749,8 +746,7 @@
         "assets": {
           "traits": [
             "Ability§Contagions of Nurgle",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Rhino is equipped with: combi-bolter.\n\n• This model can be equipped with 1 of the following: 1 combi-bolter; 1 combi-flamer; 1 combi-melta; 1 combi-plasma.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -1176,8 +1172,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Subterranean Assault",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Terrax-pattern Termite is equipped with: Terrax melta cutter; 2 Terrax combi-bolters; Termite drill.\n\n• This model’s 2 Terrax combi-bolters can be replaced with one of the following: 2 Terrax heavy flamers; 2 twin Terrax volkite chargers.\n\nnull",
@@ -1317,7 +1312,7 @@
             "value": 4
           },
           "Points": {
-            "value": 65
+            "value": 60
           },
           "M": {
             "value": 5
@@ -1613,8 +1608,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Blight Racks (Aura)",
             "Ability§Putrid Explosion",
-            "Ability§Foul Infusion",
-            "Ability§Armour of Contempt"
+            "Ability§Foul Infusion"
           ]
         },
         "text": "A Biologus Putrifier is equipped with: injector pistol; plague knife; hyper blight grenades; krak grenades.\n\n\n\nnull",
@@ -1680,7 +1674,6 @@
             "Ability§Remorseless",
             "Ability§Teleport Strike",
             "Ability§Diseased Terminator Armour",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Blightlord Terminator",
               "quantity": 4
@@ -1790,14 +1783,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -1981,14 +1967,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -2150,8 +2129,7 @@
             "Ability§Martial Legacy",
             "Ability§Relentless Hatred",
             "Ability§Hellforged Atomantic Shielding",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Contemptor Dreadnought is equipped with: 2 hellforged heavy plasma cannons.\n\n• Each of this model’s hellforged heavy plasma cannons can be replaced with one of the following: 1 conversion beam cannon; 1 hellforged kheres-pattern assault cannon; 1 multi-melta; 1 twin hellforged autocannon; 1 twin heavy bolter; 1 twin lascannon; 1 twin volkite culverin; 1 hellforged Dreadnought chainfist and 1 combi-bolter; 1 hellforged Dreadnought combat weapon and 1 combi-bolter.\n\n• Each of this model’s combi-bolters can be replaced with one of the following: 1 graviton blaster; 1 heavy flamer; 1 hellforged plasma blaster.\n\n• This model can be equipped with 1 hellforged cyclone missile launcher.\n\nnull",
@@ -2493,8 +2471,7 @@
             "Ability§Martial Legacy",
             "Ability§Relentless Hatred",
             "Ability§Hellforged Atomantic Shielding",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Deredeo Dreadnought is equipped with: anvillus autocannon battery; twin heavy bolter.\n\n• This model’s anvillus autocannon battery can be replaced with one of the following: 1 arachnus heavy lascannon battery; 1 hellfire plasma carronade; 1 volkite falconet battery.\n\n• This model’s twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 aiolos missile launcher; boreas air defence missiles.\n\nnull",
@@ -2986,8 +2963,7 @@
             "Ability§Martial Legacy",
             "Ability§Relentless Hatred",
             "Ability§Hellforged Atomantic Shielding",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Leviathan Dreadnought is equipped with: 2 heavy flamers; 2 grav-flux bombards.\n\n• Each of this model’s grav-flux bombards can be replaced with one of the following: 1 cyclonic melta lance; 1 storm cannon; 1 meltagun and 1 Leviathan siege claw; 1 meltagun and 1 Leviathan siege drill.\n\n• This model’s 2 heavy flamers can be replaced with 2 twin volkite calivers.\n\n• This model can be equipped with 3 hellforged hunter-killer missiles.\n\nnull",
@@ -3177,7 +3153,6 @@
             "Ability§Disgustingly Resilient",
             "Ability§Remorseless",
             "Ability§Daemonic",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Death Guard Possessed",
               "quantity": 5
@@ -3224,7 +3199,14 @@
                 ],
                 "traits": [
                   {
-                    "trait": "Wargear§Chimes of contagion"
+                    "trait": {
+                      "item": "Wargear§Chimes of contagion",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -3282,7 +3264,6 @@
             "Ability§Teleport Strike",
             "Ability§Diseased Terminator Armour",
             "Ability§Bodyguard (Aura)",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Deathshroud Terminator",
               "quantity": 2
@@ -3500,8 +3481,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Daemon Engine",
             "Ability§Decimator claws",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Decimator is equipped with 2 Decimator butcher cannons.\n\n• Each of this model's Decimator butcher cannons can be replaced with one of the following: Decimator conversion beamer; soulburner petard; storm laser; 1 hellflamer and 1 Decimator claw.\n\nnull",
@@ -3641,7 +3621,7 @@
             "value": 5
           },
           "Points": {
-            "value": 90
+            "value": 80
           },
           "M": {
             "value": 5
@@ -3935,8 +3915,7 @@
           "traits": [
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
-            "Ability§Putrefying Stink",
-            "Ability§Armour of Contempt"
+            "Ability§Putrefying Stink"
           ]
         },
         "text": "A Foul Blightspawn is equipped with: plague sprayer; blight grenades; krak grenades; unholy death’s head grenade.\n\n\n\nnull",
@@ -4065,7 +4044,7 @@
                       "item": "Weapon§Heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 0
                         }
                       }
                     }
@@ -4104,7 +4083,7 @@
                       "item": "Weapon§Multi-melta",
                       "stats": {
                         "Points": {
-                          "value": 5
+                          "value": 0
                         }
                       }
                     }
@@ -4131,14 +4110,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -4150,7 +4122,7 @@
                       "item": "Weapon§Twin lascannon",
                       "stats": {
                         "Points": {
-                          "value": 20
+                          "value": 10
                         }
                       }
                     }
@@ -4196,7 +4168,7 @@
                       "item": "Weapon§Heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 0
                         }
                       }
                     }
@@ -4235,7 +4207,7 @@
                       "item": "Weapon§Multi-melta",
                       "stats": {
                         "Points": {
-                          "value": 5
+                          "value": 0
                         }
                       }
                     }
@@ -4262,14 +4234,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -4281,7 +4246,7 @@
                       "item": "Weapon§Twin lascannon",
                       "stats": {
                         "Points": {
-                          "value": 20
+                          "value": 10
                         }
                       }
                     }
@@ -4327,7 +4292,7 @@
                       "item": "Weapon§Heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 10
+                          "value": 0
                         }
                       }
                     }
@@ -4366,7 +4331,7 @@
                       "item": "Weapon§Multi-melta",
                       "stats": {
                         "Points": {
-                          "value": 5
+                          "value": 0
                         }
                       }
                     }
@@ -4393,14 +4358,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -4412,7 +4370,7 @@
                       "item": "Weapon§Twin lascannon",
                       "stats": {
                         "Points": {
-                          "value": 20
+                          "value": 10
                         }
                       }
                     }
@@ -4450,8 +4408,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Monstrous Resilience",
             "Ability§Frenzy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Helbrute is equipped with: multi-melta; Helbrute fist.\n\n• This model’s multi-melta can be replaced with one of the following: 1 Helbrute plasma cannon; 1 twin heavy bolter; 1 twin lascannon; 1 reaper autocannon; 1 Helbrute fist.\n\n• 1 of this model’s Helbrute fists can be replaced with 1 missile launcher.\n\n• 1 of this model’s Helbrute fists can be replaced with one of the following: 1 Helbrute hammer; 1 power scourge.\n\n• For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer. That Helbrute fist cannot then be replaced.\n\nnull",
@@ -4509,7 +4466,7 @@
             "value": 3
           },
           "Points": {
-            "value": 60
+            "value": 55
           },
           "M": {
             "value": 5
@@ -4805,8 +4762,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Sickening Vitality (Aura)",
             "Ability§Tocsin of Misery (Aura)",
-            "Ability§Empyric Malaise (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Empyric Malaise (Aura)"
           ]
         },
         "text": "A Noxious Blightbringer is equipped with: plasma pistol; cursed plague bell; blight grenades; krak grenades.\n\n\n\nnull",
@@ -4820,7 +4776,7 @@
             "value": 4
           },
           "Points": {
-            "value": 75
+            "value": 70
           },
           "M": {
             "value": 5
@@ -5115,8 +5071,7 @@
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
             "Ability§Tainted Narthecium (Aura)",
-            "Ability§Revitalising Malignancy",
-            "Ability§Armour of Contempt"
+            "Ability§Revitalising Malignancy"
           ]
         },
         "text": "A Plague Surgeon is equipped with: bolt pistol; balesword; blight grenades; krak grenades.\n\n\n\nnull",
@@ -5130,7 +5085,7 @@
             "value": 4
           },
           "Points": {
-            "value": 70
+            "value": 65
           },
           "M": {
             "value": 5
@@ -5346,8 +5301,7 @@
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
             "Ability§The Seven-fold Chant",
-            "Ability§Malicious Calculation",
-            "Ability§Armour of Contempt"
+            "Ability§Malicious Calculation"
           ]
         },
         "text": "A Tallyman is equipped with: plasma pistol; blight grenades; krak grenades.\n\n\n\nnull",
@@ -5416,7 +5370,6 @@
             "Ability§Contagions of Nurgle",
             "Ability§Fearsome (Aura)",
             "Ability§Mutated Beyond Reason",
-            "Ability§Armour of Contempt",
             "Model§Chaos Spawn"
           ]
         },
@@ -5652,8 +5605,7 @@
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
             "Ability§Daemonic",
-            "Ability§Putrid Explosion",
-            "Ability§Armour of Contempt"
+            "Ability§Putrid Explosion"
           ]
         },
         "text": "A Death Guard Greater Blight Drone is equipped with: bile maw; blightreaper cannon; greater plague probe.\n\n\n\nnull",
@@ -5833,8 +5785,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Drop Pod Assault",
             "Ability§Hover Transport",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Dreadclaw Drop Pod is equipped with: blade struts; thermal jets.\n\n\n\nnull",
@@ -6049,8 +6000,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Disgustingly Resilient",
             "Ability§Daemonic",
-            "Ability§Putrid Explosion",
-            "Ability§Armour of Contempt"
+            "Ability§Putrid Explosion"
           ]
         },
         "text": "A Foetid Bloat-drone is equipped with: fleshmower; plague probe.\n\n• This model’s fleshmower can be replaced with one of the following: 2 plaguespitters; 1 heavy blight launcher.\n\nnull",
@@ -6118,7 +6068,6 @@
             "Ability§Putrid Explosion",
             "Ability§Daemonic",
             "Ability§Foul Stench",
-            "Ability§Armour of Contempt",
             "Model§Myphitic Blight-hauler"
           ]
         },
@@ -6486,8 +6435,7 @@
             "Ability§Hard to Hit",
             "Ability§Supersonic",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Fire Raptor Gunship is equipped with: twin avenger bolt cannon; 2 twin hellforged autocannons; 2 twin hellstrike launchers.\n\n• This model’s 2 twin hellstrike launchers can be replaced with 2 twin lascannons.\n\n• This model’s 2 twin hellforged autocannons can be replaced with 2 quad heavy bolters.\n\nnull",
@@ -6980,8 +6928,7 @@
             "Ability§Hard to Hit",
             "Ability§Supersonic",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Storm Eagle Gunship is equipped with: twin heavy bolter; 2 twin hellstrike launchers; vengeance launcher.\n\n• This model’s twin heavy bolter can be replaced with one of the following: 1 Storm Eagle multi-melta; 1 hellforged typhoon missile launcher.\n\n• This model’s 2 twin hellstrike launchers can be replaced with 2 twin lascannons.\n\nnull",
@@ -7285,8 +7232,7 @@
             "Ability§Airborne",
             "Ability§Hard to Hit",
             "Ability§Supersonic",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Xiphon Interceptor is equipped with: 2 twin lascannons; Xiphon missile battery.\n\n\n\nnull",
@@ -7564,8 +7510,7 @@
             "Ability§Hard to Hit",
             "Ability§Baleful Aberration",
             "Ability§Explodes",
-            "Ability§Supersonic",
-            "Ability§Armour of Contempt"
+            "Ability§Supersonic"
           ]
         },
         "text": "A Hell Blade is equipped with: 2 twin autocannons.\n\n• This model’s 2 twin autocannons can be replaced with 2 lascannons.\n\nnull",
@@ -7679,14 +7624,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -7725,14 +7663,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -7771,14 +7702,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -7817,14 +7741,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -7870,8 +7787,7 @@
             "Ability§Airborne",
             "Ability§Supersonic",
             "Ability§Hard to Hit",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Hell Talon is equipped with: Havoc autocannon; 2 infernal bombs; twin lascannon.\n\n• This model’s Havoc autocannon can be replaced with 1 havoc launcher.\n\nnull",
@@ -8011,7 +7927,7 @@
             "value": 4
           },
           "Points": {
-            "value": 75
+            "value": 65
           },
           "M": {
             "value": "-"
@@ -8130,8 +8046,7 @@
             "Ability§Putrid Explosion",
             "Ability§Putrescent Fog (Aura)",
             "Ability§Seeded Growths",
-            "Ability§Pox Furnace",
-            "Ability§Armour of Contempt"
+            "Ability§Pox Furnace"
           ]
         },
         "text": "A Miasmic Malignifier is equipped with: noxious stink.\n\n\n\nnull",
@@ -8342,7 +8257,14 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8429,7 +8351,14 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -8511,8 +8440,7 @@
         "assets": {
           "traits": [
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Deimos Predator is equipped with: plasma destroyer.\n\n• This model’s plasma destroyer can be replaced with one of the following: 1 conversion beam cannon; 1 infernus cannon; 1 magna-melta cannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 heavy flamers; 2 lascannons.\n\n• This model can be equipped with 1 combi-bolter.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\nnull",
@@ -8932,8 +8860,7 @@
         "assets": {
           "traits": [
             "Ability§Contagions of Nurgle",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Land Raider is equipped with: twin heavy bolter; 2 twin lascannons.\n\n• This model can be equipped with 1 of the following: 1 combi-bolter; 1 combi-flamer; 1 combi-melta; 1 combi-plasma.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -9136,7 +9063,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9191,7 +9125,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9246,7 +9187,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9306,8 +9254,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Inviolate Armour",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Land Raider Achilles is equipped with: quad launcher; 2 twin hellforged multi-meltas.\n\n• This model’s 2 twin helIforged multi-meltas can be replaced with 2 twin volkite culverins.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -9562,7 +9509,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9661,7 +9615,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -9774,8 +9735,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Land Raider Proteus is equipped with: 2 twin lascannons.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 multi-melta; 1 twin heavy bolter; 1 twin heavy flamer.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\n• This model can be equipped with one of the following: 1 explorator augury web; 1 heavy armour.\n\nnull",
@@ -10010,7 +9970,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10018,7 +9985,14 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10089,7 +10063,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10097,7 +10078,14 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10138,8 +10126,7 @@
         "assets": {
           "traits": [
             "Ability§Contagions of Nurgle",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Predator Annihilator is equipped with: twin lascannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 of the following: 1 combi-bolter; 1 combi-flamer; 1 combi-melta; 1 combi-plasma.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -10374,7 +10361,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10382,7 +10376,14 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10453,7 +10454,14 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": "Weapon§Heavy bolter"
+                    "trait": {
+                      "item": "Weapon§Heavy bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10461,7 +10469,14 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": "Weapon§Lascannon"
+                    "trait": {
+                      "item": "Weapon§Lascannon",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -10502,8 +10517,7 @@
         "assets": {
           "traits": [
             "Ability§Contagions of Nurgle",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Predator Destructor is equipped with: Predator autocannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 of the following: 1 combi-bolter; 1 combi-flamer; 1 combi-melta; 1 combi-plasma.\n\n• This model can be equipped with 1 havoc launcher.\n\nnull",
@@ -10907,8 +10921,7 @@
         "assets": {
           "traits": [
             "Ability§Let the Galaxy Burn",
-            "Ability§Artillery and Crew",
-            "Ability§Armour of Contempt"
+            "Ability§Artillery and Crew"
           ]
         },
         "text": "A Chaos Rapier Carrier is equipped with: boltgun; quad heavy bolter. A Chaos Rapier Carrier unit has 1 separate Chaos Space Marine crew model.\n\n• The Chaos Rapier Carrier's quad heavy bolter can be replaced with one of the following: 1 graviton cannon; 1 laser destroyer; 1 quad launcher.\n\nnull",
@@ -10977,7 +10990,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11032,7 +11052,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11087,7 +11114,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11155,8 +11189,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Sicaran Battle Tank is equipped with: heavy bolter; Herakles-pattern autocannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -11351,7 +11384,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11406,7 +11446,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11461,7 +11508,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11529,8 +11583,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Sicaran Punisher is equipped with: heavy bolter; punisher rotary cannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -11725,7 +11778,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11780,7 +11840,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11835,7 +11902,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -11903,8 +11977,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Sicaran Venator is equipped with: heavy bolter; Sicaran laser cannon.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -12107,14 +12180,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -12153,14 +12219,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -12199,14 +12258,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -12247,8 +12299,7 @@
         "assets": {
           "traits": [
             "Ability§Let the Galaxy Burn",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Vindicator Laser Destroyer is equipped with: combi-bolter; laser volley cannon.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\nnull",
@@ -12443,7 +12494,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -12482,7 +12540,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -12533,8 +12598,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Whirlwind Scorpius is equipped with: Scorpius multi-launcher.\n\n• This model can be equipped with 1 hellforged hunter-killer missile.\n\n• This model can be equipped with 1 combi-bolter.\n\nnull",
@@ -12674,7 +12738,7 @@
             "value": 9
           },
           "Points": {
-            "value": 165
+            "value": 175
           },
           "M": {
             "value": 8
@@ -12785,14 +12849,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -12808,14 +12865,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -12827,7 +12877,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -12838,14 +12888,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -12924,14 +12967,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -12947,14 +12983,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -12966,7 +12995,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -12977,14 +13006,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -13063,14 +13085,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -13086,14 +13101,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -13105,7 +13113,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -13116,14 +13124,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -13202,14 +13203,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -13225,14 +13219,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -13244,7 +13231,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -13255,14 +13242,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -13341,14 +13321,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Havoc launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Havoc launcher"
                   }
                 ]
               },
@@ -13364,14 +13337,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin heavy bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin heavy bolter"
                   }
                 ]
               },
@@ -13383,7 +13349,7 @@
                       "item": "Weapon§Twin heavy flamer",
                       "stats": {
                         "Points": {
-                          "value": 15
+                          "value": 0
                         }
                       }
                     }
@@ -13394,14 +13360,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Twin lascannon",
-                      "stats": {
-                        "Points": {
-                          "value": 20
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Twin lascannon"
                   }
                 ]
               }
@@ -13437,8 +13396,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Infernal Regeneration",
             "Ability§Daemonic",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Defiler is equipped with: Defiler cannon; reaper autocannon; twin heavy flamer; Defiler claws.\n\n• This model’s twin heavy flamer can be replaced with one of the following: 1 havoc launcher; 1 defiler scourge.\n\n• This model’s reaper autocannon can be replaced with one of the following: 1 twin heavy bolter; 1 twin lascannon.\n\n• This model can be equipped with 1 of the following: 1 combi-bolter; 1 combi-flamer; 1 combi-melta; 1 combi-plasma.\n\nnull",
@@ -13865,8 +13823,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Disgustingly Resilient",
             "Ability§Daemonic",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Plagueburst Crawler is equipped with: Plagueburst mortar; heavy slugger; 2 entropy cannons.\n\n• This model’s 2 entropy cannons can be replaced with 2 plaguespitters.\n\n• This model’s heavy slugger can be replaced with 1 rothail volley gun.\n\nnull",
@@ -14065,8 +14022,7 @@
             "Ability§Lord of Nurgle",
             "Ability§Jump Pack Assault",
             "Ability§Malicious Volleys",
-            "Ability§Hateful Assault",
-            "Ability§Armour of Contempt"
+            "Ability§Hateful Assault"
           ]
         },
         "text": "A Chaos Lord is a single model armed with a chainsword, a bolt pistol, blight grenades and krak grenades.\n\n• This model may replace its bolt pistol with a plasma pistol or an item from the ***Combi-weapons** or **Melee Weapons*** lists.\n\n• This model may replace its chainsword with one item from the **Melee Weapons*** lists.\n\n• This model can be equipped with 1 chainsword instead of 1 bolt pistol.\n\n• This model can be equipped with 1 weapon from the Pistols*** list instead of 1 chainsword.\n\n• This model can have a jump pack (Power Rating +1**). If a model has a jump pack, it has a Move characteristic of 12″ and gains the [FLY](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying) and JUMP PACK keywords.\n\nnull",
@@ -14139,8 +14095,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Lord of Nurgle (Aura)",
-            "Ability§Sigil of Corruption",
-            "Ability§Armour of Contempt"
+            "Ability§Sigil of Corruption"
           ]
         },
         "text": "A Chaos Lord on Palanquin of Nurgle is a single model equipped with: bolt pistol; chainsword; nurglings’ claws and teeth; frag grenades; krak grenades.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 weapon from the ***Melee Weapons** list; 1 weapon from the Pistols*** list; 1 weapon from the Combi-weapons*** list.\n\n• This model can be equipped with one of the following instead of 1 chainsword: 1 weapon from the **Melee Weapons** list; 1 weapon from the Pistols*** list.\n\nnull",
@@ -14241,14 +14196,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Balesword",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Balesword"
                   }
                 ]
               },
@@ -14280,14 +14228,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -14303,14 +14244,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lightning claw",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lightning claw"
                   }
                 ]
               },
@@ -14318,14 +14252,7 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power axe",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power axe"
                   }
                 ]
               },
@@ -14412,14 +14339,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Balesword",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Balesword"
                   }
                 ]
               },
@@ -14451,14 +14371,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -14474,14 +14387,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lightning claw",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lightning claw"
                   }
                 ]
               },
@@ -14489,14 +14395,7 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power axe",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power axe"
                   }
                 ]
               },
@@ -14583,14 +14482,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Balesword",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Balesword"
                   }
                 ]
               },
@@ -14622,14 +14514,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -14645,14 +14530,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lightning claw",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lightning claw"
                   }
                 ]
               },
@@ -14660,14 +14538,7 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power axe",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power axe"
                   }
                 ]
               },
@@ -14754,14 +14625,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Balesword",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Balesword"
                   }
                 ]
               },
@@ -14793,14 +14657,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -14816,14 +14673,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lightning claw",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lightning claw"
                   }
                 ]
               },
@@ -14831,14 +14681,7 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power axe",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power axe"
                   }
                 ]
               },
@@ -14925,14 +14768,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Balesword",
-                      "stats": {
-                        "Points": {
-                          "value": 10
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Balesword"
                   }
                 ]
               },
@@ -14964,14 +14800,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -14987,14 +14816,7 @@
                 "order": 12,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Lightning claw",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Lightning claw"
                   }
                 ]
               },
@@ -15002,14 +14824,7 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power axe",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power axe"
                   }
                 ]
               },
@@ -15070,8 +14885,7 @@
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
             "Ability§Sigil of Corruption",
-            "Ability§Lord of the Death Guard (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Lord of the Death Guard (Aura)"
           ]
         },
         "text": "A Death Guard Chaos Lord is equipped with: bolt pistol; Astartes chainsword; blight grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with one of the following: 1 balesword; 1 chainaxe; 1 combi-bolter; 1 combi-flamer; 1 combi-melta; 1 combi-plasma; 1 lightning claw; 1 plasma pistol; 1 power axe; 1 power fist; 1 power maul; 1 power sword.\n\n• This model’s Astartes chainsword can be replaced with one of the following: 1 balesword; 1 chainaxe; 1 lightning claw; 1 power axe; 1 power fist; 1 power maul; 1 power sword.\n\nnull",
@@ -15132,14 +14946,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -15155,14 +14962,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -15186,14 +14986,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -15216,14 +15009,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -15239,14 +15025,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -15270,14 +15049,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -15300,14 +15072,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -15323,14 +15088,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -15354,14 +15112,7 @@
                 "order": 6,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -15400,8 +15151,7 @@
             "Ability§Contagions of Nurgle",
             "Ability§Teleport Strike",
             "Ability§Sigil of Corruption",
-            "Ability§Lord of the Death Guard (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Lord of the Death Guard (Aura)"
           ]
         },
         "text": "A Death Guard Chaos Lord in Terminator Armour is equipped with: combi-bolter; power axe.\n\n• This model’s combi-bolter can be replaced with one of the following: 1 combi-melta; 1 lightning claw.\n\n• This model’s power axe can be replaced with one of the following: 1 chainfist; 1 lightning claw; 1 power fist.\n\nnull",
@@ -15516,7 +15266,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Plague spewer"
+                    "trait": {
+                      "item": "Weapon§Plague spewer",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -15563,7 +15320,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Plague spewer"
+                    "trait": {
+                      "item": "Weapon§Plague spewer",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -15610,7 +15374,14 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Plague spewer"
+                    "trait": {
+                      "item": "Weapon§Plague spewer",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               }
@@ -15648,7 +15419,6 @@
             "Ability§Contagions of Nurgle",
             "Ability§Daemonic",
             "Ability§Lord of the Death Guard (Aura)",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -15715,14 +15485,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -15730,14 +15493,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Chainfist",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Chainfist"
                   }
                 ]
               },
@@ -15745,14 +15501,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -15807,14 +15556,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -15822,14 +15564,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Chainfist",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Chainfist"
                   }
                 ]
               },
@@ -15837,14 +15572,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -15899,14 +15627,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -15914,14 +15635,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Chainfist",
-                      "stats": {
-                        "Points": {
-                          "value": 15
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Chainfist"
                   }
                 ]
               },
@@ -15929,14 +15643,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -16007,7 +15714,6 @@
             "Ability§Contagions of Nurgle",
             "Ability§Teleport Strike",
             "Ability§Terminator Armour",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -16168,8 +15874,7 @@
             "Ability§Teleport Strike",
             "Ability§Vector of Disease",
             "Ability§Diseased Terminator Armour",
-            "Ability§Lord of the Death Guard (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Lord of the Death Guard (Aura)"
           ]
         },
         "text": "A Lord of Contagion is equipped with: plaguereaper.\n\n• This model’s plaguereaper can be replaced with 1 manreaper and 1 orb of desiccation.\n\nnull",
@@ -16481,8 +16186,7 @@
             "Ability§Teleport Strike",
             "Ability§Diseased Terminator Armour",
             "Ability§Lord of the Death Guard (Aura)",
-            "Ability§Master of Destruction (Aura)",
-            "Ability§Armour of Contempt"
+            "Ability§Master of Destruction (Aura)"
           ]
         },
         "text": "A Lord of Virulence is equipped with: twin plague spewer; plague claw; blight grenades; krak grenades.\n\n\n\nnull",
@@ -16744,7 +16448,6 @@
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
             "Ability§Pestilential Fallout",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -17060,7 +16763,6 @@
             "Ability§Pestilential Fallout",
             "Ability§Sigil of Corruption",
             "Ability§Master of the Dead",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -17139,7 +16841,6 @@
             "Ability§Jump Pack Assault",
             "Ability§Malicious Volleys",
             "Ability§Hateful Assault",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -17321,7 +17022,6 @@
             "Ability§Lord of the Death Guard (Aura)",
             "Ability§Vector of Disease",
             "Ability§Herald of Nurgle",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -17404,7 +17104,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -17475,7 +17182,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -17546,7 +17260,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -17622,8 +17343,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Unstable Reactor",
-            "Ability§Armour of Contempt"
+            "Ability§Unstable Reactor"
           ]
         },
         "text": "A Chaos Cerberus is equipped with: Cerberus neutron pulse array; crushing tracks.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -17818,7 +17538,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -17913,7 +17640,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18008,7 +17742,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18103,7 +17844,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18198,7 +17946,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18306,8 +18061,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Falchion is equipped with: 2 quad lascannons; twin heavy bolter; twin Falchion volcano cannon; crushing tracks.\n\n• This model's 2 quad lascannons can be replaced with 2 laser destroyers.\n\n• This model's twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -18510,7 +18264,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18613,7 +18374,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18716,7 +18484,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18819,7 +18594,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -18922,7 +18704,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -19025,7 +18814,14 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -19133,8 +18929,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Fellblade is equipped with: demolisher siege cannon; Fellblade accelerator cannon; 2 quad lascannons; twin heavy bolter; crushing tracks.\n\n• This model's 2 quad lascannons can be replaced with 2 laser destroyers.\n\n• This model’s twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -19758,8 +19553,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
             "Ability§Explodes",
-            "Ability§Void Shields",
-            "Ability§Armour of Contempt"
+            "Ability§Void Shields"
           ]
         },
         "text": "A Chaos Mastodon is equipped with: 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; crushing tracks.\n\n\n\nnull",
@@ -20131,8 +19925,7 @@
             "Ability§Supersonic",
             "Ability§Hover Jet",
             "Ability§Explodes",
-            "Ability§Void Shields",
-            "Ability§Armour of Contempt"
+            "Ability§Void Shields"
           ]
         },
         "text": "A Chaos Sokar-pattern Stormbird is equipped with: hellstrike missile battery; 3 twin heavy bolters; 4 twin lascannons.\n\n\n\nnull",
@@ -20327,7 +20120,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -20421,7 +20221,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -20515,7 +20322,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -20609,7 +20423,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -20717,8 +20538,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Spartan is equipped with: 2 quad lascannons; twin heavy bolter; crushing tracks.\n\n• This model's 2 quad lascannons can be replaced with 2 laser destroyers.\n\n• This model's twin heavy bolter can be replaced with 1 twin heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -21278,8 +21098,7 @@
             "Ability§Hard to Hit",
             "Ability§Supersonic",
             "Ability§Hover Jet",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Thunderhawk Gunship is equipped with: 2 lascannons; Thunderhawk heavy cannon; 4 twin heavy bolters; Thunderhawk cluster bombs.\n\n• This model’s Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor.\n\n• This model’s Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery.\n\nnull",
@@ -21474,7 +21293,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -21545,7 +21371,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -21616,7 +21449,14 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Combi-bolter"
+                    "trait": {
+                      "item": "Weapon§Combi-bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -21700,8 +21540,7 @@
           "traits": [
             "Ability§Let the Galaxy Burn",
             "Ability§Martial Legacy",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Chaos Typhon is equipped with: dreadhammer siege cannon; crushing tracks.\n\n• This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\n\n• This model can be equipped with one of the following: 1 heavy bolter; 1 heavy flamer; 1 multi-melta; 1 combi-bolter.\n\nnull",
@@ -22142,8 +21981,7 @@
             "Ability§Let the Galaxy Burn",
             "Ability§Drop Pod Assault",
             "Ability§Hover Transport",
-            "Ability§Explodes",
-            "Ability§Armour of Contempt"
+            "Ability§Explodes"
           ]
         },
         "text": "A Kharybdis Assault Claw is equipped with: 5 Kharybdis storm launchers; blade struts; melta array; thermal jet array.\n\n\n\nnull",
@@ -22595,7 +22433,6 @@
             "Ability§Host of Plagues",
             "Ability§Putrid Explosion",
             "Ability§Toxic Presence",
-            "Ability§Armour of Contempt",
             "Psychic Power§Smite"
           ]
         },
@@ -22785,14 +22622,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
@@ -22800,14 +22630,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -22815,14 +22638,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-plasma",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-plasma"
                   }
                 ]
               },
@@ -22838,14 +22654,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Blight launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Blight launcher"
                   }
                 ]
               },
@@ -22861,14 +22670,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -22876,14 +22678,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flail of corruption",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flail of corruption"
                   }
                 ]
               },
@@ -22899,14 +22694,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Reaper autocannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Reaper autocannon"
                   }
                 ]
               }
@@ -22929,14 +22717,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
@@ -22944,14 +22725,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -22959,14 +22733,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-plasma",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-plasma"
                   }
                 ]
               },
@@ -22982,14 +22749,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Blight launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Blight launcher"
                   }
                 ]
               },
@@ -23005,14 +22765,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -23020,14 +22773,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flail of corruption",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flail of corruption"
                   }
                 ]
               },
@@ -23043,14 +22789,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Reaper autocannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Reaper autocannon"
                   }
                 ]
               }
@@ -23073,14 +22812,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
@@ -23088,14 +22820,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -23103,14 +22828,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-plasma",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-plasma"
                   }
                 ]
               },
@@ -23126,14 +22844,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Blight launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Blight launcher"
                   }
                 ]
               },
@@ -23149,14 +22860,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -23164,14 +22868,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flail of corruption",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flail of corruption"
                   }
                 ]
               },
@@ -23187,14 +22884,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Reaper autocannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Reaper autocannon"
                   }
                 ]
               }
@@ -23254,14 +22944,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
@@ -23269,14 +22952,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -23284,14 +22960,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-plasma",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-plasma"
                   }
                 ]
               },
@@ -23307,14 +22976,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Blight launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Blight launcher"
                   }
                 ]
               },
@@ -23330,14 +22992,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -23345,14 +23000,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flail of corruption",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flail of corruption"
                   }
                 ]
               },
@@ -23368,14 +23016,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Reaper autocannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Reaper autocannon"
                   }
                 ]
               }
@@ -23398,14 +23039,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
@@ -23413,14 +23047,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -23428,14 +23055,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-plasma",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-plasma"
                   }
                 ]
               },
@@ -23451,14 +23071,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Blight launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Blight launcher"
                   }
                 ]
               },
@@ -23474,14 +23087,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -23489,14 +23095,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flail of corruption",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flail of corruption"
                   }
                 ]
               },
@@ -23512,14 +23111,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Reaper autocannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Reaper autocannon"
                   }
                 ]
               }
@@ -23542,14 +23134,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-flamer",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-flamer"
                   }
                 ]
               },
@@ -23557,14 +23142,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-melta",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-melta"
                   }
                 ]
               },
@@ -23572,14 +23150,7 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Wargear§Combi-plasma",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Wargear§Combi-plasma"
                   }
                 ]
               },
@@ -23595,14 +23166,7 @@
                 "order": 5,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Blight launcher",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Blight launcher"
                   }
                 ]
               },
@@ -23618,14 +23182,7 @@
                 "order": 7,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Combi-bolter",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Combi-bolter"
                   }
                 ]
               },
@@ -23633,14 +23190,7 @@
                 "order": 8,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Flail of corruption",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Flail of corruption"
                   }
                 ]
               },
@@ -23656,14 +23206,7 @@
                 "order": 10,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Reaper autocannon",
-                      "stats": {
-                        "Points": {
-                          "value": 5
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Reaper autocannon"
                   }
                 ]
               }
@@ -23676,7 +23219,7 @@
       "Model§Chaos Spawn": {
         "stats": {
           "Points": {
-            "value": 23
+            "value": 21
           },
           "M": {
             "value": 7
@@ -24689,7 +24232,7 @@
       "Model§Myphitic Blight-hauler": {
         "stats": {
           "Points": {
-            "value": 120
+            "value": 110
           },
           "M": {
             "value": 10
@@ -25174,7 +24717,7 @@
       "Model§Plague Champion": {
         "stats": {
           "Points": {
-            "value": 21
+            "value": 19
           },
           "M": {
             "value": 5
@@ -25341,14 +24884,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -25356,14 +24892,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -25506,14 +25035,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -25521,14 +25043,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -25671,14 +25186,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -25686,14 +25194,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -25836,14 +25337,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -25851,14 +25345,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -26001,14 +25488,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -26016,14 +25496,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -26036,7 +25509,7 @@
       "Model§Plague Marine": {
         "stats": {
           "Points": {
-            "value": 21
+            "value": 19
           },
           "M": {
             "value": 5
@@ -26203,14 +25676,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -26218,14 +25684,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -26368,14 +25827,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -26383,14 +25835,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -26533,14 +25978,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -26548,14 +25986,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -26698,14 +26129,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -26713,14 +26137,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -26863,14 +26280,7 @@
                 "order": 16,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Plague spewer",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Plague spewer"
                   }
                 ]
               },
@@ -26878,14 +26288,7 @@
                 "order": 17,
                 "traits": [
                   {
-                    "trait": {
-                      "item": "Weapon§Power fist",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
+                    "trait": "Weapon§Power fist"
                   }
                 ]
               }
@@ -27367,7 +26770,6 @@
             "Ability§Disgustingly Resilient",
             "Ability§Contagions of Nurgle",
             "Ability§Vectors of Death",
-            "Ability§Armour of Contempt",
             {
               "item": "Model§Plague Marine",
               "quantity": 4
@@ -27455,12 +26857,7 @@
         }
       },
       "Wargear§Chimes of contagion": {
-        "text": "Add 3″ to the Contagion Range of all **Contagion abilities** that the bearer’s unit has (to a maximum of 12\").",
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        }
+        "text": "Add 3″ to the Contagion Range of all **Contagion abilities** that the bearer’s unit has (to a maximum of 12\")."
       },
       "Wargear§Combi-flamer": {
         "assets": {
@@ -27468,11 +26865,6 @@
             "Weapon§Boltgun",
             "Weapon§Flamer"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Combi-melta": {
@@ -27481,11 +26873,6 @@
             "Weapon§Boltgun",
             "Weapon§Meltagun"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Combi-plasma": {
@@ -27495,11 +26882,6 @@
             "Weapon§Plasma gun (standard)",
             "Weapon§Plasma gun (supercharge)"
           ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
         }
       },
       "Wargear§Conversion beam cannon": {
@@ -28270,9 +27652,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 10
           }
         },
         "text": "Each time an attack is made with this weapon, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), and if that attack is allocated to a **VEHICLE** model, that attack has a Damage characteristic of 3."
@@ -28333,9 +27712,6 @@
           },
           "Range": {
             "value": "24″"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
@@ -28536,9 +27912,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 10
           }
         },
         "text": "Each time the bearer fights, it makes 3 additional attacks with this weapon."
@@ -28682,9 +28055,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
@@ -28705,9 +28075,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "**Plague Weapon**. Each time an attack is made with this weapon, make 3 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1."
@@ -28967,9 +28334,6 @@
           },
           "Range": {
             "value": "48″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
@@ -29010,9 +28374,6 @@
           },
           "Range": {
             "value": "36″"
-          },
-          "Points": {
-            "value": 10
           }
         },
         "text": "**Plague Weapon**"
@@ -29097,9 +28458,6 @@
           },
           "Range": {
             "value": "36″"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
@@ -29816,9 +29174,6 @@
           },
           "Range": {
             "value": "6″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). **Plague Weapon**. The bearer can only shoot with this weapon once per battle."
@@ -29959,9 +29314,6 @@
           },
           "Range": {
             "value": "12″"
-          },
-          "Points": {
-            "value": 5
           }
         },
         "text": "**Plague Weapon**. Each time an attack is made with this weapon, that attack automatically hits the target."
@@ -30140,9 +29492,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 10
           }
         },
         "text": "Each time an attack is made with this weapon, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -30163,9 +29512,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
@@ -30205,9 +29551,6 @@
           },
           "Range": {
             "value": "Melee"
-          },
-          "Points": {
-            "value": 5
           }
         }
       },
