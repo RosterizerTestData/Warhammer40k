@@ -1,21 +1,89 @@
 {
   "name": "Astra Militarum",
-  "revision": "0.0.9",
+  "revision": "0.0.10",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
-      "slug": "NZWZG9",
+      "slug": "123456",
       "name": "40k9e",
       "game": "Warhammer 40,000"
     }
   ],
   "manifest": {
     "assetTaxonomy": {
+      "Detachment": {
+        "stats": {
+          "Regiment": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Brood Brothers": {
+                "order": 1
+              },
+              "Militarum Tempestus": {
+                "order": 2
+              }
+            },
+            "dynamic": true
+          }
+        },
+        "rules": {
+          "populate faction": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Regiment",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "traits",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Regiment",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Regiment",
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
       "Heirlooms of Conquest": {
         "templateClass": "Relic"
       },
@@ -24,6 +92,76 @@
       },
       "Psykana Discipline": {
         "templateClass": "Psychic Power"
+      },
+      "Unit": {
+        "rules": {
+          "replace subfaction keyword": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Regiment",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "<Regiment>",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "actionType": "remove",
+                "value": "<Regiment>",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "actionType": "add",
+                "value": [
+                  "{parent}",
+                  "stats",
+                  "Regiment",
+                  "processed",
+                  "rank",
+                  "current"
+                ],
+                "iterations": 1
+              }
+            ]
+          }
+        }
       }
     },
     "assetCatalog": {
@@ -34,7 +172,7 @@
         "text": "During deployment, you can set up this model in a high-altitude transport, ready to deploy via grav-chute, instead of placing it on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) the model can make an aerial drop – set it up anywhere on the battlefield that is more than 9″ away from any enemy models.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nDuring deployment, you can set up this unit high in the skies instead of setting it up on the battlefield. If you do so, then in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nDuring deployment, you can set up this unit in a high altitude transport instead of setting it up on the battlefield. If you do, then in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models."
       },
       "Ability§Aeronautica Commander": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one enemy unit within 30″ of and visible to this model. Until the start of your next Command phase, each time a friendly **AERONAUTICA IMPERIALS** model makes a ranged attack against that enemy unit, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one enemy unit within 30″ of and visible to this model. Until the start of your next Command phase, each time a friendly **AERONAUTICA IMPERIALIS** model makes a ranged attack against that enemy unit, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
       },
       "Ability§Airborne": {
         "text": "You cannot [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) with this model, and it can only be chosen as a target of a charge if the unit making the charge can [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying). You can only fight with this model if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units that can FLY**, and this model can only make melee attacks against units that can FLY**. Enemy units can only make melee attacks against this model if they can FLY**."
@@ -137,9 +275,6 @@
       },
       "Ability§Death Korps": {
         "text": "Each time an attack is made against this unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-2 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have."
-      },
-      "Ability§Death Rider Officer": {
-        "text": "This model can **issue orders** to CAVALRY** units, as well as INFANTRY** units. All other rules for issuing orders still apply."
       },
       "Ability§Deathstrike Missile": {
         "text": "During the Muster Armies step, after you have seen your opponent’s [army roster](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battle-forged-Army-Roster), select one of the following warheads for this model to be equipped with and make a note of this selection on your army roster: godspear warhead; plasma barrage warhead; vortex warhead."
@@ -346,16 +481,7 @@
         "text": "Once per game, instead of shooting any weapons in the [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), this model can use its smoke launchers; if it does so, until your next Shooting phase your opponent must subtract 1 from any [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) that target it.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nOnce per game, instead of shooting any weapons in the [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), this unit can use its smoke launchers; until your next Shooting phase your opponent must subtract 1 from all [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for ranged weapons that target it.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nOnce per game, instead of shooting any weapons in the [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), this model can use its smoke launchers; until your next Shooting phase your opponent must subtract 1 from all [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for ranged weapons that target this vehicle."
       },
       "Ability§Specialist Operators": {
-        "text": "",
-        "stats": {
-          "Regiment": {
-            "statType": "term",
-            "value": "&lt;REGIMENT&gt;",
-            "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can only include one of this unit in a Detachment for each **{v} VETERANS** or **{v} COMBAT** ENGINEER** SQUAD** unit in the same Detachment.",
-            "visibility": "hidden",
-            "dynamic": true
-          }
-        }
+        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can only include one of this unit in a [Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachments) for each **COMBAT ENGINEER** SQUAD** unit in the same Detachment."
       },
       "Ability§Steel Behemoth": {
         "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model is selected to shoot, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can make attacks against eligible enemy units that are not within Engagement Range of it as if there were no enemy models within Engagement Range of it."
@@ -370,16 +496,7 @@
         "text": "Each time a model in this unit makes an attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit."
       },
       "Ability§Subterranean Assault": {
-        "text": "",
-        "stats": {
-          "Regiment": {
-            "statType": "term",
-            "value": "&lt;REGIMENT&gt;",
-            "text": "During deployment, you can set up this unit underground instead of setting it up on the battlefield. If you do, you can also set up one **{v} VETERANS** or **{v} COMBAT** ENGINEER** SQUAD** unit underground with it; if you do so, at the start of the battle, this model counts as having friendly models embarked within it for the purposes of any mission rules. During the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this unit, and any unit set up underground with it anywhere on the battlefield within 3″ of each other and more than 9″ away from any enemy models.",
-            "visibility": "hidden",
-            "dynamic": true
-          }
-        }
+        "text": "During deployment, you can set up this unit underground instead of setting it up on the battlefield. If you do, you can also set up one **COMBAT ENGINEER** SQUAD** unit underground with it. During the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this unit, and any unit set up underground with it anywhere on the battlefield within 3″ of each other and more than 9″ away from any enemy models."
       },
       "Ability§Summary Execution": {
         "text": "Once per turn, when a friendly **ASTRA MILITARUM** CORE** unit within 6″ of this model fails a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests), this model can use this ability. If it does so, until the end of the phase, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, it is automatically passed.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThe first time an ASTRA MILITARUM unit fails a Morale test during the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE) whilst it is within 6″ of any friendly **COMMISSAR** models, you can execute a model. If you do, one model of your choice in that unit is slain and the Morale test is re-rolled (do not include this slain model when re-rolling the Morale test)."
@@ -388,16 +505,7 @@
         "text": "When this model moves in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), first pivot it on the spot up to 90° (this does not contribute to how far the model moves), then move the model straight forwards. It cannot pivot again after the initial pivot. When this model Advances, add 20″ to its Move characteristic until the end of the Movement phase instead of making an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back), first pivot it on the spot up to 90° (this does not contribute to how far the model moves), then move this model straight forwards. It cannot pivot again after the initial pivot."
       },
       "Ability§Support Vehicle": {
-        "text": "",
-        "stats": {
-          "Regiment": {
-            "statType": "term",
-            "value": "&lt;REGIMENT&gt;",
-            "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can repair one friendly **{v} VEHICLE** model within 3″ of it. That VEHICLE** model regains 1 lost wound. Each model can only be repaired once per turn. In addition, if that VEHICLE** model has already shot with any weapons that can only be used once per battle, those weapons can be used one additional time this battle.",
-            "visibility": "hidden",
-            "dynamic": true
-          }
-        }
+        "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can repair one friendly **ASTRA MILITARUM** VEHICLE** model within 3″ of it. That VEHICLE** model regains 1 lost wound. Each model can only be repaired once per turn. In addition, if that VEHICLE** model has already shot with any weapons that can only be used once per battle, those weapons can be used one additional time this battle."
       },
       "Ability§Tactical Genius": {
         "text": "While this model is on the battlefield, you can use the [Command Re-roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems) Stratagem up to twice per phase, instead of only once."
@@ -433,7 +541,7 @@
         "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
       },
       "Ability§Warrior Elites": {
-        "text": "When you add this unit to your army, you can select one [Regimental doctrine](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Regimental-Doctrines) that no other unit from your army has. This unit has that doctrine in addition to any others it has."
+        "text": "When you add this unit to your army, you can select one [Regimental doctrine](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Regimental-Doctrines) (except [Born Soldiers](https://wahapedia.ru/wh40k9ed/factions/astra-militarum/#Regimental-Doctrine:-Born-Soldiers)) that no other unit from your army has. This unit has that doctrine in addition to any others it has."
       },
       "Ability§Warrior Zealot": {
         "text": "Each time this model makes a melee attack, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -1072,6 +1180,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -1749,6 +1858,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -1995,18 +2105,19 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Hades Breaching Drill",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -2020,7 +2131,7 @@
         },
         "text": "A Hades Breaching Drill is equipped with: melta-cutter drill.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Dedicated Transport§Storm Chimera": {
@@ -2642,6 +2753,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -3305,19 +3417,20 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Regimental",
             "Transport",
             "Trojan Support Vehicle",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -3455,7 +3568,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Atlas Recovery Tank": {
@@ -3921,23 +4034,27 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Combat Engineer Squad",
-            "Infantry"
+            "Infantry",
+            "Platoon",
+            "Regimental"
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium",
             "Krieg"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Sappers",
             "Ability§Engineer Weapons Team",
             {
@@ -3955,7 +4072,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Commissar": {
@@ -4404,7 +4521,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -4412,10 +4529,12 @@
           "Keywords": [
             "Cavalry",
             "Command Squadron",
-            "Death Riders"
+            "Death Riders",
+            "Regimental"
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium",
             "Krieg"
           ]
@@ -4438,7 +4557,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Death Rider Commissar": {
@@ -7299,6 +7418,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -7419,23 +7539,27 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Cavalry",
-            "Death Riders"
+            "Death Riders",
+            "Platoon",
+            "Regimental"
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium",
             "Krieg"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Augmented Mount",
             "Ability§Flanking Manoeuvres",
             {
@@ -7452,7 +7576,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fast Attack§Hellhound": {
@@ -7814,6 +7938,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -8373,6 +8498,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -8763,6 +8889,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -9270,7 +9397,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -9299,7 +9426,7 @@
         },
         "text": "An Arvus Lighter has no equipment.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Avenger Strike Fighter": {
@@ -9563,7 +9690,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -9716,7 +9843,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Thunderbolt": {
@@ -9885,7 +10012,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -10038,7 +10165,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Valkyrie": {
@@ -10310,7 +10437,7 @@
             "Vehicle"
           ],
           "Faction": [
-            "Aeronautica Imperials",
+            "Aeronautica Imperialis",
             "Astra Militarum",
             "Imperium",
             "Militarum Tempestus"
@@ -10944,7 +11071,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -11099,7 +11226,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Voss-pattern Lightning": {
@@ -11227,7 +11354,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -11380,7 +11507,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Vulture Gunship": {
@@ -11573,7 +11700,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -11727,7 +11854,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fortifications§Aegis Defence Line": {
@@ -11823,6 +11950,7 @@
             "Wall Section"
           ],
           "Faction": [
+            "Brood Brothers",
             "Unaligned"
           ]
         },
@@ -12223,6 +12351,7 @@
             "Vehicle"
           ],
           "Faction": [
+            "Brood Brothers",
             "Unaligned"
           ]
         },
@@ -12271,19 +12400,20 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Artillery",
+            "Regimental",
             "Tarantula Battery",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -12301,7 +12431,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Armageddon-pattern Basilisks": {
@@ -12309,35 +12439,240 @@
           "Power Level": {
             "value": 7
           },
-          "model": {
-            "value": "Model§Armageddon-pattern Basilisk"
+          "Points": {
+            "value": 130
           },
-          "Armageddon-pattern Basilisks": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "M": {
+            "value": 12
           },
-          "poweri": {
+          "WS": {
+            "value": 6
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 6
+          },
+          "T": {
             "value": 7
           },
-          "power1": {
-            "value": 2
+          "W": {
+            "value": 11,
+            "max": 11,
+            "min": 1,
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "statType": "numeric",
+            "visibility": "always"
           },
-          "power2": {
+          "A": {
             "value": 3
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 3
+          },
+          "Base": {
+            "value": "Use model"
+          },
+          "loadout1": {
+            "value": "Earthshaker cannon",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Earthshaker cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Earthshaker cannon"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy flamer"
+                  }
+                ]
+              },
+              "Heavy stubber": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy stubber"
+                  }
+                ]
+              },
+              "Hunter-killer missile": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hunter-killer missile"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Heavy bolter",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Earthshaker cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Earthshaker cannon"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy flamer"
+                  }
+                ]
+              },
+              "Heavy stubber": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy stubber"
+                  }
+                ]
+              },
+              "Hunter-killer missile": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hunter-killer missile"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Earthshaker cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Earthshaker cannon"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy flamer"
+                  }
+                ]
+              },
+              "Heavy stubber": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy stubber"
+                  }
+                ]
+              },
+              "Hunter-killer missile": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hunter-killer missile"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
           }
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -12345,30 +12680,151 @@
           "Keywords": [
             "Armageddon-pattern Basilisks",
             "Basilisk",
+            "Regimental",
+            "Smoke",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Vehicle Squadron",
-            "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Model§Armageddon-pattern Basilisk"
+            "Ability§Regimental Tactics",
+            "Ability§Explodes"
           ]
         },
-        "text": "If this unit contains 2 models, it has **Power Rating 14**. If this unit contains 3 models, it has Power Rating 21**. Every model is equipped with: earthshaker cannon; heavy bolter.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
-        "allowed": {
-          "items": [
-            "Model§Armageddon-pattern Basilisk"
-          ]
+        "text": "This model is equipped with: earthshaker cannon; heavy bolter.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
+        "rules": {
+          "dynamicDamageMid": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": 5,
+                "min": 3,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 8,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 5,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "A",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "D3",
+                "iterations": 1
+              }
+            ]
+          },
+          "dynamicDamageLow": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": 2,
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 4,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 6,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "A",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 1,
+                "iterations": 1
+              }
+            ]
+          }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Armageddon-pattern Medusas": {
@@ -12376,35 +12832,240 @@
           "Power Level": {
             "value": 8
           },
-          "model": {
-            "value": "Model§Armageddon-pattern Medusa"
+          "Points": {
+            "value": 140
           },
-          "Armageddon-pattern Medusas": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
+          "M": {
+            "value": 12
+          },
+          "WS": {
+            "value": 6
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 6
+          },
+          "T": {
+            "value": 7
+          },
+          "W": {
+            "value": 11,
+            "max": 11,
             "min": 1,
-            "max": 3,
+            "dynamic": true,
             "increment": {
               "value": 1
-            }
+            },
+            "statType": "numeric",
+            "visibility": "always"
           },
-          "poweri": {
-            "value": 8
-          },
-          "power1": {
-            "value": 2
-          },
-          "power2": {
+          "A": {
             "value": 3
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 3
+          },
+          "Base": {
+            "value": "Use model"
+          },
+          "loadout1": {
+            "value": "Medusa siege cannon",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heavy bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy flamer"
+                  }
+                ]
+              },
+              "Heavy stubber": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy stubber"
+                  }
+                ]
+              },
+              "Hunter-killer missile": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hunter-killer missile"
+                  }
+                ]
+              },
+              "Medusa siege cannon": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Medusa siege cannon"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Heavy bolter",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heavy bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy flamer"
+                  }
+                ]
+              },
+              "Heavy stubber": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy stubber"
+                  }
+                ]
+              },
+              "Hunter-killer missile": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hunter-killer missile"
+                  }
+                ]
+              },
+              "Medusa siege cannon": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Medusa siege cannon"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heavy bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy flamer"
+                  }
+                ]
+              },
+              "Heavy stubber": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Heavy stubber"
+                  }
+                ]
+              },
+              "Hunter-killer missile": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hunter-killer missile"
+                  }
+                ]
+              },
+              "Medusa siege cannon": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Medusa siege cannon"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
           }
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -12412,30 +13073,152 @@
           "Keywords": [
             "Armageddon-pattern Medusas",
             "Medusa",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Vehicle Squadron",
-            "Ability§Smoke Launchers",
-            "Ability§Explodes",
-            "Model§Armageddon-pattern Medusa"
+            "Ability§Regimental Tactics",
+            "Ability§Explodes"
           ]
         },
-        "text": "If this unit contains 2 models, it has **Power Rating 16**. If this unit contains 3 models, it has Power Rating 24**. Every model is equipped with: Medusa siege cannon; heavy bolter.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
-        "allowed": {
-          "items": [
-            "Model§Armageddon-pattern Medusa"
-          ]
+        "text": "This model is equipped with: Medusa siege cannon; heavy bolter.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
+        "rules": {
+          "dynamicDamageMid": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": 5,
+                "min": 3,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 8,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 5,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "A",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "D3",
+                "iterations": 1
+              }
+            ]
+          },
+          "dynamicDamageLow": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "W",
+                    "value"
+                  ]
+                ],
+                "max": 2,
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "M",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 4,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "BS",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 6,
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "A",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 1,
+                "iterations": 1
+              }
+            ]
+          }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Basilisk": {
@@ -12705,6 +13488,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -13224,23 +14008,28 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Battle Tank",
             "Carnodon",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
@@ -13373,7 +14162,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Colossus Bombards": {
@@ -13409,25 +14198,28 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Colossus Bombards",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Vehicle Squadron",
-            "Ability§Smoke Launchers",
             "Ability§Explodes",
             "Model§Colossus Bombard"
           ]
@@ -13439,7 +14231,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Cyclops Demolition Vehicle": {
@@ -13529,18 +14321,19 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Cyclops Demolition Vehicle",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -13553,7 +14346,7 @@
         },
         "text": "A Cyclops demolition vehicle is equipped with: Cyclops demolition charge.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Deathstrike": {
@@ -13760,6 +14553,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -14002,7 +14796,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -14010,16 +14804,19 @@
           "Keywords": [
             "Artillery",
             "Earthshaker Carriage",
+            "Platoon",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Artillery and Crew",
             "Model§Earthshaker Carriage (Earthshaker Carriage Battery)"
           ]
@@ -14031,7 +14828,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Field Ordnance Battery": {
@@ -14176,7 +14973,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -14184,16 +14981,19 @@
           "Keywords": [
             "Artillery",
             "Heavy Mortar",
+            "Platoon",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Artillery and Crew",
             "Model§Heavy Mortar"
           ]
@@ -14205,7 +15005,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Heavy Quad Launcher Battery": {
@@ -14241,7 +15041,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -14249,16 +15049,19 @@
           "Keywords": [
             "Artillery",
             "Heavy Quad Launcher",
+            "Platoon",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Artillery and Crew",
             "Model§Heavy Quad Launcher"
           ]
@@ -14270,7 +15073,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Heavy Weapons Squad": {
@@ -14295,6 +15098,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -14583,6 +15387,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -14906,6 +15711,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -15044,6 +15850,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -15130,23 +15937,8 @@
                   }
                 ]
               },
-              "Battle cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Battle cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
               "Heavy bolter": {
-                "order": 3,
+                "order": 2,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy bolter"
@@ -15154,7 +15946,7 @@
                 ]
               },
               "Heavy stubber": {
-                "order": 4,
+                "order": 3,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy stubber"
@@ -15162,7 +15954,7 @@
                 ]
               },
               "Hunter-killer missile": {
-                "order": 5,
+                "order": 4,
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -15170,7 +15962,7 @@
                 ]
               },
               "Lascannon": {
-                "order": 6,
+                "order": 5,
                 "traits": [
                   {
                     "trait": {
@@ -15181,6 +15973,14 @@
                         }
                       }
                     }
+                  }
+                ]
+              },
+              "Malcador battle cannon": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Malcador battle cannon"
                   }
                 ]
               },
@@ -15197,7 +15997,7 @@
             "dynamic": true
           },
           "loadout2": {
-            "value": "Battle cannon",
+            "value": "Malcador battle cannon",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 2,
@@ -15215,23 +16015,8 @@
                   }
                 ]
               },
-              "Battle cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Battle cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
               "Heavy bolter": {
-                "order": 3,
+                "order": 2,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy bolter"
@@ -15239,7 +16024,7 @@
                 ]
               },
               "Heavy stubber": {
-                "order": 4,
+                "order": 3,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy stubber"
@@ -15247,7 +16032,7 @@
                 ]
               },
               "Hunter-killer missile": {
-                "order": 5,
+                "order": 4,
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -15255,7 +16040,7 @@
                 ]
               },
               "Lascannon": {
-                "order": 6,
+                "order": 5,
                 "traits": [
                   {
                     "trait": {
@@ -15266,6 +16051,14 @@
                         }
                       }
                     }
+                  }
+                ]
+              },
+              "Malcador battle cannon": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Malcador battle cannon"
                   }
                 ]
               },
@@ -15300,23 +16093,8 @@
                   }
                 ]
               },
-              "Battle cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Battle cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
               "Heavy bolter": {
-                "order": 3,
+                "order": 2,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy bolter"
@@ -15324,7 +16102,7 @@
                 ]
               },
               "Heavy stubber": {
-                "order": 4,
+                "order": 3,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy stubber"
@@ -15332,7 +16110,7 @@
                 ]
               },
               "Hunter-killer missile": {
-                "order": 5,
+                "order": 4,
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -15340,7 +16118,7 @@
                 ]
               },
               "Lascannon": {
-                "order": 6,
+                "order": 5,
                 "traits": [
                   {
                     "trait": {
@@ -15351,6 +16129,14 @@
                         }
                       }
                     }
+                  }
+                ]
+              },
+              "Malcador battle cannon": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Malcador battle cannon"
                   }
                 ]
               },
@@ -15385,23 +16171,8 @@
                   }
                 ]
               },
-              "Battle cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Weapon§Battle cannon",
-                      "stats": {
-                        "Points": {
-                          "value": 0
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
               "Heavy bolter": {
-                "order": 3,
+                "order": 2,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy bolter"
@@ -15409,7 +16180,7 @@
                 ]
               },
               "Heavy stubber": {
-                "order": 4,
+                "order": 3,
                 "traits": [
                   {
                     "trait": "Weapon§Heavy stubber"
@@ -15417,7 +16188,7 @@
                 ]
               },
               "Hunter-killer missile": {
-                "order": 5,
+                "order": 4,
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -15425,7 +16196,7 @@
                 ]
               },
               "Lascannon": {
-                "order": 6,
+                "order": 5,
                 "traits": [
                   {
                     "trait": {
@@ -15436,6 +16207,14 @@
                         }
                       }
                     }
+                  }
+                ]
+              },
+              "Malcador battle cannon": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Malcador battle cannon"
                   }
                 ]
               },
@@ -15454,28 +16233,32 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Battle Tank",
             "Malcador",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Smoke Launchers",
+            "Ability§Regimental Tactics",
             "Ability§Explodes"
           ]
         },
-        "text": "A Malcador is equipped with: 2 autocannons; battle cannon; heavy bolter.\n\n• This model's 2 autocannons can be replaced with 2 heavy bolters or 2 lascannons.\n\n• This model’s heavy bolter can be replaced with 1 autocannon or 1 lascannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
+        "text": "A Malcador is equipped with: 2 autocannons; Malcador battle cannon; heavy bolter.\n\n• This model's 2 autocannons can be replaced with 2 heavy bolters or 2 lascannons.\n\n• This model’s heavy bolter can be replaced with 1 autocannon or 1 lascannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -15603,7 +16386,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Malcador Annihilator": {
@@ -15653,7 +16436,7 @@
             "value": "Use model"
           },
           "loadout1": {
-            "value": "Demolisher cannon",
+            "value": "Demolisher battle cannon",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 1,
@@ -15671,11 +16454,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -15757,11 +16540,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -15843,11 +16626,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -15929,11 +16712,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -15999,29 +16782,34 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Battle Tank",
             "Malcador",
             "Malcador Annihilator",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Malcador Annihilator is equipped with: demolisher cannon; 2 heavy bolters; Malcador twin lascannon.\n\n• This model’s 2 heavy bolters can be replaced with one of the following: 2 autocannons; 2 lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
+        "text": "A Malcador Annihilator is equipped with: demolisher battle cannon; 2 heavy bolters; Malcador twin lascannon.\n\n• This model’s 2 heavy bolters can be replaced with one of the following: 2 autocannons; 2 lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -16149,7 +16937,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Malcador Defender": {
@@ -16199,7 +16987,7 @@
             "value": "Use model"
           },
           "loadout1": {
-            "value": "Demolisher cannon",
+            "value": "Demolisher battle cannon",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 1,
@@ -16217,11 +17005,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -16295,11 +17083,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -16373,11 +17161,11 @@
                   }
                 ]
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -16435,29 +17223,34 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Battle Tank",
             "Malcador",
             "Malcador Defender",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Malcador Defender is equipped with: demolisher cannon; 7 heavy bolters.\n\n• This model can have 2 of its heavy bolters replaced with one of the following: 2 autocannons; 2 lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
+        "text": "A Malcador Defender is equipped with: demolisher battle cannon; 7 heavy bolters.\n\n• This model can have 2 of its heavy bolters replaced with one of the following: 2 autocannons; 2 lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -16585,7 +17378,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Malcador Infernus": {
@@ -16937,24 +17730,29 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Battle Tank",
             "Malcador",
             "Malcador Infernus",
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
@@ -17087,7 +17885,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Manticore": {
@@ -17357,6 +18155,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -17596,7 +18395,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -17604,16 +18403,19 @@
           "Keywords": [
             "Artillery",
             "Medusa Carriage",
+            "Platoon",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Artillery and Crew",
             "Model§Medusa Carriage"
           ]
@@ -17625,7 +18427,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Rapier Laser Destroyer Battery": {
@@ -17661,24 +18463,27 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Artillery",
+            "Platoon",
             "Rapier Laser Destroyer",
+            "Regimental",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Artillery and Crew",
             "Model§Rapier Laser Destroyer"
           ]
@@ -17690,7 +18495,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Rogal Dorn Battle Tank": {
@@ -18192,6 +18997,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -18518,37 +19324,40 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Regimental",
+            "Smoke",
+            "Squadron",
             "Thunderers",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Vehicle Squadron",
-            "Ability§Smoke Launchers",
             "Ability§Explodes",
             "Model§Thunderer"
           ]
         },
-        "text": "If this unit contains 2 models, it has **Power Rating 14**. If this unit contains 3 models, it has Power Rating 21**. Every model is equipped with: demolisher cannon.\n\n• Any number of models can be equipped with 1 hunter-killer missile.\n\n• Any number of models can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "If this unit contains 2 models, it has **Power Rating 14**. If this unit contains 3 models, it has Power Rating 21**. Every model is equipped with: demolisher battle cannon.\n\n• Any number of models can be equipped with 1 hunter-killer missile.\n\n• Any number of models can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "allowed": {
           "items": [
             "Model§Thunderer"
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Valdor Tank Hunter": {
@@ -18858,26 +19667,27 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Valdor Tank Hunter",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
@@ -19009,7 +19819,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Wyvern": {
@@ -19279,6 +20089,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -21128,7 +21939,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -21137,29 +21948,33 @@
             "Abhuman",
             "Bodyguard",
             "Character",
+            "Commandant",
             "Death Korps Marshal",
             "Infantry",
             "Militarum Auxilla",
             "Nork Deddog",
             "Officer",
-            "Ogryns"
+            "Ogryns",
+            "Regimental"
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium",
             "Krieg"
           ]
         },
         "assets": {
           "traits": [
+            "Ability§Regimental Tactics",
             "Ability§Voice of Command",
             "Ability§Refractor Field",
-            "Ability§Senior Officer"
+            "Ability§Senior Officer (Aura)"
           ]
         },
         "text": "A Death Korps Marshal is equipped with: laspistol; power sword; frag grenades.\n\n• This model’s laspistol can be replaced with one of the following: 1 bolt pistol; 1 plasma pistol.\n\n• This model’s power sword can be replaced with 1 chainsword.\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "HQ§Death Korps Marshal Karis Venner": {
@@ -22027,7 +22842,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -22037,10 +22852,12 @@
             "Character",
             "Death Riders",
             "Officer",
+            "Regimental",
             "Squadron Commander"
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium",
             "Krieg"
           ]
@@ -22050,13 +22867,12 @@
             "Ability§Voice of Command",
             "Ability§Flanking Manoeuvres",
             "Ability§Augmented Mount",
-            "Ability§Refractor Field",
-            "Ability§Death Rider Officer"
+            "Ability§Refractor Field"
           ]
         },
         "text": "A Death Rider Squadron Commander is equipped with: death rider hunting lance; laspistol; power sword; savage claws; frag grenades.\n\n• This model’s laspistol can be replaced with one of the following: 1 bolt pistol; 1 plasma pistol.\n\n• This model’s power sword can be replaced with 1 chainsword.\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "HQ§Gaunt’s Ghosts": {
@@ -22217,7 +23033,7 @@
             "value": 3
           },
           "Base": {
-            "value": ""
+            "value": "80mm"
           },
           "loadout1": {
             "value": "Sol’s Righteous Gaze",
@@ -22706,6 +23522,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -22764,7 +23581,7 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "32mm"
           },
           "loadout1": {
             "value": "Laspistol",
@@ -23899,6 +24716,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -24201,7 +25019,7 @@
             "value": 4
           },
           "Base": {
-            "value": ""
+            "value": "32mm"
           },
           "loadout1": {
             "value": "Duty and Vengeance",
@@ -24390,11 +25208,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -24513,11 +25331,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -24636,11 +25454,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -24759,11 +25577,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -24872,7 +25690,7 @@
             "dynamic": true
           },
           "loadout5": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 5,
@@ -24882,11 +25700,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25005,11 +25823,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25331,11 +26149,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25417,11 +26235,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25503,11 +26321,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25589,11 +26407,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25675,11 +26493,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25761,11 +26579,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25847,11 +26665,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -25923,7 +26741,7 @@
             "dynamic": true
           },
           "loadout8": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 8,
@@ -25933,11 +26751,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26019,11 +26837,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26113,6 +26931,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -26310,11 +27129,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26365,11 +27184,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26420,11 +27239,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26475,11 +27294,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26520,7 +27339,7 @@
             "dynamic": true
           },
           "loadout5": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 5,
@@ -26530,11 +27349,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26585,11 +27404,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26649,6 +27468,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -26847,11 +27667,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26902,11 +27722,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -26957,11 +27777,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27012,11 +27832,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27057,7 +27877,7 @@
             "dynamic": true
           },
           "loadout5": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 5,
@@ -27067,11 +27887,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27122,11 +27942,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27185,6 +28005,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -27382,11 +28203,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27419,7 +28240,7 @@
             "dynamic": true
           },
           "loadout2": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 2,
@@ -27429,11 +28250,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27476,11 +28297,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -27515,31 +28336,32 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Crassus",
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Transport",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Crassus is equipped with: 4 heavy bolters; adamantium tracks.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "A Crassus is equipped with: 4 heavy bolters; adamantine tracks.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -27667,7 +28489,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Dominus Armoured Siege Bombard": {
@@ -28188,11 +29010,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -28243,11 +29065,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -28298,11 +29120,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -28353,11 +29175,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -28398,7 +29220,7 @@
             "dynamic": true
           },
           "loadout5": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 5,
@@ -28408,11 +29230,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -28463,11 +29285,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -28527,6 +29349,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -29182,11 +30005,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29268,11 +30091,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29354,11 +30177,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29440,11 +30263,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29526,11 +30349,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29612,11 +30435,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29698,11 +30521,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29774,7 +30597,7 @@
             "dynamic": true
           },
           "loadout8": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 8,
@@ -29784,11 +30607,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29870,11 +30693,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -29964,6 +30787,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -30161,11 +30985,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -30254,11 +31078,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -30347,11 +31171,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -30430,7 +31254,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -30440,11 +31264,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -30533,11 +31357,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -30618,30 +31442,31 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Macharius",
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Macharius is equipped with: 2 heavy stubbers; Macharius twin battle cannon; twin heavy stubber; adamantium tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "A Macharius is equipped with: 2 heavy stubbers; Macharius twin battle cannon; twin heavy stubber; adamantine tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -30769,7 +31594,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Macharius Omega": {
@@ -31217,11 +32042,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -31310,11 +32135,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -31403,11 +32228,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -31486,7 +32311,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -31496,11 +32321,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -31589,11 +32414,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -31674,7 +32499,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -31682,23 +32507,24 @@
           "Keywords": [
             "Macharius",
             "Macharius Vanquisher",
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Macharius Vanquisher is equipped with: 2 heavy stubbers; Macharius twin vanquisher cannon; twin heavy stubber; adamantium tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "A Macharius Vanquisher is equipped with: 2 heavy stubbers; Macharius twin vanquisher cannon; twin heavy stubber; adamantine tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -31826,7 +32652,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Macharius Vulcan": {
@@ -31886,11 +32712,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -31979,11 +32805,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -32072,11 +32898,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -32155,7 +32981,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -32165,11 +32991,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -32258,11 +33084,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -32343,7 +33169,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -32351,23 +33177,24 @@
           "Keywords": [
             "Macharius",
             "Macharius Vulcan",
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Macharius Vulcan is equipped with: 2 heavy stubbers; Macharius vulcan mega-bolter; twin heavy stubber; adamantium tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "A Macharius Vulcan is equipped with: 2 heavy stubbers; Macharius vulcan mega-bolter; twin heavy stubber; adamantine tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -32495,7 +33322,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Marauder Bomber": {
@@ -32714,7 +33541,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -32868,7 +33695,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Marauder Destroyer": {
@@ -33192,7 +34019,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -33346,7 +34173,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Minotaur": {
@@ -33406,11 +34233,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33427,7 +34254,7 @@
             "dynamic": true
           },
           "loadout2": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 2,
@@ -33437,11 +34264,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33468,11 +34295,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33491,31 +34318,32 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Minotaur",
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes",
             "Ability§Armoured Frontis"
           ]
         },
-        "text": "A Minotaur is equipped with: Minotaur twin earthshaker cannon; adamantium tracks.\n\n\n\nnull",
+        "text": "A Minotaur is equipped with: Minotaur twin earthshaker cannon; adamantine tracks.\n\n\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -33643,7 +34471,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Praetor": {
@@ -33711,11 +34539,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33766,11 +34594,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33803,7 +34631,7 @@
             "dynamic": true
           },
           "loadout3": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 3,
@@ -33821,11 +34649,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33876,11 +34704,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -33915,30 +34743,31 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Praetor",
+            "Regimental",
+            "Smoke",
+            "Super-heavy",
             "Titanic",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Praetor is equipped with: 2 heavy bolters; Praetor launcher; adamantium tracks.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "A Praetor is equipped with: 2 heavy bolters; Praetor launcher; adamantine tracks.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -34066,7 +34895,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Shadowsword": {
@@ -34126,11 +34955,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34181,11 +35010,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34236,11 +35065,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34291,11 +35120,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34336,7 +35165,7 @@
             "dynamic": true
           },
           "loadout5": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 5,
@@ -34346,11 +35175,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34401,11 +35230,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34464,6 +35293,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -34669,11 +35499,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34770,11 +35600,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34853,7 +35683,7 @@
             "dynamic": true
           },
           "loadout3": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 3,
@@ -34871,11 +35701,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -34972,11 +35802,11 @@
                   }
                 ]
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35057,30 +35887,31 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
+            "Regimental",
+            "Smoke",
             "Stormblade",
+            "Super-heavy",
             "Titanic",
             "Vehicle"
           ],
           "Faction": [
-            "<Regiment>",
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
         "assets": {
           "traits": [
-            "Ability§Steel Behemoth",
-            "Ability§Smoke Launchers",
             "Ability§Explodes"
           ]
         },
-        "text": "A Stormblade is equipped with: 1 heavy bolter; 1 Stormblade plasma blastgun; adamantium tracks.\n\n• This model can be equipped with one of the following: 2 lascannons and 2 Stormblade twin heavy bolters; 2 lascannons and 2 twin heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
+        "text": "A Stormblade is equipped with: 1 heavy bolter; 1 Stormblade plasma blastgun; adamantine tracks.\n\n• This model can be equipped with one of the following: 2 lascannons and 2 Stormblade twin heavy bolters; 2 lascannons and 2 twin heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -35208,7 +36039,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Stormlord": {
@@ -35268,11 +36099,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35338,11 +36169,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35408,11 +36239,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35478,11 +36309,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35548,11 +36379,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35608,7 +36439,7 @@
             "dynamic": true
           },
           "loadout6": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 6,
@@ -35618,11 +36449,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35688,11 +36519,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -35767,6 +36598,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -35965,11 +36797,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -36020,11 +36852,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -36075,11 +36907,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -36130,11 +36962,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -36175,7 +37007,7 @@
             "dynamic": true
           },
           "loadout5": {
-            "value": "Adamantium tracks",
+            "value": "Adamantine tracks",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 5,
@@ -36185,11 +37017,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -36240,11 +37072,11 @@
               "-": {
                 "order": 0
               },
-              "Adamantium tracks": {
+              "Adamantine tracks": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Adamantium tracks"
+                    "trait": "Weapon§Adamantine tracks"
                   }
                 ]
               },
@@ -36303,6 +37135,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -36441,726 +37274,6 @@
         },
         "meta": {
           "Publication": "[Astra Militarum (Codex) 9th ed. –  @2022-11-12](null)"
-        }
-      },
-      "Model§Armageddon-pattern Basilisk": {
-        "stats": {
-          "Points": {
-            "value": 130
-          },
-          "M": {
-            "value": 12
-          },
-          "WS": {
-            "value": 6
-          },
-          "BS": {
-            "value": 4
-          },
-          "S": {
-            "value": 6
-          },
-          "T": {
-            "value": 7
-          },
-          "W": {
-            "value": 11,
-            "max": 11,
-            "min": 1,
-            "dynamic": true,
-            "increment": {
-              "value": 1
-            },
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "A": {
-            "value": 3
-          },
-          "Ld": {
-            "value": 7
-          },
-          "Sv": {
-            "value": 3
-          },
-          "Base": {
-            "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Earthshaker cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Earthshaker cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Earthshaker cannon"
-                  }
-                ]
-              },
-              "Heavy bolter": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy flamer"
-                  }
-                ]
-              },
-              "Heavy stubber": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy stubber"
-                  }
-                ]
-              },
-              "Hunter-killer missile": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Heavy bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Earthshaker cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Earthshaker cannon"
-                  }
-                ]
-              },
-              "Heavy bolter": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy flamer"
-                  }
-                ]
-              },
-              "Heavy stubber": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy stubber"
-                  }
-                ]
-              },
-              "Hunter-killer missile": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Earthshaker cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Earthshaker cannon"
-                  }
-                ]
-              },
-              "Heavy bolter": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy flamer"
-                  }
-                ]
-              },
-              "Heavy stubber": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy stubber"
-                  }
-                ]
-              },
-              "Hunter-killer missile": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          }
-        },
-        "rules": {
-          "dynamicDamageMid": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": 5,
-                "min": 3,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 8,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 5,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "D3",
-                "iterations": 1
-              }
-            ]
-          },
-          "dynamicDamageLow": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": 2,
-                "min": 1,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 4,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 6,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 1,
-                "iterations": 1
-              }
-            ]
-          }
-        }
-      },
-      "Model§Armageddon-pattern Medusa": {
-        "stats": {
-          "Points": {
-            "value": 140
-          },
-          "M": {
-            "value": 12
-          },
-          "WS": {
-            "value": 6
-          },
-          "BS": {
-            "value": 4
-          },
-          "S": {
-            "value": 6
-          },
-          "T": {
-            "value": 7
-          },
-          "W": {
-            "value": 11,
-            "max": 11,
-            "min": 1,
-            "dynamic": true,
-            "increment": {
-              "value": 1
-            },
-            "statType": "numeric",
-            "visibility": "always"
-          },
-          "A": {
-            "value": 3
-          },
-          "Ld": {
-            "value": 7
-          },
-          "Sv": {
-            "value": 3
-          },
-          "Base": {
-            "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Medusa siege cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy flamer"
-                  }
-                ]
-              },
-              "Heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy stubber"
-                  }
-                ]
-              },
-              "Hunter-killer missile": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Medusa siege cannon": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Medusa siege cannon"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Heavy bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy flamer"
-                  }
-                ]
-              },
-              "Heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy stubber"
-                  }
-                ]
-              },
-              "Hunter-killer missile": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Medusa siege cannon": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Medusa siege cannon"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy flamer"
-                  }
-                ]
-              },
-              "Heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy stubber"
-                  }
-                ]
-              },
-              "Hunter-killer missile": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hunter-killer missile"
-                  }
-                ]
-              },
-              "Medusa siege cannon": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Medusa siege cannon"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 6,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          }
-        },
-        "rules": {
-          "dynamicDamageMid": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": 5,
-                "min": 3,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 8,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 5,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "D3",
-                "iterations": 1
-              }
-            ]
-          },
-          "dynamicDamageLow": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "max": 2,
-                "min": 1,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "M",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 4,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "BS",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 6,
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": 1,
-                "iterations": 1
-              }
-            ]
-          }
         }
       },
       "Model§Armoured Sentinel": {
@@ -41350,7 +41463,7 @@
             "value": 5
           },
           "Base": {
-            "value": ""
+            "value": "25mm"
           }
         }
       },
@@ -42779,7 +42892,7 @@
             "value": 5
           },
           "Base": {
-            "value": ""
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Laspistol",
@@ -45767,7 +45880,7 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "50mm"
           },
           "loadout1": {
             "value": "Heavy bolter",
@@ -46193,7 +46306,7 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "50mm"
           }
         },
         "rules": {
@@ -46333,7 +46446,7 @@
             "value": 5
           },
           "Base": {
-            "value": ""
+            "value": "25mm"
           }
         }
       },
@@ -46370,7 +46483,7 @@
             "value": 5
           },
           "Base": {
-            "value": ""
+            "value": "25mm"
           },
           "loadout1": {
             "value": "Laspistol",
@@ -47314,7 +47427,14 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": "Weapon§Storm bolter"
+                    "trait": {
+                      "item": "Weapon§Storm bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -47534,7 +47654,14 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": "Weapon§Storm bolter"
+                    "trait": {
+                      "item": "Weapon§Storm bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -47754,7 +47881,14 @@
                 "order": 13,
                 "traits": [
                   {
-                    "trait": "Weapon§Storm bolter"
+                    "trait": {
+                      "item": "Weapon§Storm bolter",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
                   }
                 ]
               },
@@ -60409,7 +60543,7 @@
             "value": "Use model"
           },
           "loadout1": {
-            "value": "Demolisher cannon",
+            "value": "Demolisher battle cannon",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 1,
@@ -60419,11 +60553,11 @@
               "-": {
                 "order": 0
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -60466,11 +60600,11 @@
               "-": {
                 "order": 0
               },
-              "Demolisher cannon": {
+              "Demolisher battle cannon": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Weapon§Demolisher cannon"
+                    "trait": "Weapon§Demolisher battle cannon"
                   }
                 ]
               },
@@ -61734,6 +61868,7 @@
           ],
           "Faction": [
             "Astra Militarum",
+            "Brood Brothers",
             "Imperium"
           ]
         },
@@ -61953,7 +62088,7 @@
         }
       },
       "Wargear§Death Korps medi-pack": {
-        "text": "The bearer gains the **MEDIC** keyword. Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed fora model in the bearer’s unit, change the Damage characteristic of that attack to 0."
+        "text": "The bearer gains the **MEDIC** keyword. Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for a model in the bearer’s unit, change the Damage characteristic of that attack to 0."
       },
       "Wargear§Defence searchlight": {
         "text": "",
@@ -62205,7 +62340,7 @@
           }
         }
       },
-      "Weapon§Adamantium tracks": {
+      "Weapon§Adamantine tracks": {
         "stats": {
           "AP": {
             "value": -2
@@ -64015,6 +64150,26 @@
           }
         },
         "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). **Turret Weapon**. Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+4."
+      },
+      "Weapon§Malcador battle cannon": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Heavy D6+3"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
       },
       "Weapon§Malcador twin lascannon": {
         "stats": {

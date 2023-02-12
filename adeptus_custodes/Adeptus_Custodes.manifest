@@ -1,11 +1,11 @@
 {
   "name": "Adeptus Custodes",
-  "revision": "0.0.9",
+  "revision": "0.0.10",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -16,11 +16,161 @@
   ],
   "manifest": {
     "assetTaxonomy": {
+      "Detachment": {
+        "stats": {
+          "Shield Host": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Aquilan Shield": {
+                "order": 1
+              },
+              "Dread Host": {
+                "order": 2
+              },
+              "Emperor’s Chosen": {
+                "order": 3
+              },
+              "Emissaries Imperatus": {
+                "order": 4
+              },
+              "Shadowkeepers": {
+                "order": 5
+              },
+              "Solar Watch": {
+                "order": 6
+              }
+            },
+            "dynamic": true
+          }
+        },
+        "rules": {
+          "populate faction": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "traits",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Shield Host",
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
       "Relics of Terra": {
         "templateClass": "Relic"
       },
       "Relics of the Vigil": {
         "templateClass": "Relic"
+      },
+      "Unit": {
+        "rules": {
+          "replace subfaction keyword": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "<Shield Host>",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "actionType": "remove",
+                "value": "<Shield Host>",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "actionType": "add",
+                "value": [
+                  "{parent}",
+                  "stats",
+                  "Shield Host",
+                  "processed",
+                  "rank",
+                  "current"
+                ],
+                "iterations": 1
+              }
+            ]
+          }
+        }
       }
     },
     "assetCatalog": {
@@ -94,7 +244,16 @@
         "text": "Each time this model Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of this model.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time this unit Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of models in this unit."
       },
       "Ability§Inspirational Fighter (Aura)": {
-        "text": "While a friendly **&lt;SHIELD HOST&gt;** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
+        "text": "",
+        "stats": {
+          "Shield Host": {
+            "statType": "term",
+            "value": "&lt;SHIELD HOST&gt;",
+            "text": "While a friendly **{v}** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§Legacy of Combat": {
         "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase. This model is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6″ horizontally and 5″ vertically of any enemy unit. Each time this model makes a Heroic Intervention move, so long as it ends that move either closer to the closest enemy model or within Engagement Range of an enemy [**CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, it can move up to 6″. All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply."
@@ -103,7 +262,16 @@
         "text": "While a friendly **ADEPTUS CUSTODES** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1."
       },
       "Ability§Martial Inspiration": {
-        "text": "Each time a friendly **&lt;SHIELD HOST&gt;** unit declares a charge against enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this unit, add 1 to the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit."
+        "text": "",
+        "stats": {
+          "Shield Host": {
+            "statType": "term",
+            "value": "&lt;SHIELD HOST&gt;",
+            "text": "Each time a friendly **{v}** unit declares a charge against enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this unit, add 1 to the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Ability§Martial Ka’tah": {
         "text": "<div class=\"BreakInsideAvoid\">If every unit from your army has the **ADEPTUS** CUSTODES** keyword (excluding **ANATHEMA PSYKANA**, **AGENT OF** THE** IMPERIUM** and UNALIGNED** units), and every unit that is assigned to a [shield host](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Shield-Hosts) is assigned to the same shield host, this unit can use this ability and the following rules apply.\n\n\n\nAfter both sides have deployed, but before you have determined who will have the first turn, you must select a primary, secondary and tertiary martial ka’tah from the list below for your army to use in the battle. Note this down secretly on your [army roster](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battle-forged-Army-Roster).\n\n\n\nIn each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), so long as one is available, you must select one ka’tah stance to become active for your army. Each time you do so, units from your army with this ability benefit from it until the start of your next Command phase. When selecting a ka’tah stance to become active, the following rules apply:\n\n* You cannot select a ka’tah stance more than once.\n* You must select a primary ka’tah stance first, and you cannot select a tertiary ka’tah stance until you have selected a secondary ka’tah stance.\n* Once you select a stance of a different martial ka’tah, you cannot select a stance of a previous martial ka’tah.Example:** *Every model in Emily’s army has the ADEPTUS** CUSTODES** keyword. She selects Rendax** as her primary ka’tah, Dacatarai** as her secondary ka’tah and Calistus** as her tertiary ka’tah. In her first command phase, she selects Rendax stance 2 to be active.\n\n\n\nIn her second Command phase, she can select Rendax stance 1 to be active, or she can instead select Dacatarai stance 1 or 2 to be active, as she has previously selected a primary ka’tah stance. She cannot select a Calistus stance, as she must select a secondary ka’tah’s stance before she can select a tertiary ka’tah’s stance. She selects Dacatarai stance 1 to be active.\n\n\n\nIn her third Command phase, she can select Dacatarai stance 2 to be active, or she can instead select Calistus stance 1 or 2 to be active, as she has previously selected a secondary ka’tah stance. She cannot select Rendax stance 1, as she cannot select a stance of a previous ka’tah. She selects Calistus stance 2 to be active.\n\n\n\nIn her fourth Command phase, she must select Calistus stance 1 to be active, as it is the only remaining stance she is able to select. Note that this means in the fifth Command phase, there would be no ka’tah stances available to her, so she does not select one.*</div>"
@@ -133,7 +301,16 @@
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Watchmen": {
-        "text": "While a friendly **&lt;SHIELD HOST&gt;** CHARACTER** unit is within 3″ of this unit, that CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models."
+        "text": "",
+        "stats": {
+          "Shield Host": {
+            "statType": "term",
+            "value": "&lt;SHIELD HOST&gt;",
+            "text": "While a friendly **{v}** CHARACTER** unit is within 3″ of this unit, that CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Dedicated Transport§Anathema Psykana Rhino": {
         "stats": {
@@ -555,7 +732,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -708,7 +885,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Allarus Custodians": {
@@ -803,7 +980,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -839,7 +1016,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Contemptor-Achillus Dreadnought": {
@@ -1024,7 +1201,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -1051,7 +1228,7 @@
         },
         "text": "A Contemptor-Achillus Dreadnought is equipped with: Achillus dreadspear; 2 lastrum storm bolters.\n\n• This model's lastrum storm bolters can each be replaced with one of the following: 1 infernus incinerator; 1 twin adrathic destructor.\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Contemptor-Galatus Dreadnought": {
@@ -1201,7 +1378,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -1227,7 +1404,7 @@
         },
         "text": "A Contemptor-Galatus Dreadnought is equipped with: Galatus warblade; Galatus shield.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Custodian Wardens": {
@@ -2255,7 +2432,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -2290,7 +2467,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fast Attack§Pallas Grav-attack": {
@@ -2380,7 +2557,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -2405,7 +2582,7 @@
         },
         "text": "A Pallas Grav-attack is equipped with: twin arachnus blaze cannon.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fast Attack§Venatari Custodians": {
@@ -2475,7 +2652,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -2511,7 +2688,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fast Attack§Vertus Praetors": {
@@ -2853,7 +3030,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -3009,7 +3186,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Orion Assault Dropship": {
@@ -3217,7 +3394,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -3374,7 +3551,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Caladius Grav-tank": {
@@ -3543,7 +3720,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -3695,7 +3872,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Telemon Heavy Dreadnought": {
@@ -3912,7 +4089,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -4064,7 +4241,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Venerable Land Raider": {
@@ -8296,7 +8473,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -8329,7 +8506,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Troops§Prosecutors": {
@@ -8424,7 +8601,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -8457,7 +8634,7 @@
           ]
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Wargear§Achillus dreadspear": {
@@ -8612,13 +8789,40 @@
         }
       },
       "Wargear§Vexilla defensor": {
-        "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Defensor (Aura)**:** While a friendly **&lt;SHIELD HOST&gt;** CORE** or **&lt;SHIELD HOST&gt;** CHARACTER** unit is within 6″ of this model, it has the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover).’"
+        "text": "",
+        "stats": {
+          "Shield Host": {
+            "statType": "term",
+            "value": "&lt;SHIELD HOST&gt;",
+            "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Defensor (Aura)**:** While a friendly **{v}** CORE** or **{v}** CHARACTER** unit is within 6″ of this model, it has the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover).’",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Wargear§Vexilla imperius": {
-        "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Imperius (Aura)**:** While a friendly **&lt;SHIELD HOST&gt;** CORE** or **&lt;SHIELD HOST&gt;** CHARACTER** unit is within 6″ of this model, add 1 to the Attacks characteristic of each model in its unit.’"
+        "text": "",
+        "stats": {
+          "Shield Host": {
+            "statType": "term",
+            "value": "&lt;SHIELD HOST&gt;",
+            "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Imperius (Aura)**:** While a friendly **{v}** CORE** or **{v}** CHARACTER** unit is within 6″ of this model, add 1 to the Attacks characteristic of each model in its unit.’",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Wargear§Vexilla magnifica": {
-        "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Magnifica (Aura)**:** While a friendly **&lt;SHIELD HOST&gt;** CORE** or **&lt;SHIELD HOST&gt;** CHARACTER** unit is within 6″ of this model, it has the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover).’"
+        "text": "",
+        "stats": {
+          "Shield Host": {
+            "statType": "term",
+            "value": "&lt;SHIELD HOST&gt;",
+            "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Magnifica (Aura)**:** While a friendly **{v}** CORE** or **{v}** CHARACTER** unit is within 6″ of this model, it has the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover).’",
+            "visibility": "hidden",
+            "dynamic": true
+          }
+        }
       },
       "Wargear§Watcher’s Axe": {
         "assets": {

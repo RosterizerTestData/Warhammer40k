@@ -1,15 +1,15 @@
 {
   "name": "Chaos Daemons",
-  "revision": "0.0.9",
+  "revision": "0.0.10",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
-      "slug": "NZWZG9",
+      "slug": "123456",
       "name": "40k9e",
       "game": "Warhammer 40,000"
     }
@@ -5821,7 +5821,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -5829,8 +5829,10 @@
           "Keywords": [
             "Character",
             "Cor’bax Utterblight",
+            "Daemon",
             "Daemon Prince",
-            "Monster"
+            "Monster",
+            "Psyker"
           ],
           "Faction": [
             "Chaos",
@@ -5847,7 +5849,12 @@
             "Psychic Power§Smite"
           ]
         },
-        "text": "Cor’bax Utterblight is equipped with: gaping maw. Your army can only include one **COR’BAX UTTERBLIGHT** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Nurgle discipline.",
+        "text": "Cor’bax Utterblight is equipped with: gaping maw. Your army can only include one **COR’BAX UTTERBLIGHT** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Warprot Discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Warprot Discipline"
+          ]
+        },
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -5975,7 +5982,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "HQ§Daemon Prince of Chaos": {
@@ -9085,13 +9092,14 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Character",
+            "Daemon",
             "Daemon Prince",
             "Mamon Transfigured",
             "Monster"
@@ -9110,7 +9118,7 @@
         },
         "text": "Mamon Transfigured is equipped with: contagion spray; Fist of Decay. Your army can only include one **MAMON TRANSFIGURED** model.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "HQ§Poxbringer": {
@@ -13089,13 +13097,14 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Character",
+            "Daemon",
             "Daemon Prince",
             "Monster",
             "Uraka the Warfiend"
@@ -13116,7 +13125,7 @@
         },
         "text": "Uraka the Warfiend is equipped with: the Executioner’s Axe. Your army can only include one **URAKA THE** WARFIEND** model.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Aetaos’rau’keres": {
@@ -13261,7 +13270,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -13269,6 +13278,7 @@
           "Keywords": [
             "Aetaos’rau’keres",
             "Character",
+            "Daemon",
             "Fly",
             "Greater Daemon",
             "Lord of Change",
@@ -13293,7 +13303,12 @@
             "Psychic Power§Smite"
           ]
         },
-        "text": "Aetaos’rau’keres is equipped with: the Staff of Cataclysm; warpfire talons. Your army can only include one **AETAOS’RAU’KERES** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) three psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Tzeentch discipline.",
+        "text": "Aetaos’rau’keres is equipped with: the Staff of Cataclysm; warpfire talons. Your army can only include one **AETAOS’RAU’KERES** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) three psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Pandaemoniac Discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Pandaemoniac Discipline"
+          ]
+        },
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -13421,7 +13436,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§An’ggrath the Unbound": {
@@ -13566,7 +13581,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -13575,6 +13590,7 @@
             "An’ggrath the Unbound",
             "Bloodthirster",
             "Character",
+            "Daemon",
             "Fly",
             "Greater Daemon",
             "Monster",
@@ -13723,7 +13739,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Scabeiathrax the Bloated": {
@@ -13931,13 +13947,14 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Character",
+            "Daemon",
             "Great Unclean One",
             "Greater Daemon",
             "Monster",
@@ -13961,7 +13978,12 @@
             "Psychic Power§Smite"
           ]
         },
-        "text": "Scabeiathrax the Bloated is equipped with: Blade of Decay; horrific vomit; nurglings claws. Your army can only include one **SCABEIATHRAX THE** BLOATED** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Nurgle discipline.",
+        "text": "Scabeiathrax the Bloated is equipped with: Blade of Decay; horrific vomit; nurglings claws. Your army can only include one **SCABEIATHRAX THE** BLOATED** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Warprot Discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Warprot Discipline"
+          ]
+        },
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -14089,7 +14111,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Zarakynel": {
@@ -14234,13 +14256,14 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
           ],
           "Keywords": [
             "Character",
+            "Daemon",
             "Greater Daemon",
             "Keeper of Secrets",
             "Monster",
@@ -14263,7 +14286,12 @@
             "Psychic Power§Smite"
           ]
         },
-        "text": "Zarakynel is equipped with: slicing claws; the Souleater Blade. Your army can only include one **ZARAKYNEL** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the Slaanesh discipline.",
+        "text": "Zarakynel is equipped with: slicing claws; the Souleater Blade. Your army can only include one **ZARAKYNEL** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Pandaemoniac Discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Pandaemoniac Discipline"
+          ]
+        },
         "rules": {
           "dynamicDamageMid": {
             "evals": [
@@ -14391,7 +14419,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Model§Alluress": {

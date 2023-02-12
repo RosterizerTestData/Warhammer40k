@@ -1,15 +1,15 @@
 {
   "name": "Death Guard",
-  "revision": "0.0.9",
+  "revision": "0.0.10",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
-      "slug": "NZWZG9",
+      "slug": "123456",
       "name": "40k9e",
       "game": "Warhammer 40,000"
     }
@@ -391,7 +391,7 @@
         "text": "While a friendly **DEATH GUARD** INFANTRY** unit is wholly within 6″ of this model, it receives the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover). If it was already receiving the benefits of Light Cover, then each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Ability§Putrid Explosion": {
-        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time a model in this unit is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time a model in this unit is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 4+ it explodes, and each unit (excluding **NURGLE** units) within 6″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Ability§Relentless Hatred": {
         "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
@@ -1149,7 +1149,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -1165,6 +1165,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -1303,7 +1304,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Biologus Putrifier": {
@@ -1371,11 +1372,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -1418,11 +1419,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -1465,11 +1466,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -1486,7 +1487,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -1512,11 +1513,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -1559,11 +1560,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -2100,7 +2101,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -2120,6 +2121,7 @@
             "Chaos Undivided",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -2134,7 +2136,7 @@
         },
         "text": "A Chaos Contemptor Dreadnought is equipped with: 2 hellforged heavy plasma cannons.\n\n• Each of this model’s hellforged heavy plasma cannons can be replaced with one of the following: 1 conversion beam cannon; 1 hellforged kheres-pattern assault cannon; 1 multi-melta; 1 twin hellforged autocannon; 1 twin heavy bolter; 1 twin lascannon; 1 twin volkite culverin; 1 hellforged Dreadnought chainfist and 1 combi-bolter; 1 hellforged Dreadnought combat weapon and 1 combi-bolter.\n\n• Each of this model’s combi-bolters can be replaced with one of the following: 1 graviton blaster; 1 heavy flamer; 1 hellforged plasma blaster.\n\n• This model can be equipped with 1 hellforged cyclone missile launcher.\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Chaos Deredeo Dreadnought": {
@@ -2444,7 +2446,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -2462,6 +2464,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -2602,7 +2605,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Chaos Leviathan Dreadnought": {
@@ -2936,7 +2939,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -2954,6 +2957,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -3094,7 +3098,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Death Guard Possessed": {
@@ -3456,7 +3460,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -3473,6 +3477,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -3612,7 +3617,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Elites§Foul Blightspawn": {
@@ -3672,11 +3677,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -3719,11 +3724,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -3748,7 +3753,7 @@
             "dynamic": true
           },
           "loadout3": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 3,
@@ -3766,11 +3771,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -3813,11 +3818,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -3860,11 +3865,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -4533,11 +4538,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4580,11 +4585,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4627,11 +4632,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4640,7 +4645,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -4674,11 +4679,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4721,11 +4726,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4843,11 +4848,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4890,11 +4895,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4937,11 +4942,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -4950,7 +4955,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -4984,11 +4989,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -5031,11 +5036,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -5144,11 +5149,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -5183,11 +5188,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -5196,7 +5201,7 @@
             "dynamic": true
           },
           "loadout3": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 3,
@@ -5222,11 +5227,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -5261,11 +5266,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -5580,7 +5585,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -5610,7 +5615,7 @@
         },
         "text": "A Death Guard Greater Blight Drone is equipped with: bile maw; blightreaper cannon; greater plague probe.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fast Attack§Dreadclaw Drop Pod": {
@@ -5760,7 +5765,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -5777,6 +5782,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -5790,7 +5796,7 @@
         },
         "text": "A Dreadclaw Drop Pod is equipped with: blade struts; thermal jets.\n\n\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fast Attack§Foetid Bloat-drone": {
@@ -6406,7 +6412,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -6416,6 +6422,7 @@
             "Bubonic Astartes",
             "Chaos Fire Raptor Gunship",
             "Fly",
+            "Machine Spirit",
             "Relic",
             "Vehicle"
           ],
@@ -6424,6 +6431,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -6566,7 +6574,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Chaos Storm Eagle Gunship": {
@@ -6898,7 +6906,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -6908,6 +6916,7 @@
             "Bubonic Astartes",
             "Chaos Storm Eagle Gunship",
             "Fly",
+            "Machine Spirit",
             "Relic",
             "Transport",
             "Vehicle"
@@ -6917,6 +6926,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -7059,7 +7069,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Chaos Xiphon Interceptor": {
@@ -7204,7 +7214,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -7222,6 +7232,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -7363,7 +7374,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Hell Blade": {
@@ -7483,7 +7494,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -7500,6 +7511,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -7515,7 +7527,7 @@
         },
         "text": "A Hell Blade is equipped with: 2 twin autocannons.\n\n• This model’s 2 twin autocannons can be replaced with 2 lascannons.\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Flyers§Hell Talon": {
@@ -7760,7 +7772,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -7777,6 +7789,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -7918,7 +7931,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Fortifications§Miasmic Malignifier": {
@@ -9229,7 +9242,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -9238,6 +9251,7 @@
             "Bubonic Astartes",
             "Chaos Land Raider Achilles",
             "Land Raider",
+            "Machine Spirit",
             "Smokescreen",
             "Transport",
             "Vehicle"
@@ -9247,6 +9261,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -9385,7 +9400,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Land Raider Proteus": {
@@ -9709,7 +9724,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -9718,6 +9733,7 @@
             "Bubonic Astartes",
             "Chaos Land Raider Proteus",
             "Land Raider",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Transport",
@@ -9728,6 +9744,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -9866,7 +9883,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Predator Annihilator": {
@@ -10899,7 +10916,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -10915,6 +10932,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -10926,7 +10944,7 @@
         },
         "text": "A Chaos Rapier Carrier is equipped with: boltgun; quad heavy bolter. A Chaos Rapier Carrier unit has 1 separate Chaos Space Marine crew model.\n\n• The Chaos Rapier Carrier's quad heavy bolter can be replaced with one of the following: 1 graviton cannon; 1 laser destroyer; 1 quad launcher.\n\nnull",
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Sicaran Battle Tank": {
@@ -11164,7 +11182,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -11172,6 +11190,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Sicaran Battle Tank",
+            "Machine Spirit",
             "Relic",
             "Sicarian",
             "Smokescreen",
@@ -11182,6 +11201,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -11320,7 +11340,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Sicaran Punisher": {
@@ -11558,7 +11578,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -11566,6 +11586,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Sicaran Punisher",
+            "Machine Spirit",
             "Relic",
             "Sicarian",
             "Smokescreen",
@@ -11576,6 +11597,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -11714,7 +11736,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Sicaran Venator": {
@@ -11952,7 +11974,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -11960,6 +11982,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Sicaran Venator",
+            "Machine Spirit",
             "Relic",
             "Sicarian",
             "Smokescreen",
@@ -11970,6 +11993,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -12108,7 +12132,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Vindicator Laser Destroyer": {
@@ -12277,7 +12301,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -12293,6 +12317,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -12430,7 +12455,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Chaos Whirlwind Scorpius": {
@@ -12574,7 +12599,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -12591,6 +12616,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -12729,7 +12755,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Heavy Support§Defiler": {
@@ -14232,11 +14258,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -14375,11 +14401,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -14518,11 +14544,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -14571,7 +14597,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -14661,11 +14687,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -14804,11 +14830,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -15939,11 +15965,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -15986,11 +16012,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16033,11 +16059,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16062,7 +16088,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -16080,11 +16106,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16127,11 +16153,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16267,11 +16293,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -16314,11 +16340,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -16327,7 +16353,7 @@
             "dynamic": true
           },
           "loadout3": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 3,
@@ -16361,11 +16387,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -16408,11 +16434,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               }
@@ -16518,11 +16544,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16565,11 +16591,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16612,11 +16638,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16641,7 +16667,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -16659,11 +16685,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -16706,11 +16732,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -17318,7 +17344,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -17326,6 +17352,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Cerberus",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Titanic",
@@ -17336,6 +17363,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -17474,7 +17502,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Falchion": {
@@ -18036,7 +18064,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -18044,6 +18072,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Falchion",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Titanic",
@@ -18054,6 +18083,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -18192,7 +18222,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Fellblade": {
@@ -18904,7 +18934,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -18912,6 +18942,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Fellblade",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Titanic",
@@ -18922,6 +18953,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -19060,7 +19092,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Mastodon": {
@@ -19526,7 +19558,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -19534,6 +19566,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Mastodon",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Titanic",
@@ -19545,6 +19578,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -19684,7 +19718,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Sokar-pattern Stormbird": {
@@ -19892,7 +19926,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -19902,6 +19936,7 @@
             "Bubonic Astartes",
             "Chaos Sokar-pattern Stormbird",
             "Fly",
+            "Machine Spirit",
             "Relic",
             "Titanic",
             "Transport",
@@ -19912,6 +19947,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -20056,7 +20092,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Spartan": {
@@ -20512,7 +20548,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -20520,6 +20556,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Spartan",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Titanic",
@@ -20531,6 +20568,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -20669,7 +20707,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Thunderhawk Gunship": {
@@ -21068,7 +21106,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -21078,6 +21116,7 @@
             "Bubonic Astartes",
             "Chaos Thunderhawk Gunship",
             "Fly",
+            "Machine Spirit",
             "Titanic",
             "Transport",
             "Vehicle"
@@ -21087,6 +21126,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -21229,7 +21269,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Chaos Typhon": {
@@ -21515,7 +21555,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -21523,6 +21563,7 @@
           "Keywords": [
             "Bubonic Astartes",
             "Chaos Typhon",
+            "Machine Spirit",
             "Relic",
             "Smokescreen",
             "Titanic",
@@ -21533,6 +21574,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -21671,7 +21713,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Kharybdis Assault Claw": {
@@ -21955,7 +21997,7 @@
         },
         "keywords": {
           "Source": [
-            "Index—Imperial Armour: Compendium—Indomitus 1.7"
+            "Index—Imperial Armour: Compendium—Indomitus 1.8"
           ],
           "Edition": [
             "9th"
@@ -21973,6 +22015,7 @@
             "Chaos",
             "Death Guard",
             "Heretic Astartes",
+            "Nurgle",
             "Traitoris Astartes"
           ]
         },
@@ -22112,7 +22155,7 @@
           }
         },
         "meta": {
-          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.7 @2022-09-21](https://www.warhammer-community.com/wp-content/uploads/2020/12/07780FxTleLPSRPi.pdf)"
+          "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
       },
       "Lords of War§Mortarion": {
@@ -24840,11 +24883,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -24991,11 +25034,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25142,11 +25185,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25203,7 +25246,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -25293,11 +25336,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25444,11 +25487,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25632,11 +25675,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25783,11 +25826,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25934,11 +25977,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -25995,7 +26038,7 @@
             "dynamic": true
           },
           "loadout4": {
-            "value": "Krak grenades",
+            "value": "Krak grenade",
             "label": "Loadout",
             "statType": "rank",
             "statOrder": 4,
@@ -26085,11 +26128,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -26236,11 +26279,11 @@
                   }
                 ]
               },
-              "Krak grenades": {
+              "Krak grenade": {
                 "order": 11,
                 "traits": [
                   {
-                    "trait": "Weapon§Krak grenades"
+                    "trait": "Weapon§Krak grenade"
                   }
                 ]
               },
@@ -28810,7 +28853,7 @@
         },
         "text": "**Plague Weapon**. Each time an attack is made with this weapon against an INFANTRY**, CAVALRY** or BEASTS** unit, if the attack successfully wounds the target, it inflicts D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to any normal damage."
       },
-      "Weapon§Krak grenades": {
+      "Weapon§Krak grenade": {
         "stats": {
           "AP": {
             "value": -1

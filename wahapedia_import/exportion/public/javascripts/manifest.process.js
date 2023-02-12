@@ -3,6 +3,7 @@
 
 const subFacNames = {
   AS: 'Order',
+  AC: 'Shield Host',
   AdM: 'Forge World',
   AE: 'Craftworld',
   AM: 'Regiment',
@@ -30,8 +31,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.9',
+    notes: '0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.10',
     wip: true,
     dependencies: [
       {
@@ -745,8 +746,9 @@ generateDamageRule = (damageRows,currentRow) => {
 }
 processFactions = (data,assetTaxonomy) => {
   let fac = data.factions[0].main_faction_id;
-  // console.log(fac,data.factions.length)
+  console.log(fac,data.factions)
   data.factCurrent = subFacNames[fac];
+  console.log(data.factCurrent)
   if(data.factions.length > 1){
     assetTaxonomy.Detachment = {
       stats: {
