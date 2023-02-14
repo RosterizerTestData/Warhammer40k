@@ -1,6 +1,6 @@
 {
   "name": "40k9e",
-  "revision": "0.2.7",
+  "revision": "0.3.0",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -44,42 +44,27 @@
       },
       "Battle Scar": {
         "aspects": {
-          "Unique": true
+          "Unique": true,
+          "Lock Qty": true,
+          "Rename": true
         }
-      },
-      "Battle Scar—Character": {
-        "templateClass": "Battle Scar"
-      },
-      "Battle Scar—Monster": {
-        "templateClass": "Battle Scar"
-      },
-      "Battle Scar—Other": {
-        "templateClass": "Battle Scar"
-      },
-      "Battle Scar—Vehicle": {
-        "templateClass": "Battle Scar"
       },
       "Battle Trait": {
         "aspects": {
-          "Unique": true
+          "Unique": true,
+          "Lock Qty": true,
+          "Rename": true
         },
         "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
+          "Tags": []
         }
-      },
-      "Character Trait": {
-        "templateClass": "Battle Trait"
       },
       "Crusade Relic": {
         "aspects": {
           "Unique": true
         },
         "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
+          "Tags": []
         }
       },
       "Dedicated Transport": {
@@ -237,9 +222,6 @@
       "Lords of War": {
         "templateClass": "Unit"
       },
-      "Melee Enhancement": {
-        "templateClass": "Weapon Enhancement"
-      },
       "Model": {
         "stats": {
           "Points": {
@@ -326,9 +308,6 @@
         "aspects": {
           "Type": "game piece"
         }
-      },
-      "Monster Trait": {
-        "templateClass": "Battle Trait"
       },
       "Order of Battle": {
         "allowed": {
@@ -506,19 +485,11 @@
         }
       },
       "Psychic Fortitude": {
-        "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
-        }
       },
       "Psychic Power": {
         "aspects": {
           "Visibility": "active"
         }
-      },
-      "Ranged Enhancement": {
-        "templateClass": "Weapon Enhancement"
       },
       "Relic": {
         "templateClass": "Weapon"
@@ -1284,257 +1255,6 @@
             "failState": "error",
             "evaluate": "AND"
           },
-          "rank1": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Experience",
-                    "value"
-                  ]
-                ],
-                "max": 15,
-                "min": 6,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              },
-              {
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Play",
-                    "value"
-                  ]
-                ],
-                "value": "Narrative",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rank",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "Blooded",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Battle Honours",
-                    "max"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": 1,
-                "iterations": 1
-              }
-            ]
-          },
-          "rank2": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Experience",
-                    "value"
-                  ]
-                ],
-                "max": 30,
-                "min": 16,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              },
-              {
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Play",
-                    "value"
-                  ]
-                ],
-                "value": "Narrative",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rank",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "Battle-hardened",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Battle Honours",
-                    "max"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": 2,
-                "iterations": 1
-              }
-            ]
-          },
-          "rank3": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Experience",
-                    "value"
-                  ]
-                ],
-                "max": 50,
-                "min": 31,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              },
-              {
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Play",
-                    "value"
-                  ]
-                ],
-                "value": "Narrative",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rank",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "Heroic",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Battle Honours",
-                    "max"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": 3,
-                "iterations": 1
-              }
-            ]
-          },
-          "rank4": {
-            "evals": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Experience",
-                    "value"
-                  ]
-                ],
-                "min": 51,
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              },
-              {
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Play",
-                    "value"
-                  ]
-                ],
-                "value": "Narrative",
-                "operator": "AND",
-                "not": false,
-                "actionable": true
-              }
-            ],
-            "failState": "pass",
-            "evaluate": "AND",
-            "actions": [
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Rank",
-                    "value"
-                  ]
-                ],
-                "actionType": "set",
-                "value": "Legendary",
-                "iterations": 1
-              },
-              {
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Battle Honours",
-                    "max"
-                  ]
-                ],
-                "actionType": "modify",
-                "value": 4,
-                "iterations": 1
-              }
-            ]
-          },
           "crusadePts": {
             "evals": [
               {
@@ -1693,7 +1413,302 @@
               }
             ]
           },
-          "allowCharacterBattleScars": {
+          "This unit has unspent traits.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Battle Honours",
+                  "max"
+                ],
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "warning",
+            "evaluate": "OR",
+            "order": 22
+          },
+          "rank1": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "max": 15,
+                "min": 6,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 21,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Blooded",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 1,
+                "iterations": 1
+              }
+            ]
+          },
+          "rank2": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "max": 30,
+                "min": 16,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 21,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Battle-hardened",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 2,
+                "iterations": 1
+              }
+            ]
+          },
+          "rank3": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "max": 50,
+                "min": 31,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 21,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Heroic",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 3,
+                "iterations": 1
+              }
+            ]
+          },
+          "rank4": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 51,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 21,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Rank",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "Legendary",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": 4,
+                "iterations": 1
+              }
+            ]
+          },
+          "allowCharacterScarsTraits": {
             "evals": [
               {
                 "paths": [
@@ -1731,17 +1746,17 @@
                 "paths": [
                   [
                     "{self}",
-                    "allowed",
-                    "classifications"
+                    "constraints",
+                    "any"
                   ]
                 ],
                 "actionType": "add",
-                "value": "Battle Scar—Character",
+                "value": "Character",
                 "iterations": 1
               }
             ]
           },
-          "allowMonsterBattleScars": {
+          "allowMonsterScarsTraits": {
             "evals": [
               {
                 "paths": [
@@ -1779,17 +1794,17 @@
                 "paths": [
                   [
                     "{self}",
-                    "allowed",
-                    "classifications"
+                    "constraints",
+                    "any"
                   ]
                 ],
                 "actionType": "add",
-                "value": "Battle Scar—Monster",
+                "value": "Monster",
                 "iterations": 1
               }
             ]
           },
-          "allowVehicleBattleScars": {
+          "allowVehicleScarsTraits": {
             "evals": [
               {
                 "paths": [
@@ -1827,12 +1842,12 @@
                 "paths": [
                   [
                     "{self}",
-                    "allowed",
-                    "classifications"
+                    "constraints",
+                    "any"
                   ]
                 ],
                 "actionType": "add",
-                "value": "Battle Scar—Vehicle",
+                "value": "Vehicle",
                 "iterations": 1
               }
             ]
@@ -1903,17 +1918,17 @@
                 "paths": [
                   [
                     "{self}",
-                    "allowed",
-                    "classifications"
+                    "constraints",
+                    "any"
                   ]
                 ],
                 "actionType": "add",
-                "value": "Battle Scar—Other",
+                "value": "Other Unit",
                 "iterations": 1
               }
             ]
           },
-          "This unit has unspent traits.": {
+          "allowScarsTraits": {
             "evals": [
               {
                 "paths": [
@@ -1926,9 +1941,124 @@
                 ],
                 "value": "Narrative",
                 "operator": "AND",
-                "not": true,
+                "not": false,
                 "actionable": true
               },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Battle Scar",
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Battle Trait",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowPsychicFortitudes": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Psychic Fortitude",
+                "iterations": 1
+              }
+            ]
+          },
+          "addBattleHonours": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    [
+                      "Battle Trait",
+                      "Psychic Fortitude",
+                      "Weapon Enhancement"
+                    ]
+                  ]
+                ],
+                "operator": "SUM",
+                "not": false,
+                "actionable": false
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 20,
+            "actions": [
               {
                 "paths": [
                   [
@@ -1938,19 +2068,19 @@
                     "value"
                   ]
                 ],
-                "min": [
+                "actionType": "set",
+                "value": [
                   "{self}",
-                  "stats",
-                  "Battle Honours",
-                  "max"
+                  "rules",
+                  "addBattleHonours",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
                 ],
-                "operator": "AND",
-                "not": true,
-                "actionable": true
+                "iterations": 1
               }
-            ],
-            "failState": "warning",
-            "evaluate": "OR"
+            ]
           }
         },
         "aspects": {
@@ -1979,9 +2109,6 @@
             "tracked": true
           }
         }
-      },
-      "Vehicle Trait": {
-        "templateClass": "Battle Trait"
       },
       "Wargear": {
         "stats": {
@@ -2072,16 +2199,6 @@
       },
       "Weapon": {
         "stats": {
-          "AP": {
-            "statOrder": 4,
-            "visibility": "always",
-            "statType": "term"
-          },
-          "D": {
-            "statOrder": 5,
-            "visibility": "always",
-            "statType": "term"
-          },
           "Points": {
             "value": null,
             "format": "+{v}",
@@ -2090,12 +2207,6 @@
             "tracked": true,
             "statType": "numeric"
           },
-          "S": {
-            "value": null,
-            "statOrder": 3,
-            "visibility": "always",
-            "statType": "term"
-          },
           "Type": {
             "value": null,
             "statOrder": 2,
@@ -2103,111 +2214,518 @@
             "statType": "term"
           },
           "Range": {
-            "statType": "numeric",
+            "statType": "term",
+            "value": null,
             "statOrder": 1,
-            "visibility": "always"
+            "visibility": "always",
+            "dynamic": false,
+            "tracked": false
+          },
+          "AP": {
+            "statType": "numeric",
+            "value": null,
+            "statOrder": 4,
+            "visibility": "always",
+            "dynamic": false,
+            "tracked": true
+          },
+          "D": {
+            "statType": "numeric",
+            "value": null,
+            "statOrder": 5,
+            "visibility": "always",
+            "dynamic": false,
+            "tracked": true
+          },
+          "S": {
+            "statType": "numeric",
+            "value": null,
+            "statOrder": 3,
+            "visibility": "always",
+            "dynamic": false,
+            "tracked": true
           }
         },
         "aspects": {
           "Visibility": "always"
+        },
+        "rules": {
+          "allowEnhancements": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Battle Honours",
+                    "max"
+                  ]
+                ],
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Weapon Enhancement",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowMelee": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Range",
+                    "value"
+                  ]
+                ],
+                "value": "Melee",
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Melee",
+                "iterations": 1
+              }
+            ]
+          },
+          "allowRanged": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Range",
+                    "value"
+                  ]
+                ],
+                "value": "Melee",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Ranged",
+                "iterations": 1
+              }
+            ]
+          }
         }
       },
       "Weapon Enhancement": {
         "aspects": {
-          "Unique": true
+          "Unique": true,
+          "Lock Qty": true,
+          "Rename": true
         },
         "keywords": {
-          "Tags": [
-            "Battle Honours"
-          ]
+          "Tags": []
         }
       }
     },
     "assetCatalog": {
-      "Battle Scar—Character§Blind in One Eye": {
-        "text": "You must re-roll hit rolls of 6 when resolving attacks made by **CHARACTER** models in this unit."
+      "Battle Scar§Angered Machine Spirit": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it.",
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
       },
-      "Battle Scar—Character§Chest Wound": {
-        "text": "Reduce the Wounds characteristic of one **CHARACTER** model in this unit by 1 (to a minimum of 1)."
+      "Battle Scar§Battle-weary": {
+        "text": "This unit cannot perform any actions or psychic actions, and it cannot gain more than 1 experience point at the end of a battle for any reason (any additional experience points gained are lost).",
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
       },
-      "Battle Scar—Character§Deep Concussion": {
-        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      "Battle Scar§Blind in One Eye": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by **CHARACTER** models in this unit.",
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
       },
-      "Battle Scar—Character§Deep Scars": {
-        "text": "This unit cannot perform any actions or psychic actions, and it cannot make Heroic Interventions."
+      "Battle Scar§Chest Wound": {
+        "text": "Reduce the Wounds characteristic of one **CHARACTER** model in this unit by 1 (to a minimum of 1).",
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
       },
-      "Battle Scar—Character§Loss of Reputation": {
-        "text": "If this unit has any aura abilities on its datasheet, the range of those aura abilities is reduced by 3″. If this reduces the range of an aura ability to 0″ or less, then the unit loses that aura ability while it has this Battle Scar. If this unit has no aura abilities on its datasheet, then it is unaffected by the aura abilities of any friendly units."
+      "Battle Scar§Crippled Limb": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by **MONSTER** models in this unit.",
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
       },
-      "Battle Scar—Character§Lost Leg": {
-        "text": "Subtract 1″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and Charge rolls made for this unit."
+      "Battle Scar§Crippling Injury": {
+        "text": "Subtract 2″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit.",
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
       },
-      "Battle Scar—Monster§Crippled Limb": {
-        "text": "You must re-roll hit rolls of 6 when resolving attacks made by **MONSTER** models in this unit."
+      "Battle Scar§Critical Wound": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by MONSTER models in this unit.",
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
       },
-      "Battle Scar—Monster§Crippling Injury": {
-        "text": "Subtract 2″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit."
+      "Battle Scar§Deep Concussion": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it.",
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
       },
-      "Battle Scar—Monster§Critical Wound": {
-        "text": "You must re-roll hit rolls of 6 when resolving attacks made by MONSTER models in this unit."
+      "Battle Scar§Deep Scars": {
+        "text": "This unit cannot perform any actions or psychic actions, and it cannot make Heroic Interventions.",
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
       },
-      "Battle Scar—Monster§Enraged and Unreasoning": {
-        "text": "If this unit has any aura abilities on its datasheet, the range of those aura abilities is reduced by 3″. If this reduces the range of an aura ability to 0\" or less, then the unit loses that aura ability while it has this Battle Scar. If this unit has no aura abilities on its datasheet, then it is unaffected by the aura abilities of any friendly units."
+      "Battle Scar§Disgraced": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it.",
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
       },
-      "Battle Scar—Monster§Fractured Skull": {
-        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      "Battle Scar§Engine Fault": {
+        "text": "Subtract 2″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit.",
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
       },
-      "Battle Scar—Monster§Tissue Damage": {
-        "text": "Subtract 1 from the Attacks characteristic of one **MONSTER** model in this unit (to a minimum of 1)."
+      "Battle Scar§Enraged and Unreasoning": {
+        "text": "If this unit has any aura abilities on its datasheet, the range of those aura abilities is reduced by 3″. If this reduces the range of an aura ability to 0\" or less, then the unit loses that aura ability while it has this Battle Scar. If this unit has no aura abilities on its datasheet, then it is unaffected by the aura abilities of any friendly units.",
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
       },
-      "Battle Scar—Other§Battle-weary": {
-        "text": "This unit cannot perform any actions or psychic actions, and it cannot gain more than 1 experience point at the end of a battle for any reason (any additional experience points gained are lost)."
+      "Battle Scar§Fatigued": {
+        "text": "This unit cannot control objective markers. When determining which player controls an objective marker, ignore all models in this unit.",
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
       },
-      "Battle Scar—Other§Disgraced": {
-        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      "Battle Scar§Fractured Skull": {
+        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it.",
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
       },
-      "Battle Scar—Other§Fatigued": {
-        "text": "This unit cannot control objective markers. When determining which player controls an objective marker, ignore all models in this unit."
+      "Battle Scar§Loss of Reputation": {
+        "text": "If this unit has any aura abilities on its datasheet, the range of those aura abilities is reduced by 3″. If this reduces the range of an aura ability to 0″ or less, then the unit loses that aura ability while it has this Battle Scar. If this unit has no aura abilities on its datasheet, then it is unaffected by the aura abilities of any friendly units.",
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
       },
-      "Battle Scar—Other§Mark of Shame": {
-        "text": "This unit is unaffected by the aura abilities of any friendly units."
+      "Battle Scar§Lost Leg": {
+        "text": "Subtract 1″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and Charge rolls made for this unit.",
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
       },
-      "Battle Scar—Other§Shell Shock": {
-        "text": "Subtract 1 from this unit’s Leadership characteristic. In addition, subtract 1 from Combat Attrition tests taken for this unit."
+      "Battle Scar§Mark of Shame": {
+        "text": "This unit is unaffected by the aura abilities of any friendly units.",
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
       },
-      "Battle Scar—Other§Walking Wounded": {
-        "text": "Subtract 1″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit."
+      "Battle Scar§Shell Shock": {
+        "text": "Subtract 1 from this unit’s Leadership characteristic. In addition, subtract 1 from Combat Attrition tests taken for this unit.",
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
       },
-      "Battle Scar—Vehicle§Angered Machine Spirit": {
-        "text": "You cannot use any Stratagems to affect this unit, nor can you use the Command Re-roll Stratagem to affect any dice rolls made for it."
+      "Battle Scar§Targeter’s Cracked": {
+        "text": "You must re-roll hit rolls of 6 when resolving attacks made by a **VEHICLE** model in this unit.",
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
       },
-      "Battle Scar—Vehicle§Engine Fault": {
-        "text": "Subtract 2″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit."
+      "Battle Scar§Tissue Damage": {
+        "text": "Subtract 1 from the Attacks characteristic of one **MONSTER** model in this unit (to a minimum of 1).",
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
       },
-      "Battle Scar—Vehicle§Targeter’s Cracked": {
-        "text": "You must re-roll hit rolls of 6 when resolving attacks made by a **VEHICLE** model in this unit."
+      "Battle Scar§Vox Comms Destroyed": {
+        "text": "This unit is unaffected by the aura abilities of any friendly units.",
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
       },
-      "Battle Scar—Vehicle§Vox Comms Destroyed": {
-        "text": "This unit is unaffected by the aura abilities of any friendly units."
+      "Battle Scar§Walking Wounded": {
+        "text": "Subtract 1″ from this unit’s Move characteristic. In addition, subtract 1 from Advance and charge rolls made for this unit.",
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
       },
-      "Battle Scar—Vehicle§Weakened Armor": {
-        "text": "Each time this unit is hit by a weapon with a Strength characteristic of 8 or more, this unit suffers 1 mortal wound in addition to any normal damage."
+      "Battle Scar§Weakened Armor": {
+        "text": "Each time this unit is hit by a weapon with a Strength characteristic of 8 or more, this unit suffers 1 mortal wound in addition to any normal damage.",
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
       },
-      "Battle Scar—Vehicle§Weapon Damaged": {
-        "text": "Select one weapon equipped by a **VEHICLE** model in this unit (if this unit has any ranged weapons, you must select one of them, and if any of those are Heavy, then you must select one of them). Subtract 1 from hit and wound rolls when resolving attacks with that weapon."
+      "Battle Scar§Weapon Damaged": {
+        "text": "Select one weapon equipped by a **VEHICLE** model in this unit (if this unit has any ranged weapons, you must select one of them, and if any of those are Heavy, then you must select one of them). Subtract 1 from hit and wound rolls when resolving attacks with that weapon.",
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
       },
-      "Battle Trait§Battle-tested": {},
-      "Battle Trait§Cool-headed": {},
-      "Battle Trait§Fleet of Foot": {},
-      "Battle Trait§Grizzled": {},
-      "Battle Trait§Headhunters": {},
-      "Battle Trait§Veteran Warriors": {},
-      "Character Trait§Deadly Charge": {},
-      "Character Trait§Heroic Constitution": {},
-      "Character Trait§Inspiring Hero": {},
-      "Character Trait§Resilient": {},
-      "Character Trait§Swift and Agile": {},
-      "Character Trait§Tactical Experience": {},
+      "Battle Trait§Apex Predator": {
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
+      },
+      "Battle Trait§Armourbane": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
+      },
+      "Battle Trait§Battle-tested": {
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
+      },
+      "Battle Trait§Blessed Hull": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
+      },
+      "Battle Trait§Cool-headed": {
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
+      },
+      "Battle Trait§Deadly Charge": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
+      },
+      "Battle Trait§Elite Crew": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
+      },
+      "Battle Trait§Enhanced Engines": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
+      },
+      "Battle Trait§Fleet of Foot": {
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
+      },
+      "Battle Trait§Frenzied": {
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
+      },
+      "Battle Trait§Grizzled": {
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
+      },
+      "Battle Trait§Headhunters": {
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
+      },
+      "Battle Trait§Heroic Constitution": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
+      },
+      "Battle Trait§Improved Shielding": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
+      },
+      "Battle Trait§Inspiring Hero": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
+      },
+      "Battle Trait§Regenerates": {
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
+      },
+      "Battle Trait§Repair Systems": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        }
+      },
+      "Battle Trait§Resilient": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
+      },
+      "Battle Trait§Swift and Agile": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
+      },
+      "Battle Trait§Tactical Experience": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        }
+      },
+      "Battle Trait§Terrifying": {
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
+      },
+      "Battle Trait§Thickened Hide": {
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
+      },
+      "Battle Trait§Unstoppable": {
+        "keywords": {
+          "Tags": [
+            "Monster"
+          ]
+        }
+      },
+      "Battle Trait§Veteran Warriors": {
+        "keywords": {
+          "Tags": [
+            "Other Unit"
+          ]
+        }
+      },
       "Detachment§Auxiliary Support Detachment": {
         "stats": {
           "Command Cost": {
@@ -2772,18 +3290,6 @@
           }
         }
       },
-      "Melee Enhancement§Brutal": {},
-      "Melee Enhancement§Finely Balanced": {},
-      "Melee Enhancement§Fleshbane": {},
-      "Melee Enhancement§Heirloom": {},
-      "Melee Enhancement§Razor-edged": {},
-      "Melee Enhancement§Shredder": {},
-      "Monster Trait§Apex Predator": {},
-      "Monster Trait§Frenzied": {},
-      "Monster Trait§Regenerates": {},
-      "Monster Trait§Terrifying": {},
-      "Monster Trait§Thickened Hide": {},
-      "Monster Trait§Unstoppable": {},
       "Order of Battle§Order of Battle": {},
       "Psychic Fortitude§Adamantium Will": {},
       "Psychic Fortitude§Master of Lore": {},
@@ -2791,12 +3297,6 @@
       "Psychic Power§Smite": {
         "text": "*Smite* has a warp charge value of 5. Add 1 to the warp charge value of this psychic power for each other attempt that has been made to *manifest* this power by a unit from your army in this phase, whether that attempt was successful or not. If manifested, the closest enemy unit within 18″ of and visible to the psyker suffers D3 *mortal wounds*. If the result of the *Psychic test* was 11 or more, that unit suffers D6 mortal wounds instead.\n\n**Warp Charge 5**: A Psychic test of 5+ is required to manifest *Smite*.\nWarp charge increases by 1 for each other attempt to manifest *Smite* made in this phase.\nIf manifested, closest visible enemy unit in 18″ suffers D3 mortal wounds.\nIf manifested with a Psychic test result of 11+, enemy instead suffers D6 mortal wounds."
       },
-      "Ranged Enhancement§Accelerator": {},
-      "Ranged Enhancement§Armour Piercing": {},
-      "Ranged Enhancement§Auto-loader": {},
-      "Ranged Enhancement§High Calibre": {},
-      "Ranged Enhancement§Improved Sights": {},
-      "Ranged Enhancement§Master-worked": {},
       "Requisition§Fresh Recruits": {},
       "Requisition§Increase Supply Limit": {
         "rules": {
@@ -3345,14 +3845,143 @@
           }
         }
       },
-      "Vehicle Trait§Armourbane": {},
-      "Vehicle Trait§Blessed Hull": {},
-      "Vehicle Trait§Elite Crew": {},
-      "Vehicle Trait§Enhanced Engines": {},
-      "Vehicle Trait§Improved Shielding": {},
-      "Vehicle Trait§Repair Systems": {},
       "Warlord Trait§Inspiring Leader": {
         "text": "Add 1 to the Leadership characteristic of friendly units while they are within 6″ of this **WARLORD**."
+      },
+      "Weapon Enhancement§Accelerator": {
+        "keywords": {
+          "Tags": [
+            "Ranged"
+          ]
+        },
+        "text": "",
+        "rules": {
+          "add6toRange": {
+            "failState": "pass",
+            "evaluate": "AND",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Range",
+                    "value"
+                  ]
+                ],
+                "actionType": "modify",
+                "value": "+6”",
+                "iterations": 1
+              }
+            ]
+          }
+        }
+      },
+      "Weapon Enhancement§Armour Piercing": {
+        "keywords": {
+          "Tags": [
+            "Ranged"
+          ]
+        },
+        "stats": {
+          "AP": {
+            "statType": "numeric",
+            "value": -1,
+            "visibility": "active",
+            "dynamic": false,
+            "tracked": true
+          }
+        }
+      },
+      "Weapon Enhancement§Auto-loader": {
+        "keywords": {
+          "Tags": [
+            "Ranged"
+          ]
+        },
+        "text": "When resolving an attack with this weapon, each unmodified hit roll of 6 scores one additional hit on the target."
+      },
+      "Weapon Enhancement§Brutal": {
+        "keywords": {
+          "Tags": [
+            "Melee"
+          ]
+        }
+      },
+      "Weapon Enhancement§Finely Balanced": {
+        "keywords": {
+          "Tags": [
+            "Melee"
+          ]
+        }
+      },
+      "Weapon Enhancement§Fleshbane": {
+        "keywords": {
+          "Tags": [
+            "Melee"
+          ]
+        }
+      },
+      "Weapon Enhancement§Heirloom": {
+        "keywords": {
+          "Tags": [
+            "Melee"
+          ]
+        }
+      },
+      "Weapon Enhancement§High Calibre": {
+        "keywords": {
+          "Tags": [
+            "Ranged"
+          ]
+        },
+        "stats": {
+          "S": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "active",
+            "dynamic": false,
+            "tracked": true
+          }
+        }
+      },
+      "Weapon Enhancement§Improved Sights": {
+        "keywords": {
+          "Tags": [
+            "Ranged"
+          ]
+        },
+        "text": "When resolving an attack with this weapon, add 1 to the hit roll."
+      },
+      "Weapon Enhancement§Master-worked": {
+        "keywords": {
+          "Tags": [
+            "Ranged"
+          ]
+        },
+        "stats": {
+          "D": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "active",
+            "dynamic": false,
+            "tracked": true
+          }
+        }
+      },
+      "Weapon Enhancement§Razor-edged": {
+        "keywords": {
+          "Tags": [
+            "Melee"
+          ]
+        }
+      },
+      "Weapon Enhancement§Shredder": {
+        "keywords": {
+          "Tags": [
+            "Melee"
+          ]
+        }
       }
     },
     "gameModes": {},
