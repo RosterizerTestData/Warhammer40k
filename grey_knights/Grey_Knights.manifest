@@ -1,11 +1,11 @@
 {
   "name": "Grey Knights",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -680,6 +680,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -1027,6 +1030,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -1305,6 +1311,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -1622,6 +1631,9 @@
           "classifications": [
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -1988,6 +2000,9 @@
           "classifications": [
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -2430,6 +2445,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -3013,6 +3031,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -3110,6 +3131,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Grey Knights (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/e23d0007.pdf)"
@@ -3476,6 +3500,9 @@
           "classifications": [
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -4116,6 +4143,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -4215,6 +4245,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Grey Knights (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/e23d0007.pdf)"
@@ -4851,6 +4884,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -5376,6 +5412,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -5748,6 +5787,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -6116,6 +6158,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -6509,6 +6554,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -6880,6 +6928,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -7250,6 +7301,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -7625,6 +7679,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -8296,6 +8353,9 @@
             "Dominus Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -8614,6 +8674,9 @@
             "Dominus Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -8928,6 +8991,9 @@
           "classifications": [
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -9244,6 +9310,9 @@
           "classifications": [
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -9737,6 +9806,9 @@
           "classifications": [
             "Sanctic Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -10449,6 +10521,9 @@
             "Dominus Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -10767,6 +10842,9 @@
             "Sanctic Discipline",
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -11363,6 +11441,9 @@
             "Dominus Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -11740,6 +11821,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -12055,6 +12139,9 @@
           "classifications": [
             "Dominus Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
@@ -12456,6 +12543,9 @@
             "Dominus Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Grey Knights (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/S7E4o0am2zmCztY4.pdf)"
         }
@@ -12534,6 +12624,9 @@
           "classifications": [
             "Sanctic Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Grey Knights (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/e23d0007.pdf)"
@@ -13057,6 +13150,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"

@@ -1,11 +1,11 @@
 {
   "name": "Aeldari",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -1302,6 +1302,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -1437,6 +1440,9 @@
           ]
         },
         "text": "A Starweaver is equipped with: 2 shuriken cannons.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -1726,6 +1732,9 @@
           ]
         },
         "text": "A Venom is equipped with: splinter cannon; twin splinter rifle; bladevanes.\n\n• This model’s twin splinter rifle can be replaced with 1 splinter cannon.\n\n• This model can be equipped with any of the following: 1 chain-snares; 1 grisly trophies.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -2413,6 +2422,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -2486,6 +2498,9 @@
           ]
         },
         "text": "Amallyn Shadowguide is a single model armed with a ranger long rifle, power blade and plasma grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -2674,6 +2689,9 @@
           ]
         },
         "text": "A Beastmaster is equipped with: splinter pods; agoniser.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -2747,6 +2765,9 @@
           ]
         },
         "text": "A Bonesinger is a single model equipped with: psytronome shaper.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Craftworlds (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/84d4072d.pdf)"
         }
@@ -3158,6 +3179,9 @@
           ]
         },
         "text": "A Death Jester is equipped with: shrieker cannon; Jester’s blade.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -3699,6 +3723,9 @@
           ]
         },
         "text": "A Solitaire is equipped with: Solitaire’s weapons. Your army can only include one **SOLITAIRE** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -4581,6 +4608,9 @@
           ]
         },
         "text": "A Wraithlord is equipped with: 2 shuriken catapults; wraithbone fists.\n\n• Each of this model’s shuriken catapults can be replaced with 1 Aeldari flamer.\n\n• This model can be equipped with 1 ghostglaive.\n\n• This model can be equipped with up to 2 of the following: 1 Aeldari missile launcher; 1 bright lance; 1 scatter laser; 1 shuriken cannon; 1 starcannon.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -6252,6 +6282,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -6568,6 +6601,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
@@ -6938,6 +6974,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -7376,6 +7415,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -7859,6 +7901,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
@@ -8378,6 +8423,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -8818,6 +8866,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -9178,6 +9229,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
@@ -9999,6 +10053,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -10474,6 +10531,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -10890,6 +10950,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -11433,6 +11496,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -11908,6 +11974,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -12365,6 +12434,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
@@ -12988,6 +13060,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -13414,6 +13489,9 @@
           ]
         },
         "text": "A Wraithseer is equipped with: ghostspear; wraithshield.\n\n• This model can be equipped with one of the following: 1 Aeldari missile launcher; 1 bright lance; 1 D-cannon; 1 scatter laser; 1 shuriken cannon; 1 starcannon.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic powers from the **[Runes of Battle](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Battle)** discipline.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -13736,6 +13814,9 @@
           ]
         },
         "text": "An Archon is equipped with: splinter pistol; power sword.\n\n• This model’s power sword can be replaced with one of the following: 1 agoniser; 1 huskblade; 1 venom blade.\n\n• This model’s splinter pistol can be replaced with 1 blast pistol.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -13902,6 +13983,9 @@
           ]
         },
         "text": "Asurmen is equipped with: the Bloody Twins; the Sword of Asur. Your army can only include one **ASURMEN** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -14589,6 +14673,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -14717,6 +14804,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Craftworlds (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/84d4072d.pdf)"
@@ -14952,6 +15042,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
@@ -15217,6 +15310,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Craftworlds (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/84d4072d.pdf)"
         }
@@ -15294,6 +15390,9 @@
           ]
         },
         "text": "An Autarch with Swooping Hawk wings is a single model armed with a power sword, fusion pistol and plasma grenades. They are equipped with a Forceshield.\n\n• This model can be equipped with 1 shuriken pistol instead of 1 power sword and 1 fusion pistol. If it is, it loses the **Mandiblasters** ability and has the following additional wargear options:\n\n- This model can additionally be equipped with up to 2 weapons from the ***Autarch Weapons*** list.\n\n- This model can have one of the following: banshee mask; mandiblasters.\n\n- This model can be equipped with 1 fusion pistol instead of 1 shuriken pistol.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Craftworlds (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/84d4072d.pdf)"
         }
@@ -15406,6 +15505,9 @@
           ]
         },
         "text": "An Autarch with Warp Jump Generator is a single model equipped with: shuriken pistol; plasma grenades. It has a forceshield.\n\n• This model can additionally be equipped with up to 2 weapons from the ***Autarch Weapons*** list.\n\n• This model can be equipped with 1 fusion pistol instead of 1 shuriken pistol.\n\n• This model can have one of the following: banshee mask; mandiblasters.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Craftworlds (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/84d4072d.pdf)"
         }
@@ -15660,6 +15762,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -15829,6 +15934,9 @@
           ]
         },
         "text": "Baharroth is equipped with: Fury of the Tempest; the Shining Blade. Your army can only include one **BAHARROTH** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -15997,6 +16105,9 @@
           ]
         },
         "text": "Eldrad Ulthran is equipped with: shuriken pistol; the Staff of Ulthamar and witchblade. Your army can only include one **ELDRAD ULTHRAN** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) three psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and three psychic powers from the [Runes of Fortune](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fortune)** discipline and/or the [Runes of Fate](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fate)** discipline.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -16187,6 +16298,9 @@
           ]
         },
         "text": "A Farseer is equipped with: shuriken pistol; witchblade.\n\n• This model’s witchblade can be replaced with 1 singing spear.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Runes of Fortune](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fortune)** discipline and/or the [Runes of Fate](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fate)** discipline.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -16451,6 +16565,9 @@
           ]
         },
         "text": "A Farseer Skyrunner is equipped with: shuriken pistol; twin shuriken catapult; witchblade.\n\n• This model’s witchblade can be replaced with 1 singing spear.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Runes of Fortune](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fortune)** discipline and/or the [Runes of Fate](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fate)** discipline.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -16618,6 +16735,9 @@
           ]
         },
         "text": "Fuegan is equipped with: Searsong; the Fire Axe. Your army can only include one **FUEGAN** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -16876,6 +16996,9 @@
           ]
         },
         "text": "Illic Nightspear is equipped with: shuriken pistol; Voidbringer; Aeldari power sword. Your army can only include one **ILLIC NIGHTSPEAR** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -17000,6 +17123,9 @@
           ]
         },
         "text": "Irillyth is equipped with: Spear of Starlight. Your army can only include one **IRILLYTH** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -17234,6 +17360,9 @@
           ]
         },
         "text": "Jain Zar is equipped with: the Blade of Destruction; the Silent Death; Terror’s Lament. Your army can only include one **JAIN ZAR** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -17469,6 +17598,9 @@
           ]
         },
         "text": "Karandras is equipped with: Arhra’s Bane; Isirmathil; the Scorpion’s Bite. Your army can only include one **KARANDRAS** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -17589,6 +17721,9 @@
           ]
         },
         "text": "Maugan Ra is equipped with: the Maugetar. Your army can only include one **MAUGAN RA** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -17756,6 +17891,9 @@
           ]
         },
         "text": "Prince Yriel is equipped with: the Eye of Wrath; the Spear of Twilight. Your army can only include one **PRINCE YRIEL** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -18017,6 +18155,9 @@
           ]
         },
         "text": "A Shadowseer is equipped with: shuriken pistol; miststave; hallucinogen grenade launcher.\n\n• This model’s shuriken pistol can be replaced with 1 neuro disruptor.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Phantasmancy discipline](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Phantasmancy-Discipline)**.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -18183,6 +18324,9 @@
           ]
         },
         "text": "A Spiritseer is equipped with: shuriken pistol; witch staff.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Runes of Battle](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Battle)** discipline or the [Runes of Fortune](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Runes-of-Fortune)** discipline.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -18510,6 +18654,9 @@
           ]
         },
         "text": "A Succubus is equipped with: agoniser; archite glaive.\n\n• This model’s agoniser and archite glaive can be replaced with one of the following: 1 hydra gauntlets; 1 razorflails; 1 shardnet and impaler.\n\n• This model’s agoniser can be replaced with one of the following: 1 blast pistol; 1 splinter pistol.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -18628,6 +18775,9 @@
           ]
         },
         "text": "The Visarch is equipped with: Asu-var, the Sword of Silent Screams. Your army can only include one **THE VISARCH** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -18932,6 +19082,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
@@ -19469,6 +19622,9 @@
           ]
         },
         "text": "A Troupe Master is equipped with: shuriken pistol; Harlequin’s blade; plasma grenades.\n\n• This model’s shuriken pistol can be replaced with one of the following: 1 fusion pistol; 1 neuro disruptor.\n\n• This model’s Harlequin’s blade can be replaced with one of the following: 1 Harlequin’s caress; 1 Harlequin’s embrace; 1 Harlequin’s kiss; 1 Aeldari power sword.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -19588,6 +19744,9 @@
           ]
         },
         "text": "Yvraine is equipped with: Kha-vir, the Sword of Sorrows. Your army can only include one **YVRAINE** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Revenant discipline](https://wahapedia.ru/wh40k9ed/factions/aeldari/#Revenant-Discipline)**.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"
         }
@@ -20136,6 +20295,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -20732,6 +20894,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -21127,6 +21292,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -21676,6 +21844,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -22254,6 +22425,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -22838,6 +23012,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Aeldari (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/04/oADikUWKor7wg4Ff.pdf)"

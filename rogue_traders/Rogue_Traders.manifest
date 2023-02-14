@@ -1,11 +1,11 @@
 {
   "name": "Rogue Traders",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -239,6 +239,9 @@
           ]
         },
         "text": "Amallyn Shadowguide is a single model armed with a ranger long rifle, power blade and plasma grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -309,6 +312,9 @@
           ]
         },
         "text": "Dahyak Grekh is a single model armed with a kroot rifle and kroot pistol. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -379,6 +385,9 @@
           ]
         },
         "text": "Espern Locarno is a single model armed with a laspistol and force-orb cane. Only one of this model can be included in your army.\n\n\n\nEspern Locarno can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. He knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -454,6 +463,9 @@
           ]
         },
         "text": "Gotfret de Montbard is a single model armed with a power sword and storm shield. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Escalation (Boxset) 8th ed. –  @2019-08-24](null)"
         }
@@ -525,6 +537,9 @@
           ]
         },
         "text": "Knosso Prond is a single model armed with a Death Cult power blade, dartmask and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Kill Team: Rogue Trader (Boxset) 8th ed. – Indomitus 1.0 @2020-07-13](https://www.warhammer-community.com/wp-content/uploads/2020/07/6Wkl6G9fG0eY9Zt3.pdf)"
         }
@@ -597,6 +612,9 @@
           ]
         },
         "text": "Larsen van der Grauss is a single model armed with a voltaic pistol and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Kill Team: Rogue Trader (Boxset) 8th ed. – Indomitus 1.0 @2020-07-13](https://www.warhammer-community.com/wp-content/uploads/2020/07/6Wkl6G9fG0eY9Zt3.pdf)"
         }
@@ -665,6 +683,9 @@
           ]
         },
         "text": "Pious Vorne is a single model armed with Vindictor. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -778,6 +799,9 @@
           ]
         },
         "text": "Sanistasia Minst is a single model armed with a scalpel claw, laspistol and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Kill Team: Rogue Trader (Boxset) 8th ed. – Indomitus 1.0 @2020-07-13](https://www.warhammer-community.com/wp-content/uploads/2020/07/6Wkl6G9fG0eY9Zt3.pdf)"
         }
@@ -845,6 +869,9 @@
           ]
         },
         "text": "UR-025 is a single model equipped with a Mk I assault cannon and a power claw. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -914,6 +941,9 @@
           ]
         },
         "text": "X-101 is a single model armed with a grav-gun and hydraulic claw. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Escalation (Boxset) 8th ed. –  @2019-08-24](null)"
         }
@@ -985,6 +1015,9 @@
           ]
         },
         "text": "Aradia Madellan is a single model armed with a laspistol and force stave. Only one of this model can be included in your army.\n\n\n\nAradia Madellan can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. She knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and Psychic Augment powers.\n\n\n\n**Psychic Augment**:** Psychic Augment has a warp charge value of 8. If manifested, select a friendly **ASTRA MILITARUM** INFANTRY** unit within 12″ of the [psyker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Add 1 to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made by that unit until the\n\nstart of your next psychic phase.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Escalation (Boxset) 8th ed. –  @2019-08-24](null)"
         }
@@ -1056,6 +1089,9 @@
           ]
         },
         "text": "Elucia Vhane is a single model armed with a monomolecular cane-rapier, heirloom pistol and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Kill Team: Rogue Trader (Boxset) 8th ed. – Indomitus 1.0 @2020-07-13](https://www.warhammer-community.com/wp-content/uploads/2020/07/6Wkl6G9fG0eY9Zt3.pdf)"
         }
@@ -1126,6 +1162,9 @@
           ]
         },
         "text": "Janus Draik is a single model armed with a monomolecular rapier, heirloom pistol and archeotech grenades. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -1195,6 +1234,9 @@
           ]
         },
         "text": "Neyam Shai Murad is a single model armed with two negotiator pistols. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Escalation (Boxset) 8th ed. –  @2019-08-24](null)"
         }
@@ -1264,6 +1306,9 @@
           ]
         },
         "text": "Taddeus the Purifier is a single model armed with a laspistol, servo-stubber and power maul. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -1431,6 +1476,9 @@
           ]
         },
         "text": "A Technoarcheologist is equipped with: eradication pistol; servo-arc claw.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }

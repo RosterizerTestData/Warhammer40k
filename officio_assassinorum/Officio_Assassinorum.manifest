@@ -1,11 +1,11 @@
 {
   "name": "Officio Assassinorum",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -146,6 +146,9 @@
           ]
         },
         "text": "A Callidus Assassin is a single model equipped with: neural shredder; phase sword; poison blades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }
@@ -220,6 +223,9 @@
           ]
         },
         "text": "A Culexus Assassin is a single model equipped with: animus speculum; psyk-out grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }
@@ -294,6 +300,9 @@
           ]
         },
         "text": "An Eversor Assassin is a single model equipped with: executioner pistol; neuro-gauntlet; power sword; melta bombs.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }
@@ -369,6 +378,9 @@
           ]
         },
         "text": "A Vindicare Assassin is a single model equipped with: exitus pistol; exitus rifle; blind grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Psychic Awakening: War of the Spider (Expansion) 8th ed. – Indomitus 1.4 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/07/VXO1CdVZDRexbsb1.pdf)"
         }

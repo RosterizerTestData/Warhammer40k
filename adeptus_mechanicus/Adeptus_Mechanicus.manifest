@@ -1,11 +1,11 @@
 {
   "name": "Adeptus Mechanicus",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -1038,6 +1038,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -1407,6 +1410,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -1652,6 +1658,9 @@
           ]
         },
         "text": "A Cybernetics Datasmith is equipped with: gamma pistol; power fist.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -2286,6 +2295,9 @@
           ]
         },
         "text": "X-101 is a single model armed with a grav-gun and hydraulic claw. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Escalation (Boxset) 8th ed. –  @2019-08-24](null)"
         }
@@ -3086,6 +3098,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -3559,6 +3574,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -3963,6 +3981,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
@@ -4421,6 +4442,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -4814,6 +4838,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -5126,6 +5153,9 @@
           ]
         },
         "text": "Belisarius Cawl is equipped with: solar atomiser; arc scourge; mechadendrite hive; Omnissian axe. Your army can only include one **BELISARIUS CAWL** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -5291,6 +5321,9 @@
           ]
         },
         "text": "A Skitarii Marshal is equipped with: radium serpenta; control stave.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -5584,6 +5617,9 @@
           ]
         },
         "text": "A Tech-Priest Dominus is equipped with: macrostubber; volkite blaster; Omnissian axe.\n\n• This model’s macrostubber can be replaced with 1 phosphor serpenta.\n\n• This model’s volkite blaster can be replaced with 1 eradication ray.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -5814,6 +5850,9 @@
           ]
         },
         "text": "A Tech-Priest Enginseer is equipped with: Mechanicus pistol; Omnissian axe; servo-arm.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -6075,6 +6114,9 @@
           ]
         },
         "text": "A Tech-Priest Manipulus is equipped with: magnarail lance; Manipulus mechadendrites; Omnissian staff.\n\n• This model’s magnarail lance can be replaced with 1 transonic cannon.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }
@@ -6243,6 +6285,9 @@
           ]
         },
         "text": "A Technoarcheologist is equipped with: eradication pistol; servo-arc claw.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Mechanicus (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/09/S8LXbidg8ZkkK8Jv.pdf)"
         }

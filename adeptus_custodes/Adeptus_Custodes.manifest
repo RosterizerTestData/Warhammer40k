@@ -1,11 +1,11 @@
 {
   "name": "Adeptus Custodes",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -586,6 +586,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -883,6 +886,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -1227,6 +1233,9 @@
           ]
         },
         "text": "A Contemptor-Achillus Dreadnought is equipped with: Achillus dreadspear; 2 lastrum storm bolters.\n\n• This model's lastrum storm bolters can each be replaced with one of the following: 1 infernus incinerator; 1 twin adrathic destructor.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -1403,6 +1412,9 @@
           ]
         },
         "text": "A Contemptor-Galatus Dreadnought is equipped with: Galatus warblade; Galatus shield.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -1721,6 +1733,9 @@
           ]
         },
         "text": "A Venerable Contemptor Dreadnought is equipped with: combi-bolter; multi-melta; Dreadnought combat weapon.\n\n• This model’s multi-melta can be replaced with 1 kheres-pattern assault cannon.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -2056,6 +2071,9 @@
           ]
         },
         "text": "A Vexilus Praetor is equipped with: guardian spear; vexilla defensor.\n\n• This model’s guardian spear can be replaced with one of the following: 1 castellan axe; 1 praesidium shield.\n\n• This model’s vexilla defensor can be replaced with one of the following: 1 vexilla imperius; 1 vexilla magnifica.\n\n• This model can be equipped with 1 misericordia.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -2333,6 +2351,9 @@
           ]
         },
         "text": "A Vexilus Praetor in Allarus Terminator Armour is equipped with: balistus grenade launcher; vexilla defensor.\n\n• This model can be equipped with 1 misericordia.\n\n• This model’s vexilla defensor can be replaced with one of the following: 1 vexilla imperius; 1 vexilla magnifica.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -2581,6 +2602,9 @@
           ]
         },
         "text": "A Pallas Grav-attack is equipped with: twin arachnus blaze cannon.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -3185,6 +3209,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -3550,6 +3577,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -3870,6 +3900,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -4240,6 +4273,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -4585,6 +4621,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -4717,6 +4756,9 @@
           ]
         },
         "text": "Aleya is equipped with: Somnus, misericordia. Your army can only include one **ALEYA** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -4834,6 +4876,9 @@
           ]
         },
         "text": "A Blade Champion is equipped with: vaultswords.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -4994,6 +5039,9 @@
           ]
         },
         "text": "A Knight-Centura is equipped with: executioner greatblade.\n\n• This model’s executioner greatblade can be replaced with one of the following: 1 master-crafted boltgun; 1 witchseeker flamer.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -5195,6 +5243,9 @@
           ]
         },
         "text": "A Shield-Captain is equipped with: guardian spear.\n\n• This model’s guardian spear can be replaced with one of the following: 1 castellan axe; 1 sentinel blade and 1 praesidium shield.\n\n• If this model is not equipped with a praesidium shield, it can be equipped with 1 misericordia.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -5409,6 +5460,9 @@
           ]
         },
         "text": "A Shield-Captain in Allarus Terminator Armour is equipped with: balistus grenade launcher; guardian spear.\n\n• This model’s guardian spear can be replaced with 1 castellan axe.\n\n• This model can be equipped with 1 misericordia.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -5622,6 +5676,9 @@
           ]
         },
         "text": "A Shield-Captain on Dawneagle Jetbike is equipped with: hurricane bolter; interceptor lance.\n\n• This model’s hurricane bolter can be replaced with 1 salvo launcher.\n\n• This model can be equipped with 1 misericordia.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -5788,6 +5845,9 @@
           ]
         },
         "text": "Trajann Valoris is equipped with: Watcher’s Axe; misericordia. Your army can only include one **TRAJANN VALORIS** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }
@@ -5923,6 +5983,9 @@
           ]
         },
         "text": "Valerian is equipped with: Gnosis, misericordia. Your army can only include one **VALERIAN** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adeptus Custodes (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/MNldQR5DtlFwbAsr.pdf)"
         }

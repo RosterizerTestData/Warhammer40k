@@ -1,11 +1,11 @@
 {
   "name": "Thousand Sons",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -670,6 +670,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -1096,6 +1099,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -1558,6 +1564,9 @@
           ]
         },
         "text": "A Chaos Contemptor Dreadnought is equipped with: 2 hellforged heavy plasma cannons.\n\n• Each of this model’s hellforged heavy plasma cannons can be replaced with one of the following: 1 conversion beam cannon; 1 hellforged kheres-pattern assault cannon; 1 multi-melta; 1 twin hellforged autocannon; 1 twin heavy bolter; 1 twin lascannon; 1 twin volkite culverin; 1 hellforged Dreadnought chainfist and 1 combi-bolter; 1 hellforged Dreadnought combat weapon and 1 combi-bolter.\n\n• Each of this model’s combi-bolters can be replaced with one of the following: 1 graviton blaster; 1 heavy flamer; 1 hellforged plasma blaster.\n\n• This model can be equipped with 1 hellforged cyclone missile launcher.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -2026,6 +2035,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -2520,6 +2532,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -2854,6 +2869,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -3299,6 +3317,9 @@
           ]
         },
         "text": "A Helbrute is equipped with: missile launcher; twin heavy bolter.\n\n• This model’s twin heavy bolter can be replaced with one of the following: 1 Helbrute plasma cannon; 1 multi-melta; 1 reaper autocannon; 1 twin lascannon; 1 Helbrute fist.\n\n• This model’s missile launcher can be replaced with one of the following: 1 Helbrute fist; 1 Helbrute hammer; 1 power scourge.\n\n• For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 heavy flamer; 1 inferno combi-bolter. That Helbrute fist cannot then be replaced.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -3610,6 +3631,9 @@
           ]
         },
         "text": "A Tzaangor Shaman is equipped with: disc blades; force stave; Disc of Tzeentch.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Discipline of Change](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Discipline-of-Change)**.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -3864,6 +3888,9 @@
           ]
         },
         "text": "A Dreadclaw Drop Pod is equipped with: blade struts; thermal jets.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -4458,6 +4485,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -4953,6 +4983,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -5257,6 +5290,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -5588,6 +5624,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -5741,6 +5780,9 @@
           ]
         },
         "text": "A Hell Blade is equipped with: 2 twin autocannons.\n\n• This model’s 2 twin autocannons can be replaced with 2 lascannons.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -6145,6 +6187,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -6524,6 +6569,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -6920,6 +6968,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -7294,6 +7345,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -7764,6 +7818,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -8137,6 +8194,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
@@ -8512,6 +8572,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -8791,6 +8854,9 @@
           ]
         },
         "text": "A Chaos Rapier Carrier is equipped with: boltgun; quad heavy bolter. A Chaos Rapier Carrier unit has 1 separate Chaos Space Marine crew model.\n\n• The Chaos Rapier Carrier's quad heavy bolter can be replaced with one of the following: 1 graviton cannon; 1 laser destroyer; 1 quad launcher.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -9165,6 +9231,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -9541,6 +9610,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -9915,6 +9987,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -10316,6 +10391,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -10660,6 +10738,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -10945,6 +11026,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -11703,6 +11787,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -12025,6 +12112,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
@@ -12350,6 +12440,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -12647,6 +12740,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
@@ -13041,6 +13137,9 @@
           "classifications": [
             "Psychic Powers"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
@@ -13555,6 +13654,9 @@
             "Psychic Powers"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -13862,6 +13964,9 @@
           ]
         },
         "text": "An Infernal Master is equipped with: inferno bolt pistol; force stave; frag grenades; krak grenades.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Discipline of Change](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Discipline-of-Change)** or the [Discipline of Vengeance](https://wahapedia.ru/wh40k9ed/factions/thousand-sons/#Discipline-of-Vengeance)**.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -14315,6 +14420,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -14413,6 +14521,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Thousand Sons (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/25553ac3.pdf)"
@@ -14681,6 +14792,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
         }
@@ -14782,6 +14896,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Thousand Sons (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/25553ac3.pdf)"
         }
@@ -14861,6 +14978,9 @@
           "classifications": [
             "Psychic Powers"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Thousand Sons (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/25553ac3.pdf)"
@@ -14972,6 +15092,9 @@
           "classifications": [
             "Psychic Powers"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"
@@ -15395,6 +15518,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -16080,6 +16206,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -16909,6 +17038,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -17535,6 +17667,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -17908,6 +18043,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -18496,6 +18634,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -19058,6 +19199,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -19480,6 +19624,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -19923,6 +20070,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -20188,6 +20338,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Thousand Sons (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/GECMhRgpptFcl31z.pdf)"

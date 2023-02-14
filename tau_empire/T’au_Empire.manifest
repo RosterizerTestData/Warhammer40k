@@ -1,11 +1,11 @@
 {
   "name": "T’au Empire",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -1447,6 +1447,9 @@
           ]
         },
         "text": "Dahyak Grekh is a single model armed with a kroot rifle and kroot pistol. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -3622,6 +3625,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -4169,6 +4175,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -4621,6 +4630,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -5110,6 +5122,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -5631,6 +5646,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
@@ -6277,6 +6295,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -6446,6 +6467,9 @@
           ]
         },
         "text": "A Remote Sensor Tower is equipped with: high-intensity markerlight.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -6525,6 +6549,9 @@
           ]
         },
         "text": "null\n\n• This unit can be equipped with up to four of the following, in any combination: 1 Gun Drone +10; 1 Marker Drone +10; 1 Shield Drone +15 (see [Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones)).\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -6644,6 +6671,9 @@
           ]
         },
         "text": "A Tidewall Gunrig is equipped with: supremacy railgun.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -7139,6 +7169,9 @@
           ]
         },
         "text": "A Great Knarloc is equipped with: Great Knarloc beak and talons.\n\n• This model can be equipped with one of the following: 1 Kroot bolt thrower and 1 Kroot rifle; 1 twin Kroot gun; 1 baggage harness.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -7990,6 +8023,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -8257,6 +8293,9 @@
           ]
         },
         "text": "Aun’Shi is equipped with: Fidelity. Your army can only include one **AUN’SHI** model.\n\n\n\nThis model knows three invocations from the [Invocations of the Ethereals](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Invocations-of-the-Ethereals). In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model is on the battlefield, it can intone up to two invocations it knows that have not already been intoned by a friendly model this turn. Roll one D6: on a 2+, the intoned invocation is inspiring and takes effect until the start of your next Command phase.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -8484,6 +8523,9 @@
           ]
         },
         "text": "A Cadre Fireblade is equipped with: Fireblade pulse rifle; markerlight.\n\n• This unit can be equipped with up to two of the following, in any combination (**Power Rating +1**): 1 Gun Drone +10; 1 Marker Drone +10; 1 Shield Drone +15 (see [Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones)).\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -8653,6 +8695,9 @@
           ]
         },
         "text": "Commander Farsight is equipped with: high-intensity plasma rifle; Dawn Blade. Your army can only include one **COMMANDER FARSIGHT** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -9127,6 +9172,9 @@
           ]
         },
         "text": "A Commander in Coldstar Battlesuit is equipped with: high-output burst cannon; target lock.\n\n• The Commander in Coldstar Battlesuit’s high-output burst cannon can be replaced with one of the following: 1 airbursting fragmentation projector; 1 burst cannon; 1 fusion blaster; 1 missile pod; 1 plasma rifle; 1 positional relay; 1 shield generator; 1 T’au flamer; 1 velocity tracker.\n\n• The Commander in Coldstar Battlesuit can be equipped with up to three of the following, in any combination: 1 airbursting fragmentation projector; 1 burst cannon; 1 fusion blaster; 1 missile pod; 1 plasma rifle; 1 positional relay; 1 shield generator; 1 T’au flamer; 1 velocity tracker.\n\n• This unit can be equipped with up to two of the following, in any combination (**Power Rating +1**): 1 Gun Drone +10; 1 Marker Drone +10; 1 Shield Drone +15 (see [Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones)).\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -9620,6 +9668,9 @@
           ]
         },
         "text": "A Commander in Crisis Battlesuit is equipped with: burst cannon.\n\n• The Commander in Crisis Battlesuit’s burst cannon can be replaced with upto four of the following, in any combination: 1 airbursting fragmentation projector; 1 burst cannon; 1 counterfire defence system; 1 cyclic ion blaster; 1 early warning override; 1 fusion blaster; 1 missile pod; 1 multi-tracker; 1 plasma rifle; 1 shield generator; 1 target lock; 1 T’au flamer; 1 velocity tracker.\n\n• The Commander in Crisis Battlesuit can be equipped with 1 iridium battlesuit.\n\n• This unit can be equipped with up to two of the following, in any combination (**Power Rating +1**): 1 Gun Drone +10; 1 Marker Drone +10; 1 Shield Drone +15 (see [Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones)).\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -9972,6 +10023,9 @@
           ]
         },
         "text": "A Commander in Enforcer Battlesuit is equipped with: burst cannon.\n\n• The Commander in Enforcer Battlesuit’s burst cannon can be replaced with up to four of the following, in any combination: 1 airbursting fragmentation projector; 1 burst cannon; 1 cyclic ion blaster; 1 fusion blaster; 1 missile pod; 1 plasma rifle; 1 positional relay; 1 shield generator; 1 T’au flamer; 1 velocity tracker.\n\n• This unit can be equipped with upto two of the following, in any combination (**Power Rating +1**): 1 Gun Drone +10; 1 Marker Drone +10; 1 Shield Drone +15 (see [Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones)).\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -10619,6 +10673,9 @@
           ]
         },
         "text": "This unit can contain up to two Tactical Drones for **Power Rating +1**. A Commander in XV81 Crisis Battlesuit is equipped with: plasma rifle; smart missile system. You can only include one **XV81 CRISIS** COMMANDER** model in your army.\n\n• This model’s plasma rifle can be replaced with one of the following: 1 weapon from the ***Ranged Weapons** list; 1 item from the **Support Systems*** list.\n\n• This model can be equipped with one of the following: 1 weapon from the **Ranged Weapons** list; 1 item from the **Support Systems*** list.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -11467,6 +11524,9 @@
           ]
         },
         "text": "This unit can contain up to two [Tactical Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/Tactical-Drones) for **Power Rating +1**. A Commander in VX84 Crisis Battlesuit is equipped with: plasma rifle; markerlight; target lock. You can only include one **XV84 CRISIS** COMMANDER** model in your army\n\n• This model’s plasma rifle can be replaced with one of the following: 1 weapon from the ***Ranged Weapons** list; 1 item from the **Support Systems*** list.\n\n• This model can be equipped with one of the following: 1 weapon from the **Ranged Weapons** list; 1 item from the **Support Systems*** list.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -11704,6 +11764,9 @@
           ]
         },
         "text": "Darkstrider is equipped with: markerlight; Shade. Your army can only include one **DARKSTRIDER** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -11853,6 +11916,9 @@
           ]
         },
         "text": "An Ethereal is equipped with: honour stave.\n\n• This model can be equipped with 1 hover drone (**Power Rating +1**).\n\n• This unit can be equipped with up to two of the following, in any combination (Power Rating +1**): 1 Gun Drone +10; 1 Marker Drone +10; 1 Shield Drone +15 (see [Drones](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones)).\n\nThis model knows two invocations from the [Invocations of the Ethereals](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Invocations-of-the-Ethereals). In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this model is on the battlefield, it can intone one invocation it knows that has not already been intoned by a friendly model this turn. Roll one D6: on a 3+, the intoned invocation is inspiring and takes effect until the start of your next Command phase.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -12088,6 +12154,9 @@
           ]
         },
         "text": "A Kroot Shaper is equipped with: Shaper Kroot rifle; ritual blade.\n\n• This model’s Shaper Kroot rifle can be replaced with 1 pulse rifle.\n\n• This model’s ritual blade can be replaced with 1 Kroot pistol and 1 grenade belt.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"
         }
@@ -12433,6 +12502,9 @@
           ]
         },
         "text": "Shas’o R’myr is equipped with: miniaturised flechette pod; twin plasma rifle. You can only include one **SHAS’O R’MYR** model in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -13157,6 +13229,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -13856,6 +13931,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -14154,6 +14232,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -15450,6 +15531,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[T’au Empire (Codex) 9th ed. – Indomitus 1.1 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/10/DicgJsW4jzTk2m6m.pdf)"

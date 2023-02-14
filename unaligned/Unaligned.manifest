@@ -1,11 +1,11 @@
 {
   "name": "Unaligned",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -157,6 +157,9 @@
           ]
         },
         "text": "An Ambull is a single model armed with enormous claws.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – The Dreaded Ambull (Boxset) 8th ed. –  @2019-02-16](null)"
         }
@@ -278,6 +281,9 @@
           ]
         },
         "text": "A Guardian Drone is a single model equipped with: destroyer pulse, guardian salvo launchers, manipulator limbs.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Ascension (Boxset) 9th ed. –  @2020-08-24](null)"
         }
@@ -344,6 +350,9 @@
           ]
         },
         "text": "The Archivist is a single model equipped with: atomic disassembler, eradicator glove. You can only include one of this model in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Deadly Alliance (Boxset) 8th ed. –  @2020-03-24](null)"
         }
@@ -848,6 +857,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warzone Octarius – Book 1: Rising Tide (Expansion) 9th ed. – Indomitus 1.2 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2021/12/s1N4ZVvq0p4HTjht.pdf)"
         }
@@ -918,6 +930,9 @@
           ]
         },
         "text": "A Firestorm Redoubt is a single model equipped with: 2 quad Icarus lascannons.\n\n• For each quad Icarus lascannon this model is equipped with, it can instead be equipped with one of the following: 1 battle cannon; 1 punisher gatling cannon.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chapter Approved ’2019 (Expansion) 8th ed. –  @2020-02-10](https://www.warhammer-community.com/wp-content/uploads/2020/02/8fa9c5ab.pdf)"
         }
@@ -1239,6 +1254,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warzone Octarius – Book 1: Rising Tide (Expansion) 9th ed. – Indomitus 1.2 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2021/12/s1N4ZVvq0p4HTjht.pdf)"
         }
@@ -1309,6 +1327,9 @@
           ]
         },
         "text": "An Imperial Bunker is a single model.\n\n• This model can be equipped with 1 Icarus lascannon or 1 quad-gun.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chapter Approved ’2019 (Expansion) 8th ed. –  @2020-02-10](https://www.warhammer-community.com/wp-content/uploads/2020/02/8fa9c5ab.pdf)"
         }
@@ -1475,6 +1496,9 @@
           ]
         },
         "text": "A Macro-cannon Aquila Strongpoint is a single model equipped with: Aquila macro-cannon.\n\n• This model can additionally be equipped with up to 4 heavy bolters.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chapter Approved ’2019 (Expansion) 8th ed. –  @2020-02-10](https://www.warhammer-community.com/wp-content/uploads/2020/02/8fa9c5ab.pdf)"
         }
@@ -1544,6 +1568,9 @@
           ]
         },
         "text": "A Plasma Obliterator is a single model equipped with: plasma obliterator.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chapter Approved ’2019 (Expansion) 8th ed. –  @2020-02-10](https://www.warhammer-community.com/wp-content/uploads/2020/02/8fa9c5ab.pdf)"
         }
@@ -1866,6 +1893,9 @@
           ]
         },
         "text": "A Primaris Redoubt is equipped with: Primaris redoubt turbo-laser destructor.\n\n• This model can be equipped with up to 4 heavy bolters.\n\n• This model can be equipped with one of the following: 1 Primaris air defence missiles; 1 battle cannon; 1 Primaris Icarus lascannon; 1 Primaris Icarus quad lascannon; 1 multi-melta; 1 Primaris quad gun; 1 twin heavy bolter; 1 twin heavy flamer; 1 twin lascannon; 1 Primaris castellan launcher; 1 Primaris vengeance launcher.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -1932,6 +1962,9 @@
           ]
         },
         "text": "A Skyshield Landing Pad is a single model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warzone Octarius – Book 1: Rising Tide (Expansion) 9th ed. – Indomitus 1.2 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2021/12/s1N4ZVvq0p4HTjht.pdf)"
         }
@@ -2056,6 +2089,9 @@
           ]
         },
         "text": "A Void Shield generator is a single model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warzone Octarius – Book 1: Rising Tide (Expansion) 9th ed. – Indomitus 1.2 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2021/12/s1N4ZVvq0p4HTjht.pdf)"
         }
@@ -2127,6 +2163,9 @@
           ]
         },
         "text": "A Vortex Missile Aquila Strongpoint is a single model equipped with: vortex missile battery.\n\n• This model can additionally be equipped with up to 4 heavy bolters.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chapter Approved ’2019 (Expansion) 8th ed. –  @2020-02-10](https://www.warhammer-community.com/wp-content/uploads/2020/02/8fa9c5ab.pdf)"
         }

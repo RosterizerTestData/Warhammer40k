@@ -31,8 +31,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.10',
+    notes: '0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.11',
     wip: true,
     dependencies: [
       {
@@ -652,6 +652,11 @@ processUnits = (data,assetCatalog) => {
             rules: {
               ...tempItem.rules,
               ...modelAsset.rules,
+            },
+            aspects:{
+              ...tempItem.aspects,
+              ...modelAsset.aspects,
+              Type: 'game piece'
             }
           }
           if(!Object.keys(tempItem.rules).length) delete tempItem.rules;

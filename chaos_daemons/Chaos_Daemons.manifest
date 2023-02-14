@@ -1,11 +1,11 @@
 {
   "name": "Chaos Daemons",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -857,6 +857,9 @@
           ]
         },
         "text": "An Exalted Flamer is equipped with: fire of Tzeentch.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -1367,6 +1370,9 @@
           ]
         },
         "text": "A Hellflayer is equipped with: lashes of torment; bladed axle; piercing claws; Seeker tongues.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -1979,6 +1985,9 @@
           ]
         },
         "text": "A Seeker Chariot is equipped with: lashes of torment; piercing claws; Seeker tongues.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -2194,6 +2203,9 @@
           ]
         },
         "text": "A Feculent Gnarlmaw has no equipment.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -2266,6 +2278,9 @@
           ]
         },
         "text": "A Skull Altar has no equipment.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -2460,6 +2475,9 @@
           ]
         },
         "text": "A Burning Chariot is equipped with: fire of Tzeentch; Screamer bites.\n\n• This model can be equipped with 1 Horror infestation.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -2820,6 +2838,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -3065,6 +3086,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -3458,6 +3482,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -3682,6 +3709,9 @@
           ]
         },
         "text": "A Skull Cannon is equipped with: skull cannon; attendants’ hellblades; biting maw.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -4160,6 +4190,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -4459,6 +4492,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -4919,6 +4955,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -5037,6 +5076,9 @@
           ]
         },
         "text": "A Bloodmaster is equipped with: blade of blood.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -5408,6 +5450,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -5548,6 +5593,9 @@
           "classifications": [
             "Pandaemoniac Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
@@ -5721,6 +5769,9 @@
           "classifications": [
             "Soulstain Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
@@ -5981,6 +6032,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -6208,6 +6262,9 @@
             "Soulstain Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -6373,6 +6430,9 @@
           ]
         },
         "text": "Epidemius is equipped with: foul balesword; Nurgling claws. Your army can only include one **EPIDEMIUS** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -6600,6 +6660,9 @@
             "Pandaemoniac Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -6796,6 +6859,9 @@
           "classifications": [
             "Pandaemoniac Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
@@ -7397,6 +7463,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -7471,6 +7540,9 @@
           ]
         },
         "text": "A Herald of Slaanesh on Steed is a single model equipped with: lashing tongue; ravaging claws.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and one psychic power from the Slaanesh discipline.",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Chaos Daemons (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/a2ea59e3.pdf)"
         }
@@ -7637,6 +7709,9 @@
           ]
         },
         "text": "Horticulous Slimux is equipped with: acidic maw; lopping shears. Your army can only include one **HORTICULOUS SLIMUX** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -7804,6 +7879,9 @@
           ]
         },
         "text": "An Infernal Enrapturess is equipped with: heartstring lyre; ravaging claws.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -8066,6 +8144,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -8184,6 +8265,9 @@
           ]
         },
         "text": "Karanak is equipped with: soul-rending fangs. Your army can only include one **KARANAK** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -8663,6 +8747,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -8954,6 +9041,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -9117,6 +9207,9 @@
           ]
         },
         "text": "Mamon Transfigured is equipped with: contagion spray; Fist of Decay. Your army can only include one **MAMON TRANSFIGURED** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -9241,6 +9334,9 @@
           "classifications": [
             "Warprot Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
@@ -9409,6 +9505,9 @@
           ]
         },
         "text": "A Rendmaster on Blood Throne is equipped with: attendants’ hellblades; blade of blood.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -9858,6 +9957,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -10124,6 +10226,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
@@ -10534,6 +10639,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -10834,6 +10942,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -10999,6 +11110,9 @@
           ]
         },
         "text": "A Skullmaster is equipped with: blade of blood; bladed horn.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11118,6 +11232,9 @@
           ]
         },
         "text": "Skulltaker is equipped with: the Slayer Sword. Your army can only include one **SKULLTAKER** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11237,6 +11354,9 @@
           ]
         },
         "text": "A Sloppity Bilepiper is equipped with: marotter.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11465,6 +11585,9 @@
           ]
         },
         "text": "A Spoilpox Scrivener is equipped with: disgusting sneezes; distended maw; plaguesword.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11638,6 +11761,9 @@
             "Soulstain Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11710,6 +11836,9 @@
           ]
         },
         "text": "The Blue Scribes are equipped with: disc blades; sharp quills. Your army can only include one **THE BLUE** SCRIBES** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11835,6 +11964,9 @@
             "Pandaemoniac Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -11954,6 +12086,9 @@
           ]
         },
         "text": "The Masque of Slaanesh is equipped with: serrated claws. Your army can only include one **THE MASQUE** OF** SLAANESH** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -12326,6 +12461,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -12643,6 +12781,9 @@
             "Soulstain Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -12881,6 +13022,9 @@
             "Soulstain Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -13006,6 +13150,9 @@
             "Soulstain Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Chaos Daemons (Codex) 9th ed. – Indomitus 1.0 @2022-10-12](https://www.warhammer-community.com/wp-content/uploads/2019/04/MCH1sun1hZ7chbtY.pdf)"
         }
@@ -13124,6 +13271,9 @@
           ]
         },
         "text": "Uraka the Warfiend is equipped with: the Executioner’s Axe. Your army can only include one **URAKA THE** WARFIEND** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -13435,6 +13585,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -13737,6 +13890,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -14110,6 +14266,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -14417,6 +14576,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"

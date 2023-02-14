@@ -1,11 +1,11 @@
 {
   "name": "Drukhari",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -1212,6 +1212,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -1503,6 +1506,9 @@
           ]
         },
         "text": "A Venom is equipped with: splinter cannon; twin splinter rifle; bladevanes.\n\n• This model’s twin splinter rifle can be replaced with 1 splinter cannon.\n\n• This model can be equipped with any of the following: 1 chain-snares; 1 grisly trophies.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -1690,6 +1696,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -1780,6 +1789,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Drukhari (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/f51f9967.pdf)"
@@ -2442,6 +2454,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
@@ -3313,6 +3328,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -3797,6 +3815,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -4158,6 +4179,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
@@ -4753,6 +4777,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -5112,6 +5139,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -5482,6 +5512,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -5761,6 +5794,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -5849,6 +5885,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Drukhari (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/f51f9967.pdf)"
@@ -5970,6 +6009,9 @@
           ]
         },
         "text": "Drazhar is equipped with: The Executioner’s demiklaives. Your army can only include one **DRAZHAR** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -6276,6 +6318,9 @@
           ]
         },
         "text": "A Haemonculus is equipped with: stinger pistol; haemonculus tools; ichor injector; scissorhand.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -6398,6 +6443,9 @@
           ]
         },
         "text": "Lelith Hesperax is equipped with: Lelith’s blades. Your army can only include one **LELITH HESPERAX** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -6746,6 +6794,9 @@
           ]
         },
         "text": "A Succubus is equipped with: agoniser; archite glaive.\n\n• This model’s agoniser and archite glaive can be replaced with one of the following: 1 hydra gauntlets; 1 razorflails; 1 shardnet and impaler.\n\n• This model’s agoniser can be replaced with one of the following: 1 blast pistol; 1 splinter pistol.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }
@@ -6980,6 +7031,9 @@
           ]
         },
         "text": "Urien Rakarth is equipped with: Casket of Flensing; haemonculus tools; ichor injector. Your army can only include one **URIEN RAKARTH** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Drukhari (Codex) 9th ed. – Indomitus 1.3 @2022-07-04](https://www.warhammer-community.com/wp-content/uploads/2019/05/sXNzDZ7qYnet03Bq.pdf)"
         }

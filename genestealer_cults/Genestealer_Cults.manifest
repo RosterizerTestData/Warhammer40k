@@ -1,11 +1,11 @@
 {
   "name": "Genestealer Cults",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -841,6 +841,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -1073,6 +1076,9 @@
           ]
         },
         "text": "An Abominant is equipped with: familiar’s claws; power sledgehammer.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -1336,6 +1342,9 @@
           ]
         },
         "text": "A Biophagus is equipped with: autopistol; injector goad; chemical vials.\n\n• This model can be equipped with 1 alchemicus familiar.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -1453,6 +1462,9 @@
           ]
         },
         "text": "A Clamavus is equipped with: autopistol.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -1713,6 +1725,9 @@
           ]
         },
         "text": "A Kelermorph is equipped with: 3 liberator autostubs.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -1878,6 +1893,9 @@
           ]
         },
         "text": "A Locus is equipped with: Hypermorph tail; Locus blades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -1994,6 +2012,9 @@
           ]
         },
         "text": "A Nexos is equipped with: autopistol.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -2505,6 +2526,9 @@
           ]
         },
         "text": "A Reductus Saboteur is equipped with: autopistol; remote explosives; blasting charges; demolition charge; frag grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -2694,6 +2718,9 @@
           ]
         },
         "text": "A Sanctus is equipped with: familiar’s claws; Sanctus bio-dagger.\n\n• This model’s Sanctus bio-dagger can be replaced with 1 cult sniper rifle.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -3405,6 +3432,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -3631,6 +3661,9 @@
           ]
         },
         "text": "An Acolyte Iconward is equipped with: autopistol; cult claws; blasting charges.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -3861,6 +3894,9 @@
           ]
         },
         "text": "A Jackal Alphus is equipped with: autopistol; cult sniper rifle; blasting charges.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -4130,6 +4166,9 @@
             "Broodmind Discipline"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }
@@ -4290,6 +4329,9 @@
           "classifications": [
             "Broodmind Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
@@ -4545,6 +4587,9 @@
           ]
         },
         "text": "A Primus is equipped with: scoped needle pistol; cult bonesword; toxin injector claw.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Genestealer Cults (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/OXFlVGzEDC9Rswsb.pdf)"
         }

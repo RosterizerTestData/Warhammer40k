@@ -1,11 +1,11 @@
 {
   "name": "Leagues of Votann",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -1700,6 +1700,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Leagues of Votann (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/09/uyjDfWnUvcSUUmJo.pdf)"
         }
@@ -2060,6 +2063,9 @@
           ]
         },
         "text": "An Einhyr Champion is equipped with: Autoch-pattern combi-bolter; mass hammer; Weavefield crest.\n\n• This model's mass hammer can be replaced with 1 darkstar axe.\n\n• This model's Weavefield crest can be replaced with 1 teleport crest.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Leagues of Votann (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/09/uyjDfWnUvcSUUmJo.pdf)"
         }
@@ -2451,6 +2457,9 @@
           ]
         },
         "text": "A Kâhl is equipped with: Autoch-pattem combi-bolter; forgewrought plasma axe; rampart crest.\n\n• This model’s Autoch-pattem combi-bolter can be replaced with 1 volkanite disintegrator.\n\n• This model’s forgewrought plasma axe can be replaced with 1 mass gauntlet.\n\n• This model’s rampart crest can be replaced with 1 teleport crest.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Leagues of Votann (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/09/uyjDfWnUvcSUUmJo.pdf)"
         }
@@ -2689,6 +2698,9 @@
           ]
         },
         "text": "Ûthar the Destined is equipped with: volkanite disintegrator; Blade of the Ancestors; rampart crest. Your army can only include one **ÛTHAR THE** DESTINED** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Leagues of Votann (Codex) 9th ed. – Indomitus 1.2 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2022/09/uyjDfWnUvcSUUmJo.pdf)"
         }

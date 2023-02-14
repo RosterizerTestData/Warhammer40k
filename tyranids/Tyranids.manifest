@@ -1,11 +1,11 @@
 {
   "name": "Tyranids",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -1183,6 +1183,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -1363,6 +1366,9 @@
           ]
         },
         "text": "A Deathleaper is equipped with: Lictor claws and talons; flesh hooks. Your army can only include one **DEATHLEAPER** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -1966,6 +1972,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -2142,6 +2151,9 @@
           ]
         },
         "text": "A Lictor is equipped with: Lictor claws and talons; flesh hooks.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -2401,6 +2413,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -2758,6 +2773,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -3383,6 +3401,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -3824,6 +3845,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -4125,6 +4149,9 @@
           ]
         },
         "text": "A Parasite of Mortrex is equipped with: clawed limbs; barbed ovipositor.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -4912,6 +4939,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -5362,6 +5392,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -5901,6 +5934,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -6245,6 +6281,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -6506,6 +6545,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -7161,6 +7203,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -7750,6 +7795,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -7934,6 +7982,9 @@
           ]
         },
         "text": "A Stone-crusher Carnifex is equipped with: 2 wrecker claws; thresher scythe.\n\n• One of this model’s wrecker claws can be replaced with 1 bio-flail.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -8580,6 +8631,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -8773,6 +8827,9 @@
           "classifications": [
             "Hive Mind Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -9283,6 +9340,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -9402,6 +9462,9 @@
           ]
         },
         "text": "A Malanthrope is equipped with: grasping tail.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -9483,6 +9546,9 @@
           "classifications": [
             "Hive Mind Discipline"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -9789,6 +9855,9 @@
           ]
         },
         "text": "Old One Eye is equipped with: 2 monstrous crushing claws; 2 monstrous scything talons; thresher scythe; chitin thorns. Your army can only include one **OLD ONE** EYE** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -10182,6 +10251,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -10444,6 +10516,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -10919,6 +10994,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
@@ -11532,6 +11610,9 @@
           ]
         },
         "text": "A Tyranid Prime is equipped with: devourer; bonesword; lash whip.\n\n• This model’s bonesword and lash whip can be replaced with one of the following: 1 dual boneswords; 2 rending claws; 2 scything talons.\n\n• This model’s devourer can be replaced with one of the following: 1 barbed strangler; 1 deathspitter; 1 spinefists; 1 venom cannon; 1 bonesword and 1 lash whip; 1 dual boneswords; 2 rending claws; 2 scything talons.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 flesh hooks.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -12168,6 +12249,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
@@ -12470,6 +12554,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -12912,6 +12999,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"

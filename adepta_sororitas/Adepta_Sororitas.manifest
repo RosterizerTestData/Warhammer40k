@@ -1,11 +1,11 @@
 {
   "name": "Adepta Sororitas",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -911,6 +911,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -1334,6 +1337,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -1616,6 +1622,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
@@ -2431,6 +2440,9 @@
           ]
         },
         "text": "A Dialogus is equipped with: bolt pistol; Dialogus staff.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -2739,6 +2751,9 @@
           ]
         },
         "text": "A Dogmata is equipped with: bolt pistol; mace of the righteous; frag grenades; krak grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -2814,6 +2829,9 @@
           ]
         },
         "text": "Gotfret de Montbard is a single model armed with a power sword and storm shield. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress – Escalation (Boxset) 8th ed. –  @2019-08-24](null)"
         }
@@ -2980,6 +2998,9 @@
           ]
         },
         "text": "A Hospitaller is equipped with: bolt pistol; chirurgeon’s tools.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -3207,6 +3228,9 @@
           ]
         },
         "text": "An Imagifier is equipped with: boltgun; frag grenades; krak grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -3324,6 +3348,9 @@
           ]
         },
         "text": "Pious Vorne is a single model armed with Vindictor. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -3493,6 +3520,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -3582,6 +3612,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Adepta Sororitas (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/c579975b.pdf)"
@@ -3844,6 +3877,9 @@
           ]
         },
         "text": "A Repentia Superior is equipped with: neural whips; frag grenades; krak grenades.\n\n• This model can be equipped with 1 bolt pistol.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -4439,6 +4475,9 @@
           ]
         },
         "text": "A Battle Sanctum is a single model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -4831,6 +4870,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -5177,6 +5219,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
@@ -5706,6 +5751,9 @@
           ]
         },
         "text": "Arch-Confessor Kyrinov is a single model equipped with: bolt pistol; Mace of Valaan; frag grenades; krak grenades. Only one **ARCH-CONFESSOR KYRINOV** model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Adepta Sororitas (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/c579975b.pdf)"
         }
@@ -6616,6 +6664,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -6811,6 +6862,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Warhammer Legends: Adepta Sororitas (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/c579975b.pdf)"
@@ -7089,6 +7143,9 @@
           ]
         },
         "text": "Junith Eruita is equipped with: 2 Ministorum heavy flamers; Mace of Castigation. Your army can only include 1 **JUNITH ERUITA** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -7681,6 +7738,9 @@
           ]
         },
         "text": "A Missionary is equipped with: auto pistol; servo-stubber; power maul; frag grenades; krak grenades.\n\n• This model’s auto pistol, servo-stubber and power maul can be replaced with one of the following:\n\n○ 1 autogun, 1 auto pistol and 1 chainsword.\n\n○ 1 bolt pistol, 1 Ministorum shotgun and 1 chainsword.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -7917,6 +7977,9 @@
           ]
         },
         "text": "Morvenn Vahl is equipped with: Fidelis; Paragon missile launcher; Lance of Illumination. Your army can only include 1 **MORVENN VAHL** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -8264,6 +8327,9 @@
           ]
         },
         "text": "A Palatine is equipped with: bolt pistol; power sword; frag grenades; krak grenades.\n\n• This model’s bolt pistol can be replaced with 1 plasma pistol.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -8333,6 +8399,9 @@
           ]
         },
         "text": "Taddeus the Purifier is a single model armed with a laspistol, servo-stubber and power maul. Only one of this model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Quest: Blackstone Fortress (Boxset) 8th ed. –  @2018-11-10](null)"
         }
@@ -8876,6 +8945,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Adepta Sororitas (Codex) 9th ed. – Indomitus 1.1 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2020/01/dOhJrI4sapCSm822.pdf)"
         }
@@ -8947,6 +9019,9 @@
           ]
         },
         "text": "Uriah Jacobus is a single model equipped with: bolt pistol; Redeemer; chainsword; frag grenades; krak grenades. Only one **URIAH JACOBUS** model can be included in your army.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Adepta Sororitas (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/c579975b.pdf)"
         }

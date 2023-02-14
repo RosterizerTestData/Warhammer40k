@@ -1,11 +1,11 @@
 {
   "name": "Necrons",
-  "revision": "0.0.10",
+  "revision": "0.0.11",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -903,6 +903,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -1027,6 +1030,9 @@
             "Powers of the C’tan"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -1148,6 +1154,9 @@
           "classifications": [
             "Powers of the C’tan"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
@@ -1318,6 +1327,9 @@
             "Powers of the C’tan"
           ]
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -1436,6 +1448,9 @@
           ]
         },
         "text": "A Canoptek Plasmacyte is equipped with: monomolecular proboscis.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -1599,6 +1614,9 @@
           ]
         },
         "text": "A Canoptek Reanimator is equipped with: 2 atomiser beams; reanimator's claws.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -1965,6 +1983,9 @@
           ]
         },
         "text": "A Canoptek Tombstalker is equipped with: 2 gauss slicers; tomb stalker claws; gloom prism.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -2272,6 +2293,9 @@
           ]
         },
         "text": "A Hexmark Destroyer is equipped with: 6 enmitic disintegrator pistols.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -2565,6 +2589,9 @@
           "classifications": [
             "Powers of the C’tan"
           ]
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
@@ -2912,6 +2939,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
@@ -3281,6 +3311,9 @@
           ]
         },
         "text": "A Canoptek Tomb Sentinel is equipped with: exile cannon; tomb sentinel claws; gloom prism.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -3950,6 +3983,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -4204,6 +4240,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -4457,6 +4496,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -4855,6 +4897,9 @@
           ]
         },
         "text": "An Annihilation Barge is equipped with: gauss cannon; twin tesla destructor.\n\n• This model's gauss cannon can be replaced with 1 tesla cannon.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -5151,6 +5196,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
@@ -5450,6 +5498,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
@@ -5974,6 +6025,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -6141,6 +6195,9 @@
           ]
         },
         "text": "Anrakyr the Traveller is equipped with: tachyon arrow; warscythe. Your army can only include one **ANRAKYR THE** TRAVELLER** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -6464,6 +6521,9 @@
           ]
         },
         "text": "A Catacomb Command Barge is equipped with: gauss cannon; staff of light.\n\n• This model's gauss cannon can be replaced with 1 tesla cannon.\n\n• This model's staff of light can be replaced with one of the following: 1 hyperphase sword; 1 voidblade; 1 warscythe.\n\n• This model can be equipped with 1 resurrection orb.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -6653,6 +6713,9 @@
           ]
         },
         "text": "A Chronomancer is equipped with: aeonstave; chronotendrils.\n\n• This model's aeon stave can be replaced with 1 entropic lance.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -6820,6 +6883,9 @@
           ]
         },
         "text": "Illuminor Szeras is equipped with: Eldritch Lance; impaling legs. Your army can only include one **ILLUMINOR SZERAS** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -6989,6 +7055,9 @@
           ]
         },
         "text": "Imotekh the Stormlord is equipped with: Gauntlet of Fire; Staff of the Destroyer. Your army can only include one **IMOTEKH THE** STORMLORD** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -7192,6 +7261,9 @@
           ]
         },
         "text": "Kutlakh the World Killer is equipped with: staff of light; Obsidax. Your army can only include one **KUTLAKH THE** WORLD** KILLER** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -7432,6 +7504,9 @@
           ]
         },
         "text": "A Lokhust Lord is equipped with: staff of light.\n\n• This model's staff of light can be replaced with one of the following: 1 hyperphase sword; 1 voidblade; 1 warscythe.\n\n• This model can be equipped with one of the following: 1 phylactery; 1 resurrection orb.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -7626,6 +7701,9 @@
           ]
         },
         "text": "A Lord is equipped with: staff of light.\n\n• This model's staff of light can be replaced with one of the following: 1 hyperphase sword; 1 void blade; 1 warscythe.\n\n• This model can be equipped with 1 resurrection orb.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -7746,6 +7824,9 @@
           ]
         },
         "text": "Nemesor Zahndrekh is equipped with: staff of light. Your army can only include one **NEMESOR ZAHNDREKH** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -8106,6 +8187,9 @@
           ]
         },
         "text": "A n Overlord is equipped with: tachyon arrow; hyperphase glaive.\n\n• This model's tachyon arrow and hyperphase glaive can be replaced with one of the following: 1 hyperphase sword; 1 staff of light; 1 voidblade; 1 voidscythe; 1 warscythe.\n\n• If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -8224,6 +8308,9 @@
           ]
         },
         "text": "A Plasmancer is equipped with: plasmic lance.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -8342,6 +8429,9 @@
           ]
         },
         "text": "A Psychomancer is equipped with: abyssal lance.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -8457,6 +8547,9 @@
           ]
         },
         "text": "A Royal Warden is equipped with: relic gauss blaster.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -8684,6 +8777,9 @@
           ]
         },
         "text": "A Skorpekh Lord is equipped with: enmitic annihilator; flensing claw; hyperphase harvester.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -8867,6 +8963,9 @@
           ]
         },
         "text": "A Technomancer is equipped with: staff of light.\n\n• This model can be equipped with one of the following: 1 Canoptek cloak; 1 Canoptek control node.\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -9034,6 +9133,9 @@
           ]
         },
         "text": "Toholk the Blinded is equipped with: transdimensional beamer; aeonstave.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Warhammer Legends: Forge World (Index) 9th ed. – 1.0 @2020-12-17](https://www.warhammer-community.com/wp-content/uploads/2020/11/1qpk5gayVm5VmR4f.pdf)"
         }
@@ -9154,6 +9256,9 @@
           ]
         },
         "text": "Trazyn the Infinite is equipped with: Empathic Obliterator. Your army can only include one **TRAZYN THE** INFINITE** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -9276,6 +9381,9 @@
           ]
         },
         "text": "Vargard Obyron is equipped with: warscythe. Your army can only include one **VARGARD OBYRON** model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -9641,6 +9749,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
@@ -10036,6 +10147,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
         }
@@ -10289,6 +10403,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
@@ -10636,6 +10753,9 @@
             ]
           }
         },
+        "aspects": {
+          "Type": "game piece"
+        },
         "meta": {
           "Publication": "[Imperial Armour: Compendium (Index) 9th ed. – Indomitus 1.8 @2023-01-25](https://www.warhammer-community.com/wp-content/uploads/2020/12/mKjF7jJI98YgJ4Ls.pdf)"
         }
@@ -10892,6 +11012,9 @@
               }
             ]
           }
+        },
+        "aspects": {
+          "Type": "game piece"
         },
         "meta": {
           "Publication": "[Necrons (Codex) 9th ed. – Indomitus 1.3 @2022-02-04](https://www.warhammer-community.com/wp-content/uploads/2019/04/zcfdrUUUvzVxE3wY.pdf)"
