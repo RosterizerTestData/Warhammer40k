@@ -1,11 +1,11 @@
 {
   "name": "Grey Knights",
-  "revision": "0.0.11",
+  "revision": "0.0.13",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -50,7 +50,9 @@
                 "order": 8
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -178,6 +180,22 @@
                 "iterations": 1
               }
             ]
+          }
+        }
+      },
+      "Wisdom of the Prognosticars": {
+        "stats": {
+          "Power Level": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "tracked": true
+          },
+          "Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "tracked": true
           }
         }
       }
@@ -533,7 +551,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Razorback is equipped with: twin heavy bolter.\n\n• This model’s twin heavy bolter can be replaced with one of the following: 1 twin lascannon; 1 twin assault cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\nnull",
         "rules": {
@@ -883,7 +902,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Razorback is equipped with: twin heavy bolter.\n\n• This model may replace its twin heavy bolter with a twin lascannon or a twin assault cannon.\n\n• This model may take a hunter-killer missile.\n\n• This model may take a storm bolter.\n\n• This model’s twin heavy bolter can be replaced with 1 Razorback twin psycannon.\n\nnull",
         "rules": {
@@ -1183,7 +1203,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Rhino is equipped with: storm bolter.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 additional storm bolter.\n\nnull",
         "rules": {
@@ -1624,7 +1645,8 @@
             "Ability§Crux Terminatus",
             "Ability§Sacred Banner (Aura)",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Brotherhood Ancient is equipped with: storm bolter; frag grenades; krak grenades.\n\n• This model can be equipped with 1 Nemesis falchion.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -1993,7 +2015,8 @@
             "Ability§Combat Restoratives",
             "Ability§Narthecium (Aura)",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Brotherhood Apothecary is equipped with: Nemesis force sword; frag grenades; krak grenades.\n\n• This model’s Nemesis force sword can be replaced with 1 of the following: 1 Nemesis Daemon hammer; 1 Nemesis falchion; 1 Nemesis force halberd; 1 Nemesis force sword; 1 Nemesis warding stave.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -2418,7 +2441,8 @@
             "Ability§Explodes",
             "Ability§Duty Eternal",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Dreadnought is equipped with: assault cannon; storm bolter; Dreadnought combat weapon.\n\n• This model’s assault cannon can be replaced with one of the following: 1 heavy plasma cannon; 1 multi-melta; 1 twin lascannon.\n\n• This model’s Dreadnought combat weapon and storm bolter can be replaced with one of the following:\n\n○ 1 missile launcher.\n\n○ 1 Dreadnought combat weapon and 1 heavy flamer.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite), and [Armoured Resilience](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline) from the Sanctic discipline.",
         "allowed": {
@@ -3003,7 +3027,8 @@
             "Ability§Explodes",
             "Ability§Duty Eternal",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Dreadnought is equipped with: assault cannon; storm bolter; Dreadnought combat weapon.\n\n• This model may replace its assault cannon with an item from the ***Dreadnought Heavy** Weapons*** list.\n\n• This model may replace its Dreadnought combat weapon and storm bolter with a missile launcher.\n\n• This model may replace its storm bolter with a heavy flamer.\n\n• This model’s assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:\n\n- 1 heavy psycannon, 1 storm bolter, 1 Nemesis doomglaive.\n\n- 1 heavy psycannon, 1 incinerator, 1 Nemesis doomglaive.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite), and [Armoured Resilience](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline) from the Sanctic discipline.",
         "allowed": {
@@ -3104,7 +3129,8 @@
             "Ability§Bolter Discipline",
             "Ability§Shock Assault",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Dreadnought is a single model equipped with an assault cannon, a storm bolter and a Dreadnought combat weapon.\n\n• This model may replace its assault cannon with an item from the ***Dreadnought Heavy** Weapons*** list.\n\n• This model may replace its Dreadnought combat weapon and storm bolter with a missile launcher.\n\n• This model may replace its storm bolter with a heavy flamer.\n\n• This model can be equipped with one of the following instead of 1 assault cannon: 1 twin autocannon; 1 twin heavy bolter; 1 twin heavy flamer.\n\n• This model can be equipped with 1 twin autocannon instead of 1 Dreadnought combat weapon and 1 storm bolter.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and one psychic power from the [Sanctic discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline)**.",
         "allowed": {
@@ -3493,7 +3519,8 @@
             "Ability§Crux Terminatus",
             "Ability§Chapter Banner",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Paladin Ancient is equipped with: storm bolter; frag grenades; krak grenades. Your army can only include one **PALADIN ANCIENT**.\n\n• This model can be equipped with 1 Nemesis falchion.\n\n• If this model is not equipped with 1 Nemesis falchion, its storm bolter can be replaced with 1 weapon from the ***Special Weapons*** list.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -3523,14 +3550,17 @@
             "group": "Loadout",
             "groupOrder": 2,
             "value": 2,
-            "min": 2,
+            "min": 1,
             "max": 9
+          },
+          "minModels": {
+            "value": 2
           },
           "poweri": {
             "value": 13
           },
           "power1": {
-            "value": 3
+            "value": 2
           }
         },
         "keywords": {
@@ -3598,17 +3628,20 @@
             "group": "Loadout",
             "groupOrder": 2,
             "value": 4,
-            "min": 4,
+            "min": 0,
             "max": 9,
             "increment": {
               "value": 5
             }
           },
+          "minModels": {
+            "value": 4
+          },
           "poweri": {
             "value": 7
           },
           "power1": {
-            "value": 6
+            "value": 3
           }
         },
         "keywords": {
@@ -4115,7 +4148,8 @@
             "Ability§Duty Eternal",
             "Ability§Unyielding Ancient",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Venerable Dreadnought is equipped with: assault cannon; storm bolter; Dreadnought combat weapon.\n\n• This model’s assault cannon can be replaced with one of the following: 1 heavy plasma cannon; 1 multi-melta; 1 twin lascannon.\n\n• This model’s Dreadnought combat weapon and storm bolter can be replaced with one of the following:\n\n○ 1 missile launcher.\n\n○ 1 Dreadnought combat weapon and 1 heavy flamer.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite), and [Armoured Resilience](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline) from the Sanctic discipline.",
         "allowed": {
@@ -4218,7 +4252,8 @@
             "Ability§Bolter Discipline",
             "Ability§Shock Assault",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Venerable Dreadnought is a single model equipped with an assault cannon, a storm bolter and a Dreadnought combat weapon.\n\n• This model may replace its assault cannon with an item from the ***Dreadnought Heavy** Weapons*** list.\n\n• This model may replace its Dreadnought combat weapon and storm bolter with a missile launcher.\n\n• This model may replace its storm bolter with a heavy flamer.\n\n• This model can be equipped with one of the following instead of 1 assault cannon: 1 twin autocannon; 1 twin heavy bolter; 1 twin heavy flamer.\n\n• This model can be equipped with 1 twin autocannon instead of 1 Dreadnought combat weapon and 1 storm bolter.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and one psychic power from the [Sanctic discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline)**.",
         "allowed": {
@@ -4268,17 +4303,20 @@
             "group": "Loadout",
             "groupOrder": 2,
             "value": 4,
-            "min": 4,
+            "min": 0,
             "max": 9,
             "increment": {
               "value": 5
             }
           },
+          "minModels": {
+            "value": 4
+          },
           "poweri": {
             "value": 8
           },
           "power1": {
-            "value": 6
+            "value": 3
           }
         },
         "keywords": {
@@ -4755,7 +4793,8 @@
             "Ability§Supersonic",
             "Ability§Hard to Hit",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Storm hawk Interceptor is equipped with: 2 assault cannons; las-talon; skyhammer missile launcher; infernum halo-launcher.\n\n• This model’s skyhammer missile launcher can be replaced with one of the following: 2 heavy bolters; 1 typhoon missile launcher.\n\n• This model’s las-talon can be replaced with 1 Icarus stormcannon.\n\nnull",
         "rules": {
@@ -5283,7 +5322,8 @@
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Stormraven Gunship is equipped with: 2 stormstrike missile launchers; twin assault cannon; typhoon missile launcher.\n\n• This model’s twin assault cannon can be replaced with one of the following: 1 twin heavy plasma cannon; 1 twin lascannon.\n\n• This model’s typhoon missile launcher can be replaced with one of the following: 1 twin heavy bolter; 1 twin multi-melta.\n\n• This model can be equipped with 2 hurricane bolters.\n\nnull",
         "rules": {
@@ -5658,7 +5698,8 @@
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Stormtalon Gunship is equipped with: skyhammer missile launcher; twin assault cannon.\n\n• This model’s skyhammer missile launcher can be replaced with one of the following: 2 heavy bolters; 2 lascannons; 1 typhoon missile launcher.\n\nnull",
         "rules": {
@@ -6030,7 +6071,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Land Raider is equipped with: twin heavy bolter; 2 twin lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
         "rules": {
@@ -6425,7 +6467,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Land Raider Banisher is equipped with: 2 heavy incinerators; twin psycannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
         "rules": {
@@ -6799,7 +6842,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Land Raider Crusader is equipped with: 2 hurricane bolters; twin assault cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
         "rules": {
@@ -7173,7 +7217,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Land Raider Redeemer is equipped with: 2 flamestorm cannons; twin assault cannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\n• This model can be equipped with 1 multi-melta.\n\nnull",
         "rules": {
@@ -7546,7 +7591,8 @@
             "Ability§Teleport Strike",
             "Ability§Force Shielding",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Nemesis Dreadknight is equipped with: 2 dreadfists.\n\n• This model can be equipped with up to two of the following (the same option cannot be selected twice): 1 gatling psilencer; 1 heavy incinerator; 1 heavy psycannon.\n\n• One of this model’s dreadfists can be replaced with one of the following: 1 Nemesis daemon greathammer; 1 Nemesis greatsword.\n\n• This model can be equipped with 1 Dreadknight teleporter.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite), and [Hammerhand](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline) from the Sanctic discipline.",
         "allowed": {
@@ -7702,17 +7748,20 @@
             "group": "Loadout",
             "groupOrder": 2,
             "value": 4,
-            "min": 4,
+            "min": 0,
             "max": 9,
             "increment": {
               "value": 5
             }
           },
+          "minModels": {
+            "value": 4
+          },
           "poweri": {
             "value": 6
           },
           "power1": {
-            "value": 6
+            "value": 3
           }
         },
         "keywords": {
@@ -8345,7 +8394,8 @@
             "Ability§Iron Halo",
             "Ability§Tactical Precision (Aura)",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Brother-Captain is equipped with: master-crafted storm bolter; Nemesis force sword; frag grenades; krak grenades.\n\n• This model’s Nemesis force sword can be replaced with 1 weapon from the ***Melee Weapons*** list.\n\n• This model’s master-crafted storm bolter can be replaced with 1 weapon from the **Special Weapons*** list.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -8397,241 +8447,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Master-crafted storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Nemesis force sword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8665,8 +8480,13 @@
             "Ability§Iron Halo",
             "Ability§Tactical Precision (Aura)",
             "Ability§Zone of Banishment",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Master-crafted storm bolter",
+            "Weapon§Nemesis force sword"
+          ],
+          "included": []
         },
         "text": "Brother-Captain Stern is equipped with: master-crafted storm bolter; Nemesis force sword; frag grenades; krak grenades. Your army can only include one **BROTHER-CAPTAIN STERN** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -8718,241 +8538,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Nemesis force sword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Nemesis force sword": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Nemesis force sword"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8983,8 +8568,13 @@
             "Ability§Iron Halo",
             "Ability§Martial Superiority",
             "Ability§Honour or Death",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Nemesis force sword",
+            "Weapon§Storm bolter"
+          ],
+          "included": []
         },
         "text": "A Brotherhood Champion is equipped with: storm bolter; Nemesis force sword; frag grenades; krak grenades.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -9036,241 +8626,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crozius arcanum": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crozius arcanum"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Crozius arcanum",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crozius arcanum": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crozius arcanum"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crozius arcanum": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crozius arcanum"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crozius arcanum": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crozius arcanum"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crozius arcanum": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crozius arcanum"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9302,8 +8657,13 @@
             "Ability§Teleport Strike",
             "Ability§Rosarius",
             "Ability§Spiritual Leaders (Aura)",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Crozius arcanum",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Storm bolter"
+          ],
+          "included": []
         },
         "text": "A Brotherhood Chaplain is equipped with: storm bolter; crozius arcanum; frag grenades; krak grenades.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -9799,7 +9159,8 @@
             "Ability§Crux Terminatus",
             "Ability§Psychic Hood",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Brotherhood Librarian is equipped with: Nemesis warding stave; frag grenades; krak grenades.\n\n• This model’s Nemesis warding stave can be replaced with 1 weapon from the ***Melee Weapons*** list.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 weapon from the Combi-weapons*** list.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from either the [Dominus](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)** and/or [Sanctic disciplines](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline)**.",
         "allowed": {
@@ -10513,7 +9874,8 @@
             "Ability§Blessing of the Omnissiah",
             "Ability§Awaken the Machine Spirits",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Brotherhood Techmarine is equipped with: boltgun; flamer; plasma cutter; Omnissian power axe; 2 servo-arms; frag grenades; krak grenades.\n\n• This model’s boltgun can be replaced with 1 bolt pistol.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -10565,241 +9927,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Black Blade of Antwyr": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Black Blade of Antwyr"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Black Blade of Antwyr",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Black Blade of Antwyr": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Black Blade of Antwyr"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Black Blade of Antwyr": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Black Blade of Antwyr"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Black Blade of Antwyr": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Black Blade of Antwyr"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Black Blade of Antwyr": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Black Blade of Antwyr"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -10833,8 +9960,13 @@
             "Ability§Cleansing Flame",
             "Ability§Martial Superiority",
             "Ability§Honour or Death",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Black Blade of Antwyr",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Storm bolter"
+          ],
+          "included": []
         },
         "text": "Castellan Crowe is equipped with: storm bolter; Black Blade of Antwyr; frag grenades; krak grenades. Your army can only include one **CASTELLAN CROWE** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite), one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)** and [Purifying Flame](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline) from the Sanctic discipline.",
         "allowed": {
@@ -11433,7 +10565,8 @@
             "Ability§Iron Halo",
             "Ability§Rites of Battle (Aura)",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Grand Master is equipped with: master-crafted storm bolter; Nemesis force halberd; frag grenades; krak grenades.\n\n• This model’s Nemesis force halberd can be replaced with 1 weapon from the ***Melee Weapons*** list.\n\n• This model’s master-crafted storm bolter can be replaced with 1 weapon from the **Special Weapons*** list.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -11687,7 +10820,8 @@
             "Ability§Force Shielding",
             "Ability§Rites of Battle (Aura)",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Grand Master in Nemesis Dreadknight is equipped with: 2 dreadfists.\n\n• This model can be equipped with up to two of the following (the same option cannot be selected twice): 1 heavy incinerator; 1 gatling psilencer; 1 heavy psycannon.\n\n• One of this model’s dreadfists can be replaced with one of the following: 1 Nemesis daemon greathammer; 1 Nemesis greatsword.\n\n• This model can be equipped with 1 Dreadknight teleporter.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -11865,241 +10999,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Master-crafted storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Malleus Argyrum": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Malleus Argyrum"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Malleus Argyrum",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Malleus Argyrum": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Malleus Argyrum"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Malleus Argyrum": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Malleus Argyrum"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Malleus Argyrum": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Malleus Argyrum"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Malleus Argyrum": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Malleus Argyrum"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -12131,8 +11030,13 @@
             "Ability§Teleport Strike",
             "Ability§Iron Halo",
             "Ability§Rites of Battle (Aura)",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Malleus Argyrum",
+            "Weapon§Master-crafted storm bolter"
+          ],
+          "included": []
         },
         "text": "Grand Master Voldus is equipped with: master-crafted storm bolter; Malleus Argyrum; frag grenades; krak grenades. Your army can only include one **GRAND MASTER** VOLDUS** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and three psychic powers from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -12221,288 +11125,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "The Titansword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "The Titansword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§The Titansword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "The Titansword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "The Titansword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§The Titansword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Master-crafted storm bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "The Titansword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§The Titansword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "The Titansword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§The Titansword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "Krak grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "The Titansword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§The Titansword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout6": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 6,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Krak grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Krak grenades"
-                  }
-                ]
-              },
-              "Master-crafted storm bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Master-crafted storm bolter"
-                  }
-                ]
-              },
-              "The Titansword": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§The Titansword"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -12534,8 +11156,13 @@
             "Ability§Teleport Strike",
             "Ability§Rites of Battle (Aura)",
             "Ability§Supreme Grand Master",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Master-crafted storm bolter",
+            "Weapon§The Titansword"
+          ],
+          "included": []
         },
         "text": "Kaldor Draigo is equipped with: The Titansword; Sanctum Sigilum; master-crafted storm bolter; frag grenades; krak grenades. Your army can only include one **KALDOR DRAIGO** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and three psychic powers from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)**.",
         "allowed": {
@@ -12617,7 +11244,8 @@
             "Ability§Bolter Discipline",
             "Ability§Shock Assault",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Techmarine is a single model armed with a power axe, two servo-arms, a boltgun, a plasma cutter, a flamer, frag grenades, krak grenades and psyk-out grenades.\n\n• This model may replace its boltgun with a bolt pistol.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. It knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power and one psychic power from the **[Sanctic discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline)**.",
         "allowed": {
@@ -13022,7 +11650,8 @@
             "Ability§Supersonic",
             "Ability§Colossal Flyer",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Grey Knights Thunderhawk Gunship is equipped with: 2 lascannons; Thunderhawk heavy cannon; 4 twin heavy bolters; Thunderhawk cluster bombs.\n\n• This model’s Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor.\n\n• This model's Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery.\n\nnull",
         "rules": {
@@ -20110,17 +18739,20 @@
             "group": "Loadout",
             "groupOrder": 2,
             "value": 4,
-            "min": 4,
+            "min": 0,
             "max": 9,
             "increment": {
               "value": 5
             }
           },
+          "minModels": {
+            "value": 4
+          },
           "poweri": {
             "value": 11
           },
           "power1": {
-            "value": 6
+            "value": 3
           }
         },
         "keywords": {
@@ -20187,17 +18819,20 @@
             "group": "Loadout",
             "groupOrder": 2,
             "value": 4,
-            "min": 4,
+            "min": 0,
             "max": 9,
             "increment": {
               "value": 5
             }
           },
+          "minModels": {
+            "value": 4
+          },
           "poweri": {
             "value": 6
           },
           "power1": {
-            "value": 6
+            "value": 3
           }
         },
         "keywords": {
@@ -21842,6 +20477,198 @@
             "value": "24″"
           }
         }
+      },
+      "Wisdom of the Prognosticars§A Noble Death": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 15
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Visions of the Augurium"
+          ]
+        },
+        "text": "Once per battle, in your Command phase, this model can experience this vision. If it does, until the start of your next Command phase, it gains the following ability: ‘A Noble Death (Aura): While a friendly **GREY KNIGHTS CORE** or **GREY KNIGHTS CHARACTER** unit is within 6″ of this model, it gains the *Objective Secured* ability and can *Set to Defend*. If a model in that unit already has the Objective Secured ability, that model counts as one additional model when determining control of an objective marker.’"
+      },
+      "Wisdom of the Prognosticars§Augury of Aggression": {
+        "keywords": {
+          "Tags": [
+            "Visions of the Augurium"
+          ]
+        },
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 15
+          }
+        },
+        "text": "Once per battle, when a friendly **GREY KNIGHTS CORE** or **GREY KNIGHTS CHARACTER** unit within 12″ of this model is selected to fire Overwatch, this model can experience this vision, If it does, then until the end of the phase, each time a model in that unit makes an *Overwatch* attack, a hit is scored on an unmodified roll of 4+."
+      },
+      "Wisdom of the Prognosticars§Deluminator of Majesty": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Gifts of the Prescient"
+          ]
+        },
+        "text": "When you give a model this gift, select one bolt weapon that model is equipped with. Once per battle, when the bearer shoots with that weapon, you can choose for it to fire a Deluminator of Majesty bolt.\n\nIf you do, you can only make one attack with that weapon, but if it scores a hit against a **DAEMON** unit, until the start of your next Shooting phase, that unit loses any *aura abilities* it has, in addition to any normal damage."
+      },
+      "Wisdom of the Prognosticars§Foretelling of Locus": {
+        "stats": {
+          "Power Level": {
+            "value": 2
+          },
+          "Points": {
+            "value": 25
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Visions of the Augurium"
+          ]
+        },
+        "text": "After both players have deployed their armies, select up to three **GREY KNIGHTS CORE** units from your army and redeploy them. If the mission uses the Strategic Reserves rules, any of those units can be placed into Strategic Reserves without having to spend any additional *CPs*, regardless of how many units are already in Strategic Reserves. If both players have abilities that redeploy units, *roll off*; the winner chooses who redeploys their units first."
+      },
+      "Wisdom of the Prognosticars§Gem of Inoktu": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Gifts of the Prescient"
+          ]
+        },
+        "text": "Once per battle, when the bearer is selected to manifest psychic powers, you can use this gift. If you do, then until the end of the phase, each time the bearer attempts to *manifest a psychic power* from the Dominus discipline, add 2 to that attempts *Psychic test*."
+      },
+      "Wisdom of the Prognosticars§Heroism’s Favour": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Visions of the Augurium"
+          ]
+        },
+        "text": "Once per battle, at the end of your opponent’s *Charge phase*, you can select one friendly **GREY KNIGHTS CORE** unit within 12″ of this model. That unit can *perform a Heroic Intervention* as if it were a **CHARACTER**."
+      },
+      "Wisdom of the Prognosticars§Omen of Incursion": {
+        "stats": {
+          "Power Level": {
+            "value": 2
+          },
+          "Points": {
+            "value": 25
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Visions of the Augurium"
+          ]
+        },
+        "text": "Once per battle, at the end of the Reinforcements step of your opponent’s Movement phase, this model can experience this vision. If it does, select one **GREY KNIGHTS CORE** or **GREY KNIGHTS CHARACTER** unit from your army that is not within *Engagement Range* of any enemy units. That unit can shoot as if it were your Shooting phase, but its models can only target a single eligible enemy unit that was set up as Reinforcements this turn and that is within 12″ of their unit when doing so."
+      },
+      "Wisdom of the Prognosticars§Presaged Paralysis": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Visions of the Augurium"
+          ]
+        },
+        "text": "Once per battle, at the start of your Charge phase, if this model is on the battlefield, you can select one enemy unit on the battlefield. Until the end of the phase, that unit cannot fire *Overwatch* or *Set to Defend*."
+      },
+      "Wisdom of the Prognosticars§Servant of the Throne": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 15
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Gifts of the Prescient"
+          ]
+        },
+        "text": "Once per battle, when the bearer is selected as the target of an attack, it can use this gift. If it does, then until the end of the turn, the bearer has a 3+ *invulnerable save*."
+      },
+      "Wisdom of the Prognosticars§Severance Bolt": {
+        "stats": {
+          "Power Level": {
+            "value": 2
+          },
+          "Points": {
+            "value": 25
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Gifts of the Prescient"
+          ]
+        },
+        "text": "When you give a model this gift, select one bolt weapon that model is equipped with. Before the battle, select one enemy **CHARACTER** unit. Once per battle, when the bearer shoots with that weapon, you can choose for it to fire a Severance Bolt.\n\nIf you do, you can only make one attack with that weapon, but when selecting a target, you can ignore the *Look Out, Sir* rule so long as you select that **CHARACTER** unit as the target. When making an attack with a Severance Bolt against that **CHARACTER** unit, if it successfully hits the target:\n\n* The target suffers D3 *mortal wounds* and the attack sequence ends.\n* If the target is a PSYKER, roll 3D6; if the result exceeds the target’s Leadership characteristic, randomly select one psychic power that it knows. That PSYKER cannot use that psychic power for the rest of the battle."
+      },
+      "Wisdom of the Prognosticars§Temporal Bombs": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "keywords": {
+          "Tags": [
+            "Gifts of the Prescient"
+          ]
+        },
+        "text": "Before the battle, select one Area Terrain feature that is not within your opponent’s deployment zone and note it down secretly on your army roster. The first time an enemy unit starts or ends a move on or within that terrain feature, reveal your choice and roll one D6: on a 2+, that enemy unit suffers D3 *mortal wounds*."
+      },
+      "Wisdom of the Prognosticars§True Name Shard": {
+        "keywords": {
+          "Tags": [
+            "Gifts of the Prescient"
+          ]
+        },
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 5
+          }
+        },
+        "text": "Once per battle, at the start of the Fight phase, you can select one enemy **DAEMON** unit within 6″ of the bearer. That unit is not eligible to fight this phase until after all eligible units from your army have done so."
       }
     }
   }

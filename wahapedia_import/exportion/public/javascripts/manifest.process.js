@@ -31,8 +31,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" asssets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.11',
+    notes: '0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.13',
     wip: true,
     dependencies: [
       {
@@ -291,17 +291,20 @@ createWargearStat = (i,wargearArr,modelLoadout,assetCatalog) => {
   }
   wargearArr.forEach((wargear,i) => {
     let wargearName = wargear.itemKey.split('§')[1];
-    let actualTrait = assetCatalog[wargear.itemKey];
-    let assignedTrait = (actualTrait?.stats?.Points?.value === undefined && !wargear.cost) || actualTrait?.stats?.Points?.value == wargear.cost ? wargear.itemKey : {
-      item: wargear.itemKey,
-      stats: {Points: {value: numerize(wargear.cost)}}
-    }
+    let assignedTrait = createAssignedTrait(assetCatalog,wargear);
     tempStat.ranks[wargearName] = {
       order: i+1,
       traits: [{trait: assignedTrait}],
     }
   });
   return tempStat
+}
+createAssignedTrait = (assetCatalog,wargear) => {
+  let actualTrait = assetCatalog[wargear.itemKey];
+  return (actualTrait?.stats?.Points?.value === undefined && !wargear.cost) || actualTrait?.stats?.Points?.value == wargear.cost ? wargear.itemKey : {
+    item: wargear.itemKey,
+    stats: {Points: {value: numerize(wargear.cost)}}
+  }
 }
 processRelics = (data,assetCatalog) => {
   // console.log(data.relics.relic_list)
@@ -548,7 +551,7 @@ processUnits = (data,assetCatalog) => {
         dynamic: true
       }
     });
-    // console.log(datasheet.name,unitId,wargearList)
+    // console.log(datasheet.name,options,unitId,wargearList)
 
     let wargearArr = data.wargear.composed.filter(wargear => wargear.datasheet_id == unitId).sort((a,b) => a.itemKey.localeCompare(b.itemKey));
     wargearArr.slice().forEach((gear,i) => {
@@ -561,7 +564,13 @@ processUnits = (data,assetCatalog) => {
     let equippedWargearArr = datasheet.unit_composition?.replace(/is equipped<br>with/g,'is equipped with').replace(/(<br>|<ul><li>|<li><li>|<\/li><\/ul>|<\/b> |\.\s)/g,'. ').split('. ').filter(el => el.includes('is equipped')).map(el => el.split(/is equipped with/).map(subEl => subEl.split('; ').map(equip => equip.replace(/^([:Aa1]\s)*/,''))));
     // console.log(datasheet.name,unitId,wargearArr,datasheet.unit_composition)
     equippedWargearArr?.forEach(modelLoadout => {
-      // console.log(modelLoadout[0][0],modelLoadout[1])
+      console.log('.')
+      console.log('.')
+      console.log('.')
+      console.log('.')
+      console.log('.')
+      console.log('.')
+      // console.log('00',modelLoadout[0][0],'1',modelLoadout[1])
       if(!modelLoadout[1]?.includes(' nothing.')){
         let upgradeQty = modelLoadout[1]?.length ? (modelLoadout[1].length + 1) : 0;
         if(
@@ -570,12 +579,24 @@ processUnits = (data,assetCatalog) => {
           || stringSimilarity.compareTwoStrings(modelLoadout[0][0],'This model') > .5
         ){
           models.forEach(modelData => {
+            console.log('@@@@@@@@$%#$%@#%@#%@#$%@#%',modelData)
             let tempItem = assetCatalog[modelData.itemKey];
             if(upgradeQty) tempItem.stats = tempItem.stats || {};
             for (let i = 0; i < upgradeQty; i++) {
-              tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
-              // console.log(tempItem,upgradeQty)
+              if(options?.length){
+                console.log('there are options 1')
+                tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
+              }
             }
+            if(!options?.length){
+              console.log('doing thing 1')
+              wargearArr.forEach(wargear => {
+                tempItem.assets = tempItem.assets || {};
+                tempItem.assets.traits = tempItem.assets.traits || [];
+                tempItem.assets.traits.push(createAssignedTrait(assetCatalog,wargear));
+              });
+            }
+            console.log(modelData.itemKey,tempItem)
           });
         }else{
           let modelNames = models.map(thisModel => thisModel.name);
@@ -583,11 +604,23 @@ processUnits = (data,assetCatalog) => {
           let tempItem = assetCatalog[models[modelIndex].itemKey];
           if(upgradeQty) tempItem.stats = tempItem.stats || {};
           for (let i = 0; i < upgradeQty; i++) {
-            tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
-            // console.log(tempItem,upgradeQty)
+            if(options?.length){
+              console.log('there are options 2')
+              tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
+            }
           }
+          if(!options?.length){
+            console.log('doing thing 2')
+            wargearArr.forEach(wargear => {
+              tempItem.assets = tempItem.assets || {};
+              tempItem.assets.traits = tempItem.assets.traits || [];
+              tempItem.assets.traits.push(createAssignedTrait(assetCatalog,wargear));
+            });
+          }
+          console.log(models[modelIndex].itemKey,tempItem)
         }
       }
+      // console.log('tempItem:',models.itemKey,tempItem)
     });
 
     if(models[0]?.models_per_unit?.includes('-')){
@@ -601,16 +634,17 @@ processUnits = (data,assetCatalog) => {
       let stat = tempItem.stats[datasheet.name];
       let range = models[0].models_per_unit.split('-');
       stat.value = Number(range[0]);
-      stat.min = Number(range[0]);
+      stat.min = 1;
       stat.max = Number(range[1]);
       let basePlThresh = stat.min;
-      if(!(stat.max % stat.min)){
+      tempItem.stats.minModels = {value: numerize(range[0])};
+      if(!(stat.max % Number(range[0]))){
         // console.log(datasheet.name,'has a clean threshold')
-        stat.increment = {value: numerize(stat.min)};
-      }
-      else if(!((stat.max + 1) % (stat.min + 1)) && models[1]?.models_per_unit == 1){
+        stat.increment = {value: numerize(range[0])};
+      }else if(!((stat.max + 1) % (Number(range[0]) + 1)) && models[1]?.models_per_unit == 1){
         // console.log(datasheet.name,'has a sergeant')
-        stat.increment = {value: numerize(stat.min) + 1};
+        stat.increment = {value: numerize(range[0]) + 1};
+        stat.min = 0;
         // console.log(stat)
         basePlThresh ++;
       }else tempItem.text += '\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*';
@@ -648,6 +682,16 @@ processUnits = (data,assetCatalog) => {
             stats: {
               ...tempItem.stats,
               ...modelAsset.stats,
+            },
+            assets: {
+              traits: [
+                ...tempItem.assets?.traits || [],
+                ...modelAsset.assets?.traits || [],
+              ],
+              included: [
+                ...tempItem.assets?.included || [],
+                ...modelAsset.assets?.included || [],
+              ],
             },
             rules: {
               ...tempItem.rules,
@@ -751,9 +795,9 @@ generateDamageRule = (damageRows,currentRow) => {
 }
 processFactions = (data,assetTaxonomy) => {
   let fac = data.factions[0].main_faction_id;
-  console.log(fac,data.factions)
+  // console.log(fac,data.factions)
   data.factCurrent = subFacNames[fac];
-  console.log(data.factCurrent)
+  // console.log(data.factCurrent)
   if(data.factions.length > 1){
     assetTaxonomy.Detachment = {
       stats: {
@@ -766,6 +810,8 @@ processFactions = (data,assetTaxonomy) => {
             },
           },
           dynamic: true,
+          group: 'Options',
+          statOrder: 20,
         }
       },
       rules: {
