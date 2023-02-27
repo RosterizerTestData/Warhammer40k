@@ -1,11 +1,11 @@
 {
   "name": "Rogue Traders",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -42,7 +42,7 @@
         "text": "Your opponent must subtract 1 from [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for ranged weapons that target Amallyn Shadowguide. Each time a ranged attack is allocated to this model while it is receiving the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover), add an additional 1 to any armour [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made against that attack."
       },
       "Ability§Canticles of the Omnissiah": {
-        "text": "If every unit from your army has the **ADEPTUS** MECHANICUS** keyword (excluding AGENT** OF** THE** IMPERIUM**, UNALIGNED** and [KNIGHT** OF** THE** <span class=\"kwbs\">COG</span>](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/#Knight-of-the-Cog) units), this unit gains a bonus depending on which Canticle of the Omnissiah is active for your army.\n\n\n\nAt the start of the battle round, you can select one Canticle that has not yet been active for your army. If you do so, until the end of the battle round, that Canticle is active for your army.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIf every unit from your army has the **ADEPTUS** MECHANICUS** keyword (excluding AGENT** OF** THE** IMPERIUM**, UNALIGNED** and [KNIGHT** OF** THE** <span class=\"kwbs\">COG</span>](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/#Knight-of-the-Cog) units), this unit gains a bonus depending on which Canticle of the Omnissiah is active for your army.\n\n\n\nAt the start of the battle round, you can select one Canticle that has not yet been active for your army. If you do so, until the end of the battle round, that Canticle is active for your army."
+        "text": "If every unit from your army has the **ADEPTUS** MECHANICUS** keyword (excluding AGENT** OF** THE** IMPERIUM**, UNALIGNED** and [KNIGHT** OF** THE** <span class=\"kwbs\">COG</span>](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/#Knight-of-the-Cog) units), this unit gains a bonus depending on which Canticle of the Omnissiah is active for your army.\n\n\n\nAt the start of the battle round, you can select one Canticle that has not yet been active for your army. If you do so, until the end of the battle round, that Canticle is active for your army."
       },
       "Ability§Concealed Archeotech Weapon": {
         "text": "Once per battle, at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), pick one enemy model within 1″ of Janus Draik and roll a dice; on a 4+ the target model suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nOnce per battle, at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), pick one enemy model within 1″ of Elucia Vhane and roll a dice; on a 4+ the target model suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
@@ -236,7 +236,8 @@
             "Ability§Phase Crystal",
             "Ability§Appear Unbidden",
             "Ability§Cameleoline Cloak"
-          ]
+          ],
+          "included": []
         },
         "text": "Amallyn Shadowguide is a single model armed with a ranger long rifle, power blade and plasma grenades. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -309,7 +310,8 @@
             "Ability§Quarry Can’t Hide",
             "Ability§Concealed Booby Traps",
             "Ability§Fieldcraft"
-          ]
+          ],
+          "included": []
         },
         "text": "Dahyak Grekh is a single model armed with a kroot rifle and kroot pistol. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -382,7 +384,8 @@
             "Ability§Psychic Barrier",
             "Ability§The Third Eye",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "Espern Locarno is a single model armed with a laspistol and force-orb cane. Only one of this model can be included in your army.\n\n\n\nEspern Locarno can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. He knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) power.",
         "aspects": {
@@ -460,7 +463,8 @@
             "Ability§Storm Shield",
             "Ability§Ecclesiarchy Battle Conclave",
             "Ability§Servant of the Imperium"
-          ]
+          ],
+          "included": []
         },
         "text": "Gotfret de Montbard is a single model armed with a power sword and storm shield. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -534,7 +538,8 @@
             "Ability§Rogue Trader Retinue",
             "Ability§Uncanny Reflexes",
             "Ability§Zealot"
-          ]
+          ],
+          "included": []
         },
         "text": "Knosso Prond is a single model armed with a Death Cult power blade, dartmask and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -609,7 +614,8 @@
             "Ability§Warrant of Trade",
             "Ability§Rogue Trader Retinue",
             "Ability§Voltagheist Array"
-          ]
+          ],
+          "included": []
         },
         "text": "Larsen van der Grauss is a single model armed with a voltaic pistol and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -680,7 +686,8 @@
           "traits": [
             "Ability§Zealot",
             "Ability§Maniacal Fervour"
-          ]
+          ],
+          "included": []
         },
         "text": "Pious Vorne is a single model armed with Vindictor. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -796,7 +803,8 @@
             "Ability§Rogue Trader Retinue",
             "Ability§Constant Companion",
             "Ability§Healing Serum"
-          ]
+          ],
+          "included": []
         },
         "text": "Sanistasia Minst is a single model armed with a scalpel claw, laspistol and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -866,7 +874,8 @@
         "assets": {
           "traits": [
             "Ability§Self Repair Systems"
-          ]
+          ],
+          "included": []
         },
         "text": "UR-025 is a single model equipped with a Mk I assault cannon and a power claw. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -938,7 +947,8 @@
             "Ability§Mindlock",
             "Ability§Salvage Protocols",
             "Ability§Mindless Servant"
-          ]
+          ],
+          "included": []
         },
         "text": "X-101 is a single model armed with a grav-gun and hydraulic claw. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -1012,7 +1022,8 @@
           "traits": [
             "Ability§It’s For Your Own Good",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "Aradia Madellan is a single model armed with a laspistol and force stave. Only one of this model can be included in your army.\n\n\n\nAradia Madellan can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in each friendly [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in each enemy Psychic phase. She knows the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and Psychic Augment powers.\n\n\n\n**Psychic Augment**:** Psychic Augment has a warp charge value of 8. If manifested, select a friendly **ASTRA MILITARUM** INFANTRY** unit within 12″ of the [psyker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Add 1 to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made by that unit until the\n\nstart of your next psychic phase.",
         "aspects": {
@@ -1086,7 +1097,8 @@
             "Ability§Concealed Archeotech Weapon",
             "Ability§Disruption Field Generator",
             "Ability§Multi-Spectral Auspicator"
-          ]
+          ],
+          "included": []
         },
         "text": "Elucia Vhane is a single model armed with a monomolecular cane-rapier, heirloom pistol and concussion grenades. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -1159,7 +1171,8 @@
             "Ability§Multi-Spectral Auspicator",
             "Ability§Disruption Field Generator",
             "Ability§Concealed Archeotech Weapon"
-          ]
+          ],
+          "included": []
         },
         "text": "Janus Draik is a single model armed with a monomolecular rapier, heirloom pistol and archeotech grenades. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -1231,7 +1244,8 @@
             "Ability§All Guns Blazing",
             "Ability§Servo-skull Assisted Targeting",
             "Ability§Warrant of Trade"
-          ]
+          ],
+          "included": []
         },
         "text": "Neyam Shai Murad is a single model armed with two negotiator pistols. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -1303,7 +1317,8 @@
             "Ability§Zealot",
             "Ability§Rosarius",
             "Ability§War Hymns"
-          ]
+          ],
+          "included": []
         },
         "text": "Taddeus the Purifier is a single model armed with a laspistol, servo-stubber and power maul. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -1350,99 +1365,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Eradication pistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eradication pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eradication pistol"
-                  }
-                ]
-              },
-              "Servo-arc claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arc claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Servo-arc claw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eradication pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eradication pistol"
-                  }
-                ]
-              },
-              "Servo-arc claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arc claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eradication pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eradication pistol"
-                  }
-                ]
-              },
-              "Servo-arc claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arc claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1472,8 +1394,11 @@
             "Ability§Omni-scrambler",
             "Ability§Brotherhood of the Cog",
             "Ability§Machine Focus",
-            "Ability§Master of Machines"
-          ]
+            "Ability§Master of Machines",
+            "Wargear§Eradication pistol",
+            "Weapon§Servo-arc claw"
+          ],
+          "included": []
         },
         "text": "A Technoarcheologist is equipped with: eradication pistol; servo-arc claw.\n\n\n\nnull",
         "aspects": {

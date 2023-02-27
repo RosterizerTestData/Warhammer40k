@@ -1,11 +1,11 @@
 {
   "name": "Adeptus Mechanicus",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -50,7 +50,9 @@
                 "order": 7
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -223,7 +225,7 @@
         "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), then for each **TECH-PRIEST DOMINUS** or **TECH-PRIEST MANIPULUS** unit included in a Detachment, one **TECH-PRIEST ENGINSEER** or TECHNOARCHEOLOGIST** unit can be included in that Detachment without taking up an additional [Battlefield Role](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role) slot."
       },
       "Ability§Canticles of the Omnissiah": {
-        "text": "If every unit from your army has the **ADEPTUS** MECHANICUS** keyword (excluding AGENT** OF** THE** IMPERIUM**, UNALIGNED** and [KNIGHT** OF** THE** <span class=\"kwbs\">COG</span>](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/#Knight-of-the-Cog) units), this unit gains a bonus depending on which Canticle of the Omnissiah is active for your army.\n\n\n\nAt the start of the battle round, you can select one Canticle that has not yet been active for your army. If you do so, until the end of the battle round, that Canticle is active for your army.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIf every unit from your army has the **ADEPTUS** MECHANICUS** keyword (excluding AGENT** OF** THE** IMPERIUM**, UNALIGNED** and [KNIGHT** OF** THE** <span class=\"kwbs\">COG</span>](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/#Knight-of-the-Cog) units), this unit gains a bonus depending on which Canticle of the Omnissiah is active for your army.\n\n\n\nAt the start of the battle round, you can select one Canticle that has not yet been active for your army. If you do so, until the end of the battle round, that Canticle is active for your army."
+        "text": "If every unit from your army has the **ADEPTUS** MECHANICUS** keyword (excluding AGENT** OF** THE** IMPERIUM**, UNALIGNED** and [KNIGHT** OF** THE** <span class=\"kwbs\">COG</span>](https://wahapedia.ru/wh40k9ed/factions/adeptus-mechanicus/#Knight-of-the-Cog) units), this unit gains a bonus depending on which Canticle of the Omnissiah is active for your army.\n\n\n\nAt the start of the battle round, you can select one Canticle that has not yet been active for your army. If you do so, until the end of the battle round, that Canticle is active for your army."
       },
       "Ability§Combined Landing": {
         "text": "",
@@ -262,7 +264,7 @@
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nModels in this unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Explodes": {
-        "text": "Each time a model in this unit is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time a model in this unit is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+        "text": "Each time a model in this unit is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this transport is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6 it explodes, and each unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Ability§Eye of Serberys": {
         "text": "Each time you select a target for a weapon a model in this unit is equipped with, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule. Each time a ranged attack is made by a model in this unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage."
@@ -788,99 +790,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Cognis heavy stubber",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cognis heavy stubber": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cognis heavy stubber"
-                  }
-                ]
-              },
-              "Twin cognis heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin cognis heavy stubber"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Twin cognis heavy stubber",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cognis heavy stubber": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cognis heavy stubber"
-                  }
-                ]
-              },
-              "Twin cognis heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin cognis heavy stubber"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cognis heavy stubber": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cognis heavy stubber"
-                  }
-                ]
-              },
-              "Twin cognis heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin cognis heavy stubber"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -908,8 +817,11 @@
           "traits": [
             "Ability§Doctrina Imperatives",
             "Ability§Explodes",
-            "Ability§Broad Spectrum Data-tether"
-          ]
+            "Ability§Broad Spectrum Data-tether",
+            "Weapon§Cognis heavy stubber",
+            "Weapon§Twin cognis heavy stubber"
+          ],
+          "included": []
         },
         "text": "A Skorpius Dunerider is equipped with: 2 cognis heavy stubbers; twin cognis heavy stubber.\n\n\n\nnull",
         "rules": {
@@ -1281,7 +1193,8 @@
             "Ability§Doctrina Imperatives",
             "Ability§Subterranean Assault",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Terrax pattern Termite is equipped with: Terrax melta cutter, 2 Terrax storm bolters; Termite drill.\n\n• This model’s 2 Terrax storm bolters can be replaced with one of the following: 2 Terrax heavy flamers; 2 twin Terrax volkite chargers.\n\nnull",
         "rules": {
@@ -1423,20 +1336,10 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Corpuscarii Electro-Priest"
+            "value": "Corpuscarii Electro-Priest"
           },
-          "Corpuscarii Electro-Priests": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 20,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 3
@@ -1449,6 +1352,14 @@
           },
           "power3": {
             "value": 16
+          },
+          "Corpuscarii Electro-Priest": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 20,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1477,7 +1388,9 @@
             "Ability§Voltagheist Field",
             "Ability§Voltagheist Blast",
             "Ability§Fanatical Devotion",
-            "Ability§Motive Force Sight",
+            "Ability§Motive Force Sight"
+          ],
+          "included": [
             {
               "item": "Model§Corpuscarii Electro-Priest",
               "quantity": 5
@@ -1531,99 +1444,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Gamma pistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gamma pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gamma pistol"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power fist"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Power fist",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gamma pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gamma pistol"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power fist"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gamma pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gamma pistol"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Power fist"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1654,8 +1474,11 @@
             "Ability§Master of Machines",
             "Ability§Battle Codifier",
             "Ability§Reprogramming",
-            "Ability§Machine Sentience (Aura)"
-          ]
+            "Ability§Machine Sentience (Aura)",
+            "Weapon§Gamma pistol",
+            "Weapon§Power fist"
+          ],
+          "included": []
         },
         "text": "A Cybernetics Datasmith is equipped with: gamma pistol; power fist.\n\n\n\nnull",
         "aspects": {
@@ -1671,20 +1494,10 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Fulgurite Electro-Priest"
+            "value": "Fulgurite Electro-Priest"
           },
-          "Fulgurite Electro-Priests": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 20,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 3
@@ -1697,6 +1510,14 @@
           },
           "power3": {
             "value": 16
+          },
+          "Fulgurite Electro-Priest": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 20,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1725,7 +1546,9 @@
             "Ability§Voltagheist Field",
             "Ability§Voltagheist Blast",
             "Ability§Fanatical Devotion",
-            "Ability§Siphoned Vigour",
+            "Ability§Siphoned Vigour"
+          ],
+          "included": [
             {
               "item": "Model§Fulgurite Electro-Priest",
               "quantity": 5
@@ -1748,25 +1571,23 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Secutarii Hoplite"
+            "value": "Secutarii Hoplite"
           },
           "Enhanced data-tether": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1781,22 +1602,20 @@
             "dynamic": true
           },
           "Mag-inverter shield": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1818,22 +1637,20 @@
             "dynamic": true
           },
           "Omnispex": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1847,24 +1664,21 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Secutarii Hoplites": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 2
           },
           "power1": {
             "value": 6
+          },
+          "Secutarii Hoplite": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -1893,11 +1707,13 @@
             "Ability§Titan Guard",
             "Ability§Kyropatris Field",
             "Ability§Secutarii",
+            "Model§Hoplite Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Secutarii Hoplite",
               "quantity": 4
-            },
-            "Model§Hoplite Alpha"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 4**. Every model is equipped with: arc lance; mag-inverter shield.\n\n• The Hoplite Alpha’s arc lance can be replaced with one of the following: 1 arc pistol; 1 phosphor blast pistol; 1 radium pistol.\n\n• The Hoplite Alpha’s mag-inverter shield can be replaced with one of the following: 1 arc maul; 1 enhanced data-tether; 1 omnispex; 1 power sword; 1 taser goad.\n\nnull",
@@ -1916,25 +1732,23 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Secutarii Peltast"
+            "value": "Secutarii Peltast"
           },
           "Enhanced data-tether": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1949,22 +1763,20 @@
             "dynamic": true
           },
           "Omnispex": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1978,24 +1790,21 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Secutarii Peltasts": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 2
           },
           "power1": {
             "value": 6
+          },
+          "Secutarii Peltast": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2025,11 +1834,13 @@
             "Ability§Secutarii",
             "Ability§Titan Guard",
             "Ability§Blind Barrage",
+            "Model§Peltast Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Secutarii Peltast",
               "quantity": 4
-            },
-            "Model§Peltast Alpha"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 4**. Every model is equipped with: galvanic caster.\n\n• The Peltast Alpha’s galvanic caster can be replaced with one of the following: 1 arc pistol; 1 phosphor blast pistol; 1 radium pistol.\n\n• The Peltast Alpha can be equipped with one of the following: 1 arc maul; 1 enhanced data-tether; 1 omnispex; 1 power sword; 1 taser goad.\n\nnull",
@@ -2093,26 +1904,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Sicarian Infiltrator"
+            "value": "Sicarian Infiltrator"
           },
-          "Sicarian Infiltrators": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Sicarian Infiltrator": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2142,11 +1950,13 @@
             "Ability§Neurostatic Interference",
             "Ability§Infiltrating Positions",
             "Ability§Voices In The Code (Aura)",
+            "Model§Sicarian Infiltrator Princeps"
+          ],
+          "included": [
             {
               "item": "Model§Sicarian Infiltrator",
               "quantity": 4
-            },
-            "Model§Sicarian Infiltrator Princeps"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 8**. Every model is equipped with: stubcarbine; power sword.\n\n• Any number of models can each have their stubcarbine and power sword replaced with 1 flechette blaster and 1 taser goad.\n\nnull",
@@ -2165,26 +1975,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Sicarian Ruststalker"
+            "value": "Sicarian Ruststalker"
           },
-          "Sicarian Ruststalkers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Sicarian Ruststalker": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2213,11 +2020,13 @@
             "Ability§Optimised Gait",
             "Ability§Enhanced Bionics",
             "Ability§Wasteland Stalkers",
+            "Model§Sicarian Ruststalker Princeps"
+          ],
+          "included": [
             {
               "item": "Model§Sicarian Ruststalker",
               "quantity": 4
-            },
-            "Model§Sicarian Ruststalker Princeps"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 8**. Every model is equipped with: chordclaw; transonic razor.\n\n• Any number of Sicarian Ruststalkers can each have their chordclaw and transonic razor replaced with 1 transonic blades.\n\n• The Sicarian Ruststalker Princeps’ transonic razor can be replaced with 1 transonic blades.\n\nnull",
@@ -2292,7 +2101,8 @@
             "Ability§Mindlock",
             "Ability§Salvage Protocols",
             "Ability§Mindless Servant"
-          ]
+          ],
+          "included": []
         },
         "text": "X-101 is a single model armed with a grav-gun and hydraulic claw. Only one of this model can be included in your army.\n\n\n\nnull",
         "aspects": {
@@ -2308,20 +2118,18 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Ironstrider Ballistarius"
+            "value": "Ironstrider Ballistarius"
           },
-          "Ironstrider Ballistarii": {
+          "minModels": {
+            "value": 1
+          },
+          "Ironstrider Ballistarius": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 6,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2350,7 +2158,9 @@
             "Ability§Doctrina Imperatives",
             "Ability§Bionics",
             "Ability§Explodes",
-            "Ability§Broad Spectrum Data-tether",
+            "Ability§Broad Spectrum Data-tether"
+          ],
+          "included": [
             "Model§Ironstrider Ballistarius"
           ]
         },
@@ -2370,26 +2180,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Pteraxii Skystalker"
+            "value": "Pteraxii Skystalker"
           },
-          "Pteraxii Skystalkers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Pteraxii Skystalker": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2421,11 +2228,13 @@
             "Ability§Enhanced Bionics",
             "Ability§Fleeting Barrage",
             "Ability§Thermal Riders",
+            "Model§Pteraxii Skystalker Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Pteraxii Skystalker",
               "quantity": 4
-            },
-            "Model§Pteraxii Skystalker Alpha"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 8**.\n\n• Every Pteraxii Skystalker is equipped with: flechette carbine.\n\n• The Pteraxii Skystalker Alpha is equipped with: flechette blaster; taser goad.\n\n\n\nnull",
@@ -2444,26 +2253,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Pteraxii Sterylizor"
+            "value": "Pteraxii Sterylizor"
           },
-          "Pteraxii Sterylizors": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Pteraxii Sterylizor": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2495,11 +2301,13 @@
             "Ability§Enhanced Bionics",
             "Ability§Darting Hunters",
             "Ability§Swooping Strikes",
+            "Model§Pteraxii Sterylizor Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Pteraxii Sterylizor",
               "quantity": 4
-            },
-            "Model§Pteraxii Sterylizor Alpha"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 8**.\n\n• Every Pteraxii Sterylizor is equipped with: phosphor torch; Pteraxii talons.\n\n• The Pteraxii Sterylizor Alpha is equipped with: flechette blaster; Pteraxii talons; taser goad.\n\n\n\nnull",
@@ -2518,25 +2326,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Serberys Raider"
+            "value": "Serberys Raider"
           },
           "Enhanced data-tether": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2550,27 +2356,24 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Serberys Raiders": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 2,
-            "min": 2,
-            "max": 8,
-            "increment": {
-              "value": 2
-            }
+          "minModels": {
+            "value": 2
           },
           "poweri": {
             "value": 3
           },
           "power1": {
-            "value": 3
+            "value": 4
           },
           "power2": {
-            "value": 5
+            "value": 7
+          },
+          "Serberys Raider": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 8,
+            "value": 0
           }
         },
         "keywords": {
@@ -2600,11 +2403,13 @@
             "Ability§Enhanced Bionics",
             "Ability§Skirmishing Line",
             "Ability§Eye of Serberys",
+            "Model§Serberys Raider Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Serberys Raider",
               "quantity": 2
-            },
-            "Model§Serberys Raider Alpha"
+            }
           ]
         },
         "text": "If this unit contains between 4 and 6 models, it has **Power Rating 6**. If this unit contains 7 or more models, it has Power Rating 9**.\n\n• Every Serberys Raider is equipped with: galvanic carbine; cavalry sabre; clawed limbs.\n\n• The Serberys Raider Alpha is equipped with: archeo-revolver; galvanic carbine; cavalry sabre; clawed limbs.\n\n• 1 Serberys Raider can be equipped with 1 enhanced data-tether.\n\nnull",
@@ -2623,29 +2428,26 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Serberys Sulphurhound"
+            "value": "Serberys Sulphurhound"
           },
-          "Serberys Sulphurhounds": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 2,
-            "min": 2,
-            "max": 8,
-            "increment": {
-              "value": 2
-            }
+          "minModels": {
+            "value": 2
           },
           "poweri": {
             "value": 3
           },
           "power1": {
-            "value": 3
+            "value": 4
           },
           "power2": {
-            "value": 5
+            "value": 7
+          },
+          "Serberys Sulphurhound": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 8,
+            "value": 0
           }
         },
         "keywords": {
@@ -2674,11 +2476,13 @@
             "Ability§Pistoleers",
             "Ability§Enhanced Bionics",
             "Ability§Rad-saturation (Aura)",
+            "Model§Serberys Sulphurhound Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Serberys Sulphurhound",
               "quantity": 2
-            },
-            "Model§Serberys Sulphurhound Alpha"
+            }
           ]
         },
         "text": "If this unit contains between 4 and 6 models, it has **Power Rating 7**. If this unit contains 7 or more models, it has Power Rating 10**.\n\n • Every Serberys Sulphurhound is equipped with: 2 phosphor pistols; sulphur breath; clawed limbs.\n\n • The Serberys Sulphurhound Alpha is equipped with: phosphor blast pistol; sulphur breath; arc maul; clawed limbs.\n\n• For every 3 models in this unit, 1 Serberys Sulphurhound’s 2 phosphor pistols can be replaced with 1 phosphor blast carbine and 1 phosphor pistol.\n\nnull",
@@ -2697,20 +2501,18 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Sydonian Dragoon"
+            "value": "Sydonian Dragoon"
           },
-          "Sydonian Dragoons": {
+          "minModels": {
+            "value": 1
+          },
+          "Sydonian Dragoon": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 6,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2740,7 +2542,9 @@
             "Ability§Bionics",
             "Ability§Explodes",
             "Ability§Incense Cloud",
-            "Ability§Broad Spectrum Data-tether",
+            "Ability§Broad Spectrum Data-tether"
+          ],
+          "included": [
             "Model§Sydonian Dragoon"
           ]
         },
@@ -2760,22 +2564,20 @@
             "value": 8
           },
           "Chaff launcher": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2790,22 +2592,20 @@
             "dynamic": true
           },
           "Command uplink": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2969,7 +2769,8 @@
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "An Archaeopter Fusilave is equipped with: 4 cognis heavy stubbers; command uplink.\n\n• This model’s command uplink can be replaced with 1 chaff launcher.\n\nnull",
         "rules": {
@@ -3111,22 +2912,20 @@
             "value": 10
           },
           "Chaff launcher": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3141,22 +2940,20 @@
             "dynamic": true
           },
           "Command uplink": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3445,7 +3242,8 @@
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "An Archaeopter Stratoraptor is equipped with: 2 cognis heavy stubbers; 2 heavy phosphor blasters; twin cognis lascannon; command uplink.\n\n• This model’s command uplink can be replaced with 1 chaff launcher.\n\nnull",
         "rules": {
@@ -3587,22 +3385,20 @@
             "value": 6
           },
           "Chaff launcher": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3617,22 +3413,20 @@
             "dynamic": true
           },
           "Command uplink": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3853,7 +3647,8 @@
             "Ability§Explodes",
             "Ability§Airborne",
             "Ability§Manoeuvrable Craft"
-          ]
+          ],
+          "included": []
         },
         "text": "An Archaeopter Transvector is equipped with: 2 cognis heavy stubbers; twin cognis heavy stubber; command uplink.\n\n• This model’s command uplink can be replaced with 1 chaff launcher.\n\nnull",
         "rules": {
@@ -3995,20 +3790,10 @@
             "value": 10
           },
           "model": {
-            "value": "Model§Kastelan Robot"
+            "value": "Kastelan Robot"
           },
-          "Kastelan Robots": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 2,
-            "min": 2,
-            "max": 6,
-            "increment": {
-              "value": 2
-            }
+          "minModels": {
+            "value": 2
           },
           "poweri": {
             "value": 10
@@ -4018,6 +3803,14 @@
           },
           "power2": {
             "value": 5
+          },
+          "Kastelan Robot": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4044,7 +3837,9 @@
             "Ability§Canticles of the Omnissiah",
             "Ability§Battle Protocols",
             "Ability§Repulsor Grid",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             {
               "item": "Model§Kastelan Robot",
               "quantity": 2
@@ -4067,22 +3862,20 @@
             "value": 6
           },
           "Smoke launchers": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4313,7 +4106,8 @@
             "Ability§Emanatus Force Field",
             "Ability§Explodes",
             "Ability§Broad Spectrum Data-tether"
-          ]
+          ],
+          "included": []
         },
         "text": "An Onager Dunecrawler is equipped with: eradication beamer.\n\n• This model’s eradication beamer can be replaced with one of the following: 1 daedalus missile launcher, 1 gatling rocket launcher and 1 twin icarus autocannon; 1 neutron laser and 1 cognis heavy stubber; 1 twin Onager heavy phosphor blaster.\n\n• This model can be equipped with 1 additional cognis heavy stubber.\n\n• This model can be equipped with one of the following: broad spectrum data-tether; smoke launchers.\n\nnull",
         "rules": {
@@ -4709,7 +4503,8 @@
             "Ability§Doctrina Imperatives",
             "Ability§Explodes",
             "Ability§Broad Spectrum Data-tether"
-          ]
+          ],
+          "included": []
         },
         "text": "A Skorpius Disintegrator is equipped with: 3 cognis heavy stubbers; disruptor missile launcher; belleros energy cannon.\n\n• This model’s belleros energy cannon can be replaced with 1 ferrumite cannon.\n\nnull",
         "rules": {
@@ -4882,241 +4677,6 @@
           },
           "Base": {
             "value": "105 x 70mm"
-          },
-          "loadout1": {
-            "value": "Solar atomiser",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arc scourge": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arc scourge"
-                  }
-                ]
-              },
-              "Mechadendrite hive": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechadendrite hive"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Solar atomiser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Solar atomiser"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Arc scourge",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arc scourge": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arc scourge"
-                  }
-                ]
-              },
-              "Mechadendrite hive": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechadendrite hive"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Solar atomiser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Solar atomiser"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Mechadendrite hive",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arc scourge": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arc scourge"
-                  }
-                ]
-              },
-              "Mechadendrite hive": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechadendrite hive"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Solar atomiser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Solar atomiser"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Omnissian axe",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arc scourge": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arc scourge"
-                  }
-                ]
-              },
-              "Mechadendrite hive": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechadendrite hive"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Solar atomiser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Solar atomiser"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arc scourge": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Arc scourge"
-                  }
-                ]
-              },
-              "Mechadendrite hive": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechadendrite hive"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Solar atomiser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Solar atomiser"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5149,8 +4709,13 @@
             "Ability§Lord of Mars",
             "Ability§Lead in Prayer",
             "Ability§Master of Machines",
-            "Ability§Self-repair Mechanisms"
-          ]
+            "Ability§Self-repair Mechanisms",
+            "Weapon§Arc scourge",
+            "Weapon§Mechadendrite hive",
+            "Weapon§Omnissian axe",
+            "Weapon§Solar atomiser"
+          ],
+          "included": []
         },
         "text": "Belisarius Cawl is equipped with: solar atomiser; arc scourge; mechadendrite hive; Omnissian axe. Your army can only include one **BELISARIUS CAWL** model.\n\n\n\nnull",
         "aspects": {
@@ -5197,99 +4762,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Radium serpenta",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Control stave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Control stave"
-                  }
-                ]
-              },
-              "Radium serpenta": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Radium serpenta"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Control stave",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Control stave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Control stave"
-                  }
-                ]
-              },
-              "Radium serpenta": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Radium serpenta"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Control stave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Control stave"
-                  }
-                ]
-              },
-              "Radium serpenta": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Radium serpenta"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5317,8 +4789,11 @@
             "Ability§Doctrina Imperatives",
             "Ability§Control Edict",
             "Ability§Servo-skull Uplink (Aura)",
-            "Ability§Enhanced Bionics"
-          ]
+            "Ability§Enhanced Bionics",
+            "Weapon§Control stave",
+            "Weapon§Radium serpenta"
+          ],
+          "included": []
         },
         "text": "A Skitarii Marshal is equipped with: radium serpenta; control stave.\n\n\n\nnull",
         "aspects": {
@@ -5614,7 +5089,8 @@
             "Ability§Master of Machines",
             "Ability§Refractor Field",
             "Ability§Lord of the Machine Cult (Aura)"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tech-Priest Dominus is equipped with: macrostubber; volkite blaster; Omnissian axe.\n\n• This model’s macrostubber can be replaced with 1 phosphor serpenta.\n\n• This model’s volkite blaster can be replaced with 1 eradication ray.\n\nnull",
         "aspects": {
@@ -5661,162 +5137,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Mechanicus pistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Mechanicus pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechanicus pistol"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Servo-arm": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arm"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Omnissian axe",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Mechanicus pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechanicus pistol"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Servo-arm": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arm"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Servo-arm",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Mechanicus pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechanicus pistol"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Servo-arm": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arm"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Mechanicus pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mechanicus pistol"
-                  }
-                ]
-              },
-              "Omnissian axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Omnissian axe"
-                  }
-                ]
-              },
-              "Servo-arm": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arm"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5846,8 +5166,12 @@
             "Ability§Enhanced Bionics",
             "Ability§Master of Machines",
             "Ability§Awaken the Machine",
-            "Ability§Brotherhood of the Cog"
-          ]
+            "Ability§Brotherhood of the Cog",
+            "Weapon§Mechanicus pistol",
+            "Weapon§Omnissian axe",
+            "Weapon§Servo-arm"
+          ],
+          "included": []
         },
         "text": "A Tech-Priest Enginseer is equipped with: Mechanicus pistol; Omnissian axe; servo-arm.\n\n\n\nnull",
         "aspects": {
@@ -6111,7 +5435,8 @@
             "Ability§Master of Machines",
             "Ability§Refractor Field",
             "Ability§Galvanic Field"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tech-Priest Manipulus is equipped with: magnarail lance; Manipulus mechadendrites; Omnissian staff.\n\n• This model’s magnarail lance can be replaced with 1 transonic cannon.\n\nnull",
         "aspects": {
@@ -6158,99 +5483,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Eradication pistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eradication pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eradication pistol"
-                  }
-                ]
-              },
-              "Servo-arc claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arc claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Servo-arc claw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eradication pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eradication pistol"
-                  }
-                ]
-              },
-              "Servo-arc claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arc claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eradication pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eradication pistol"
-                  }
-                ]
-              },
-              "Servo-arc claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Servo-arc claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -6281,8 +5513,11 @@
             "Ability§Omni-scrambler",
             "Ability§Brotherhood of the Cog",
             "Ability§Machine Focus",
-            "Ability§Master of Machines"
-          ]
+            "Ability§Master of Machines",
+            "Wargear§Eradication pistol",
+            "Weapon§Servo-arc claw"
+          ],
+          "included": []
         },
         "text": "A Technoarcheologist is equipped with: eradication pistol; servo-arc claw.\n\n\n\nnull",
         "aspects": {
@@ -6326,53 +5561,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Electrostatic gauntlets",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Electrostatic gauntlets": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Electrostatic gauntlets"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Electrostatic gauntlets": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Electrostatic gauntlets"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Electrostatic gauntlets"
+          ]
         }
       },
       "Model§Fulgurite Electro-Priest": {
@@ -6409,53 +5603,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Electroleech stave",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Electroleech stave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroleech stave"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Electroleech stave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroleech stave"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Electroleech stave"
+          ]
         }
       },
       "Model§Hoplite Alpha": {
@@ -7657,85 +6810,14 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Flechette carbine",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Flechette carbine": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette carbine"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Flechette carbine": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette carbine"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Flechette blaster",
+            "Weapon§Flechette carbine",
+            "Weapon§Taser goad"
+          ]
         }
       },
       "Model§Pteraxii Skystalker Alpha": {
@@ -7772,124 +6854,14 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Flechette blaster",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Flechette carbine": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette carbine"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Taser goad",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Flechette carbine": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette carbine"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Flechette carbine": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette carbine"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Flechette blaster",
+            "Weapon§Flechette carbine",
+            "Weapon§Taser goad"
+          ]
         }
       },
       "Model§Pteraxii Sterylizor": {
@@ -7926,148 +6898,15 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Phosphor torch",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Pteraxii talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Flechette blaster",
+            "Weapon§Phosphor torch",
+            "Weapon§Pteraxii talons",
+            "Weapon§Taser goad"
+          ]
         }
       },
       "Model§Pteraxii Sterylizor Alpha": {
@@ -8104,195 +6943,15 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Flechette blaster",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Pteraxii talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Taser goad",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flechette blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flechette blaster"
-                  }
-                ]
-              },
-              "Phosphor torch": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Phosphor torch"
-                  }
-                ]
-              },
-              "Pteraxii talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Pteraxii talons"
-                  }
-                ]
-              },
-              "Taser goad": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Taser goad"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Flechette blaster",
+            "Weapon§Phosphor torch",
+            "Weapon§Pteraxii talons",
+            "Weapon§Taser goad"
+          ]
         }
       },
       "Model§Secutarii Hoplite": {
@@ -11855,26 +10514,24 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Kataphron Breacher"
+            "value": "Kataphron Breacher"
           },
-          "Kataphron Breachers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 4
+          },
+          "Kataphron Breacher": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -11901,7 +10558,9 @@
           "traits": [
             "Ability§Canticles of the Omnissiah",
             "Ability§Bionics",
-            "Ability§Tracked Mobility",
+            "Ability§Tracked Mobility"
+          ],
+          "included": [
             {
               "item": "Model§Kataphron Breacher",
               "quantity": 3
@@ -11924,26 +10583,24 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Kataphron Destroyer"
+            "value": "Kataphron Destroyer"
           },
-          "Kataphron Destroyers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 7
           },
           "power1": {
             "value": 4
+          },
+          "Kataphron Destroyer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -11970,7 +10627,9 @@
           "traits": [
             "Ability§Canticles of the Omnissiah",
             "Ability§Tracked Mobility",
-            "Ability§Bionics",
+            "Ability§Bionics"
+          ],
+          "included": [
             {
               "item": "Model§Kataphron Destroyer",
               "quantity": 3
@@ -11993,25 +10652,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Skitarii Ranger"
+            "value": "Skitarii Ranger"
           },
           "Enhanced data-tether": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -12026,22 +10683,20 @@
             "dynamic": true
           },
           "Omnispex": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -12055,18 +10710,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Skitarii Rangers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 19,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 3
@@ -12079,6 +10724,13 @@
           },
           "power3": {
             "value": 16
+          },
+          "Skitarii Ranger": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 19,
+            "value": 0
           }
         },
         "keywords": {
@@ -12106,11 +10758,13 @@
             "Ability§Doctrina Imperatives",
             "Ability§Bionics",
             "Ability§Rangers",
+            "Model§Skitarii Ranger Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Skitarii Ranger",
               "quantity": 4
-            },
-            "Model§Skitarii Ranger Alpha"
+            }
           ]
         },
         "text": "If this unit contains between 6 and 10 models, it has **Power Rating 6**. If this unit contains between 11 and 15 models, it has Power Rating 9**. If this unit contains 16 or more models, it has Power Rating 12**. Every model is equipped with: galvanic rifle.\n\n• If this unit contains 9 or fewer models, 1 Skitarii Ranger’s galvanic rifle can be replaced with one of the following: 1 arc rifle; 1 plasma caliver; 1 transuranic arquebus.\n\n• For every 10 models in this unit, 1 Skitarii Ranger’s galvanic rifle can be replaced with 1 arc rifle.\n\n• For every 10 models in this unit, 1 Skitarii Ranger’s galvanic rifle can be replaced with 1 plasma caliver.\n\n• For every 10 models in this unit, 1 Skitarii Ranger’s galvanic rifle can be replaced with 1 transuranic arquebus.\n\n• If this unit contains 9 or fewer models, 1 Skitarii Ranger equipped with a galvanic rifle can be equipped with one of the following: 1 enhanced data-tether; 1 omnispex. That model’s galvanic rifle cannot be replaced.\n\n• For every 10 models in this unit, 1 Skitarii Ranger equipped with a galvanic rifle can be equipped with one of the following: 1 enhanced data-tether; 1 omnispex. That model’s galvanic rifle cannot be replaced.\n\n• The Skitarii Ranger Alpha can be equipped with one of the following: 1 arc maul; 1 power sword; 1 taser goad.\n\n• The Skitarii Ranger Alpha’s galvanic rifle can be replaced with one of the following: 1 arc pistol; 1 phosphor blast pistol; 1 radium pistol.\n\nnull",
@@ -12129,25 +10783,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Skitarii Vanguard"
+            "value": "Skitarii Vanguard"
           },
           "Enhanced data-tether": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -12162,22 +10814,20 @@
             "dynamic": true
           },
           "Omnispex": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -12191,18 +10841,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Skitarii Vanguard": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 19,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 3
@@ -12215,6 +10855,13 @@
           },
           "power3": {
             "value": 16
+          },
+          "Skitarii Vanguard": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 19,
+            "value": 0
           }
         },
         "keywords": {
@@ -12242,11 +10889,13 @@
             "Ability§Doctrina Imperatives",
             "Ability§Bionics",
             "Ability§Rad-saturation (Aura)",
+            "Model§Skitarii Vanguard Alpha"
+          ],
+          "included": [
             {
               "item": "Model§Skitarii Vanguard",
               "quantity": 4
-            },
-            "Model§Skitarii Vanguard Alpha"
+            }
           ]
         },
         "text": "If this unit contains between 6 and 10 models, it has **Power Rating 6**. If this unit contains between 11 and 15 models, it has Power Rating 9**. If this unit contains 16 or more models, it has Power Rating 12**. Every model is equipped with: radium carbine.\n\n• If this unit contains 9 or fewer models, 1 Skitarii Vanguard’s radium carbine can be replaced with one of the following: 1 arc rifle; 1 plasma caliver; 1 transuranic arquebus.\n\n• For every 10 models in this unit, 1 Skitarii Vanguard’s radium carbine can be replaced with 1 arc rifle.\n\n• For every 10 models in this unit, 1 Skitarii Vanguard’s radium carbine can be replaced with 1 plasma caliver.\n\n• For every 10 models in this unit, 1 Skitarii Vanguard’s radium carbine can be replaced with 1 transuranic arquebus.\n\n• If this unit contains 9 or fewer models, 1 Skitarii Vanguard equipped with a radium carbine can be equipped with one of  the following: 1 enhanced data-tether; 1 omnispex. That model’s radium carbine cannot be replaced.\n\n• For every 10 models in this unit, 1 Skitarii Vanguard equipped with a radium carbine can be equipped with one of the following: 1 enhanced data-tether; 1 omnispex. That model’s radium carbine cannot be replaced.\n\n• The Skitarii Vanguard Alpha can be equipped with one of the following: 1 arc maul; 1 power sword; 1 taser goad.\n\n• The Skitarii Vanguard Alpha’s radium carbine can be replaced with one of the following: 1 arc pistol; 1 phosphor blast pistol; 1 radium pistol.\n\nnull",

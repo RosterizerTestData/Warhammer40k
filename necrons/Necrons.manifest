@@ -1,11 +1,11 @@
 {
   "name": "Necrons",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -47,7 +47,9 @@
                 "order": 7
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -625,7 +627,7 @@
         "text": "Re-roll **Reanimation Protocol** rolls** of 1 made for this unit."
       },
       "Ability§Timesplinter Mantle": {
-        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Titanic": {
         "text": "This model is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Each time this model makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back), it can be moved across other models (excluding **MONSTER** and VEHICLE** models) as if they were not there, and when it does it can be moved within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of such models, but cannot finish its move within Engagement Range of any of them.\n\n\n\n*Designers Note:** If this model does not have a base, before deploying this model, both players must agree the footprint of this models ‘base’ in the same way they would for an Area Terrain feature. We suggest that an imaginary straight line should be drawn from each point on this model which would touch the battlefield when it is placed on a flat surface. The area within these lines should be considered to be this model’s ‘base’.\n\n\n\nIf the model has been posed with one or more of its legs raised, agree with your opponent the point where that leg would touch the battlefield, and use this to advise the shape of the models ‘base’.*"
@@ -774,7 +776,8 @@
             "Ability§Hovering",
             "Ability§Repair Barge",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Ghost Ark is a single model equipped with two gauss flayer arrays.\n\n\n\nnull",
         "rules": {
@@ -947,52 +950,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Golden fists",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Golden fists": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Golden fists"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Golden fists": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Golden fists"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1021,8 +978,10 @@
             "Ability§Enslaved Star God",
             "Ability§Misdirection",
             "Ability§Necrodermis",
-            "Ability§Reality Unravels"
-          ]
+            "Ability§Reality Unravels",
+            "Weapon§Golden fists"
+          ],
+          "included": []
         },
         "text": "The C’tan Shard of the Deceiver is equipped with: golden fists. Your army can only include one **C’TAN SHARD** OF** THE** DECEIVER** model.\n\n\n\nThis model knows the [Cosmic Insanity](https://wahapedia.ru/wh40k9ed/factions/necrons/#Unique-C-tan-Powers) C’tan Power and one other C’tan Power selected from the [Powers of the C’tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)**. At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this model did not [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) that phase, it can use two of the C’tan Powers it knows. It cannot use the same C’tan Power more than once per turn.",
         "allowed": {
@@ -1074,52 +1033,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Scythe of the Nightbringer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Scythe of the Nightbringer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Scythe of the Nightbringer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Scythe of the Nightbringer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Scythe of the Nightbringer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1146,8 +1059,10 @@
             "Ability§Necrodermis",
             "Ability§Enslaved Star God",
             "Ability§Reality Unravels",
-            "Ability§Drain Life"
-          ]
+            "Ability§Drain Life",
+            "Wargear§Scythe of the Nightbringer"
+          ],
+          "included": []
         },
         "text": "The C’tan Shard of the Nightbringer is equipped with: Scythe of the Nightbringer. Your army can only include one **C’TAN SHARD** OF** THE** NIGHTBRINGER** model.\n\n\n\nThis model knows the [Gaze of Death](https://wahapedia.ru/wh40k9ed/factions/necrons/#Unique-C-tan-Powers) C’tan Power and one other C’tan Power from the [Powers of the C’tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)**. At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this model did not [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) that phase, it can use two of the C’tan Powers it knows. It cannot use the same C’tan Power more than once per turn.",
         "allowed": {
@@ -1199,99 +1114,6 @@
           },
           "Base": {
             "value": "80mm"
-          },
-          "loadout1": {
-            "value": "Spear of the Void Dragon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Canoptek tail blades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Canoptek tail blades"
-                  }
-                ]
-              },
-              "Spear of the Void Dragon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Spear of the Void Dragon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Canoptek tail blades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Canoptek tail blades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Canoptek tail blades"
-                  }
-                ]
-              },
-              "Spear of the Void Dragon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Spear of the Void Dragon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Canoptek tail blades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Canoptek tail blades"
-                  }
-                ]
-              },
-              "Spear of the Void Dragon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Spear of the Void Dragon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1318,8 +1140,11 @@
             "Ability§Necrodermis",
             "Ability§Enslaved Star God",
             "Ability§Reality Unravels",
-            "Ability§Matter Absorption"
-          ]
+            "Ability§Matter Absorption",
+            "Weapon§Canoptek tail blades",
+            "Wargear§Spear of the Void Dragon"
+          ],
+          "included": []
         },
         "text": "The C’tan Shard of the Void Dragon is equipped with: Spear of the Void Dragon; Canoptek tail blades. Your army can only include one **C’TAN SHARD** OF** THE** VOID** DRAGON** model.\n\n\n\nThis model knows the [Voltaic Storm](https://wahapedia.ru/wh40k9ed/factions/necrons/#Unique-C-tan-Powers) C’tan Power and one other C’tan Power from the [Powers of the C’tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)**. At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this model did not [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) that phase, it can use two of the C’tan Powers it knows. It cannot use the same C’tan Power more than once per turn.",
         "allowed": {
@@ -1371,52 +1196,6 @@
           },
           "Base": {
             "value": "28mm"
-          },
-          "loadout1": {
-            "value": "Monomolecular proboscis",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monomolecular proboscis": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monomolecular proboscis"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monomolecular proboscis": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monomolecular proboscis"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1444,8 +1223,10 @@
             "Ability§Viral Construct",
             "Ability§Evasion Protocol",
             "Ability§Recall Protocol",
-            "Ability§Infused Madness"
-          ]
+            "Ability§Infused Madness",
+            "Weapon§Monomolecular proboscis"
+          ],
+          "included": []
         },
         "text": "A Canoptek Plasmacyte is equipped with: monomolecular proboscis.\n\n\n\nnull",
         "aspects": {
@@ -1492,99 +1273,6 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Atomiser beam",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atomiser beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atomiser beam"
-                  }
-                ]
-              },
-              "Reanimator’s claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reanimator’s claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Reanimator’s claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atomiser beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atomiser beam"
-                  }
-                ]
-              },
-              "Reanimator’s claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reanimator’s claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atomiser beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atomiser beam"
-                  }
-                ]
-              },
-              "Reanimator’s claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Reanimator’s claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1610,8 +1298,11 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Explodes",
-            "Ability§Nanoscarab Reanimation Beam (Aura)"
-          ]
+            "Ability§Nanoscarab Reanimation Beam (Aura)",
+            "Weapon§Atomiser beam",
+            "Weapon§Reanimator’s claws"
+          ],
+          "included": []
         },
         "text": "A Canoptek Reanimator is equipped with: 2 atomiser beams; reanimator's claws.\n\n\n\nnull",
         "aspects": {
@@ -1627,25 +1318,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Canoptek Spyder"
+            "value": "Canoptek Spyder"
           },
           "Fabricator claw array": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1660,22 +1349,20 @@
             "dynamic": true
           },
           "Gloom prism": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1696,18 +1383,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Canoptek Spyders": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 4
@@ -1717,6 +1394,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Canoptek Spyder": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1744,7 +1429,9 @@
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
             "Ability§Explodes",
-            "Ability§Scarab Hive",
+            "Ability§Scarab Hive"
+          ],
+          "included": [
             "Model§Canoptek Spyder"
           ]
         },
@@ -1764,22 +1451,20 @@
             "value": 5
           },
           "Gloom prism": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1832,130 +1517,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Gauss slicers",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss slicers": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss slicers"
-                  }
-                ]
-              },
-              "Tomb stalker claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb stalker claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Tomb stalker claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss slicers": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss slicers"
-                  }
-                ]
-              },
-              "Tomb stalker claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb stalker claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Tomb stalker claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss slicers": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss slicers"
-                  }
-                ]
-              },
-              "Tomb stalker claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb stalker claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss slicers": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss slicers"
-                  }
-                ]
-              },
-              "Tomb stalker claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb stalker claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1979,8 +1540,11 @@
           "traits": [
             "Ability§Living Metal",
             "Ability§Command Protocols",
-            "Ability§Dimensional Translocation"
-          ]
+            "Ability§Dimensional Translocation",
+            "Weapon§Gauss slicers",
+            "Weapon§Tomb stalker claws"
+          ],
+          "included": []
         },
         "text": "A Canoptek Tombstalker is equipped with: 2 gauss slicers; tomb stalker claws; gloom prism.\n\n\n\nnull",
         "aspects": {
@@ -2043,26 +1607,24 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Deathmarks"
+            "value": "Deathmarks"
           },
-          "Deathmarks": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 10,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Deathmarks": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2087,7 +1649,9 @@
           "traits": [
             "Ability§Reanimation Protocols",
             "Ability§Command Protocols",
-            "Ability§Dimensional Translocation",
+            "Ability§Dimensional Translocation"
+          ],
+          "included": [
             {
               "item": "Model§Deathmarks",
               "quantity": 5
@@ -2110,20 +1674,10 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Flayed One"
+            "value": "Flayed One"
           },
-          "Flayed Ones": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 20,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 2
@@ -2136,6 +1690,14 @@
           },
           "power3": {
             "value": 16
+          },
+          "Flayed One": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 20,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2161,7 +1723,9 @@
             "Ability§Command Protocols",
             "Ability§Dimensional Translocation",
             "Ability§Flesh Hunger",
-            "Ability§Terrifying Foes (Aura)",
+            "Ability§Terrifying Foes (Aura)"
+          ],
+          "included": [
             {
               "item": "Model§Flayed One",
               "quantity": 5
@@ -2215,52 +1779,6 @@
           },
           "Base": {
             "value": "50mm"
-          },
-          "loadout1": {
-            "value": "Enmitic disintegrator pistol",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Enmitic disintegrator pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Enmitic disintegrator pistol"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Enmitic disintegrator pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Enmitic disintegrator pistol"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2289,8 +1807,10 @@
             "Ability§Dimensional Translocation",
             "Ability§Inescapable Death",
             "Ability§Multi-threat Eliminator",
-            "Ability§Hardwired for Destruction"
-          ]
+            "Ability§Hardwired for Destruction",
+            "Weapon§Enmitic disintegrator pistol"
+          ],
+          "included": []
         },
         "text": "A Hexmark Destroyer is equipped with: 6 enmitic disintegrator pistols.\n\n\n\nnull",
         "aspects": {
@@ -2306,25 +1826,23 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Lychguard"
+            "value": "Lychguard"
           },
           "Dispersion shield": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2345,24 +1863,22 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Lychguard": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 10,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 7
           },
           "power1": {
             "value": 6
+          },
+          "Lychguard": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2387,7 +1903,9 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
-            "Ability§Guardian Protocols (Aura)",
+            "Ability§Guardian Protocols (Aura)"
+          ],
+          "included": [
             {
               "item": "Model§Lychguard",
               "quantity": 5
@@ -2410,26 +1928,24 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Skorpekh Destroyer"
+            "value": "Skorpekh Destroyer"
           },
-          "Skorpekh Destroyers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 4
+          },
+          "Skorpekh Destroyer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2455,7 +1971,9 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
-            "Ability§Hardwired for Destruction",
+            "Ability§Hardwired for Destruction"
+          ],
+          "included": [
             {
               "item": "Model§Skorpekh Destroyer",
               "quantity": 3
@@ -2509,52 +2027,6 @@
           },
           "Base": {
             "value": "60mm flying base"
-          },
-          "loadout1": {
-            "value": "Crackling tendrils",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crackling tendrils": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crackling tendrils"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Crackling tendrils": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Crackling tendrils"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2581,8 +2053,10 @@
             "Ability§Necrodermis",
             "Ability§Enslaved Star God",
             "Ability§Reality Unravels",
-            "Ability§Fractured Personality"
-          ]
+            "Ability§Fractured Personality",
+            "Weapon§Crackling tendrils"
+          ],
+          "included": []
         },
         "text": "A Transcendent C’tan is equipped with: crackling tendrils.\n\n\n\nThis model knows two C’tan Powers from the **[Powers of the C’tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)**. At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this model did not [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) that phase, it can use one of the C’tan Powers it knows.",
         "allowed": {
@@ -2811,7 +2285,8 @@
             "Ability§Quantum Shielding",
             "Ability§Targeting Relay",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Triarch Stalker is equipped with: heat ray; Stalker's forelimbs.\n\n• This model's heat ray can be replaced with one of the following: 1 particle shredder; 1 twin heavy gauss cannon.\n\nnull",
         "rules": {
@@ -2953,26 +2428,24 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Canoptek Acanthrite"
+            "value": "Canoptek Acanthrite"
           },
-          "Canoptek Acanthrites": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 4
+          },
+          "Canoptek Acanthrite": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2999,7 +2472,9 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
-            "Ability§Shadowed Wings",
+            "Ability§Shadowed Wings"
+          ],
+          "included": [
             {
               "item": "Model§Canoptek Acanthrite",
               "quantity": 3
@@ -3022,20 +2497,10 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Scarab Swarm"
+            "value": "Scarab Swarm"
           },
-          "Canoptek Scarab Swarms": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 2
@@ -3045,6 +2510,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Scarab Swarm": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3069,7 +2542,9 @@
           "traits": [
             "Ability§Living Metal",
             "Ability§Command Protocols",
-            "Ability§Reanimation Protocols",
+            "Ability§Reanimation Protocols"
+          ],
+          "included": [
             {
               "item": "Model§Scarab Swarm",
               "quantity": 3
@@ -3092,22 +2567,20 @@
             "value": 7
           },
           "Gloom prism": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3160,130 +2633,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Exile cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Exile cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Exile cannon"
-                  }
-                ]
-              },
-              "Tomb sentinel claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb sentinel claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Tomb sentinel claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Exile cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Exile cannon"
-                  }
-                ]
-              },
-              "Tomb sentinel claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb sentinel claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Tomb sentinel claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Exile cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Exile cannon"
-                  }
-                ]
-              },
-              "Tomb sentinel claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb sentinel claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Exile cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Exile cannon"
-                  }
-                ]
-              },
-              "Tomb sentinel claws": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tomb sentinel claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -3307,8 +2656,11 @@
           "traits": [
             "Ability§Living Metal",
             "Ability§Command Protocols",
-            "Ability§Dimensional Translocation"
-          ]
+            "Ability§Dimensional Translocation",
+            "Weapon§Exile cannon",
+            "Weapon§Tomb sentinel claws"
+          ],
+          "included": []
         },
         "text": "A Canoptek Tomb Sentinel is equipped with: exile cannon; tomb sentinel claws; gloom prism.\n\n\n\nnull",
         "aspects": {
@@ -3324,26 +2676,24 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Canoptek Wraith"
+            "value": "Canoptek Wraith"
           },
-          "Canoptek Wraiths": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 4
+          },
+          "Canoptek Wraith": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3370,7 +2720,9 @@
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
             "Ability§Slinking Strike",
-            "Ability§Wraith Form",
+            "Ability§Wraith Form"
+          ],
+          "included": [
             {
               "item": "Model§Canoptek Wraith",
               "quantity": 3
@@ -3393,26 +2745,24 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Ophydian Destroyer"
+            "value": "Ophydian Destroyer"
           },
-          "Ophydian Destroyers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 4
+          },
+          "Ophydian Destroyer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3441,7 +2791,9 @@
             "Ability§Hardwired for Destruction",
             "Ability§Hyperphase Reap-blades",
             "Ability§Whipcoil Bodies",
-            "Ability§Tunnelling Horrors",
+            "Ability§Tunnelling Horrors"
+          ],
+          "included": [
             {
               "item": "Model§Ophydian Destroyer",
               "quantity": 3
@@ -3464,25 +2816,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Tomb Blades"
+            "value": "Tomb Blades"
           },
           "Nebuloscope": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3497,22 +2847,20 @@
             "dynamic": true
           },
           "Shadowloom": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3527,22 +2875,20 @@
             "dynamic": true
           },
           "Shieldvanes": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3556,18 +2902,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Tomb Blades": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 4
@@ -3577,6 +2913,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Tomb Blades": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3602,7 +2946,9 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
-            "Ability§Evasion Engrams",
+            "Ability§Evasion Engrams"
+          ],
+          "included": [
             {
               "item": "Model§Tomb Blades",
               "quantity": 3
@@ -3625,26 +2971,24 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Triarch Praetorian"
+            "value": "Triarch Praetorian"
           },
-          "Triarch Praetorians": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 10,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 6
+          },
+          "Triarch Praetorian": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3670,7 +3014,9 @@
           "traits": [
             "Ability§Living Metal",
             "Ability§Command Protocols",
-            "Ability§Reanimation Protocols",
+            "Ability§Reanimation Protocols"
+          ],
+          "included": [
             {
               "item": "Model§Triarch Praetorian",
               "quantity": 5
@@ -3732,99 +3078,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Heavy death ray",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy death ray": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy death ray"
-                  }
-                ]
-              },
-              "Twin tesla destructor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Twin tesla destructor",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy death ray": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy death ray"
-                  }
-                ]
-              },
-              "Twin tesla destructor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy death ray": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy death ray"
-                  }
-                ]
-              },
-              "Twin tesla destructor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -3853,8 +3106,11 @@
             "Ability§Supersonic",
             "Ability§Explodes",
             "Ability§Hard to Hit",
-            "Ability§Airborne"
-          ]
+            "Ability§Airborne",
+            "Weapon§Heavy death ray",
+            "Weapon§Twin tesla destructor"
+          ],
+          "included": []
         },
         "text": "A Doom Scythe is equipped with: heavy death ray; twin tesla destructor.\n\n\n\nnull",
         "rules": {
@@ -4035,52 +3291,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Twin tesla destructor",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin tesla destructor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin tesla destructor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -4110,8 +3320,10 @@
             "Ability§Supersonic",
             "Ability§Explodes",
             "Ability§Airborne",
-            "Ability§Hard to Hit"
-          ]
+            "Ability§Hard to Hit",
+            "Weapon§Twin tesla destructor"
+          ],
+          "included": []
         },
         "text": "A Night Scythe is equipped with: twin tesla destructor.\n\n\n\nnull",
         "rules": {
@@ -4292,52 +3504,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Twin tesla destructor",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin tesla destructor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin tesla destructor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin tesla destructor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -4367,8 +3533,10 @@
             "Ability§Airborne",
             "Ability§Hard to Hit",
             "Ability§Explodes",
-            "Ability§Death Sphere Bombardment"
-          ]
+            "Ability§Death Sphere Bombardment",
+            "Weapon§Twin tesla destructor"
+          ],
+          "included": []
         },
         "text": "A Night Shroud is equipped with: twin tesla destructor.\n\n\n\nnull",
         "rules": {
@@ -4559,25 +3727,23 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Sentry Pylon"
+            "value": "Sentry Pylon"
           },
           "Teleportation matrix": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4598,18 +3764,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Sentry Pylon": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 6
@@ -4619,6 +3775,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Sentry Pylon": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4644,7 +3808,9 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Explodes",
-            "Ability§Artillery Battery",
+            "Ability§Artillery Battery"
+          ],
+          "included": [
             "Model§Sentry Pylon"
           ]
         },
@@ -4894,7 +4060,8 @@
             "Ability§Quantum Shielding",
             "Ability§Explodes",
             "Ability§Hovering"
-          ]
+          ],
+          "included": []
         },
         "text": "An Annihilation Barge is equipped with: gauss cannon; twin tesla destructor.\n\n• This model's gauss cannon can be replaced with 1 tesla cannon.\n\nnull",
         "aspects": {
@@ -4949,99 +4116,6 @@
           },
           "Base": {
             "value": "90mm"
-          },
-          "loadout1": {
-            "value": "Doomsday blaster",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Doomsday blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Doomsday blaster"
-                  }
-                ]
-              },
-              "Twin gauss flayer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin gauss flayer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Twin gauss flayer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Doomsday blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Doomsday blaster"
-                  }
-                ]
-              },
-              "Twin gauss flayer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin gauss flayer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Doomsday blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Doomsday blaster"
-                  }
-                ]
-              },
-              "Twin gauss flayer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin gauss flayer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5067,8 +4141,11 @@
             "Ability§Command Protocols",
             "Ability§Containment Field",
             "Ability§Explodes",
-            "Ability§Sentinel Construct"
-          ]
+            "Ability§Sentinel Construct",
+            "Wargear§Doomsday blaster",
+            "Weapon§Twin gauss flayer"
+          ],
+          "included": []
         },
         "text": "A Canoptek Doomstalker is equipped with: doomsday blaster; twin gauss flayer.\n\n\n\nnull",
         "rules": {
@@ -5249,99 +4326,6 @@
           },
           "Base": {
             "value": "60mm flying base"
-          },
-          "loadout1": {
-            "value": "Doomsday cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Doomsday cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Doomsday cannon"
-                  }
-                ]
-              },
-              "Gauss flayer array": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss flayer array"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Gauss flayer array",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Doomsday cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Doomsday cannon"
-                  }
-                ]
-              },
-              "Gauss flayer array": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss flayer array"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Doomsday cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Doomsday cannon"
-                  }
-                ]
-              },
-              "Gauss flayer array": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauss flayer array"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5369,8 +4353,11 @@
             "Ability§Command Protocols",
             "Ability§Explodes",
             "Ability§Hovering",
-            "Ability§Quantum Shielding"
-          ]
+            "Ability§Quantum Shielding",
+            "Wargear§Doomsday cannon",
+            "Weapon§Gauss flayer array"
+          ],
+          "included": []
         },
         "text": "A Doomsday Ark is equipped with: doomsday cannon; 2 gauss flayer arrays.\n\n\n\nnull",
         "rules": {
@@ -5512,20 +4499,18 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Lokhust Destroyer"
+            "value": "Lokhust Destroyer"
           },
-          "Lokhust Destroyers": {
+          "minModels": {
+            "value": 1
+          },
+          "Lokhust Destroyer": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 6,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -5554,7 +4539,9 @@
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
             "Ability§Hardwired for Destruction",
-            "Ability§Repulsor Platform",
+            "Ability§Repulsor Platform"
+          ],
+          "included": [
             "Model§Lokhust Destroyer"
           ]
         },
@@ -5575,20 +4562,10 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Lokhust Heavy Destroyer (Lokhust Heavy Destroyers)"
+            "value": "Lokhust Heavy Destroyer"
           },
-          "Lokhust Heavy Destroyers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 3
@@ -5598,6 +4575,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Lokhust Heavy Destroyer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -5625,7 +4610,9 @@
             "Ability§Command Protocols",
             "Ability§Reanimation Protocols",
             "Ability§Hardwired for Destruction",
-            "Ability§Repulsor Platform",
+            "Ability§Repulsor Platform"
+          ],
+          "included": [
             "Model§Lokhust Heavy Destroyer (Lokhust Heavy Destroyers)"
           ]
         },
@@ -5896,7 +4883,8 @@
             "Ability§Hovering",
             "Ability§Quantum Shielding",
             "Ability§Containment Field"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tesseract Ark is equipped with: tesseract singularity chamber; 2 tesla cannons.\n\n• This model’s 2 tesla cannons can be replaced with one of the following: 2 gauss cannons; 2 particle beamers.\n\nnull",
         "rules": {
@@ -6069,99 +5057,6 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Tachyon arrow",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tachyon arrow": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tachyon arrow"
-                  }
-                ]
-              },
-              "Warscythe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warscythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Warscythe",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tachyon arrow": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tachyon arrow"
-                  }
-                ]
-              },
-              "Warscythe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warscythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tachyon arrow": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tachyon arrow"
-                  }
-                ]
-              },
-              "Warscythe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warscythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -6191,8 +5086,11 @@
             "Ability§Relentless March (Aura)",
             "Ability§Phase Shifter",
             "Ability§Lord of the Pyrrhian Legions (Aura)",
-            "Ability§Mind in the Machine"
-          ]
+            "Ability§Mind in the Machine",
+            "Weapon§Tachyon arrow",
+            "Weapon§Warscythe"
+          ],
+          "included": []
         },
         "text": "Anrakyr the Traveller is equipped with: tachyon arrow; warscythe. Your army can only include one **ANRAKYR THE** TRAVELLER** model.\n\n\n\nnull",
         "aspects": {
@@ -6208,22 +5106,20 @@
             "value": 9
           },
           "Resurrection Orb": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6518,7 +5414,8 @@
             "Ability§Quantum Shielding",
             "Ability§Explodes",
             "Ability§Hovering"
-          ]
+          ],
+          "included": []
         },
         "text": "A Catacomb Command Barge is equipped with: gauss cannon; staff of light.\n\n• This model's gauss cannon can be replaced with 1 tesla cannon.\n\n• This model's staff of light can be replaced with one of the following: 1 hyperphase sword; 1 voidblade; 1 warscythe.\n\n• This model can be equipped with 1 resurrection orb.\n\nnull",
         "aspects": {
@@ -6710,7 +5607,8 @@
             "Ability§Dynastic Advisors",
             "Ability§Timesplinter Mantle",
             "Ability§Chronometron"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chronomancer is equipped with: aeonstave; chronotendrils.\n\n• This model's aeon stave can be replaced with 1 entropic lance.\n\nnull",
         "aspects": {
@@ -6757,99 +5655,6 @@
           },
           "Base": {
             "value": "80mm"
-          },
-          "loadout1": {
-            "value": "Eldritch Lance",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eldritch Lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eldritch Lance"
-                  }
-                ]
-              },
-              "Impaling legs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Impaling legs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Impaling legs",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eldritch Lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eldritch Lance"
-                  }
-                ]
-              },
-              "Impaling legs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Impaling legs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Eldritch Lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Eldritch Lance"
-                  }
-                ]
-              },
-              "Impaling legs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Impaling legs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -6879,8 +5684,11 @@
             "Ability§Empyric Overcharger (Aura)",
             "Ability§Atomic Energy Manipulator",
             "Ability§Mechanical Augmentation",
-            "Ability§Illuminor"
-          ]
+            "Ability§Illuminor",
+            "Wargear§Eldritch Lance",
+            "Weapon§Impaling legs"
+          ],
+          "included": []
         },
         "text": "Illuminor Szeras is equipped with: Eldritch Lance; impaling legs. Your army can only include one **ILLUMINOR SZERAS** model.\n\n\n\nnull",
         "aspects": {
@@ -6927,99 +5735,6 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Gauntlet of fire",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauntlet of fire": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauntlet of fire"
-                  }
-                ]
-              },
-              "Staff of the Destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of the Destroyer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Staff of the Destroyer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauntlet of fire": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauntlet of fire"
-                  }
-                ]
-              },
-              "Staff of the Destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of the Destroyer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauntlet of fire": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gauntlet of fire"
-                  }
-                ]
-              },
-              "Staff of the Destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of the Destroyer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -7051,8 +5766,11 @@
             "Ability§Phase Shifter",
             "Ability§Lord of the Storm",
             "Ability§Grand Strategist",
-            "Ability§Phaeron"
-          ]
+            "Ability§Phaeron",
+            "Weapon§Gauntlet of fire",
+            "Wargear§Staff of the Destroyer"
+          ],
+          "included": []
         },
         "text": "Imotekh the Stormlord is equipped with: Gauntlet of Fire; Staff of the Destroyer. Your army can only include one **IMOTEKH THE** STORMLORD** model.\n\n\n\nnull",
         "aspects": {
@@ -7068,22 +5786,20 @@
             "value": 6
           },
           "Phylactery": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7136,99 +5852,6 @@
           },
           "Base": {
             "value": ""
-          },
-          "loadout1": {
-            "value": "Staff of light",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Obsidax": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Obsidax"
-                  }
-                ]
-              },
-              "Staff of light": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of light"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Obsidax",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Obsidax": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Obsidax"
-                  }
-                ]
-              },
-              "Staff of light": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of light"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Obsidax": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Obsidax"
-                  }
-                ]
-              },
-              "Staff of light": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of light"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -7257,8 +5880,11 @@
             "Ability§My Will Be Done",
             "Ability§Phase Shifter",
             "Ability§Relentless March (Aura)",
-            "Ability§Spirit of Madness"
-          ]
+            "Ability§Spirit of Madness",
+            "Weapon§Obsidax",
+            "Wargear§Staff of light"
+          ],
+          "included": []
         },
         "text": "Kutlakh the World Killer is equipped with: staff of light; Obsidax. Your army can only include one **KUTLAKH THE** WORLD** KILLER** model.\n\n\n\nnull",
         "aspects": {
@@ -7274,22 +5900,20 @@
             "value": 6
           },
           "Phylactery": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7311,22 +5935,20 @@
             "dynamic": true
           },
           "Resurrection Orb": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7501,7 +6123,8 @@
             "Ability§Hardwired for Destruction",
             "Ability§United in Destruction (Aura)",
             "Ability§Phase Shifter"
-          ]
+          ],
+          "included": []
         },
         "text": "A Lokhust Lord is equipped with: staff of light.\n\n• This model's staff of light can be replaced with one of the following: 1 hyperphase sword; 1 voidblade; 1 warscythe.\n\n• This model can be equipped with one of the following: 1 phylactery; 1 resurrection orb.\n\nnull",
         "aspects": {
@@ -7517,22 +6140,20 @@
             "value": 5
           },
           "Resurrection Orb": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7698,7 +6319,8 @@
             "Ability§Command Protocols",
             "Ability§The Lord’s Will",
             "Ability§Relentless March (Aura)"
-          ]
+          ],
+          "included": []
         },
         "text": "A Lord is equipped with: staff of light.\n\n• This model's staff of light can be replaced with one of the following: 1 hyperphase sword; 1 void blade; 1 warscythe.\n\n• This model can be equipped with 1 resurrection orb.\n\nnull",
         "aspects": {
@@ -7745,52 +6367,6 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Staff of light",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Staff of light": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of light"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Staff of light": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of light"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -7820,8 +6396,10 @@
             "Ability§Relentless March (Aura) ",
             "Ability§Counter Tactics",
             "Ability§Phase Shifter",
-            "Ability§Transient Madness"
-          ]
+            "Ability§Transient Madness",
+            "Wargear§Staff of light"
+          ],
+          "included": []
         },
         "text": "Nemesor Zahndrekh is equipped with: staff of light. Your army can only include one **NEMESOR ZAHNDREKH** model.\n\n\n\nnull",
         "aspects": {
@@ -7883,22 +6461,20 @@
             "value": 6
           },
           "Resurrection Orb": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8184,7 +6760,8 @@
             "Ability§Relentless March (Aura)",
             "Ability§Phase Shifter",
             "Ability§My Will Be Done"
-          ]
+          ],
+          "included": []
         },
         "text": "A n Overlord is equipped with: tachyon arrow; hyperphase glaive.\n\n• This model's tachyon arrow and hyperphase glaive can be replaced with one of the following: 1 hyperphase sword; 1 staff of light; 1 voidblade; 1 voidscythe; 1 warscythe.\n\n• If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb.\n\nnull",
         "aspects": {
@@ -8231,52 +6808,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Plasmic lance",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Plasmic lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasmic lance"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Plasmic lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Plasmic lance"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8304,8 +6835,10 @@
             "Ability§Command Protocols",
             "Ability§Living Lightning",
             "Ability§Harbinger of Destruction",
-            "Ability§Dynastic Advisors"
-          ]
+            "Ability§Dynastic Advisors",
+            "Wargear§Plasmic lance"
+          ],
+          "included": []
         },
         "text": "A Plasmancer is equipped with: plasmic lance.\n\n\n\nnull",
         "aspects": {
@@ -8352,52 +6885,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Abyssal lance",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Abyssal lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Abyssal lance"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Abyssal lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Abyssal lance"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8425,8 +6912,10 @@
             "Ability§Command Protocols",
             "Ability§Dynastic Advisors",
             "Ability§Harbinger of Despair",
-            "Ability§Nightmare Shroud (Aura) "
-          ]
+            "Ability§Nightmare Shroud (Aura) ",
+            "Wargear§Abyssal lance"
+          ],
+          "included": []
         },
         "text": "A Psychomancer is equipped with: abyssal lance.\n\n\n\nnull",
         "aspects": {
@@ -8473,52 +6962,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Relic gauss blaster",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Relic gauss blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Relic gauss blaster"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Relic gauss blaster": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Relic gauss blaster"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8543,8 +6986,10 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Adaptive Strategy",
-            "Ability§Relentless March (Aura)"
-          ]
+            "Ability§Relentless March (Aura)",
+            "Weapon§Relic gauss blaster"
+          ],
+          "included": []
         },
         "text": "A Royal Warden is equipped with: relic gauss blaster.\n\n\n\nnull",
         "aspects": {
@@ -8591,162 +7036,6 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Enmitic annihilator",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Enmitic annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Enmitic annihilator"
-                  }
-                ]
-              },
-              "Flensing claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flensing claw"
-                  }
-                ]
-              },
-              "Hyperphase harvester": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase harvester"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Flensing claw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Enmitic annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Enmitic annihilator"
-                  }
-                ]
-              },
-              "Flensing claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flensing claw"
-                  }
-                ]
-              },
-              "Hyperphase harvester": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase harvester"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Hyperphase harvester",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Enmitic annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Enmitic annihilator"
-                  }
-                ]
-              },
-              "Flensing claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flensing claw"
-                  }
-                ]
-              },
-              "Hyperphase harvester": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase harvester"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Enmitic annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Enmitic annihilator"
-                  }
-                ]
-              },
-              "Flensing claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flensing claw"
-                  }
-                ]
-              },
-              "Hyperphase harvester": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase harvester"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8773,8 +7062,12 @@
             "Ability§Command Protocols",
             "Ability§United in Destruction (Aura)",
             "Ability§Phase Shifter",
-            "Ability§Hardwired for Destruction"
-          ]
+            "Ability§Hardwired for Destruction",
+            "Weapon§Enmitic annihilator",
+            "Weapon§Flensing claw",
+            "Weapon§Hyperphase harvester"
+          ],
+          "included": []
         },
         "text": "A Skorpekh Lord is equipped with: enmitic annihilator; flensing claw; hyperphase harvester.\n\n\n\nnull",
         "aspects": {
@@ -8790,22 +7083,20 @@
             "value": 5
           },
           "Canoptek cloak": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8827,22 +7118,20 @@
             "dynamic": true
           },
           "Canoptek control node": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8960,7 +7249,8 @@
             "Ability§Command Protocols",
             "Ability§Dynastic Advisors",
             "Ability§Rites of Reanimation"
-          ]
+          ],
+          "included": []
         },
         "text": "A Technomancer is equipped with: staff of light.\n\n• This model can be equipped with one of the following: 1 Canoptek cloak; 1 Canoptek control node.\n\nnull",
         "aspects": {
@@ -9007,99 +7297,6 @@
           },
           "Base": {
             "value": ""
-          },
-          "loadout1": {
-            "value": "Transdimensional beamer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Aeonstave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Aeonstave"
-                  }
-                ]
-              },
-              "Transdimensional beamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Transdimensional beamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Aeonstave",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Aeonstave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Aeonstave"
-                  }
-                ]
-              },
-              "Transdimensional beamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Transdimensional beamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Aeonstave": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Aeonstave"
-                  }
-                ]
-              },
-              "Transdimensional beamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Transdimensional beamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9129,8 +7326,11 @@
             "Ability§Chronometron",
             "Ability§Eternal Engines",
             "Ability§Predictive Strategist",
-            "Ability§Timesplinter Mantle"
-          ]
+            "Ability§Timesplinter Mantle",
+            "Wargear§Aeonstave",
+            "Weapon§Transdimensional beamer"
+          ],
+          "included": []
         },
         "text": "Toholk the Blinded is equipped with: transdimensional beamer; aeonstave.\n\n\n\nnull",
         "aspects": {
@@ -9177,52 +7377,6 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Empathic Obliterator",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Empathic Obliterator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Empathic Obliterator"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Empathic Obliterator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Empathic Obliterator"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9252,8 +7406,10 @@
             "Ability§My Will Be Done",
             "Ability§Ancient Collector",
             "Ability§Surrogate Hosts",
-            "Ability§Relentless March (Aura)"
-          ]
+            "Ability§Relentless March (Aura)",
+            "Weapon§Empathic Obliterator"
+          ],
+          "included": []
         },
         "text": "Trazyn the Infinite is equipped with: Empathic Obliterator. Your army can only include one **TRAZYN THE** INFINITE** model.\n\n\n\nnull",
         "aspects": {
@@ -9300,52 +7456,6 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Warscythe",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Warscythe": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warscythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Warscythe": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Warscythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9377,8 +7487,10 @@
             "Ability§The Vargard’s Duty (Aura)",
             "Ability§Relentless March (Aura) ",
             "Ability§Ghostwalk Mantle",
-            "Ability§Ever-present Protector"
-          ]
+            "Ability§Ever-present Protector",
+            "Weapon§Warscythe"
+          ],
+          "included": []
         },
         "text": "Vargard Obyron is equipped with: warscythe. Your army can only include one **VARGARD OBYRON** model.\n\n\n\nnull",
         "aspects": {
@@ -9394,22 +7506,20 @@
             "value": 24
           },
           "Teleportation matrix": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -9470,130 +7580,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Gauss annihilator",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Gauss annihilator"
-                  }
-                ]
-              },
-              "Tesla arc": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla arc"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Tesla arc",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Gauss annihilator"
-                  }
-                ]
-              },
-              "Tesla arc": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla arc"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Tesla arc",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Gauss annihilator"
-                  }
-                ]
-              },
-              "Tesla arc": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla arc"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gauss annihilator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Gauss annihilator"
-                  }
-                ]
-              },
-              "Tesla arc": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla arc"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9620,8 +7606,11 @@
             "Ability§Living Metal",
             "Ability§Command Protocols",
             "Ability§Phase Shift Generator",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Gauss annihilator",
+            "Weapon§Tesla arc"
+          ],
+          "included": []
         },
         "text": "A Gauss Pylon is equipped with: gauss annihilator; tesla arc; teleportation matrix.\n\n\n\nnull",
         "rules": {
@@ -10018,7 +8007,8 @@
             "Ability§Hovering",
             "Ability§Explodes",
             "Ability§Eternity Gate"
-          ]
+          ],
+          "included": []
         },
         "text": "A Monolith is equipped with: 4 gauss flux arcs; particle whip; portal of exile.\n\n• This model's 4 gauss flux arcs can be replaced with 4 death rays.\n\nnull",
         "rules": {
@@ -10199,52 +8189,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Tesla sphere",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tesla sphere": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla sphere"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tesla sphere": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla sphere"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -10274,8 +8218,10 @@
             "Ability§Hovering Sentinel",
             "Ability§Hovering",
             "Ability§Explodes",
-            "Ability§Gravity Pulse"
-          ]
+            "Ability§Gravity Pulse",
+            "Weapon§Tesla sphere"
+          ],
+          "included": []
         },
         "text": "An Obelisk is equipped with: 4 tesla spheres.\n\n\n\nnull",
         "rules": {
@@ -10624,7 +8570,8 @@
             "Ability§Containment Field",
             "Ability§Explodes",
             "Ability§Titanic"
-          ]
+          ],
+          "included": []
         },
         "text": "A Seraptek is equipped with: 2 singularity generators; titanic forelimbs.\n\n• This model's 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors.\n\nnull",
         "rules": {
@@ -10805,52 +8752,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Tesla sphere",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tesla sphere": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla sphere"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Tesla sphere": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tesla sphere"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -10878,8 +8779,10 @@
             "Ability§Living Metal",
             "Ability§Vengeance of the Enchained",
             "Ability§Transtemporal Force Field",
-            "Ability§Hovering"
-          ]
+            "Ability§Hovering",
+            "Weapon§Tesla sphere"
+          ],
+          "included": []
         },
         "text": "A Tesseract Vault is equipped with: 4 tesla spheres.\n\n\n\nThis model knows four C’tan Powers from the **[Powers of the C’tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)**. At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this model did not [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) that phase, it can use a number of C’tan Powers it knows equal to the number in the table below. It cannot use the same C’tan Power more than once per turn.\n\n\n\n$000000850",
         "allowed": {
@@ -11117,100 +9020,13 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Cutting beam",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cutting beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cutting beam"
-                  }
-                ]
-              },
-              "Voidblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Voidblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Voidblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cutting beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cutting beam"
-                  }
-                ]
-              },
-              "Voidblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Voidblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cutting beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Cutting beam"
-                  }
-                ]
-              },
-              "Voidblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Voidblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Cutting beam",
+            "Weapon§Voidblade"
+          ]
         }
       },
       "Model§Canoptek Spyder": {
@@ -11519,100 +9335,13 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Scouring eye",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Scouring eye": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scouring eye"
-                  }
-                ]
-              },
-              "Scythed limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythed limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Scythed limbs",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Scouring eye": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scouring eye"
-                  }
-                ]
-              },
-              "Scythed limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythed limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Scouring eye": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scouring eye"
-                  }
-                ]
-              },
-              "Scythed limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythed limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Scouring eye",
+            "Weapon§Scythed limbs"
+          ]
         }
       },
       "Model§Deathmarks": {
@@ -11649,53 +9378,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Synaptic disintegrator",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Synaptic disintegrator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Synaptic disintegrator"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Synaptic disintegrator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Synaptic disintegrator"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Synaptic disintegrator"
+          ]
         }
       },
       "Model§Flayed One": {
@@ -11732,53 +9420,12 @@
           },
           "Base": {
             "value": "28mm"
-          },
-          "loadout1": {
-            "value": "Flayer claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flayer claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flayer claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flayer claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Flayer claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Flayer claws"
+          ]
         }
       },
       "Model§Gun Emplacement Mount": {
@@ -12602,124 +10249,17 @@
           },
           "Base": {
             "value": "50mm"
-          },
-          "loadout1": {
-            "value": "Hyperphase threshers",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hyperphase reap-blade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase reap-blade"
-                  }
-                ]
-              },
-              "Hyperphase threshers": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase threshers"
-                  }
-                ]
-              },
-              "Ophydian claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ophydian claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Ophydian claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hyperphase reap-blade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase reap-blade"
-                  }
-                ]
-              },
-              "Hyperphase threshers": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase threshers"
-                  }
-                ]
-              },
-              "Ophydian claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ophydian claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hyperphase reap-blade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase reap-blade"
-                  }
-                ]
-              },
-              "Hyperphase threshers": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase threshers"
-                  }
-                ]
-              },
-              "Ophydian claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ophydian claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Hyperphase reap-blade",
+            "Weapon§Hyperphase threshers",
+            "Weapon§Ophydian claws",
+            "Weapon§Hyperphase reap-blade",
+            "Weapon§Hyperphase threshers",
+            "Weapon§Ophydian claws"
+          ]
         }
       },
       "Model§Orikan Empowered": {
@@ -12793,53 +10333,12 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Staff of Tomorrow",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Staff of Tomorrow": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Staff of Tomorrow"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Staff of Tomorrow": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Staff of Tomorrow"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Staff of Tomorrow"
+          ]
         }
       },
       "Model§Power Crucible": {
@@ -12913,53 +10412,12 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Feeder mandibles",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Feeder mandibles": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Feeder mandibles"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Feeder mandibles": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Feeder mandibles"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Feeder mandibles"
+          ]
         }
       },
       "Model§Sentry Pylon": {
@@ -13150,69 +10608,15 @@
           },
           "Base": {
             "value": "50mm"
-          },
-          "loadout1": {
-            "value": "Hyperphase threshers",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hyperphase reap-blade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase reap-blade"
-                  }
-                ]
-              },
-              "Hyperphase threshers": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase threshers"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hyperphase reap-blade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase reap-blade"
-                  }
-                ]
-              },
-              "Hyperphase threshers": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hyperphase threshers"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Hyperphase reap-blade",
+            "Weapon§Hyperphase threshers",
+            "Weapon§Hyperphase reap-blade",
+            "Weapon§Hyperphase threshers"
+          ]
         }
       },
       "Model§Starstele": {
@@ -13257,52 +10661,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Transdimensional abductor",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Transdimensional abductor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Transdimensional abductor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Transdimensional abductor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Transdimensional abductor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "rules": {
@@ -13430,6 +10788,11 @@
               }
             ]
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Transdimensional abductor"
+          ]
         }
       },
       "Model§Szarekh": {
@@ -13474,194 +10837,6 @@
           },
           "Base": {
             "value": "100mm"
-          },
-          "loadout1": {
-            "value": "Sceptre of Eternal Glory",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Annihilator beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Annihilator beam"
-                  }
-                ]
-              },
-              "Sceptre of Eternal Glory": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sceptre of Eternal Glory"
-                  }
-                ]
-              },
-              "Scythe of Dust": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythe of Dust"
-                  }
-                ]
-              },
-              "Staff of Stars": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of Stars"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Staff of Stars",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Annihilator beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Annihilator beam"
-                  }
-                ]
-              },
-              "Sceptre of Eternal Glory": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sceptre of Eternal Glory"
-                  }
-                ]
-              },
-              "Scythe of Dust": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythe of Dust"
-                  }
-                ]
-              },
-              "Staff of Stars": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of Stars"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Scythe of Dust",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Annihilator beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Annihilator beam"
-                  }
-                ]
-              },
-              "Sceptre of Eternal Glory": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sceptre of Eternal Glory"
-                  }
-                ]
-              },
-              "Scythe of Dust": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythe of Dust"
-                  }
-                ]
-              },
-              "Staff of Stars": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of Stars"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Annihilator beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Annihilator beam"
-                  }
-                ]
-              },
-              "Sceptre of Eternal Glory": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sceptre of Eternal Glory"
-                  }
-                ]
-              },
-              "Scythe of Dust": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythe of Dust"
-                  }
-                ]
-              },
-              "Staff of Stars": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of Stars"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "rules": {
@@ -13789,6 +10964,14 @@
               }
             ]
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Annihilator beam",
+            "Wargear§Sceptre of Eternal Glory",
+            "Weapon§Scythe of Dust",
+            "Wargear§Staff of Stars"
+          ]
         }
       },
       "Model§Tomb Blades": {
@@ -14092,101 +11275,15 @@
           },
           "Base": {
             "value": "50mm"
-          },
-          "loadout1": {
-            "value": "Annihilator beam",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Annihilator beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Annihilator beam"
-                  }
-                ]
-              },
-              "Sceptre of Eternal Glory": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sceptre of Eternal Glory"
-                  }
-                ]
-              },
-              "Scythe of Dust": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythe of Dust"
-                  }
-                ]
-              },
-              "Staff of Stars": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of Stars"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Annihilator beam": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Annihilator beam"
-                  }
-                ]
-              },
-              "Sceptre of Eternal Glory": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sceptre of Eternal Glory"
-                  }
-                ]
-              },
-              "Scythe of Dust": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scythe of Dust"
-                  }
-                ]
-              },
-              "Staff of Stars": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Wargear§Staff of Stars"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Annihilator beam",
+            "Wargear§Sceptre of Eternal Glory",
+            "Weapon§Scythe of Dust",
+            "Wargear§Staff of Stars"
+          ]
         }
       },
       "Powers of the C’tan§1. Antimatter Meteor": {
@@ -14553,26 +11650,24 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Immortal"
+            "value": "Immortal"
           },
-          "Immortals": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 10,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Immortal": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -14595,7 +11690,9 @@
         "assets": {
           "traits": [
             "Ability§Reanimation Protocols",
-            "Ability§Command Protocols",
+            "Ability§Command Protocols"
+          ],
+          "included": [
             {
               "item": "Model§Immortal",
               "quantity": 5
@@ -14618,26 +11715,24 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Necron Warrior"
+            "value": "Necron Warrior"
           },
-          "Necron Warriors": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 10,
-            "min": 10,
-            "max": 20,
-            "increment": {
-              "value": 10
-            }
+          "minModels": {
+            "value": 10
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 11
+          },
+          "Necron Warrior": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 20,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -14661,7 +11756,9 @@
           "traits": [
             "Ability§Reanimation Protocols",
             "Ability§Command Protocols",
-            "Ability§Their Number is Legion",
+            "Ability§Their Number is Legion"
+          ],
+          "included": [
             {
               "item": "Model§Necron Warrior",
               "quantity": 10

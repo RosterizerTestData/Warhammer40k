@@ -1,11 +1,11 @@
 {
   "name": "Renegades and Heretics",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -134,22 +134,20 @@
             "value": 5
           },
           "Dozer blade": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -164,22 +162,20 @@
             "dynamic": true
           },
           "Armoured tracks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -610,7 +606,8 @@
             "Ability§Regimental Tactics",
             "Ability§Explodes",
             "Ability§Mobile Command Vehicle"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chimera is equipped with: heavy bolter; lasgun array; Chimera multi-laser.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model’s Chimera multi-laser can be replaced with one of the following: 1 Chimera heavy bolter; 1 Chimera heavy flamer.\n\n• This model can be equipped with one of the following: 1 heavy stubber; 1 storm bolter.\n\n• This model can be equipped with 1 dozer blade\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 armoured tracks.\n\nnull",
         "rules": {
@@ -752,25 +749,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Renegade Disciples (Renegade Command Squad)"
+            "value": "Renegade Disciples"
           },
           "Banner of the Apostate": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -785,22 +780,20 @@
             "dynamic": true
           },
           "Banner of Hate": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -815,22 +808,20 @@
             "dynamic": true
           },
           "Renegade vox-caster": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -844,15 +835,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Renegade Command Squad": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 14
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 2
@@ -862,6 +846,14 @@
           },
           "power2": {
             "value": 9
+          },
+          "Renegade Disciples": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 14,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -884,14 +876,16 @@
         "assets": {
           "traits": [
             "Ability§True Believers",
-            "Ability§Covenant of Chaos",
+            "Ability§Covenant of Chaos"
+          ],
+          "included": [
             {
               "item": "Model§Renegade Disciples (Renegade Command Squad)",
               "quantity": 4
             }
           ]
         },
-        "text": "If this unit contains between 5 and 9 models, it has **Power Rating 5**. If this unit contains 10 or more models, it has Power Rating 7**. Every model is equipped with: autogun; frag grenades.\n\n• Any number of models can each have their autogun replaced with 1 lasgun.\n\n• 2 Renegade Disciple models equipped with autoguns can form a Renegade Disciple Weapons Team equipped with 1 weapon from the ***Renegades Heavy** Weapons*** list.\n\n• 1 Renegade Disciple model’s autogun can be replaced with 1 weapon from the **Renegades Special** Weapons*** list.\n\n• 1 Renegade Disciple model equipped with one of the following: 1 Banner of the Apostate; 1 Banner of Hate. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Renegade vox-caster.\n\n• 1 Renegade Disciple model equipped with an autogun or lasgun can be equipped with a Renegade vox-caster. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Banner of the Apostate or a Banner of Hate.\n\nnull\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*",
+        "text": "If this unit contains between 5 and 9 models, it has **Power Rating 5**. If this unit contains 10 or more models, it has Power Rating 7**. Every model is equipped with: autogun; frag grenades.\n\n• Any number of models can each have their autogun replaced with 1 lasgun.\n\n• 2 Renegade Disciple models equipped with autoguns can form a Renegade Disciple Weapons Team equipped with 1 weapon from the ***Renegades Heavy** Weapons*** list.\n\n• 1 Renegade Disciple model’s autogun can be replaced with 1 weapon from the **Renegades Special** Weapons*** list.\n\n• 1 Renegade Disciple model equipped with one of the following: 1 Banner of the Apostate; 1 Banner of Hate. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Renegade vox-caster.\n\n• 1 Renegade Disciple model equipped with an autogun or lasgun can be equipped with a Renegade vox-caster. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Banner of the Apostate or a Banner of Hate.\n\nnull",
         "allowed": {
           "items": [
             "Model§Renegade Disciples (Renegade Command Squad)",
@@ -908,25 +902,23 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Renegade Disciples (Renegade Disciple Squad)"
+            "value": "Renegade Disciples"
           },
           "Chaos sigil": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -941,22 +933,20 @@
             "dynamic": true
           },
           "Renegade vox-caster": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -970,18 +960,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Renegade Disciple Squad": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 14,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 2
@@ -991,6 +971,13 @@
           },
           "power2": {
             "value": 11
+          },
+          "Renegade Disciples": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 14,
+            "value": 0
           }
         },
         "keywords": {
@@ -1014,11 +1001,13 @@
           "traits": [
             "Ability§True Believers",
             "Ability§Covenant of Chaos",
+            "Model§Renegade Disciple Champion"
+          ],
+          "included": [
             {
               "item": "Model§Renegade Disciples (Renegade Disciple Squad)",
               "quantity": 4
-            },
-            "Model§Renegade Disciple Champion"
+            }
           ]
         },
         "text": "If this unit contains between 6 and 10 models, it has **Power Rating 4**. If this unit contains 11 or more models, it has Power Rating 6**. Every model is equipped with: autogun; frag grenades.\n\n• Any number of models can each have their autogun replaced with 1 lasgun.\n\n• 2 Renegade Disciple models equipped with autoguns can form a Renegade Disciple Weapons Team equipped with 1 weapon from the ***Renegades Heavy** Weapons*** list.\n\n• 1 Renegade Disciple model’s autogun can be replaced with 1 weapon from the **Renegades Special** Weapons*** list.\n\n• 1 Renegade Disciple model equipped with an autogun or lasgun can be equipped with a Chaos sigil. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Renegade vox-caster.\n\n• 1 Renegade Disciple model equipped with an autogun or lasgun can be equipped with a Renegade vox-caster. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Chaos sigil.\n\n• The Renegade Disciple Champion’s autogun can be replaced with one of the following:\n\n- 1 lasgun.\n\n- 1 weapon from the **Renegades Ranged** Weapons** list and 1 weapon from the **Renegades Melee** Weapons*** list.\n\nnull",
@@ -1601,7 +1590,8 @@
             "Ability§Baleful Judge (Aura)",
             "Ability§Refractor Field",
             "Ability§Covenant of Chaos"
-          ]
+          ],
+          "included": []
         },
         "text": "A Renegade Enforcer is equipped with: laspistol; brutal assault weapon; frag grenades.\n\n• This model’s laspistol can be replaced with one of the following: 1 autogun; 1 autopistol; 1 lasgun; 1 shotgun; 1 weapon from the ***Renegades Ranged** Weapons*** list.\n\n• This model’s brutal assault weapon can be replaced with one weapon from the **Renegades Melee** Weapons*** list.\n\nnull",
         "aspects": {
@@ -1617,23 +1607,24 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Marauder"
+            "value": "Marauder"
           },
-          "Renegade Marauder Squad": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 2
           },
           "power1": {
             "value": 5
+          },
+          "Marauder": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1658,14 +1649,16 @@
             "Ability§Stalkers",
             "Ability§Murder Cultists",
             "Ability§Covenant of Chaos",
+            "Model§Marauder Chief"
+          ],
+          "included": [
             {
               "item": "Model§Marauder",
               "quantity": 4
-            },
-            "Model§Marauder Chief"
+            }
           ]
         },
-        "text": "If this unit contains 5 or more Marauder models, it has **Power Rating 4**. Increase this unit’s Power Rating by +1** for each Brute model it includes. Every Marauder and Marauder Chief model is equipped with: autogun; frag grenades; krak grenades. Every Brute model is equipped with: Brute combat weapon.\n\n• Any number of models can each have their autogun replaced with one of the following:\n\n- 1 lasgun\n\n- 1 shotgun\n\n- 1 brutal assault weapon and 1 autopistol\n\n- 1 brutal assault weapon and 1 laspistol\n\n• Up to 2 models can each have their autogun replaced with 1 weapon from the ***Renegades Special** Weapons*** list.\n\n• The Marauder Chief’s autogun can be replaced with one of the following:\n\n- 1 boltgun\n\n- 1 weapon from the **Renegades Ranged** Weapons** list and 1 weapon from the **Renegades Melee** Weapons*** list\n\nnull\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*",
+        "text": "If this unit contains 5 or more Marauder models, it has **Power Rating 4**. Increase this unit’s Power Rating by +1** for each Brute model it includes. Every Marauder and Marauder Chief model is equipped with: autogun; frag grenades; krak grenades. Every Brute model is equipped with: Brute combat weapon.\n\n• Any number of models can each have their autogun replaced with one of the following:\n\n- 1 lasgun\n\n- 1 shotgun\n\n- 1 brutal assault weapon and 1 autopistol\n\n- 1 brutal assault weapon and 1 laspistol\n\n• Up to 2 models can each have their autogun replaced with 1 weapon from the ***Renegades Special** Weapons*** list.\n\n• The Marauder Chief’s autogun can be replaced with one of the following:\n\n- 1 boltgun\n\n- 1 weapon from the **Renegades Ranged** Weapons** list and 1 weapon from the **Renegades Melee** Weapons*** list\n\nnull",
         "allowed": {
           "items": [
             "Model§Marauder",
@@ -1680,6 +1673,14 @@
         "stats": {
           "Power Level": {
             "value": 3
+          },
+          "Chaos Mauler Hounds": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1704,7 +1705,9 @@
         "assets": {
           "traits": [
             "Ability§Avalanche of Rage",
-            "Model§Ogryn Pack Master",
+            "Model§Ogryn Pack Master"
+          ],
+          "included": [
             {
               "item": "Model§Chaos Mauler Hounds",
               "quantity": 3
@@ -1727,20 +1730,18 @@
             "value": 5
           },
           "model": {
-            "value": "Model§Ogryn Brute"
+            "value": "Ogryn Brute"
           },
-          "Renegade Ogryn Brutes": {
+          "minModels": {
+            "value": 3
+          },
+          "Ogryn Brute": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
             "max": 12,
-            "increment": {
-              "value": 3
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1764,7 +1765,9 @@
         "assets": {
           "traits": [
             "Ability§Avalanche of Rage",
-            "Ability§Combat Stimms",
+            "Ability§Combat Stimms"
+          ],
+          "included": [
             {
               "item": "Model§Ogryn Brute",
               "quantity": 3
@@ -1787,20 +1790,10 @@
             "value": 5
           },
           "model": {
-            "value": "Model§Plague Ogryn"
+            "value": "Plague Ogryn"
           },
-          "Renegade Plague Ogryns": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 5
@@ -1810,6 +1803,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Plague Ogryn": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1835,7 +1836,9 @@
           "traits": [
             "Ability§Avalanche of Muscle",
             "Ability§Covenant of Nurgle",
-            "Ability§Combat Stimms",
+            "Ability§Combat Stimms"
+          ],
+          "included": [
             {
               "item": "Model§Plague Ogryn",
               "quantity": 3
@@ -1858,20 +1861,10 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Armoured Sentinel"
+            "value": "Armoured Sentinel"
           },
-          "Armoured Sentinels": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 3
@@ -1881,6 +1874,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Armoured Sentinel": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1910,7 +1911,9 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Armoured Cockpit",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Armoured Sentinel"
           ]
         },
@@ -1930,22 +1933,20 @@
             "value": 6
           },
           "Dozer blade": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1960,22 +1961,20 @@
             "dynamic": true
           },
           "Armoured tracks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2269,7 +2268,8 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Hellhound is equipped with: inferno cannon; heavy flamer.\n\n• This model’s inferno cannon can be replaced with one of the following: 1 chem cannon; 1 melta cannon.\n\n• This model’s heavy flamer can be replaced with one of the following: 1 heavy bolter; 1 multi-melta.\n\n• This model can be equipped with 1 dozer blade.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 armoured tracks.\n\nnull",
         "rules": {
@@ -2411,20 +2411,10 @@
             "value": 1
           },
           "model": {
-            "value": "Model§Chaos Spawn"
+            "value": "Chaos Spawn"
           },
-          "Renegade Chaos Spawn": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 5,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 1
@@ -2440,6 +2430,14 @@
           },
           "power4": {
             "value": 5
+          },
+          "Chaos Spawn": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 5,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2462,7 +2460,9 @@
           "traits": [
             "Ability§Fearsome (Aura)",
             "Ability§Covenant of Chaos",
-            "Ability§Mutated Beyond Reason",
+            "Ability§Mutated Beyond Reason"
+          ],
+          "included": [
             "Model§Chaos Spawn"
           ]
         },
@@ -2482,20 +2482,18 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Salamander Scout Tank"
+            "value": "Salamander Scout Tank"
+          },
+          "minModels": {
+            "value": 1
           },
           "Salamander Scout Tank": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 3,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2519,7 +2517,9 @@
             "Ability§Scout Vehicle",
             "Ability§Smoke Launchers",
             "Ability§Vehicle Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Salamander Scout Tank"
           ]
         },
@@ -2539,20 +2539,10 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Scout Sentinel"
+            "value": "Scout Sentinel"
           },
-          "Scout Sentinels": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 3
@@ -2562,6 +2552,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Scout Sentinel": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2590,7 +2588,9 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Daring Recon",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Scout Sentinel"
           ]
         },
@@ -2669,7 +2669,8 @@
             "Ability§Hard to Hit",
             "Ability§Hover Jet",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "An Arvus Lighter has no equipment.\n\n\n\nnull",
         "aspects": {
@@ -2940,7 +2941,8 @@
             "Ability§Hover Jet",
             "Ability§Explodes",
             "Ability§Grav-chute Insertion"
-          ]
+          ],
+          "included": []
         },
         "text": "A Valkyrie is equipped with: hellstrike missiles; Militarum multi-laser.\n\n• This model’s Militarum multi-laser can be replaced with 1 lascannon.\n\n• This model’s hellstrike missiles can be replaced with 2 multiple rocket pods.\n\n• This model can be equipped with 2 heavy bolters.\n\nnull",
         "rules": {
@@ -3336,7 +3338,8 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "This model is equipped with: Medusa siege cannon; heavy bolter.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
         "rules": {
@@ -3478,22 +3481,20 @@
             "value": 7
           },
           "Dozer blade": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3508,22 +3509,20 @@
             "dynamic": true
           },
           "Armoured tracks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3746,7 +3745,8 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Basilisk is equipped with: earthshaker cannon; heavy flamer.\n\n• This model’s heavy flamer can be replaced with 1 heavy bolter.\n\n• This model can be equipped with 1 dozer blade.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 armoured tracks.\n\nnull",
         "rules": {
@@ -3888,20 +3888,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Colossus Bombard"
+            "value": "Colossus Bombard"
           },
-          "Colossus Bombards": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -3911,6 +3901,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Colossus Bombard": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3936,7 +3934,9 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Vehicle Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Colossus Bombard"
           ]
         },
@@ -3956,20 +3956,10 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Earthshaker Carriage"
+            "value": "Earthshaker Carriage"
           },
-          "Earthshaker Carriage Battery": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 6
@@ -3979,6 +3969,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Earthshaker Carriage": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4003,7 +4001,9 @@
         "assets": {
           "traits": [
             "Ability§Regimental Tactics",
-            "Ability§Artillery and Crew",
+            "Ability§Artillery and Crew"
+          ],
+          "included": [
             "Model§Earthshaker Carriage"
           ]
         },
@@ -4023,20 +4023,10 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Griffon Mortar Carrier"
+            "value": "Griffon Mortar Carrier"
           },
-          "Griffon Mortar Carrier": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 4
@@ -4046,6 +4036,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Griffon Mortar Carrier": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4068,7 +4066,9 @@
           "traits": [
             "Ability§Smoke Launchers",
             "Ability§Vehicle Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Griffon Mortar Carrier"
           ]
         },
@@ -4088,20 +4088,10 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Heavy Mortar"
+            "value": "Heavy Mortar"
           },
-          "Heavy Mortar Battery": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 4
@@ -4111,6 +4101,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Heavy Mortar": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4135,7 +4133,9 @@
         "assets": {
           "traits": [
             "Ability§Regimental Tactics",
-            "Ability§Artillery and Crew",
+            "Ability§Artillery and Crew"
+          ],
+          "included": [
             "Model§Heavy Mortar"
           ]
         },
@@ -4155,20 +4155,10 @@
             "value": 5
           },
           "model": {
-            "value": "Model§Heavy Quad Launcher"
+            "value": "Heavy Quad Launcher"
           },
-          "Heavy Quad Launcher Battery": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 5
@@ -4178,6 +4168,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Heavy Quad Launcher": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4202,7 +4200,9 @@
         "assets": {
           "traits": [
             "Ability§Regimental Tactics",
-            "Ability§Artillery and Crew",
+            "Ability§Artillery and Crew"
+          ],
+          "included": [
             "Model§Heavy Quad Launcher"
           ]
         },
@@ -4222,22 +4222,20 @@
             "value": 6
           },
           "Dozer blade": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4252,22 +4250,20 @@
             "dynamic": true
           },
           "Armoured tracks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4489,7 +4485,8 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Hydra is equipped with: heavy bolter; Hydra quad autocannon.\n\n• This model’s heavy bolter can be replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 dozer blade.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 armoured tracks.\n\nnull",
         "rules": {
@@ -4631,25 +4628,23 @@
             "value": 9
           },
           "model": {
-            "value": "Model§Leman Russ Battle Tank"
+            "value": "Leman Russ Battle Tank"
           },
           "Dozer blade": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4671,22 +4666,20 @@
             "dynamic": true
           },
           "Armoured tracks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4700,18 +4693,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Leman Russ Battle Tanks": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 9
@@ -4721,6 +4704,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Leman Russ Battle Tank": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4749,7 +4740,9 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes",
-            "Ability§Vehicle Squadron",
+            "Ability§Vehicle Squadron"
+          ],
+          "included": [
             "Model§Leman Russ Battle Tank"
           ]
         },
@@ -5118,7 +5111,8 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Malcador is equipped with: 2 autocannons; Malcador battle cannon; heavy bolter.\n\n• This model's 2 autocannons can be replaced with 2 heavy bolters or 2 lascannons.\n\n• This model’s heavy bolter can be replaced with 1 autocannon or 1 lascannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
         "rules": {
@@ -5540,7 +5534,8 @@
             "Ability§Regimental Tactics",
             "Ability§Smoke Launchers",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Malcador Defender is equipped with: demolisher battle cannon; 7 heavy bolters.\n\n• This model can have 2 of its heavy bolters replaced with one of the following: 2 autocannons; 2 lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter or 1 heavy stubber.\n\nnull",
         "rules": {
@@ -5682,20 +5677,10 @@
             "value": 6
           },
           "model": {
-            "value": "Model§Medusa Carriage"
+            "value": "Medusa Carriage"
           },
-          "Medusa Carriage Battery": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 6
@@ -5705,6 +5690,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Medusa Carriage": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -5729,7 +5722,9 @@
         "assets": {
           "traits": [
             "Ability§Regimental Tactics",
-            "Ability§Artillery and Crew",
+            "Ability§Artillery and Crew"
+          ],
+          "included": [
             "Model§Medusa Carriage"
           ]
         },
@@ -5749,20 +5744,10 @@
             "value": 5
           },
           "model": {
-            "value": "Model§Rapier Laser Destroyer"
+            "value": "Rapier Laser Destroyer"
           },
-          "Rapier Laser Destroyer Battery": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 5
@@ -5772,6 +5757,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Rapier Laser Destroyer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -5796,7 +5789,9 @@
         "assets": {
           "traits": [
             "Ability§Regimental Tactics",
-            "Ability§Artillery and Crew",
+            "Ability§Artillery and Crew"
+          ],
+          "included": [
             "Model§Rapier Laser Destroyer"
           ]
         },
@@ -5816,26 +5811,24 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Renegade Heavy Weapons Team"
+            "value": "Renegade Heavy Weapons Team"
           },
-          "Renegade Heavy Weapons Squad": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 4
+          },
+          "Renegade Heavy Weapons Team": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -5856,7 +5849,7 @@
           ]
         },
         "assets": {
-          "traits": [
+          "included": [
             {
               "item": "Model§Renegade Heavy Weapons Team",
               "quantity": 3
@@ -5879,22 +5872,20 @@
             "value": 6
           },
           "Dozer blade": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -5909,22 +5900,20 @@
             "dynamic": true
           },
           "Armoured tracks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6147,7 +6136,8 @@
           "traits": [
             "Ability§Regimental Tactics",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Wyvern is equipped with: Wyvern quad stormshard mortar; heavy bolter.\n\n• This model’s heavy bolter can replaced with 1 heavy flamer.\n\n• This model can be equipped with 1 dozer blade.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 armoured tracks.\n\nnull",
         "rules": {
@@ -6320,52 +6310,6 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Bare hands",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bare hands": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bare hands"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bare hands": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bare hands"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -6391,8 +6335,10 @@
             "Ability§Master Witch",
             "Ability§Covenant of Chaos",
             "Ability§Warp Possession",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Bare hands"
+          ],
+          "included": []
         },
         "text": "A Malefic Lord is equipped with: bare hands.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite).",
         "aspects": {
@@ -6796,7 +6742,8 @@
             "Ability§Fanatic (Aura)",
             "Ability§Covenant of Chaos",
             "Ability§Refractor Field"
-          ]
+          ],
+          "included": []
         },
         "text": "A Renegade Commander is equipped with: laspistol; brutal assault weapon.\n\n• This model’s laspistol can be replaced with one of the following: 1 autopistol; 1 autogun; 1 lasgun; 1 weapon from the ***Renegades Ranged** Weapons*** list.\n\n• This model’s brutal assault weapon can be replaced with 1 weapon from the **Renegades Melee** Weapons*** list.\n\nnull",
         "aspects": {
@@ -7761,7 +7708,8 @@
           "traits": [
             "Ability§Armoured Tracks",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Baneblade is equipped with: co-axial autocannon; Baneblade cannon; demolisher cannon; 2 lascannons; heavy stubber; twin heavy bolter; 2 twin heavy flamers; adamantine tracks.\n\n• This model’s 2 twin heavy flamers can be replaced with 2 twin heavy bolters.\n\n• This model can additionally be equipped with one of the following:\n\n○ 2 lascannons and 2 twin heavy bolters.\n\n○ 2 lascannons and 2 twin heavy flamers.\n\nnull",
         "rules": {
@@ -8432,7 +8380,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Macharius is equipped with: 2 heavy stubbers; Macharius twin battle cannon; twin heavy stubber; adamantine tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
@@ -8822,7 +8771,8 @@
             "Ability§Smoke Launchers",
             "Ability§Steel Behemoth",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Macharius Omega is equipped with: Omega-pattern plasma blastgun.\n\n• This model can be equipped with one of the following: 2 autocannons; 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 heavy stubber; 1 storm bolter.\n\nnull",
         "rules": {
@@ -9494,7 +9444,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Macharius Vanquisher is equipped with: 2 heavy stubbers; Macharius twin vanquisher cannon; twin heavy stubber; adamantine tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
@@ -10166,7 +10117,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Macharius Vulcan is equipped with: 2 heavy stubbers; Macharius vulcan mega-bolter; twin heavy stubber; adamantine tracks.\n\n• This model’s 2 heavy stubbers can be replaced with one of the following: 2 heavy bolters; 2 heavy flamers.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
@@ -10347,99 +10299,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Minotaur twin earthshaker cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Adamantine tracks": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Adamantine tracks"
-                  }
-                ]
-              },
-              "Minotaur twin earthshaker cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Minotaur twin earthshaker cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Adamantine tracks",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Adamantine tracks": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Adamantine tracks"
-                  }
-                ]
-              },
-              "Minotaur twin earthshaker cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Minotaur twin earthshaker cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Adamantine tracks": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Adamantine tracks"
-                  }
-                ]
-              },
-              "Minotaur twin earthshaker cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Minotaur twin earthshaker cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -10465,8 +10324,11 @@
         "assets": {
           "traits": [
             "Ability§Explodes",
-            "Ability§Armoured Frontis"
-          ]
+            "Ability§Armoured Frontis",
+            "Weapon§Adamantine tracks",
+            "Weapon§Minotaur twin earthshaker cannon"
+          ],
+          "included": []
         },
         "text": "A Minotaur is equipped with: Minotaur twin earthshaker cannon; adamantine tracks.\n\n\n\nnull",
         "rules": {
@@ -10909,7 +10771,8 @@
         "assets": {
           "traits": [
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Valdor is equipped with: autocannon; Valdor neutron laser.\n\n• This model's autocannon can be replaced with one of the following: 1 heavy bolter; 1 heavy flamer; 1 lascannon.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with one of the following: 1 storm bolter; 1 heavy stubber.\n\nnull",
         "rules": {
@@ -11735,101 +11598,15 @@
           },
           "Base": {
             "value": "60 x 35mm"
-          },
-          "loadout1": {
-            "value": "Befouled fangs and claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Befouled fangs and claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Befouled fangs and claws"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Mauler goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mauler goad"
-                  }
-                ]
-              },
-              "Ripper claw": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ripper claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Befouled fangs and claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Befouled fangs and claws"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Mauler goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mauler goad"
-                  }
-                ]
-              },
-              "Ripper claw": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ripper claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Befouled fangs and claws",
+            "Weapon§Frag grenades",
+            "Weapon§Mauler goad",
+            "Weapon§Ripper claw"
+          ]
         }
       },
       "Model§Chaos Spawn": {
@@ -11866,53 +11643,12 @@
           },
           "Base": {
             "value": "50mm"
-          },
-          "loadout1": {
-            "value": "Hideous mutations",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hideous mutations": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hideous mutations"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Hideous mutations": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hideous mutations"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Hideous mutations"
+          ]
         }
       },
       "Model§Colossus Bombard": {
@@ -12214,53 +11950,12 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Earthshaker cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Earthshaker cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Earthshaker cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Earthshaker cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Earthshaker cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Earthshaker cannon"
+          ]
         }
       },
       "Model§Griffon Mortar Carrier": {
@@ -12633,53 +12328,12 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Heavy mortar",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy mortar": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy mortar"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy mortar": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy mortar"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Heavy mortar"
+          ]
         }
       },
       "Model§Heavy Quad Launcher": {
@@ -12716,53 +12370,12 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Heavy quad launcher",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy quad launcher": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy quad launcher"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy quad launcher": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Heavy quad launcher"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Heavy quad launcher"
+          ]
         }
       },
       "Model§Leman Russ Battle Tank": {
@@ -14721,53 +14334,12 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Medusa siege cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Medusa siege cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Medusa siege cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Medusa siege cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Medusa siege cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Medusa siege cannon"
+          ]
         }
       },
       "Model§Ogryn Brute": {
@@ -14958,195 +14530,15 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Mauler goad",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Befouled fangs and claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Befouled fangs and claws"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Mauler goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mauler goad"
-                  }
-                ]
-              },
-              "Ripper claw": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ripper claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Ripper claw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Befouled fangs and claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Befouled fangs and claws"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Mauler goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mauler goad"
-                  }
-                ]
-              },
-              "Ripper claw": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ripper claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Befouled fangs and claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Befouled fangs and claws"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Mauler goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mauler goad"
-                  }
-                ]
-              },
-              "Ripper claw": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ripper claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Befouled fangs and claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Befouled fangs and claws"
-                  }
-                ]
-              },
-              "Frag grenades": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Mauler goad": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Mauler goad"
-                  }
-                ]
-              },
-              "Ripper claw": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ripper claw"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Befouled fangs and claws",
+            "Weapon§Frag grenades",
+            "Weapon§Mauler goad",
+            "Weapon§Ripper claw"
+          ]
         }
       },
       "Model§Plague Ogryn": {
@@ -15183,53 +14575,12 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Ogryn plague claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Ogryn plague claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ogryn plague claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Ogryn plague claws": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ogryn plague claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Ogryn plague claws"
+          ]
         }
       },
       "Model§Rapier Laser Destroyer": {
@@ -15266,163 +14617,14 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Laser destroyer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Laser destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laser destroyer"
-                  }
-                ]
-              },
-              "Lasgun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lasgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Lasgun",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Laser destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laser destroyer"
-                  }
-                ]
-              },
-              "Lasgun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lasgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Frag grenades",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Laser destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laser destroyer"
-                  }
-                ]
-              },
-              "Lasgun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lasgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Frag grenades": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Frag grenades"
-                  }
-                ]
-              },
-              "Laser destroyer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Laser destroyer"
-                  }
-                ]
-              },
-              "Lasgun": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lasgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Frag grenades",
+            "Weapon§Laser destroyer",
+            "Weapon§Lasgun"
+          ]
         }
       },
       "Model§Renegade Cultist": {
@@ -22376,20 +21578,17 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Renegade Cultist"
+            "value": "Renegade Cultist"
           },
-          "Renegade Cultists": {
+          "minModels": {
+            "value": 9
+          },
+          "Renegade Cultist": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 9,
-            "min": 9,
             "max": 29,
-            "increment": {
-              "value": 10
-            }
+            "value": 0
           }
         },
         "keywords": {
@@ -22413,11 +21612,13 @@
           "traits": [
             "Ability§Covenant of Chaos",
             "Ability§Minions of Chaos",
+            "Model§Renegade Cultist Champion"
+          ],
+          "included": [
             {
               "item": "Model§Renegade Cultist",
               "quantity": 9
-            },
-            "Model§Renegade Cultist Champion"
+            }
           ]
         },
         "text": "If this unit contains between 11 and 20 or more models, it has **Power Rating 5**. If this unit contains 21 or more models, it has Power Rating 7**. Every model is equipped with: autogun.\n\n• Any number of models can each have their autogun replaced with 1 autopistol and 1 brutal assault weapon.\n\n• For every 10 models in the unit, 1 Renegade Cultist’s autogun can be replaced with one of the following: 1 flamer; 1 heavy stubber.\n\n• The Renegade Cultist Champion’s autogun can be replaced with one of the following:\n\n- 1 autopistol and 1 brutal assault weapon.\n\n- 1 shotgun and 1 brutal assault weapon.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
@@ -22436,25 +21637,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Renegade Militia"
+            "value": "Renegade Militia"
           },
           "Chaos sigil": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -22469,22 +21668,20 @@
             "dynamic": true
           },
           "Renegade vox-caster": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -22498,24 +21695,21 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Renegade Militia Squad": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 9,
-            "min": 9,
-            "max": 19,
-            "increment": {
-              "value": 10
-            }
+          "minModels": {
+            "value": 9
           },
           "poweri": {
             "value": 3
           },
           "power1": {
             "value": 11
+          },
+          "Renegade Militia": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 19,
+            "value": 0
           }
         },
         "keywords": {
@@ -22539,11 +21733,13 @@
           "traits": [
             "Ability§Covenant of Chaos",
             "Ability§Minions of Chaos",
+            "Model§Renegade Militia Champion"
+          ],
+          "included": [
             {
               "item": "Model§Renegade Militia",
               "quantity": 9
-            },
-            "Model§Renegade Militia Champion"
+            }
           ]
         },
         "text": "If this unit contains between 11 and 20 or more models, it has **Power Rating 6**. Every model is equipped with: autogun.\n\n• Any number of models can each have their autogun replaced with one of the following:\n\n- 1 lasgun.\n\n- 1 autopistol and 1 brutal assault weapon.\n\n• For every 10 models in this unit, 2 Renegade Militia models equipped with autoguns can form a Renegade Militia Weapons Team equipped with 1 weapon from the ***Renegades Heavy** Weapons*** list.\n\n• For every 5 models in this unit, 1 Renegade Militia model’s autogun can be replaced with 1 weapon from the **Renegades Special** Weapons*** list.\n\n• 1 Renegade Militia model equipped with an autogun or lasgun can be equipped with a Chaos sigil. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Renegade vox-caster.\n\n• 1 Renegade Militia model equipped with an autogun or lasgun can be equipped with a Renegade vox-caster. That model’s autogun or lasgun cannot be replaced and it cannot be equipped with a Chaos sigil.\n\n• The Renegade Militia Champion’s autogun can be replaced with one of the following:\n\n- 1 lasgun.\n\n- 1 shotgun.\n\n- 1 weapon from the **Renegades Ranged** Weapons*** list.\n\n- 1 weapon from the **Renegades Melee** Weapons*** list.\n\n- 1 weapon from the **Renegades Ranged** Weapons** list and 1 weapon from the **Renegades Melee** Weapons*** list.\n\n• The Renegade Militia Champion can be equipped with krak grenades.\n\nnull",
@@ -22563,20 +21759,17 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Renegade Mutant"
+            "value": "Renegade Mutant"
           },
-          "Renegade Mutant Rabble": {
+          "minModels": {
+            "value": 9
+          },
+          "Renegade Mutant": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 9,
-            "min": 9,
             "max": 29,
-            "increment": {
-              "value": 10
-            }
+            "value": 0
           }
         },
         "keywords": {
@@ -22602,11 +21795,13 @@
             "Ability§Curse of Mutation",
             "Ability§Covenant of Chaos",
             "Ability§Minions of Chaos",
+            "Model§Renegade Mutant Champion"
+          ],
+          "included": [
             {
               "item": "Model§Renegade Mutant",
               "quantity": 9
-            },
-            "Model§Renegade Mutant Champion"
+            }
           ]
         },
         "text": "If this unit contains between 11 and 20 or more models, it has **Power Rating 7**. If this unit contains 21 or more models, it has Power Rating 10**. Every model is equipped with: laspistol; frag grenades.\n\n• Any number of models can each have their laspistol replaced with one of the following: 1 autogun; 1 autopistol; 1 lasgun; 1 shotgun; 1 stub gun.\n\n• The Renegade Mutant Champion can be equipped with one weapon from the ***Renegades Melee** Weapons*** list.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",

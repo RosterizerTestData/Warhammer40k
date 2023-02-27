@@ -1,11 +1,11 @@
 {
   "name": "Heretic Titan Legions",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -387,7 +387,8 @@
             "Ability§Reactor Meltdown",
             "Ability§Battle Titan",
             "Ability§Void Shields"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chaos Reaver Titan is equipped with: 2 Reaver gatling blasters; Reaver apocalypse launcher; Reaver feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon; 1 Reaver power fist.\n\nnull",
         "rules": {
@@ -1116,7 +1117,8 @@
             "Ability§Reactor Meltdown",
             "Ability§Battle Titan",
             "Ability§Void Shields"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chaos Warbringer Nemesis Titan is equipped with: 3 ardex-defensor maulers; 2 anvillus defence batteries; nemesis quake cannon; 2 Reaver gatling blasters; Warbringer Nemesis feet.\n\n• This model’s Reaver gatling blasters can each be replaced with one of the following: 1 Reaver laser blaster; 1 Reaver melta cannon; 1 Reaver volcano cannon.\n\n• This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.\n\nnull",
         "rules": {
@@ -1489,7 +1491,8 @@
             "Ability§Flank Speed",
             "Ability§Battle Titan",
             "Ability§Void Shields"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chaos Warhound Titan is equipped with: 2 Warhound vulcan mega-bolters; Warhound feet.\n\n• This model’s Warhound vulcan mega-bolters can each be replaced with one of the following: 1 Warhound inferno gun; 1 Warhound plasma blastgun; 1 Warhound turbo-laser destructor.\n\nnull",
         "rules": {
@@ -2266,7 +2269,8 @@
             "Ability§Reactor Meltdown",
             "Ability§War Engine",
             "Ability§Void Shields"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chaos Warlord Titan is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; 2 arioch power claws; Warlord feet.\n\n• This model’s 2 apocalypse launchers can be replaced with 2 laser blasters.\n\n• This model’s arioch power claws can each be replaced with one of the following: 1 belicosa volcano cannon; 1 macro gatling blaster; 1 mori quake cannon; 1 sunfury plasma annihilator.\n\nnull",
         "rules": {

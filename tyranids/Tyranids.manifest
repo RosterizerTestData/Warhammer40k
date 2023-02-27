@@ -1,11 +1,11 @@
 {
   "name": "Tyranids",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -53,7 +53,9 @@
                 "order": 7
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -226,7 +228,7 @@
         }
       },
       "Ability§Armoured Exoskeleton": {
-        "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1). This is not cumulative with any other abilities that reduce the Damage characteristic of an attack.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1). This is not cumulative with any other abilities that reduce the Damage characteristic of an attack."
+        "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1). This is not cumulative with any other abilities that reduce the Damage characteristic of an attack."
       },
       "Ability§Berserk Rampage": {
         "text": "Each time this model fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, then until that fight is resolved, add D3+1 to the Attacks characteristic of this model."
@@ -286,13 +288,13 @@
         "text": "While an enemy unit is within 3″ of this model, each time a model in that enemy unit makes an attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Ability§Death from Above": {
-        "text": "During deployment, you can set up this model high in the skies instead of setting it up on the battlefield. If you do so, then during the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this model anywhere on the battlefield that is more than 9″ away from any enemy models, and, until the end of the turn, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this model.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nDuring deployment, you can set up this model high in the skies instead of setting it up on the battlefield. If you do so, then during the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this model anywhere on the battlefield that is more than 9″ away from any enemy models, and, until the end of the turn, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this model."
+        "text": "During deployment, you can set up this model high in the skies instead of setting it up on the battlefield. If you do so, then during the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this model anywhere on the battlefield that is more than 9″ away from any enemy models, and, until the end of the turn, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this model."
       },
       "Ability§Death from Below": {
         "text": "During deployment, you can set up this unit underground instead of setting it up on the battlefield. If you do so, then during the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models."
       },
       "Ability§Death Throes": {
-        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this [transport](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports) is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6+, the closest enemy unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+        "text": "When this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this [transport](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports) is destroyed, roll one D6 before any embarked models [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) and before removing it from play. On a 6+, the closest enemy unit within 2D6\" suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D6 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 6″ suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this model is destroyed, roll one D6 before removing it from play. On a 6+, the closest enemy unit within 3″ suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Ability§Defensive Stance": {
         "text": "This unit can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Defensive Stance (Action):** At the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), any number of **HIVE GUARD** units from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). The action is completed at the end of your next [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). When it is completed, until the start of your next Movement phase, each model in this unit counts as 3 models when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers)."
@@ -355,7 +357,7 @@
         }
       },
       "Ability§Frenzied Metabolism": {
-        "text": "The first time this model is selected to shoot in each of your [Shooting phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), you can use this ability. If you do, this model suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and until the end of the phase, each time this model makes a ranged attack, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThe first time this model is selected to shoot in each of your [Shooting phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), you can use this ability. If you do, this model suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and until the end of the phase, each time this model makes a ranged attack, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
+        "text": "The first time this model is selected to shoot in each of your [Shooting phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), you can use this ability. If you do, this model suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and until the end of the phase, each time this model makes a ranged attack, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Ability§Grasping Tendrils": {
         "text": "Once per turn, when an enemy unit (excluding **MONSTER** and VEHICLE** units) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this unit is selected to [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back), this unit can use this ability. If it does so, roll one D6: on a 4+, that unit cannot Fall Back and must [Remain Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) instead."
@@ -379,7 +381,7 @@
         "text": "If this unit contains 20 or more models, you can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1 when it shoots."
       },
       "Ability§Hard to Hit": {
-        "text": "Each time a ranged attack is made against this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time a ranged attack is made against this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+        "text": "Each time a ranged attack is made against this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Ability§Hidden Hunter": {
         "text": "During deployment, you can set up this model in hiding instead of setting it up on the battlefield. If you do so, then in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) you can set up this model [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 6″ of any battlefield edge or any [terrain features](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-Features) and more than 9″ away from any enemy models (or more then 6″ away from enemy models if this model is set up wholly within your deployment zone), and, until the end of the turn, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this model."
@@ -463,7 +465,7 @@
         "text": "Once per turn, when an enemy unit (excluding [**AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) units) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this model is selected to [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back), this model can use this ability. If it does so, roll one D6, adding 1 if that unit has the INFANTRY** keyword: on a 3+, that unit cannot Fall Back and must [Remain Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) instead."
       },
       "Ability§Monstrous Brood": {
-        "text": "When this unit is first set up on the battlefield, its models do not have to be set up in [unit coherency](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Unit-Coherency). Instead, each model must be set up within 6″ of one other model from its unit. From that point on, each model in this unit is treated as a separate unit.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhen this unit is first set up on the battlefield, its models do not have to be set up in [unit coherency](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Unit-Coherency). Instead, each model must be set up within 6″ of one other model from its unit. From that point on, each model in this unit is treated as a separate unit."
+        "text": "When this unit is first set up on the battlefield, its models do not have to be set up in [unit coherency](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Unit-Coherency). Instead, each model must be set up within 6″ of one other model from its unit. From that point on, each model in this unit is treated as a separate unit."
       },
       "Ability§Parasitic Infection": {
         "text": "",
@@ -493,7 +495,7 @@
         }
       },
       "Ability§Psychic Barrier": {
-        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Ability§Psychic Node": {
         "text": "Add 1 to [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for this model."
@@ -1054,7 +1056,8 @@
           "traits": [
             "Ability§Aerial Seeding",
             "Ability§Death Throes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tyrannocyte is equipped with: 5 deathspitters; flensing whips.\n\n• This model’s 5 deathspitters can be replaced with one of the following: 5 barbed stranglers; 5 venom cannons.\n\nnull",
         "rules": {
@@ -1196,22 +1199,20 @@
             "value": 5
           },
           "Flesh hooks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1264,75 +1265,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Lictor claws and talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Lictor claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lictor claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Lictor claws and talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Lictor claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lictor claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Lictor claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lictor claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1362,8 +1294,10 @@
             "Ability§It's Out There (Aura)",
             "Ability§Inhuman Swiftness",
             "Ability§Fear of the Unseen",
-            "Ability§Hidden Hunter"
-          ]
+            "Ability§Hidden Hunter",
+            "Weapon§Lictor claws and talons"
+          ],
+          "included": []
         },
         "text": "A Deathleaper is equipped with: Lictor claws and talons; flesh hooks. Your army can only include one **DEATHLEAPER** model.\n\n\n\nnull",
         "aspects": {
@@ -1379,25 +1313,23 @@
             "value": 5
           },
           "model": {
-            "value": "Model§Genestealer"
+            "value": "Genestealer"
           },
           "Acid maw": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1419,22 +1351,20 @@
             "dynamic": true
           },
           "Extended carapace": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1449,22 +1379,20 @@
             "dynamic": true
           },
           "Flesh hooks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1486,22 +1414,20 @@
             "dynamic": true
           },
           "Infestation node": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1516,22 +1442,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1552,24 +1476,22 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Genestealers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 5,
-            "min": 5,
-            "max": 10,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 5
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 6
+          },
+          "Genestealer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1599,7 +1521,9 @@
             "Ability§Lightning Reflexes",
             "Ability§Vanguard Predator",
             "Ability§Infiltration Spawning",
-            "Ability§Insidious Infestation",
+            "Ability§Insidious Infestation"
+          ],
+          "included": [
             {
               "item": "Model§Genestealer",
               "quantity": 5
@@ -1661,162 +1585,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Grasping tongue",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Grasping tongue": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Grasping tongue"
-                  }
-                ]
-              },
-              "Ravenous maw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ravenous maw"
-                  }
-                ]
-              },
-              "Shovelling claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shovelling claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Ravenous maw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Grasping tongue": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Grasping tongue"
-                  }
-                ]
-              },
-              "Ravenous maw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ravenous maw"
-                  }
-                ]
-              },
-              "Shovelling claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shovelling claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Shovelling claws",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Grasping tongue": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Grasping tongue"
-                  }
-                ]
-              },
-              "Ravenous maw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ravenous maw"
-                  }
-                ]
-              },
-              "Shovelling claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shovelling claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Grasping tongue": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Grasping tongue"
-                  }
-                ]
-              },
-              "Ravenous maw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Ravenous maw"
-                  }
-                ]
-              },
-              "Shovelling claws": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shovelling claws"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1842,8 +1610,12 @@
           "traits": [
             "Ability§Rapacious Hunger",
             "Ability§Grisly Spectacle (Aura)",
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Weapon§Grasping tongue",
+            "Weapon§Ravenous maw",
+            "Weapon§Shovelling claws"
+          ],
+          "included": []
         },
         "text": "A Haruspex is equipped with: grasping tongue; ravenous maw; shovelling claws.\n\n\n\nnull",
         "rules": {
@@ -1985,22 +1757,20 @@
             "value": 4
           },
           "Flesh hooks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2053,75 +1823,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Lictor claws and talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Lictor claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lictor claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Lictor claws and talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Lictor claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lictor claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Lictor claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lictor claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2147,8 +1848,10 @@
           "traits": [
             "Ability§Chameleonic Skin",
             "Ability§Inhuman Swiftness",
-            "Ability§Hidden Hunter"
-          ]
+            "Ability§Hidden Hunter",
+            "Weapon§Lictor claws and talons"
+          ],
+          "included": []
         },
         "text": "A Lictor is equipped with: Lictor claws and talons; flesh hooks.\n\n\n\nnull",
         "aspects": {
@@ -2203,52 +1906,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Massive scything talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive scything talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Massive scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive scything talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Massive scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2279,8 +1936,10 @@
             "Ability§Death Throes",
             "Ability§Psychic Barrier",
             "Ability§Psychic Overload",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Wargear§Massive scything talons"
+          ],
+          "included": []
         },
         "text": "A Maleceptor is equipped with: massive scything talons.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -2427,25 +2086,23 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Pyrovore"
+            "value": "Pyrovore"
           },
           "Acid maw": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2466,18 +2123,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Pyrovores": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 2
@@ -2487,6 +2134,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Pyrovore": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2511,7 +2166,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Volatile",
+            "Ability§Volatile"
+          ],
+          "included": [
             "Model§Pyrovore"
           ]
         },
@@ -2570,52 +2227,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Massive toxic lashes",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive toxic lashes": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Massive toxic lashes"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive toxic lashes": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Massive toxic lashes"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2644,8 +2255,10 @@
             "Ability§Massive Grasping Tendrils",
             "Ability§Choking Spores (Aura)",
             "Ability§Hypertoxic Miasma",
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Wargear§Massive toxic lashes"
+          ],
+          "included": []
         },
         "text": "A Toxicrene is equipped with: massive toxic lashes.\n\n\n\nnull",
         "rules": {
@@ -2787,25 +2400,23 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Tyrant Guard"
+            "value": "Tyrant Guard"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2827,22 +2438,20 @@
             "dynamic": true
           },
           "Lash whip": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2864,22 +2473,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2900,24 +2507,22 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Tyrant Guard": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 7
           },
           "power1": {
             "value": 4
+          },
+          "Tyrant Guard": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2945,7 +2550,9 @@
           "traits": [
             "Ability§Guardian Organism",
             "Ability§Tyrant Goading",
-            "Ability§Ablative Brood",
+            "Ability§Ablative Brood"
+          ],
+          "included": [
             {
               "item": "Model§Tyrant Guard",
               "quantity": 3
@@ -2968,26 +2575,24 @@
             "value": 5
           },
           "model": {
-            "value": "Model§Venomthrope"
+            "value": "Venomthrope"
           },
-          "Venomthropes": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 5
           },
           "power1": {
             "value": 4
+          },
+          "Venomthrope": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3016,7 +2621,9 @@
           "traits": [
             "Ability§Grasping Tendrils",
             "Ability§Toxic Miasma",
-            "Ability§Foul Spores (Aura)",
+            "Ability§Foul Spores (Aura)"
+          ],
+          "included": [
             {
               "item": "Model§Venomthrope",
               "quantity": 3
@@ -3039,26 +2646,24 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Zoanthrope"
+            "value": "Zoanthrope"
           },
-          "Zoanthropes": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 7
           },
           "power1": {
             "value": 4
+          },
+          "Zoanthrope": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3089,7 +2694,9 @@
             "Ability§Warp Blast",
             "Ability§Psybrood Coterie",
             "Ability§Warp Field",
-            "Psychic Power§Smite",
+            "Psychic Power§Smite"
+          ],
+          "included": [
             {
               "item": "Model§Zoanthrope",
               "quantity": 3
@@ -3154,99 +2761,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Massive scything sickle-talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive scything sickle-talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Massive scything sickle-talons"
-                  }
-                ]
-              },
-              "Scything tail": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything tail"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Scything tail",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive scything sickle-talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Massive scything sickle-talons"
-                  }
-                ]
-              },
-              "Scything tail": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything tail"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Massive scything sickle-talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Massive scything sickle-talons"
-                  }
-                ]
-              },
-              "Scything tail": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything tail"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -3271,8 +2785,11 @@
             "Ability§Leaper-killer",
             "Ability§Death Throes",
             "Ability§Thorax Spine-maw",
-            "Ability§Digestion Spine"
-          ]
+            "Ability§Digestion Spine",
+            "Weapon§Massive scything sickle-talons",
+            "Weapon§Scything tail"
+          ],
+          "included": []
         },
         "text": "A Dimachaeron is equipped with: massive scything sickle-talons; scything tail.\n\n\n\nnull",
         "rules": {
@@ -3414,22 +2931,20 @@
             "value": 7
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3444,22 +2959,20 @@
             "dynamic": true
           },
           "Biostatic rattle": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3481,22 +2994,20 @@
             "dynamic": true
           },
           "Prehensile pincer tail": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3518,22 +3029,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -3716,7 +3225,8 @@
             "Ability§Serpentine Coils",
             "Ability§Distensible Jaws",
             "Ability§Death Throes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Mawloc is equipped with: Mawloc scything talons; toxinspike.\n\n• This model's toxinspike can be replaced with one of the following: 1 biostatic rattle; 1 prehensile pincer tail.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
         "rules": {
@@ -3858,26 +3368,24 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Meiotic Spore"
+            "value": "Meiotic Spore"
           },
-          "Meiotic Spores": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 3
           },
           "power1": {
             "value": 4
+          },
+          "Meiotic Spore": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3902,7 +3410,9 @@
           "traits": [
             "Ability§Float Down",
             "Ability§Floating Death",
-            "Ability§Living Bombs",
+            "Ability§Living Bombs"
+          ],
+          "included": [
             {
               "item": "Model§Meiotic Spore",
               "quantity": 3
@@ -3925,20 +3435,10 @@
             "value": 1
           },
           "model": {
-            "value": "Model§Mucolid Spore"
+            "value": "Mucolid Spore"
           },
-          "Mucolid Spores": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 1
@@ -3948,6 +3448,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Mucolid Spore": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -3972,7 +3480,9 @@
           "traits": [
             "Ability§Drone Bioform",
             "Ability§Floating Death",
-            "Ability§Float Down",
+            "Ability§Float Down"
+          ],
+          "included": [
             "Model§Mucolid Spore"
           ]
         },
@@ -4023,99 +3533,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Clawed limbs",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Barbed ovipositor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Barbed ovipositor"
-                  }
-                ]
-              },
-              "Clawed limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Clawed limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Barbed ovipositor",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Barbed ovipositor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Barbed ovipositor"
-                  }
-                ]
-              },
-              "Clawed limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Clawed limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Barbed ovipositor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Barbed ovipositor"
-                  }
-                ]
-              },
-              "Clawed limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Clawed limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -4145,8 +3562,11 @@
             "Ability§Parasitic Infection",
             "Ability§It Itches",
             "Ability§Shadow Hunter",
-            "Ability§Death from Above"
-          ]
+            "Ability§Death from Above",
+            "Weapon§Barbed ovipositor",
+            "Weapon§Clawed limbs"
+          ],
+          "included": []
         },
         "text": "A Parasite of Mortrex is equipped with: clawed limbs; barbed ovipositor.\n\n\n\nnull",
         "aspects": {
@@ -4162,20 +3582,10 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Ravener"
+            "value": "Ravener"
           },
-          "Raveners": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 4
@@ -4185,6 +3595,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Ravener": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4210,7 +3628,9 @@
           "traits": [
             "Ability§Death from Below",
             "Ability§Serpentine Bodies",
-            "Ability§Vicious Devourers",
+            "Ability§Vicious Devourers"
+          ],
+          "included": [
             {
               "item": "Model§Ravener",
               "quantity": 3
@@ -4233,20 +3653,10 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Ripper Swarm"
+            "value": "Ripper Swarm"
           },
-          "Ripper Swarms": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 2
@@ -4256,6 +3666,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Ripper Swarm": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4279,7 +3697,9 @@
           "traits": [
             "Ability§Death from Below",
             "Ability§Lesser Organisms",
-            "Ability§Burrow and Squirm",
+            "Ability§Burrow and Squirm"
+          ],
+          "included": [
             {
               "item": "Model§Ripper Swarm",
               "quantity": 3
@@ -4302,20 +3722,10 @@
             "value": 2
           },
           "model": {
-            "value": "Model§Sky-slasher Swarm"
+            "value": "Sky-slasher Swarm"
           },
-          "Sky-slasher Swarms": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 2
@@ -4325,6 +3735,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Sky-slasher Swarm": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4347,7 +3765,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Swooping Assault",
+            "Ability§Swooping Assault"
+          ],
+          "included": [
             {
               "item": "Model§Sky-slasher Swarm",
               "quantity": 3
@@ -4370,20 +3790,10 @@
             "value": 1
           },
           "model": {
-            "value": "Model§Spore Mine"
+            "value": "Spore Mine"
           },
-          "Spore Mines": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 1
@@ -4393,6 +3803,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Spore Mine": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -4417,7 +3835,9 @@
           "traits": [
             "Ability§Drone Bioform",
             "Ability§Floating Death",
-            "Ability§Float Down",
+            "Ability§Float Down"
+          ],
+          "included": [
             {
               "item": "Model§Spore Mine",
               "quantity": 3
@@ -4440,22 +3860,20 @@
             "value": 8
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4477,22 +3895,20 @@
             "dynamic": true
           },
           "Biostatic rattle": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4514,22 +3930,20 @@
             "dynamic": true
           },
           "Prehensile pincer tail": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4551,22 +3965,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -4810,7 +4222,8 @@
             "Ability§Death from Below",
             "Ability§Serpentine Coils",
             "Ability§Death Throes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Trygon is equipped with: bio-electric pulse; toxinspike; Trygon scything talons.\n\n• This model's toxinspike can be replaced with one of the following: 1 biostatic rattle; 1 prehensile pincer tail.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
         "rules": {
@@ -5264,7 +4677,8 @@
             "Ability§Hard to Hit",
             "Ability§Hover",
             "Ability§Death Throes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Harpy is equipped with: stinger salvoes; 2 stranglethorn cannons; scything wings.\n\n• This model’s 2 stranglethorn cannons can be replaced with 2 heavy venom cannons.\n\nnull",
         "rules": {
@@ -5445,336 +4859,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Drool cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drool cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drool cannon"
-                  }
-                ]
-              },
-              "Scything wings": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything wings"
-                  }
-                ]
-              },
-              "Stinger salvoes": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Stinger salvoes"
-                  }
-                ]
-              },
-              "Tentaclids": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tentaclids"
-                  }
-                ]
-              },
-              "Thorax spur": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thorax spur"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Stinger salvoes",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drool cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drool cannon"
-                  }
-                ]
-              },
-              "Scything wings": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything wings"
-                  }
-                ]
-              },
-              "Stinger salvoes": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Stinger salvoes"
-                  }
-                ]
-              },
-              "Tentaclids": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tentaclids"
-                  }
-                ]
-              },
-              "Thorax spur": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thorax spur"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Tentaclids",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drool cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drool cannon"
-                  }
-                ]
-              },
-              "Scything wings": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything wings"
-                  }
-                ]
-              },
-              "Stinger salvoes": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Stinger salvoes"
-                  }
-                ]
-              },
-              "Tentaclids": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tentaclids"
-                  }
-                ]
-              },
-              "Thorax spur": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thorax spur"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Scything wings",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drool cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drool cannon"
-                  }
-                ]
-              },
-              "Scything wings": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything wings"
-                  }
-                ]
-              },
-              "Stinger salvoes": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Stinger salvoes"
-                  }
-                ]
-              },
-              "Tentaclids": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tentaclids"
-                  }
-                ]
-              },
-              "Thorax spur": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thorax spur"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "Thorax spur",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drool cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drool cannon"
-                  }
-                ]
-              },
-              "Scything wings": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything wings"
-                  }
-                ]
-              },
-              "Stinger salvoes": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Stinger salvoes"
-                  }
-                ]
-              },
-              "Tentaclids": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tentaclids"
-                  }
-                ]
-              },
-              "Thorax spur": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thorax spur"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout6": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 6,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drool cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drool cannon"
-                  }
-                ]
-              },
-              "Scything wings": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Scything wings"
-                  }
-                ]
-              },
-              "Stinger salvoes": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Stinger salvoes"
-                  }
-                ]
-              },
-              "Tentaclids": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tentaclids"
-                  }
-                ]
-              },
-              "Thorax spur": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thorax spur"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5804,8 +4888,14 @@
             "Ability§Manoeuvrable",
             "Ability§Hard to Hit",
             "Ability§Hover",
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Weapon§Drool cannon",
+            "Weapon§Scything wings",
+            "Weapon§Stinger salvoes",
+            "Weapon§Tentaclids",
+            "Weapon§Thorax spur"
+          ],
+          "included": []
         },
         "text": "A Hive Crone is equipped with: drool cannon; stinger salvoes; tentaclids; scything wings; thorax spur.\n\n\n\nnull",
         "rules": {
@@ -6152,7 +5242,8 @@
             "Ability§Synaptic Relay",
             "Ability§Death Throes",
             "Ability§Seed Spores"
-          ]
+          ],
+          "included": []
         },
         "text": "A Sporocyst is equipped with: 5 deathspitters; flensing whips.\n\n• This model’s 5 deathspitters can be replaced with one of the following: 5 barbed stranglers; 5 venom canons.\n\nnull",
         "rules": {
@@ -6333,68 +5424,6 @@
           },
           "Base": {
             "value": "127mm"
-          },
-          "loadout1": {
-            "value": "Hierodule scything talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-cannon"
-                  }
-                ]
-              },
-              "Hierodule scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hierodule scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-cannon"
-                  }
-                ]
-              },
-              "Hierodule scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hierodule scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -6416,8 +5445,11 @@
         },
         "assets": {
           "traits": [
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Weapon§Bio-cannon",
+            "Weapon§Hierodule scything talons"
+          ],
+          "included": []
         },
         "text": "A Barbed Hierodule is equipped with: 2 bio-cannons, hierodule scything talons.\n\n\n\nnull",
         "rules": {
@@ -6559,20 +5591,10 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Biovore"
+            "value": "Biovore"
           },
-          "Biovores": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 3
@@ -6582,6 +5604,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Biovore": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -6603,7 +5633,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Seed Spore Mines",
+            "Ability§Seed Spore Mines"
+          ],
+          "included": [
             "Model§Biovore"
           ]
         },
@@ -6623,25 +5655,23 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Carnifex"
+            "value": "Carnifex"
           },
           "Acid maw": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6663,22 +5693,20 @@
             "dynamic": true
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6693,22 +5721,20 @@
             "dynamic": true
           },
           "Chitin thorns": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6730,22 +5756,20 @@
             "dynamic": true
           },
           "Enhanced senses": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6760,22 +5784,20 @@
             "dynamic": true
           },
           "Spore cysts": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6790,22 +5812,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6820,22 +5840,20 @@
             "dynamic": true
           },
           "Tusks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -6849,18 +5867,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Carnifexes": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 7
@@ -6870,6 +5878,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Carnifex": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -6899,7 +5915,9 @@
             "Ability§Armoured Exoskeleton",
             "Ability§Blistering Assault",
             "Ability§Monstrous Brood",
-            "Ability§Death Throes",
+            "Ability§Death Throes"
+          ],
+          "included": [
             "Model§Carnifex"
           ]
         },
@@ -6958,99 +5976,6 @@
           },
           "Base": {
             "value": "120 x 92mm"
-          },
-          "loadout1": {
-            "value": "Bio-plasmic cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasmic cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasmic cannon"
-                  }
-                ]
-              },
-              "Powerful limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Powerful limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Powerful limbs",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasmic cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasmic cannon"
-                  }
-                ]
-              },
-              "Powerful limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Powerful limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasmic cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasmic cannon"
-                  }
-                ]
-              },
-              "Powerful limbs": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Powerful limbs"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -7073,8 +5998,11 @@
         "assets": {
           "traits": [
             "Ability§Symbiotic Targeting",
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Weapon§Bio-plasmic cannon",
+            "Weapon§Powerful limbs"
+          ],
+          "included": []
         },
         "text": "An Exocrine is equipped with: bio-plasmic cannon; powerful limbs.\n\n\n\nnull",
         "rules": {
@@ -7216,25 +6144,23 @@
             "value": 9
           },
           "model": {
-            "value": "Model§Hive Guard"
+            "value": "Hive Guard"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7256,22 +6182,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7285,24 +6209,22 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Hive Guard": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 9
           },
           "power1": {
             "value": 4
+          },
+          "Hive Guard": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -7327,7 +6249,9 @@
         "assets": {
           "traits": [
             "Ability§Defensive Stance",
-            "Ability§Synaptic Guidance",
+            "Ability§Synaptic Guidance"
+          ],
+          "included": [
             {
               "item": "Model§Hive Guard",
               "quantity": 3
@@ -7350,25 +6274,23 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Screamer-Killer"
+            "value": "Screamer-Killer"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7383,22 +6305,20 @@
             "dynamic": true
           },
           "Spore cysts": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7413,22 +6333,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -7442,18 +6360,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Screamer-Killers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 7
@@ -7463,6 +6371,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Screamer-Killer": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -7492,7 +6408,9 @@
             "Ability§Blistering Assault",
             "Ability§Terrifying",
             "Ability§Monstrous Brood",
-            "Ability§Death Throes",
+            "Ability§Death Throes"
+          ],
+          "included": [
             "Model§Screamer-Killer"
           ]
         },
@@ -7551,99 +6469,6 @@
           },
           "Base": {
             "value": "127mm"
-          },
-          "loadout1": {
-            "value": "Bio-acid spray",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-acid spray": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-acid spray"
-                  }
-                ]
-              },
-              "Hierodule scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hierodule scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Hierodule scything talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-acid spray": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-acid spray"
-                  }
-                ]
-              },
-              "Hierodule scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hierodule scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-acid spray": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-acid spray"
-                  }
-                ]
-              },
-              "Hierodule scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hierodule scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -7665,8 +6490,11 @@
         },
         "assets": {
           "traits": [
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Weapon§Bio-acid spray",
+            "Weapon§Hierodule scything talons"
+          ],
+          "included": []
         },
         "text": "A Scythed Hierodule is equipped with: bio-acid spray; 2 hierodule scything talons.\n\n\n\nnull",
         "rules": {
@@ -7979,7 +6807,8 @@
         "assets": {
           "traits": [
             "Ability§Carapace Chitin Rams"
-          ]
+          ],
+          "included": []
         },
         "text": "A Stone-crusher Carnifex is equipped with: 2 wrecker claws; thresher scythe.\n\n• One of this model’s wrecker claws can be replaced with 1 bio-flail.\n\nnull",
         "aspects": {
@@ -7995,25 +6824,23 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Thornback"
+            "value": "Thornback"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8028,22 +6855,20 @@
             "dynamic": true
           },
           "Enhanced senses": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8058,22 +6883,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8087,18 +6910,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Thornbacks": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 7
@@ -8108,6 +6921,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Thornback": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -8138,7 +6959,9 @@
             "Ability§Vicious Hunter",
             "Ability§Chitin Thorns",
             "Ability§Monstrous Brood",
-            "Ability§Death Throes",
+            "Ability§Death Throes"
+          ],
+          "included": [
             "Model§Thornback"
           ]
         },
@@ -8158,22 +6981,20 @@
             "value": 10
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8188,22 +7009,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8502,7 +7321,8 @@
         "assets": {
           "traits": [
             "Ability§Death Throes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tyrannofex is equipped with: fleshborer hive; stinger salvoes; powerful limbs.\n\n• This model's fleshborer hive can be replaced with one of the following: 1 acid spray; 1 rupture cannon.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
         "rules": {
@@ -8744,52 +7564,6 @@
           },
           "Base": {
             "value": "75 x 42mm"
-          },
-          "loadout1": {
-            "value": "Broodlord claws and talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Broodlord claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Broodlord claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Broodlord claws and talons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Broodlord claws and talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -8819,8 +7593,10 @@
             "Ability§Lightning Reflexes",
             "Ability§Vanguard Predator",
             "Ability§Vicious Insight",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Broodlord claws and talons"
+          ],
+          "included": []
         },
         "text": "A Broodlord is equipped with: Broodlord claws and talons.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -8841,22 +7617,20 @@
             "value": 9
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8878,22 +7652,20 @@
             "dynamic": true
           },
           "Lash whip": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8915,22 +7687,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -9206,7 +7976,8 @@
             "Ability§Psychic Barrier",
             "Ability§Death Throes",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Hive Tyrant is equipped with: monstrous bonesword; 2 monstrous scything talons; lash whip.\n\n• This model’s monstrous bonesword and lash whip can be replaced with one of the following: 1 heavy venom cannon; 1 stranglethorn cannon.\n\n• This model’s 2 monstrous scything talons can be replaced with one of the following: 1 heavy venom cannon; 1 stranglethorn cannon. This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\n \n\n**Designer’s Note:** *This model cannot be equipped with more than 1 heavy venom cannon and cannot be equipped with more than 1 stranglethorn cannon.*\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -9384,52 +8155,6 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Grasping tail",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Grasping tail": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Grasping tail"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Grasping tail": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Grasping tail"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9458,8 +8183,10 @@
             "Ability§Synapse (Aura)",
             "Ability§Enhanced Toxic Miasma",
             "Ability§Shrouding Spores (Aura)",
-            "Ability§Prey Adaption"
-          ]
+            "Ability§Prey Adaption",
+            "Weapon§Grasping tail"
+          ],
+          "included": []
         },
         "text": "A Malanthrope is equipped with: grasping tail.\n\n\n\nnull",
         "aspects": {
@@ -9539,7 +8266,8 @@
             "Ability§Psychic Node",
             "Ability§Warp Siphon",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "null\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -9560,22 +8288,20 @@
             "value": 11
           },
           "Chitin thorns": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -9628,201 +8354,6 @@
           },
           "Base": {
             "value": "105 x 70mm"
-          },
-          "loadout1": {
-            "value": "Monstrous crushing claw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monstrous crushing claw": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous crushing claw"
-                  }
-                ]
-              },
-              "Monstrous scything talon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous scything talon"
-                  }
-                ]
-              },
-              "Thresher scythe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thresher scythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Monstrous scything talon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monstrous crushing claw": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous crushing claw"
-                  }
-                ]
-              },
-              "Monstrous scything talon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous scything talon"
-                  }
-                ]
-              },
-              "Thresher scythe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thresher scythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Thresher scythe",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monstrous crushing claw": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous crushing claw"
-                  }
-                ]
-              },
-              "Monstrous scything talon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous scything talon"
-                  }
-                ]
-              },
-              "Thresher scythe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thresher scythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Monstrous scything talon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monstrous crushing claw": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous crushing claw"
-                  }
-                ]
-              },
-              "Monstrous scything talon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous scything talon"
-                  }
-                ]
-              },
-              "Thresher scythe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thresher scythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Monstrous crushing claw": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous crushing claw"
-                  }
-                ]
-              },
-              "Monstrous scything talon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Monstrous scything talon"
-                  }
-                ]
-              },
-              "Thresher scythe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Thresher scythe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -9851,8 +8382,12 @@
             "Ability§Berserk Rampage",
             "Ability§Alpha Leader",
             "Ability§Regeneration",
-            "Ability§Death Throes"
-          ]
+            "Ability§Death Throes",
+            "Weapon§Monstrous crushing claw",
+            "Weapon§Monstrous scything talon",
+            "Weapon§Thresher scythe"
+          ],
+          "included": []
         },
         "text": "Old One Eye is equipped with: 2 monstrous crushing claws; 2 monstrous scything talons; thresher scythe; chitin thorns. Your army can only include one **OLD ONE** EYE** model.\n\n\n\nnull",
         "aspects": {
@@ -9868,22 +8403,20 @@
             "value": 11
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -9898,22 +8431,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -10117,7 +8648,8 @@
             "Ability§Wall of Flesh",
             "Ability§Death Throes",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tervigon is equipped with: stinger salvoes; massive scything talons.\n\n• This model’s massive scything talons can be replaced with 2 massive crushing claws.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -10303,52 +8835,6 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Bone sabres",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bone sabres": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bone sabres"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bone sabres": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bone sabres"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -10382,8 +8868,10 @@
             "Ability§Domination of the Hive Mind",
             "Ability§Hive Commander",
             "Ability§Death Throes",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Bone sabres"
+          ],
+          "included": []
         },
         "text": "The Swarmlord is equipped with: bone sabres. Your army can only include one **THE SWARMLORD** model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the [Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -10530,22 +9018,20 @@
             "value": 10
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -10567,22 +9053,20 @@
             "dynamic": true
           },
           "Biostatic rattle": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -10604,22 +9088,20 @@
             "dynamic": true
           },
           "Prehensile pincer tail": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -10641,22 +9123,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -10866,7 +9346,8 @@
             "Ability§Serpentine Coils",
             "Ability§Death Throes",
             "Ability§Bio-impulses"
-          ]
+          ],
+          "included": []
         },
         "text": "A Trygon Prime is equipped with: bio-electric pulse with containment spines; toxinspike, Trygon scything talons.\n\n• This model’s toxinspike can be replaced with one of the following: 1 biostatic rattle; 1 prehensile pincer tail.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
         "rules": {
@@ -11008,22 +9489,20 @@
             "value": 5
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11045,22 +9524,20 @@
             "dynamic": true
           },
           "Flesh hooks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11075,22 +9552,20 @@
             "dynamic": true
           },
           "Lash whip": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11112,22 +9587,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11607,7 +10080,8 @@
             "Ability§Synapse (Aura)",
             "Ability§Shadow in the Warp (Aura)",
             "Ability§Alpha Warrior"
-          ]
+          ],
+          "included": []
         },
         "text": "A Tyranid Prime is equipped with: devourer; bonesword; lash whip.\n\n• This model’s bonesword and lash whip can be replaced with one of the following: 1 dual boneswords; 2 rending claws; 2 scything talons.\n\n• This model’s devourer can be replaced with one of the following: 1 barbed strangler; 1 deathspitter; 1 spinefists; 1 venom cannon; 1 bonesword and 1 lash whip; 1 dual boneswords; 2 rending claws; 2 scything talons.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 flesh hooks.\n\n• This model can be equipped with 1 toxin sacs.\n\nnull",
         "aspects": {
@@ -11623,22 +10097,20 @@
             "value": 11
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11660,22 +10132,20 @@
             "dynamic": true
           },
           "Lash whip": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11697,22 +10167,20 @@
             "dynamic": true
           },
           "Prehensile pincer tail": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -11734,22 +10202,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -12115,7 +10581,8 @@
             "Ability§Death from Above",
             "Ability§Death Throes",
             "Psychic Power§Smite"
-          ]
+          ],
+          "included": []
         },
         "text": "A Winged Hive Tyrant is equipped with: monstrous bonesword; prehensile pincer tail; Tyrant talons; lash whip.\n\n• This model’s monstrous bonesword and lash whip can be replaced with one of the following: 1 heavy venom cannon; 1 stranglethorn cannon; 2 monstrous scything talons.\n\n• This model can be equipped with 1 adrenal glands.\n\n• This model can be equipped with 1 toxin sacs.\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Hive Mind discipline](https://wahapedia.ru/wh40k9ed/factions/tyranids/#Hive-Mind-Discipline)**.",
         "allowed": {
@@ -12301,99 +10768,6 @@
           },
           "Base": {
             "value": "120 x 92mm flying base"
-          },
-          "loadout1": {
-            "value": "Dire bio-cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Dire bio-cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Gargantuan scything talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Dire bio-cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Dire bio-cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -12425,8 +10799,11 @@
             "Ability§Titanic",
             "Ability§Death Throes",
             "Ability§Supersonic",
-            "Ability§Hard to Hit"
-          ]
+            "Ability§Hard to Hit",
+            "Weapon§Dire bio-cannon",
+            "Weapon§Gargantuan scything talons"
+          ],
+          "included": []
         },
         "text": "A Harridan is equipped with: 2 dire bio-cannons; gargantuan scything talons.\n\n\n\nnull",
         "rules": {
@@ -12607,241 +10984,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Bio-plasma torrent",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasma torrent": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasma torrent"
-                  }
-                ]
-              },
-              "Dire bio-cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              },
-              "Lashwhip pods": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lashwhip pods"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Dire bio-cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasma torrent": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasma torrent"
-                  }
-                ]
-              },
-              "Dire bio-cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              },
-              "Lashwhip pods": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lashwhip pods"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Lashwhip pods",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasma torrent": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasma torrent"
-                  }
-                ]
-              },
-              "Dire bio-cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              },
-              "Lashwhip pods": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lashwhip pods"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Gargantuan scything talons",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasma torrent": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasma torrent"
-                  }
-                ]
-              },
-              "Dire bio-cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              },
-              "Lashwhip pods": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lashwhip pods"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Bio-plasma torrent": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bio-plasma torrent"
-                  }
-                ]
-              },
-              "Dire bio-cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Dire bio-cannon"
-                  }
-                ]
-              },
-              "Gargantuan scything talons": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Gargantuan scything talons"
-                  }
-                ]
-              },
-              "Lashwhip pods": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Lashwhip pods"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -12870,8 +11012,13 @@
             "Ability§Death Throes",
             "Ability§Hypertoxic Poison Cloud",
             "Ability§Titanic",
-            "Ability§Bio-titan Warp Field"
-          ]
+            "Ability§Bio-titan Warp Field",
+            "Weapon§Bio-plasma torrent",
+            "Weapon§Dire bio-cannon",
+            "Weapon§Gargantuan scything talons",
+            "Weapon§Lashwhip pods"
+          ],
+          "included": []
         },
         "text": "A Hierophant is equipped with: bio-plasma torrent; 2 dire bio-cannons; lashwhip pods; gargantuan scything talons.\n\n\n\nnull",
         "rules": {
@@ -13041,100 +11188,13 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Spore mine launcher",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Chitin-barbed fists": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Chitin-barbed fists"
-                  }
-                ]
-              },
-              "Spore mine launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spore mine launcher"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Chitin-barbed fists",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Chitin-barbed fists": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Chitin-barbed fists"
-                  }
-                ]
-              },
-              "Spore mine launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spore mine launcher"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Chitin-barbed fists": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Chitin-barbed fists"
-                  }
-                ]
-              },
-              "Spore mine launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spore mine launcher"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Chitin-barbed fists",
+            "Weapon§Spore mine launcher"
+          ]
         }
       },
       "Model§Carnifex": {
@@ -13454,53 +11514,12 @@
           },
           "Base": {
             "value": "32mm flying base"
-          },
-          "loadout1": {
-            "value": "Fleshborer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Fleshborer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Fleshborer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Fleshborer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Fleshborer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Fleshborer"
+          ]
         }
       },
       "Model§Genestealer": {
@@ -13876,131 +11895,13 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Flamespurt",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flamespurt": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Flamespurt"
-                  }
-                ]
-              },
-              "Bludgeoning fists": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bludgeoning fists"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Bludgeoning fists",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flamespurt": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Flamespurt"
-                  }
-                ]
-              },
-              "Bludgeoning fists": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bludgeoning fists"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Flamespurt",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flamespurt": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Flamespurt"
-                  }
-                ]
-              },
-              "Bludgeoning fists": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bludgeoning fists"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Flamespurt": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Flamespurt"
-                  }
-                ]
-              },
-              "Bludgeoning fists": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Bludgeoning fists"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Flamespurt",
+            "Weapon§Bludgeoning fists"
+          ]
         }
       },
       "Model§Ravener": {
@@ -15646,53 +13547,12 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Toxic lashes",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Toxic lashes": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Toxic lashes"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Toxic lashes": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Toxic lashes"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Toxic lashes"
+          ]
         }
       },
       "Model§Zoanthrope": {
@@ -15739,26 +13599,24 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Gargoyle"
+            "value": "Gargoyle"
           },
-          "Gargoyles": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 10,
-            "min": 10,
-            "max": 20,
-            "increment": {
-              "value": 10
-            }
+          "minModels": {
+            "value": 10
           },
           "poweri": {
             "value": 4
           },
           "power1": {
             "value": 11
+          },
+          "Gargoyle": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 20,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -15783,7 +13641,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Swarming Masses",
+            "Ability§Swarming Masses"
+          ],
+          "included": [
             {
               "item": "Model§Gargoyle",
               "quantity": 10
@@ -15806,25 +13666,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Hormagaunt"
+            "value": "Hormagaunt"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -15846,22 +13704,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -15882,18 +13738,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Hormagaunts": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 10,
-            "min": 10,
-            "max": 30,
-            "increment": {
-              "value": 10
-            }
+          "minModels": {
+            "value": 10
           },
           "poweri": {
             "value": 4
@@ -15903,6 +13749,14 @@
           },
           "power2": {
             "value": 21
+          },
+          "Hormagaunt": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 30,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -15929,7 +13783,9 @@
         "assets": {
           "traits": [
             "Ability§Swarming Masses",
-            "Ability§Bounding Leap",
+            "Ability§Bounding Leap"
+          ],
+          "included": [
             {
               "item": "Model§Hormagaunt",
               "quantity": 10
@@ -15952,25 +13808,23 @@
             "value": 4
           },
           "model": {
-            "value": "Model§Termagant (Termagants)"
+            "value": "Termagant"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -15992,22 +13846,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -16028,18 +13880,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Termagants": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 10,
-            "min": 10,
-            "max": 30,
-            "increment": {
-              "value": 10
-            }
+          "minModels": {
+            "value": 10
           },
           "poweri": {
             "value": 4
@@ -16049,6 +13891,14 @@
           },
           "power2": {
             "value": 21
+          },
+          "Termagant": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 30,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -16074,7 +13924,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Swarming Masses",
+            "Ability§Swarming Masses"
+          ],
+          "included": [
             {
               "item": "Model§Termagant (Termagants)",
               "quantity": 10
@@ -16091,90 +13943,29 @@
           "Publication": "[Tyranids (Codex) 9th ed. – Indomitus 1.1 @2023-01-05](https://www.warhammer-community.com/wp-content/uploads/2019/09/sFoD3xYMk7rpzemL.pdf)"
         }
       },
-      "Troops§Termagants (Legendary)": {
-        "stats": {
-          "Power Level": {
-            "value": 3
-          },
-          "model": {
-            "value": "Model§Termagant (Termagants (Legendary))"
-          },
-          "Termagants (Legendary)": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 10,
-            "min": 10,
-            "max": 30,
-            "increment": {
-              "value": 10
-            }
-          }
-        },
-        "keywords": {
-          "Source": [
-            "Datasheet—Warhammer Legends: Tyranids"
-          ],
-          "Edition": [
-            "8th"
-          ],
-          "Keywords": [
-            "Infantry",
-            "Termagants"
-          ],
-          "Faction": [
-            "<Hive Fleet>",
-            "Hive Tendril",
-            "Tyranids"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Instinctive Behaviour",
-            "Ability§Hail of Living Ammunition",
-            {
-              "item": "Model§Termagant (Termagants (Legendary))",
-              "quantity": 10
-            }
-          ]
-        },
-        "text": "This unit contains 10 Termagants. It can include up to 10 additional Termagants (**Power Rating +3**) or up to 20 additional Termagants (Power Rating +6**). Each model is armed with a fleshborer.\n\n• Any model may replace its fleshborer with a devourer or spinefists.\n\n• All models in the unit may have ***toxin sacs** and/or **adrenal glands***.\n\n• Any model can be equipped with 1 spike rifle instead of 1 fleshborer.\n\n• For every ten models, one model can be equipped with 1 strangleweb instead of 1 fleshborer.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
-        "allowed": {
-          "items": [
-            "Model§Termagant (Termagants (Legendary))"
-          ]
-        },
-        "meta": {
-          "Publication": "[Warhammer Legends: Tyranids (Datasheet) 8th ed. –  @2019-12-04](https://www.warhammer-community.com/wp-content/uploads/2019/12/5bd7f70c.pdf)"
-        }
-      },
       "Troops§Tyranid Warriors": {
         "stats": {
           "Power Level": {
             "value": 4
           },
           "model": {
-            "value": "Model§Tyranid Warrior"
+            "value": "Tyranid Warrior"
           },
           "Adrenal glands": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -16196,22 +13987,20 @@
             "dynamic": true
           },
           "Flesh hooks": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -16226,22 +14015,20 @@
             "dynamic": true
           },
           "Lash whip": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -16263,22 +14050,20 @@
             "dynamic": true
           },
           "Toxin sacs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -16299,18 +14084,8 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Tyranid Warriors": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 9,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 4
@@ -16320,6 +14095,14 @@
           },
           "power2": {
             "value": 7
+          },
+          "Tyranid Warrior": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -16349,7 +14132,9 @@
           "traits": [
             "Ability§Synapse (Aura)",
             "Ability§Shadow in the Warp (Aura)",
-            "Ability§Warrior Spawning",
+            "Ability§Warrior Spawning"
+          ],
+          "included": [
             {
               "item": "Model§Tyranid Warrior",
               "quantity": 3

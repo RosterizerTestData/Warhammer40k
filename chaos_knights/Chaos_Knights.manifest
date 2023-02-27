@@ -1,11 +1,11 @@
 {
   "name": "Chaos Knights",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -53,7 +53,9 @@
                 "order": 9
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -217,7 +219,7 @@
         }
       },
       "Ability§Harbingers of Dread": {
-        "text": "Where Chaos Knights tread, the skies grow unnaturally dark and the dread of the warp permeates the battlefield. None are immune to its shadowy touch, for those it does not paralyse with fear and despair are wracked with hallucinations and driven mad.If every unit from your army has the **CHAOS KNIGHTS** keyword (excluding units with the UNALIGNED** or [AGENT** OF** CHAOS**](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Fallen-Hero) keywords), then this unit gains a bonus (see below) depending on which **Harbinger abilities** are active for your army. At the start of each battle round, you must select one Harbinger ability (either a Despair, Doom or Darkness Harbinger ability) from the corresponding choices for that battle round in the table shown below. Note that when making a selection:\n\n* During the first and fifth [battle rounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Battle-Round), you must select the Doom ability.\n* You can only select the Despair ability if you selected the Despair or Doom ability in the previous battle round.\n* You can only select the Darkness ability if you selected the Darkness or Doom ability in the previous battle round.\n\n<div class=\" img-opa\"><img border=\"0\" src=\"/wh40k9ed/img/CK/CK_Diagram.png\" style=\"margin:4px\">\n\nOnce you have selected a Harbinger ability, it becomes active for the remainder of the battle and applies to all units in your army with this ability. Some rules can make additional Harbinger abilities become active for one or more units during the battle. Duplicated active Harbinger abilities on the same unit have no additional effect.</div>"
+        "text": "Where Chaos Knights tread, the skies grow unnaturally dark and the dread of the warp permeates the battlefield. None are immune to its shadowy touch, for those it does not paralyse with fear and despair are wracked with hallucinations and driven mad.If every unit from your army has the **CHAOS KNIGHTS** keyword (excluding units with the UNALIGNED** or [AGENT** OF** CHAOS**](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Fallen-Hero) keywords), then this unit gains a bonus (see below) depending on which **Harbinger abilities** are active for your army. At the start of each battle round, you must select one Harbinger ability (either a Despair, Doom or Darkness Harbinger ability) from the corresponding choices for that battle round in the table shown below. Note that when making a selection:\n\n* During the first and fifth [battle rounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Battle-Round), you must select the Doom ability.\n* You can only select the Despair ability if you selected the Despair or Doom ability in the previous battle round.\n* You can only select the Darkness ability if you selected the Darkness or Doom ability in the previous battle round.\n\n<div class=\" img-opa\"><img border=\"0\" src=\"/wh40k9ed/img/CK/CK_Diagram.png\" style=\"margin:0px\">\n\nOnce you have selected a Harbinger ability, it becomes active for the remainder of the battle and applies to all units in your army with this ability. Some rules can make additional Harbinger abilities become active for one or more units during the battle. Duplicated active Harbinger abilities on the same unit have no additional effect.</div>"
       },
       "Ability§Ion Gauntlet Shield": {
         "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves). This model has a 4+ invulnerable save against melee attacks. Each time a **TITANIC** unit makes a melee attack that targets this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -309,241 +311,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Asterius volkite culverin",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Karacnos mortar battery",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Twin conversion beam cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -572,8 +339,13 @@
             "Ability§Harbingers of Dread",
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Twin conversion beam cannon",
+            "Weapon§Asterius volkite culverin",
+            "Weapon§Karacnos mortar battery",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Chaos Acastus Knight Asterius is equipped with: 2 Asterius volkite culverins; karacnos mortar battery; 2 twin conversion beam cannons; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -1098,7 +870,8 @@
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "An Chaos Acastus Knight Porphyrion is equipped with: 2 Acastus autocannons; ironstorm missile pod; 2 twin magna lascannons; titanic feet.\n\n• This model's Acastus autocannons can each be replaced with 1 Acastus lascannon.\n\n• This model’s ironstorm missile pod can be replaced with helios defence missiles.\n\nnull",
         "rules": {
@@ -1279,241 +1052,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Acheron flame cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Acheron twin heavy bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Reaper chainfist",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1542,8 +1080,13 @@
             "Ability§Harbingers of Dread",
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Reaper chainfist",
+            "Weapon§Acheron flame cannon",
+            "Weapon§Acheron twin heavy bolter",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Chaos Cerastus Knight Acheron is equipped with: Acheron flame cannon; Acheron twin heavy bolter; reaper chainfist; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -1724,194 +1267,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Atrapos lascutter (melee)",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atropos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atropos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Graviton singularity cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atropos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atropos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atropos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atropos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atropos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atropos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1941,8 +1296,13 @@
             "Ability§Super-heavy Walker",
             "Ability§Macro-extinction Protocols",
             "Ability§Explodes",
-            "Ability§Ionic Flare Shield"
-          ]
+            "Ability§Ionic Flare Shield",
+            "Wargear§Atrapos lascutter (melee)",
+            "Wargear§Graviton singularity cannon",
+            "Weapon§Atropos lascutter (shooting)",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Chaos Cerastus Knight Atrapos is equipped with: Atrapos lascutter; graviton singularity cannon; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -2123,162 +1483,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Castigator bolt cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Tempest warblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2307,8 +1511,12 @@
             "Ability§Harbingers of Dread",
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Weapon§Castigator bolt cannon",
+            "Weapon§Tempest warblade",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Chaos Cerastus Knight Castigator is equipped with: Castigator bolt cannon; tempest warblade; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -2489,99 +1697,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Cerastus shock lance",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cerastus shock lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cerastus shock lance"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cerastus shock lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cerastus shock lance"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cerastus shock lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cerastus shock lance"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2610,8 +1725,11 @@
             "Ability§Harbingers of Dread",
             "Ability§Super-heavy Walker",
             "Ability§Explodes",
-            "Ability§Ion Gauntlet Shield"
-          ]
+            "Ability§Ion Gauntlet Shield",
+            "Wargear§Cerastus shock lance",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Chaos Cerastus Knight Lancer is equipped with: Cerastus shock lance; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -3137,7 +2255,8 @@
             "Ability§Empyreal Preysight",
             "Ability§Ionic Flare Shield",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chaos Questoris Knight Magaera is equipped with: lightning cannon; phased plasma-fusil; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.\n\nnull",
         "rules": {
@@ -3663,7 +2782,8 @@
             "Ability§Ionic Flare Shield",
             "Ability§Empyreal Preysight",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Chaos Questoris Knight Styrix is equipped with: graviton crusher; reaper chainsword; titanic feet; volkite chieorovile.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.\n\nnull",
         "rules": {
@@ -3844,336 +2964,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Diabolus heavy stubber",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Balemace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Balemace"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Electroscourge": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroscourge"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              },
-              "Volkite combustor": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Volkite combustor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Volkite combustor",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Balemace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Balemace"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Electroscourge": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroscourge"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              },
-              "Volkite combustor": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Volkite combustor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Balemace",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Balemace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Balemace"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Electroscourge": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroscourge"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              },
-              "Volkite combustor": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Volkite combustor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Electroscourge",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Balemace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Balemace"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Electroscourge": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroscourge"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              },
-              "Volkite combustor": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Volkite combustor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Balemace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Balemace"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Electroscourge": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroscourge"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              },
-              "Volkite combustor": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Volkite combustor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout6": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 6,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Balemace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Balemace"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Electroscourge": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Electroscourge"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              },
-              "Volkite combustor": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Volkite combustor"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -4206,8 +2996,14 @@
             "Ability§Super-heavy Walker",
             "Ability§Harbingers of Dread",
             "Ability§Explodes",
-            "Psychic Power§Smite"
-          ]
+            "Psychic Power§Smite",
+            "Weapon§Balemace",
+            "Weapon§Diabolus heavy stubber",
+            "Weapon§Electroscourge",
+            "Weapon§Titanic feet",
+            "Weapon§Volkite combustor"
+          ],
+          "included": []
         },
         "text": "A Knight Abominant is equipped with: diabolus heavy stubber; volkite combustor; balemace; electroscourge; titanic feet.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Warp Storm discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Warp-Storm-Discipline)**.",
         "allowed": {
@@ -4699,7 +3495,8 @@
             "Ability§Harbingers of Dread",
             "Ability§Taskmaster (Aura)",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Desecrator is equipped with: Desecrator laser destructor; diabolus heavy stubber; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 warpstrike claw.\n\nnull",
         "rules": {
@@ -5466,7 +4263,8 @@
             "Ability§Dread Dominion (Aura)",
             "Ability§Engine of Destruction",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Despoiler is equipped with: daemonbreath meltagun; reaper chainsword; titanic feet; warpstrike claw.\n\n\n\n*If this model is equipped with 2 daemonbreath thermal cannons, 2 despoiler battle cannons,\n\n2 despoiler gatling cannons, or 1 reaper chainsword and 1 warpstrike claw, its unit cost is increased by 20 pts.*\n\n• This model’s daemonbreath meltagun can be replaced with 1 diabolus heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 of the following:\n\n○ 1 daemonbreath thermal cannon\n\n○ 1 despoiler gatling cannon and 1 heavy darkflamer\n\n○ 1 despoiler battle cannon and 1 diabolus heavy stubber\n\n• This model’s warpstrike claw can be replaced with 1 of the following:\n\n○ 1 daemonbreath thermal cannon\n\n○ 1 despoiler gatling cannon and 1 heavy darkflamer\n\n○ 1 despoiler battle cannon and 1 diabolus heavy stubber\n\n• This model can be equipped with one of the following: 1 havoc missile pod; 1 ruinspear rocket pod; 1 twin hellstorm autocannon.\n\nnull",
         "rules": {
@@ -5647,241 +4445,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Diabolus heavy stubber",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainsword": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainsword"
-                  }
-                ]
-              },
-              "Warpstrike claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warpstrike claw"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Reaper chainsword",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainsword": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainsword"
-                  }
-                ]
-              },
-              "Warpstrike claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warpstrike claw"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainsword": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainsword"
-                  }
-                ]
-              },
-              "Warpstrike claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warpstrike claw"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Warpstrike claw",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainsword": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainsword"
-                  }
-                ]
-              },
-              "Warpstrike claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warpstrike claw"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainsword": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainsword"
-                  }
-                ]
-              },
-              "Warpstrike claw": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Warpstrike claw"
-                  }
-                ]
-              },
-              "Diabolus heavy stubber": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Diabolus heavy stubber"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5912,8 +4475,13 @@
             "Ability§Super-heavy Walker",
             "Ability§Harbingers of Dread",
             "Ability§Frenzied Rampage (Aura)",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Reaper chainsword",
+            "Wargear§Warpstrike claw",
+            "Weapon§Diabolus heavy stubber",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Knight Rampager is equipped with: diabolus heavy stubber; reaper chainsword; titanic feet; warpstrike claw.\n\n\n\nnull",
         "rules": {
@@ -6676,7 +5244,8 @@
             "Ability§Super-heavy Walker",
             "Ability§Harbingers of Dread",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Tyrant is equipped with: brimstone volcano lance; ectoplasma decimator; 4 gheiststrike missiles; 2 twin daemonbreath meltaguns; twin desecrator cannon; titanic feet.\n\n• This model’s brimstone volcano lance and ectoplasma decimator can be replaced with 1 darkflame cannon and 1 warpshock harpoon.\n\n• This model’s 4 gheiststrike missiles and twin desecrator cannon can be replaced with 2 gheiststrike missiles and 2 twin desecrator cannons.\n\nnull",
         "rules": {
@@ -6818,20 +5387,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§War Dog Brigand"
+            "value": "War Dog Brigand"
           },
-          "War Dog Brigand": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -6841,6 +5400,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "War Dog Brigand": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -6870,7 +5437,9 @@
             "Ability§Ion Shields",
             "Ability§Harbingers of Dread",
             "Ability§War Dog Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§War Dog Brigand"
           ]
         },
@@ -6890,20 +5459,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§War Dog Executioner"
+            "value": "War Dog Executioner"
           },
-          "War Dog Executioner": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -6913,6 +5472,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "War Dog Executioner": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -6941,7 +5508,9 @@
             "Ability§Ion Shields",
             "Ability§Harbingers of Dread",
             "Ability§War Dog Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§War Dog Executioner"
           ]
         },
@@ -6961,20 +5530,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§War Dog Huntsman"
+            "value": "War Dog Huntsman"
           },
-          "War Dog Huntsman": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -6984,6 +5543,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "War Dog Huntsman": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -7012,7 +5579,9 @@
             "Ability§Ion Shields",
             "Ability§Harbingers of Dread",
             "Ability§War Dog Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§War Dog Huntsman"
           ]
         },
@@ -7032,20 +5601,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§War Dog Karnivore"
+            "value": "War Dog Karnivore"
           },
-          "War Dog Karnivore": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -7055,6 +5614,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "War Dog Karnivore": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -7084,7 +5651,9 @@
             "Ability§Ion Shields",
             "Ability§Harbingers of Dread",
             "Ability§War Dog Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§War Dog Karnivore"
           ]
         },
@@ -7104,20 +5673,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§War Dog Moirax"
+            "value": "War Dog Moirax"
           },
-          "War Dog Moirax": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -7127,6 +5686,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "War Dog Moirax": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -7155,7 +5722,9 @@
             "Ability§Ion Shield",
             "Ability§War Dog Squadron",
             "Ability§Explodes",
-            "Ability§Protection Protocols",
+            "Ability§Protection Protocols"
+          ],
+          "included": [
             "Model§War Dog Moirax"
           ]
         },
@@ -7175,20 +5744,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§War Dog Stalker"
+            "value": "War Dog Stalker"
           },
-          "War Dog Stalker": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -7198,6 +5757,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "War Dog Stalker": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -7227,7 +5794,9 @@
             "Ability§Ion Shields",
             "Ability§Harbingers of Dread",
             "Ability§War Dog Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§War Dog Stalker"
           ]
         },

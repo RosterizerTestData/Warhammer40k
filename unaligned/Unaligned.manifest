@@ -1,11 +1,11 @@
 {
   "name": "Unaligned",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -154,7 +154,8 @@
           "traits": [
             "Ability§Rapid Tunnelling",
             "Ability§Rad-Maggot Symbiosis"
-          ]
+          ],
+          "included": []
         },
         "text": "An Ambull is a single model armed with enormous claws.\n\n\n\nnull",
         "aspects": {
@@ -170,20 +171,18 @@
             "value": 1
           },
           "model": {
-            "value": "Model§Borewyrm Infestation"
+            "value": "Borewyrm Infestation"
+          },
+          "minModels": {
+            "value": 1
           },
           "Borewyrm Infestation": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 2,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -205,7 +204,9 @@
         "assets": {
           "traits": [
             "Ability§Rapid Tunnelling",
-            "Ability§Hard to Hit",
+            "Ability§Hard to Hit"
+          ],
+          "included": [
             "Model§Borewyrm Infestation"
           ]
         },
@@ -278,7 +279,8 @@
           "traits": [
             "Ability§Drone Commander",
             "Ability§Hover Drones"
-          ]
+          ],
+          "included": []
         },
         "text": "A Guardian Drone is a single model equipped with: destroyer pulse, guardian salvo launchers, manipulator limbs.\n\n\n\nnull",
         "aspects": {
@@ -347,7 +349,8 @@
         "assets": {
           "traits": [
             "Ability§Disruptive Influence"
-          ]
+          ],
+          "included": []
         },
         "text": "The Archivist is a single model equipped with: atomic disassembler, eradicator glove. You can only include one of this model in your army.\n\n\n\nnull",
         "aspects": {
@@ -417,22 +420,20 @@
             "value": 10
           },
           "Comms antenna": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -447,22 +448,20 @@
             "dynamic": true
           },
           "Roof hatch": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -728,7 +727,8 @@
             "Ability§Fire Points",
             "Ability§Automated Weapons",
             "Ability§Wrecked"
-          ]
+          ],
+          "included": []
         },
         "text": "A Bastion is equipped with: 4 heavy bolters; roof hatch.\n\n• This model’s roof hatch can be replaced with one of the following: 1 Icarus lascannon; 1 quad-gun; 1 comms antenna.\n\nnull",
         "rules": {
@@ -927,7 +927,8 @@
             "Ability§Fire Points",
             "Ability§Immobile",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Firestorm Redoubt is a single model equipped with: 2 quad Icarus lascannons.\n\n• For each quad Icarus lascannon this model is equipped with, it can instead be equipped with one of the following: 1 battle cannon; 1 punisher gatling cannon.\n\nnull",
         "aspects": {
@@ -1125,7 +1126,8 @@
             "Ability§Fire Points",
             "Ability§Automated Weapons",
             "Ability§Wrecked"
-          ]
+          ],
+          "included": []
         },
         "text": "A Fortress of Redemption is equipped with: Redemption lascannons; Redemption missile silo.\n\n• This model can be equipped with up to 4 heavy bolters.\n\nnull",
         "rules": {
@@ -1324,7 +1326,8 @@
             "Ability§Fire Points",
             "Ability§Automated Weapons",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "An Imperial Bunker is a single model.\n\n• This model can be equipped with 1 Icarus lascannon or 1 quad-gun.\n\nnull",
         "aspects": {
@@ -1493,7 +1496,8 @@
             "Ability§Fire Points",
             "Ability§Automated Weapons",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Macro-cannon Aquila Strongpoint is a single model equipped with: Aquila macro-cannon.\n\n• This model can additionally be equipped with up to 4 heavy bolters.\n\nnull",
         "aspects": {
@@ -1565,7 +1569,8 @@
             "Ability§Automated Weapons",
             "Ability§Fire Points",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Plasma Obliterator is a single model equipped with: plasma obliterator.\n\n\n\nnull",
         "aspects": {
@@ -1890,7 +1895,8 @@
             "Ability§Automated Weapons",
             "Ability§Force Dome",
             "Ability§Wrecked"
-          ]
+          ],
+          "included": []
         },
         "text": "A Primaris Redoubt is equipped with: Primaris redoubt turbo-laser destructor.\n\n• This model can be equipped with up to 4 heavy bolters.\n\n• This model can be equipped with one of the following: 1 Primaris air defence missiles; 1 battle cannon; 1 Primaris Icarus lascannon; 1 Primaris Icarus quad lascannon; 1 multi-melta; 1 Primaris quad gun; 1 twin heavy bolter; 1 twin heavy flamer; 1 twin lascannon; 1 Primaris castellan launcher; 1 Primaris vengeance launcher.\n\nnull",
         "aspects": {
@@ -1959,7 +1965,8 @@
           "traits": [
             "Ability§Terrain Feature",
             "Ability§Landing Pad Configuration"
-          ]
+          ],
+          "included": []
         },
         "text": "A Skyshield Landing Pad is a single model.\n\n\n\nnull",
         "aspects": {
@@ -1975,20 +1982,18 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Vengeance Weapon Battery"
+            "value": "Vengeance Weapon Battery"
           },
-          "Vengeance Weapon Batteries": {
+          "minModels": {
+            "value": 1
+          },
+          "Vengeance Weapon Battery": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 2,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2012,7 +2017,9 @@
           "traits": [
             "Ability§Immobile",
             "Ability§Fully Automated Weapons",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Vengeance Weapon Battery"
           ]
         },
@@ -2086,7 +2093,8 @@
           "traits": [
             "Ability§Projected Void Shields (Aura)",
             "Ability§Wrecked"
-          ]
+          ],
+          "included": []
         },
         "text": "A Void Shield generator is a single model.\n\n\n\nnull",
         "aspects": {
@@ -2160,7 +2168,8 @@
             "Ability§Automated Weapons",
             "Ability§Fire Points",
             "Ability§Immobile"
-          ]
+          ],
+          "included": []
         },
         "text": "A Vortex Missile Aquila Strongpoint is a single model equipped with: vortex missile battery.\n\n• This model can additionally be equipped with up to 4 heavy bolters.\n\nnull",
         "aspects": {
@@ -2566,53 +2575,12 @@
           },
           "Base": {
             "value": "25mm"
-          },
-          "loadout1": {
-            "value": "Drone pulse",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drone pulse": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drone pulse"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Drone pulse": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Drone pulse"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Drone pulse"
+          ]
         }
       },
       "Model§Tower Section": {

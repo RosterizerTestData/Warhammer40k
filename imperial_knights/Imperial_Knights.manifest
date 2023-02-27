@@ -1,11 +1,11 @@
 {
   "name": "Imperial Knights",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -62,7 +62,9 @@
                 "order": 12
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -196,7 +198,7 @@
         "text": "Each time **CANIS** REX** makes an attack against a non-IMPERIUM** unit, on an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6, one additional hit is scored."
       },
       "Ability§Code Chivalric": {
-        "text": "<div class=\"BreakInsideAvoid\">If every unit from your army has the **IMPERIAL KNIGHTS** keyword (excluding units with the **AGENT OF** THE** IMPERIUM** or UNALIGNED** keywords) and all of those units (excluding [FREEBLADES**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-NOBLE-HOUSEHOLD-Keyword)) are from the same [noble household](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-Noble-Households), then when you write your army list you must also swear 2 [Oaths](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#Oaths) from those in the following tables, and make a note of them on your army list.\n\n\n\nYou will start the battle with 1 Honour point. You can gain Honour points during the battle, typically by completing the Pledge of your selected Oaths. You can also lose Honour points during the battle, typically when the Troth of your selected Oaths applies. You can never have less than 0 Honour points, or more than 6. At the start of each battle round, consult the table below to determine your army’s current level of Honour.\n\n\n\n<div class=\"BreakInsideAvoid\"  style=\"\"\"><table width=\"0\" border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable tablefont\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td colspan=\"2\" style=\"border-width:1px 1px 0 1px;background-color:rgb(16,16,16);color:rgb(254,254,254);vertical-align:bottom;font-size:26px;width:240px;height:0px;\">ARMY HONOUR**</td></tr><tr><td style=\"border-width:0 0 1px 1px;background-color:var(--header-bg);text-align:center;vertical-align:middle;font-size:22px;width:240px;height:0px;\">NUMBER OF HONOUR POINTS**</td><td style=\"border-width:0 1px 1px 0;background-color:var(--header-bg);text-align:center;vertical-align:middle;font-size:22px;width:240px;height:0px;\">ARMY’S LEVEL OF HONOUR**</td></tr><tr><td style=\"border-width:0 0 0 1px;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">0</td><td style=\"border-width:0 1px 0 0;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">Dishonoured<div class=\"img-inv\"><img border=\"0\" src=\"/wh40k9ed/img/IK/Dishonoured.png\" style=\"margin:4px\"></td></tr><tr><td style=\"border-width:0 0 0 1px;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">1-4</td><td style=\"border-width:0 1px 0 0;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">Honoured<img border=\"0\" src=\"/wh40k9ed/img/IK/Honoured.png\" style=\"margin:4px\"></td></tr><tr><td style=\"border-width:0 0 1px 1px;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">5-6</td><td style=\"border-width:0 1px 1px 0;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">Virtuous<img border=\"0\" src=\"/wh40k9ed/img/IK/Virtuous.png\" style=\"margin:4px\"></td></tr></tbody></table></td></tr></tbody></table></div>\n\n</div>Models with this ability will then gain a number of Chivalric abilities depending on which are active for your army, as follows:\n\n* Whilst your army is Dishonoured, the Honoured and Virtuous Chivalric abilities from your selected Oaths are not active.\n* Whilst your army is Honoured, the Honoured Chivalric ability from your selected Oaths are active for all IMPERIAL** KNIGHTS** units in your army, but the Virtuous Chivalric abilities from your selected Oaths are not active.\n* Whilst your army is Virtuous, the Honoured and Virtuous Chivalric abilities from your selected Oaths are active for all IMPERIAL** KNIGHTS** units in your army.</div>"
+        "text": "<div class=\"BreakInsideAvoid\">If every unit from your army has the **IMPERIAL KNIGHTS** keyword (excluding units with the **AGENT OF** THE** IMPERIUM** or UNALIGNED** keywords) and all of those units (excluding [FREEBLADES**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-NOBLE-HOUSEHOLD-Keyword)) are from the same [noble household](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-Noble-Households), then when you write your army list you must also swear 2 [Oaths](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#Oaths) from those in the following tables, and make a note of them on your army list.\n\n\n\nYou will start the battle with 1 Honour point. You can gain Honour points during the battle, typically by completing the Pledge of your selected Oaths. You can also lose Honour points during the battle, typically when the Troth of your selected Oaths applies. You can never have less than 0 Honour points, or more than 6. At the start of each battle round, consult the table below to determine your army’s current level of Honour.\n\n\n\n<div class=\"BreakInsideAvoid\"  style=\"\"\"><table width=\"0\" border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable tablefont\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td colspan=\"2\" style=\"border-width:1px 1px 0 1px;background-color:rgb(16,16,16);color:rgb(254,254,254);vertical-align:bottom;font-size:26px;width:240px;height:0px;\">ARMY HONOUR**</td></tr><tr><td style=\"border-width:0 0 1px 1px;background-color:var(--header-bg);text-align:center;vertical-align:middle;font-size:22px;width:240px;height:0px;\">NUMBER OF HONOUR POINTS**</td><td style=\"border-width:0 1px 1px 0;background-color:var(--header-bg);text-align:center;vertical-align:middle;font-size:22px;width:240px;height:0px;\">ARMY’S LEVEL OF HONOUR**</td></tr><tr><td style=\"border-width:0 0 0 1px;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">0</td><td style=\"border-width:0 1px 0 0;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">Dishonoured<div class=\"img-inv\"><img border=\"0\" src=\"/wh40k9ed/img/IK/Dishonoured.png\" style=\"margin:0px\"></td></tr><tr><td style=\"border-width:0 0 0 1px;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">1-4</td><td style=\"border-width:0 1px 0 0;background-color:var(--row-bg);text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">Honoured<img border=\"0\" src=\"/wh40k9ed/img/IK/Honoured.png\" style=\"margin:0px\"></td></tr><tr><td style=\"border-width:0 0 1px 1px;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">5-6</td><td style=\"border-width:0 1px 1px 0;text-align:center;vertical-align:middle;font-size:18px;width:240px;height:0px;\">Virtuous<img border=\"0\" src=\"/wh40k9ed/img/IK/Virtuous.png\" style=\"margin:0px\"></td></tr></tbody></table></td></tr></tbody></table></div>\n\n</div>Models with this ability will then gain a number of Chivalric abilities depending on which are active for your army, as follows:\n\n* Whilst your army is Dishonoured, the Honoured and Virtuous Chivalric abilities from your selected Oaths are not active.\n* Whilst your army is Honoured, the Honoured Chivalric ability from your selected Oaths are active for all IMPERIAL** KNIGHTS** units in your army, but the Virtuous Chivalric abilities from your selected Oaths are not active.\n* Whilst your army is Virtuous, the Honoured and Virtuous Chivalric abilities from your selected Oaths are active for all IMPERIAL** KNIGHTS** units in your army.</div>"
       },
       "Ability§Crusader’s Duty (Bondsman)": {
         "text": "",
@@ -560,241 +562,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Asterius volkite culverin",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Karacnos mortar battery",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Twin conversion beam cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin conversion beam cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin conversion beam cannon"
-                  }
-                ]
-              },
-              "Asterius volkite culverin": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Asterius volkite culverin"
-                  }
-                ]
-              },
-              "Karacnos mortar battery": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Karacnos mortar battery"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -823,8 +590,13 @@
             "Ability§Code Chivalric",
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Twin conversion beam cannon",
+            "Weapon§Asterius volkite culverin",
+            "Weapon§Karacnos mortar battery",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "An Acastus Knight Asterius is equipped with: 2 Asterius volkite culverins; karacnos mortar battery; 2 twin conversion beam cannons; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -1384,7 +1156,8 @@
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "An Acastus Knight Porphyrion is equipped with: 2 Acastus autocannons; ironstorm missile pod; 2 twin magna lascannons; titanic feet.\n\n• This model's Acastus autocannons can each be replaced with 1 Acastus lascannon.\n\n• This model's ironstorm missile pod can be replaced with helios defence missiles.\n\nnull",
         "rules": {
@@ -1526,20 +1299,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Armiger Helverin"
+            "value": "Armiger Helverin"
           },
-          "Armiger Helverin": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -1549,6 +1312,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Armiger Helverin": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1577,7 +1348,9 @@
             "Ability§Ion Shields",
             "Ability§Code Chivalric",
             "Ability§Armiger Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Armiger Helverin"
           ]
         },
@@ -1597,20 +1370,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Armiger Warglaive"
+            "value": "Armiger Warglaive"
           },
-          "Armiger Warglaive": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -1620,6 +1383,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Armiger Warglaive": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1648,7 +1419,9 @@
             "Ability§Ion Shields",
             "Ability§Code Chivalric",
             "Ability§Armiger Squadron",
-            "Ability§Explodes",
+            "Ability§Explodes"
+          ],
+          "included": [
             "Model§Armiger Warglaive"
           ]
         },
@@ -1761,241 +1534,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Acheron flame cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Acheron twin heavy bolter",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Reaper chainfist",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout5": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 5,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Reaper chainfist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Reaper chainfist"
-                  }
-                ]
-              },
-              "Acheron flame cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron flame cannon"
-                  }
-                ]
-              },
-              "Acheron twin heavy bolter": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Acheron twin heavy bolter"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2024,8 +1562,13 @@
             "Ability§Code Chivalric",
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Reaper chainfist",
+            "Weapon§Acheron flame cannon",
+            "Weapon§Acheron twin heavy bolter",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Cerastus Knight Acheron is equipped with: Acheron flame cannon; Acheron twin heavy bolter; reaper chainfist; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -2206,194 +1749,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Atrapos lascutter (melee)",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atrapos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atrapos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Graviton singularity cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atrapos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atrapos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atrapos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atrapos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Atrapos lascutter (melee)": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Atrapos lascutter (melee)"
-                  }
-                ]
-              },
-              "Graviton singularity cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Graviton singularity cannon"
-                  }
-                ]
-              },
-              "Atrapos lascutter (shooting)": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Atrapos lascutter (shooting)"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2423,8 +1778,13 @@
             "Ability§Super-heavy Walker",
             "Ability§Macro-extinction Protocols",
             "Ability§Ionic Flare Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Atrapos lascutter (melee)",
+            "Wargear§Graviton singularity cannon",
+            "Weapon§Atrapos lascutter (shooting)",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Cerastus Knight-Atrapos is equipped with: Atrapos lascutter; graviton singularity cannon; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -2605,162 +1965,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Castigator bolt cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Tempest warblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Castigator bolt cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Castigator bolt cannon"
-                  }
-                ]
-              },
-              "Tempest warblade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Tempest warblade"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2789,8 +1993,12 @@
             "Ability§Code Chivalric",
             "Ability§Super-heavy Walker",
             "Ability§Ion Shield",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Weapon§Castigator bolt cannon",
+            "Weapon§Tempest warblade",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Cerastus Knight Castigator is equipped with: Castigator bolt cannon; tempest warblade; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -2971,99 +2179,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Cerastus shock lance",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cerastus shock lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cerastus shock lance"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cerastus shock lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cerastus shock lance"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Cerastus shock lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Cerastus shock lance"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -3092,8 +2207,11 @@
             "Ability§Code Chivalric",
             "Ability§Super-heavy Walker",
             "Ability§Explodes",
-            "Ability§Ion Gauntlet Shield"
-          ]
+            "Ability§Ion Gauntlet Shield",
+            "Wargear§Cerastus shock lance",
+            "Weapon§Titanic feet"
+          ],
+          "included": []
         },
         "text": "A Cerastus Knight Lancer is equipped with: Cerastus shock lance; titanic feet.\n\n\n\nnull",
         "rules": {
@@ -3744,7 +2862,8 @@
             "Ability§Super-heavy Walker",
             "Ability§Code Chivalric",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Castellan is equipped with: plasma decimator; 4 shieldbreaker missiles; 2 twin meltaguns; twin siegebreaker cannon; volcano lance; titanic feet.\n\n• This model’s 4 shieldbreaker missiles and twin siegebreaker cannon can be replaced with 2 shieldbreaker missiles and 2 twin siegebreaker cannons.\n\nnull",
         "rules": {
@@ -4573,7 +3692,8 @@
             "Ability§Code Chivalric",
             "Ability§Crusader’s Duty (Bondsman)",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Crusader is equipped with: avenger gatling cannon; heavy flamer; meltagun; thermal cannon; titanic feet.\n\n• If this model has the [**QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword:\n\n○ Its meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n○ Its thermal cannon can be replaced with: 1 rapid-fire battle cannon and 1 Questor cognis heavy stubber.\n\n• If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword:\n\n○ Its meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n○ Its thermal cannon can be replaced with 1 rapid-fire battle cannon and 1 Questor ironhail heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• This model’s thermal cannon can be replaced with: 1 rapid-fire battle cannon and 1 Questor cognis heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s thermal cannon can be replaced with 1 rapid-fire battle cannon and 1 Questor ironhail heavy stubber.\n\n• This model can be equipped with one of the following: 1 ironstorm missile pod; 1 stormspear rocket pod; 1 twin Icarus autocannon.\n\nnull",
         "rules": {
@@ -5259,7 +4379,8 @@
             "Ability§Code Chivalric",
             "Ability§Errant’s Duty (Bondsman)",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Errant is equipped with: meltagun; thermal cannon; reaper chainsword; titanic feet.\n\n• If this model has the [**QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.\n\n• This model can be equipped with one of the following: 1 ironstorm missile pod; 1 stormspear rocket pod; 1 twin Icarus autocannon.\n\nnull",
         "rules": {
@@ -5905,7 +5026,8 @@
             "Ability§Code Chivalric",
             "Ability§Gallant’s Duty (Bondsman)",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "Knight Gallant is equipped with: meltagun; reaper chainsword; thunderstrike gauntlet; titanic feet.\n\n• If this model has the [**QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model can be equipped with one of the following: 1 ironstorm missile pod; 1 stormspear rocket pod; 1 twin Icarus autocannon.\n\nnull",
         "rules": {
@@ -6047,20 +5169,10 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Knight Moirax"
+            "value": "Knight Moirax"
           },
-          "Knight Moirax": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
-            "max": 3,
-            "increment": {
-              "value": 1
-            }
+          "minModels": {
+            "value": 1
           },
           "poweri": {
             "value": 8
@@ -6070,6 +5182,14 @@
           },
           "power2": {
             "value": 3
+          },
+          "Knight Moirax": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 3,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -6098,7 +5218,9 @@
             "Ability§Ion Shield",
             "Ability§Armiger Squadron",
             "Ability§Explodes",
-            "Ability§Protection Protocols",
+            "Ability§Protection Protocols"
+          ],
+          "included": [
             "Model§Knight Moirax"
           ]
         },
@@ -6662,7 +5784,8 @@
             "Ability§Code Chivalric",
             "Ability§Paladin’s Duty (Bondsman)",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Paladin is equipped with: meltagun; rapid-fire battle cannon; reaper chainsword; titanic feet. If this model has the [**QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, is it also equipped with a Questor cognis heavy stubber. If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, it is also equipped with a Questor ironhail heavy stubber.\n\n• If this model has the [QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.\n\n• This model can be equipped with one of the following: 1 ironstorm missile pod; 1 stormspear rocket pod; 1 twin Icarus autocannon.\n\nnull",
         "rules": {
@@ -7313,7 +6436,8 @@
             "Ability§Super-heavy Walker",
             "Ability§Code Chivalric",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Preceptor is equipped with: las-impulsor, Preceptor multi-laser; reaper chainsword; titanic feet.\n\n• If this model has the [**QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its Preceptor multi-laser can be replaced with one of the following: 1 meltagun; 1 Questor cognis heavy stubber.\n\n• If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its Preceptor multi-laser can be replaced with one of the following: 1 meltagun; 1 Questor ironhail heavy stubber.\n\n• This model’s Preceptor multi-laser can be replaced with one of the following: 1 meltagun; 1 Questor cognis heavy stubber.\n\n• This model’s Preceptor multi-laser can be replaced with one of the following: 1 meltagun; 1 Questor ironhail heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.\n\n• This model can be equipped with one of the following: 1 ironstorm missile pod; 1 stormspear rocket pod; 1 twin Icarus autocannon.\n\nnull",
         "rules": {
@@ -7964,7 +7088,8 @@
             "Ability§Super-heavy Walker",
             "Ability§Code Chivalric",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Valiant is equipped with: conflagration cannon; 4 shieldbreaker missiles; thundercoil harpoon; 2 twin meltaguns; twin siegebreaker cannon; titanic feet.\n\n• This model’s 4 shieldbreaker missiles and twin siegebreaker cannon can be replaced with 2 shieldbreaker missiles and 2 twin siegebreaker cannons.\n\nnull",
         "rules": {
@@ -8793,7 +7918,8 @@
             "Ability§Code Chivalric",
             "Ability§Warden’s Duty (Bondsman)",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight Warden is equipped with: avenger gatling cannon; heavy flamer; meltagun; reaper chainsword; titanic feet.\n\n• If this model has the [**QUESTOR** MECHANICUS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• If this model has the [QUESTOR** IMPERIALIS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights/#The-QUESTOR-ALLEGIANCE-Keyword) keyword, its meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor cognis heavy stubber.\n\n• This model’s meltagun can be replaced with 1 Questor ironhail heavy stubber.\n\n• This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet.\n\n• This model can be equipped with one of the following: 1 ironstorm missile pod; 1 stormspear rocket pod; 1 twin Icarus autocannon.\n\nnull",
         "rules": {
@@ -9319,7 +8445,8 @@
             "Ability§Ionic Flare Shield",
             "Ability§Explodes",
             "Ability§Empyreal Preysight"
-          ]
+          ],
+          "included": []
         },
         "text": "A Questoris Knight Magaera is equipped with: lightning cannon; phased plasma-fusil; reaper chainsword; titanic feet.\n\n• This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.\n\nnull",
         "rules": {
@@ -9845,7 +8972,8 @@
             "Ability§Ionic Flare Shield",
             "Ability§Empyreal Preysight",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Questoris Knight Styrix is equipped with: graviton crusher; reaper chainsword; titanic feet; volkite chieorovile.\n\n• This model's reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser.\n\nnull",
         "rules": {
@@ -10726,226 +9854,6 @@
           },
           "Base": {
             "value": "170 x 109mm"
-          },
-          "loadout1": {
-            "value": "Preceptor multi-laser",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Freedom’s Hand": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Freedom’s Hand"
-                  }
-                ]
-              },
-              "Las-impulsor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Las-impulsor"
-                  }
-                ]
-              },
-              "Hekhtur’s pistol": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hekhtur’s pistol"
-                  }
-                ]
-              },
-              "Preceptor multi-laser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Preceptor multi-laser"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Freedom’s Hand",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Freedom’s Hand": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Freedom’s Hand"
-                  }
-                ]
-              },
-              "Las-impulsor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Las-impulsor"
-                  }
-                ]
-              },
-              "Hekhtur’s pistol": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hekhtur’s pistol"
-                  }
-                ]
-              },
-              "Preceptor multi-laser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Preceptor multi-laser"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Titanic feet",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Freedom’s Hand": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Freedom’s Hand"
-                  }
-                ]
-              },
-              "Las-impulsor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Las-impulsor"
-                  }
-                ]
-              },
-              "Hekhtur’s pistol": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hekhtur’s pistol"
-                  }
-                ]
-              },
-              "Preceptor multi-laser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Preceptor multi-laser"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Freedom’s Hand": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Freedom’s Hand"
-                  }
-                ]
-              },
-              "Las-impulsor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Las-impulsor"
-                  }
-                ]
-              },
-              "Hekhtur’s pistol": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Hekhtur’s pistol"
-                  }
-                ]
-              },
-              "Preceptor multi-laser": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Preceptor multi-laser"
-                  }
-                ]
-              },
-              "Titanic feet": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Weapon§Titanic feet"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "rules": {
@@ -11073,6 +9981,15 @@
               }
             ]
           }
+        },
+        "assets": {
+          "traits": [
+            "Wargear§Freedom’s Hand",
+            "Wargear§Las-impulsor",
+            "Weapon§Hekhtur’s pistol",
+            "Weapon§Preceptor multi-laser",
+            "Weapon§Titanic feet"
+          ]
         }
       },
       "Model§Knight Moirax": {

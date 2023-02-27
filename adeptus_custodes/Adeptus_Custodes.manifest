@@ -1,11 +1,11 @@
 {
   "name": "Adeptus Custodes",
-  "revision": "0.0.11",
+  "revision": "0.0.14",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" asssets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -44,7 +44,9 @@
                 "order": 6
               }
             },
-            "dynamic": true
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20
           }
         },
         "rules": {
@@ -226,7 +228,7 @@
         "text": "Once per battle round, you can re-roll a single [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll), [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) or [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for this model."
       },
       "Ability§Guardian Eternal": {
-        "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
+        "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
       },
       "Ability§Hard to Hit": {
         "text": "Each time a ranged attack is made against this model, subtract 1 from that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
@@ -457,7 +459,8 @@
           "traits": [
             "Ability§Explodes",
             "Ability§Anathema Psykana Dedicated Transport"
-          ]
+          ],
+          "included": []
         },
         "text": "An Anathema Psykana Rhino is equipped with: storm bolter.\n\n• This model can be equipped with 1 hunter-killer missile.\n\nnull",
         "rules": {
@@ -638,99 +641,6 @@
           },
           "Base": {
             "value": "Use model"
-          },
-          "loadout1": {
-            "value": "Twin arachnus blaze cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin arachnus blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin arachnus blaze cannon"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Twin lastrum bolt cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin arachnus blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin arachnus blaze cannon"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin arachnus blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin arachnus blaze cannon"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -757,8 +667,11 @@
           "traits": [
             "Ability§Flare Shielding",
             "Ability§Hover Tank",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Twin arachnus blaze cannon",
+            "Weapon§Twin lastrum bolt cannon"
+          ],
+          "included": []
         },
         "text": "A Coronus Grav-carrier is equipped with: twin arachnus blaze cannon; twin lastrum bolt cannon.\n\n\n\nnull",
         "rules": {
@@ -900,20 +813,18 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Allarus Custodian"
+            "value": "Allarus Custodian"
           },
-          "Allarus Custodians": {
+          "minModels": {
+            "value": 1
+          },
+          "Allarus Custodian": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 1,
-            "min": 1,
             "max": 6,
-            "increment": {
-              "value": 1
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -942,7 +853,9 @@
             "Ability§Aegis of the Emperor",
             "Ability§From Golden Light",
             "Ability§Martial Ka’tah",
-            "Ability§Slayers of Tyrants",
+            "Ability§Slayers of Tyrants"
+          ],
+          "included": [
             "Model§Allarus Custodian"
           ]
         },
@@ -962,26 +875,24 @@
             "value": 11
           },
           "model": {
-            "value": "Model§Aquilon Custodian"
+            "value": "Aquilon Custodian"
           },
-          "Aquilon Custodians": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 11
           },
           "power1": {
             "value": 4
+          },
+          "Aquilon Custodian": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1008,7 +919,9 @@
           "traits": [
             "Ability§Aegis of the Emperor",
             "Ability§From Golden Light",
-            "Ability§Martial Ka’tah",
+            "Ability§Martial Ka’tah"
+          ],
+          "included": [
             {
               "item": "Model§Aquilon Custodian",
               "quantity": 3
@@ -1230,7 +1143,8 @@
             "Ability§Unyielding Ancient",
             "Ability§Guardian Eternal",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Contemptor-Achillus Dreadnought is equipped with: Achillus dreadspear; 2 lastrum storm bolters.\n\n• This model's lastrum storm bolters can each be replaced with one of the following: 1 infernus incinerator; 1 twin adrathic destructor.\n\nnull",
         "aspects": {
@@ -1246,22 +1160,20 @@
             "value": 9
           },
           "Galatus shield": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1314,75 +1226,6 @@
           },
           "Base": {
             "value": "60mm"
-          },
-          "loadout1": {
-            "value": "Galatus warblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Galatus warblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Galatus warblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Galatus warblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Galatus warblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Galatus warblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Galatus warblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Galatus warblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -1408,8 +1251,10 @@
           "traits": [
             "Ability§Unyielding Ancient",
             "Ability§Guardian Eternal",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Galatus warblade"
+          ],
+          "included": []
         },
         "text": "A Contemptor-Galatus Dreadnought is equipped with: Galatus warblade; Galatus shield.\n\n\n\nnull",
         "aspects": {
@@ -1425,17 +1270,18 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Custodian Warden"
+            "value": "Custodian Warden"
           },
-          "Custodian Wardens": {
+          "minModels": {
+            "value": 3
+          },
+          "Custodian Warden": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 10
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -1461,14 +1307,16 @@
             "Ability§Aegis of the Emperor",
             "Ability§Martial Ka’tah",
             "Ability§Binding Oaths",
-            "Ability§Watchmen",
+            "Ability§Watchmen"
+          ],
+          "included": [
             {
               "item": "Model§Custodian Warden",
               "quantity": 3
             }
           ]
         },
-        "text": "If this unit contains 4-5 models, it has **Power Rating 12**. If this unit contains 6-8 models, it has Power Rating 20**. If this unit contains 9 or more models, it has Power Rating 25**. Every model is equipped with: guardian spear.\n\n• Any number of models can each have their guardian spear replaced with 1 castellan axe.\n\n• Any number of models can each be equipped with 1 misericordia.\n\nnull\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
+        "text": "If this unit contains 4-5 models, it has **Power Rating 12**. If this unit contains 6-8 models, it has Power Rating 20**. If this unit contains 9 or more models, it has Power Rating 25**. Every model is equipped with: guardian spear.\n\n• Any number of models can each have their guardian spear replaced with 1 castellan axe.\n\n• Any number of models can each be equipped with 1 misericordia.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
         "allowed": {
           "items": [
             "Model§Custodian Warden"
@@ -1730,7 +1578,8 @@
             "Ability§Unyielding Ancient",
             "Ability§Atomantic Shielding",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Venerable Contemptor Dreadnought is equipped with: combi-bolter; multi-melta; Dreadnought combat weapon.\n\n• This model’s multi-melta can be replaced with 1 kheres-pattern assault cannon.\n\nnull",
         "aspects": {
@@ -1746,22 +1595,20 @@
             "value": 6
           },
           "Praesidium shield": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1783,22 +1630,20 @@
             "dynamic": true
           },
           "Vexilla defensor": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1820,22 +1665,20 @@
             "dynamic": true
           },
           "Vexilla imperius": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -1857,22 +1700,20 @@
             "dynamic": true
           },
           "Vexilla magnifica": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2068,7 +1909,8 @@
             "Ability§Aegis of the Emperor",
             "Ability§Martial Ka’tah",
             "Ability§Aquilane Relic"
-          ]
+          ],
+          "included": []
         },
         "text": "A Vexilus Praetor is equipped with: guardian spear; vexilla defensor.\n\n• This model’s guardian spear can be replaced with one of the following: 1 castellan axe; 1 praesidium shield.\n\n• This model’s vexilla defensor can be replaced with one of the following: 1 vexilla imperius; 1 vexilla magnifica.\n\n• This model can be equipped with 1 misericordia.\n\nnull",
         "aspects": {
@@ -2084,22 +1926,20 @@
             "value": 6
           },
           "Vexilla defensor": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2121,22 +1961,20 @@
             "dynamic": true
           },
           "Vexilla imperius": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2158,22 +1996,20 @@
             "dynamic": true
           },
           "Vexilla magnifica": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2348,7 +2184,8 @@
             "Ability§From Golden Light",
             "Ability§Martial Ka’tah",
             "Ability§Aquilane Relic"
-          ]
+          ],
+          "included": []
         },
         "text": "A Vexilus Praetor in Allarus Terminator Armour is equipped with: balistus grenade launcher; vexilla defensor.\n\n• This model can be equipped with 1 misericordia.\n\n• This model’s vexilla defensor can be replaced with one of the following: 1 vexilla imperius; 1 vexilla magnifica.\n\nnull",
         "aspects": {
@@ -2364,26 +2201,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Vigilator"
+            "value": "Vigilator"
           },
-          "Vigilators": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 3
           },
           "power1": {
             "value": 6
+          },
+          "Vigilator": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2406,11 +2240,13 @@
         "assets": {
           "traits": [
             "Ability§Daughters of the Abyss",
+            "Model§Vigilator Sister Superior"
+          ],
+          "included": [
             {
               "item": "Model§Vigilator",
               "quantity": 4
-            },
-            "Model§Vigilator Sister Superior"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 6**. Every model is equipped with: executioner greatblade.\n\n\n\nnull",
@@ -2429,26 +2265,24 @@
             "value": 15
           },
           "model": {
-            "value": "Model§Agamatus Custodians"
+            "value": "Agamatus Custodians"
           },
-          "Agamatus Custodians": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 15
           },
           "power1": {
             "value": 4
+          },
+          "Agamatus Custodians": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2474,7 +2308,9 @@
           "traits": [
             "Ability§Aegis of the Emperor",
             "Ability§Implacable Vanguard",
-            "Ability§Martial Ka’tah",
+            "Ability§Martial Ka’tah"
+          ],
+          "included": [
             {
               "item": "Model§Agamatus Custodians",
               "quantity": 3
@@ -2528,52 +2364,6 @@
           },
           "Base": {
             "value": "105 x 70mm"
-          },
-          "loadout1": {
-            "value": "Twin arachnus blaze cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin arachnus blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin arachnus blaze cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Twin arachnus blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Twin arachnus blaze cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -2598,8 +2388,10 @@
           "traits": [
             "Ability§Flare Shielding",
             "Ability§Hover Tank",
-            "Ability§Explodes"
-          ]
+            "Ability§Explodes",
+            "Wargear§Twin arachnus blaze cannon"
+          ],
+          "included": []
         },
         "text": "A Pallas Grav-attack is equipped with: twin arachnus blaze cannon.\n\n\n\nnull",
         "aspects": {
@@ -2615,25 +2407,23 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Venatari Custodian"
+            "value": "Venatari Custodian"
           },
           "Tarsus buckler": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2654,24 +2444,22 @@
             "visibility": "active",
             "dynamic": true
           },
-          "Venatari Custodians": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 6,
-            "increment": {
-              "value": 3
-            }
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 8
           },
           "power1": {
             "value": 4
+          },
+          "Venatari Custodian": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2698,7 +2486,9 @@
           "traits": [
             "Ability§Aegis of the Emperor",
             "Ability§Airborne Hunters",
-            "Ability§Martial Ka’tah",
+            "Ability§Martial Ka’tah"
+          ],
+          "included": [
             {
               "item": "Model§Venatari Custodian",
               "quantity": 3
@@ -2721,20 +2511,18 @@
             "value": 12
           },
           "model": {
-            "value": "Model§Vertus Praetor"
+            "value": "Vertus Praetor"
           },
-          "Vertus Praetors": {
+          "minModels": {
+            "value": 3
+          },
+          "Vertus Praetor": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
             "max": 6,
-            "increment": {
-              "value": 3
-            }
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -2761,7 +2549,9 @@
           "traits": [
             "Ability§Aegis of the Emperor",
             "Ability§Martial Ka’tah",
-            "Ability§Implacable Vanguard",
+            "Ability§Implacable Vanguard"
+          ],
+          "included": [
             {
               "item": "Model§Vertus Praetor",
               "quantity": 3
@@ -2784,26 +2574,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Witchseeker"
+            "value": "Witchseeker"
           },
-          "Witchseekers": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 3
           },
           "power1": {
             "value": 6
+          },
+          "Witchseeker": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -2827,11 +2614,13 @@
           "traits": [
             "Ability§Daughters of the Abyss",
             "Ability§Seeker Cadre",
+            "Model§Witchseeker Sister Superior"
+          ],
+          "included": [
             {
               "item": "Model§Witchseeker",
               "quantity": 4
-            },
-            "Model§Witchseeker Sister Superior"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 6**. Every model is equipped with: witchseeker flamer.\n\n\n\nnull",
@@ -2850,22 +2639,20 @@
             "value": 20
           },
           "Infernus firebombs": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -2926,130 +2713,6 @@
           },
           "Base": {
             "value": "160mm"
-          },
-          "loadout1": {
-            "value": "Arachnus heavy blaze cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Arachnus magna-blaze cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus magna-blaze cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Arachnus magna-blaze cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Arachnus magna-blaze cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus magna-blaze cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Arachnus heavy blaze cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Arachnus magna-blaze cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus magna-blaze cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Arachnus magna-blaze cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus magna-blaze cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -3079,8 +2742,11 @@
             "Ability§Explodes",
             "Ability§Eclipse Shield",
             "Ability§Hard to Hit",
-            "Ability§Hover Jet"
-          ]
+            "Ability§Hover Jet",
+            "Wargear§Arachnus heavy blaze cannon",
+            "Wargear§Arachnus magna-blaze cannon"
+          ],
+          "included": []
         },
         "text": "An Ares Gunship is equipped with: 2 arachnus heavy blaze cannons; arachnus magna-blaze cannon; infernus firebombs.\n\n\n\nnull",
         "rules": {
@@ -3261,162 +2927,6 @@
           },
           "Base": {
             "value": "160mm"
-          },
-          "loadout1": {
-            "value": "Arachnus heavy blaze cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Spiculus heavy bolt launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spiculus heavy bolt launcher"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Twin lastrum bolt cannon",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Spiculus heavy bolt launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spiculus heavy bolt launcher"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "Spiculus heavy bolt launcher",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Spiculus heavy bolt launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spiculus heavy bolt launcher"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout4": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 4,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Arachnus heavy blaze cannon"
-                  }
-                ]
-              },
-              "Spiculus heavy bolt launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Spiculus heavy bolt launcher"
-                  }
-                ]
-              },
-              "Twin lastrum bolt cannon": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Twin lastrum bolt cannon"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -3447,8 +2957,12 @@
             "Ability§Explodes",
             "Ability§Eclipse Shield",
             "Ability§Hard to Hit",
-            "Ability§Hover Jet"
-          ]
+            "Ability§Hover Jet",
+            "Wargear§Arachnus heavy blaze cannon",
+            "Weapon§Spiculus heavy bolt launcher",
+            "Weapon§Twin lastrum bolt cannon"
+          ],
+          "included": []
         },
         "text": "An Orion Assault Dropship is equipped with: 2 arachnus heavy blaze cannons; 2 twin lastrum bolt cannons; 2 spiculus heavy bolt launchers.\n\n\n\nnull",
         "rules": {
@@ -3772,7 +3286,8 @@
             "Ability§Flare Shielding",
             "Ability§Hover Tank",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Caladius Grav-tank is equipped with: twin iliastus accelerator cannon; twin lastrum bolt cannon.\n\n• This model’s twin iliastus accelerator cannon can be replaced with 1 twin arachnus heavy blaze cannon.\n\nnull",
         "rules": {
@@ -4144,7 +3659,8 @@
             "Ability§Guardian Eternal",
             "Ability§Explodes",
             "Ability§Reinforced Atomantic Shielding"
-          ]
+          ],
+          "included": []
         },
         "text": "A Telemon Heavy Dreadnought is equipped with: 2 iliastus accelerator culverin; spiculus bolt launcher.\n\n• Each of this model’s iliastus accelerator culverins can be replaced with one of the following: 1 Arachnus storm cannon; 1 Telemon caestus and 1 twin plasma projector.\n\nnull",
         "rules": {
@@ -4492,7 +4008,8 @@
           "traits": [
             "Ability§Unyielding Ancient",
             "Ability§Explodes"
-          ]
+          ],
+          "included": []
         },
         "text": "A Venerable Land Raider is equipped with: twin heavy bolter; 2 twin lascannons.\n\n• This model can be equipped with 1 hunter-killer missile.\n\n• This model can be equipped with 1 storm bolter.\n\nnull",
         "rules": {
@@ -4665,68 +4182,6 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Misericordia",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Misericordia": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              },
-              "Somnus": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Somnus"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Misericordia": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              },
-              "Somnus": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Somnus"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -4752,8 +4207,11 @@
             "Ability§Daughters of the Abyss",
             "Ability§Cadre Tactics (Aura)",
             "Ability§Voidsheen Cloak",
-            "Ability§Tenacious Spirit"
-          ]
+            "Ability§Tenacious Spirit",
+            "Weapon§Misericordia",
+            "Weapon§Somnus"
+          ],
+          "included": []
         },
         "text": "Aleya is equipped with: Somnus, misericordia. Your army can only include one **ALEYA** model.\n\n\n\nnull",
         "aspects": {
@@ -4800,52 +4258,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Vaultswords",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Vaultswords": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Vaultswords"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Vaultswords": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Vaultswords"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -4872,8 +4284,10 @@
             "Ability§Martial Ka’tah",
             "Ability§Consummate Swordsman",
             "Ability§Martial Inspiration",
-            "Ability§Legacy of Combat"
-          ]
+            "Ability§Legacy of Combat",
+            "Wargear§Vaultswords"
+          ],
+          "included": []
         },
         "text": "A Blade Champion is equipped with: vaultswords.\n\n\n\nnull",
         "aspects": {
@@ -5036,7 +4450,8 @@
             "Ability§Daughters of the Abyss",
             "Ability§Voidsheen Cloak",
             "Ability§Cadre Tactics (Aura)"
-          ]
+          ],
+          "included": []
         },
         "text": "A Knight-Centura is equipped with: executioner greatblade.\n\n• This model’s executioner greatblade can be replaced with one of the following: 1 master-crafted boltgun; 1 witchseeker flamer.\n\nnull",
         "aspects": {
@@ -5052,22 +4467,20 @@
             "value": 6
           },
           "Praesidium shield": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -5240,7 +4653,8 @@
             "Ability§Aegis of the Emperor",
             "Ability§Martial Ka’tah",
             "Ability§Inspirational Fighter (Aura)"
-          ]
+          ],
+          "included": []
         },
         "text": "A Shield-Captain is equipped with: guardian spear.\n\n• This model’s guardian spear can be replaced with one of the following: 1 castellan axe; 1 sentinel blade and 1 praesidium shield.\n\n• If this model is not equipped with a praesidium shield, it can be equipped with 1 misericordia.\n\nnull",
         "aspects": {
@@ -5457,7 +4871,8 @@
             "Ability§From Golden Light",
             "Ability§Martial Ka’tah",
             "Ability§Inspirational Fighter (Aura)"
-          ]
+          ],
+          "included": []
         },
         "text": "A Shield-Captain in Allarus Terminator Armour is equipped with: balistus grenade launcher; guardian spear.\n\n• This model’s guardian spear can be replaced with 1 castellan axe.\n\n• This model can be equipped with 1 misericordia.\n\nnull",
         "aspects": {
@@ -5673,7 +5088,8 @@
             "Ability§Martial Ka’tah",
             "Ability§Inspirational Fighter (Aura)",
             "Ability§Implacable Vanguard"
-          ]
+          ],
+          "included": []
         },
         "text": "A Shield-Captain on Dawneagle Jetbike is equipped with: hurricane bolter; interceptor lance.\n\n• This model’s hurricane bolter can be replaced with 1 salvo launcher.\n\n• This model can be equipped with 1 misericordia.\n\nnull",
         "aspects": {
@@ -5720,99 +5136,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Watcher’s Axe",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Misericordia": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              },
-              "Watcher’s Axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Watcher’s Axe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "Misericordia",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Misericordia": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              },
-              "Watcher’s Axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Watcher’s Axe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout3": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 3,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Misericordia": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              },
-              "Watcher’s Axe": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Watcher’s Axe"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5841,8 +5164,11 @@
             "Ability§Adamantine Mantle",
             "Ability§Captain-General",
             "Ability§Legendary Commander (Aura)",
-            "Ability§Moment Shackle"
-          ]
+            "Ability§Moment Shackle",
+            "Weapon§Misericordia",
+            "Wargear§Watcher’s Axe"
+          ],
+          "included": []
         },
         "text": "Trajann Valoris is equipped with: Watcher’s Axe; misericordia. Your army can only include one **TRAJANN VALORIS** model.\n\n\n\nnull",
         "aspects": {
@@ -5889,68 +5215,6 @@
           },
           "Base": {
             "value": "40mm"
-          },
-          "loadout1": {
-            "value": "Misericordia",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gnosis": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Gnosis"
-                  }
-                ]
-              },
-              "Misericordia": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Gnosis": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Gnosis"
-                  }
-                ]
-              },
-              "Misericordia": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Misericordia"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
         },
         "keywords": {
@@ -5979,8 +5243,11 @@
             "Ability§Martial Ka’tah",
             "Ability§Inspirational Fighter (Aura)",
             "Ability§Hero of the Lion’s Gate",
-            "Ability§Golden Laurels"
-          ]
+            "Ability§Golden Laurels",
+            "Wargear§Gnosis",
+            "Weapon§Misericordia"
+          ],
+          "included": []
         },
         "text": "Valerian is equipped with: Gnosis, misericordia. Your army can only include one **VALERIAN** model.\n\n\n\nnull",
         "aspects": {
@@ -7015,53 +6282,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Boltgun",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Boltgun"
+          ]
         }
       },
       "Model§Prosecutor Sister Superior": {
@@ -7098,53 +6324,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Boltgun",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Boltgun"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Boltgun"
+          ]
         }
       },
       "Model§Sagittarum Custodian": {
@@ -7636,53 +6821,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Executioner greatblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Executioner greatblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Executioner greatblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Executioner greatblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Executioner greatblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Executioner greatblade"
+          ]
         }
       },
       "Model§Vigilator Sister Superior": {
@@ -7719,53 +6863,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Executioner greatblade",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Executioner greatblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Executioner greatblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Executioner greatblade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Executioner greatblade"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Executioner greatblade"
+          ]
         }
       },
       "Model§Witchseeker": {
@@ -7802,53 +6905,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Witchseeker flamer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Witchseeker flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Witchseeker flamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Witchseeker flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Witchseeker flamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Witchseeker flamer"
+          ]
         }
       },
       "Model§Witchseeker Sister Superior": {
@@ -7885,53 +6947,12 @@
           },
           "Base": {
             "value": "32mm"
-          },
-          "loadout1": {
-            "value": "Witchseeker flamer",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 1,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Witchseeker flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Witchseeker flamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
-          },
-          "loadout2": {
-            "value": "-",
-            "label": "Loadout",
-            "statType": "rank",
-            "statOrder": 2,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Witchseeker flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Witchseeker flamer"
-                  }
-                ]
-              }
-            },
-            "visibility": "active",
-            "dynamic": true
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Witchseeker flamer"
+          ]
         }
       },
       "Relic Weapon§Admonimortis (melee)": {
@@ -8421,25 +7442,23 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Custodian Guard (Custodian Guard)"
+            "value": "Custodian Guard"
           },
           "Praesidium shield": {
-            "value": 0,
+            "value": "❌",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
+              "❌": {
                 "order": 0,
-                "number": 0,
                 "icons": [
                   "cancel"
                 ]
               },
-              "1": {
+              "✅": {
                 "order": 1,
-                "number": 1,
                 "icons": [
                   "confirmed"
                 ],
@@ -8460,15 +7479,16 @@
             "visibility": "active",
             "dynamic": true
           },
+          "minModels": {
+            "value": 3
+          },
           "Custodian Guard": {
+            "visibility": "hidden",
+            "tracked": true,
             "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 10
+            "max": 10,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -8492,14 +7512,16 @@
         "assets": {
           "traits": [
             "Ability§Aegis of the Emperor",
-            "Ability§Martial Ka’tah",
+            "Ability§Martial Ka’tah"
+          ],
+          "included": [
             {
               "item": "Model§Custodian Guard (Custodian Guard)",
               "quantity": 3
             }
           ]
         },
-        "text": "If this unit contains 4-5 models, it has **Power Rating 11**. If this unit contains 6-8 models, it has Power Rating 19**. If this unit contains 9 or more models, it has Power Rating 23**. Every model is equipped with: guardian spear.\n\n• Any number of models can each have their guardian spear replaced with 1 sentinel blade and 1 praesidium shield.\n\n• Any number of models that are not equipped with a praesidium shield can each be equipped with 1 misericordia.\n\nnull\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
+        "text": "If this unit contains 4-5 models, it has **Power Rating 11**. If this unit contains 6-8 models, it has Power Rating 19**. If this unit contains 9 or more models, it has Power Rating 23**. Every model is equipped with: guardian spear.\n\n• Any number of models can each have their guardian spear replaced with 1 sentinel blade and 1 praesidium shield.\n\n• Any number of models that are not equipped with a praesidium shield can each be equipped with 1 misericordia.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
         "allowed": {
           "items": [
             "Model§Custodian Guard (Custodian Guard)"
@@ -8515,23 +7537,24 @@
             "value": 8
           },
           "model": {
-            "value": "Model§Custodian Guard (Custodian Guard with Adrasite and Pyrithite Spears)"
+            "value": "Custodian Guard"
           },
-          "Custodian Guard with Adrasite and Pyrithite Spears": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 5
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 4
+          },
+          "Custodian Guard": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 5,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -8555,14 +7578,16 @@
         "assets": {
           "traits": [
             "Ability§Aegis of the Emperor",
-            "Ability§Martial Ka’tah",
+            "Ability§Martial Ka’tah"
+          ],
+          "included": [
             {
               "item": "Model§Custodian Guard (Custodian Guard with Adrasite and Pyrithite Spears)",
               "quantity": 3
             }
           ]
         },
-        "text": "If this unit contains 4 or more models, it has **Power Rating 14**. Every model is equipped with: adrasite spear.\n\n• Any model’s adrasite spear can be replaced with 1 pyrithite spear.\n\n• Any model can be equipped with 1 misericordia.\n\nnull\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*",
+        "text": "If this unit contains 4 or more models, it has **Power Rating 14**. Every model is equipped with: adrasite spear.\n\n• Any model’s adrasite spear can be replaced with 1 pyrithite spear.\n\n• Any model can be equipped with 1 misericordia.\n\nnull",
         "allowed": {
           "items": [
             "Model§Custodian Guard (Custodian Guard with Adrasite and Pyrithite Spears)"
@@ -8578,26 +7603,23 @@
             "value": 3
           },
           "model": {
-            "value": "Model§Prosecutor"
+            "value": "Prosecutor"
           },
-          "Prosecutors": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 4,
-            "min": 4,
-            "max": 9,
-            "increment": {
-              "value": 5
-            }
+          "minModels": {
+            "value": 4
           },
           "poweri": {
             "value": 3
           },
           "power1": {
             "value": 6
+          },
+          "Prosecutor": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 9,
+            "value": 0
           }
         },
         "keywords": {
@@ -8620,11 +7642,13 @@
         "assets": {
           "traits": [
             "Ability§Daughters of the Abyss",
+            "Model§Prosecutor Sister Superior"
+          ],
+          "included": [
             {
               "item": "Model§Prosecutor",
               "quantity": 4
-            },
-            "Model§Prosecutor Sister Superior"
+            }
           ]
         },
         "text": "If this unit contains 6 or more models, it has **Power Rating 6**. Every model is equipped with: boltgun.\n\n\n\nnull",
@@ -8643,23 +7667,24 @@
             "value": 7
           },
           "model": {
-            "value": "Model§Sagittarum Custodian"
+            "value": "Sagittarum Custodian"
           },
-          "Sagittarum Custodians": {
-            "statType": "numeric",
-            "dynamic": true,
-            "visibility": "active",
-            "group": "Loadout",
-            "groupOrder": 2,
-            "value": 3,
-            "min": 3,
-            "max": 5
+          "minModels": {
+            "value": 3
           },
           "poweri": {
             "value": 6
           },
           "power1": {
             "value": 4
+          },
+          "Sagittarum Custodian": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 5,
+            "value": 0,
+            "min": 1
           }
         },
         "keywords": {
@@ -8683,14 +7708,16 @@
         "assets": {
           "traits": [
             "Ability§Aegis of the Emperor",
-            "Ability§Martial Ka’tah",
+            "Ability§Martial Ka’tah"
+          ],
+          "included": [
             {
               "item": "Model§Sagittarum Custodian",
               "quantity": 3
             }
           ]
         },
-        "text": "If this unit contains 4 or more models, it has **Power Rating 13**. Every model is equipped with: adrastus bolt caliver.\n\n• Any model can be equipped with 1 misericordia.\n\nnull\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*",
+        "text": "If this unit contains 4 or more models, it has **Power Rating 13**. Every model is equipped with: adrastus bolt caliver.\n\n• Any model can be equipped with 1 misericordia.\n\nnull",
         "allowed": {
           "items": [
             "Model§Sagittarum Custodian"

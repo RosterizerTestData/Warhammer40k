@@ -22,6 +22,7 @@ const subFacNames = {
   TAU: 'Sept',
   TS: 'Great Cult',
   TYR: 'Hive Fleet',
+  WE: 'Subfaction',
 }
 processInfo = (data,factionKey) => {
   let factionName = data.factions.find(faction => faction.faction_id == factionKey).name
@@ -31,8 +32,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.13',
+    notes: '0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.14',
     wip: true,
     dependencies: [
       {
@@ -174,7 +175,7 @@ processAbilities = (data,assetCatalog) => {
     if(!ability.is_other_wargear){
       itemKey = 'Ability§' + ability.name;
       if(!assetCatalog[itemKey]) assetCatalog[itemKey] = tempAbility;
-      else assetCatalog[itemKey].text += '\n\n***ERROR***—*The following text was found on another ability with the same name:*  \n' + formatText(ability.description,shouldLog);
+      else if(assetCatalog[itemKey].text !== formatText(ability.description,shouldLog)) assetCatalog[itemKey].text += '\n\n***ERROR***—*The following text was found on another ability with the same name:*  \n' + formatText(ability.description,shouldLog);
     }else{
       itemKey = 'Wargear§' + ability.name;
       let abilityCostArr = data.abilities.datasheets_abilities.filter(datasheets_ability => datasheets_ability.ability_id === ability.ability_id).map(datasheets_ability => datasheets_ability.cost);
@@ -466,284 +467,281 @@ formatText = (text,log = false) => {
 processUnits = (data,assetCatalog) => {
   var stringSimilarity = require('string-similarity');
   data.datasheets.forEach(datasheet => {
-    let unitId = datasheet.datasheet_id;
-    let tempItem = {stats:{
-      'Power Level': {
-        value: numerize(datasheet.power_points)
-      }
-    },keywords:{},assets:{}};
-
-    let models = data.models.filter(model => model.datasheet_id === unitId);
-    let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
-    if(models[0]?.line === 1 && models[0]?.models_per_unit.includes('-')){
-      tempItem.stats.model = {
-        value: data.models.filter(model => model.datasheet_id === unitId && model.line === 1)[0].itemKey
-      }
-    }
-
-    let modelDamage = data.damage.filter(dmgLine => dmgLine.datasheet_id == unitId);
-    if(modelDamage.length){
-      let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0].itemKey;
-      // console.log(unitId,modelItemKey)
-      assetCatalog[modelItemKey].stats['W'] = {
-        value: numerize(assetCatalog[modelItemKey].stats['W'].value),
-        max: numerize(assetCatalog[modelItemKey].stats['W'].value),
-        min: 1,
-        dynamic: true,
-        increment: {value: 1},
-        statType: 'numeric',
-        visibility: 'always',
-      }
-      assetCatalog[modelItemKey].rules = assetCatalog[modelItemKey].rules || {};
-      assetCatalog[modelItemKey].rules.dynamicDamageMid = generateDamageRule(modelDamage[0],modelDamage[2]);
-      assetCatalog[modelItemKey].rules.dynamicDamageLow = generateDamageRule(modelDamage[0],modelDamage[3]);
-    }
-
-    let options = data.options.filter(option => option.datasheet_id === unitId);
-    tempItem.text = formatText(datasheet.unit_composition + '\n\n' + options.map(option => (option.button || '') + ' ' + option.description).join('\n\n') + '\n\n' + datasheet.psyker);
-
-    let abilities = data.abilities.composed.filter(ability => ability.datasheet_id === unitId);
-    let abilityList = abilities.filter(ability => ability.datasheet_id === unitId && !ability.is_other_wargear);
-    let wargearList = abilities.filter(ability => ability.datasheet_id === unitId && ability.is_other_wargear);
-    abilityList.forEach(ability => {
-      tempItem.assets = tempItem.assets || {};
-      tempItem.assets.traits = tempItem.assets.traits || [];
-      tempItem.assets.traits.push(ability.itemKey);
-    });
-    if(datasheet.psyker?.includes('Smite')){
-      tempItem.assets = tempItem.assets || {};
-      tempItem.assets.traits = tempItem.assets.traits || [];
-      tempItem.assets.traits.push('Psychic Power§Smite');
-    }
-    const order = ['Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
-    tempItem.assets.traits?.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
-
-    Array.from(new Set(data.psychicPowers.map(power => power.type))).forEach(discipline => {
-      // console.log(discipline)
-      // console.log(datasheet.psyker)
-      let test = new RegExp(discipline,'gi')
-      if(test.test(datasheet.psyker)){
-        tempItem.allowed = tempItem.allowed || {};
-        tempItem.allowed.classifications = tempItem.allowed.classifications || [];
-        tempItem.allowed.classifications.push(discipline);
-      }
-    });
-
-    wargearList.forEach(wargear => {
-      let tempWargear = wargear.cost === assetCatalog[wargear.itemKey].stats?.Points?.value ? wargear.itemKey : {
-        item: wargear.itemKey,
-        stats: {
-          Points: {value: numerize(wargear.cost)}
+    if(!datasheet.name.includes('Legendary)')){
+      let unitId = datasheet.datasheet_id;
+      let tempItem = {stats:{
+        'Power Level': {
+          value: numerize(datasheet.power_points)
         }
-      };
-      tempItem.stats = tempItem.stats || {};
-      tempItem.stats[wargear.name] = {
-        value: 0,
-        statType: 'rank',
-        statOrder: 10,
-        group: 'Loadout',
-        groupOrder: 2,
-        ranks: {
-          0: {order: 0,number: 0,icons: ['cancel']},
-          1: {order: 1,number: 1,icons: ['confirmed'],traits: [{trait: tempWargear}]}
-        },
-        visibility: 'active',
-        dynamic: true
+      },keywords:{},assets:{}};
+  
+      let models = data.models.filter(model => model.datasheet_id === unitId);
+      let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
+      if(models[0]?.line === 1 && models[0]?.models_per_unit.includes('-')){
+        tempItem.stats.model = {
+          value: data.models.filter(model => model.datasheet_id === unitId && model.line === 1)[0].name
+        }
       }
-    });
-    // console.log(datasheet.name,options,unitId,wargearList)
-
-    let wargearArr = data.wargear.composed.filter(wargear => wargear.datasheet_id == unitId).sort((a,b) => a.itemKey.localeCompare(b.itemKey));
-    wargearArr.slice().forEach((gear,i) => {
-      if(wargearArr[i]?.itemKey?.includes(' (melee)') && wargearArr[i+1].itemKey?.includes(' (shooting)')){
-        wargearArr[i].itemKey = wargearArr[i].itemKey.replace('Weapon§','Wargear§').replace(' (melee)','');
-        delete wargearArr[i+1];
+  
+      let modelDamage = data.damage.filter(dmgLine => dmgLine.datasheet_id == unitId);
+      if(modelDamage.length){
+        let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0].itemKey;
+        // console.log(unitId,modelItemKey)
+        assetCatalog[modelItemKey].stats['W'] = {
+          value: numerize(assetCatalog[modelItemKey].stats['W'].value),
+          max: numerize(assetCatalog[modelItemKey].stats['W'].value),
+          min: 1,
+          dynamic: true,
+          increment: {value: 1},
+          statType: 'numeric',
+          visibility: 'always',
+        }
+        assetCatalog[modelItemKey].rules = assetCatalog[modelItemKey].rules || {};
+        assetCatalog[modelItemKey].rules.dynamicDamageMid = generateDamageRule(modelDamage[0],modelDamage[2]);
+        assetCatalog[modelItemKey].rules.dynamicDamageLow = generateDamageRule(modelDamage[0],modelDamage[3]);
       }
-    });
-    wargearArr = Object.values(wargearArr);
-    let equippedWargearArr = datasheet.unit_composition?.replace(/is equipped<br>with/g,'is equipped with').replace(/(<br>|<ul><li>|<li><li>|<\/li><\/ul>|<\/b> |\.\s)/g,'. ').split('. ').filter(el => el.includes('is equipped')).map(el => el.split(/is equipped with/).map(subEl => subEl.split('; ').map(equip => equip.replace(/^([:Aa1]\s)*/,''))));
-    // console.log(datasheet.name,unitId,wargearArr,datasheet.unit_composition)
-    equippedWargearArr?.forEach(modelLoadout => {
-      console.log('.')
-      console.log('.')
-      console.log('.')
-      console.log('.')
-      console.log('.')
-      console.log('.')
-      // console.log('00',modelLoadout[0][0],'1',modelLoadout[1])
-      if(!modelLoadout[1]?.includes(' nothing.')){
-        let upgradeQty = modelLoadout[1]?.length ? (modelLoadout[1].length + 1) : 0;
-        if(
-          stringSimilarity.compareTwoStrings(modelLoadout[0][0],'Every model') > .5
-          || stringSimilarity.compareTwoStrings(modelLoadout[0][0],'Each model') > .5
-          || stringSimilarity.compareTwoStrings(modelLoadout[0][0],'This model') > .5
-        ){
-          models.forEach(modelData => {
-            console.log('@@@@@@@@$%#$%@#%@#%@#$%@#%',modelData)
-            let tempItem = assetCatalog[modelData.itemKey];
+  
+      let options = data.options.filter(option => option.datasheet_id === unitId);
+      tempItem.text = formatText(datasheet.unit_composition + '\n\n' + options.map(option => (option.button || '') + ' ' + option.description).join('\n\n') + '\n\n' + datasheet.psyker);
+  
+      let abilities = data.abilities.composed.filter(ability => ability.datasheet_id === unitId);
+      let abilityList = abilities.filter(ability => ability.datasheet_id === unitId && !ability.is_other_wargear);
+      let wargearList = abilities.filter(ability => ability.datasheet_id === unitId && ability.is_other_wargear);
+      abilityList.forEach(ability => {
+        tempItem.assets = tempItem.assets || {};
+        tempItem.assets.traits = tempItem.assets.traits || [];
+        tempItem.assets.traits.push(ability.itemKey);
+      });
+      if(datasheet.psyker?.includes('Smite')){
+        tempItem.assets = tempItem.assets || {};
+        tempItem.assets.traits = tempItem.assets.traits || [];
+        tempItem.assets.traits.push('Psychic Power§Smite');
+      }
+      const order = ['Ability§', 'Wargear§', 'Psychic Power§', 'Model§'];
+      tempItem.assets.traits?.sort((a, b) => stringSimilarity.findBestMatch((a.item || a),order).bestMatchIndex - stringSimilarity.findBestMatch((b.item || b),order).bestMatchIndex);
+  
+      Array.from(new Set(data.psychicPowers.map(power => power.type))).forEach(discipline => {
+        // console.log(discipline)
+        // console.log(datasheet.psyker)
+        let test = new RegExp(discipline,'gi')
+        if(test.test(datasheet.psyker)){
+          tempItem.allowed = tempItem.allowed || {};
+          tempItem.allowed.classifications = tempItem.allowed.classifications || [];
+          tempItem.allowed.classifications.push(discipline);
+        }
+      });
+  
+      wargearList.forEach(wargear => {
+        let tempWargear = wargear.cost === assetCatalog[wargear.itemKey].stats?.Points?.value ? wargear.itemKey : {
+          item: wargear.itemKey,
+          stats: {
+            Points: {value: numerize(wargear.cost)}
+          }
+        };
+        tempItem.stats = tempItem.stats || {};
+        tempItem.stats[wargear.name] = {
+          value: '❌',
+          statType: 'rank',
+          statOrder: 10,
+          group: 'Loadout',
+          groupOrder: 2,
+          ranks: {
+            '❌': {order: 0,icons: ['cancel']},
+            '✅': {order: 1,icons: ['confirmed'],traits: [{trait: tempWargear}]}
+          },
+          visibility: 'active',
+          dynamic: true
+        }
+      });
+      // console.log(datasheet.name,options,unitId,wargearList)
+  
+      let wargearArr = data.wargear.composed.filter(wargear => wargear.datasheet_id == unitId).sort((a,b) => a.itemKey.localeCompare(b.itemKey));
+      wargearArr.slice().forEach((gear,i) => {
+        if(wargearArr[i]?.itemKey?.includes(' (melee)') && wargearArr[i+1].itemKey?.includes(' (shooting)')){
+          wargearArr[i].itemKey = wargearArr[i].itemKey.replace('Weapon§','Wargear§').replace(' (melee)','');
+          delete wargearArr[i+1];
+        }
+      });
+      wargearArr = Object.values(wargearArr);
+      let equippedWargearArr = datasheet.unit_composition?.replace(/is equipped<br>with/g,'is equipped with').replace(/(<br>|<ul><li>|<li><li>|<\/li><\/ul>|<\/b> |\.\s)/g,'. ').split('. ').filter(el => el.includes('is equipped')).map(el => el.split(/is equipped with/).map(subEl => subEl.split('; ').map(equip => equip.replace(/^([:Aa1]\s)*/,''))));
+      // console.log(datasheet.name,unitId,wargearArr,datasheet.unit_composition)
+      equippedWargearArr?.forEach(modelLoadout => {
+        // console.log('00',modelLoadout[0][0],'1',modelLoadout[1])
+        if(!modelLoadout[1]?.includes(' nothing.')){
+          let upgradeQty = modelLoadout[1]?.length ? (modelLoadout[1].length + 1) : 0;
+          if(
+            stringSimilarity.compareTwoStrings(modelLoadout[0][0],'Every model') > .5
+            || stringSimilarity.compareTwoStrings(modelLoadout[0][0],'Each model') > .5
+            || stringSimilarity.compareTwoStrings(modelLoadout[0][0],'This model') > .5
+          ){
+            models.forEach(modelData => {
+              // console.log('@@@@@@@@$%#$%@#%@#%@#$%@#%',modelData)
+              let tempItem = assetCatalog[modelData.itemKey];
+              if(upgradeQty) tempItem.stats = tempItem.stats || {};
+              for (let i = 0; i < upgradeQty; i++) {
+                if(options?.length){
+                  // console.log('there are options 1')
+                  tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
+                }
+              }
+              if(!options?.length){
+                // console.log('doing thing 1')
+                wargearArr.forEach(wargear => {
+                  tempItem.assets = tempItem.assets || {};
+                  tempItem.assets.traits = tempItem.assets.traits || [];
+                  tempItem.assets.traits.push(createAssignedTrait(assetCatalog,wargear));
+                });
+              }
+              // console.log(modelData.itemKey,tempItem)
+            });
+          }else{
+            let modelNames = models.map(thisModel => thisModel.name);
+            let modelIndex = stringSimilarity.findBestMatch(modelLoadout[0][0],modelNames).bestMatchIndex;
+            let tempItem = assetCatalog[models[modelIndex].itemKey];
             if(upgradeQty) tempItem.stats = tempItem.stats || {};
             for (let i = 0; i < upgradeQty; i++) {
               if(options?.length){
-                console.log('there are options 1')
+                // console.log('there are options 2')
                 tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
               }
             }
             if(!options?.length){
-              console.log('doing thing 1')
+              // console.log('doing thing 2')
               wargearArr.forEach(wargear => {
                 tempItem.assets = tempItem.assets || {};
                 tempItem.assets.traits = tempItem.assets.traits || [];
                 tempItem.assets.traits.push(createAssignedTrait(assetCatalog,wargear));
               });
             }
-            console.log(modelData.itemKey,tempItem)
-          });
-        }else{
-          let modelNames = models.map(thisModel => thisModel.name);
-          let modelIndex = stringSimilarity.findBestMatch(modelLoadout[0][0],modelNames).bestMatchIndex;
-          let tempItem = assetCatalog[models[modelIndex].itemKey];
-          if(upgradeQty) tempItem.stats = tempItem.stats || {};
-          for (let i = 0; i < upgradeQty; i++) {
-            if(options?.length){
-              console.log('there are options 2')
-              tempItem.stats['loadout'+(i+1)] = createWargearStat(i,wargearArr,modelLoadout[1],assetCatalog);
-            }
-          }
-          if(!options?.length){
-            console.log('doing thing 2')
-            wargearArr.forEach(wargear => {
-              tempItem.assets = tempItem.assets || {};
-              tempItem.assets.traits = tempItem.assets.traits || [];
-              tempItem.assets.traits.push(createAssignedTrait(assetCatalog,wargear));
-            });
-          }
-          console.log(models[modelIndex].itemKey,tempItem)
-        }
-      }
-      // console.log('tempItem:',models.itemKey,tempItem)
-    });
-
-    if(models[0]?.models_per_unit?.includes('-')){
-      tempItem.stats[datasheet.name] = {
-        statType: 'numeric',
-        dynamic: true,
-        visibility: 'active',
-        group: 'Loadout',
-        groupOrder: 2,
-      };
-      let stat = tempItem.stats[datasheet.name];
-      let range = models[0].models_per_unit.split('-');
-      stat.value = Number(range[0]);
-      stat.min = 1;
-      stat.max = Number(range[1]);
-      let basePlThresh = stat.min;
-      tempItem.stats.minModels = {value: numerize(range[0])};
-      if(!(stat.max % Number(range[0]))){
-        // console.log(datasheet.name,'has a clean threshold')
-        stat.increment = {value: numerize(range[0])};
-      }else if(!((stat.max + 1) % (Number(range[0]) + 1)) && models[1]?.models_per_unit == 1){
-        // console.log(datasheet.name,'has a sergeant')
-        stat.increment = {value: numerize(range[0]) + 1};
-        stat.min = 0;
-        // console.log(stat)
-        basePlThresh ++;
-      }else tempItem.text += '\n\n***ERROR***—*there might be a problem with incrementation that will require inputting by hand.*';
-      let PLArr = datasheet.unit_composition.split(/(\<b\>Power Rating |\<\/b\>)/).map(el => Number(el.replace('+','plus'))).filter(el => !isNaN(el));
-      if(PLArr.length){
-        let tempInc = PLArr[0] - datasheet.power_points;
-        // console.log(datasheet.name,basePlThresh,tempInc,PLArr)
-        for (let i = 0; i < PLArr.length; i++) {
-          if(PLArr[i] !== ((i+1) * tempInc) + Number(datasheet.power_points)){
-            // console.log(PLArr[i],tempInc,Number(datasheet.power_points), ((i+1) * tempInc) + Number(datasheet.power_points))
-            tempItem.text += '\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*';
-            tempInc = 0;
-            break;
+            // console.log(models[modelIndex].itemKey,tempItem)
           }
         }
-        if(tempInc){
-          tempItem.stats.poweri = {value:tempInc};
+        // console.log('tempItem:',models.itemKey,tempItem)
+      });
+  
+      if(models[0]?.models_per_unit?.includes('-')){
+        let [minQty,maxQty] = models[0].models_per_unit.split('-').map(qty => Number(qty));
+        let basePlThresh = minQty;
+        tempItem.stats.minModels = {value: numerize(minQty)};
+        if(!((maxQty + 1) % (minQty + 1)) && models[1]?.models_per_unit == 1){
+          basePlThresh ++;
+        }
+        let PLArr = datasheet.unit_composition.split(/(\<b\>Power Rating |\<\/b\>)/).map(el => Number(el.replace('+','plus'))).filter(el => !isNaN(el));
+        if(PLArr.length){
+          let tempInc = PLArr[0] - datasheet.power_points;
+          // console.log(datasheet.name,basePlThresh,tempInc,PLArr)
           for (let i = 0; i < PLArr.length; i++) {
-            tempItem.stats['power'+(i+1)] = {
-              "value": (basePlThresh * (i + 1)) + 1
+            if(PLArr[i] !== ((i+1) * tempInc) + Number(datasheet.power_points)){
+              // console.log(PLArr[i],tempInc,Number(datasheet.power_points), ((i+1) * tempInc) + Number(datasheet.power_points))
+              tempItem.text += '\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*';
+              tempInc = 0;
+              break;
+            }
+          }
+          if(tempInc){
+            tempItem.stats.poweri = {value:tempInc};
+            for (let i = 0; i < PLArr.length; i++) {
+              tempItem.stats['power'+(i+1)] = {
+                "value": (basePlThresh * (i + 1)) + 1
+              }
+            }
+          }
+        }else if(datasheet.unit_composition.includes('Power Rating')) tempItem.text += '\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*';
+      }
+      models.forEach(model => {
+        let hasSergeant = false;
+        let [minQty,maxQty] = model.models_per_unit.split('-').map(qty => Number(qty));
+        // console.log(model.name,minQty,maxQty)
+        if(!((maxQty + 1) % (minQty + 1)) && models[1]?.models_per_unit == 1) hasSergeant = true;
+        if(minQty){
+          // console.log(datasheet.name,model.name,model.models_per_unit,models.length)
+          if(singleModelUnit){
+            let modelAsset = assetCatalog[model.itemKey];
+            // console.log(modelAsset)
+            tempItem = {
+              ...tempItem,
+              stats: {
+                ...tempItem.stats,
+                ...modelAsset.stats,
+              },
+              assets: {
+                traits: [
+                  ...tempItem.assets?.traits || [],
+                  ...modelAsset.assets?.traits || [],
+                ],
+                included: [
+                  ...tempItem.assets?.included || [],
+                  ...modelAsset.assets?.included || [],
+                ],
+              },
+              rules: {
+                ...tempItem.rules,
+                ...modelAsset.rules,
+              },
+              aspects:{
+                ...tempItem.aspects,
+                ...modelAsset.aspects,
+                Type: 'game piece'
+              }
+            }
+            if(!Object.keys(tempItem.rules).length) delete tempItem.rules;
+          }else{
+            let tempTrait = {item: model.itemKey};
+            if(minQty > 1) tempTrait.quantity = minQty;
+            // console.log(tempTrait)
+            if(Object.keys(tempTrait).length === 1) tempTrait = model.itemKey;
+            if(minQty && maxQty){
+              tempItem.assets.included = tempItem.assets.included || [];
+              tempItem.assets.included.push(tempTrait);
+              tempItem.stats = tempItem.stats || {};
+              tempItem.stats[model.name] = {
+                visibility: 'hidden',
+                tracked: true,
+                statType: 'numeric',
+                max: maxQty,
+                value: 0,
+              }
+              if(!hasSergeant) tempItem.stats[model.name].min = 1;
+            }else{
+              tempItem.assets.traits = tempItem.assets.traits || [];
+              tempItem.assets.traits.push(tempTrait);
             }
           }
         }
-      }else if(datasheet.unit_composition.includes('Power Rating')) tempItem.text += '\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*';
-    }
-    models.forEach(model => {
-      let [minQty,maxQty] = model.models_per_unit.split('-').map(qty => Number(qty));
-      if(minQty){
-        // console.log(datasheet.name,model.name,model.models_per_unit,models.length)
-        if(singleModelUnit){
-          let modelAsset = assetCatalog[model.itemKey];
-          // console.log(modelAsset)
-          tempItem = {
-            ...tempItem,
-            stats: {
-              ...tempItem.stats,
-              ...modelAsset.stats,
-            },
-            assets: {
-              traits: [
-                ...tempItem.assets?.traits || [],
-                ...modelAsset.assets?.traits || [],
-              ],
-              included: [
-                ...tempItem.assets?.included || [],
-                ...modelAsset.assets?.included || [],
-              ],
-            },
-            rules: {
-              ...tempItem.rules,
-              ...modelAsset.rules,
-            },
-            aspects:{
-              ...tempItem.aspects,
-              ...modelAsset.aspects,
-              Type: 'game piece'
-            }
-          }
-          if(!Object.keys(tempItem.rules).length) delete tempItem.rules;
-        }else{
-          let tempTrait = {item: model.itemKey};
-          if(minQty > 1) tempTrait.quantity = minQty;
-          // console.log(tempTrait)
-          if(Object.keys(tempTrait).length === 1) tempTrait = model.itemKey;
-          tempItem.assets.traits = tempItem.assets.traits || [];
-          tempItem.assets.traits.push(tempTrait);
+        if(minQty > 1 || maxQty > 1 || !minQty){
+          tempItem.allowed = tempItem.allowed || {};
+          tempItem.allowed.items = tempItem.allowed.items || [];
+          tempItem.allowed.items.push(model.itemKey)
         }
+      });
+  
+      let source = data.sources.filter(source => source.source_id == datasheet.source_id)[0];
+      // console.log(source)
+      if(source){
+        let errataDate = source.errata_date.split(' ')[0].split('.').reverse().join('-');
+        tempItem.meta = tempItem.meta || {};
+        tempItem.meta.Publication = `[${source.name} (${source.type}) ${ordinalize(source.edition)} ed. – ${source.version || ''} @${errataDate}](${source.errata_link})`;
+        tempItem.keywords.Source = [`${source.type}—${source.name}${source.version ? ('—'+source.version) : ''}`];
+        if(source.edition) tempItem.keywords.Edition = [ordinalize(source.edition)];
       }
-      if(minQty > 1 || maxQty > 1 || !minQty){
-        tempItem.allowed = tempItem.allowed || {};
-        tempItem.allowed.items = tempItem.allowed.items || [];
-        tempItem.allowed.items.push(model.itemKey)
-      }
-    });
-
-    let source = data.sources.filter(source => source.source_id == datasheet.source_id)[0];
-    // console.log(source)
-    if(source){
-      let errataDate = source.errata_date.split(' ')[0].split('.').reverse().join('-');
-      tempItem.meta = tempItem.meta || {};
-      tempItem.meta.Publication = `[${source.name} (${source.type}) ${ordinalize(source.edition)} ed. – ${source.version || ''} @${errataDate}](${source.errata_link})`;
-      tempItem.keywords.Source = [`${source.type}—${source.name}${source.version ? ('—'+source.version) : ''}`];
-      if(source.edition) tempItem.keywords.Edition = [ordinalize(source.edition)];
+  
+      let keywordList = data.keywords.filter(keyword => keyword.datasheet_id === unitId && !keyword.is_faction_keyword);
+      if(keywordList.length) tempItem.keywords.Keywords = keywordList.map(keyword => keyword.keyword);
+      let factionKeywords = data.keywords.filter(keyword => keyword.datasheet_id === unitId && keyword.is_faction_keyword);
+      if(factionKeywords.length) tempItem.keywords.Faction = factionKeywords.map(keyword => keyword.keyword);
+  
+      assetCatalog[datasheet.role + '§' + datasheet.name] = tempItem;
     }
-
-    let keywordList = data.keywords.filter(keyword => keyword.datasheet_id === unitId && !keyword.is_faction_keyword);
-    if(keywordList.length) tempItem.keywords.Keywords = keywordList.map(keyword => keyword.keyword);
-    let factionKeywords = data.keywords.filter(keyword => keyword.datasheet_id === unitId && keyword.is_faction_keyword);
-    if(factionKeywords.length) tempItem.keywords.Faction = factionKeywords.map(keyword => keyword.keyword);
-
-    assetCatalog[datasheet.role + '§' + datasheet.name] = tempItem;
   });
   data.datasheets.forEach(datasheet => {
-    let unitId = datasheet.datasheet_id;
-    let models = data.models.filter(model => model.datasheet_id === unitId);
-    // console.log(unitId,data.models,unitId)
-    let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0]?.itemKey;
-    let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
-    if(singleModelUnit && modelItemKey) delete assetCatalog[modelItemKey];
+    if(!datasheet.name.includes('Legendary)')){
+      let unitId = datasheet.datasheet_id;
+      let models = data.models.filter(model => model.datasheet_id === unitId);
+      // console.log(unitId,data.models,unitId)
+      let modelItemKey = models.filter(model => model.datasheet_id === unitId)[0]?.itemKey;
+      let singleModelUnit = models[0]?.models_per_unit == 1 && models.length == 1;
+      if(singleModelUnit && modelItemKey) delete assetCatalog[modelItemKey];
+    }
   });
 }
 generateDamageRule = (damageRows,currentRow) => {
