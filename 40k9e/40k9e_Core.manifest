@@ -1,6 +1,6 @@
 {
   "name": "40k9e",
-  "revision": "9.0.14",
+  "revision": "9.0.15",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -695,6 +695,12 @@
             "statType": "numeric",
             "value": null,
             "visibility": "hidden"
+          },
+          "Psychic Power": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "tracked": true
           }
         },
         "keywords": {
@@ -1976,6 +1982,20 @@
                 "value": "Matched",
                 "operator": "AND",
                 "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "minModels",
+                    "value"
+                  ]
+                ],
+                "value": 0,
+                "operator": "AND",
+                "not": false,
                 "actionable": true
               }
             ],
