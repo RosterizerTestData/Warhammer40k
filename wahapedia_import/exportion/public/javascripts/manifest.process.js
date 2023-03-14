@@ -32,8 +32,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.15',
+    notes: '0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.17',
     wip: true,
     dependencies: [
       {
@@ -86,10 +86,7 @@ processModels = (data,assetCatalog) => {
           actions: [
             {
               paths: [
-                [
-                  '{self}',
-                  'designation'
-                ]
+                ['{self}','designation']
               ],
               actionType: 'set',
               value: dupModels[0].name,
@@ -116,7 +113,7 @@ dedupModels = (dupModels) => {
     let arr = dupModels.map(model => model[prop]);
     deduped[prop] = findMode(arr);
   });
-  return {
+  let stats = {
     stats: {
       Points: {value: numerize(deduped.cost)},
       M: {value: numerize(deduped.movement)},
@@ -130,7 +127,11 @@ dedupModels = (dupModels) => {
       Sv: {value: numerize(deduped.save)},
       Base: {value: numerize(deduped.base_size)},
     }
-  }
+  };
+  Object.keys(stats.stats).forEach(statName => {
+    if(!['M','A'].includes(statName) && typeof stats.stats[statName].value === 'string') stats.stats[statName].statType = 'term';
+  });
+  return stats
 }
 findMode = (arr) => {
   if (arr.length == 0) return null;
@@ -194,8 +195,7 @@ processAbilities = (data,assetCatalog) => {
         statType: 'term',
         value: `&lt;${data.factCurrent.toUpperCase()}&gt;`,
         text: ruleText,
-        visibility: 'hidden',
-        dynamic: true
+        visibility: 'hidden'
       }
     }
     a[i].itemKey = itemKey;
@@ -220,6 +220,9 @@ processWargear = (data,assetCatalog) => {
       Type: {value: numerize(wargear.type)},
       Range: {value: numerize(wargear.weapon_range)},
     }};
+    Object.keys(tempWeapon.stats).forEach(statName => {
+      if(!['Range','Type'].includes(statName) && typeof tempWeapon.stats[statName].value === 'string') tempWeapon.stats[statName].statType = 'term';
+    });
     if(wargear.abilities) tempWeapon.text = formatText(wargear.abilities);
     let wargearArr = data.wargear.wargear_list.filter(wargear_list => wargear_list.wargear_id == wargear.wargear_id).map(wargear => 'Weapon§' + wargear.name);
     let costArr = data.wargear.datasheets_wargear.filter(datasheets_wargear => datasheets_wargear.wargear_id == wargear.wargear_id).map(wargear => wargear.cost);
@@ -318,6 +321,9 @@ processRelics = (data,assetCatalog) => {
       Type: {value: numerize(relic.type)},
       Range: {value: numerize(relic.weapon_range)},
     }};
+    Object.keys(tempWeapon.stats).forEach(statName => {
+      if(!['Range','Type'].includes(statName) && typeof tempWeapon.stats[statName].value === 'string') tempWeapon.stats[statName].statType = 'term';
+    });
     if(relic.abilities) tempWeapon.text = formatText(relic.abilities);
     let relicsArr = data.relics.relic_list.filter(relic_list => relic_list.wargear_id == relic.wargear_id).map(relic => 'Relic Weapon§' + relic.name);
     let relicType = data.relics.relics.filter(gear => gear.wargear_id == relic.wargear_id)[0].type;
@@ -385,9 +391,6 @@ processWarlordTraits = (data,assetCatalog) => {
     let traitName = 'Warlord Trait§' + trait.name.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     let tempTrait = {
       text: formatText(trait.description),
-      stats:{Discipline:{
-        value: trait.type + (trait.roll ? (' ' + trait.roll) : '')
-      }}
     };
     assetCatalog[traitName] = tempTrait;
   });
@@ -540,14 +543,14 @@ processUnits = (data,assetCatalog) => {
         };
         tempItem.stats = tempItem.stats || {};
         tempItem.stats[wargear.name] = {
-          value: '❌',
+          value: '-',
           statType: 'rank',
           statOrder: 10,
           group: 'Loadout',
           groupOrder: 2,
           ranks: {
-            '❌': {order: 0,icons: ['cancel']},
-            '✅': {order: 1,icons: ['confirmed'],traits: [{trait: tempWargear}]}
+            '-': {order: 0},
+            '✓': {order: 1,traits: [{trait: tempWargear}]}
           },
           visibility: 'active',
           dynamic: true
@@ -791,6 +794,43 @@ generateDamageRule = (damageRows,currentRow) => {
   }
   return newRule
 }
+processStratagems = (allResults) => {
+  allResults['!'].manifest.assetTaxonomy['In-game Stratagems'] = {
+    assets: {
+      traits: [],
+    }
+  }
+  allResults.stratagems.forEach(stratagem => {
+    let stratName = stratagem.name.toLowerCase().split(' ').map(word => (word.charAt(0).toUpperCase() + word.slice(1))).join(' ');
+    let stratCost = numerize(stratagem.cp_cost);
+    let strat = {
+      text: formatText(stratagem.description),
+      stats:{
+        'Command Cost': {
+          value: stratCost,
+        }
+      }
+    }
+    let phaseArr = stratagem.description.split('PHASE">');
+    phaseArr = phaseArr.filter(phaseEntry => phaseEntry.match(/([A-Za-z]*) phase<.*/)).map(phaseEntry => phaseEntry.match(/([A-Za-z]*) phase<.*/)?.[1]);
+    if(phaseArr.length) strat.keywords = {Phase:phaseArr};
+    if(typeof stratCost === 'string'){
+      strat.stats['Command Cost'].statType = 'term';
+    }
+    if(stratagem.description.includes('Use this Stratagem before the battle') || stratagem.description.includes('Use this Stratagem after nominating')){
+      strat.stats['Command Cost'].tracked = true;
+      strat.keywords = strat.keywords || {};
+      strat.keywords.Phase = strat.keywords.Phase || [];
+      strat.keywords.Phase.push('Pre-battle');
+    }
+    if(!strat.keywords?.Phase?.length) strat.keywords = {Phase: ['Special timing']};
+    strat.keywords.Tags = [allResults['!'].name + ' Strat'];
+    allResults['!'].manifest.assetCatalog['Stratagem§' + stratName] = strat;
+    if(!stratagem.description.includes('Use this Stratagem before the battle') && !stratagem.description.includes('Use this Stratagem after nominating')){
+      allResults['!'].manifest.assetTaxonomy['In-game Stratagems'].assets.traits.push('Stratagem§' + stratName);
+    }
+  });
+}
 processFactions = (data,assetTaxonomy) => {
   let fac = data.factions[0].main_faction_id;
   // console.log(fac,data.factions)
@@ -813,7 +853,103 @@ processFactions = (data,assetTaxonomy) => {
         }
       },
       rules: {
-        'populate faction': {
+        ['populateUnit' + subFacNames[fac]]: {
+          evals: [
+            {
+              paths: [
+                ["{self}","stats",subFacNames[fac],"value"]
+              ],
+              value: "-",
+              operator: "AND",
+              not: true,
+              actionable: true
+            }
+          ],
+          failState: 'pass',
+          order: 10,
+          evaluate: 'OR',
+          actions: [
+            {
+              paths: [
+                ['{self}','assets','templateClass','Unit','stats',subFacNames[fac],'value',]
+              ],
+              actionType: 'set',
+              value: ['{self}','stats',subFacNames[fac],'value',],
+              iterations: 1
+            },
+            {
+              paths: [
+                ['{self}','assets','templateClass','Unit','stats',subFacNames[fac],'visibility',]
+              ],
+              actionType: 'set',
+              value: 'hidden',
+              iterations: 1
+            }
+          ]
+        }
+      }
+    }
+    assetTaxonomy.Unit = {
+      stats:{
+        [subFacNames[fac]]: {
+          statType: 'rank',
+          value: '-',
+          ranks: {
+            '-': {
+              order: 0
+            },
+          },
+          dynamic: true,
+          group: 'Options',
+          statOrder: 20,
+          visibility: 'active',
+        }
+      },
+      rules: {
+        ['replace' + subFacNames[fac] + 'Keyword']: {
+          evals: [
+            {
+              paths: [
+                ["{self}","stats",subFacNames[fac],"value"]
+              ],
+              value: "-",
+              operator: "AND",
+              not: true,
+              actionable: true
+            },
+            {
+              paths: [
+                ["{self}","keywords","Faction"]
+              ],
+              value: "<Brotherhood>",
+              contains: true,
+              operator: "AND",
+              not: false,
+              actionable: true
+            }
+          ],
+          failState: "pass",
+          evaluate: "AND",
+          actions: [
+            {
+              paths: [
+                ["{self}","keywords","Faction"]
+              ],
+              actionType: "remove",
+              value: "<Brotherhood>",
+              iterations: 1
+            },
+            {
+              paths: [
+                ["{self}","keywords","Faction"]
+              ],
+              actionType: "add",
+              value: ["{self}","stats",subFacNames[fac],"value"],
+              iterations: 1
+            }
+          ]
+        },
+        ['populateAbility' + subFacNames[fac]]: {
           evals: [
             {
               paths: [
@@ -830,26 +966,10 @@ processFactions = (data,assetTaxonomy) => {
           actions: [
             {
               paths: [
-                [
-                  '{self}',
-                  'assets',
-                  'templateClass',
-                  'Unit',
-                  'traits',
-                  'classification',
-                  'Ability',
-                  'stats',
-                  subFacNames[fac],
-                  'value',
-                ]
+                ['{self}','assets','classification','Ability','stats',subFacNames[fac],'value',]
               ],
               actionType: 'set',
-              value: [
-                '{self}',
-                'stats',
-                subFacNames[fac],
-                'value',
-              ],
+              value: ['{self}','stats',subFacNames[fac],'value',],
               iterations: 1
             }
           ]
@@ -859,16 +979,12 @@ processFactions = (data,assetTaxonomy) => {
     data.factions.filter(faction => faction.faction_id != faction.main_faction_id).forEach((faction,i) => {
       let newRank = {order:i+1}
       assetTaxonomy.Detachment.stats[subFacNames[fac]].ranks[faction.name] = newRank;
+      assetTaxonomy.Unit.stats[subFacNames[fac]].ranks[faction.name] = newRank;
       assetTaxonomy.Detachment.rules['not'+faction.name] = {
         evals: [
           {
             paths: [
-              [
-                "{self}",
-                "stats",
-                subFacNames[fac],
-                "value"
-              ]
+              ["{self}","stats",subFacNames[fac],"value"]
             ],
             value: faction.name,
             operator: "AND",
@@ -877,14 +993,9 @@ processFactions = (data,assetTaxonomy) => {
           },
           {
             paths: [
-              [
-                "{roster}",
-                "stats",
-                subFacNames[fac],
-                "value"
-              ]
+              ["{self}","stats",subFacNames[fac],"value"]
             ],
-            value: faction.name,
+            value: '-',
             operator: "AND",
             not: true,
             actionable: true
@@ -896,11 +1007,8 @@ processFactions = (data,assetTaxonomy) => {
         actions: [
           {
             paths: [
-              [
-                "{self}",
-                "constraints",
-                "none"
-              ]
+              ["{self}","constraints","none"],
+              ["{self}","assets","classification","Unit","constraints","none"]
             ],
             actionType: "add",
             value: faction.name,
@@ -909,52 +1017,6 @@ processFactions = (data,assetTaxonomy) => {
         ]
       }
     });
-    assetTaxonomy.Unit = {
-      rules: {
-        'replace subfaction keyword': {
-          evals: [
-            {
-              paths: [
-                ['{parent}','stats',data.factCurrent,'value']
-              ],
-              value: '-',
-              operator: 'AND',
-              not: true
-            },
-            {
-              paths: [
-                ['{self}','keywords','Faction']
-              ],
-              value: `<${data.factCurrent}>`,
-              contains: true,
-              operator: 'AND',
-              not: false,
-              actionable: true
-            }
-          ],
-          failState: 'pass',
-          evaluate: 'AND',
-          actions: [
-            {
-              paths: [
-                ['{self}','keywords','Faction']
-              ],
-              actionType: 'remove',
-              value: `<${data.factCurrent}>`,
-              iterations: 1
-            },
-            {
-              paths: [
-                ['{self}','keywords','Faction']
-              ],
-              actionType: 'add',
-              value: ['{parent}','stats',data.factCurrent,'processed','rank','current'],
-              iterations: 1
-            }
-          ]
-        }
-      }
-    }
   }
 }
 processPsychicClasses = (data,assetTaxonomy) => {

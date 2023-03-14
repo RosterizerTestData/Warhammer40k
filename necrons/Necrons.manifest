@@ -1,11 +1,11 @@
 {
   "name": "Necrons",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -53,7 +53,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitDynasty": {
             "evals": [
               {
                 "paths": [
@@ -71,6 +71,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -80,9 +81,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Dynasty",
                     "value"
@@ -95,6 +93,22 @@
                   "Dynasty",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Dynasty",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -114,6 +128,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -124,6 +152,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -149,6 +185,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -159,6 +209,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -184,6 +242,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -194,6 +266,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -219,6 +299,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -229,6 +323,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -254,6 +356,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -264,6 +380,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -289,6 +413,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -299,6 +437,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -324,6 +470,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -336,6 +496,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -346,6 +514,62 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Dimensional Corridor",
+            "Stratagem§Techno-oracular Targeting",
+            "Stratagem§Extermination Protocols",
+            "Stratagem§Storm Of Flensing Blades",
+            "Stratagem§Fractal Targeting",
+            "Stratagem§Judgement Of The Triarch",
+            "Stratagem§Eternal Protectors",
+            "Stratagem§Resurrection Protocols",
+            "Stratagem§Strange Echoes",
+            "Stratagem§The Deathless Arise",
+            "Stratagem§Dimensional Destabilisation",
+            "Stratagem§Entropic Strike",
+            "Stratagem§Enslaved Protectors",
+            "Stratagem§Stellar Alignment Protocol",
+            "Stratagem§Reanimation Prioritisation",
+            "Stratagem§Burrowing Nightmares",
+            "Stratagem§Self-destruction",
+            "Stratagem§Prismatic Dimensional Breach",
+            "Stratagem§Shadows Of Drazak",
+            "Stratagem§Aetheric Interception",
+            "Stratagem§Relentless Onslaught",
+            "Stratagem§Curse Of The Phaeron",
+            "Stratagem§Atavistic Instigation",
+            "Stratagem§Revenge Of The Doomstalker",
+            "Stratagem§Disruption Fields",
+            "Stratagem§Disintegration Capacitors",
+            "Stratagem§Malevolent Arcing",
+            "Stratagem§Whirling Onslaught",
+            "Stratagem§Quantum Deflection",
+            "Stratagem§Solar Pulse",
+            "Stratagem§Reconstitution Protocols",
+            "Stratagem§Talent For Annihilation",
+            "Stratagem§Reclaim A Lost Empire",
+            "Stratagem§Blood Rites",
+            "Stratagem§Methodical Destruction",
+            "Stratagem§Empyric Damping",
+            "Stratagem§Swift Dismemberment",
+            "Stratagem§Hyperphase Impalement",
+            "Stratagem§Efficient Disintegration",
+            "Stratagem§Lurking Murderers",
+            "Stratagem§Murderous Demise",
+            "Stratagem§Canoptek Reinforcement",
+            "Stratagem§Weaponised Bodies",
+            "Stratagem§A Moment Of Clarity",
+            "Stratagem§Overkill Protocols",
+            "Stratagem§Stalking Annihilator",
+            "Stratagem§Aggression Overrides",
+            "Stratagem§Canoptek Overdrive",
+            "Stratagem§Hyperdense Particle Beams",
+            "Stratagem§Enhanced Gloom Prism"
+          ]
+        }
+      },
       "Powers of the C’tan": {
         "templateClass": "Psychic Power"
       },
@@ -353,13 +577,49 @@
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Dynasty": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Maynarkh": {
+                "order": 1
+              },
+              "Mephrit": {
+                "order": 2
+              },
+              "Nephrekh": {
+                "order": 3
+              },
+              "Nihilakh": {
+                "order": 4
+              },
+              "Novokh": {
+                "order": 5
+              },
+              "Sautekh": {
+                "order": 6
+              },
+              "Szarekhan": {
+                "order": 7
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceDynastyKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Dynasty",
                     "value"
@@ -367,7 +627,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -377,7 +638,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Dynasty>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -396,7 +657,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Dynasty>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -409,12 +670,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Dynasty",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityDynasty": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Dynasty",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Dynasty",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -431,8 +733,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CORE** unit within 9″ of this model. Until the end of the turn, that unit is eligible to shoot and [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) with in a turn in which they [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -458,8 +759,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly [**{v}**](https://wahapedia.ru/wh40k9ed/factions/necrons/#The-DYNASTY-Keyword) unit within 9″ of this model. Until the start of your next Command phase, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit and models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -491,8 +791,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While a friendly **{v}** unit is within 6″ of this unit’s Power Crucible model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -506,8 +805,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, add 2 to the Leadership characteristic of models in that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -536,8 +834,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), if this model Remains Stationary, then in the [Reinforcement](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) step of that phase it can summon a unit. If it does, select one **{v} CORE** INFANTRY** unit from your army that is in [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves): set up that unit anywhere on the battlefield that it is wholly within 3″ of this model and not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy models. Models in units that are set up using this ability count as having moved a distance in inches equal to their Move characteristic in the Movement phase.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -551,8 +848,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While this model is within 3″ of a friendly **{v} DESTROYER** CULT** unit, enemy models cannot target this model with ranged weapons unless it is the closest eligible target. In addition, this unit cannot perform [actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -587,8 +883,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While a friendly **{v} INFANTRY** NOBLE** or **DYNASTIC AGENT** INFANTRY** NOBLE** unit is within 3″ of this unit, that unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -626,8 +921,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "Once per turn, at the start of either your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE) or the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), you can select one friendly **{v} DESTROYER** CULT** unit within 3″ of this model. If you do, roll one D6: on a 1, one model in that unit is destroyed. Regardless of the result, until the end of the turn, add 1 to the Strength and Attacks characteristics of models in that unit. Each unit can only be selected for this ability once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -668,8 +962,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **SAUTEKH CORE** unit within 9″ of this unit. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Each unit can only be selected for this ability once per phase.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **SAUTEKH CORE** unit within 9″ of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Each unit can only be selected for this ability once per phase.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **NECRONS CORE** unit within 9″ of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Each unit can only be selected for this ability once per phase.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CORE** unit within 9″ of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Each unit can only be selected for this ability once per phase.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -680,8 +973,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly [**{v}**](https://wahapedia.ru/wh40k9ed/factions/necrons/#The-DYNASTY-Keyword) unit within 6″ of and visible to this model. Until the start of your next Command phase, while that unit is within 6″ of and visible to this model, that unit is being healed by this model's reanimation beam. While a unit is being healed by a reanimation beam, add 1 to **Reanimation Protocol** rolls** made for that unit. Each unit can only ever be healed by one reanimation beam at a time.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -740,8 +1032,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In the [Unit Coherency Checks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Unit-Coherency-Checks) step of the Morale phase, if this model is not within 6″ of any friendly **{v} DESTROYER** CULT** units, this model is destroyed.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -752,8 +1043,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, each time that unit is selected to make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) or [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), until the end of the phase, add 1″ to the Move characteristic of models in that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -767,8 +1057,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} NECRON** WARRIORS** unit within 6″ of this model. If you do, up to D3 destroyed models from that unit Reanimate**. Each unit can only be selected for this ability once per phase.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -782,8 +1071,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this unit’s Power Crucible model, add 1 to **Reanimation Protocol** rolls** made for that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -794,8 +1082,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **NECRONS CORE** unit within 6″ of this model. One destroyed model from that unit is Reanimated**. If the selected unit is a **NECRON WARRIORS** unit, D3 destroyed models from that unit are Reanimated instead. Each unit can only be selected for this ability once per phase.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CORE** unit within 6″ of this model. One destroyed model from that unit is Reanimated**. If the selected unit is a **NECRON WARRIORS** unit, D3 destroyed models from that unit are Reanimated instead. Each unit can only be selected for this ability once per phase.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -806,8 +1093,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), one destroyed model from each friendly **{v} CANOPTEK** SCARAB** SWARM** unit within 6″ of this unit is Reanimated**. Each unit can only be affected by this ability once per phase.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -818,8 +1104,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "Each time an enemy unit [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) against a friendly **{v}** or **DYNASTIC AGENT** unit within 6″ of this model, unless this model is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy models, this model can fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) at the charging unit as if it were also a target of that charge (this is in addition to any other units that are firing Overwatch). Each time this model fires Overwatch, it makes attacks with its doomsday blaster using the high power profile.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -854,8 +1139,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CORE** unit within 9″ of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -902,8 +1186,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "While a friendly **{v} DESTROYER** CULT** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -917,8 +1200,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), then for each **{v} DESTROYER** CULT** unit included in a Detachment, one **{v} CANOPTEK** PLASMACYTE** unit can be included in that Detachment without taking up a [Battlefield Role](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role) slot. You cannot include more {v}** CANOPTEK** PLASMACYTE** units in a Detachment than there are {v}** DESTROYER** CULT** units in that Detachment.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -941,8 +1223,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "During deployment, you can set up one **{v} MONOLITH** or **{v} SENTRY** PYLON** model from your army on top of this unit’s Tomb Ziggurat model. If you do, until that Monolith or Sentry Pylon unit moves, add 1 to the Strength characteristic of weapons that model is equipped with.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -990,7 +1271,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1194,7 +1476,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1277,7 +1560,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1358,7 +1642,8 @@
             "value": 3
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1440,7 +1725,8 @@
             "value": 4
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1517,7 +1803,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1566,23 +1853,17 @@
             "value": "Canoptek Spyder"
           },
           "Fabricator claw array": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Fabricator claw array"
@@ -1594,23 +1875,17 @@
             "dynamic": true
           },
           "Gloom prism": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1696,23 +1971,17 @@
             "value": 5
           },
           "Gloom prism": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1761,7 +2030,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2023,7 +2293,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2074,23 +2345,17 @@
             "value": "Lychguard"
           },
           "Dispersion shield": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2271,7 +2536,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2360,7 +2626,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heat ray",
@@ -2812,23 +3079,17 @@
             "value": 7
           },
           "Gloom prism": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2877,7 +3138,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3064,23 +3326,17 @@
             "value": "Tomb Blades"
           },
           "Nebuloscope": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Nebuloscope"
@@ -3092,23 +3348,17 @@
             "dynamic": true
           },
           "Shadowloom": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Shadowloom"
@@ -3120,23 +3370,17 @@
             "dynamic": true
           },
           "Shieldvanes": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Shieldvanes"
@@ -3322,7 +3566,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3535,7 +3780,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3748,7 +3994,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3975,23 +4222,17 @@
             "value": "Sentry Pylon"
           },
           "Teleportation matrix": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4159,7 +4400,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss cannon",
@@ -4360,7 +4602,8 @@
             "value": 3
           },
           "Base": {
-            "value": "90mm"
+            "value": "90mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4570,7 +4813,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4915,7 +5159,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Tesseract singularity chamber",
@@ -5301,7 +5546,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5351,23 +5597,17 @@
             "value": 9
           },
           "Resurrection Orb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5416,7 +5656,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss cannon",
@@ -5706,7 +5947,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Aeonstave",
@@ -5899,7 +6141,8 @@
             "value": 3
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5979,7 +6222,8 @@
             "value": 2
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6031,23 +6275,17 @@
             "value": 6
           },
           "Phylactery": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6096,7 +6334,8 @@
             "value": 3
           },
           "Base": {
-            "value": ""
+            "value": "",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6145,23 +6384,17 @@
             "value": 6
           },
           "Phylactery": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6180,23 +6413,17 @@
             "dynamic": true
           },
           "Resurrection Orb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6245,7 +6472,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Staff of light",
@@ -6385,23 +6613,17 @@
             "value": 5
           },
           "Resurrection Orb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Resurrection Orb"
@@ -6443,7 +6665,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Staff of light",
@@ -6611,7 +6834,8 @@
             "value": 2
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6706,23 +6930,17 @@
             "value": 6
           },
           "Resurrection Orb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Resurrection Orb"
@@ -6764,7 +6982,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Tachyon arrow",
@@ -7052,7 +7271,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7129,7 +7349,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7206,7 +7427,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7280,7 +7502,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7328,23 +7551,17 @@
             "value": 5
           },
           "Canoptek cloak": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7363,23 +7580,17 @@
             "dynamic": true
           },
           "Canoptek control node": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Canoptek control node"
@@ -7421,7 +7632,8 @@
             "value": 4
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Staff of light",
@@ -7541,7 +7753,8 @@
             "value": 4
           },
           "Base": {
-            "value": ""
+            "value": "",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7621,7 +7834,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7700,7 +7914,8 @@
             "value": 2
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7751,23 +7966,17 @@
             "value": 24
           },
           "Teleportation matrix": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7792,7 +8001,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 3
@@ -7824,7 +8034,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -8035,7 +8246,8 @@
             "value": 2
           },
           "Base": {
-            "value": "160mm"
+            "value": "160mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss flux arc",
@@ -8433,7 +8645,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -8646,7 +8859,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Singularity generator",
@@ -8996,7 +9210,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9264,7 +9479,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -9307,7 +9523,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Automaton claws",
@@ -9420,7 +9637,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Vicious claws",
@@ -9579,7 +9797,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -9622,7 +9841,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -9664,7 +9884,8 @@
             "value": 4
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -9682,7 +9903,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 3
@@ -9706,7 +9928,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -9743,7 +9966,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss blaster",
@@ -9842,7 +10066,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss cannon",
@@ -9999,7 +10224,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss destructor",
@@ -10176,7 +10402,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss destructor",
@@ -10295,7 +10522,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Warscythe",
@@ -10394,7 +10622,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss flayer",
@@ -10493,7 +10722,8 @@
             "value": 4
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -10540,7 +10770,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -10577,7 +10808,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -10595,7 +10827,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 3
@@ -10619,7 +10852,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -10635,7 +10869,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -10656,7 +10891,8 @@
             "value": 6
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -10674,7 +10910,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 3
@@ -10698,7 +10935,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gauss exterminator",
@@ -10852,7 +11090,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -10873,7 +11112,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 3
@@ -10899,13 +11139,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "rules": {
@@ -11081,7 +11323,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -11252,7 +11495,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin gauss blaster",
@@ -11343,7 +11587,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 3
@@ -11367,7 +11612,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -11404,7 +11650,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Rod of covenant",
@@ -11519,7 +11766,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -11567,7 +11815,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -11721,13 +11970,16 @@
       "Relics of the Aeons§Gauntlet of the Conflagrator": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "Type": {
             "value": "Pistol 1"
@@ -11747,7 +11999,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -11889,6 +12142,917 @@
         "text": "* In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if the bearer is on the battlefield, roll one D6: on a 5+, gain 1 [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points).\n* Once per turn, you can re-roll one [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) or re-roll one [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) made for the bearer."
       },
       "Roster§Army": {},
+      "Stratagem§A Moment Of Clarity": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ANNIHILATION** LEGION** unit from your army. Until the start of your next Command phase, that unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Aetheric Interception": {
+        "text": "Use this Stratagem in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your opponent's [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), after an enemy unit has been set up on the battlefield. Select one **HYPERSPACE HUNTER** unit from your army that is either on the battlefield, in a hyperspace dimension or in [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves).\n\n* If that HYPERSPACE** HUNTER** unit is in a hyperspace dimension or in Strategic Reserves, set it up anywhere on the battlefield that is within 18″ of that enemy unit and more than 9″ away from any enemy models.\n* That HYPERSPACE** HUNTER** unit can, at the end of the phase, shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), but until the end of the phase it can only target the enemy unit that was just set up on the battlefield (and only if that enemy unit is an eligible target for that attack).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Aggression Overrides": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **CANOPTEK SPYDERS** unit from your army. Until the start of your next Command phase:\n\n* Add 2″ to the Move characteristic of models in that unit.\n* Change the Weapon Skill characteristic of models in that unit to 2+.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Atavistic Instigation": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DOOM SCYTHE** model from your army is selected to shoot. After you select the target unit for that model's heavy death ray, select one enemy unit within 3″ of that target (you can select the target itself if you wish); that enemy unit can either brace or duck for cover.\n\n* If that unit braces, and it is not a VEHICLE** or a MONSTER** unit, it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If that unit ducks for cover, then until the end of the turn, subtract l from the Attacks characteristic of models in that unit, and that unit cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Blood Rites": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **NOVOKH** unit from your army is selected to fight. Until the end of the phase, add 1 to the Attacks characteristic of models in that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Burrowing Nightmares": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **OPHYDIAN DESTROYERS** unit from your army that is on the battlefield. Remove that unit from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your next Movement phase, you can set that unit back up on the battlefield anywhere that is more than 9″ away from any enemy models. If the battle ends and that unit is not on the battlefield, it is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Canoptek Overdrive": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CANOPTEK WRAITHS** model from your army is destroyed. Until the end of the phase, each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished [making attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Making-Attacks), and is then removed from play.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Canoptek Reinforcement": {
+        "text": "Use this Stratagem in the [Reinforcement](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) step of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **CANOPTEK PLASMACYTE** unit from your army that has been destroyed. Set that unit up again anywhere on the battlefield within 3″ of a friendly **DESTROYER CULT** unit and not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy models. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Curse Of The Phaeron": {
+        "text": "Use this Stratagem in any phase, when a **NECRONS VEHICLE** model from your army is destroyed. Do not roll to see if that model explodes: it does so automatically. If that model has the TITANIC** keyword, this Stratagem costs 3CP; otherwise it costs 1 CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "3/1",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Dimensional Corridor": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **&lt;DYNASTY&gt; CORE** INFANTRY** unit from your army that is on the battlefield. Remove that unit from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of this phase, set that unit back up on the battlefield anywhere that is wholly within 3″ of a friendly **&lt;DYNASTY&gt; MONOLITH** model and more than 9″ away from any enemy models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Dimensional Destabilisation": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **C'TAN SHARD** model from your army has used a Power of the C'tan. Roll one D6; that model can immediately use the corresponding power from the [Powers of the C'tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)**, even if it has already been used this turn. If that model has the TITANIC** keyword, this Stratagem costs 2CP; otherwise it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/1",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Disintegration Capacitors": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **NECRONS** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a [gauss weapon](https://wahapedia.ru/wh40k9ed/factions/necrons/#Gauss-Weapons), an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Disruption Fields": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **NECRONS CORE** unit from your army is selected to fight. Until the end of the phase, add 1 to the Strength characteristic of models in that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Dynastic Heirlooms": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the NECRONS** keyword. Select one **NECRONS CHARACTER** model (excluding **C'TAN SHARD** models) in your army and give them one [Relic](https://wahapedia.ru/wh40k9ed/factions/necrons/#Relics-of-the-Aeons) (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Efficient Disintegration": {
+        "text": "Use this Stratagem in any phase, when a **LOKHUST DESTROYERS** or **LOKHUST HEAVY** DESTROYERS** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a gauss cannon or gauss destructor, add 1 to the damage roll for that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Empyric Damping": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when an enemy **PSYKER** attempts to [manifest a psychic power](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) within 18″ of a SZAREKHAN** unit from your army. Roll one D6: on a 4+, that psychic power is [denied](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Enhanced Gloom Prism": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), before you take a [Deny the Witch test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) for a **CANOPTEK SPYDERS** unit from your army. Add 2 to the result of that test.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Enslaved Protectors": {
+        "text": "Use this Stratagem in your opponent's [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **CANOPTEK** unit from your army. Until the end of the phase, that unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it was a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Entropic Strike": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **C'TAN SHARD** model from your army is selected to fight. Until the end of the phase, each time a melee attack is made by that model, [invulnerable saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be taken against that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Eternal Protectors": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select a **&lt;DYNASTY&gt; LYCHGUARD** unit from your army. Until the end of the phase, while that unit is within 3″ of a friendly **&lt;DYNASTY&gt; NOBLE** model, add 1 to the Attacks characteristic of each model in that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Exalted Cryptek": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **CRYPTEK** model from your army. That model can be equipped with two items of [Cryptek Arkana](https://wahapedia.ru/wh40k9ed/factions/necrons/#Cryptek-Arkana) instead of one. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Extermination Protocols": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **LOKHUST DESTROYERS** or **LOKHUST HEAVY** DESTROYERS** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Fractal Targeting": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **TOMB BLADES** unit from your army. Until the end of the phase:\n\n* All [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE) that models in that unit are equipped with are treated as being [Assault 2](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT) weapons.\n* Models in that unit do not suffer the penalty to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) incurred for firing [Assault weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT) in the same turn that their unit has [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Hand Of The Phaeron": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. If your army does not contain a model with the **PHAERON** keyword, select one **NECRONS OVERLORD** model from your army (excluding named characters). That model gains the PHAERON** keyword, and in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) it can use its My Will Be Done** ability one additional time. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 2,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command",
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Hyperdense Particle Beams": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **CULT** OF** THE** CRYPTEK** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a [particle beamer](https://wahapedia.ru/wh40k9ed/factions/necrons/#Particle-beamer) or [particle caster](https://wahapedia.ru/wh40k9ed/factions/necrons/#Particle-caster), improve the Armour Penetration characteristic of that attack by 2.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Hyperphase Impalement": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **OPHYDIAN DESTROYERS** unit from your army is selected to fight. Until that fight is resolved, each time a model in that unit makes a melee attack, rules that ignore wounds cannot be used.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Judgement Of The Triarch": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **TRIARCH** unit is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a TRIARCH** unit is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Lurking Murderers": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **FLAYED ONES** unit from your army that is [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) an [Area Terrain](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Area-Terrain) feature. Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll). If that unit contains 11 or more models this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Malevolent Arcing": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **NECRONS** model from your army targets an enemy unit with a [tesla weapon](https://wahapedia.ru/wh40k9ed/factions/necrons/#Tesla-Weapons). After making that weapon's attacks, roll one D6 for each other unit within 6″ of that enemy unit: on a 4+, the unit being rolled for suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Methodical Destruction": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), after a **SAUTEKH** unit from your army has finished making its attacks. Select one enemy unit that was targeted by an attack made by a model in that unit this phase. Until the end of the phase, each time an attack is made by a model in another friendly SAUTEKH** unit against that enemy unit, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Murderous Demise": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CHARACTER** model from your army that has not already been selected to fight this phase is destroyed, instead of using any other abilities that trigger when that model is destroyed. Do not remove that model from play - after the attacking model’s unit has finished [making attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Making-Attacks), that destroyed model can either shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), or be selected to fight. After resolving the destroyed model’s attacks, it is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight",
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Overkill Protocols": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **CANOPTEK WRAITHS** unit from your army. Until the start of your next Command phase:\n\n* Each time a model in that unit makes an attack with [vicious claws](https://wahapedia.ru/wh40k9ed/factions/necrons/#Vicious-claws), improve the Armour Penetration characteristic of that attack by 1.\n* Each time a model in that unit makes an attack with [whip coils](https://wahapedia.ru/wh40k9ed/factions/necrons/#Whip-coils), make one additional [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Prismatic Dimensional Breach": {
+        "text": "Use this Stratagem in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **&lt;DYNASTY&gt; CORE** unit from your army that is in [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves), and then select one friendly **&lt;DYNASTY&gt; NIGHT** SCYTHE** or **&lt;DYNASTY&gt; MONOLITH** model that is on the battlefield. Set that CORE** unit up anywhere on the battlefield that is wholly within 3″ of that NIGHT** SCYTHE** or MONOLITH** model and not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. This Stratagem cannot be used in the first battle round.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Quantum Deflection": {
+        "text": "Use this Stratagem in any phase, when a **NECRONS QUANTUM** SHIELDING** unit from your army is selected as the target of an attack. Until the end of the phase, models in that unit have a 4+ invulnerable save.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Rarefied Nobility": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the NECRONS** keyword. Select one **NECRONS CHARACTER** model (excluding **C'TAN SHARD** models) in your army and determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/factions/necrons/#Warlord-Traits) for that model (this must be a Warlord Trait they can have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Reanimation Prioritisation": {
+        "text": "Use this Stratagem in your opponent's [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **NECRONS** unit from your army is selected as the target of an attack. Select one **CANOPTEK REANIMATOR** model in your army that is within 6″ of and visible to the targeted unit. That model can use its Nanoscarab Reanimation Beam** ability as if it was your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), selecting the targeted unit to be healed by its reanimation beam (any unit that was already being healed by that model's reanimation beam is no longer considered to be healed by it).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Reclaim A Lost Empire": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **NIHILAKH INFANTRY** unit from your army that is currently performing an [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions). That unit can still shoot this phase without that action failing.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Reconstitution Protocols": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **GHOST ARK** unit from your army. Until the end of the phase, each time that unit uses its Repair Barge** ability, you can set up to D6 destroyed models back up on the battlefield, instead of D3.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Relentless Onslaught": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **CORE INFANTRY** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a [Rapid Fire](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE) weapon, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores one additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Resurrection Protocols": {
+        "text": "Use this Stratagem in any phase, when a **NECRONS INFANTRY** NOBLE** or **NECRONS INFANTRY** CRYPTEK** model from your army is destroyed. You can choose to roll one D6 at the end of the phase instead of using any rules that are triggered when that model is destroyed (e.g. the Surrogate Hosts** abilities). If you do, then on a 4+, set that model back up on the battlefield as close as possible to where they were destroyed and more than 1″ away from any enemy models, with D3 wounds remaining. This Stratagem cannot be used to set the same model back up more than once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Revenge Of The Doomstalker": {
+        "text": "Use this Stratagem in any phase, when a **&lt;DYNASTY&gt; CHARACTER** unit from your army is destroyed by an enemy unit. Select one friendly **&lt;DYNASTY&gt; CANOPTEK** DOOMSTALKER** model from your army.\n\n* At the end of the phase, that CANOPTEK** DOOMSTALKER** model can shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), but it can only target that enemy unit (and only if that enemy unit is an eligible target for that attack).\n* Until the end of the battle, each time that CANOPTEK** DOOMSTALKER** model makes an attack that targets that enemy unit, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Self-destruction": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CANOPTEK SCARAB** SWARMS** unit from your army is selected to fight. Select one model in that unit. After that unit has finished [piling in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In), you can select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that model and roll one D6: on a 2-5, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6, that enemy unit suffers 3 mortal wounds. The CANOPTEK** SCARAB** SWARM** model is then destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Shadows Of Drazak": {
+        "text": "Use this Stratagem in any phase, when a **FLAYED ONES** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Solar Pulse": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit. Until the end of the phase, each time a model in a **NECRONS** unit from your army makes a ranged attack against that enemy unit, the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Stalking Annihilator": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **CANOPTEK DOOMSTALKER** model from your army that made a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) or [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) this turn. That model is eligible to shoot this turn. When it does so, you can select the high power profile of that model’s [doomsday blaster](https://wahapedia.ru/wh40k9ed/factions/necrons/#Doomsday-blaster) even though that model did not [Remain Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Stellar Alignment Protocol": {
+        "text": "Use this Stratagem in the [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **NECRONS VEHICLE** model from your army that has a Wounds characteristic of 10 or more. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use. If that model has the TITANIC** keyword, this Stratagem costs 2CP; otherwise it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/1",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Storm Of Flensing Blades": {
+        "text": "Use this Stratagem at the end of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **FLAYED ONES** unit from your army within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units; that unit can [fight again](https://wahapedia.ru/wh40k9ed/the-rules/rules-appendix/#Fight-Again).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Strange Echoes": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **C'TAN SHARD** model from your army. Select one of the powers from the [Powers of the C'tan](https://wahapedia.ru/wh40k9ed/factions/necrons/#Powers-of-the-C-tan)** that the model does not know. The selected power replaces one of the Powers of the C'tan that the model does know.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Swift Dismemberment": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **DESTROYER CULT** unit from your army. Until the end of the turn, that unit is [eligible to charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Charges) in a turn in which it [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Talent For Annihilation": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **MEPHRIT** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage (a maximum of 3 mortal wounds can be inflicted per phase via this Stratagem).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Techno-oracular Targeting": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), before making the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for an attack made by a **NECRONS** model from your army. Do not make a wound roll for that attack: it automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§The Deathless Arise": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **TECHNOMANCER** model from your army. Until the end of the phase, that model can use its Rites of Reanimation** ability one additional time.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§The Swarm Descends": {
+        "text": "Use this Stratagem before the battle. Select one **CANOPTEK SCARAB** SWARM** unit from your army. That unit gains the **Dimensional Translocation** ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Translocation Crypt": {
+        "text": "Use this Stratagem before the battle when declaring reserves and transports (if you are playing a mission without this step, use this Stratagem during deployment instead). Select one **NEPHREKH** unit (excluding VEHICLE** or MONSTER** units) from your army. That unit gains the **Dimensional Translocation** ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Weaponised Bodies": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **DESTROYER CULT** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that DESTROYER** CULT** unit. For each model in that DESTROYER** CULT** unit that is within Engagement Range of that enemy unit, roll a number of D6 equal to that model’s Wounds characteristic. For each result of 5+, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (to a maximum of 6 mortal wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
+      "Stratagem§Whirling Onslaught": {
+        "text": "Use this Stratagem in any phase, when a **SKORPEKH DESTROYERS** or **SKORPEKH LORD** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract l from that attack's [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Necrons Strat"
+          ]
+        }
+      },
       "Troops§Immortals": {
         "stats": {
           "Power Level": {
@@ -12043,8 +13207,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "The bearer has a Move characteristic of 10″ and the [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying) keyword. In addition, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can repair one friendly [{v}**](https://wahapedia.ru/wh40k9ed/factions/necrons/#The-DYNASTY-Keyword) model within 3″ of this model. That model regains up to D3 lost wounds. Each model can only be repaired once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -12058,8 +13221,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "The bearer has the following ability: ‘**Control Node (Aura)**: While a friendly **{v} CANOPTEK** unit is within 6″ of this model, each time a model in that unit makes an attack, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -12113,8 +13275,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), the bearer can repair one friendly **{v} VEHICLE** model within 3″ of it. That model regains up to D3 lost wounds. Each model can only be repaired once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -12171,8 +13332,7 @@
             "statType": "term",
             "value": "&lt;DYNASTY&gt;",
             "text": "Once per battle, in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), the bearer can use its resurrection orb. If it does, select one friendly [**{v}**](https://wahapedia.ru/wh40k9ed/factions/necrons/#The-DYNASTY-Keyword) unit within 6″ of the bearer that is not at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) and has not had its **reanimation protocols** enacted this phase. That unit's reanimation protocols are enacted, and every destroyed model in that unit begins to reassemble.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -12269,156 +13429,61 @@
         }
       },
       "Warlord Trait§Codifier Of Lesser Beings": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **CULT** OF** THE** CRYPTEK** unit within 6″ of this WARLORD** and one enemy unit that is visible to this WARLORD**. Until the start of your next Command phase, each time that friendly CULT** OF** THE** CRYPTEK** unit makes an attack that targets the selected enemy unit, you can add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Cult of the Cryptek 4"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **CULT** OF** THE** CRYPTEK** unit within 6″ of this WARLORD** and one enemy unit that is visible to this WARLORD**. Until the start of your next Command phase, each time that friendly CULT** OF** THE** CRYPTEK** unit makes an attack that targets the selected enemy unit, you can add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Conductor Of Legions": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **CULT** OF** THE** CRYPTEK** unit within 9″ of this WARLORD**. Until the start of your next Command phase, if that unit is [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions), it can make ranged attacks without that action failing.",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Cult of the Cryptek 3"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **CULT** OF** THE** CRYPTEK** unit within 9″ of this WARLORD**. Until the start of your next Command phase, if that unit is [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions), it can make ranged attacks without that action failing."
       },
       "Warlord Trait§Curator Of Deadly Curiosities": {
-        "text": "When you select this Warlord Trait, select one weapon this **WARLORD** is equipped with (excluding Relics):\n\n* Improve the Armour Penetration characteristic of that weapon by 1.\n* Add 1 to the Strength and Damage characteristics of that weapon.",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Cult of the Cryptek 2"
-          }
-        }
+        "text": "When you select this Warlord Trait, select one weapon this **WARLORD** is equipped with (excluding Relics):\n\n* Improve the Armour Penetration characteristic of that weapon by 1.\n* Add 1 to the Strength and Damage characteristics of that weapon."
       },
       "Warlord Trait§Enduring Will": {
-        "text": "Each time an attack is allocated to this **WARLORD**, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "Each time an attack is allocated to this **WARLORD**, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
       },
       "Warlord Trait§Eternal Madness": {
-        "text": "Each time this **WARLORD** makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Fluid Necrodermis": {
-        "text": "* You can ignore any or all [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics) to this **WARLORD**’s Move characteristic and to [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this WARLORD**.\n* Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this WARLORD**, the Damage characteristic of that attack is changed to 0.",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Cult of the Cryptek 5"
-          }
-        }
+        "text": "* You can ignore any or all [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics) to this **WARLORD**’s Move characteristic and to [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this WARLORD**.\n* Once per turn, the first time a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for this WARLORD**, the Damage characteristic of that attack is changed to 0."
       },
       "Warlord Trait§Furious Destructor": {
-        "text": "Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) makes a melee attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 2 additional hits.",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Annihilation Legion"
-          }
-        }
+        "text": "Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) makes a melee attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 2 additional hits."
       },
       "Warlord Trait§Honourable Combatant": {
-        "text": "In the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), each time this **WARLORD** is selected to fight, it can engage in honourable combat. If it does, select one enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit; until the end of the phase, add 2 to the Attacks characteristic of this WARLORD**, but it can only make attacks that target that enemy CHARACTER** unit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "In the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), each time this **WARLORD** is selected to fight, it can engage in honourable combat. If it does, select one enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit; until the end of the phase, add 2 to the Attacks characteristic of this WARLORD**, but it can only make attacks that target that enemy CHARACTER** unit."
       },
       "Warlord Trait§Immortal Pride": {
-        "text": "* Each time this **WARLORD** would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 5+, that wound is not lost.\n* This WARLORD** has the following ability: ‘Immortal Pride (Aura)**: While a friendly **&lt;DYNASTY&gt; CORE** unit is within 6″ of this model, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, ignore any or all modifiers’.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "* Each time this **WARLORD** would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 5+, that wound is not lost.\n* This WARLORD** has the following ability: ‘Immortal Pride (Aura)**: While a friendly **&lt;DYNASTY&gt; CORE** unit is within 6″ of this model, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, ignore any or all modifiers’."
       },
       "Warlord Trait§Implacable Conqueror (aura)": {
-        "text": "While a friendly **&lt;DYNASTY&gt; CORE** unit is within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "While a friendly **&lt;DYNASTY&gt; CORE** unit is within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit."
       },
       "Warlord Trait§Infomonger": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **CULT** OF** THE** CRYPTEK** unit that is within 6″ of this WARLORD**. Until the end of the battle round, that unit benefits from both directives of the active **command protocol** instead of only the selected one.",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Cult of the Cryptek 6"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **CULT** OF** THE** CRYPTEK** unit that is within 6″ of this WARLORD**. Until the end of the battle round, that unit benefits from both directives of the active **command protocol** instead of only the selected one."
       },
       "Warlord Trait§Master Of The Cult": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **CULT** OF** THE** CRYPTEK** unit within 9″ of this WARLORD**. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Cult of the Cryptek 1"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **CULT** OF** THE** CRYPTEK** unit within 9″ of this WARLORD**. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Warlord Trait§Mephrit: Merciless Tyrant": {
-        "text": "Add 1 to the Strength and Attacks characteristics of this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Add 1 to the Strength and Attacks characteristics of this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord)."
       },
       "Warlord Trait§Nephrekh: Skin Of Living Gold": {
-        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attacks [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attacks [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Warlord Trait§Nihilakh: Precognitive Strike": {
-        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this **WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this **WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase."
       },
       "Warlord Trait§Novokh: Blood-fuelled Fury": {
-        "text": "Each time this **WARLORD** makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage."
       },
       "Warlord Trait§Sautekh: Hyperlogical Strategist": {
-        "text": "While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem you can roll one D6: on a 5+, that Command point is refunded.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem you can roll one D6: on a 5+, that Command point is refunded."
       },
       "Warlord Trait§Szarekhan: The Triarch’s Will": {
-        "text": "If your **WARLORD** has this Warlord Trait, then when assigning **command protocols** for the battle, you can select four command protocols instead of five, and then one of those command protocols can be assigned to two battle rounds instead of one.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "If your **WARLORD** has this Warlord Trait, then when assigning **command protocols** for the battle, you can select four command protocols instead of five, and then one of those command protocols can be assigned to two battle rounds instead of one."
       },
       "Warlord Trait§Thrall Of The Silent King": {
-        "text": "Add 3″ to the range of this **WARLORD**'s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 9\"). In addition, when this WARLORD** uses its My Will Be Done**, The Lord's Will** or Adaptive Strategy** abilities, you can select one friendly **&lt;DYNASTY&gt; CORE** unit within 12″ of this WARLORD**, instead of 9\".",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "Add 3″ to the range of this **WARLORD**'s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 9\"). In addition, when this WARLORD** uses its My Will Be Done**, The Lord's Will** or Adaptive Strategy** abilities, you can select one friendly **&lt;DYNASTY&gt; CORE** unit within 12″ of this WARLORD**, instead of 9\"."
       },
       "Weapon§Abyssal lance (melee)": {
         "stats": {
@@ -12429,7 +13494,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12467,7 +13533,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12564,7 +13631,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12584,7 +13652,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12601,10 +13670,12 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12620,7 +13691,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -12640,7 +13712,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -12682,7 +13755,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12698,7 +13772,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -12717,7 +13792,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -12796,10 +13872,12 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12841,7 +13919,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12861,7 +13940,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12880,7 +13960,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -12916,7 +13997,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -12936,7 +14018,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+6"
+            "value": "D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 16
@@ -12956,7 +14039,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 12
@@ -13014,7 +14098,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -13036,7 +14121,8 @@
             "value": -4
           },
           "D": {
-            "value": "3D3"
+            "value": "3D3",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -13055,7 +14141,8 @@
             "value": -3
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -13172,7 +14259,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13188,7 +14276,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -13211,7 +14300,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 12
@@ -13230,7 +14320,8 @@
             "value": -5
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -13250,7 +14341,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -13330,7 +14422,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13350,7 +14443,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13370,7 +14464,8 @@
             "value": 5
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13386,7 +14481,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -13409,7 +14505,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13447,7 +14544,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13564,7 +14662,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13602,7 +14701,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13622,7 +14722,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13641,7 +14742,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13680,7 +14782,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13795,7 +14898,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13830,7 +14934,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -13850,7 +14955,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -13869,7 +14975,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -13889,7 +14996,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -13912,7 +15020,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13950,7 +15059,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -14024,10 +15134,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -14047,7 +15159,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -14102,7 +15215,8 @@
             "value": -5
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 12
@@ -14359,7 +15473,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 7
@@ -14446,7 +15561,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -14466,7 +15582,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -14508,7 +15625,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"

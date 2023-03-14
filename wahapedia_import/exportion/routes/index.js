@@ -51,6 +51,7 @@ router.get('/:faction', async function (req, res, next) {
   allResults['!'] = processInfo(allResults,req.params.faction);
   allResults['!'].manifest.assetTaxonomy = processClasses(allResults);
   allResults['!'].manifest.assetCatalog = processItems(allResults);
+  processStratagems(allResults);
   res.send(JSON.stringify(allResults['!']));
 });
 

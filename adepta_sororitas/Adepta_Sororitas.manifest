@@ -1,11 +1,11 @@
 {
   "name": "Adepta Sororitas",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -50,7 +50,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitOrder": {
             "evals": [
               {
                 "paths": [
@@ -68,6 +68,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -77,9 +78,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Order",
                     "value"
@@ -92,6 +90,22 @@
                   "Order",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Order",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -111,6 +125,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -121,6 +149,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -146,6 +182,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -156,6 +206,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -181,6 +239,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -191,6 +263,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -216,6 +296,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -226,6 +320,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -251,6 +353,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -261,6 +377,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -286,6 +410,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -298,6 +436,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -308,17 +454,106 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Blind Faith",
+            "Stratagem§Honour The Martyrs",
+            "Stratagem§Cleansing Flames",
+            "Stratagem§Faith Is Our Shield",
+            "Stratagem§Tear Them Down",
+            "Stratagem§The Emperor’s Judgement",
+            "Stratagem§Cleansed By Fire",
+            "Stratagem§Embodied Prophecy",
+            "Stratagem§Exceptional Proficiency",
+            "Stratagem§Extremis Trigger Word",
+            "Stratagem§Suffer Not The Witch",
+            "Stratagem§Divine Intervention",
+            "Stratagem§Fiery Oratory",
+            "Stratagem§Martyr’s Immolation",
+            "Stratagem§Rites Of Restoration",
+            "Stratagem§Martyred",
+            "Stratagem§Moment Of Grace",
+            "Stratagem§Suffering And Sacrifice",
+            "Stratagem§Angelic Ascent",
+            "Stratagem§Battle Rites",
+            "Stratagem§Deadly Descent",
+            "Stratagem§Defenders Of The Faith",
+            "Stratagem§Desperate For Redemption",
+            "Stratagem§Devastating Refrain",
+            "Stratagem§Holy Rage",
+            "Stratagem§Purity Of Faith",
+            "Stratagem§Faith And Fury",
+            "Stratagem§Final Redemption",
+            "Stratagem§Judgement Of The Faithful",
+            "Stratagem§Righteous Impact",
+            "Stratagem§Blessed Bolts",
+            "Stratagem§Holy Smokescreen",
+            "Stratagem§Holy Trinity",
+            "Stratagem§Inviolate Shieldwall",
+            "Stratagem§Thrice-blessed Hull",
+            "Stratagem§Vengeance For Armageddon",
+            "Stratagem§Zealous Death Wish",
+            "Stratagem§Pious Machine Spirit",
+            "Stratagem§Rejoice The Fallen",
+            "Stratagem§Martyr’s Pyre",
+            "Stratagem§Death Before Disgrace",
+            "Stratagem§A Martyr’s Duty",
+            "Stratagem§Scourge Of The Penitent",
+            "Stratagem§Wade Into The Foe",
+            "Stratagem§Clear The Flanks",
+            "Stratagem§Outrage Of The Matriarch",
+            "Stratagem§Carry Forth The Faithful",
+            "Stratagem§Fuelled By Rage",
+            "Stratagem§Catechism Of Wrathful Defiance",
+            "Stratagem§Savage Twist"
+          ]
+        }
+      },
       "Relics of the Ecclesiarchy": {
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Order": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Order of the Argent Shroud": {
+                "order": 1
+              },
+              "Order of the Bloody Rose": {
+                "order": 2
+              },
+              "Order of the Ebon Chalice": {
+                "order": 3
+              },
+              "Order of Our Martyred Lady": {
+                "order": 4
+              },
+              "Order of the Sacred Rose": {
+                "order": 5
+              },
+              "Order of the Valorous Heart": {
+                "order": 6
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceOrderKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Order",
                     "value"
@@ -326,7 +561,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -336,7 +572,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Order>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -355,7 +591,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Order>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -368,12 +604,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Order",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityOrder": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Order",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Order",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -414,8 +691,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "While a friendly **SANCTIFIED CHARACTER** or **{v} CHARACTER** unit is within 3″ of this unit, that CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -450,8 +726,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} SISTERS** REPENTIA** unit within 3″ of this model. If you do so, until the end of the turn, this model and that unit are both eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which they [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), and, until the end of the turn, each time a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) is made for this model or that unit, roll one additional D6 and discard one of the results.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -483,8 +758,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -537,8 +811,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -555,8 +828,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "This model gains an ability (see below) depending on which tale it is recounting. At the start of the battle, before the first turn begins, you must select one tale from the following list for this model to recount, and make a note of it on your [army roster](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battle-forged-Army-Roster). You cannot select a tale that another model from your army is already recounting unless all three tales are being recounted by models from your army. Until the end of the battle, this model has the ability associated with that tale.\n\n* **Tale of the Faithful (Aura)**:** While a friendly **{v} CORE** unit is within 6″ of this model, you can re-roll [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.\n* Tale of the Stoic (Aura)**:** While a friendly {v}** CORE** unit is within 6″ of this model, each time an attack with a Strength characteristic of 3 or less is made against that unit, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Tale of the Warrior (Aura)**:** While a friendly {v}** CORE** unit is within 6″ of this model, add 1 to the Strength characteristic of models in that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -588,8 +860,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "While a friendly **{v} SISTERS** REPENTIA** unit is within 6″ of this model, each time a model in that unit makes a melee attack, add 1 to the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -639,8 +910,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "While a friendly **{v} CORE** unit that is [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) is within 6″ of this model, that unit can shoot without that action failing.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -699,8 +969,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "While this unit is within 6″ of a friendly **{v} CANONESS** SUPERIOR**, **{v} CANONESS**, or **{v} PALATINE** model, each time a model in this unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -732,8 +1001,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CORE** unit within 6″ of this model. Until the start of your next Command phase, that unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -799,7 +1067,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Immolation flamers",
@@ -1175,7 +1444,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Repressor heavy flamer",
@@ -1602,7 +1872,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Storm bolter",
@@ -1902,23 +2173,17 @@
             "value": "Arco-flagellant"
           },
           "Endurant implants": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Endurant implants"
@@ -2074,23 +2339,17 @@
             "value": "Celestian"
           },
           "Incensor cherub": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2109,23 +2368,17 @@
             "dynamic": true
           },
           "Simulacrum imperialis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2385,7 +2638,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2465,7 +2719,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2546,7 +2801,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2625,7 +2881,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2704,7 +2961,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2831,7 +3089,8 @@
             "value": 7
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2903,7 +3162,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Zealot’s vindictor",
@@ -3076,7 +3336,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Neural whips",
@@ -3385,23 +3646,17 @@
             "value": "Dominion"
           },
           "Incensor cherub": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3420,23 +3675,17 @@
             "dynamic": true
           },
           "Simulacrum imperialis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3596,23 +3845,17 @@
             "value": "Zephyrim"
           },
           "Zephyrim pennant": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Zephyrim pennant"
@@ -3699,31 +3942,39 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "W": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "A": {
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3805,7 +4056,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Castigator autocannons",
@@ -4201,7 +4453,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Exorcist missile launcher",
@@ -4517,23 +4770,17 @@
             "value": "Mortifier"
           },
           "Anchorite sarcophagus": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Anchorite sarcophagus"
@@ -4690,23 +4937,17 @@
             "value": "Retributor"
           },
           "Armorium cherub": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4725,23 +4966,17 @@
             "dynamic": true
           },
           "Simulacrum imperialis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4856,7 +5091,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4901,23 +5137,17 @@
             "value": 3
           },
           "Null rod": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4936,23 +5166,17 @@
             "dynamic": true
           },
           "Rod of Office": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5001,7 +5225,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plasma pistol",
@@ -5947,7 +6172,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6031,7 +6257,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Auto pistol",
@@ -6627,7 +6854,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6714,7 +6942,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -7065,7 +7294,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7146,7 +7376,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7360,7 +7591,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7432,7 +7664,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7478,7 +7711,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7503,7 +7737,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -7524,7 +7759,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Arco-flails",
@@ -7607,7 +7843,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -7664,7 +7901,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -8701,7 +8939,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -8758,7 +8997,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -8815,7 +9055,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -9852,7 +10093,8 @@
             "value": 2
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -10324,7 +10566,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -10381,7 +10624,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -11418,7 +11662,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -11464,7 +11709,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -11506,7 +11752,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -11548,7 +11795,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -11605,7 +11853,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -12452,7 +12701,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -12509,7 +12759,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -13356,7 +13607,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -13404,7 +13656,8 @@
             "value": 2
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -13450,7 +13703,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -13498,7 +13752,8 @@
             "value": 4
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy bolter",
@@ -13676,7 +13931,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -14258,7 +14514,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -14946,7 +15203,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -15634,7 +15892,8 @@
             "value": 4
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Ministorum heavy flamer",
@@ -15788,7 +16047,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -15845,7 +16105,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -15902,7 +16163,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -16819,7 +17081,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -16876,7 +17139,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -17793,7 +18057,8 @@
             "value": 2
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -18265,7 +18530,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -18646,7 +18912,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -19027,7 +19294,8 @@
             "value": 4
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Auto pistol",
@@ -19609,7 +19877,8 @@
             "value": 7
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -19651,7 +19920,8 @@
             "value": 3
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -19708,7 +19978,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -20745,7 +21016,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -21057,7 +21329,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -21488,13 +21761,16 @@
       "Relics of the Ecclesiarchy§Light of Saint Agnaetha": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault D6"
@@ -21517,7 +21793,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -21537,7 +21814,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6+3"
+            "value": "D6+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -21600,7 +21878,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -21637,13 +21916,16 @@
       "Relics of the Ecclesiarchy§Tears of the Emperor": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Grenade 1"
@@ -21701,6 +21983,885 @@
         "text": "**ADEPTA** SORORITAS** model equipped with a bolt pistol only. This Relic replaces a bolt pistol and has the following profile:"
       },
       "Roster§Army": {},
+      "Stratagem§A Martyr’s Duty": {
+        "text": "Use this Stratagem in any phase, when an **ORDER OF** OUR** MARTYRED** LADY** CORE** unit from your army is selected as the target of an attack. Until the end of the phase, each time a model in this unit is destroyed, roll one D6. On a 4+, do not remove the destroyed model from play; it can, after the attacking model’s unit has finished making its attacks, either shoot with one of its ranged weapons as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) or make one attack with one of its melee weapons as if it were the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). When resolving these attacks, your model is considered to have 1 wound remaining. If the Spirit of the Martyr **sacred rite** is active for your army, or for that unit, resolve these attacks before resolving that sacred rite’s effects. After resolving these attacks, the destroyed model is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§A Sacred Burden": {
+        "text": "Use this Stratagem before the battle. Select one **ADEPTA SORORITAS** model (excluding CHARACTER** models) in your army that has the word ‘Superior’ in their profile. That model can have one of the following [Relics of the Ecclesiarchy](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Relics-of-the-Ecclesiarchy), even though they are not a CHARACTER** model: [Blessings of Sebastian Thor](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Blessings-of-Sebastian-Thor); [The Ecclesiarch’s Fury](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#The-Ecclesiarch-s-Fury); [Litanies of Faith](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Litanies-of-Faith); [Redemption](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Redemption). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Angelic Ascent": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **ADEPTA SORORITAS** JUMP** PACK** unit from your army. Remove this unit from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your next Movement phase, you can set this unit back up on the battlefield, anywhere that is more than 9″ away from any enemy models. If the battle ends and this unit is not on the battlefield, it is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Battle Rites": {
+        "text": "Use this Stratagem at the start of the battle round if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the **ADEPTA SORORITAS** keyword and is on the battlefield. Roll one D6 to randomly generate a **sacred rite** (roll again if the result is a sacred rite that is currently active for your army). Then, you can select one sacred rite that is currently active for your army and replace it with the result you just rolled (the replaced sacred rite is no longer active for your army and the sacred rite just rolled becomes active for your army). You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Blessed Bolts": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ADEPTA SORORITAS** unit from your army is selected to shoot. Until the end of the phase, each time an attack is made with an artificer-crafted storm bolter by a model in that unit, on an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6, the target suffers 2 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and the attack sequence ends (a maximum of 6 mortal wounds can be inflicted per phase via this Stratagem).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Blind Faith": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ORDER OF** THE** VALOROUS** HEART** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an ORDER** OF** THE** VALOROUS** HEART** unit from your army is selected to fight. Until the end of that phase, each time a model in that unit makes an attack, you can ignore any or all [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), Ballistic Skill and Weapon Skill modifiers.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Carry Forth The Faithful": {
+        "text": "Use this Stratagem at the start of the first battle round, before the first turn begins. Select one **ORDER OF** THE** BLOODY** ROSE** TRANSPORT** model from your army that has any models [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within it (this cannot be a model that has any **DOMINION SQUAD** models embarked within it). That model can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) as if it were your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), but must end that move more than 9″ away from any enemy models. If both players have units that can move before the first turn begins, the player who is taking the first turn moves their units first. If a **RETRIBUTOR SQUAD** or **SISTERS REPENTIA** unit is embarked inside that TRANSPORT**, this Stratagem costs 2CP; otherwise, it costs 1 CP. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Catechism Of Wrathful Defiance": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ORDER OF** THE** BLOODY** ROSE** INFANTRY** unit from your army. Until your next Command phase, that unit gains the following ability:\n\n\n\nWrathful Defiance (Aura)**:** While an enemy unit is within 6″ of this unit, each time a model in that enemy unit makes an attack that targets this unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n\n\n\nIf you select a unit that has 11 or more models, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Cleansed By Fire": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ADEPTUS MINISTORUM** unit from your army is chosen to shoot with. Until the end of that phase, when a model in that unit shoots with a flame weapon, do not roll to determine the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks-1) made with that weapon; instead, the maximum number of attacks are made with that weapon (e.g. 6 attacks are made with a [Heavy D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#HEAVY) weapon).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Cleansing Flames": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) when an **ORDER OF** THE** EBON** CHALICE** unit from your army is selected to shoot. Until the end of the phase:\n\n* Add 4″ to the range of all [flame weapons](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Flame-Weapons) that models  in that unit are equipped with.\n* Each time a model in that unit makes an attack with a flame weapon, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 4+, the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to any normal damage (a maximum of 3 mortal wounds can be inflicted per phase via this Stratagem).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Clear The Flanks": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit that is within 6″ of a battlefield edge that is not a player’s battlefield edge. Until the end of the phase, each time an **ORDER OF** THE** BLOODY** ROSE** model makes an attack with a [Heavy weapon](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#HEAVY) that targets that enemy unit, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Deadly Descent": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **SERAPHIM SQUAD** unit from your army that was set up as [Reinforcements](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) on the battlefield this turn. That unit can shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Death Before Disgrace": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **ORDER OF** OUR** MARTYRED** LADY** INFANTRY** or **ORDER OF** OUR** MARTYRED** LADY** PARAGON** WARSUIT** unit from your army. Until the start of your next Movement phase:\n\n* That unit cannot [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back).\n* That unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If that unit already has the Objective Secured ability, then for the purposes of determining which player controls an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers), each model in that unit counts as one additional model.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Defenders Of The Faith": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **BATTLE SISTERS** SQUAD** unit from your army that is within range of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers) on the battlefield. Until the start of your next Movement phase:\n\n* Instead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in this unit shooting Rapid Fire bolt weapons make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks). For the purposes of this Stratagem, a Rapid Fire bolt weapon is any [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Bolt-Weapons) with the Rapid Fire type.\n* Each time an attack is made against this unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Desperate For Redemption": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when a **SISTERS REPENTIA** unit from your army is targeted by a melee attack. Until the end of the phase, each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks. After doing so, any other rules that affect this model ‘when it is destroyed’ are triggered (if any), and then the model is removed from play.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Devastating Refrain": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **EXORCIST** model from your army is selected to shoot. Until the end of the phase, that model’s Exorcist missile launcher or Exorcist conflagration rockets can target units that are not visible to the bearer.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Divine Intervention": {
+        "text": "Use this Stratagem when an **ADEPTA SORORITAS** CHARACTER** model (excluding named characters) from your army is destroyed, instead of using any rules that are triggered when a model is destroyed (e.g. Sacrifice** or the [Chaplet of Sacrifice](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Chaplet-of-Sacrifice) Relic). Discard 1-3 **Miracle dice**. At the end of the phase, set that model back up on the battlefield as close as possible to where it was destroyed and not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy models. The model is returned to play with a number of wounds remaining equal to the number of Miracle dice you discarded. You cannot use this Stratagem if you do not have any Miracle dice remaining. This Stratagem can only be used once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Embodied Prophecy": {
+        "text": "Use this Stratagem in your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **ZEPHYRIM SQUAD** unit from your army. Until the end of that phase, each time a model in that unit makes a melee attack, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Exceptional Proficiency": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **CELESTIAN** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a CELESTIAN** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Exemplar Of The Order": {
+        "text": "Use this Stratagem after nominating an **ORDER** OF** OUR** MARTYRED** LADY** model (excluding named characters) to be your WARLORD**. That model gains one additional Warlord Trait; this must be from the Order of [Our Martyred Lady Warlord Traits](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Warlord-Traits-3) table. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Extremis Trigger Word": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ARCO-FLAGELLANTS** unit from your army is selected to fight. Until the end of that phase, change the ability of all arco-flails models in that unit are equipped with to the following: ‘Each time an attack is made with this weapon, make 3 [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) instead of 1.’ At the end of the phase, roll one D6 for each model in that unit: for each 1, one model in that unit is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Faith And Fury": {
+        "text": "Use this Stratagem after an **ADEPTA SORORITAS** unit from your army has performed an **Act of** Faith** for an attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). You can reuse the same **Miracle dice** for that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) (this does not count as having performed another Act of Faith).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Faith Is Our Shield": {
+        "text": "Use this Stratagem in any phase, when an **ORDER OF** THE** ARGENT** SHROUD** model from your army would lose a wound as a result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). Until the end of that phase, each time that model, or any other model in its unit, would lose a wound as a result of a mortal wound, roll one D6: on a 4+, that wound is not lost.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Fiery Oratory": {
+        "text": "Use this Stratagem at the start of any of your phases other than your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ADEPTUS MINISTORUM** PRIEST** model from your army that has not intoned a [hymn](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Hymns-of-Battle) this turn. That model can intone one hymn that it knows that has not already been intoned by a friendly model this turn. That hymn is automatically inspiring (do not roll) and takes effect until the start of your next Command phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Final Redemption": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ENGINE OF** REDEMPTION** unit from your army is targeted by a melee attack. Until the end of the phase, each time a model in this unit is destroyed by a melee attack, roll one D6: on a 4+, after the attacking model’s unit has finished making its attacks, it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Fuelled By Rage": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ORDER OF** THE** BLOODY** ROSE** CORE** unit from your army is selected as the target of a ranged attack. Until the end of the phase, each time a model in that unit is destroyed by an attack made by an enemy model, roll one D6. On a 4+, do not remove the destroyed model from play - it can, after the attacking model’s unit has finished making its attacks, shoot with one of its ranged weapons as if it were your Shooting phase. After resolving these attacks, the destroyed model is then removed. If the selected ORDER** OF** THE** BLOODY** ROSE** unit is a **RETRIBUTOR SQUAD** unit, this Stratagem costs 2CP, otherwise it costs 1 CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Holy Rage": {
+        "text": "Use this Stratagem at the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **ADEPTA SORORITAS** CORE** unit from your army. Until the start of your next [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), that unit gains either the Zealot ability or the Fanatic ability, as shown below:\n\n* Zealot**:** Each time a model in this unit makes a melee attack, if this unit made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, you can re-roll that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Fanatic**:** This unit is eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back).If that unit is within 6″ of an **ADEPTUS MINISTORUM** PRIEST** model when this Stratagem is used, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge",
+            "Command"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Holy Smokescreen": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ADEPTA SORORITAS** SMOKESCREEN** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Holy Trinity": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ADEPTA SORORITAS** unit from your army is selected to shoot. Select one eligible target for that unit that is within range of, and visible to, at least one model in that unit equipped with a [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Bolt-Weapons), one model in that unit equipped with a [flame weapon](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Flame-Weapons) and one model in that unit equipped with a [melta weapon](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Melta-Weapons). Until the end of the phase, models in that unit can only make attacks that target that enemy unit, but each time such an attack is made with a bolt weapon, a flame weapon or a melta weapon, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Honour The Martyrs": {
+        "text": "Use this Stratagem at the end of a phase in which an **ORDER OF** OUR** MARTYRED** LADY** CHARACTER** model from your army was destroyed by an enemy unit (excluding models that were destroyed and subsequently returned to the battlefield that phase due to any rules, e.g. the [Divine Intervention](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Stratagems) Stratagem). Until the end of the battle, each time an ORDER** OF** OUR** MARTYRED** LADY** model makes an attack against that enemy unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Inviolate Shieldwall": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **CELESTIAN SACRESANTS** or CRUSADERS** unit from your army. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Judgement Of The Faithful": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when an **ADEPTA SORORITAS** CORE** unit from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). That unit is still eligible to shoot this turn even though it Fell Back.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Martyr’s Immolation": {
+        "text": "Use this Stratagem in any phase, when an **IMMOLATOR** model from your army that is equipped with immolation flamers is destroyed. Do not roll to see if that model explodes: it does so automatically.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Martyr’s Pyre": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **ORDER OF** OUR** MARTYRED** LADY** INFANTRY** unit from your army that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of one or more enemy units. Until the end of that phase:\n\n* The type of all [flame weapons](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Flame-Weapons) models in that unit are equipped with is changed to [Pistol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PISTOL) (e.g. an [Assault D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT) flame weapon becomes [Pistol D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PISTOL)).\n* After this unit has resolved its attacks, roll one D6 for each model in that unit that fired a flame weapon: for each roll of a 1, one of those models (of your choosing) can [shoot again](https://wahapedia.ru/wh40k9ed/the-rules/rules-appendix/#Shoot-Again) with its flame weapon, but after this second shooting attack is resolved, and whether it shot or not, that model is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Martyred": {
+        "text": "Use this Stratagem when you gain a **Miracle dice** due to Sacrifice. You gain 1 additional Miracle dice (if the model that was destroyed was an ADEPTA** SORORITAS** [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) from your army, you instead gain D3+1 additional Miracle dice).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Moment Of Grace": {
+        "text": "Use this Stratagem after making a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) or [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for an attack made by an **ADEPTA SORORITAS** model from your army, or after making a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) for an ADEPTA** SORORITAS** model from your army. Discard 1-2 **Miracle dice** from your Miracle dice pool. Add 1 to the result of the roll for each Miracle dice you discarded. You cannot use this Stratagem if you do not have any Miracle dice remaining.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Open The Reliquaries": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the **ADEPTUS MINISTORUM** keyword. Select one **ADEPTUS MINISTORUM** CHARACTER** model from your army and give them one [Relic of the Ecclesiarchy](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Relics-of-the-Ecclesiarchy) (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Outrage Of The Matriarch": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when an **ORDER OF** THE** BLOODY** ROSE** CHARACTER** model from your army is selected to fight. Until the end of the phase, each time that model makes an attack that targets an enemy unit containing any models with a Wounds characteristic that exceeds its own:\n\n* Add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* On an unmodified wound roll of 6, improve the Armour Penetration characteristic of that attack by 2.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Pious Machine Spirit": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ORDER OF** OUR** MARTYRED** LADY** VEHICLE** model from your army that has a wounds characteristic of 10 or more. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Purity Of Faith": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), after a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is passed for an enemy **PSYKER** unit and after any [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) attempt is made (if any). If that enemy PSYKER** unit is within 24″ of any **ADEPTA SORORITAS** units from your army, roll one D6: on a 4+, that psychic power is denied.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Rejoice The Fallen": {
+        "text": "Use this Stratagem at the end of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **ORDER** OF** OUR** MARTYRED** LADY** unit from your army that was not below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) at the start of this phase, but which is now below Half-strength. That unit can shoot as if it were your Shooting phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Righteous Impact": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **PARAGON WARSUITS** or **ENGINE OF** REDEMPTION** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of your unit and roll one D6 for each model in your unit that is within Engagement Range of that enemy unit. For each dice result that equals or exceeds that enemy unit’s Toughness characteristic, it suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (for each unmodified roll of a 6, that enemy unit instead suffers D3 mortal wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Rites Of Restoration": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **HOSPITALLER** unit from your army and then select one friendly **ADEPTUS MINISTORUM** CORE** INFANTRY** unit that is not at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) and is within 3″ of that HOSPITALLER** unit. Up to D3 of the selected friendly unit’s destroyed models are returned to its unit with their full wounds remaining.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Saint In The Making": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the **ADEPTUS MINISTORUM** keyword. Select one **ADEPTUS MINISTORUM** CHARACTER** model from your army (excluding named characters) and determine one Warlord Trait for it (this must be a Warlord Trait it can have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Savage Twist": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when an **ORDER OF** THE** BLOODY** ROSE** INFANTRY** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack with a melee weapon (excluding a [close combat weapon](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Select-Weapon)), on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, increase the Damage characteristic of that attack by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Scourge Of The Penitent": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ORDER OF** THE** BLOODY** ROSE** REPENTIA** SUPERIOR** model from your army and one **SISTERS REPENTIA** unit within 6″ of that model. Until the end of the turn, add 1 to [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that SISTERS** REPENTIA** unit. If the SISTERS** REPENTIA** unit contains 5 or fewer models, this Stratagem costs 1 CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Suffer Not The Witch": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ADEPTUS MINISTORUM** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an ADEPTUS** MINISTORUM** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack against a PSYKER** unit, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) (if the attack is made by an **ADEPTUS MINISTORUM** CHARACTER** model, add 1 to that attack’s hit roll and add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Suffering And Sacrifice": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **ADEPTA SORORITAS** WARLORD**, [SAINT** POTENTIA**](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Trials-of-a-Living-Saint) or **LIVING SAINT** unit from your army (excluding VEHICLE** units): until the end of the phase, that unit is known as your Suffering unit. Until the end of the phase, each time an enemy unit is selected to fight, if a model in that enemy unit is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of your Suffering unit when your opponent is selecting targets for its attacks, those attacks can only target your Suffering unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Tear Them Down": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ORDER OF** THE** BLOODY** ROSE** unit from your army is selected to fight. Until the end of that phase, each time a model in that unit makes a melee attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§The Emperor’s Judgement": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) when an **ORDER OF** THE** SACRED** ROSE** unit from your army is selected to shoot. Until the end of the phase, each time an attack is made with a ranged weapon by a model in that unit, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Thrice-blessed Hull": {
+        "text": "Use this Stratagem at the start of your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **HALLOWED** model from your army. Until the end of the phase, that model gains the following ability: ‘Thrice-Blessed Hull (Aura)**:** While an enemy PSYKER** unit is within 12″ of this model, each time a [psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for that unit and that test is failed, that PSYKER** unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).’",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Vengeance For Armageddon": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ORDER** OF** OUR** MARTYRED** LADY** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack against an ORK** unit, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Wade Into The Foe": {
+        "text": "Use this Stratagem in your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **ORDER OF** THE** BLOODY** ROSE** PARAGON** WARSUITS** unit from your army that made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn. Until the end of the phase, each time a model in that unit makes an attack that targets an enemy unit that contained 6 or more models at the start of this phase, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 4+ scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
+      "Stratagem§Zealous Death Wish": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ORDER** OF** OUR** MARTYRED** LADY** unit from your army is selected to fight. Each time a model in that unit makes a melee attack against a unit that contained at least 5 more models than the attacker’s unit when it was selected to fight, add 1 to that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). For the purposes of this Stratagem, VEHICLE** models each count as 5 models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adepta Sororitas Strat"
+          ]
+        }
+      },
       "Troops§Battle Sisters Squad": {
         "stats": {
           "Power Level": {
@@ -21710,23 +22871,17 @@
             "value": "Battle Sister"
           },
           "Incensor cherub": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -21745,23 +22900,17 @@
             "dynamic": true
           },
           "Simulacrum imperialis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -21851,23 +23000,17 @@
             "value": 4
           },
           "Sacred banner": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -21886,23 +23029,17 @@
             "dynamic": true
           },
           "Simulacrum imperialis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -22125,8 +23262,7 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **{v} CORE** or **{v} CHARACTER** unit within 12″ of the bearer. Until the start of your next Command phase, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -22175,106 +23311,45 @@
             "statType": "term",
             "value": "&lt;ORDER&gt;",
             "text": "The bearer has the following ability: ‘**The Righteous Path (Aura)**:** While a friendly **{v} CORE** unit is within 6″ of this model, you can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
       "Warlord Trait§Beacon Of Faith": {
-        "text": "At the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this **WARLORD** is on the battlefield, you gain 1 **Miracle dice**. This Miracle dice can only be used when your WARLORD** performs an **Act of** Faith** or uses a [Miraculous ability](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Blessings-of-the-Faithful), and if not used by the start of your next Command phase, it is discarded. This Miracle dice can be used to perform an Act of Faith even if another unit from your army has already performed an Act of Faith this phase.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "At the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this **WARLORD** is on the battlefield, you gain 1 **Miracle dice**. This Miracle dice can only be used when your WARLORD** performs an **Act of** Faith** or uses a [Miraculous ability](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Blessings-of-the-Faithful), and if not used by the start of your next Command phase, it is discarded. This Miracle dice can be used to perform an Act of Faith even if another unit from your army has already performed an Act of Faith this phase."
       },
       "Warlord Trait§Executioner Of Heretics (aura)": {
-        "text": "While an enemy unit is within 6″ of this **WARLORD**:\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, subtract 1 from that Combat Attrition test.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "While an enemy unit is within 6″ of this **WARLORD**:\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, subtract 1 from that Combat Attrition test."
       },
       "Warlord Trait§Fiery Example": {
-        "text": "* Each time this **WARLORD** makes a melee attack against a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** destroys an enemy CHARACTER** unit, you gain 2 **Miracle dice**.",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Order of the Bloody Rose 1"
-          }
-        }
+        "text": "* Each time this **WARLORD** makes a melee attack against a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time this WARLORD** destroys an enemy CHARACTER** unit, you gain 2 **Miracle dice**."
       },
       "Warlord Trait§Incandescent Reprisal": {
-        "text": "* Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.\n* Once per phase, after an enemy unit shoots or fights, if this WARLORD** suffered any wounds as a result of those attacks:\n\n* If this WARLORD** is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, this WARLORD** can shoot with one ranged weapon it is equipped with. It can only target that enemy unit when doing so, and only if that enemy unit is an eligible target.\n* If this WARLORD** is within Engagement Range of any enemy units and has not already been selected to fight during this phase, it can immediately be selected to fight. It can only target that enemy unit when doing so, and only if that enemy unit is an eligible target.",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Order of the Bloody Rose 2"
-          }
-        }
+        "text": "* Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.\n* Once per phase, after an enemy unit shoots or fights, if this WARLORD** suffered any wounds as a result of those attacks:\n\n* If this WARLORD** is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, this WARLORD** can shoot with one ranged weapon it is equipped with. It can only target that enemy unit when doing so, and only if that enemy unit is an eligible target.\n* If this WARLORD** is within Engagement Range of any enemy units and has not already been selected to fight during this phase, it can immediately be selected to fight. It can only target that enemy unit when doing so, and only if that enemy unit is an eligible target."
       },
       "Warlord Trait§Indomitable Belief (aura)": {
-        "text": "While a friendly **&lt;ORDER&gt; CORE** INFANTRY** unit is within 6″ of this WARLORD**, the [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) models in that unit receive from the **Shield of** Faith** ability is improved by 1 (to a maximum of 4+).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "While a friendly **&lt;ORDER&gt; CORE** INFANTRY** unit is within 6″ of this WARLORD**, the [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) models in that unit receive from the **Shield of** Faith** ability is improved by 1 (to a maximum of 4+)."
       },
       "Warlord Trait§Inspiring Orator": {
-        "text": "* Each time this **WARLORD** intones a [hymn](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Hymns-of-Battle) or uses an ability in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) that specifies a range, you can add 3″ to the range of that hymn or ability. This does not affect the [Miracle range](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Blessings-of-the-Faithful) of any abilities.\n* This WARLORD** has the following ability: ‘Inspiring Orator (Aura)**:** While a friendly **&lt;ORDER&gt; CORE** unit is within 6″ of this WARLORD**, that unit ignores the [Combat Attrition](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) penalty for being below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units).’",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "* Each time this **WARLORD** intones a [hymn](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Hymns-of-Battle) or uses an ability in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) that specifies a range, you can add 3″ to the range of that hymn or ability. This does not affect the [Miracle range](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Blessings-of-the-Faithful) of any abilities.\n* This WARLORD** has the following ability: ‘Inspiring Orator (Aura)**:** While a friendly **&lt;ORDER&gt; CORE** unit is within 6″ of this WARLORD**, that unit ignores the [Combat Attrition](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) penalty for being below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units).’"
       },
       "Warlord Trait§Martyr’s Strength": {
-        "text": "For each wound this **WARLORD** has lost, add 1 to its Strength and Attacks characteristic (to a maximum of +2 each).",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Order of Our Martyred Lady 3"
-          }
-        }
+        "text": "For each wound this **WARLORD** has lost, add 1 to its Strength and Attacks characteristic (to a maximum of +2 each)."
       },
       "Warlord Trait§Pure Of Will": {
-        "text": "* This **WARLORD** can attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one additional psychic power in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), as described in the **Shield of** Faith** ability.\n* Add 3 to [Deny the Witch tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) taken for this WARLORD**.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "* This **WARLORD** can attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one additional psychic power in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), as described in the **Shield of** Faith** ability.\n* Add 3 to [Deny the Witch tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) taken for this WARLORD**."
       },
       "Warlord Trait§Red-handed Castigator": {
-        "text": "* Each time you gain a **Miracle dice** at the end of a phase as a result of the Vengeance ability, if this WARLORD** destroyed any enemy units during that phase, that Miracle dice is automatically a 6.\n* Each time this WARLORD** makes a melee attack, if this WARLORD** made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, you can re-roll that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Order of the Bloody Rose 3"
-          }
-        }
+        "text": "* Each time you gain a **Miracle dice** at the end of a phase as a result of the Vengeance ability, if this WARLORD** destroyed any enemy units during that phase, that Miracle dice is automatically a 6.\n* Each time this WARLORD** makes a melee attack, if this WARLORD** made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, you can re-roll that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Warlord Trait§Righteous Rage": {
-        "text": "Each time this **WARLORD** makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Saint Katherine’s Legacy": {
-        "text": "* The Spirit of the Martyr **sacred rite** is active for this WARLORD** in addition to any others that are active for your army.\n* This WARLORD** has the following ability: ‘Saint Katherine's Legacy (Aura)**:** While a friendly ORDER** OF** OUR** MARTYRED** LADY** unit is within 6″ of this WARLORD**, if the Spirit of the Martyr sacred rite is active for your army, or for that unit, each time you roll a D6 when a model in that unit is destroyed, the attacking model suffers a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on a 5+.’",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Order of Our Martyred Lady 2"
-          }
-        }
+        "text": "* The Spirit of the Martyr **sacred rite** is active for this WARLORD** in addition to any others that are active for your army.\n* This WARLORD** has the following ability: ‘Saint Katherine's Legacy (Aura)**:** While a friendly ORDER** OF** OUR** MARTYRED** LADY** unit is within 6″ of this WARLORD**, if the Spirit of the Martyr sacred rite is active for your army, or for that unit, each time you roll a D6 when a model in that unit is destroyed, the attacking model suffers a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on a 5+.’"
       },
       "Warlord Trait§Saintly Example": {
-        "text": "* In addition to this Warlord Trait, this **WARLORD** has one randomly generated Warlord Trait from the [Adepta Sororitas Warlord traits](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Warlord-Traits) table in *Codex: Adepta Sororitas*. Each Warlord Trait in your army must be unique, so re-roll duplicate results.\n* If this WARLORD** is destroyed, you can immediately select another **ORDER OF** OUR** MARTYRED** LADY** CHARACTER** model from your army that does not have a Warlord Trait. Then, select a Warlord Trait that no model in your army has (this must be a Warlord Trait that the model you just selected can have, and it cannot be Saintly Example). Until the end of the battle, that model gains that Warlord Trait and for all rules purposes now counts as your WARLORD**. If any mission objectives, [secondary objective](https://wahapedia.ru/wh40k9ed/the-rules/matched-play/#Secondary-Objectives) or [Agenda](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Agendas) rules are triggered when your WARLORD** is destroyed, those rules are not triggered until after the new WARLORD** is destroyed.",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Order of Our Martyred Lady 1"
-          }
-        }
+        "text": "* In addition to this Warlord Trait, this **WARLORD** has one randomly generated Warlord Trait from the [Adepta Sororitas Warlord traits](https://wahapedia.ru/wh40k9ed/factions/adepta-sororitas/#Warlord-Traits) table in *Codex: Adepta Sororitas*. Each Warlord Trait in your army must be unique, so re-roll duplicate results.\n* If this WARLORD** is destroyed, you can immediately select another **ORDER OF** OUR** MARTYRED** LADY** CHARACTER** model from your army that does not have a Warlord Trait. Then, select a Warlord Trait that no model in your army has (this must be a Warlord Trait that the model you just selected can have, and it cannot be Saintly Example). Until the end of the battle, that model gains that Warlord Trait and for all rules purposes now counts as your WARLORD**. If any mission objectives, [secondary objective](https://wahapedia.ru/wh40k9ed/the-rules/matched-play/#Secondary-Objectives) or [Agenda](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Agendas) rules are triggered when your WARLORD** is destroyed, those rules are not triggered until after the new WARLORD** is destroyed."
       },
       "Weapon§Anointed halberd": {
         "stats": {
@@ -22455,13 +23530,16 @@
       "Weapon§Brazier of holy fire": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault D6"
@@ -22503,7 +23581,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -22523,7 +23602,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -22562,7 +23642,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -22600,7 +23681,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -22617,10 +23699,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -22660,7 +23744,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -22779,7 +23864,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -22825,7 +23911,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -22848,7 +23935,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -22982,7 +24070,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -23090,7 +24179,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -23116,7 +24206,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23153,7 +24244,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -23234,7 +24326,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23254,7 +24347,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23393,7 +24487,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -23658,7 +24753,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23738,7 +24834,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23794,7 +24891,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8

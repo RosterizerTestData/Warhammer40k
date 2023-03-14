@@ -1,11 +1,11 @@
 {
   "name": "Death Guard",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -59,7 +59,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitPlague Company": {
             "evals": [
               {
                 "paths": [
@@ -77,6 +77,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -86,9 +87,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Plague Company",
                     "value"
@@ -101,6 +99,22 @@
                   "Plague Company",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Plague Company",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -120,6 +134,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -130,6 +158,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -155,6 +191,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -165,6 +215,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -190,6 +248,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -200,6 +272,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -225,6 +305,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -235,6 +329,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -260,6 +362,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -270,6 +386,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -295,6 +419,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -305,6 +443,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -330,6 +476,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -342,6 +502,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -352,17 +520,104 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Trench Fighters",
+            "Stratagem§Creeping Blight",
+            "Stratagem§Fire Fever",
+            "Stratagem§Vermid Whispers",
+            "Stratagem§Haze Of Corruption",
+            "Stratagem§Eternal Hatred",
+            "Stratagem§Mutant Strain",
+            "Stratagem§Diseased Effluents",
+            "Stratagem§Unclean Machine Spirit",
+            "Stratagem§Befouled Incubators",
+            "Stratagem§Release The Toxins",
+            "Stratagem§Eruption Of Filth",
+            "Stratagem§Sickly Corrosion",
+            "Stratagem§Belching Fumes",
+            "Stratagem§Blight Bombardment",
+            "Stratagem§The Dead Walk Again",
+            "Stratagem§Cloud Of Flies",
+            "Stratagem§Break Their Spirits",
+            "Stratagem§Dark Cravings",
+            "Stratagem§Daemonic Gluttony",
+            "Stratagem§Flash Outbreak",
+            "Stratagem§Putrid Detonation",
+            "Stratagem§Foul Smokescreen",
+            "Stratagem§The Blightening",
+            "Stratagem§Overwhelming Generosity",
+            "Stratagem§Virulent Rounds",
+            "Stratagem§Disgusting Force",
+            "Stratagem§Mutoid Infestation",
+            "Stratagem§Fiery Demise",
+            "Stratagem§Corruption And Decay",
+            "Stratagem§Rancid Vomit",
+            "Stratagem§Machine Glitch",
+            "Stratagem§Gellershift",
+            "Stratagem§Insane Gibberines",
+            "Stratagem§Twisted Blessings",
+            "Stratagem§The Wrathful Dead",
+            "Stratagem§Ferric Miasma",
+            "Stratagem§Relaptic Assault",
+            "Stratagem§Bilious Blood-rush",
+            "Stratagem§On Droning Wings",
+            "Stratagem§Plague Brewers",
+            "Stratagem§Rotting Tide",
+            "Stratagem§Unleash The Horde",
+            "Stratagem§Pestilential Drop",
+            "Stratagem§Callous Disregard"
+          ]
+        }
+      },
       "Relics of Decay": {
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Plague Company": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Ferrymen": {
+                "order": 1
+              },
+              "Harbingers": {
+                "order": 2
+              },
+              "Inexorable": {
+                "order": 3
+              },
+              "Mortarion’s Anvil": {
+                "order": 4
+              },
+              "Mortarion’s Chosen Sons": {
+                "order": 5
+              },
+              "Poxmongers": {
+                "order": 6
+              },
+              "Wretched": {
+                "order": 7
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replacePlague CompanyKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Plague Company",
                     "value"
@@ -370,7 +625,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -380,7 +636,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Plague Company>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -399,7 +655,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Plague Company>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -412,12 +668,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Plague Company",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityPlague Company": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Plague Company",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Plague Company",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -446,8 +743,7 @@
             "statType": "term",
             "value": "&lt;PLAGUE COMPANY&gt;",
             "text": "While a friendly **{v}** CHARACTER** unit that has a Wounds characteristic of 9 or less is within 3″ of this unit, that CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -506,8 +802,7 @@
             "statType": "term",
             "value": "&lt;PLAGUE COMPANY&gt;",
             "text": "Once per turn, at the start of either your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE) or the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), you can select one friendly **{v}** CORE** unit within 6″ of this model. Until the start of your next [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), each time a model in that unit makes a melee attack with a **Plague Weapon**, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage. Each unit can only be selected for this ability once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -569,8 +864,7 @@
             "statType": "term",
             "value": "&lt;PLAGUE COMPANY&gt;",
             "text": "While a friendly **{v}** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -581,8 +875,7 @@
             "statType": "term",
             "value": "&lt;PLAGUE COMPANY&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this model can tally for one friendly **{v}** CORE** unit within 6″ of it. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Each unit can only be tallied for once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -599,8 +892,7 @@
             "statType": "term",
             "value": "&lt;PLAGUE COMPANY&gt;",
             "text": "While a friendly **{v}** CORE** unit is within 6″ of this model, each time a model in that unit makes a ranged attack with a **Plague Weapon**, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -659,8 +951,7 @@
             "statType": "term",
             "value": "&lt;PLAGUE COMPANY&gt;",
             "text": "While a friendly **{v}** CORE** or **{v}** FOETID** VIRION** unit is within 6″ of this model, each time that unit is selected to make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) or [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), until the end of the phase, add 1″ to the Move characteristic of models in that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -855,7 +1146,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -1175,7 +1467,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Terrax melta cutter",
@@ -1598,7 +1891,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1755,7 +2049,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hellforged heavy plasma cannon",
@@ -2214,7 +2509,8 @@
             "value": 3
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Anvillus autocannon battery",
@@ -2687,7 +2983,8 @@
             "value": 2
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy flamer",
@@ -3221,23 +3518,17 @@
             "value": "Deathshroud Terminator"
           },
           "Chimes of contagion": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3365,7 +3656,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Decimator butcher cannon",
@@ -3696,7 +3988,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3825,7 +4118,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Multi-melta",
@@ -4318,7 +4612,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4401,7 +4696,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4483,7 +4779,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4638,7 +4935,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4689,23 +4987,17 @@
             "value": 6
           },
           "Thermal jets": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4733,7 +5025,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -4754,7 +5047,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4834,7 +5128,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Fleshmower",
@@ -5134,7 +5429,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin avenger bolt cannon",
@@ -5628,7 +5924,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin heavy bolter",
@@ -6127,7 +6424,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6337,7 +6635,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin autocannon",
@@ -6464,23 +6763,17 @@
             "value": 11
           },
           "Infernal bomb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6537,7 +6830,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Havoc autocannon",
@@ -6876,7 +7170,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 6
@@ -6902,13 +7197,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7126,7 +7423,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plasma destroyer",
@@ -7524,7 +7822,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin heavy bolter",
@@ -7948,7 +8247,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Quad launcher",
@@ -8310,23 +8610,17 @@
             "value": 14
           },
           "Explorator augury web": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Explorator augury web"
@@ -8338,23 +8632,17 @@
             "dynamic": true
           },
           "Heavy armour": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Heavy armour"
@@ -8404,7 +8692,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin lascannon",
@@ -8831,7 +9120,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin lascannon",
@@ -9226,7 +9516,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Predator autocannon",
@@ -9613,7 +9904,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Boltgun",
@@ -9904,7 +10196,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy bolter",
@@ -10304,7 +10597,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy bolter",
@@ -10704,7 +10998,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy bolter",
@@ -11104,7 +11399,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -11431,7 +11727,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Scorpius multi-launcher",
@@ -11735,7 +12032,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Defiler cannon",
@@ -12537,7 +12835,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plagueburst mortar",
@@ -12960,7 +13259,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13037,7 +13337,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -13831,7 +14132,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -14071,23 +14373,17 @@
             "value": 8
           },
           "Foetid wings": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Foetid wings"
@@ -14129,7 +14425,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hellforged sword",
@@ -14376,7 +14673,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -14675,7 +14973,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plaguereaper",
@@ -14834,7 +15133,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -14919,7 +15219,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Corrupted staff",
@@ -15190,7 +15491,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -15278,7 +15580,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -15380,7 +15683,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Cerberus neutron pulse array",
@@ -15828,7 +16132,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Quad lascannon",
@@ -16552,7 +16857,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Demolisher siege cannon",
@@ -17426,7 +17732,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -17661,7 +17968,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -17886,7 +18194,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Quad lascannon",
@@ -18467,23 +18776,17 @@
             "value": 40
           },
           "Thunderhawk cluster bombs": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -18540,7 +18843,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lascannon",
@@ -19069,7 +19373,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Dreadhammer siege cannon",
@@ -19479,23 +19784,17 @@
             "value": 20
           },
           "Thermal jet array": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -19552,7 +19851,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -19769,7 +20069,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -19988,7 +20289,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -20310,7 +20612,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -20632,7 +20935,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         }
       },
@@ -20648,7 +20952,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -20669,7 +20974,8 @@
             "value": 5
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -20711,7 +21017,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autogun",
@@ -20874,7 +21181,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autogun",
@@ -21037,7 +21345,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21079,7 +21388,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plaguespurt gauntlet",
@@ -21209,7 +21519,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plaguespurt gauntlet",
@@ -21339,7 +21650,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21363,7 +21675,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -21384,7 +21697,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21426,7 +21740,8 @@
             "value": 3
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21478,7 +21793,8 @@
             "value": 5
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21527,7 +21843,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Boltgun",
@@ -22319,7 +22636,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Boltgun",
@@ -23090,7 +23408,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -23111,7 +23430,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -23153,7 +23473,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         }
       },
@@ -23258,7 +23579,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23301,7 +23623,8 @@
             "value": 2
           },
           "S": {
-            "value": "x3"
+            "value": "x3",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -23348,6 +23671,822 @@
         "text": "**MORTARION’S** CHOSEN** SONS** model equipped with a plague sprayer only. This Relic replaces a plague sprayer and has the following profile:"
       },
       "Roster§Army": {},
+      "Stratagem§Befouled Incubators": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DEATH GUARD** CHARACTER** model from your army is selected to fight. Until the end of the phase, each time an enemy model is destroyed by an attack made by that model, roll one D6: on a 3+, that enemy model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) after your model has resolved all of its attacks (a maximum of 3 mortal wounds can be inflicted per phase via this Stratagem).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Belching Fumes": {
+        "text": "Use this Stratagem at the start of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **MYPHITIC BLIGHT-HAULERS** unit from your army. Until the end of the phase, each time an enemy model makes an attack with a ranged weapon against that unit, reduce the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) made with that weapon by 1 (to a minimum of 1). If that unit contains 2 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Bilious Blood-rush": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **POXMONGERS DAEMON** ENGINE** unit from your army is selected to shoot. Until the end of the phase:\n\n* Models in that unit can make attacks with [Blast weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons) against units within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of their unit.\n* Each time a ranged attack is made by a model in that unit against an enemy unit that is within Engagement Range of their unit, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Blight Bombardment": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if a **DEATH** GUARD** [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) from your army is on the battlefield. Select one point on the battlefield and place a marker on that point. At the start of your next Command phase, roll one D6 for each unit within 6″ of the centre of that marker, adding 1 if the unit being rolled for is an INFANTRY** unit and subtracting 1 if the unit being rolled for is a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters): on a 2-6, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 7+, that unit suffers D6 mortal wounds. The marker is then removed. If your WARLORD** has the **LORD OF** VIRULENCE** keyword, this Stratagem costs 2CP; otherwise it costs 3CP. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/3",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Break Their Spirits": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DEATH GUARD** TERMINATOR** model from your army destroys a model in an enemy INFANTRY**, BEASTS** or SWARM** unit. Until the end of the turn, subtract 4 from the Leadership characteristic of models in that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Callous Disregard": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **BUBONIC ASTARTES** TERMINUS** EST** ASSAULT** FORCE** unit from your army that is eligible to shoot.\n\n* Until the end of the turn, models in that unit can target enemy units within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of friendly POXWALKERS** or **PLAGUE FOLLOWERS** units from your army.\n* Each time a model in that unit makes an attack against an enemy unit within Engagement Range of a friendly POXWALKERS** or PLAGUE** FOLLOWERS** unit, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), and if the hit roll is not successful, that attack scores a hit against that POXWALKERS** or PLAGUE** FOLLOWERS** unit instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Champion Of Disease": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **BUBONIC ASTARTES** model from your army that has the word ‘Champion’ in their profile and give them one of the following [Relics of Decay](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Relics-of-Decay) (this must be a Relic they could have): [Reaper of Glorious Entropy](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Reaper-of-Glorious-Entropy); [Plague Skull of Glothila](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Plague-Skull-of-Glothila); [Plaguebringer](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Plaguebringer); [Suppurating Plate](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Suppurating-Plate).\n\n\n\nEach Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Cloud Of Flies": {
+        "text": "Use this Stratagem at the start of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **BUBONIC ASTARTES** INFANTRY** unit from your army. Until the end of the phase, each time an enemy model shoots, if that unit is not the closest eligible target or within 12″ of that model, then until that shooting is resolved, that model cannot target that unit. In addition, until the end of the phase, if the selected unit has the Bodyguard** ability, it loses that ability. If the selected unit has the TERMINATOR** keyword, this Stratagem costs 4CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/4",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Corruption And Decay": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Choose an enemy unit within 3″ of a **GELLERPOX INFECTED** unit from your army. Until the end of the phase, add 1 to all [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) made for GELLERPOX** INFECTED** models from your army when they target this enemy unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Creeping Blight": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DEATH** GUARD** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack with a **plague weapon**, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, that attack has an Armour Penetration characteristic of -4.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Daemonic Gluttony": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DEATH GUARD** DAEMON** ENGINE** model from your army is selected to fight. Until the end of the phase, each time an enemy model is destroyed by an attack made by that model, that DAEMON** ENGINE** model regains 1 lost wound (to a maximum of 3 regained wounds per phase).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Dark Cravings": {
+        "text": "Use this Stratagem in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **FOETID BLOAT-DRONE** unit from your army. Until the end of the phase, if that unit is within 6″ horizontally and 5″ vertically of any enemy units, it is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it was a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters). When doing so, it can move up to 6″ instead of 3″. All other rules for Heroic Interventions still apply.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Diseased Effluents": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **DEATH GUARD** CHARACTER** model from your army (excluding DAEMON** models) and one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that model. That model suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and you then roll one D6: on a 2+, that enemy unit suffers 2D3 mortal wounds. If that enemy unit has the [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) keyword (excluding VEHICLE** units), it suffers D3 mortal wounds instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Disgusting Force": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **PLAGUEBURST CRAWLER** model from your army is selected to shoot. Until the end of the phase:\n\n* Each time that model makes an attack with a Plagueburst mortar, that attack has a Damage characteristic of 3.\n* After that model has shot, select one enemy unit that was hit by one or more attacks made with a Plagueburst mortar by that model this turn. Roll one D6 for each other unit within 3″ (excluding NURGLE** units) of the selected unit: on a 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Eruption Of Filth": {
+        "text": "Use this Stratagem in any phase, when a **DEATH GUARD** CHARACTER** model from your army is destroyed instead of using any other rules that are triggered when a model is destroyed (e.g. the Putrid Explosion** ability). Before removing that model from play, roll one D6 for each other unit within 3″ (excluding NURGLE** units): on a 2-5, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6, that unit suffers D3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Eternal Hatred": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **BUBONIC ASTARTES** INFANTRY** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a BUBONIC** ASTARTES** INFANTRY** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attacks [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Ferric Miasma": {
+        "text": "Use this Stratagem in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when an **INEXORABLE** unit from your army is selected as a target of a charge. Until the end of the phase, subtract 2 from [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for any unit that declares a charge against that INEXORABLE** unit (to a minimum of 1).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Fiery Demise": {
+        "text": "Use this Stratagem when <s class=\"kwbs\">VULGRAR THRICE-CURSED</s> is slain. Before removing him from the battlefield, roll a D6 for each unit within 6\"; on a 4+ that unit suffers a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Fire Fever": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DEATH GUARD** HELBRUTE** model from your army is selected to shoot. Until the end of the phase, that model can only target a single eligible enemy unit and each time an attack is made by that model, add 1 to that attacks [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Flash Outbreak": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **&lt;PLAGUE COMPANY&gt;** unit with the **Contagions of** Nurgle** ability from your army:\n\n* If there are any other &lt;PLAGUE** COMPANY&gt;** units from your army on the battlefield that have any **Contagion abilities** that the selected unit does not have, then until the start of your next Command phase, the selected unit has all of the same Contagion abilities (this is in addition to the ones it already has).\n* Until the start of your next Command phase, units from your army count the battle round number as one higher than the current battle round number for the purpose of determining the Contagion range of any Contagion abilities they have.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Foul Smokescreen": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DEATH GUARD** SMOKESCREEN** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attacks [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Gellershift": {
+        "text": "Use this Stratagem before you move the <s class=\"kwbs\">VOX-SHAMBLERS</s> in the [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Instead of moving this unit normally, it can make a Gellershift. Remove this unit from the battlefield, then, at the end of the Movement phase, set it up again anywhere that is more than 9″ from any enemy models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Gifts Of Decay": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the DEATH** GUARD** keyword. Select one **DEATH GUARD** CHARACTER** model from your army and give them one [Relic of Decay](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Relics-of-Decay) (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Grandfatherly Influence": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **DEATH GUARD** CHAOS** SPAWN** unit from your army:\n\n* Add 1 to the Toughness characteristic of models in that unit.\n* That unit has the **Disgustingly Resilient** ability.If that unit contains 3 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term",
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Haze Of Corruption": {
+        "text": "Use this [Stratagem](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems) in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DEATH GUARD** CORE** unit from your army is selected to fight. Until the end of the phase, each time an enemy model is destroyed by an attack made by a model in that unit, any excess damage inflicted by that attack is not lost and is instead suffered by another model in that unit (do not make a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) for that model). This continues until there is no excess damage remaining.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Insane Gibberines": {
+        "text": "Use this Stratagem at the start of the enemy [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Until the end of the phase, subtract 1 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for enemy [PSYKERS](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) whilst they are within 18” of <s class=\"kwbs\">VULGRAR THRICE-CURSED</s>.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Machine Glitch": {
+        "text": "Use this Stratagem after a unit of <s class=\"kwbs\">GLITCHLINGS</s> from your army has fought in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Choose an enemy **VEHICLE** unit within 1″ of that unit and roll one D6 for each model in your unit; for each roll of 4+ the enemy unit suffers a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Mutant Strain": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **POXWALKERS** unit from your army is selected to fight. Until the end of the phase, each time an attack is made by a model in that unit:\n\n* An unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage.\n* An unmodified hit roll of 1 inflicts 1 mortal wound on that POXWALKERS** unit after that fight is resolved.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Mutoid Infestation": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Choose a unit of **MUTOID VERMIN** from your army that has been destroyed. Set up this unit anywhere wholly within 12″ of a friendly **GELLERPOX INFECTED** unit and more than 9” from any enemy models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§On Droning Wings": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **FERRYMEN FOETID** VIRION** model from your army, then select one of that model’s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities). Until the start of your next Command phase, add 6″ to the range of that model’s selected aura ability (to a maximum of 12\").",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Overwhelming Generosity": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DEATH** GUARD** unit from your army is selected to shoot. Until the end of the phase, add 6″ to the Range characteristic of **plague weapons** models in that unit are equipped with.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Pestilential Drop": {
+        "text": "Use this Stratagem in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your Movement phases, when you set up a **TERMINUS** EST** ASSAULT** FORCE** unit from your army on the battlefield using the [Outbreak Assault](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Army-of-Renown:-Terminus-Est-Assault-Force) or **Teleport Strike** ability. Select one **Contagion of** Nurgle** ability that unit has; until the end of the turn, the Contagion Range of that ability is 12″ for that unit. This is not cumulative with any other abilities that increase **Contagion Range**.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Plague Brewers": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **MORTARION’S** CHOSEN** SONS** unit from your army is selected to shoot. Until the end of the phase, plague belchers, plaguespurt gauntlets and plague spewers models in that unit are equipped with have a Damage characteristic of 2.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Plague-chosen": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the DEATH** GUARD** keyword. Select one **DEATH GUARD** CHARACTER** model in your army (excluding named characters) and determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Warlord-Traits) for that model (this must be a Warlord Trait they can have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Putrid Detonation": {
+        "text": "Use this Stratagem in any phase, when a **DEATH GUARD** VEHICLE** model from your army is destroyed. Do not roll to see if that model explodes: it does so automatically. If that model has a Wounds characteristic of 9 or less, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Rancid Vomit": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Choose a <s class=\"kwbs\">HULLBREAKERS</s> model from your army, then choose an enemy unit within 6″ of it that is visible to it. Roll three D6; for each roll of 5+ that enemy unit suffers a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Relaptic Assault": {
+        "text": "Use this Stratagem in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when an enemy unit finishes a charge move. Select any number of **MORTARION’S** ANVIL** units from your army within 3″ of that enemy unit. Until the end of the phase, the selected units are eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if they were [CHARACTERS**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Release The Toxins": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **DEATH GUARD** CHARACTER** model from your army that was equipped with a [Relic of Decay](https://wahapedia.ru/wh40k9ed/factions/death-guard/#Relics-of-Decay) at the start of the battle. Roll one D6 for each enemy unit within 7″ of that model: on a 2-5, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6, that unit suffers D3 mortal wounds. A model can only be selected for this Stratagem once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Rotting Tide": {
+        "text": "Use this Stratagem in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your Movement phase. Select a **TERMINUS** EST** ASSAULT** FORCE** POXWALKERS** unit from your army that is below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) and remove it from the battlefield, or select a TERMINUS** EST** ASSAULT** FORCE** POXWALKERS** unit from your army that has been destroyed. Set up that unit at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units), wholly within 6″ of any battlefield edge other than the enemy’s battlefield edge and more than 9″ away from any enemy models. You can only use this Stratagem once. If that unit has a Starting Strength of 10 or fewer models, this Stratagem costs 2CP; otherwise, it costs 3CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/3",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Sevenfold Blessings": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **WRETCHED PSYKER** model from your army.\n\n* That model knows one additional psychic power from their chosen discipline.\n* Once per [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), you can re-roll one [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for that model.You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic",
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Sickly Corrosion": {
+        "text": "Use this Stratagem in either the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) or your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DEATH** GUARD** model from your army makes an attack with a **plague weapon** that scores a hit against an enemy unit. Until the end of the turn, each time an attack is made by a DEATH** GUARD** model against that enemy unit, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight",
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§The Blightening": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select up to three **DEATH** GUARD** models from your army. Until the end of the phase, **plague weapons** with the [Grenade](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#GRENADE) type that those models are equipped with lose the [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons) ability, have a Type characteristic of [Pistol 6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PISTOL), and each time that model makes an attack with one of those weapons against an enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) that attack automatically hits the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§The Dead Walk Again": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **POXWALKERS** unit from your army and roll seven D6s: for each 3+, one of that unit’s destroyed models is added back to it with 1 wound remaining. Models added back to that unit in this way can be set up within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of enemy units that are already within Engagement Range of that unit. Each unit can only be selected for this Stratagem once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§The Wrathful Dead": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **HARBINGERS POXWALKERS** unit is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Trench Fighters": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DEATH GUARD** PLAGUE** MARINES** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit fights, if it is equipped with any plague knives, it makes 1 additional attack with one of its plague knives.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Twisted Blessings": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Choose a <s class=\"kwbs\">HULLBREAKERS</s> model from your army. That model regains one lost wound.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Unclean Machine Spirit": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **DEATH GUARD** MACHINE** SPIRIT** model from your army. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Unleash The Horde": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **TERMINUS** EST** ASSAULT** FORCE** POXWALKERS** unit from your army is selected to move, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a TERMINUS** EST** ASSAULT** FORCE** POXWALKERS** unit from your army is selected to fight. Until the end of the turn, add 3″ to the Move characteristic of all TERMINUS** EST** ASSAULT** FORCE** POXWALKER** models in your army, and each time those models [Pile in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In), they can move an additional 3\".",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Vermid Whispers": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DEATH GUARD** TERMINATOR** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a DEATH** GUARD** TERMINATOR** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
+      "Stratagem§Virulent Rounds": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **DEATH GUARD** CORE** unit from your army is selected to shoot. Until the end of the phase, **bolt weapons** models in that unit are equipped with have the **Plague Weapon** ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Death Guard Strat"
+          ]
+        }
+      },
       "Troops§Death Guard Cultist": {
         "stats": {
           "Power Level": {
@@ -23424,23 +24563,17 @@
             "value": "Plague Marine"
           },
           "Icon of despair": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -23459,23 +24592,17 @@
             "dynamic": true
           },
           "Sigil of decay": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -23863,52 +24990,22 @@
         "text": "Once per battle, after the bearer has moved, you can select one unit the bearer moved across. Roll six D6s for each **VEHICLE** or MONSTER** model in that unit and roll one D6 for each other model in that unit (to a maximum of 18): for each 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Warlord Trait§Arch-contaminator (aura)": {
-        "text": "While a friendly **&lt;PLAGUE COMPANY&gt;** CORE** unit is within 6″ of this WARLORD**:\n\n* Each time a model in that unit makes a melee attack with a **plague weapon**, you can re-roll the wound roll.\n* Each time a model in that unit makes a ranged attack with a plague weapon that targets a unit within 12\", you can re-roll the wound roll.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "While a friendly **&lt;PLAGUE COMPANY&gt;** CORE** unit is within 6″ of this WARLORD**:\n\n* Each time a model in that unit makes a melee attack with a **plague weapon**, you can re-roll the wound roll.\n* Each time a model in that unit makes a ranged attack with a plague weapon that targets a unit within 12\", you can re-roll the wound roll."
       },
       "Warlord Trait§Foul Effluents (aura)": {
-        "text": "While an enemy unit is within 6″ of this **WARLORD**, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), roll one D6 for that unit: on a 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "While an enemy unit is within 6″ of this **WARLORD**, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), roll one D6 for that unit: on a 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Warlord Trait§Hulking Physique": {
-        "text": "* Add 1 to the Wounds characteristic of this **WARLORD**.\n* Each time an attack is made against this WARLORD**, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "* Add 1 to the Wounds characteristic of this **WARLORD**.\n* Each time an attack is made against this WARLORD**, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have."
       },
       "Warlord Trait§Living Plague (aura)": {
-        "text": "While an enemy unit is within 3″ of this **WARLORD**, that unit cannot be affected by the [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (excluding those that are psychic powers) of units from your opponents army.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "While an enemy unit is within 3″ of this **WARLORD**, that unit cannot be affected by the [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (excluding those that are psychic powers) of units from your opponents army."
       },
       "Warlord Trait§Revoltingly Resilient": {
-        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost."
       },
       "Warlord Trait§Rotten Constitution": {
-        "text": "* Add 1 to the Toughness characteristic of this **WARLORD**.\n* Each time an attack with an Armour Penetration characteristic of -1 or -2 is allocated to this WARLORD**, that attack has an Armour Penetration characteristic of 0 instead.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "* Add 1 to the Toughness characteristic of this **WARLORD**.\n* Each time an attack with an Armour Penetration characteristic of -1 or -2 is allocated to this WARLORD**, that attack has an Armour Penetration characteristic of 0 instead."
       },
       "Weapon§AE shells": {
         "stats": {
@@ -23977,7 +25074,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -23999,7 +25097,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24177,7 +25276,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24291,7 +25391,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -24317,7 +25418,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24337,7 +25439,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24373,7 +25476,8 @@
             "value": -4
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -24412,10 +25516,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24435,7 +25541,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24491,7 +25598,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -24511,10 +25619,12 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24533,7 +25643,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24550,7 +25661,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -24637,7 +25749,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24653,10 +25766,12 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24692,7 +25807,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -24715,7 +25831,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24752,7 +25869,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -24775,10 +25893,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -24855,7 +25975,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -24874,7 +25995,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -24893,7 +26015,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 1
@@ -24955,7 +26078,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25035,10 +26159,12 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25058,7 +26184,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25240,7 +26367,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25257,10 +26385,12 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25317,10 +26447,12 @@
             "value": -4
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25343,7 +26475,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25359,7 +26492,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -25487,7 +26621,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25527,7 +26662,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25586,7 +26722,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -25605,7 +26742,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25624,7 +26762,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -25646,7 +26785,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -25671,7 +26811,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25688,10 +26829,12 @@
             "value": -4
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25711,7 +26854,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25768,7 +26912,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25794,7 +26939,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25831,7 +26977,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6+2"
+            "value": "D6+2",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25851,7 +26998,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25871,7 +27019,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26017,7 +27166,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26037,7 +27187,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26057,7 +27208,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26137,7 +27289,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26255,7 +27408,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26406,7 +27560,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -26447,7 +27602,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26581,7 +27737,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 12
@@ -26601,7 +27758,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26705,7 +27863,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26787,10 +27946,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26846,7 +28007,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26906,7 +28068,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3+2"
+            "value": "D3+2",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -27064,7 +28227,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -27107,7 +28271,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -27272,7 +28437,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9

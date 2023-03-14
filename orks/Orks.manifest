@@ -1,11 +1,11 @@
 {
   "name": "Orks",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -56,7 +56,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitClan": {
             "evals": [
               {
                 "paths": [
@@ -74,6 +74,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -83,9 +84,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Clan",
                     "value"
@@ -98,6 +96,22 @@
                   "Clan",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Clan",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -117,6 +131,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -127,6 +155,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -152,6 +188,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -162,6 +212,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -187,6 +245,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -197,6 +269,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -222,6 +302,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -232,6 +326,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -257,6 +359,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -267,6 +383,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -292,6 +416,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -302,6 +440,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -327,6 +473,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -339,6 +499,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -349,6 +517,69 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Unbridled Carnage",
+            "Stratagem§Showin’ Off",
+            "Stratagem§Drive By Dakka",
+            "Stratagem§Wreckaz",
+            "Stratagem§Mystic Chanting",
+            "Stratagem§Ded Sneaky",
+            "Stratagem§Get Da Loot",
+            "Stratagem§Careen!",
+            "Stratagem§Get Stuck In Ladz!",
+            "Stratagem§Ramming Speed",
+            "Stratagem§Gun Crazy Show Offs",
+            "Stratagem§Hit ’em Harder",
+            "Stratagem§Tough As Squig-hide",
+            "Stratagem§Breakin’ Heads",
+            "Stratagem§Orks Is Never Beaten",
+            "Stratagem§Da Bigger Dey Iz...",
+            "Stratagem§Tide Of Muscle",
+            "Stratagem§Unstoppable Momentum",
+            "Stratagem§Grot Shields",
+            "Stratagem§Tellyporta",
+            "Stratagem§Lumbering Strides",
+            "Stratagem§Burn ’em All!",
+            "Stratagem§Monster Hunterz",
+            "Stratagem§Cuttin’ Flames",
+            "Stratagem§More Dakka!",
+            "Stratagem§Cloud Of Smoke",
+            "Stratagem§Tankbusta Bomb",
+            "Stratagem§Snagga Grapple",
+            "Stratagem§Groundshaker Shells",
+            "Stratagem§Force Field Boosta",
+            "Stratagem§Stompa Mob",
+            "Stratagem§Stomp, Stomp, Stomp!",
+            "Stratagem§Stompa-porta",
+            "Stratagem§Kult Of Speed",
+            "Stratagem§Turbo-boostas",
+            "Stratagem§Charge Through ’em!",
+            "Stratagem§Dread Waaagh!",
+            "Stratagem§Kustom Ammo",
+            "Stratagem§Mek Connections",
+            "Stratagem§Blitz Brigade",
+            "Stratagem§Opening Salvo",
+            "Stratagem§Krush ’em",
+            "Stratagem§Hold On, Boyz!",
+            "Stratagem§Youngbloodz",
+            "Stratagem§Got’em Trapped",
+            "Stratagem§Trigga Discipline",
+            "Stratagem§Surprize!",
+            "Stratagem§Gloryboyz",
+            "Stratagem§Spotted ‘em!",
+            "Stratagem§Taktical Awareness",
+            "Stratagem§Speshul Ammo",
+            "Stratagem§Blitza Dakka",
+            "Stratagem§Chaaaaarge!",
+            "Stratagem§Crashin’ Through",
+            "Stratagem§More Gitz Over ’ere!",
+            "Stratagem§Attack Out O’ Da Sun’",
+            "Stratagem§Lotsa Squigs!"
+          ]
+        }
+      },
       "Power of the Waaagh! Discipline": {
         "templateClass": "Psychic Power"
       },
@@ -356,13 +587,49 @@
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Clan": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Blood Axes": {
+                "order": 1
+              },
+              "Bad Moons": {
+                "order": 2
+              },
+              "Deathskulls": {
+                "order": 3
+              },
+              "Evil Sunz": {
+                "order": 4
+              },
+              "Freebooterz": {
+                "order": 5
+              },
+              "Goffs": {
+                "order": 6
+              },
+              "Snakebites": {
+                "order": 7
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceClanKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Clan",
                     "value"
@@ -370,7 +637,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -380,7 +648,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Clan>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -399,7 +667,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Clan>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -412,12 +680,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Clan",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityClan": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Clan",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Clan",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -452,8 +761,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "While a friendly **{v} BEAST** SNAGGA** CORE** or **{v} BEAST** SNAGGA** CHARACTER** unit is within 6″ of this model, each time a model in that unit makes a melee attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -470,8 +778,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can repair one friendly **{v} VEHICLE** model within 3″ of it. That VEHICLE** model regains up to D3 lost wounds. Each model can only be repaired once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -494,8 +801,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "If a [{v}](https://wahapedia.ru/wh40k9ed/factions/orks/#The-CLAN-Keyword) unit fails a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) while it is within 3″ of a friendly **{v} WARBOSS**, the Warboss can restore order with a brutal display of violence. If they do so, the unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) but the Morale test is then considered to have been passed.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -515,8 +821,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "Unless a friendly **{v} RUNTHERD** model is within 6″ of this unit, each time a model in this unit makes a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests), subtract 1 from the result.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -554,8 +859,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "When a **{v} INFANTRY** or **{v} BIKER** model would lose a wound within 3″ of any friendly **{v} PAINBOYS**, roll one D6; on a 6, that wound is not lost.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -566,8 +870,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "While a friendly **{v} INFANTRY**, **{v} BIKER** or **{v} CAVALRY** unit is within 3″ of this model, each time a model in that unit would lose a wound, roll one D6: on a 6, that wound is not lost.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -578,8 +881,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "While a friendly **ORKS INFANTRY** or **ORKS BIKER** unit is within 3″ of this model, each time a model in that unit would lose a wound, roll one D6: on a 6, that wound is not lost.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhile a friendly **{v} INFANTRY** or **{v} BIKER** unit is within 3″ of this model, each time a model in that unit would lose a wound, roll one D6: on a 6, that wound is not lost.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -602,8 +904,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "At the end of each of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can repair one friendly **{v} VEHICLE** model within 1″ (it cannot repair itself). If it does, that model regains up to D3 lost wounds. A model can only be repaired once each turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -701,8 +1002,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nAt the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can repair one friendly **{v} VEHICLE** model within 3″ of it. That VEHICLE** model regains 1 lost wound. Each model can only be repaired once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -716,8 +1016,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "While this unit is within 6″ of a friendly **{v} MOB** unit that is not under [half strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units), this unit is never considered to be under half strength.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -779,8 +1078,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nAt the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can heal one friendly **{v} INFANTRY** or **{v} BIKER** model whose unit is within 3″ of it. If you do so, roll one D6: on a 1, that model suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). On a 2+, that model regains up to 2 lost wounds. Each model can only be healed once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -815,8 +1113,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "Friendly **{v} BIKER** and VEHICLE** units within 6″ of this model at the start of the [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE) can charge even if they [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) this turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -830,8 +1127,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "For each **{v} SQUIGHOG** BOYZ** unit included in a Detachment, up to two **{v} NOB** ON** SMASHA** SQUIG** units can be included in that Detachment without taking up any [Battlefield Role slots](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role-Slots).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -899,8 +1195,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "While a friendly **{v} ORKS** unit is within 6″ of this model, each time a model in that unit makes a melee attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -917,8 +1212,7 @@
             "statType": "term",
             "value": "&lt;CLAN&gt;",
             "text": "While a friendly **{v} CORE** or **{v} CHARACTER** unit is within 6″ of this model, each time a model in that unit makes a melee attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -1017,7 +1311,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -1320,7 +1615,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -1680,7 +1976,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1729,23 +2026,17 @@
             "value": "Kommando"
           },
           "Bomb squig": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Bomb squig"
@@ -1757,23 +2048,17 @@
             "dynamic": true
           },
           "Distraction grot": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Distraction grot"
@@ -1886,7 +2171,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2008,23 +2294,17 @@
             "value": 2
           },
           "Grot oiler": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Grot oiler"
@@ -2066,7 +2346,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kustom mega-slugga",
@@ -2275,7 +2556,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2323,23 +2605,17 @@
             "value": "Nob"
           },
           "Ammo runt": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2422,23 +2698,17 @@
             "value": 4
           },
           "Grot Orderly": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Grot Orderly"
@@ -2480,7 +2750,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Power klaw",
@@ -2646,7 +2917,8 @@
             "value": 4
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2691,23 +2963,17 @@
             "value": 2
           },
           "Grot-lash": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2726,23 +2992,17 @@
             "dynamic": true
           },
           "Squig hound": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2791,7 +3051,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -2953,23 +3214,17 @@
             "value": "Tankbusta"
           },
           "Bomb squig": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Bomb squig"
@@ -3123,23 +3378,17 @@
             "value": "Deffkopta"
           },
           "Big bomb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Big bomb"
@@ -3248,7 +3497,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3326,7 +3576,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -4098,7 +4349,8 @@
             "value": 4
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4220,23 +4472,17 @@
             "value": "Rukkatrukk Squigbuggy"
           },
           "Squig mine": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4451,23 +4697,17 @@
             "value": "Squighog Boy"
           },
           "Bomb squig": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Bomb squig"
@@ -4845,7 +5085,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin big shoota",
@@ -5079,23 +5320,17 @@
             "value": 8
           },
           "Boom bomb": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5152,7 +5387,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5327,23 +5563,17 @@
             "value": 7
           },
           "Burna bombs": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5400,7 +5630,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Skorcha missile racks",
@@ -5767,7 +5998,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -6232,7 +6464,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Supa-shoota",
@@ -6502,7 +6735,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin big shoota",
@@ -6766,23 +7000,17 @@
             "value": 10
           },
           "Blastajet force field": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Blastajet force field"
@@ -6832,7 +7060,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Smasha gun",
@@ -7253,23 +7482,17 @@
             "value": 5
           },
           "Shoutin’ pole": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Shoutin’ pole"
@@ -7287,7 +7510,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
@@ -7319,7 +7543,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -7629,23 +7854,17 @@
             "value": 8
           },
           "’Ard case": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§’Ard case"
@@ -7695,7 +7914,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7962,7 +8182,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -8277,7 +8498,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Deff rolla",
@@ -8747,23 +8969,17 @@
             "value": "Flash Git"
           },
           "Gitfinda squig": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Gitfinda squig"
@@ -8775,23 +8991,17 @@
             "dynamic": true
           },
           "Ammo Runt": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Ammo Runt"
@@ -8904,7 +9114,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kannon",
@@ -9327,7 +9538,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9543,7 +9755,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Supa-kannon",
@@ -9814,7 +10027,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10108,7 +10322,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lifta-droppa",
@@ -10563,7 +10778,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -10897,7 +11113,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Boombits",
@@ -11361,7 +11578,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Killkannon",
@@ -11687,7 +11905,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gorin’ horns",
@@ -11964,7 +12183,8 @@
             "value": 4
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -12044,7 +12264,8 @@
             "value": 4
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -12280,23 +12501,17 @@
             "value": 4
           },
           "Grot oiler": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -12359,23 +12574,17 @@
             "value": 6
           },
           "Grot oiler": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Grot oiler"
@@ -12387,23 +12596,17 @@
             "dynamic": true
           },
           "Kustom force field": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Kustom force field"
@@ -12445,7 +12648,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kustom mega-blasta",
@@ -12752,7 +12956,8 @@
             "value": 4
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -12797,23 +13002,17 @@
             "value": 5
           },
           "Grot oiler": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Grot oiler"
@@ -12825,23 +13024,17 @@
             "dynamic": true
           },
           "Kustom force field": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -12890,7 +13083,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Stikkbombz",
@@ -13010,23 +13204,17 @@
             "value": 6
           },
           "Grot oiler": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Grot oiler"
@@ -13068,7 +13256,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Shokk attack gun",
@@ -13234,7 +13423,8 @@
             "value": 6
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13314,7 +13504,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13396,7 +13587,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13473,7 +13665,8 @@
             "value": 4
           },
           "Base": {
-            "value": "150 x 95mm"
+            "value": "150 x 95mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13562,7 +13755,8 @@
             "value": 2
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13768,7 +13962,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13842,7 +14037,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13888,23 +14084,17 @@
             "value": 5
           },
           "Ammo runt": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Ammo runt"
@@ -13946,7 +14136,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Da Rippa",
@@ -14256,7 +14447,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -14333,7 +14525,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -14412,7 +14605,8 @@
             "value": 3
           },
           "Base": {
-            "value": "80mm"
+            "value": "80mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Thump gun",
@@ -14645,23 +14839,17 @@
             "value": 5
           },
           "Grot Orderly": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Grot Orderly"
@@ -14703,7 +14891,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Power snappa",
@@ -14921,7 +15110,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big choppa",
@@ -15459,7 +15649,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -15536,7 +15727,8 @@
             "value": 4
           },
           "Base": {
-            "value": "100 x 40mm"
+            "value": "100 x 40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Dakkagun",
@@ -15772,7 +15964,8 @@
             "value": 6
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -15852,7 +16045,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -15935,7 +16129,8 @@
             "value": 4
           },
           "Base": {
-            "value": "100 x 40mm"
+            "value": "100 x 40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -16016,7 +16211,8 @@
             "value": 6
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -16102,7 +16298,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -16930,7 +17127,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kannon",
@@ -17638,7 +17836,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Huge tusks",
@@ -17940,7 +18139,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -18154,7 +18354,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Krusha kannon",
@@ -18498,7 +18699,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bursta kannon",
@@ -18982,7 +19184,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -20083,23 +20286,17 @@
             "value": 19
           },
           "Kustom force field": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Kustom force field"
@@ -20149,7 +20346,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kustom mega-blasta",
@@ -20688,7 +20886,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -20895,7 +21094,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -20932,7 +21132,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -21110,7 +21311,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -21288,7 +21490,8 @@
             "value": 5
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kannon",
@@ -21403,7 +21606,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         }
       },
@@ -21440,7 +21644,8 @@
             "value": 4
           },
           "Base": {
-            "value": "150 x 95mm"
+            "value": "150 x 95mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21485,7 +21690,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kustom shoota",
@@ -21858,7 +22064,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -22527,7 +22734,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -22584,7 +22792,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -23221,7 +23430,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -23738,7 +23948,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -24011,7 +24222,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Rokkit launcha",
@@ -24146,7 +24358,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Dakkagun",
@@ -24479,7 +24692,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Dakkagun",
@@ -24674,7 +24888,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -24731,7 +24946,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burna",
@@ -24910,7 +25126,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -25099,7 +25316,8 @@
             "value": 4
           },
           "Base": {
-            "value": "65mm"
+            "value": "65mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -25156,7 +25374,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kopta rokkits",
@@ -25488,7 +25707,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Snazzgun",
@@ -25666,7 +25886,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -25708,7 +25929,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -25765,7 +25987,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -25822,7 +26045,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -26011,7 +26235,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Snazzgun",
@@ -26189,7 +26414,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -26364,7 +26590,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -26553,7 +26780,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -26610,7 +26838,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -27247,7 +27476,8 @@
             "value": 4
           },
           "Base": {
-            "value": "150 x 95mm"
+            "value": "150 x 95mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -27292,7 +27522,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Deffgun",
@@ -27451,7 +27682,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kustom shoota",
@@ -27824,7 +28056,8 @@
             "value": 4
           },
           "Base": {
-            "value": "150 x 95mm"
+            "value": "150 x 95mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -27869,7 +28102,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -27926,7 +28160,8 @@
             "value": 5
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Smasha gun",
@@ -28057,7 +28292,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -28554,7 +28790,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Dakkagun",
@@ -28867,7 +29104,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -29516,7 +29754,8 @@
             "value": 4
           },
           "Base": {
-            "value": "150 x 95mm"
+            "value": "150 x 95mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -29562,7 +29801,8 @@
             "value": 4
           },
           "Base": {
-            "value": "150 x 95mm"
+            "value": "150 x 95mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -29606,7 +29846,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "assets": {
@@ -29648,7 +29889,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -30195,7 +30437,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -30640,7 +30883,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -30697,7 +30941,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -30876,7 +31121,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Big shoota",
@@ -31055,7 +31301,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Saddlegit weapons",
@@ -31248,7 +31495,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slugga",
@@ -31501,7 +31749,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Rokkit launcha",
@@ -31616,7 +31865,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Dakkagun",
@@ -31791,7 +32041,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin big shoota",
@@ -31890,7 +32141,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin big shoota",
@@ -32037,7 +32289,8 @@
             "value": 3
           },
           "S": {
-            "value": "x3"
+            "value": "x3",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -32097,7 +32350,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -32117,10 +32371,12 @@
             "value": -5
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy 2D3"
@@ -32143,7 +32399,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -32182,6 +32439,959 @@
       },
       "Shiny Gubbinz§Supa-cybork Body": {
         "text": "**INFANTRY** model only.\n\n* This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n* Each time an attack is allocated to this model, halve the Damage characteristic of that attack."
+      },
+      "Stratagem§Attack Out O’ Da Sun’": {
+        "text": "Use this Stratagem at the end of your turn. Select one **DEFFKOPTAS** unit from your army. Remove that unit from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your next [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can set that unit back up on the battlefield anywhere that is more than 9″ away from any enemy models. If the battle ends and that unit is not on the battlefield, it is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Big Boss": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the ORKS** keyword. Select one **ORKS CHARACTER** from your army and determine one Warlord Trait for that model (this must be a Warlord Trait they could have); that model it is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two [Warlord Traits](https://wahapedia.ru/wh40k9ed/factions/orks/#Warlord-Traits). You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Blitz Brigade": {
+        "text": "Use this Stratagem when choosing your army. Pick an [ORK Detachment](https://wahapedia.ru/wh40k9ed/factions/orks/#Detachment-Rules) from your army to be a Blitz Brigade Specialist Detachment. **WARBOSSES**, BATTLEWAGONS**, GUNWAGONS** and BONEBREAKA** units in that Detachment gain the BLITZ BRIGADE keyword.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Blitza Dakka": {
+        "text": "Use this Stratagem in your Shooting phase, when a **SPEED** MOB** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack that targets an enemy unit within 12\", re-roll a hit roll of 1. If that SPEED** MOB** unit has the **KUSTOM BOOSTA-BLASTAS** keyword, re-roll a hit roll of 1-2 instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Breakin’ Heads": {
+        "text": "Use this Stratagem in the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), when a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is failed for a **&lt;CLAN&gt;** unit (excluding GRETCHIN** units) from your army that is within 3″ of any friendly **&lt;CLAN&gt; WARBOSS** or **&lt;CLAN&gt; NOBZ** units. That &lt;CLAN&gt;** unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and the Morale test is treated as having been passed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Morale"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Burn ’em All!": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **BURNA-BOMMER** unit from your army makes attacks with skorcha missile racks. After resolving these attacks, each other unit within 3″ of the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Careen!": {
+        "text": "Use this Stratagem in any phase, when an **ORKS VEHICLE** model in your army that is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy models is destroyed and explodes. That model can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) of up to 6″ before resolving the explosion. If that VEHICLE** is a WAGON** or TITANIC** model, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Chaaaaarge!": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a [Warbikers](https://wahapedia.ru/wh40k9ed/factions/orks/Warbikers) unit from your army makes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Until the end of the turn:\n\n* Add 1 to the Strength characteristic of models in that unit.\n* Each time a model in that unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Charge Through ’em!": {
+        "text": "Use this Stratagem before a **KULT** OF** SPEED** unit from your army makes a [consolidation move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate). That unit consolidates 2D6\" instead of 3\".",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Cloud Of Smoke": {
+        "text": "Use this Stratagem at the start of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **SPEED FREEKS** VEHICLE** unit from your army. Until the end of the phase, while a friendly SPEED** FREEKS** VEHICLE** unit is within 6″ of the selected unit, each time a ranged attack targets that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Crashin’ Through": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **SPEED FREEKS** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). If that unit has the Spiked Ram** ability, it cannot use that ability this turn. Select one enemy unit within 1″ of that SPEED** FREEKS** unit and roll one D6 for each model that SPEED** FREEKS** unit contains (to a maximum of six D6):\n\n* If that SPEED** FREEKS** unit has the BIKER** keyword, for each dice result of 4+, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If that SPEED** FREEKS** unit has the VEHICLE** keyword (excluding MEGATRAKK** SCRAPJETS** and KUSTOM** BOOSTA-BLASTAS** units), for each dice result of 4+, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If that SPEED** FREEKS** unit has the **MEGATRAKK SCRAPJETS** or **KUSTOM BOOSTA-BLASTAS** keywords, for each dice result of 2-5, that enemy unit suffers D3 mortal wounds; for each dice result of 6, that enemy unit suffers 2D3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Cuttin’ Flames": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **BURNA BOYZ** unit from your army. Until the end of the phase, each time a Burna Boy model in that unit makes a melee attack, that attack has an Armour Penetration characteristic of -2. This cannot be improved by any abilities or rules that improve Armour Penetration characteristics.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Da Bigger Dey Iz...": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **BEAST SNAGGA** WARBOSS** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack that targets a TITANIC** unit, add 2 to the Damage characteristic of that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Ded Sneaky": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) if the mission you are playing is using the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rule. Select one **BLOOD AXES** INFANTRY** unit from your army (excluding **MEGA ARMOUR** units) that is within 3″ of any battlefield edge. Place that unit in Strategic Reserve.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Dread Waaagh!": {
+        "text": "Use this Stratagem when choosing your army. Pick an [ORK Detachment](https://wahapedia.ru/wh40k9ed/factions/orks/#Detachment-Rules) from your army to be a Dread Waaagh! Specialist Detachment. **BIG MEKS**, GORKANAUTS**, MORKANAUTS**, **DEFF DREADS** and **KILLA KANS** in that Detachment gain the DREAD WAAAGH! keyword.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Drive By Dakka": {
+        "text": "Use this Stratagem at the end of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **EVIL SUNZ** SPEED** FREEKS** unit from your army. That unit can immediately make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) as if it was your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). That unit is not [eligible to charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Charges) this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Extra Gubbinz": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your **WARLORD** has the ORKS** keyword. Select one **ORKS CHARACTER** model in your army and give them one [Shiny Gubbinz](https://wahapedia.ru/wh40k9ed/factions/orks/#Shiny-Gubbinz) (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Force Field Boosta": {
+        "text": "Use this Stratagem at the start of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one model in your army that is equipped with a kustom force field. Until the end of the turn, replace that kustom force field’s ability with the following:\n\n\n\n‘(Aura) While a friendly **ORKS** unit is within 9″ of the bearer, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).’\n\n\n\nAt the end of this turn, the kustom force field overloads and cannot be used for the rest of the battle. You can only use this Stratagem once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Get Da Loot": {
+        "text": "Use this Stratagem at the start of your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **FREEBOOTERZ INFANTRY** unit from your army that is on the battlefield. Until the start of your next Command phase, that unit gains the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Get Stuck In Ladz!": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **BOYZ** or **BEAST SNAGGA** BOYZ** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a [pile in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) or [consolidation move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate), it can move up to an additional 3″. This is not cumulative with any other rule that increases the distance models can pile in or consolidate. If that unit contains 10 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Gloryboyz": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **BLOOD** AXES** unit from your army makes a charge move. Select one enemy unit that was a target of that charge. Until the end of the phase, each time a **BLOOD AXES** STORMBOYZ** unit declares that enemy unit as a target of a charge, add 2 to that [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Got’em Trapped": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of two or more **BLOOD** AXES** units (excluding [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) units) from your army. Until the end of the phase, each time a BLOOD** AXES** model makes an attack against that unit, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Grot Shields": {
+        "text": "Use this Stratagem at the start of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **ORKS INFANTRY** unit from your army, then select one **GRETCHIN INFANTRY** unit (excluding CHARACTER** units) from your army that is within 6″ of that unit. Until the end of the phase, enemy models cannot select the selected ORKS** INFANTRY** unit as a target if the selected GRETCHIN** INFANTRY** unit is a closer visible target.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Groundshaker Shells": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when selecting a target for an ’eavy lobba. Until the end of the phase, each time that model makes a ranged attack with an ‘eavy lobba, if a hit is scored against a target that is not **TITANIC** and cannot [FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying), then until the start of your next [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), halve the Move characteristic of models in the target unit and subtract 2 from the result of [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Gun Crazy Show Offs": {
+        "text": "Use this Stratagem at the end of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **FLASH GITZ** unit from your army; that unit can [shoot again](https://wahapedia.ru/wh40k9ed/the-rules/rules-appendix/#Shoot-Again), but must target the closest eligible enemy unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Hit ’em Harder": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **MEGANOBZ** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack with a power klaw or killsaw, add 1 to that attack’s Damage characteristic.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Hold On, Boyz!": {
+        "text": "Use this Stratagem during your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) before you move a **&lt;CLAN&gt;** BLITZ** BRIGADE** BATTLEWAGON** from your army. Pick a friendly **&lt;CLAN&gt; INFANTRY** unit wholly within 3″ of that model and remove it from the battlefield. After that BATTLEWAGON** has moved, set the &lt;CLAN&gt;** INFANTRY** unit up on the battlefield wholly within 3″ of that BATTLEWAGON**, and more than 3″ from any enemy models. (Note that this infantry unit is not embarked within the Battlewagon and therefore does not count towards the number of models it can [transport](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports).) That infantry unit cannot move further this phase (but counts as having moved this turn for all rules purposes) and it cannot [charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Krush ’em": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when a **BLITZ** BRIGADE** BONEBREAKA** from your army is chosen to fight. Roll three D6 for the Bonebreaka Ram** ability and choose the highest result.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Kult Of Speed": {
+        "text": "Use this Stratagem when choosing your army. Pick an [ORK Detachment](https://wahapedia.ru/wh40k9ed/factions/orks/#Detachment-Rules) from your army to be a Kult of Speed Specialist Detachment. **SPEED FREEKS** in that Detachment gain the KULT OF SPEED keyword.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Kustom Ammo": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Pick a **DREAD** WAAAGH!** unit from your army. That unit can shoot twice this Shooting phase with all of its ranged weapons.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Lotsa Squigs!": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **RUKKATRUKK SQUIGBUGGIES** unit from your army. Add 1 to the number of squig mines that unit has remaining.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Lumbering Strides": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when you use the **’Ere We** Go** ability to re-roll a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for a MORKANAUT**, GORKANAUT** or STOMPA** unit from your army. You can re-roll one of the dice for that charge roll instead of both.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Mek Connections": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Pick a **DREAD** WAAAGH!** unit from your army that is within 1″ of a **MEK WORKSHOP**. If you use the Kustom Job** ability to give that unit a kustom job, it receives something ‘extra speshul’ on a 4+ instead of a 6+.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Monster Hunterz": {
+        "text": "Use this Stratagem at the start of any phase. Select one enemy **MONSTER** or VEHICLE** unit and up to 3 **BEAST SNAGGA** units from your army. Until the end of the phase, each time an attack is made by a model in one of the selected BEAST** SNAGGA** units that targets the selected MONSTER** or VEHICLE** unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§More Dakka!": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ORKS** unit from your army is selected to shoot. Until the end of the phase, **Dakka weapons** that unit is equipped with are considered to be within half range when determining how many attacks are made with that weapon.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§More Gitz Over ’ere!": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a [**SPEED** MOB**](https://wahapedia.ru/wh40k9ed/factions/orks/#Army-of-Renown:-Speed-Freeks-Speed-Mob) unit from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back):\n\n* That unit is still eligible to shoot this turn even though it Fell Back.\n* If that unit has the **BOOMDAKKA SNAZZWAGONS** keyword, until the end of the turn, each time a model in that unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Mystic Chanting": {
+        "text": "Use this Stratagem during your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **SNAKEBITES** unit from your army. Until the end of the phase, that unit can attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power as if it were a PSYKER**.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Opening Salvo": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) of the first battle round. Pick a **BLITZ** BRIGADE** GUNWAGON** from your army. Double the Range characteristic of that unit’s weapons until the end of that phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Orks Is Never Beaten": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ORKS CHARACTER** model in your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play - it can fight after the attacking model’s unit has finished making attacks. If the selected model’s characteristics change as it takes damage, use the bottom row of that model’s profile when resolving those attacks. After resolving the destroyed model’s attacks, it is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Ramming Speed": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when an **ORKS VEHICLE** unit from your army is selected to charge.\n\n* Until the end of the phase, when making a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit, roll 3D6 instead.\n* Until the end of the phase, when that unit finishes a charge move, select one enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of it and roll one D6: on a 2+, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Showin’ Off": {
+        "text": "Use this Stratagem when a **BAD MOONS** CORE** or **BAD MOONS** CHARACTER** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a Dakka weapon, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Snagga Grapple": {
+        "text": "Use this Stratagem at the start of your opponent’s [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **BEAST SNAGGA** BOYZ** unit from your army. Each time an enemy unit (excluding TITANIC** units) that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit is selected to move, roll one D6: on a 4+, that enemy unit cannot [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Speshul Ammo": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **BLOOD** AXES** unit from your army is selected to shoot. Until the end of the phase, shootas models in that unit are equipped with have a Type characteristic of **Dakka 4/2** and an Armour Penetration characteristic of -1 (this includes the Shoota profile of [kombi-weapons](https://wahapedia.ru/wh40k9ed/factions/orks/#Codex-Supplement:-Blood-Axes)). If that unit contains 10 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Spotted ‘em!": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit within 12″ of and visible to a **BLOOD AXES** KOMMANDOS** unit from your army. Until the end of the phase, each time a BLOOD** AXES** model in your army makes an attack against that enemy unit, the target unit does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Stomp, Stomp, Stomp!": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Pick a **STOMPA** MOB** unit from your army that is within 1″ of any enemy units. Roll a D6 for each enemy model within 3″ of that unit; on a 6+ that model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Stompa Mob": {
+        "text": "Use this Stratagem when choosing your army. Pick an ORK [Super-heavy Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Super-heavy-Detachment) from your army to be a Stompa Mob Specialist Detachment. **STOMPA** units in that Detachment gain the STOMPA MOB keyword. In addition, you can pick one model in that Stompa Mob Specialist Detachment to gain the [CHARACTER](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) keyword. However, the only Warlord Trait it can be given is either Gork’s One** or Mork’s One** and the only relic it can take is Tezdrek’s Stompa Power Field**.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Stompa-porta": {
+        "text": "Use this Stratagem during deployment. You can set up a **STOMPA** MOB** unit from your army on a tellyporta pad instead of placing it on the battlefield. Units on a tellyporta pad can teleport into battle at the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) – set them up anywhere on the battlefield that is more than 9″ from any enemy models.",
+        "stats": {
+          "Command Cost": {
+            "value": 4
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Surprize!": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **BLOOD AXES** KOMMANDOS** unit that is [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) an [Area Terrain](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Area-Terrain) feature. Until the end of the phase:\n\n* While an enemy unit is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this unit, that enemy unit cannot make use of any rules that allow it to fight first and never counts as having made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, irrespective of any abilities that unit may have.\n* Each time an attack is made against that unit, subtract 1 from that attacks [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Taktical Awareness": {
+        "text": "Use this Stratagem at the start of any phase. Select one **BLOOD** AXES** unit from your army. Until the end of the turn:\n\n* That unit can start to [perform an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) even if it [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) this turn.\n* That unit can make ranged attacks without any action it is performing failing.\n* If that unit has the CHARACTER** keyword, it can still use any [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) it has while performing an action.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Tankbusta Bomb": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ORKS TANKBUSTA** BOMBS** unit from your army is selected to fight. Select one model in that unit; that model can only make one attack this phase and must target an enemy VEHICLE** unit with that attack, but if a hit is scored, that unit suffers 2D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and the attack sequence ends.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Tellyporta": {
+        "text": "Use this Stratagem during deployment. Select one non-**MONSTER** ORKS** unit from your army that has Power Rating 20 or less. You can set up this unit on a tellyporta pad instead of setting it up on the battlefield. If you do so, then in the Reinforcements step of one of your Movement phases, you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models. If you select a TRANSPORT** unit, any embarked units remain embarked when this unit is set up on the battlefield.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Tide Of Muscle": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when you select an **ORKS CORE** unit (excluding GRETCHIN** units) from your army to charge. That unit can ignore any or all modifiers to the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Tough As Squig-hide": {
+        "text": "Use this Stratagem in any phase, when a **BEAST SNAGGA** INFANTRY**, **BEAST SNAGGA** CAVALRY** or <s class=\"kwbs\">BEAST SNAGGA MONSTER</s> unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified wound roll of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Trigga Discipline": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **BLOOD AXES** LOOTAS** unit from your army is selected to shoot. Select one enemy VEHICLE** unit. Until the end of the phase, each time a model in that LOOTAS** unit makes an attack against that VEHICLE** unit, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). If that LOOTAS** unit contains 10 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Turbo-boostas": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Pick a **KULT** OF** SPEED** unit from your army. If that unit [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) this phase, double that unit’s Move characteristic instead of rolling a dice.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Unbridled Carnage": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **GOFF CORE** or **GOFF CHARACTER** unit from your army that has the No Mukkin’ About Clan Kultur. Until the end of the phase, each time a model in that unit makes an attack, it scores an additional hit on an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 5+ instead of 6.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Unstoppable Momentum": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), after a **NOB ON** SMASHA** SQUIG** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). If there are no enemy models within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that model, it can immediately be selected to declare a charge again.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Wreckaz": {
+        "text": "Use this Stratagem at the start of your [Shooting](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) or [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **DEATHSKULLS CORE** or **DEATHSKULLS CHARACTER** unit from your army. Until the end of the phase, each time a model in that unit makes an attack that targets a VEHICLE**, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
+      },
+      "Stratagem§Youngbloodz": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **BLOOD AXES** STORMBOYZ** unit is selected to fight. Until the end of the phase, add 1 to the Strength characteristic of models in that unit. If that unit contains 10 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Orks Strat"
+          ]
+        }
       },
       "Troops§Beast Snagga Boyz": {
         "stats": {
@@ -32611,132 +33821,52 @@
         }
       },
       "Warlord Trait§’ard As Nails": {
-        "text": "Each time an attack is made that targets this **WARLORD**, subtract 1 from that attack’s wound roll.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "Each time an attack is made that targets this **WARLORD**, subtract 1 from that attack’s wound roll."
       },
       "Warlord Trait§Beastgob (aura)": {
-        "text": "While a friendly **&lt;CLAN&gt; SQUIG** unit is within 6″ of this WARLORD**, each time a model in that unit makes a melee attack with squighog jaws, smasha squig jaws or a squigosaur’s jaws, add 1 to that attack’s Damage characteristic.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "While a friendly **&lt;CLAN&gt; SQUIG** unit is within 6″ of this WARLORD**, each time a model in that unit makes a melee attack with squighog jaws, smasha squig jaws or a squigosaur’s jaws, add 1 to that attack’s Damage characteristic."
       },
       "Warlord Trait§Big Gob": {
-        "text": "Add 3″ to the range of this **WARLORD**’s aura abilities (to a maximum of 9\").",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "Add 3″ to the range of this **WARLORD**’s aura abilities (to a maximum of 9\")."
       },
       "Warlord Trait§Bigkilla Boss": {
-        "text": "* Each time this **WARLORD** fights, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy VEHICLE** or MONSTER** units, then until that fight is resolved, add 2 to this WARLORD**’s Attacks characteristic.\n* Each time this WARLORD** makes a melee attack against a VEHICLE** or MONSTER** unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "* Each time this **WARLORD** fights, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy VEHICLE** or MONSTER** units, then until that fight is resolved, add 2 to this WARLORD**’s Attacks characteristic.\n* Each time this WARLORD** makes a melee attack against a VEHICLE** or MONSTER** unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Brutal But Kunnin’": {
-        "text": "Each time this **WARLORD** fights, if all of its attacks target one enemy unit, after resolving all of those attacks, it can make a number of additional attacks against that enemy unit equal to the number of attacks that did not reach the [Inflict Damage](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#5.-Inflict-Damage) step of the attack sequence during that fight.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "Each time this **WARLORD** fights, if all of its attacks target one enemy unit, after resolving all of those attacks, it can make a number of additional attacks against that enemy unit equal to the number of attacks that did not reach the [Inflict Damage](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#5.-Inflict-Damage) step of the attack sequence during that fight."
       },
       "Warlord Trait§Counta-taktics (aura)": {
-        "text": "While a friendly **BLOOD AXES** CORE** unit is within 6″ of this WARLORD**, that unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Blood Axes 2"
-          }
-        }
+        "text": "While a friendly **BLOOD AXES** CORE** unit is within 6″ of this WARLORD**, that unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters)."
       },
       "Warlord Trait§Duk An’ Kuvva": {
-        "text": "At the start of your opponents Shooting phase, if this **WARLORD** is wholly within an Area Terrain feature, select one friendly **BLOOD AXES** BOYZ** or **BLOOD AXES** KOMMANDOS** unit wholly within that terrain feature. Until the end of the phase, that unit cannot be selected as the target of ranged attacks made by enemy models that are not within 12″ of that terrain feature.",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Blood Axes 3"
-          }
-        }
+        "text": "At the start of your opponents Shooting phase, if this **WARLORD** is wholly within an Area Terrain feature, select one friendly **BLOOD AXES** BOYZ** or **BLOOD AXES** KOMMANDOS** unit wholly within that terrain feature. Until the end of the phase, that unit cannot be selected as the target of ranged attacks made by enemy models that are not within 12″ of that terrain feature."
       },
       "Warlord Trait§Extra Kunnin’": {
-        "text": "Once per battle round, when you use a Strategic Ploy Stratagem if this **WARLORD** is on the battlefield, you can reduce the CP cost of that Stratagem by 1CP. Note that the CP cost is only reduced by 1CP for that use of the Stratagem, any future usages of it cost the normal amount of [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points).",
-        "stats": {
-          "Discipline": {
-            "value": "Codex Supplement: Blood Axes 1"
-          }
-        }
+        "text": "Once per battle round, when you use a Strategic Ploy Stratagem if this **WARLORD** is on the battlefield, you can reduce the CP cost of that Stratagem by 1CP. Note that the CP cost is only reduced by 1CP for that use of the Stratagem, any future usages of it cost the normal amount of [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points)."
       },
       "Warlord Trait§Follow Me Ladz (aura)": {
-        "text": "If this **WARLORD** has made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, until the end of the turn, each time a friendly **&lt;CLAN&gt; ORKS** unit declares a charge against an enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, add 1 to the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "If this **WARLORD** has made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, until the end of the turn, each time a friendly **&lt;CLAN&gt; ORKS** unit declares a charge against an enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, add 1 to the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit."
       },
       "Warlord Trait§Get Up In Their Faces": {
-        "text": "This **WARLORD** is eligible to shoot in a turn in which they [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "This **WARLORD** is eligible to shoot in a turn in which they [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back)."
       },
       "Warlord Trait§Half-chewed": {
-        "text": "While this **WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of an enemy CHARACTER** or MONSTER** unit, each time this model would lose a wound, roll one D6: on a 4+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "While this **WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of an enemy CHARACTER** or MONSTER** unit, each time this model would lose a wound, roll one D6: on a 4+, that wound is not lost."
       },
       "Warlord Trait§Junkboss": {
-        "text": "This **WARLORD** has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "This **WARLORD** has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Warlord Trait§Kunnin’ But Brutal": {
-        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this **WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this **WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase."
       },
       "Warlord Trait§Might Is Right": {
-        "text": "Add 1 to this **WARLORD**’s Strength and Attacks characteristics.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "Add 1 to this **WARLORD**’s Strength and Attacks characteristics."
       },
       "Warlord Trait§Roadkilla": {
-        "text": "After this **WARLORD** makes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), you can select one enemy unit within 1″ of it and roll one D6: on a 2+, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "After this **WARLORD** makes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), you can select one enemy unit within 1″ of it and roll one D6: on a 2+, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Warlord Trait§Speed King": {
-        "text": "While a friendly **SPEED FREEKS** unit (excluding CHARACTER** units) is within 6″ of this WARLORD**, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
-        "stats": {
-          "Discipline": {
-            "value": "Army of Renown: Speed Freeks Speed Mob"
-          }
-        }
+        "text": "While a friendly **SPEED FREEKS** unit (excluding CHARACTER** units) is within 6″ of this WARLORD**, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1."
       },
       "Weapon§’Eavy lobba": {
         "stats": {
@@ -32846,7 +33976,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -32984,7 +34115,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -33110,7 +34242,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33232,7 +34365,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33252,7 +34386,8 @@
             "value": 6
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33268,7 +34403,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -33307,10 +34443,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33404,7 +34542,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -33443,7 +34582,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -33485,7 +34625,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33502,10 +34643,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33521,7 +34664,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -33602,7 +34746,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33639,10 +34784,12 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33661,7 +34808,8 @@
             "value": 4
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33700,7 +34848,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33837,10 +34986,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33859,7 +35010,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33915,10 +35067,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33961,7 +35115,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -33996,7 +35151,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34016,7 +35172,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34039,7 +35196,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34059,7 +35217,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34079,7 +35238,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34118,7 +35278,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34135,13 +35296,16 @@
       "Weapon§Lifta-droppa": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy D6"
@@ -34181,7 +35345,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34201,7 +35366,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34259,7 +35425,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34275,7 +35442,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -34294,7 +35462,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 7
@@ -34316,7 +35485,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34355,7 +35525,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34666,7 +35837,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -34685,10 +35857,12 @@
             "value": -5
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy D6"
@@ -34787,13 +35961,16 @@
       "Weapon§Skrak’s horned helmet": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34813,7 +35990,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34852,7 +36030,8 @@
             "value": 9
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -34868,7 +36047,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -35111,7 +36291,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault 1"
@@ -35211,7 +36392,8 @@
             "value": 9
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -35231,10 +36413,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy 4D3"
@@ -35290,7 +36474,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -35349,7 +36534,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -35386,13 +36572,16 @@
       "Weapon§Tankhammer": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -35432,7 +36621,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -35455,7 +36645,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -35478,7 +36669,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -35575,7 +36767,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -35595,7 +36788,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -35677,7 +36871,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -35700,7 +36895,8 @@
             "value": 3
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy 1"

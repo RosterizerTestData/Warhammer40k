@@ -1,11 +1,11 @@
 {
   "name": "Agents of the Imperium",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -16,6 +16,11 @@
   ],
   "manifest": {
     "assetTaxonomy": {
+      "In-game Stratagems": {
+        "assets": {
+          "traits": []
+        }
+      },
       "Telethesia Discipline": {
         "templateClass": "Psychic Power"
       }
@@ -256,7 +261,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -321,7 +327,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -389,7 +396,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -498,7 +506,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -566,7 +575,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -634,7 +644,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -1419,7 +1430,8 @@
             "value": 2
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1498,7 +1510,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1579,7 +1592,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1661,7 +1675,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1735,7 +1750,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1820,7 +1836,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1886,7 +1903,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Laspistol",
@@ -2493,7 +2511,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -2514,7 +2533,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -2551,7 +2571,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -2598,7 +2619,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -2645,7 +2667,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -2692,7 +2715,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Navis shotgun",
@@ -3107,7 +3131,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Navis shotgun",
@@ -3396,7 +3421,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -3443,7 +3469,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -3488,7 +3515,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -3567,23 +3595,17 @@
             "value": 6
           },
           "Endurant shield": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3602,23 +3624,17 @@
             "dynamic": true
           },
           "Smoke grenades": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3904,7 +3920,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 1
@@ -3921,13 +3938,16 @@
       "Weapon§Blind grenades": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Grenade D6"
@@ -3982,10 +4002,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -4005,7 +4027,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -4161,7 +4184,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -4181,7 +4205,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -4243,7 +4268,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -4265,7 +4291,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -4287,7 +4314,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 1
@@ -4387,7 +4415,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -4407,7 +4436,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -4483,7 +4513,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -4506,7 +4537,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -4541,7 +4573,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -4561,7 +4594,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -4681,7 +4715,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -4698,13 +4733,16 @@
       "Weapon§Neural shredder": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault 1"
@@ -4744,7 +4782,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -4842,7 +4881,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -4945,7 +4985,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -5047,7 +5088,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -5067,7 +5109,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -5149,7 +5192,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"

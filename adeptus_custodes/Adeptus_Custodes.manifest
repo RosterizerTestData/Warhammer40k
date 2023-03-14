@@ -1,11 +1,11 @@
 {
   "name": "Adeptus Custodes",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -50,7 +50,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitShield Host": {
             "evals": [
               {
                 "paths": [
@@ -68,6 +68,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -77,9 +78,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Shield Host",
                     "value"
@@ -92,6 +90,22 @@
                   "Shield Host",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Shield Host",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -111,6 +125,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -121,6 +149,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -146,6 +182,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -156,6 +206,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -181,6 +239,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -191,6 +263,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -216,6 +296,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -226,6 +320,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -251,6 +353,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -261,6 +377,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -286,6 +410,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -298,6 +436,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -308,6 +454,46 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Arcane Genetic Alchemy",
+            "Stratagem§Sweeping Advance",
+            "Stratagem§Praesidium Shieldwall",
+            "Stratagem§Death Mark",
+            "Stratagem§Avenge The Fallen",
+            "Stratagem§Slayers Of Nightmares",
+            "Stratagem§Talons Of The Emperor",
+            "Stratagem§Purgation Sweep",
+            "Stratagem§Vigil Unending",
+            "Stratagem§Wisdom Of The Moritoi",
+            "Stratagem§Retribution Of The Machine Spirit",
+            "Stratagem§Indomitable Engines",
+            "Stratagem§Earning Of A Name",
+            "Stratagem§Fraternity Of Heroes",
+            "Stratagem§Martial Discretion",
+            "Stratagem§Indomitable Guardians",
+            "Stratagem§Unleash The Lions",
+            "Stratagem§Shoulder The Mantle",
+            "Stratagem§Manoeuvre And Fire",
+            "Stratagem§Desperation’s Price",
+            "Stratagem§The Emperor’s Auspice",
+            "Stratagem§Empyric Severance",
+            "Stratagem§Creeping Dread",
+            "Stratagem§Rapid Reactions",
+            "Stratagem§Covered Advance",
+            "Stratagem§Tanglefoot Grenade",
+            "Stratagem§Teleport Homer",
+            "Stratagem§Psyk-out Grenade",
+            "Stratagem§Grim Responsibility",
+            "Stratagem§Shield Of Honour",
+            "Stratagem§Golden Light Of The Moiraides",
+            "Stratagem§The Eagle’s Strike",
+            "Stratagem§Into The Darkness",
+            "Stratagem§Esteemed Amalgam"
+          ]
+        }
+      },
       "Relics of Terra": {
         "templateClass": "Relic"
       },
@@ -315,13 +501,46 @@
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Shield Host": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Aquilan Shield": {
+                "order": 1
+              },
+              "Dread Host": {
+                "order": 2
+              },
+              "Emperor’s Chosen": {
+                "order": 3
+              },
+              "Emissaries Imperatus": {
+                "order": 4
+              },
+              "Shadowkeepers": {
+                "order": 5
+              },
+              "Solar Watch": {
+                "order": 6
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceShield HostKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Shield Host",
                     "value"
@@ -329,7 +548,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -339,7 +559,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Shield Host>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -358,7 +578,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Shield Host>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -371,12 +591,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Shield Host",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityShield Host": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Shield Host",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Shield Host",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -462,8 +723,7 @@
             "statType": "term",
             "value": "&lt;SHIELD HOST&gt;",
             "text": "While a friendly **{v}** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -480,8 +740,7 @@
             "statType": "term",
             "value": "&lt;SHIELD HOST&gt;",
             "text": "Each time a friendly **{v}** unit declares a charge against enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this unit, add 1 to the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -519,8 +778,7 @@
             "statType": "term",
             "value": "&lt;SHIELD HOST&gt;",
             "text": "While a friendly **{v}** CHARACTER** unit is within 3″ of this unit, that CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -568,7 +826,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Storm bolter",
@@ -850,7 +1109,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1184,7 +1444,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Achillus dreadspear",
@@ -1370,23 +1631,17 @@
             "value": 9
           },
           "Galatus shield": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1435,7 +1690,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1572,7 +1828,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -1805,23 +2062,17 @@
             "value": 6
           },
           "Praesidium shield": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1840,23 +2091,17 @@
             "dynamic": true
           },
           "Vexilla defensor": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1875,23 +2120,17 @@
             "dynamic": true
           },
           "Vexilla imperius": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1910,23 +2149,17 @@
             "dynamic": true
           },
           "Vexilla magnifica": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1975,7 +2208,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Guardian spear",
@@ -2136,23 +2370,17 @@
             "value": 6
           },
           "Vexilla defensor": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2171,23 +2399,17 @@
             "dynamic": true
           },
           "Vexilla imperius": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2206,23 +2428,17 @@
             "dynamic": true
           },
           "Vexilla magnifica": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2271,7 +2487,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Balistus grenade launcher",
@@ -2573,7 +2790,8 @@
             "value": 3
           },
           "Base": {
-            "value": "105 x 70mm"
+            "value": "105 x 70mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2620,23 +2838,17 @@
             "value": "Venatari Custodian"
           },
           "Tarsus buckler": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2849,23 +3061,17 @@
             "value": 20
           },
           "Infernus firebombs": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2922,7 +3128,8 @@
             "value": 3
           },
           "Base": {
-            "value": "160mm"
+            "value": "160mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3136,7 +3343,8 @@
             "value": 3
           },
           "Base": {
-            "value": "160mm"
+            "value": "160mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3352,7 +3560,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin Iliastus accelerator cannon",
@@ -3677,7 +3886,8 @@
             "value": 2
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Iliastus accelerator culverin",
@@ -4050,7 +4260,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin heavy bolter",
@@ -4391,7 +4602,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4467,7 +4679,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4543,7 +4756,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Executioner greatblade",
@@ -4677,23 +4891,17 @@
             "value": 6
           },
           "Praesidium shield": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4742,7 +4950,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Guardian spear",
@@ -4910,7 +5119,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Balistus grenade launcher",
@@ -5128,7 +5338,8 @@
             "value": 2
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hurricane bolter",
@@ -5345,7 +5556,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5424,7 +5636,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5500,7 +5713,8 @@
             "value": 2
           },
           "Base": {
-            "value": "65mm"
+            "value": "65mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lastrum bolt cannon",
@@ -5702,7 +5916,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Balistus grenade launcher",
@@ -5880,7 +6095,8 @@
             "value": 2
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lastrum storm bolter",
@@ -6106,7 +6322,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Adrasite spear",
@@ -6241,7 +6458,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Guardian spear",
@@ -6376,7 +6594,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Guardian spear",
@@ -6491,7 +6710,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -6533,7 +6753,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -6575,7 +6796,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Adrastus bolt caliver",
@@ -6674,7 +6896,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kinetic destroyer",
@@ -6852,7 +7075,8 @@
             "value": 2
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hurricane bolter",
@@ -7030,7 +7254,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7072,7 +7297,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7114,7 +7340,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7156,7 +7383,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7212,7 +7440,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -7453,7 +7682,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -7482,13 +7712,16 @@
       "Relics of Terra§Misery’s Burden": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -7505,7 +7738,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -7646,6 +7880,644 @@
         "text": "**KNIGHT-CENTURA** equipped with an executioner greatblade only. This Relic replaces an executioner greatblade and has the following profile:"
       },
       "Roster§Army": {},
+      "Stratagem§Arcane Genetic Alchemy": {
+        "text": "Use this Stratagem in any phase, when an **ADEPTUS CUSTODES** INFANTRY** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the enemy model making the attack may have. If that ADEPTUS** CUSTODES** INFANTRY** unit contains 3 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Avenge The Fallen": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ADEPTUS CUSTODES** unit from your army is selected to fight. Until the end of the phase:\n\n* If that unit is below [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) but not below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units), add 1 to the Attacks characteristic of models in that unit.\n* If that unit is below Half-strength, add 2 to the Attacks characteristic of models in that unit instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Covered Advance": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ADEPTUS CUSTODES** SMOKESCREEN** or **ANATHEMA PSYKANA** SMOKESCREEN** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Creeping Dread": {
+        "text": "Use this Stratagem at the start of any phase. Select one **ANATHEMA PSYKANA** INFANTRY** unit from your army. Until the end of the phase, this unit gains the following ability: ‘Creeping Dread (Aura)**:** While an enemy unit is within 6″ of this unit, each time a model in that enemy unit makes an attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).’",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Death Mark": {
+        "text": "At the start of the first battle round, before the first turn begins, select one enemy unit. Until the end of the battle, each time a model in a **VIGILATORS** unit from your army makes an attack against that enemy unit, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Desperation’s Price": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when an enemy [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit within 18″ of an **ANATHEMA PSYKANA** INFANTRY** unit from your army suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp). That PSYKER** unit suffers an additional D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Earning Of A Name": {
+        "text": "Use this Stratagem when an enemy [**CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit is destroyed as a result of a melee attack made by an **ADEPTUS CUSTODES** CHARACTER** model (excluding named characters) from your army. Resolve one of the following for that ADEPTUS** CUSTODES** CHARACTER** unit:\n\n* Select one trait of a [shield host fighting style](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Shield-Host-Fighting-Style) that unit does not have. Until the end of the battle, that unit gains that trait (in addition to any other fighting styles it has gained).\n* Select one stance of one [martial ka’tah](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Martial-Ka-tah). Until the end of the battle, that unit always benefits from that stance (even if a martial ka’tah is not active for your army).You can only use this Stratagem on each ADEPTUS** CUSTODES** CHARACTER** unit from your army once. You cannot use this Stratagem in a [Crusade battle](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#CRUSADE-MISSION-PACK); you must use the [Earning of a Name](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Requisitions) Requisition instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Empyric Severance": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), after a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is passed for an enemy **PSYKER** unit and after any [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) attempt is made (if any). If that enemy PSYKER** unit is within 18″ of any **ANATHEMA PSYKANA** INFANTRY** units from your army, roll one D6: on a 4+, that psychic power is denied.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Esteemed Amalgam": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **EMPEROR’S CHOSEN** unit from your army, then select one other [shield host’s fighting style](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Shield-Host-Fighting-Style). Until the start of your next Command phase, the models in that unit have the traits of that shield host fighting style instead of the traits of the Magna Imperator fighting style.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Eternal Penitent": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **ADEPTUS CUSTODES** DREADNOUGHT** unit from your army.\n\n* Add 1 to that unit’s Attacks characteristic.\n* You can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit. If you could already re-roll charge rolls made that unit (e.g. if it has the [Instruments of the Emperor’s Wrath](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Dread-Host) fighting style) add 1 to charge rolls made for that unit instead.You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Fraternity Of Heroes": {
+        "text": "Use this Stratagem in the [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) step of your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **ADEPTUS CUSTODES** unit from your army. Until the end of the phase, that unit is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit. If that unit is already eligible to perform a Heroic Intervention, it is eligible to perform a Heroic Intervention if it is within 6″ horizontally and 5″ vertically of an enemy unit, and when performing a Heroic Intervention with that unit, you can move each model in that unit up to 6\".",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§From Golden Light They Come": {
+        "text": "Use this Stratagem before the battle, during the Declare Reserves and Transports step (if you are playing a mission without this step, use this Stratagem during deployment instead). Select one **ADEPTUS CUSTODES** INFANTRY**, **ADEPTUS CUSTODES** BIKER** or **ADEPTUS CUSTODES** DREADNOUGHT** unit from your army. That unit gains the **From Golden** Light** ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Golden Light Of The Moiraides": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **DREAD HOST** unit from your army is set up on the battlefield using the **From Golden** Light** ability. Until the start of your next turn:\n\n* Each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Each time that unit [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), enemy units that were targeted by that charge cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible) against that charge.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Grim Responsibility": {
+        "text": "Use this Stratagem in any phase, when a **SHADOWKEEPERS** unit from your army (excluding VEHICLE** units) is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from the Strength characteristic of that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Indomitable Engines": {
+        "text": "Use this Stratagem in any phase, when an **ADEPTUS CUSTODES** VEHICLE** or **ANATHEMA PSYKANA** VEHICLE** model from your army would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). Until the end of the phase, each time that model would lose a wound as the result of a mortal wound, roll one D6: on a 5+, that wound is not lost.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Indomitable Guardians": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), after an enemy unit has fought. Select one **ADEPTUS CUSTODES** unit from your army that is in range of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers) and is eligible to fight: that unit fights next.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Into The Darkness": {
+        "text": "Use this Stratagem at the start of the first battle round, before the first turn begins. Select one **EMISSARIES IMPERATUS** CORE** unit from your army. That unit can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) as if it were your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), but must end that move more than 9″ away from any enemy models. If both players have units that can move before the first turn begins, the player who is taking the first turn moves their units first. If that unit contains 4 or more models, this Stratagem costs 3CP; otherwise, it costs 2CP. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/3",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Manoeuvre And Fire": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when an **ADEPTUS CUSTODES** unit from your army that can [FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying) [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Until the end of the turn, that unit is eligible to shoot even though it Fell Back.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Martial Discretion": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), after [selecting a ka’tah stance](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Martial-Ka-tah) to be active for your army. Select one **ADEPTUS CUSTODES** unit from your army that has the Martial Ka’tah ability, then select one ka’tah stance that is not active for your army. Until the start of your next Command phase, that unit benefits from that stance, instead of the active ka’tah stance(s) of your army. If that ADEPTUS** CUSTODES** unit contains 4 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Open The Vaults": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the ADEPTUS** CUSTODES** or ANATHEMA** PSYKANA** keyword. Select one **ADEPTUS CUSTODES** CHARACTER** model from your army and give them one [Relic of Terra](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Relics-of-Terra), or select one **ANATHEMA PSYKANA** CHARACTER** model from your army and give them one [Relic of the Vigil](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Relics-of-the-Vigil). In either case, this must be a Relic they could have. Each Relic from your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Praesidium Shieldwall": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CUSTODIAN GUARD** unit from your army is selected as the target of a melee attack, and every model in that unit is equipped with a praesidium shield. Until the end of the phase, each time a melee attack is made against that unit, subtract 1 from that attack's [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Psyk-out Grenade": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ANATHEMA PSYKANA** INFANTRY** unit from your army is selected to shoot. If that unit is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, roll one D6: on a 2+, the closest enemy [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit that is within 6″ of and visible to your unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Purgation Sweep": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **WITCHSEEKERS** unit from your army is selected to shoot, or in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a WITCHSEEKERS** unit from your army is selected to fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch). Until the end of the phase, add 1 to the Strength characteristic of witchseeker flamers models in that unit are equipped with.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Charge"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Rapid Reactions": {
+        "text": "Use this Stratagem in your opponent’s [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when an enemy unit that was within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of an **ADEPTUS CUSTODES** INFANTRY** unit from your army when it was selected to move finishes a [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) move. That ADEPTUS** CUSTODES** INFANTRY** unit can shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), but it can only target that enemy unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Shooting"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Retribution Of The Machine Spirit": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ADEPTUS CUSTODES** MACHINE** SPIRIT** model from your army. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Shield Of Honour": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an enemy unit is selected to shoot with. Select one **IMPERIUM** INFANTRY** CHARACTER** unit from your army. Until the end of the phase, while that unit from your army is within 6″ of a friendly **AQUILAN SHIELD** CORE** unit, that IMPERIUM** INFANTRY** CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Shoulder The Mantle": {
+        "text": "Use this Stratagem when your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is destroyed. Select another **ADEPTUS CUSTODES** CHARACTER** model from your army. Until the end of the battle, if that model does not have a [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits), it gains one Warlord Trait of that destroyed WARLORD**. Then, until the end of the battle, that ADEPTUS** CUSTODES** CHARACTER** model now counts as your WARLORD** for all rules purposes. If any mission objective, secondary objective or Agenda rules are triggered when your WARLORD** is destroyed, those rules are not triggered until after the new WARLORD** is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Slayers Of Nightmares": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ADEPTUS CUSTODES** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack against a unit with a higher Toughness characteristic than its own, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll). If that ADEPTUS** CUSTODES** unit contains 3 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Sweeping Advance": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ADEPTUS CUSTODES** BIKER** unit from your army [consolidates](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate). Until the end of the phase, each time a model in that unit makes a consolidation move, it can move an additional 3\".",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Talons Of The Emperor": {
+        "text": "Use this Stratagem in any phase, after shooting or fighting with an **ADEPTUS CUSTODES** unit from your army. Select one friendly **ANATHEMA PSYKANA** unit within 6″ of it. Until the end of the phase, each time a model in that ANATHEMA** PSYKANA** unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Tanglefoot Grenade": {
+        "text": "Use this Stratagem at the start of your opponent’s [Movement](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) or [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one enemy unit (excluding units that can [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying)) within 12″ of and visible to an **ADEPTUS CUSTODES** INFANTRY** unit from your army and roll one D6. If it is your opponent’s [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), subtract an equivalent number of inches from that enemy unit’s Move characteristic for this phase (to a minimum of 0\"). If it is your opponent’s Charge phase, subtract the result from [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit this phase (to a minimum of 0). You can only use this Stratagem once per turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge",
+            "Movement"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Teleport Homer": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when an **ADEPTUS CUSTODES** TELEPORT** HOMER** unit from your army is selected to move. Remove that unit from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of that Movement phase, set that unit back up on the battlefield within 3″ of a friendly **VEXILUS PRAETOR** or ALEYA** model (that model must not have been set up as Reinforcements this turn) and more than 9″ away from any enemy models. If the battle ends and that ADEPTUS** CUSTODES** TELEPORT** HOMER** unit is not on the battlefield, it is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§The Eagle’s Strike": {
+        "text": "Use this Stratagem in any phase, when an enemy [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is destroyed by a **SOLAR WATCH** unit from your army. Until the end of the battle, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for an enemy unit, subtract 1 from that Combat Attrition test.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§The Emperor’s Auspice": {
+        "text": "Use this Stratagem in any phase, when an **ADEPTUS CUSTODES** INFANTRY** unit from your army is chosen as the target of an attack. Until the end of the phase, each time an attack is made against that unit, your opponent cannot re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) or damage roll for that attack. If that ADEPTUS** CUSTODES** INFANTRY** unit contains 4 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§The Emperor’s Heroes": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the **ADEPTUS CUSTODES** or **ANATHEMA PSYKANA** keyword. Select one **ADEPTUS CUSTODES** CHARACTER** model or one **ANATHEMA PSYKANA** CHARACTER** model from your army and determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) for it (this must be a Warlord Trait it can have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait from your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Unleash The Lions": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ALLARUS CUSTODIANS** unit from your army that is on the battlefield and contains 2 or more models. Until the end of the battle, each model in that unit becomes its own unit. In [Crusade battles](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#CRUSADE-MISSION-PACK), treat that unit as if it has the [Combat Squads](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Combat-Squads) ability, even if it could be more than 2 squads. If that ALLARUS** CUSTODIANS** unit contains 3 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Victor Of The Blood Games": {
+        "text": "Use this Stratagem before the battle, after a [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) is determined for an **ADEPTUS CUSTODES** CHARACTER** model from your army (excluding named characters). You can generate one additional Warlord Trait for them. Each Warlord Trait from your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Vigil Unending": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ADEPTUS CUSTODES** CHARACTER** model from your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play - it can fight after the attacking model’s unit has finished [making attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Making-Attacks). After resolving the destroyed ADEPTUS** CUSTODES** CHARACTER** model’s attacks, it is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
+      "Stratagem§Wisdom Of The Moritoi": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ADEPTUS CUSTODES** DREADNOUGHT** model from your army. Until the start of your next Command phase, that model gains either the Inspirational Warrior or the Aggressive Precision ability, as shown below:\n\n\n\nInspirational Warrior (Aura)**:** While a friendly **&lt;SHIELD HOST&gt;** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.\n\n\n\nAggressive Precision (Aura)**:** While a friendly &lt;SHIELD** HOST&gt;** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Adeptus Custodes Strat"
+          ]
+        }
+      },
       "Troops§Custodian Guard": {
         "stats": {
           "Power Level": {
@@ -7655,23 +8527,17 @@
             "value": "Custodian Guard"
           },
           "Praesidium shield": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8095,8 +8961,7 @@
             "statType": "term",
             "value": "&lt;SHIELD HOST&gt;",
             "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Defensor (Aura)**:** While a friendly **{v}** CORE** or **{v}** CHARACTER** unit is within 6″ of this model, it has the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover).’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -8107,8 +8972,7 @@
             "statType": "term",
             "value": "&lt;SHIELD HOST&gt;",
             "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Imperius (Aura)**:** While a friendly **{v}** CORE** or **{v}** CHARACTER** unit is within 6″ of this model, add 1 to the Attacks characteristic of each model in its unit.’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -8119,8 +8983,7 @@
             "statType": "term",
             "value": "&lt;SHIELD HOST&gt;",
             "text": "The bearer has the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities): ‘**Vexilla Magnifica (Aura)**:** While a friendly **{v}** CORE** or **{v}** CHARACTER** unit is within 6″ of this model, it has the benefits of [Dense Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Dense-Cover).’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -8133,116 +8996,46 @@
         }
       },
       "Warlord Trait§All-seeing Annihilator": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select this **WARLORD** or one friendly **DREAD HOST** CORE** unit within 6″ of this WARLORD**. Until the start of your next Command phase, each time a model in that unit makes an attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select this **WARLORD** or one friendly **DREAD HOST** CORE** unit within 6″ of this WARLORD**. Until the start of your next Command phase, each time a model in that unit makes an attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit."
       },
       "Warlord Trait§Champion Of The Imperium": {
-        "text": "* This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6″ horizontally and 5″ vertically of any enemy unit.\n* Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6″ instead of 3″. All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* Each time this WARLORD** makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "* This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6″ horizontally and 5″ vertically of any enemy unit.\n* Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6″ instead of 3″. All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* Each time this WARLORD** makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Warlord Trait§Impregnable Mind": {
-        "text": "* In your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this **WARLORD** can attempt to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) once as if it were a PSYKER** model. Each time a Deny the Witch test is taken for this WARLORD**, add 1 to the result.\n* This WARLORD** counts as two additional models when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers). This is cumulative with any other rules that make it count as additional models.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "* In your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this **WARLORD** can attempt to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) once as if it were a PSYKER** model. Each time a Deny the Witch test is taken for this WARLORD**, add 1 to the result.\n* This WARLORD** counts as two additional models when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers). This is cumulative with any other rules that make it count as additional models."
       },
       "Warlord Trait§Lockwarden": {
-        "text": "Each time an attack made by this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is allocated to a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made against that attack.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time an attack made by this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is allocated to a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made against that attack."
       },
       "Warlord Trait§Master Of Martial Strategy": {
-        "text": "* While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem, you can roll one D6: on a 5+, that Command point is refunded.\n* Once per battle, in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if units from your army are using the [Martial Ka’tah](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Martial-Ka-tah) ability, before selecting a ka’tah stance for your army, you can change the order of your martial ka’tahs, i.e. primary, secondary or tertiary. Note that this does not allow you to select ka’tah stances more than once.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "* While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem, you can roll one D6: on a 5+, that Command point is refunded.\n* Once per battle, in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if units from your army are using the [Martial Ka’tah](https://wahapedia.ru/wh40k9ed/factions/adeptus-custodes/#Martial-Ka-tah) ability, before selecting a ka’tah stance for your army, you can change the order of your martial ka’tahs, i.e. primary, secondary or tertiary. Note that this does not allow you to select ka’tah stances more than once."
       },
       "Warlord Trait§Mistress Of Persecution (aura)": {
-        "text": "While a friendly **ANATHEMA PSYKANA** INFANTRY** unit is within 6 \" of this WARLORD**:\n\n* Each time a model in that ANATHEMA** PSYKANA** INFANTRY** unit makes an attack, the target does not receive the benefits of [Heavy](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Heavy-Cover) or [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover) against that attack.\n* Add 3″ to the Range characteristic of ranged weapons models in that ANATHEMA** PSYKANA** INFANTRY** unit are equipped with.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "While a friendly **ANATHEMA PSYKANA** INFANTRY** unit is within 6 \" of this WARLORD**:\n\n* Each time a model in that ANATHEMA** PSYKANA** INFANTRY** unit makes an attack, the target does not receive the benefits of [Heavy](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Heavy-Cover) or [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover) against that attack.\n* Add 3″ to the Range characteristic of ranged weapons models in that ANATHEMA** PSYKANA** INFANTRY** unit are equipped with."
       },
       "Warlord Trait§Oblivion Knight": {
-        "text": "* This **WARLORD** has the following ability: ‘Oblivion Knight (Aura)**:** Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for **ANATHEMA PSYKANA** INFANTRY** units while they are within 6″ of this model.’\n* Each time this WARLORD** makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "* This **WARLORD** has the following ability: ‘Oblivion Knight (Aura)**:** Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for **ANATHEMA PSYKANA** INFANTRY** units while they are within 6″ of this model.’\n* Each time this WARLORD** makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1."
       },
       "Warlord Trait§Peerless Warrior": {
-        "text": "* Each time this **WARLORD** makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage.\n* Each time an attack made by this WARLORD** is allocated to an enemy model, the [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be [re-rolled](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Re-rolls).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "* Each time this **WARLORD** makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage.\n* Each time an attack made by this WARLORD** is allocated to an enemy model, the [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) cannot be [re-rolled](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Re-rolls)."
       },
       "Warlord Trait§Radiant Mantle": {
-        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Warlord Trait§Revered Companion": {
-        "text": "Each time an attack is allocated to this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), halve the Damage characteristic of that attack (rounding up).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time an attack is allocated to this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), halve the Damage characteristic of that attack (rounding up)."
       },
       "Warlord Trait§Sally Forth": {
-        "text": "At the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), select one friendly **SOLAR WATCH** INFANTRY** unit within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord). Until the end of the phase, that unit is [eligible to charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Charges) in a turn in which it [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "At the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), select one friendly **SOLAR WATCH** INFANTRY** unit within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord). Until the end of the phase, that unit is [eligible to charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Charges) in a turn in which it [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance)."
       },
       "Warlord Trait§Silent Judge (aura)": {
-        "text": "While an enemy unit is within 3″ of this **WARLORD**:\n\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that enemy unit, subtract 1 from that Combat Attrition test.\n* That enemy unit loses the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "While an enemy unit is within 3″ of this **WARLORD**:\n\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that enemy unit, subtract 1 from that Combat Attrition test.\n* That enemy unit loses the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability."
       },
       "Warlord Trait§Superior Creation": {
-        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a a 5+, that wound is not lost."
       },
       "Warlord Trait§Voice Of The Emperor": {
-        "text": "* Add 3″ to the range of this **WARLORD**’s aura abilities to a maximum of 12″ (this has already been added to the Voice of the Emperor aura ability below).\n* This WARLORD** has the following ability: ‘Voice of the Emperor (Aura)**: While a friendly **ADEPTUS CUSTODES** or **ANATHEMA PSYKANA** unit is within 9″ of this model, add 1 to the Leadership characteristic of models in that unit.’",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "* Add 3″ to the range of this **WARLORD**’s aura abilities to a maximum of 12″ (this has already been added to the Voice of the Emperor aura ability below).\n* This WARLORD** has the following ability: ‘Voice of the Emperor (Aura)**: While a friendly **ADEPTUS CUSTODES** or **ANATHEMA PSYKANA** unit is within 9″ of this model, add 1 to the Leadership characteristic of models in that unit.’"
       },
       "Weapon§Achillus dreadspear (melee)": {
         "stats": {
@@ -8250,10 +9043,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8368,7 +9163,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+6"
+            "value": "D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -8446,7 +9242,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -8544,7 +9341,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8582,7 +9380,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8696,7 +9495,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -8738,7 +9538,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8939,7 +9740,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8956,7 +9758,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -8980,7 +9783,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9043,7 +9847,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9178,7 +9983,8 @@
             "value": 4
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9255,7 +10061,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9277,7 +10084,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9397,7 +10205,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"

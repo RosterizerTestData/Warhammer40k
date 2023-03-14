@@ -534,6 +534,8 @@ else:
           indexer["strategem_id"] = i
         elif(column == "faction_id"):
           indexer["faction_id"] = i
+        elif(column == "subfaction_id"):
+          indexer["subfaction_id"] = i
         elif(column == "name"):
           indexer["name"] = i
         elif(column == "type"):
@@ -548,14 +550,16 @@ else:
           indexer["description"] = i
         i = i + 1
       
-      query = "INSERT IGNORE INTO strategems (strategem_id, faction_id, name, type, cp_cost, legend, source_id, description) VALUES "
+      query = "INSERT IGNORE INTO strategems (strategem_id, faction_id, subfaction_id, name, type, cp_cost, legend, source_id, description) VALUES "
       data = []
+      j = 0
       for row in csvF:
-        query+="(%s,%s,%s,%s,%s,%s,%s,%s),"
+        query+="(%s,%s,%s,%s,%s,%s,%s,%s,%s),"
         # input data is out of order (doesn't start with id)
         data = data + [
           re.sub("[a-zA-Z]*","",row[indexer["strategem_id"]]), # strategem_id
           row[indexer["faction_id"]], # faction_id
+          row[indexer["subfaction_id"]], # faction_id
           row[indexer["name"]], # name
           row[indexer["type"]], # type
           row[indexer["cp_cost"]], # cp_cost
@@ -563,6 +567,7 @@ else:
           re.sub("[a-zA-Z]*","",row[indexer["source_id"]]), # source_id
           row[indexer["description"]], # description
         ]
+        j = j + 1
       query = query[:-1] + " ON DUPLICATE KEY UPDATE check_me=1"
       cur.execute(query,data)
       print(cur.rowcount, "rows inserted into strategems")

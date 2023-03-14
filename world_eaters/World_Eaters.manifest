@@ -1,11 +1,11 @@
 {
   "name": "World Eaters",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -38,7 +38,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitSubfaction": {
             "evals": [
               {
                 "paths": [
@@ -56,6 +56,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -65,9 +66,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Subfaction",
                     "value"
@@ -80,6 +78,22 @@
                   "Subfaction",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Subfaction",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -99,6 +113,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Subfaction",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -109,6 +137,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -134,6 +170,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Subfaction",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -146,6 +196,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -156,17 +214,60 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Red Butchers",
+            "Stratagem§Gory Dismemberment",
+            "Stratagem§Skulls For The Skull Throne!",
+            "Stratagem§Scorn Of Sorcery",
+            "Stratagem§Blood Frenzy",
+            "Stratagem§Aggressive Intervention",
+            "Stratagem§Smokescreen",
+            "Stratagem§Icon Of Wrath",
+            "Stratagem§Gratuitous Bloodletting",
+            "Stratagem§Bloodscent",
+            "Stratagem§Furious Surge",
+            "Stratagem§Diabolic Machines",
+            "Stratagem§Apoplectic Frenzy",
+            "Stratagem§Violent Dismemberment",
+            "Stratagem§Terrifying Assault",
+            "Stratagem§Bloodthirsty Determination"
+          ]
+        }
+      },
       "Relics": {
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Subfaction": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Disciples of the Red Angel": {
+                "order": 1
+              },
+              "World-Eaters": {
+                "order": 2
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceSubfactionKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Subfaction",
                     "value"
@@ -174,7 +275,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -184,7 +286,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Subfaction>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -203,7 +305,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Subfaction>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -216,12 +318,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Subfaction",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilitySubfaction": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Subfaction",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Subfaction",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Subfaction",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -380,7 +523,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -797,7 +941,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Missile launcher",
@@ -1356,7 +1501,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hades autocannon",
@@ -1689,7 +1835,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin heavy bolter",
@@ -2109,7 +2256,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin soulshatter lascannon",
@@ -2459,7 +2607,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Predator autocannon",
@@ -2809,7 +2958,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Defiler cannon",
@@ -3534,7 +3684,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy hades autocannon",
@@ -3860,7 +4011,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lasher tendrils",
@@ -4179,7 +4331,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4259,7 +4412,8 @@
             "value": 2
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4312,23 +4466,17 @@
             "value": 8
           },
           "Wings": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Wings"
@@ -4370,7 +4518,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Infernal cannon",
@@ -4636,7 +4785,8 @@
             "value": 3
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4717,7 +4867,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4804,7 +4955,8 @@
             "value": 2
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5019,7 +5171,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Gorestorm cannon",
@@ -5452,7 +5605,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -5473,7 +5627,8 @@
             "value": 5
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -5515,7 +5670,8 @@
             "value": 6
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Jakhal chainblades",
@@ -5646,7 +5802,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Eightbound eviscerator",
@@ -5761,7 +5918,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lacerators",
@@ -5876,7 +6034,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Eightbound eviscerator",
@@ -6030,7 +6189,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Eightbound eviscerator",
@@ -6184,7 +6344,8 @@
             "value": 6
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Jakhal chainblades",
@@ -6315,7 +6476,8 @@
             "value": 6
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Jakhal chainblades",
@@ -6493,7 +6655,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -6880,7 +7043,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt pistol",
@@ -7267,7 +7431,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -7649,7 +7814,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Combi-bolter",
@@ -8106,6 +8272,267 @@
         "text": "The bearer has the following ability:\n\n\n\n**Witchskull Totem (Aura)**: While an enemy [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit is within 12″ of the bearer, each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for that unit, subtract 2 from the result."
       },
       "Roster§Army": {},
+      "Stratagem§Aggressive Intervention": {
+        "text": "Use this Stratagem in the [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) step of your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **WORLD EATERS** CORE** unit from your army. Until the end of the phase, that unit is eligible to perform a Heroic Intervention as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, and is eligible to perform a Heroic Intervention if it is within 6″ horizontally and 5″ vertically of any enemy units. When performing a Heroic Intervention with that unit, you can move each model in that unit up to 6″. All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Apoplectic Frenzy": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **WORLD EATERS** unit from your army is selected to Advance. Do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of models in that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Blood Frenzy": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an enemy unit is selected to fight. Select one **WORLD EATERS** CORE** unit from your army that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that enemy unit. Until that enemy unit’s attacks have been resolved, each time a model in the selected unit is destroyed by a melee attack, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after that enemy unit’s attacks have been resolved, and is then removed from play. If the selected WORLD** EATERS** unit is a Troops unit, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Bloodscent": {
+        "text": "Use this Stratagem in your opponent’s [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when an enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any **EIGHTBOUND** units from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). After that enemy unit has finished that move, select one EIGHTBOUND** unit from your army that was within Engagement Range of that enemy unit at the start of the phase. The selected unit can immediately [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate), and when it does so, each model in that unit can move up to 6″ instead of up to 3\".",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Bloodthirsty Determination": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when you select a **WORLD EATERS** unit from your army to charge. Until the end of the phase, you can ignore any or all modifiers to [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Diabolic Machines": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **WORLD EATERS** MACHINE** SPIRIT** or **WORLD EATERS** DAEMON** ENGINE** model from your army that has characteristics that change as it suffers damage. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use. If that model has the Titanic keyword, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/1",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Furious Surge": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), after an enemy unit has finished making its attacks. Select one **EIGHTBOUND** unit from your army that had one or more models destroyed as a result of those attacks. That EIGHTBOUND** unit can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) as if it were your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Movement"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Gory Dismemberment": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **WORLD EATERS** CORE** or **WORLD EATERS** CHARACTER** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage. A maximum of 6 mortal wounds can be inflicted each time this Stratagem is used.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Gratuitous Bloodletting": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **WORLD EATERS** unit from your army is selected to fight. Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit that is below [Half-strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units). Until the end of the phase, each time a model in that WORLD** EATERS** unit makes an attack against the selected enemy unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Icon Of Wrath": {
+        "text": "Use this Stratagem in the [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **WORLD EATERS** ICON** unit from your army is selected to charge. Until the end of the phase, each time you make a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit, roll one additional D6 and discard the lowest result.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Red Butchers": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **WORLD EATERS** TERMINATORS** or EIGHTBOUND** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to the Damage characteristic of that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Scorn Of Sorcery": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), after a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is passed for an enemy **PSYKER** unit and after any [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) attempt is made (if any). If that enemy PSYKER** unit is within 24″ of any **WORLD EATERS** units from your army, roll one D6: on a 4+, that psychic power is denied.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Skulls For The Skull Throne!": {
+        "text": "Use this Stratagem when an enemy [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is destroyed by a melee attack made by a **WORLD EATERS** CHARACTER** model from your army. Select one or both of the following:\n\n* You gain 2 additional **Blood Tithe** points**.\n* Until the end of the battle, add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that WORLD** EATERS** CHARACTER** model.If you selected one of the options above, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Smokescreen": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **WORLD EATERS** SMOKESCREEN** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Terrifying Assault": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when you select any enemy units as the target of a charge made by a **WORLD EATERS** unit from your army. Select one of those enemy units:\n\n* That enemy unit cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible) against that charge.\n* In the subsequent [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), each time a model in that enemy unit makes a melee attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge",
+            "Fight"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
+      "Stratagem§Violent Dismemberment": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **WORLD EATERS** unit from your army destroys an enemy unit. Until the end of the turn, that unit gains the following ability:\n\n\n\nViolent Dismemberment (Aura)**: While an enemy unit is within 6″ of this is unit:\n\n* Subtract 2 from the Leadership characteristic of models in that unit.\n* Subtract 1 from [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) taken for that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "World Eaters Strat"
+          ]
+        }
+      },
       "Troops§Jakhals": {
         "stats": {
           "Power Level": {
@@ -8115,23 +8542,17 @@
             "value": "Jakhal"
           },
           "Jakhal icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Jakhal icon"
@@ -8220,23 +8641,17 @@
             "value": "Khorne Berzerker"
           },
           "Berzerker icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Berzerker icon"
@@ -8405,28 +8820,13 @@
         }
       },
       "Warlord Trait§Battle Lust": {
-        "text": "* This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6″ horizontally and 5″ vertically of any enemy units. Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6″. All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
-        "stats": {
-          "Discipline": {
-            "value": "World Eaters"
-          }
-        }
+        "text": "* This **WARLORD** is eligible to [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) if it is within 6″ horizontally and 5″ vertically of any enemy units. Each time this WARLORD** makes a Heroic Intervention move, it can move up to 6″. All other rules for [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) still apply.\n* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase."
       },
       "Warlord Trait§Favoured Of Khorne": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this **WARLORD** is on the battlefield, you gain 1 **Blood Tithe** point**.",
-        "stats": {
-          "Discipline": {
-            "value": "World Eaters"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this **WARLORD** is on the battlefield, you gain 1 **Blood Tithe** point**."
       },
       "Warlord Trait§True Berzerker": {
-        "text": "Each time a melee attack is allocated to this **WARLORD**, halve the Damage characteristic of that attack (rounding up).",
-        "stats": {
-          "Discipline": {
-            "value": "World Eaters"
-          }
-        }
+        "text": "Each time a melee attack is allocated to this **WARLORD**, halve the Damage characteristic of that attack (rounding up)."
       },
       "Weapon§Accursed weapon": {
         "stats": {
@@ -8516,7 +8916,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8535,7 +8936,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8590,10 +8992,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8638,7 +9042,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8655,7 +9060,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -8714,10 +9120,12 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8802,7 +9210,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8822,7 +9231,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8861,7 +9271,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8920,7 +9331,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9107,7 +9519,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9124,10 +9537,12 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9167,7 +9582,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9206,7 +9622,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9264,7 +9681,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9283,7 +9701,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9341,7 +9760,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -9360,7 +9780,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9398,7 +9819,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9423,7 +9845,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9443,7 +9866,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6+2"
+            "value": "D6+2",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9465,7 +9889,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9502,10 +9927,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9521,7 +9948,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9541,7 +9969,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9606,7 +10035,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9684,7 +10114,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -9726,7 +10157,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9746,7 +10178,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9766,7 +10199,8 @@
             "value": 6
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9866,7 +10300,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9888,7 +10323,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6+2"
+            "value": "D6+2",
+            "statType": "term"
           },
           "S": {
             "value": 9

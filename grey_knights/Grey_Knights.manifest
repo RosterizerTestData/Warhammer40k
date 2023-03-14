@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights",
-  "revision": "9.0.15",
+  "revision": "9.1.16",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -56,7 +56,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitBrotherhood": {
             "evals": [
               {
                 "paths": [
@@ -74,6 +74,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -83,9 +84,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Brotherhood",
                     "value"
@@ -98,6 +96,22 @@
                   "Brotherhood",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Brotherhood",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -117,6 +131,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -127,6 +155,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -152,6 +188,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -162,6 +212,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -187,6 +245,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -197,6 +269,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -222,6 +302,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -232,6 +326,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -257,6 +359,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -267,6 +383,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -292,6 +416,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -302,6 +440,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -327,6 +473,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -337,6 +497,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -362,6 +530,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -372,6 +554,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -387,20 +577,104 @@
       "Dominus Discipline": {
         "templateClass": "Psychic Power"
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Psychic Channelling",
+            "Stratagem§Psychic Onslaught",
+            "Stratagem§The Steel Heart",
+            "Stratagem§Death From The Warp",
+            "Stratagem§Powerful Adept",
+            "Stratagem§Sanctified Kill Zone",
+            "Stratagem§Final Justice",
+            "Stratagem§Shadow of Undying Legends",
+            "Stratagem§Purity of the Machine Spirit",
+            "Stratagem§Empyric Declamation",
+            "Stratagem§Chirurgic Resurrection",
+            "Stratagem§Psychic Locus",
+            "Stratagem§Finest Hour",
+            "Stratagem§Thunderous Stride",
+            "Stratagem§Mental Focus",
+            "Stratagem§Fight On The Move",
+            "Stratagem§Haloed In Soulfire",
+            "Stratagem§Untainted And Unbowed",
+            "Stratagem§Psy-lance Bombardment",
+            "Stratagem§The Need To Know",
+            "Stratagem§Alloy of Disciplines",
+            "Stratagem§Martial Prescience",
+            "Stratagem§Steely Advance",
+            "Stratagem§Hexagrammic Wards",
+            "Stratagem§Teleportation Shunt",
+            "Stratagem§Mists of Deimos",
+            "Stratagem§Truesilver Armour",
+            "Stratagem§Psybolt Ammunition",
+            "Stratagem§Zone of Warding",
+            "Stratagem§Psyk-out Grenade",
+            "Stratagem§Frag Assault Launchers",
+            "Stratagem§Marked For Death",
+            "Stratagem§Radiant Strike",
+            "Stratagem§Masters of the Word",
+            "Stratagem§Foresight",
+            "Stratagem§Deadly Efficacy",
+            "Stratagem§Sanctic Guardians",
+            "Stratagem§Adaptive Excoriation"
+          ]
+        }
+      },
       "Relics of Titan": {
         "templateClass": "Relic"
       },
       "Sanctic Discipline": {
         "templateClass": "Psychic Power"
       },
+      "Stratagem": {},
       "Unit": {
+        "stats": {
+          "Brotherhood": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Blades of Victory": {
+                "order": 1
+              },
+              "Exactors": {
+                "order": 2
+              },
+              "Prescient Brethren": {
+                "order": 3
+              },
+              "Preservers": {
+                "order": 4
+              },
+              "Rapiers": {
+                "order": 5
+              },
+              "Swordbearers": {
+                "order": 6
+              },
+              "Silver Blades": {
+                "order": 7
+              },
+              "Wardmakers": {
+                "order": 8
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceBrotherhoodKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Brotherhood",
                     "value"
@@ -408,7 +682,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -450,25 +725,57 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Brotherhood",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
                 ],
                 "iterations": 1
               }
             ]
-          }
-        },
-        "stats": {
-          "Wisdom of the Prognosticars": {
-            "statType": "numeric",
-            "value": 0,
-            "visibility": "hidden",
-            "tracked": true,
-            "max": 1
+          },
+          "populateAbilityBrotherhood": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Brotherhood",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Brotherhood",
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
           }
         }
       },
@@ -486,6 +793,10 @@
             "visibility": "hidden",
             "tracked": true
           }
+        },
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
         }
       }
     },
@@ -562,8 +873,7 @@
             "statType": "term",
             "value": "&lt;BROTHERHOOD&gt;",
             "text": "While this unit is within 6″ of any friendly **GREY KNIGHTS** TECHMARINE** units, models in this unit have a Weapon Skill and Ballistic Skill characteristic of 4+ and a Leadership characteristic of 9. In addition, if your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), then for each **{v} TECHMARINE** unit included in a Detachment, one **{v} SERVITORS** unit can be included in that Detachment without taking up a [Battlefield Role](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role) slot.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -585,8 +895,7 @@
             "statType": "term",
             "value": "&lt;BROTHERHOOD&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -599,8 +908,7 @@
             "statType": "term",
             "value": "&lt;BROTHERHOOD&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, add 1 to the Leadership characteristic of models in that unit. In addition, while a friendly **{v} CORE** INFANTRY** unit is within 6″ of this model, add 1 to the Attacks characteristic of models in that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -726,12 +1034,12 @@
           },
           "Hunter-killer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
+              "-": {
                 "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
                 "traits": [
                   {
@@ -755,12 +1063,12 @@
           },
           "Storm bolter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
+              "-": {
                 "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
                 "traits": [
                   {
@@ -1002,12 +1310,12 @@
           },
           "Hunter-killer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
+              "-": {
                 "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
                 "traits": [
                   {
@@ -1031,12 +1339,12 @@
           },
           "Storm Bolter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
+              "-": {
                 "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
                 "traits": [
                   {
@@ -1214,15 +1522,15 @@
         }
       },
       "Dominus Discipline§Empyric Amplification": {
-        "text": "**Malediction:** *Empyric Amplification* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 12″ of and visible to this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time an attack made with a [Nemesis](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Nemesis-Weapons) or [psi weapon](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Psi-Weapons) is allocated to a model in that unit, add 1 to the Damage characteristic of that attack.",
+        "text": "**Malediction:** *Empyric Amplification* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 12″ of and visible to this **PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time an attack made with a [Nemesis](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Nemesis-Weapons) or [psi weapon](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Psi-Weapons) is allocated to a model in that unit, add 1 to the Damage characteristic of that attack.",
         "stats": {
           "Roll": {
             "value": 2
           }
         }
       },
-      "Dominus Discipline§Gate Of Infinity": {
-        "text": "**Blessing:** *Gate of Infinity* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **GREY KNIGHTS** PSYKER** unit within 18″ of this PSYKER** Remove that unit from the battlefield and then set it back up on the battlefield, anywhere that is more than 9″ away from any enemy models.",
+      "Dominus Discipline§Gate of Infinity": {
+        "text": "**Blessing:** *Gate of Infinity* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **GREY KNIGHTS** PSYKER** unit within 18″ of this **PSYKER** Remove that unit from the battlefield and then set it back up on the battlefield, anywhere that is more than 9″ away from any enemy models.",
         "stats": {
           "Roll": {
             "value": 1
@@ -1230,7 +1538,7 @@
         }
       },
       "Dominus Discipline§Ghostly Bonds": {
-        "text": "**Malediction:** *Ghostly Bonds* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of and visible to this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), halve that unit’s Move characteristic.",
+        "text": "**Malediction:** *Ghostly Bonds* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of and visible to this **PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), halve that unit’s Move characteristic.",
         "stats": {
           "Roll": {
             "value": 6
@@ -1238,15 +1546,15 @@
         }
       },
       "Dominus Discipline§Sanctuary": {
-        "text": "**Blessing:** *Sanctuary* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly GREY** KNIGHTS** unit within 18″ of this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), models in that unit have a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).",
+        "text": "**Blessing:** *Sanctuary* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly GREY** KNIGHTS** unit within 18″ of this **PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), models in that unit have a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).",
         "stats": {
           "Roll": {
             "value": 3
           }
         }
       },
-      "Dominus Discipline§Vortex Of Doom": {
-        "text": "**Witchfire:** *Vortex of Doom* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select the closest enemy unit within 12″ of and visible to this PSYKER**: each other enemy unit within 3″ of the selected unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and then the selected unit suffers 2D3 mortal wounds. If the model manifesting this power has been selected this phase for the [Psychic Epitome](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Warlord-Traits) Warlord Trait, only the unit you selected suffers the additional mortal wound from that trait, not those other enemy units within 3″ of it.",
+      "Dominus Discipline§Vortex of Doom": {
+        "text": "**Witchfire:** *Vortex of Doom* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select the closest enemy unit within 12″ of and visible to this **PSYKER**: each other enemy unit within 3″ of the selected unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and then the selected unit suffers 2D3 mortal wounds. If the model manifesting this power has been selected this phase for the [Psychic Epitome](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Warlord-Traits) Warlord Trait, only the unit you selected suffers the additional mortal wound from that trait, not those other enemy units within 3″ of it.",
         "stats": {
           "Roll": {
             "value": 4
@@ -1304,19 +1612,13 @@
           },
           "Falchion": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Nemesis falchion"
@@ -1800,19 +2102,13 @@
           },
           "Falchion": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Nemesis falchion"
@@ -1911,7 +2207,7 @@
                   ]
                 ],
                 "actionType": "set",
-                "value": "❌",
+                "value": "-",
                 "iterations": 1
               }
             ]
@@ -2957,19 +3253,13 @@
           },
           "Hurricane": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Hurricane bolter"
@@ -3464,19 +3754,13 @@
           },
           "Hunter-Killer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -3492,19 +3776,13 @@
           },
           "Storm Bolter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Storm bolter"
@@ -3520,19 +3798,13 @@
           },
           "Multi-melta": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Multi-melta"
@@ -3759,19 +4031,13 @@
           },
           "Hunter-Killer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -3787,19 +4053,13 @@
           },
           "Storm Bolter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Storm bolter"
@@ -3815,19 +4075,13 @@
           },
           "Multi-melta": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Multi-melta"
@@ -4056,19 +4310,13 @@
           },
           "Hunter-Killer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -4084,19 +4332,13 @@
           },
           "Storm Bolter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Storm bolter"
@@ -4112,19 +4354,13 @@
           },
           "Multi-melta": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Multi-melta"
@@ -4353,19 +4589,13 @@
           },
           "Hunter-Killer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Hunter-killer missile"
@@ -4381,19 +4611,13 @@
           },
           "Storm Bolter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Storm bolter"
@@ -4409,19 +4633,13 @@
           },
           "Multi-melta": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Multi-melta"
@@ -4609,19 +4827,13 @@
           },
           "Dreadknight teleporter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4685,19 +4897,13 @@
           },
           "Psilencer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Gatling psilencer"
@@ -4713,19 +4919,13 @@
           },
           "Psycannon": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Heavy psycannon"
@@ -4741,19 +4941,13 @@
           },
           "Incinerator": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Heavy incinerator"
@@ -4996,7 +5190,7 @@
                     "value"
                   ]
                 ],
-                "value": "❌",
+                "value": "-",
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5045,7 +5239,7 @@
                     "value"
                   ]
                 ],
-                "value": "❌",
+                "value": "-",
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5094,7 +5288,7 @@
                     "value"
                   ]
                 ],
-                "value": "❌",
+                "value": "-",
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -5423,6 +5617,17 @@
           },
           "Psychic Power": {
             "max": 2
+          },
+          "Warlord": {
+            "ranks": {
+              "✓": {
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Unyielding Anvil (aura)"
+                  }
+                ]
+              }
+            }
           }
         },
         "keywords": {
@@ -6019,6 +6224,17 @@
           },
           "Psychic Power": {
             "max": 3
+          },
+          "Warlord": {
+            "ranks": {
+              "✓": {
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Hammer of Righteousness"
+                  }
+                ]
+              }
+            }
           }
         },
         "keywords": {
@@ -6313,19 +6529,13 @@
           },
           "Dreadknight teleporter": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6348,19 +6558,13 @@
           },
           "Psilencer": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Gatling psilencer"
@@ -6376,19 +6580,13 @@
           },
           "Psycannon": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Heavy psycannon"
@@ -6404,19 +6602,13 @@
           },
           "Incinerator": {
             "statType": "rank",
-            "value": "❌",
+            "value": "-",
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Weapon§Heavy incinerator"
@@ -6663,7 +6855,7 @@
                     "value"
                   ]
                 ],
-                "value": "❌",
+                "value": "-",
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -6712,7 +6904,7 @@
                     "value"
                   ]
                 ],
-                "value": "❌",
+                "value": "-",
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -6761,7 +6953,7 @@
                     "value"
                   ]
                 ],
-                "value": "❌",
+                "value": "-",
                 "operator": "AND",
                 "not": false,
                 "actionable": true
@@ -6839,6 +7031,17 @@
           },
           "Psychic Power": {
             "max": 4
+          },
+          "Warlord": {
+            "ranks": {
+              "✓": {
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Loremaster"
+                  }
+                ]
+              }
+            }
           }
         },
         "keywords": {
@@ -6932,6 +7135,17 @@
           },
           "Base": {
             "value": "40mm"
+          },
+          "Warlord": {
+            "ranks": {
+              "✓": {
+                "traits": [
+                  {
+                    "trait": "Warlord Trait§Daemon-slayer"
+                  }
+                ]
+              }
+            }
           }
         },
         "keywords": {
@@ -6975,7 +7189,7 @@
           ],
           "included": []
         },
-        "text": "This model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase.",
+        "text": "This model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase.",
         "allowed": {
           "classifications": [
             "Dominus Discipline"
@@ -9014,6 +9228,70 @@
           ]
         }
       },
+      "Psychic Power§Aegis Eternal": {
+        "text": "**Blessing**: Aegis Eternal has a warp charge value of 6. If manifested, until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time a model in this **PSYKER**’s unit would lose a wound, roll one D6: on a 6, that wound is not lost. While this **PSYKER**’s unit is within 3″ of a friendly **GREY KNIGHTS APOTHECARY**, if this **PSYKER**’s unit is **INFANTRY**, that wound is not lost on a 5+ instead.",
+        "keywords": {
+          "Tags": [
+            "Preservers"
+          ]
+        }
+      },
+      "Psychic Power§Empyric Lodestone": {
+        "text": "**Malediction**: Empyric Lodestone has a warp charge value of 7. If manifested, select one enemy unit within 18\" of this PSYKER. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time a friendly **SWORDBEARERS VEHICLE** unit makes a ranged attack against that enemy unit, add 1 to that attack’s wound roll. A unit can only be selected for this psychic power once per phase.",
+        "keywords": {
+          "Tags": [
+            "Swordbearers"
+          ]
+        }
+      },
+      "Psychic Power§Fatal Precognition": {
+        "text": "**Malediction**: Fatal Precognition has a warp charge value of 5, If manifested, select one enemy unit within 12\" of this **PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time that enemy unit makes a Normal Move, Advances, Falls Back, or makes a charge move, roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. A unit can only be selected for this psychic power once per phase.",
+        "keywords": {
+          "Tags": [
+            "Prescient Brethren"
+          ]
+        }
+      },
+      "Psychic Power§Fires of Covenant": {
+        "text": "**Witch fire**: Fires of Covenant has a warp charge value of 5. If manifested, select one enemy unit within Engagement Range of this **PSYKER**’s unit. Roll one D6 for each model in that enemy unit: for each roll of 4+, that enemy unit suffers 1 mortal wound (if the psyker manifesting this power has the Psychic Epitome Warlord Trait, the enemy unit suffers 1 additional mortal wound after all these dice rolls have been made). Each unit can only be selected for this psychic power once per turn.",
+        "keywords": {
+          "Tags": [
+            "Exactors"
+          ]
+        }
+      },
+      "Psychic Power§Inescapable Pursuit": {
+        "text": "**Blessing**: Inescapable Pursuit has a warp charge value of 6. If manifested, until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), you can re-roll charge rolls made for this **PSYKER**’s unit.",
+        "keywords": {
+          "Tags": [
+            "Blades of Victory"
+          ]
+        }
+      },
+      "Psychic Power§Projection of Purity": {
+        "text": "**Malediction**: Projection of Purity has a warp charge value of 6. If manifested, select one enemy unit within 12\" of this **PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), that unit is not affected by the aura abilities of models from its own army.",
+        "keywords": {
+          "Tags": [
+            "Wardmakers"
+          ]
+        }
+      },
+      "Psychic Power§Symphonic Strike": {
+        "keywords": {
+          "Tags": [
+            "Rapiers"
+          ]
+        },
+        "text": "**Blessing**: Symphonic Strike has a warp charge value of 6. If manifested, until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), add 1 to the Attacks characteristic of models in this **PSYKER**’s unit."
+      },
+      "Psychic Power§Temporal Accuracy": {
+        "keywords": {
+          "Tags": [
+            "Silver Blades"
+          ]
+        },
+        "text": "**Blessing**: Temporal Accuracy has a warp charge value of 5. If manifested, until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), all storm bolters, master-crafted storm bolters, and Relics that replace either of these weapons, that models in this **PSYKER**’s unit are equipped with are treated as being Pistol 4 weapons with a range characteristic of 12″."
+      },
       "Relics of Titan§Aetheric Conduit": {
         "text": "**TECHMARINE** model only. Each time the bearer repairs a model using its Blessing of the Omnissiah** ability, that model regains up to 3 lost wounds instead of up to D3."
       },
@@ -9078,7 +9356,8 @@
             "value": 4
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9090,7 +9369,7 @@
         "text": "Model equipped with a Nemesis daemon hammer only. This Relic replaces a Nemesis daemon hammer and has the following profile:"
       },
       "Relics of Titan§Domina Liber Daemonica": {
-        "text": "* Enemy **DAEMON** units that are set up on the battlefield as [Reinforcements](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) cannot be set up within 12″ of the bearer.\n* The bearer has the following ability: ‘Domina Liber Daentonica (Aura)**:** While an enemy DAEMON** unit is within 6″ of this model, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, subtract 1 from that test.’"
+        "text": "* Enemy **DAEMON** units that are set up on the battlefield as [Reinforcements](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) cannot be set up within 12″ of the bearer.\n* The bearer has the following ability: ‘Domina Liber Daentonica (Aura): While an enemy **DAEMON** unit is within 6″ of this model, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, subtract 1 from that test.’"
       },
       "Relics of Titan§Fury of Deimos": {
         "stats": {
@@ -9113,7 +9392,7 @@
         "text": "Model equipped with a storm bolter or master-crafted storm bolter only. This Relic replaces a storm bolter or master-crafted storm bolter and has the following profile:"
       },
       "Relics of Titan§Gyrotemporal Vault": {
-        "text": "The bearer can attempt to perform the following [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions):\n\n\n\n**Gyrotemporal Empowerment (Psychic Action - [Warp Charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) 5):** In your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), the bearer can attempt to empower their allies. If this action is completed successfully, select one friendly **GREY KNIGHTS** CORE** or **GREY KNIGHTS** CHARACTER** unit within 3″ of the bearer. Until the start of your next Psychic phase, at the start of the <a href=\"/wh40k9ed/the-rule"
+        "text": "The bearer can attempt to perform the following [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions):\n\n\n\n**Gyrotemporal Empowerment (Psychic Action - [Warp Charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) 5):** In your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), the bearer can attempt to empower their allies. If this action is completed successfully, select one friendly **GREY KNIGHTS CORE** or **GREY KNIGHTS CHARACTER** unit within 3″ of the bearer. Until the start of your next Psychic phase, at the start of the <a href=\"/wh40k9ed/the-rule"
       },
       "Relics of Titan§Kantu Vambrace": {
         "text": "**INFANTRY** model only.\n\n* Each time the bearer would lose a wound as a result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 4+, that wound is not lost.\n* Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
@@ -9145,11 +9424,21 @@
         "text": "Model equipped with a Nemesis force halberd only. This Relic replaces a Nemesis force halberd and has the following profile:"
       },
       "Relics of Titan§Stave of Supremacy": {
-        "text": "Model equipped with a Nemesis warding stave only. The bearer has the following ability: ‘**Stave of Supremacy (Aura)**:** While an enemy unit is within 18″ of this model, each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for that unit, it suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp) on any roll of a double.’"
+        "text": "Model equipped with a Nemesis warding stave only. The bearer has the following ability: ‘**Stave of Supremacy (Aura)**: While an enemy unit is within 18″ of this model, each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for that unit, it suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp) on any roll of a double.’"
       },
-      "Roster§Army": {},
+      "Roster§Army": {
+        "stats": {
+          "Relics of Titan": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "tracked": true,
+            "max": 1
+          }
+        }
+      },
       "Sanctic Discipline§Armoured Resilience": {
-        "text": "**Blessing:** *Armoured Resilience* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), add 1 to armour [saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for models in this PSYKER**’s unit.",
+        "text": "**Blessing:** *Armoured Resilience* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), add 1 to armour [saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for models in this **PSYKER**’s unit.",
         "stats": {
           "Roll": {
             "value": 5
@@ -9157,7 +9446,7 @@
         }
       },
       "Sanctic Discipline§Astral Aim": {
-        "text": "**Blessing:** *Astral Aim* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Each time this PSYKER**’s unit is selected to shoot, you can re-roll one [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) when resolving that unit’s attacks.\n* Each time a model in this PSYKER**’s unit makes a ranged attack, the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.",
+        "text": "**Blessing:** *Astral Aim* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Each time this **PSYKER**’s unit is selected to shoot, you can re-roll one [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) when resolving that unit’s attacks.\n* Each time a model in this **PSYKER**’s unit makes a ranged attack, the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.",
         "stats": {
           "Roll": {
             "value": 1
@@ -9165,7 +9454,7 @@
         }
       },
       "Sanctic Discipline§Ethereal Castigation": {
-        "text": "**Blessing:** *Ethereal Castigation* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), this PSYKER**’s unit can shoot as if were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), and then it can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) as if it were your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). After making this move and/or resolving these shooting attacks, until the end of the turn, this PSYKER**’s unit cannot make a Normal Move, [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), charge, or shoot.",
+        "text": "**Blessing:** *Ethereal Castigation* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), this **PSYKER**’s unit can shoot as if were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), and then it can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) as if it were your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). After making this move and/or resolving these shooting attacks, until the end of the turn, this **PSYKER**’s unit cannot make a Normal Move, [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance), charge, or shoot.",
         "stats": {
           "Roll": {
             "value": 6
@@ -9173,7 +9462,7 @@
         }
       },
       "Sanctic Discipline§Hammerhand": {
-        "text": "**Blessing:** *Hammerhand* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time a model in this PSYKER**’s unit makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "text": "**Blessing:** *Hammerhand* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), each time a model in this **PSYKER**’s unit makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
         "stats": {
           "Roll": {
             "value": 3
@@ -9181,7 +9470,7 @@
         }
       },
       "Sanctic Discipline§Purge Soul": {
-        "text": "**Witchfire:** *Purge Soul* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 12″ of and visible to this PSYKER** that has not already been selected for this power this phase, Then, roll one D6 and add this PSYKER**’s Leadership characteristic to the result. Your opponent then rolls one D6 and adds that unit’s Leadership characteristic to the result.\n\n* If your total is higher than your opponent’s, the selected unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If your total is equal to your opponent’s, the selected unit suffers 1 mortal wound.\n* If your total is less than your opponent’s, nothing happens.",
+        "text": "**Witchfire:** *Purge Soul* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 12″ of and visible to this **PSYKER** that has not already been selected for this power this phase, Then, roll one D6 and add this **PSYKER**’s Leadership characteristic to the result. Your opponent then rolls one D6 and adds that unit’s Leadership characteristic to the result.\n\n* If your total is higher than your opponent’s, the selected unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If your total is equal to your opponent’s, the selected unit suffers 1 mortal wound.\n* If your total is less than your opponent’s, nothing happens.",
         "stats": {
           "Roll": {
             "value": 2
@@ -9189,11 +9478,737 @@
         }
       },
       "Sanctic Discipline§Purifying Flame": {
-        "text": "**Witchfire:** *Purifying Flame* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), the closest enemy unit within 9″ of and visible to this PSYKER** suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). If the result of the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) was 11+, that unit suffers D3+3 mortal wounds instead.",
+        "text": "**Witchfire:** *Purifying Flame* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 5. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), the closest enemy unit within 9″ of and visible to this **PSYKER** suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). If the result of the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) was 11+, that unit suffers D3+3 mortal wounds instead.",
         "stats": {
           "Roll": {
             "value": 4
           }
+        }
+      },
+      "Stratagem§Adaptive Excoriation": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **SILVER BLADES** CORE** unit from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). That unit is still eligible to shoot this turn even though it Fell Back.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Silver Blades"
+          ]
+        }
+      },
+      "Stratagem§Alloy of Disciplines": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **PALADIN** unit from your army. Select one psychic power from the [Sanctic discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Discipline)** that unit does not know to replace one of the psychic powers that it does.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Armoury of Titan": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the GREY** KNIGHTS** keyword. Select one **GREY KNIGHTS** CHARACTER** model from your army and give them one [Relic of Titan](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Relics-of-Titan) (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Model Strat"
+          ]
+        },
+        "removed": {
+          "rules": {
+            "There are multiples of this unique stratagem.": {}
+          }
+        }
+      },
+      "Stratagem§Charge of the Ancients": {
+        "text": "Use this Stratagem before the battle, when you muster your army. Select one **PRESERVERS DREADNOUGHT** model from your army.\n\n* That model has a Move characteristic of 8\".\n* You can re-roll [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that model.\n* Each time that model fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, then until that fight is resolved, add 1 to the Damage characteristic of melee weapons that model is equipped with.\n\nYou can only use this Stratagem once, unless you are playing an Onslaught battle (in which case, you can use this Stratagem twice, on two different Preservers Dreadnought models from your army).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Model Strat",
+            "Preservers"
+          ]
+        },
+        "removed": {
+          "rules": {
+            "There are multiples of this unique stratagem.": {}
+          }
+        }
+      },
+      "Stratagem§Chirurgic Resurrection": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **GREY KNIGHTS** APOTHECARY** unit from your army and then select one friendly **GREY KNIGHTS** INFANTRY** unit that is not at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) and is within 3″ of that APOTHECARY**. One of the selected unit’s destroyed models is returned to its unit with its full wounds remaining.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Deadly Efficacy": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when a **RAPIERS** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Rapiers"
+          ]
+        }
+      },
+      "Stratagem§Death From The Warp": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GREY KNIGHTS** PSYKER** unit from your army shoots. Until the end of the phase, each time a model in that unit makes a ranged attack, if that unit was set up on the battlefield using the **Teleport Strike** ability this turn, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Empyric Declamation": {
+        "text": "Use this Stratagem at the start of any of your phases. Select one **BROTHERHOOD CHAPLAIN** unit from your army that has not recited a litany since the start of your last [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). That model can recite one litany it knows that has not already been recited by a friendly model since the start of your last Command phase. That litany is automatically inspiring (do not roll) and takes effect until the start of your next Command phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Endowment In Extremis": {
+        "text": "Use this Stratagem before the battle. Select one **GREY** KNIGHTS** model from your army that has one of the following in their profile: ‘Justicar’; ‘Paragon’; ‘Knight of the Flame’. That model can have one of the following Relics of Titan, even though they are not a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters): [Domina Liber Daemonica](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Domina-Liber-Daemonica); [Sanctic Shard](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Sanctic-Shard); [Augurium Scrolls](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Augurium-Scrolls); [Stave of Supremacy](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Stave-of-Supremacy). All of the Relics your army includes must be different and be given to different models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Model Strat"
+          ]
+        }
+      },
+      "Stratagem§Exemplar of the Silvered Host": {
+        "text": "Use this Stratagem after nominating a **GREY KNIGHTS** CHARACTER** model that is not a named character to be your [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord). Generate one additional Warlord Trait for them; this must be from the [Grey Knights Warlord Traits](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Warlord-Traits) table. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Model Strat"
+          ]
+        }
+      },
+      "Stratagem§Fight On The Move": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **GREY KNIGHTS** TELEPORTER** unit from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). Until the end of the turn, that unit is still eligible to shoot and charge, even though it Fell Back.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Final Justice": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **GREY KNIGHTS** CHARACTER** model (excluding **CASTELLAN CROWE**) from your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play - it can fight after the attacking model’s unit has finished making attacks. After resolving the destroyed model’s attacks, it is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Finest Hour": {
+        "text": "Use this Stratagem at the start of any phase. Select one **GREY KNIGHTS** CHARACTER** unit from your army. Until the end of the turn, add 3″ to the range of that unit’s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\").",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Foresight": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **PRESCIENT BRETHREN** PSYKER** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a PRESCIENT** BRETHREN** PSYKER** unit from your army fights. Until the end of the phase, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1 and re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Grey Knights",
+            "Prescient Brethren"
+          ]
+        }
+      },
+      "Stratagem§Frag Assault Launchers": {
+        "text": "Use this Stratagem at the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **GREY KNIGHTS** ASSAULT** LAUNCHERS** unit from your army and one enemy unit (excluding VEHICLE** or MONSTER** units) within 9″ of that unit. That enemy unit can either brace or duck for cover.\n\n* If that unit braces, it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* If that unit ducks for cover, then until the end of the turn, subtract 1 from the Attacks characteristic of models in that unit, and that unit cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Haloed In Soulfire": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **GREY KNIGHTS** CORE** unit from your army is set up on the battlefield using the **Teleport Strike** ability. Until the start of your next turn, each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Heroic Support": {
+        "removed": {
+          "stats": {}
+        }
+      },
+      "Stratagem§Hexagrammic Wards": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), before a [Deny the Witch test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) is taken for a **GREY KNIGHTS** PSYKER** unit from your army. When taking that test, roll one additional D6 and discard the lowest result.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Marked For Death": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit within 12″ of and visible to a **SWORDBEARERS PSYKER** unit from your army. Until the end of the phase, each time a friendly SWORDBEARERS** unit makes a ranged attack against that enemy unit, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Martial Prescience": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **GREY** KNIGHTS** unit that is [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible) is selected as the target of an attack made by an enemy model. Until the end of the phase, each time an unmodified [save roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) of 6 is made for a model in that unit, after the attacking model’s unit has finished making its attacks, the attacking model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Masters of the Word": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **WARDMAKERS CHARACTER** unit from your army. Select one psychic power from the [Dominus discipline](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Dominus-Discipline)** that model does not know to replace one of the psychic powers that it does.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Mental Focus": {
+        "text": "Use this Stratagem in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **GREY KNIGHTS** PSYKER** unit from your army. Until the end of the phase, that unit can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one more psychic power than normal.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Mists of Deimos": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GREY KNIGHTS** SMOKESCREEN** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Powerful Adept": {
+        "text": "Use this Stratagem in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when a **GREY KNIGHTS** PSYKER** unit from your army is selected to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) psychic powers. Until the end of the phase, each time a psychic power is manifested by that unit, increase the range of that psychic power by 6\".",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Psy-lance Bombardment": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if a **GREY** KNIGHTS** WARLORD** from your army is on the battlefield. Select one point on the battlefield and place a marker on that point. At the start of your next Command phase, roll one D6 for each unit within 6″ of the centre of that marker, adding 1 if the unit being rolled for is within 3″ of the centre of the marker and subtracting 1 if the unit being rolled for is a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters). On a 2-5, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), and on a 6+, that unit suffers D6 mortal wounds. The marker is then removed. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Psybolt Ammunition": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GREY** KNIGHTS** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes a ranged attack with a [bolt weapon](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Bolt-Weapons):\n\n* An unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.\n* Improve the Armour Penetration characteristic of that attack by 1.If this unit has 6 or more models, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Psychic Channelling": {
+        "text": "Use this Stratagem in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when a **GREY KNIGHTS** PSYKER** unit from your army is selected to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) psychic powers. Until the end of the phase, each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for that unit, roll one additional D6 and discard one of the dice.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Psychic Locus": {
+        "text": "Use this Stratagem at the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **BROTHER-CAPTAIN** model from your army. Until the end of the phase, that model gains the following ability: ‘Psychic Locus (Aura)**:** While a friendly &lt;BROTHERHOOD&gt;** PSYKER** unit is within 6″ of this model, add 1 to [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for that unit.’",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Psychic Onslaught": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GREY KNIGHTS** PSYKER** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes a ranged attack with a [psi weapon](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Psi-Weapons), add 1 to the Strength characteristic of that attack and improve the Armour Penetration characteristic of that attack by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Psyk-out Grenade": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GREY KNIGHTS** PSYK-OUT** GRENADES** unit is selected to shoot. If that unit is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, roll one D6: on a 2+, the closest enemy PSYKER** unit that is within 6″ of and visible to your unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Purity of the Machine Spirit": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **GREY KNIGHTS** MACHINE** SPIRIT** model from your army. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Radiant Strike": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **BLADES OF** VICTORY** CORE** INFANTRY** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that BLADES** OF** VICTORY** unit and roll one D6 for each model in that BLADES** OF** VICTORY** unit that is within Engagement Range of that enemy unit. For each dice result that equals or exceeds that enemy unit’s Toughness characteristic, it suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Sanctic Guardians": {
+        "text": "Use this Stratagem in the [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) step of your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **EXACTORS** unit from your army that is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. Until the end of the phase, that unit can [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Exactors",
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Sanctified Kill Zone": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **PURGATION SQUAD** unit from your army is selected to shoot. Until the end of the phase, each time a ranged attack made by a model in that unit targets an enemy unit within half range, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Shadow of Undying Legends": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **GREY KNIGHTS** DREADNOUGHT** model from your army. Until the start of your next Command phase, that model gains either the Rites of Battle** ability or the Tactical Precision** ability, as shown below:\n\n* Rites of Battle (Aura)**:** While a friendly **GREY KNIGHTS** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.\n* Tactical Precision (Aura)**:** While a friendly GREY** KNIGHTS** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Shield of Humanity": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the GREY** KNIGHTS** keyword. Select one **GREY KNIGHTS** CHARACTER** from your army and determine one Warlord Trait for that model (this must be a Warlord Trait they could have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two [Warlord Traits](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Warlord-Traits). You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "removed": {
+          "rules": {
+            "There are multiples of this unique stratagem.": {}
+          }
+        }
+      },
+      "Stratagem§Steely Advance": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **GREY KNIGHTS** INFANTRY** unit from your army makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move). Until the end of the turn, that unit is considered to have [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Teleportation Shunt": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **GREY KNIGHTS** TELEPORTER** unit from your army is selected to make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move). Instead of making a Normal Move with that unit, remove it from the battlefield and then set it back up on the battlefield, anywhere that is more than 9″ away from any enemy models. A unit can only be selected for this Stratagem once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§The Need To Know": {
+        "text": "You can only use this Stratagem if your army only contains [**GREY** KNIGHTS** Detachments](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Detachment-Rules). Use this Stratagem if you are playing a mission that requires you to select either [secondary objectives](https://wahapedia.ru/wh40k9ed/the-rules/matched-play/#Secondary-Objectives) or [Agendas](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Agendas), after both players have revealed their selections. You can select one of your secondary objectives or Agendas, and replace it with a different one (make a note on your [army roster](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battle-forged-Army-Roster) as to your new selection and inform your opponent). All the normal rules for selecting secondary objectives and Agendas apply. If both players have a rule that allows them to select new secondary objectives or Agendas, both players make their new selections before revealing them simultaneously to their opponent.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§The Steel Heart": {
+        "text": "Use this Stratagem in your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **GREY KNIGHTS** TERMINATOR** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Thunderous Stride": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **NEMESIS DREADKNIGHT** model from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that model, and roll one D6: on a 2-5, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6, that enemy unit suffers 3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Truesilver Armour": {
+        "text": "Use this Stratagem in any phase, when a **GREY KNIGHTS** CORE** INFANTRY** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit contains 5 or fewer models, this Stratagem costs 2CP; otherwise, it costs 3CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/3",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Untainted And Unbowed": {
+        "text": "Use this Stratagem in any phase, when a **PURIFIER SQUAD** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack (to a minimum of 1).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Stratagem§Zone of Warding": {
+        "text": "Use this Stratagem in any phase, when a **GREY** KNIGHTS** unit from your army is selected as the target of a ranged attack. Until the end of the phase, while that unit contains a model equipped with a Nemesis warding stave, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) (TERMINATOR** models instead have a 4+ invulnerable save). If that unit contains 5 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
         }
       },
       "Troops§Brotherhood Terminator Squad": {
@@ -9556,50 +10571,122 @@
       },
       "Warlord Trait§Daemon-slayer": {
         "text": "* Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, then until that fight is resolved, add 1 to its Attacks characteristic.\n* Each time this WARLORD** makes a melee attack against a DAEMON** unit, **Daemonic saving** throws** cannot be made against that attack.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Warlord Trait§Divination": {
+        "text": "If your **WARLORD** has this Warlord Trait, it can attempt to perform the following psychic action:\n\n**Divination (Psychic Action - Warp Charge 6)**: In your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this **WARLORD** can attempt to [perform this psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions). If completed, you gain 1CP.",
+        "keywords": {
+          "Tags": [
+            "Grey Knights",
+            "Prescient Brethren"
+          ]
         }
       },
       "Warlord Trait§First To The Fray": {
         "text": "* Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* If this WARLORD** has made a charge move this turn, then until the end of the turn, each time a friendly **GREY KNIGHTS** CORE** unit declares a charge against an enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, add 1 to the charge roll made for that unit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
         }
       },
-      "Warlord Trait§Hammer Of Righteousness": {
+      "Warlord Trait§Hammer of Righteousness": {
         "text": "Each time this **WARLORD** makes a melee attack, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), was charged or [performed a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
         }
+      },
+      "Warlord Trait§Inescapable Wrath": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights",
+            "Rapiers"
+          ]
+        },
+        "text": "This **WARLORD** is eligible to declare a charge with even if they Advanced this turn."
+      },
+      "Warlord Trait§Loremaster": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights",
+            "Wardmakers"
+          ]
+        },
+        "text": "Each time a *Psychic test* is taken for this **WARLORD**, if the result of that test was an unmodified result of 8+ and it was greater than or equal to that power’s warp charge value, your opponent cannot attempt to deny that power."
+      },
+      "Warlord Trait§Martial Perfection": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights",
+            "Silver Blades"
+          ]
+        },
+        "text": "* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this **WARLORD** is within Engagement Range of any enemy units, it can fight first that phase.\n* Each time this **WARLORD** makes a melee attack, you can re-roll the hit roll."
       },
       "Warlord Trait§Nemesis Lord": {
         "text": "Each time this **WARLORD** makes a melee attack with a [Nemesis weapon](https://wahapedia.ru/wh40k9ed/factions/grey-knights/#Nemesis-Weapons), an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
         }
+      },
+      "Warlord Trait§Oath of Witness (aura)": {
+        "keywords": {
+          "Tags": [
+            "Exactors",
+            "Grey Knights"
+          ]
+        },
+        "text": "* Add 1 to this **WARLORD**’s Leadership characteristic.\n* While a friendly **EXACTORS CORE** unit is within 6\" of this **WARLORD**, Morale tests taken for that unit are automatically passed."
       },
       "Warlord Trait§Psychic Epitome": {
         "text": "At the start of each of your [Psychic phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), select one friendly **GREY KNIGHTS** PSYKER** unit within 6″ of this WARLORD**. Until the end of the phase, each time that unit [manifests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) a Witchfire psychic power, when resolving that psychic power, if an enemy unit suffers any [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), that enemy unit suffers 1 additional mortal wound.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Warlord Trait§Radiant Exemplar": {
+        "text": "Add 3″ to the range of this **WARLORD**’s aura abilities (to a maximum of 12″).",
+        "keywords": {
+          "Tags": [
+            "Grey Knights",
+            "Preservers"
+          ]
+        }
+      },
+      "Warlord Trait§Rites of Protection": {
+        "text": "Rites of Protection (Psychic Action - Warp Charge 5): In your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), this **WARLORD** can attempt to [perform this psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions). If completed, select one friendly **SWORDBEARERS VEHICLE** model within 12\" of this WARLORD. Until the start of your next Psychic phase, that model has a 4+ invulnerable save.",
+        "keywords": {
+          "Tags": [
+            "Grey Knights",
+            "Swordbearers"
+          ]
         }
       },
       "Warlord Trait§Unyielding Anvil (aura)": {
         "text": "While a friendly **GREY KNIGHTS** CORE** or **GREY KNIGHTS** CHARACTER** unit is within 6″ of this WARLORD**, that unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in such a unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        }
+      },
+      "Warlord Trait§Vanguard Aggression": {
+        "text": "After deployment, you can select one friendly **BLADES OF VICTORY CORE** unit within 9″ of this **WARLORD**. This **WARLORD** and the selected unit can each make a Normal Move of up to 6″.",
+        "keywords": {
+          "Tags": [
+            "Blades of Victory",
+            "Grey Knights"
+          ]
         }
       },
       "Weapon§Assault cannon": {
@@ -9688,7 +10775,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9750,7 +10838,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9769,7 +10858,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10029,7 +11119,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -10113,7 +11204,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -10132,7 +11224,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -10151,7 +11244,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -10170,7 +11264,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -10192,7 +11287,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10215,7 +11311,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10250,7 +11347,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -10270,7 +11368,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -10289,7 +11388,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -10309,10 +11409,12 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10335,7 +11437,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10355,7 +11458,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 1
@@ -10380,7 +11484,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10537,7 +11642,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10716,7 +11822,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10733,7 +11840,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 7
@@ -10834,7 +11942,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10873,7 +11982,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -10893,7 +12003,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3+2"
+            "value": "D3+2",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -11012,7 +12123,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -11031,7 +12143,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -11142,7 +12255,7 @@
             "Gifts of the Prescient"
           ]
         },
-        "text": "Once per battle, when the bearer is selected to manifest psychic powers, you can use this gift. If you do, then until the end of the phase, each time the bearer attempts to *manifest a psychic power* from the Dominus discipline, add 2 to that attempts *Psychic test*."
+        "text": "Once per battle, when the bearer is selected to manifest psychic powers, you can use this gift. If you do, then until the end of the phase, each time the bearer attempts to *manifest a psychic power* from the Dominus discipline, add 2 to that attempts *Psychic test*."
       },
       "Wisdom of the Prognosticars§Heroism’s Favour": {
         "stats": {

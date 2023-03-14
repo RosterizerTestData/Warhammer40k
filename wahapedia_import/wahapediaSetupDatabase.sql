@@ -150,15 +150,14 @@ SELECT "strategems";
 CREATE TABLE strategems (
   strategem_id INT PRIMARY KEY,
   faction_id VARCHAR(255),
+  subfaction_id VARCHAR(255),
   name VARCHAR(255),
   type VARCHAR(255),
   cp_cost VARCHAR(255),
   legend TEXT,
   source_id INT,
   description TEXT,
-  check_me INT DEFAULT 0, /*boolean*/
-  CONSTRAINT strategems_fk_factions FOREIGN KEY (faction_id) REFERENCES factions (faction_id),
-  CONSTRAINT strategems_fk_sources FOREIGN KEY (source_id) REFERENCES sources (source_id)
+  check_me INT DEFAULT 0 /*boolean*/
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 SELECT "datasheets_damage";

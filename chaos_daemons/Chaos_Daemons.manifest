@@ -1,11 +1,11 @@
 {
   "name": "Chaos Daemons",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -44,7 +44,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitAllegiance": {
             "evals": [
               {
                 "paths": [
@@ -62,6 +62,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -71,9 +72,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Allegiance",
                     "value"
@@ -86,6 +84,22 @@
                   "Allegiance",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Allegiance",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -105,6 +119,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -115,6 +143,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -140,6 +176,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -150,6 +200,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -175,6 +233,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -185,6 +257,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -210,6 +290,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -220,6 +314,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -235,6 +337,47 @@
       "Hellforged Artefacts": {
         "templateClass": "Relic"
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Legion Of Skulls",
+            "Stratagem§Brazen Skull",
+            "Stratagem§Red Tide",
+            "Stratagem§Shadow Pact",
+            "Stratagem§Daemonic Boon",
+            "Stratagem§Legions Of Shade",
+            "Stratagem§Mortal Boon",
+            "Stratagem§Draught Of Terror",
+            "Stratagem§Blessing Of Be’lakor",
+            "Stratagem§Frenetic Bloodlust",
+            "Stratagem§Glorious Decapitation",
+            "Stratagem§Contempt For Sorcery",
+            "Stratagem§Brass Stampede",
+            "Stratagem§Banner Of Blood",
+            "Stratagem§Minions Of Magic",
+            "Stratagem§Burning Warpfire",
+            "Stratagem§Warp Jaws",
+            "Stratagem§Magical Boon",
+            "Stratagem§Warp Portal",
+            "Stratagem§Flames Of Mutation",
+            "Stratagem§Blasted Standard",
+            "Stratagem§Revolting Constitution",
+            "Stratagem§Chortling Murrain",
+            "Stratagem§Pestilent Inspiration",
+            "Stratagem§Slime Trail",
+            "Stratagem§Swarming Flies",
+            "Stratagem§Crushing Bulk",
+            "Stratagem§Plague Banner",
+            "Stratagem§Thirst For Souls",
+            "Stratagem§Razor-sharp Caress",
+            "Stratagem§The Endless Dance",
+            "Stratagem§Impossible Elegance",
+            "Stratagem§Melodic Delirium",
+            "Stratagem§Race Through The Warp",
+            "Stratagem§Rapturous Standard"
+          ]
+        }
+      },
       "Noctic Discipline": {
         "templateClass": "Psychic Power"
       },
@@ -245,13 +388,40 @@
         "templateClass": "Psychic Power"
       },
       "Unit": {
+        "stats": {
+          "Allegiance": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Khorne": {
+                "order": 1
+              },
+              "Nurgle": {
+                "order": 2
+              },
+              "Slaanesh": {
+                "order": 3
+              },
+              "Tzeentch": {
+                "order": 4
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceAllegianceKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Allegiance",
                     "value"
@@ -259,7 +429,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -269,7 +440,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Allegiance>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -288,7 +459,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Allegiance>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -301,12 +472,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Allegiance",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityAllegiance": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Allegiance",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Allegiance",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Allegiance",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -539,8 +751,7 @@
             "statType": "term",
             "value": "&lt;ALLEGIANCE&gt;",
             "text": "While a friendly **LEGIONES DAEMONICA** {v}** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -750,23 +961,17 @@
             "value": "Bloodcrusher"
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -785,23 +990,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -916,7 +1115,8 @@
             "value": 6
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1195,7 +1395,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1246,23 +1447,17 @@
             "value": "Plague Drone"
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1281,23 +1476,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1452,23 +1641,17 @@
             "value": "Pox Rider"
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1652,7 +1835,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1702,23 +1886,17 @@
             "value": "Seeker"
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1737,23 +1915,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1845,10 +2017,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -1869,7 +2043,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1919,10 +2094,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -1943,7 +2120,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1989,23 +2167,17 @@
             "value": 6
           },
           "Horror Infestation": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Horror Infestation"
@@ -2047,7 +2219,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Fire of Tzeentch",
@@ -2223,7 +2396,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2434,7 +2608,8 @@
             "value": 4
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2639,7 +2814,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Rancid vomit",
@@ -3027,7 +3203,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3110,7 +3287,8 @@
             "value": 5
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Harvester cannon",
@@ -3592,7 +3770,8 @@
             "value": 4
           },
           "Base": {
-            "value": ""
+            "value": "",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3998,7 +4177,8 @@
             "value": 4
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4215,7 +4395,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4300,7 +4481,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hellfire breath",
@@ -4667,7 +4849,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Ritual dagger",
@@ -4812,7 +4995,8 @@
             "value": 4
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4906,7 +5090,8 @@
             "value": 5
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5086,23 +5271,17 @@
             "value": 7
           },
           "Wings": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Wings"
@@ -5144,7 +5323,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hellforged sword",
@@ -5345,7 +5525,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -5393,23 +5574,17 @@
             "value": 7
           },
           "Retinue of Horrors": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Retinue of Horrors"
@@ -5451,7 +5626,8 @@
             "value": 5
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Ritual dagger",
@@ -5652,7 +5828,8 @@
             "value": 6
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Disc blades",
@@ -5823,23 +6000,17 @@
             "value": 15
           },
           "Bileblade": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5858,23 +6029,17 @@
             "dynamic": true
           },
           "Doomsday bell": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5931,7 +6096,8 @@
             "value": 5
           },
           "Base": {
-            "value": "130mm"
+            "value": "130mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plague flail",
@@ -6453,7 +6619,8 @@
             "value": 6
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6531,7 +6698,8 @@
             "value": 4
           },
           "Base": {
-            "value": "105 x 70mm"
+            "value": "105 x 70mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6610,7 +6778,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6698,7 +6867,8 @@
             "value": 5
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6890,7 +7060,8 @@
             "value": 2
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -6911,7 +7082,8 @@
             "value": 5
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6958,23 +7130,17 @@
             "value": 14
           },
           "Ritual knife": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6993,23 +7159,17 @@
             "dynamic": true
           },
           "Shining aegis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7028,23 +7188,17 @@
             "dynamic": true
           },
           "Sinistrous Hand": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7101,7 +7255,8 @@
             "value": 5
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Witstealer sword",
@@ -7473,7 +7628,8 @@
             "value": 5
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Staff of Tzeentch",
@@ -7760,7 +7916,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7836,7 +7993,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -7920,7 +8078,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -8008,7 +8167,8 @@
             "value": 5
           },
           "Base": {
-            "value": "130mm"
+            "value": "130mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -8230,7 +8390,8 @@
             "value": 4
           },
           "Base": {
-            "value": "130mm"
+            "value": "130mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Slaughtering blade",
@@ -8463,23 +8624,17 @@
             "value": 15
           },
           "Shining aegis": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8536,7 +8691,8 @@
             "value": 5
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Living whip",
@@ -8912,7 +9068,8 @@
             "value": 4
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9117,7 +9274,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9195,7 +9353,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9273,7 +9432,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9351,7 +9511,8 @@
             "value": 5
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9430,7 +9591,8 @@
             "value": 5
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9516,7 +9678,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9592,7 +9755,8 @@
             "value": 5
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9676,7 +9840,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9762,7 +9927,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -9977,7 +10143,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10067,7 +10234,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10156,7 +10324,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10240,7 +10409,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10325,7 +10495,8 @@
             "value": 5
           },
           "Base": {
-            "value": "130mm"
+            "value": "130mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10549,7 +10720,8 @@
             "value": 4
           },
           "Base": {
-            "value": "130mm"
+            "value": "130mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10765,7 +10937,8 @@
             "value": 5
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -10988,7 +11161,8 @@
             "value": 5
           },
           "Base": {
-            "value": "105 x 70mm"
+            "value": "105 x 70mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -11198,7 +11372,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Piercing claws",
@@ -11260,7 +11435,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -11281,7 +11457,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -11302,7 +11479,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -11323,7 +11501,8 @@
             "value": 5
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -11366,7 +11545,8 @@
             "value": 4
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bladed horn",
@@ -11496,7 +11676,8 @@
             "value": 4
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bladed horn",
@@ -11626,7 +11807,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hellblade",
@@ -11709,7 +11891,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Hellblade",
@@ -11792,7 +11975,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -11854,7 +12038,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Coruscating flames",
@@ -11957,7 +12142,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -12019,7 +12205,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Coruscating flames",
@@ -12122,7 +12309,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Piercing claws",
@@ -12184,7 +12372,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -12205,7 +12394,8 @@
             "value": 5
           },
           "Base": {
-            "value": "75 x 42mm"
+            "value": "75 x 42mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -12248,7 +12438,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -12269,7 +12460,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -12290,7 +12482,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -12312,7 +12505,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 5
@@ -12333,7 +12527,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -12376,7 +12571,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lashing tongue",
@@ -12506,7 +12702,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Coruscating flames",
@@ -12589,7 +12786,8 @@
             "value": 6
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -12631,7 +12829,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Coruscating flames",
@@ -12714,7 +12913,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Death’s heads",
@@ -12939,7 +13139,8 @@
             "value": 6
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -12982,7 +13183,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plaguesword",
@@ -13065,7 +13267,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Death’s heads",
@@ -13290,7 +13493,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plaguesword",
@@ -13373,7 +13577,8 @@
             "value": 6
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Grasping tongue",
@@ -13566,7 +13771,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -13587,7 +13793,8 @@
             "value": 4
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -13608,7 +13815,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         },
         "assets": {
@@ -13650,7 +13858,8 @@
             "value": 5
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lashing tongue",
@@ -13849,7 +14058,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -13871,7 +14081,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -13931,29 +14142,657 @@
           }
         }
       },
+      "Stratagem§Banner Of Blood": {
+        "text": "Use this Stratagem when a **LEGIONES DAEMONICA** KHORNE** ICON** unit from your army is selected to charge. Until the end of the phase, each time you make a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit, roll one additional D6 and discard the lowest result.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Blasted Standard": {
+        "text": "Use this Stratagem at the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **LEGIONES DAEMONICA** TZEENTCH** ICON** unit from your army. Until the end of the phase, each time you make an unmodified [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) of 9 or more for a friendly **LEGIONES DAEMONICA** TZEENTCH** PSYKER** unit within 12″ of that unit, the closest enemy unit within 24″ of and visible to that selected unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Blessing Of Be’lakor": {
+        "text": "Use this Stratagem in any phase, when a saving throw made for a **DISCIPLES** OF** BE’LAKOR** model from your army against an attack is failed. If BE’LAKOR** is on the battlefield, the Damage characteristic of that attack is changed to 0.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Brass Stampede": {
+        "text": "Use this Stratagem after a **LEGIONES DAEMONICA** KHORNE** CAVALRY** or **LEGIONES DAEMONICA** KHORNE** VEHICLE** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit and roll one D6 for each model in the charging unit, adding 3 to the result if the charging unit is a VEHICLE** unit:\n\n* For each 6-8, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* For each 9, that enemy unit suffers D3+3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Brazen Skull": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Pick a LEGION OF SKULLS model from your army. Pick an enemy unit within 8″ of this model that is visible to them, and roll a D6; if the result equals or exceeds this model’s Ballistic Skill characteristic, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Burning Warpfire": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **FLAMERS** unit is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with flickering flames or the pink fire profile of fire of Tzeentch that targets an enemy unit that contains 11 or more models, when determining how many attacks that model makes with that weapon, count results of less than 9 as 9. If that FLAMERS** unit contains 4 or more models, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Chortling Murrain": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit within 6″ of a **SLOPPITY BILEPIPER** model from your army and roll one D6 for each model in that enemy unit. For each roll that exceeds that model’s Toughness characteristic, that model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). A unit can only suffer a maximum of 6 mortal wounds per phase as a result of this Stratagem. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Contempt For Sorcery": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), after a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is passed for an enemy [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit and after any [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) attempt is made. If that enemy PSYKER** unit is within 24″ of any **LEGIONES DAEMONICA** KHORNE** units from your army, roll one D6, adding 1 to the result if that enemy PSYKER** is within 12″ of any **FLESH HOUNDS** units from your army: on a 4+ that psychic power is [denied](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Crushing Bulk": {
+        "text": "Use this Stratagem after a **PLAGUE DRONES**, **BEASTS OF** NURGLE** or **GREAT UNCLEAN** ONE** unit from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit and roll one D6 for each model in the charging unit, adding 3 to the result if that unit is a GREAT** UNCLEAN** ONE** unit:\n\n* On a 6+, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* On a 9, that unit suffers D3+3 mortal wounds instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Daemonic Boon": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **LEGION** DISCIPLES** unit (excluding VEHICLE** units) from your army that is within 6″ of a friendly DAEMONIC** DISCIPLES** unit is selected to fight. Until the end of the phase:\n\n* Add 1 to the Strength characteristic of models in that LEGION** DISCIPLES** unit.\n* Each time a model in that LEGION** DISCIPLES** unit makes a melee attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Draught Of Terror": {
+        "text": "Use this Stratagem at the start of the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE). Select one **DAEMONIC** DISCIPLES** unit from your army. Until the end of the phase, that unit gains the following ability:\n\n\n\nDraught of Terror (Aura)**:** While an enemy unit is within 6″ of this unit, each time a model [flees](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) from that enemy unit:\n\n* If any models in this unit have lost any wounds, one model in this unit regains 1 lost wound.\n* If no models in this unit have lost any wounds, but it is not at its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units), one of this unit’s destroyed models is returned with 1 wound remaining.\n* Models returned to this unit in this way can only be set up within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of enemy units that are already within Engagement Range of this unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Morale"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Exquisite Gifts": {
+        "text": "Use this Stratagem before the battle. Select one **LEGIONES DAEMONICA** SLAANESH** CHARACTER** model from your army and give them one [Relic of Slaanesh](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Relics-of-Slaanesh) (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Flames Of Mutation": {
+        "text": "Use this Stratagem at the end of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **HORRORS** unit from your army that had any models destroyed during this phase. Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit, and roll one D6 for each model in that HORRORS** unit that was destroyed during this phase. For each 6, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). A unit can only suffer a maximum of 6 mortal wounds per phase as a result of this Stratagem.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Frenetic Bloodlust": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **BLOODLETTERS CORE** unit from your army.\n\n* If that unit is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) of up to 6″ with that unit. It must end this move closer to the closest visible enemy unit.\n* If that unit is within Engagement Range of any enemy units, make a [pile-in move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) with that unit.If this unit makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Glorious Decapitation": {
+        "text": "Use this Stratagem when an enemy [**CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) model is destroyed by a melee attack made by a **LEGIONES DAEMONICA** KHORNE** CHARACTER** model from your army. Until the end of the battle, that KHORNE** CHARACTER** model has the following ability:\n\n\n\nSlayer of Champions (Aura)**:** While a friendly **LEGIONES DAEMONICA** KHORNE** unit is within 6″ of this model, each time a model in that unit makes an attack, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage. A unit can only suffer a maximum of 6 mortal wounds per phase as a result of this ability.\n\n\n\nYou can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Impossible Elegance": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **LEGIONES DAEMONICA** SLAANESH** CHARACTER** model from your army (excluding VEHICLE** units). Until the end of the phase, each time a melee attack is made against that unit, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1-3 always fails, irrespective of any abilities that the weapon or the model making the attack may have.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Legion Of Skulls": {
+        "text": "Use this Stratagem when choosing your army. Pick a **KHORNE** [Chaos Daemons Detachment](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Detachment-Abilities) (that is, a Chaos Daemons Detachment in which every unit has the KHORNE keyword) from your army to be a Legion of Skulls Specialist Detachment. BLOODLETTER** units in that Detachment gain the LEGION OF SKULLS keyword.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Legions Of Shade": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) or at the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **DISCIPLES** OF** BE’LAKOR** unit from your army. Until the end of the phase, models in that unit can move horizontally through enemy models (they cannot finish a move on top of another model, or its base).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Charge"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Magical Boon": {
+        "text": "Use this Stratagem at the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **LEGIONES DAEMONICA** TZEENTCH** PSYKER** unit from your army. That unit can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one additional psychic power this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Melodic Delirium": {
+        "text": "Use this Stratagem at the start of your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **FIENDS** unit from your army. Until the end of the phase, that unit has the following ability:\n\n\n\nMelodic Delirium (Aura)**:** While an enemy [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit is within 12″ of this unit, each time a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for that unit, subtract 2 from the result.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Minions Of Magic": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **HORRORS CORE** unit is selected to shoot. Until the end of the phase, each time a ranged attack is made by a model in that unit, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, change the Armour Penetration characteristic of that attack to -3.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Mortal Boon": {
+        "text": "Use this Stratagem at the start of the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE). Select one **DAEMONIC** DISCIPLES** unit from your army that is within 6″ of a friendly LEGION** DISCIPLES** unit (excluding VEHICLE** units). Until the end of the phase, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for that DAEMONIC** DISCIPLES** unit, it is automatically passed and counts as having been passed with an unmodified roll of a 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Morale"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Pestilent Inspiration": {
+        "text": "Use this Stratagem at the start of your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Select one **LEGIONES DAEMONICA** NURGLE** PSYKER** model from your army. Until the end of the phase, that model knows all of the psychic powers from the [Warprot discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warprot-Discipline)**.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Plague Banner": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **LEGIONES DAEMONICA** NURGLE** ICON** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, that attack inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target and the attack sequence ends. Each unit can only suffer a maximum of 6 mortal wounds as a result of this Stratagem in each phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Race Through The Warp": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **LEGIONES DAEMONICA** SLAANESH** VEHICLE** unit (excluding **SOUL GRINDER** units) from your army. Remove that unit from the battlefield and place it into [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Rapturous Standard": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **LEGIONES DAEMONICA** SLAANESH** ICON** unit from your army. Until the end of the phase, each time a model in that unit makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Razor-sharp Caress": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DAEMONETTES** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Red Tide": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Pick an enemy unit that was charged by a LEGION OF SKULLS unit from your army this phase. You can add 2 to [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for other LEGION OF SKULLS units from your army that declare a charge against the same enemy unit (and do not declare charges against any other enemy unit) until the end of the phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Relics Of The Brass Citadel": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **LEGIONES DAEMONICA** KHORNE** CHARACTER** model from your army and give them one [Relic of Khorne](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Relics-of-Khorne) (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Relics Of The Great Garden": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **LEGIONES DAEMONICA** NURGLE** CHARACTER** model from your army and give them one [Relic of Nurgle](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Relics-of-Nurgle) (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Relics Of The Impossible Fortress": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **LEGIONES DAEMONICA** TZEENTCH** CHARACTER** model from your army and give them one [Relic of Tzeentch](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Relics-of-Tzeentch) (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Revolting Constitution": {
+        "text": "Use this Stratagem when a **PLAGUEBEARER**’s unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit has a [Power Rating](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Power-Ratings) of 12 or more, this Stratagem costs 2CP, otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Shadow Pact": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **CHAOS** UNDIVIDED** LEGION** DISCIPLES** INFANTRY** unit from your army (see Codex: [Chaos Space Marines](https://wahapedia.ru/wh40k9ed/factions/chaos-space-marines)), then select one of the pacts below. Until the start of your next Command phase, that unit has that pact:\n\nPact of Blood:** Add 1 to the Attacks characteristic of models in that unit.\n\nPact of Fate:** Models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\nPact of Plague:** Add 1 to the Toughness characteristic of models in that unit.\n\nPact of Excess:** Add 1″ to the Move characteristic of models in that unit. In addition, add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Slime Trail": {
+        "text": "Use this Stratagem at the start of your opponent’s [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **BEASTS OF** NURGLE** or **HORTICULOUS SLIMUX** unit from your army. Each time an enemy unit (excluding [AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) or TITANIC** units) within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that unit is selected to move, roll one D6: on a 4+, that enemy unit cannot [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Swarming Flies": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) or the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **LEGIONES DAEMONICA** NURGLE** unit from your army. Until the end of the phase, each time an enemy model makes an attack against that unit, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§The Endless Dance": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **DAEMONETTES** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a [pile-in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) or [consolidation move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate), it can move up to an additional 3″. This is not cumulative with any other rule that increases the distance models can [pile in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) or [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Thirst For Souls": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **LEGIONES DAEMONICA** SLAANESH** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack against an AELDARI** unit, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Warp Jaws": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **SCREAMERS**, FATESKIMMER** or **BURNING CHARIOT** unit from your army is selected to fight. Until the end of the phase, each time an attack is made with a lamprey bite or Screamer bites by a model in that unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
+      "Stratagem§Warp Portal": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when you select a **LEGIONES DAEMONICA** TZEENTCH** CHARACTER** model from your army to make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move). Instead of moving it as normal, remove that unit from the battlefield and set it up anywhere on the battlefield that is more than 9″ from any enemy models. If that CHARACTER** model has the HERALD** keyword, this Stratagem costs 1CP, otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Chaos Daemons Strat"
+          ]
+        }
+      },
       "Troops§Bloodletters": {
         "stats": {
           "Power Level": {
             "value": 6
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13972,23 +14811,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14102,23 +14935,17 @@
             "value": 6
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14137,23 +14964,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14290,23 +15111,17 @@
             "value": 7
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14325,23 +15140,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14412,23 +15221,17 @@
             "value": 7
           },
           "Daemonic icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14447,23 +15250,17 @@
             "dynamic": true
           },
           "Instrument of Chaos": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -14665,196 +15462,76 @@
         }
       },
       "Warlord Trait§Acidic Ichor": {
-        "text": "Each time this **WARLORD** loses a wound as a result of a melee attack made by an enemy unit, after the attacking model’s unit has finished making its attacks, roll one D6: on a 4+, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). Each unit can only suffer a maximum of 6 mortal wounds per phase as a result of this ability.",
-        "stats": {
-          "Discipline": {
-            "value": "Nurgle Warlord Traits 2"
-          }
-        }
+        "text": "Each time this **WARLORD** loses a wound as a result of a melee attack made by an enemy unit, after the attacking model’s unit has finished making its attacks, roll one D6: on a 4+, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). Each unit can only suffer a maximum of 6 mortal wounds per phase as a result of this ability."
       },
       "Warlord Trait§Aspect Of Death (aura)": {
-        "text": "While an enemy unit is within 6″ of this **WARLORD**:\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, subtract 1 from that Combat Attrition test.",
-        "stats": {
-          "Discipline": {
-            "value": "Khorne Warlord Traits 1"
-          }
-        }
+        "text": "While an enemy unit is within 6″ of this **WARLORD**:\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, subtract 1 from that Combat Attrition test."
       },
       "Warlord Trait§Aura Of Bewitchment (aura)": {
-        "text": "While an enemy unit is within 6″ of this **WARLORD**, that unit cannot [perform actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). If that unit is performing an action when it comes into range of this ability, it immediately fails.",
-        "stats": {
-          "Discipline": {
-            "value": "Slaanesh Warlord Traits 6"
-          }
-        }
+        "text": "While an enemy unit is within 6″ of this **WARLORD**, that unit cannot [perform actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). If that unit is performing an action when it comes into range of this ability, it immediately fails."
       },
       "Warlord Trait§Born Of Sorcery": {
-        "text": "Add 1 to [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for this **WARLORD**.",
-        "stats": {
-          "Discipline": {
-            "value": "Tzeentch Warlord Traits 1"
-          }
-        }
+        "text": "Add 1 to [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for this **WARLORD**."
       },
       "Warlord Trait§Brazen Hide": {
-        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Khorne Warlord Traits 2"
-          }
-        }
+        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost."
       },
       "Warlord Trait§Devastating Blow": {
-        "text": "Each time this **WARLORD** makes a melee attack, rules that ignore wounds cannot be used.",
-        "stats": {
-          "Discipline": {
-            "value": "Khorne Warlord Traits 3"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack, rules that ignore wounds cannot be used."
       },
       "Warlord Trait§Fatal Caress": {
-        "text": "Each time this **WARLORD** makes a melee attack, on an unmodified successful [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 5+, [invulnerable saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made against that attack.",
-        "stats": {
-          "Discipline": {
-            "value": "Slaanesh Warlord Traits 2"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack, on an unmodified successful [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 5+, [invulnerable saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made against that attack."
       },
       "Warlord Trait§Fractal Mind": {
-        "text": "If this **WARLORD** attempts to perform a [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions) in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can still attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power during that phase without that psychic action failing.",
-        "stats": {
-          "Discipline": {
-            "value": "Tzeentch Warlord Traits 3"
-          }
-        }
+        "text": "If this **WARLORD** attempts to perform a [psychic action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Psychic-Actions) in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can still attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power during that phase without that psychic action failing."
       },
       "Warlord Trait§Glory Of Battle": {
-        "text": "* Add 1 to this **WARLORD**’s Attacks characteristic.\n* While this WARLORD** is within 3″ of 6 or more enemy models, add 1 to this WARLORD**’s Attacks characteristic.\n* While this WARLORD** is within 3″ of 11 or more enemy models, add 1 to this WARLORD**’s Attacks characteristic.",
-        "stats": {
-          "Discipline": {
-            "value": "Khorne Warlord Traits 4"
-          }
-        }
+        "text": "* Add 1 to this **WARLORD**’s Attacks characteristic.\n* While this WARLORD** is within 3″ of 6 or more enemy models, add 1 to this WARLORD**’s Attacks characteristic.\n* While this WARLORD** is within 3″ of 11 or more enemy models, add 1 to this WARLORD**’s Attacks characteristic."
       },
       "Warlord Trait§Heaving Mass": {
-        "text": "Add 2 to this **WARLORD**’s Wounds characteristic.",
-        "stats": {
-          "Discipline": {
-            "value": "Nurgle Warlord Traits 1"
-          }
-        }
+        "text": "Add 2 to this **WARLORD**’s Wounds characteristic."
       },
       "Warlord Trait§Immense Power": {
-        "text": "Each time this **WARLORD** makes a melee attack, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Khorne Warlord Traits 5"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Incorporeal Form": {
-        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Tzeentch Warlord Traits 2"
-          }
-        }
+        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Lorekeeper Of Tzeentch": {
-        "text": "Each time this **WARLORD** successfully [manifests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) a psychic power from the [Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**, add 6″ to the range of that psychic power. If that psychic power specifies more than one range, only add 6″ to the first range specified.",
-        "stats": {
-          "Discipline": {
-            "value": "Tzeentch Warlord Traits 5"
-          }
-        }
+        "text": "Each time this **WARLORD** successfully [manifests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) a psychic power from the [Pandaemoniac discipline](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Pandaemoniac-Discipline)**, add 6″ to the range of that psychic power. If that psychic power specifies more than one range, only add 6″ to the first range specified."
       },
       "Warlord Trait§Overflowing Fecundity": {
-        "text": "Each time an attack is made against this **WARLORD**, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack automatically fails, irrespective of any abilities that the weapon or the model making the attack may have.",
-        "stats": {
-          "Discipline": {
-            "value": "Nurgle Warlord Traits 5"
-          }
-        }
+        "text": "Each time an attack is made against this **WARLORD**, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack automatically fails, irrespective of any abilities that the weapon or the model making the attack may have."
       },
       "Warlord Trait§Pestilent Miasma": {
-        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), roll one D6 for each enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this **WARLORD**:\n\n* On a 2-5, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* On a 6, that enemy unit suffers D3 mortal wounds.",
-        "stats": {
-          "Discipline": {
-            "value": "Nurgle Warlord Traits 6"
-          }
-        }
+        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), roll one D6 for each enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this **WARLORD**:\n\n* On a 2-5, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* On a 6, that enemy unit suffers D3 mortal wounds."
       },
       "Warlord Trait§Plague Fly Hive (aura)": {
-        "text": "While an enemy unit is within 6″ of this **WARLORD**:\n\n* Each time a model in that unit makes a melee attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* That unit cannot start to [perform any actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions).",
-        "stats": {
-          "Discipline": {
-            "value": "Nurgle Warlord Traits 4"
-          }
-        }
+        "text": "While an enemy unit is within 6″ of this **WARLORD**:\n\n* Each time a model in that unit makes a melee attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* That unit cannot start to [perform any actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions)."
       },
       "Warlord Trait§Quicksilver Duellist": {
-        "text": "Each time this **WARLORD** makes a melee attack:\n\n* You can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* If that attack is made against an enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) model, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Slaanesh Warlord Traits 4"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack:\n\n* You can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* If that attack is made against an enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) model, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Rage Incarnate": {
-        "text": "* Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* Each time a friendly **LEGIONES DAEMONICA** KHORNE** CORE** unit [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) against an enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, add 1 to the charge roll made for that unit.",
-        "stats": {
-          "Discipline": {
-            "value": "Khorne Warlord Traits 6"
-          }
-        }
+        "text": "* Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* Each time a friendly **LEGIONES DAEMONICA** KHORNE** CORE** unit [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) against an enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this WARLORD**, add 1 to the charge roll made for that unit."
       },
       "Warlord Trait§Savage Hedonist": {
-        "text": "At the start of each battle round, add 1 to this **WARLORD**’s Strength characteristic (to a maximum of +3).",
-        "stats": {
-          "Discipline": {
-            "value": "Slaanesh Warlord Traits 5"
-          }
-        }
+        "text": "At the start of each battle round, add 1 to this **WARLORD**’s Strength characteristic (to a maximum of +3)."
       },
       "Warlord Trait§The Murderdance": {
-        "text": "Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, then until that fight is resolved, add D3 to its Attacks characteristic.",
-        "stats": {
-          "Discipline": {
-            "value": "Slaanesh Warlord Traits 3"
-          }
-        }
+        "text": "Each time this **WARLORD** fights, if it made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, then until that fight is resolved, add D3 to its Attacks characteristic."
       },
       "Warlord Trait§Tyrant Of The Warp": {
-        "text": "* This **WARLORD** never suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).\n* Each time this WARLORD** would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Tzeentch Warlord Traits 6"
-          }
-        }
+        "text": "* This **WARLORD** never suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).\n* Each time this WARLORD** would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds), roll one D6: on a 5+, that wound is not lost."
       },
       "Warlord Trait§Virulent Touch": {
-        "text": "Each time this **WARLORD** makes a melee attack (excluding attacks made against TITANIC** units), if a hit is scored, that attack automatically wounds the target.",
-        "stats": {
-          "Discipline": {
-            "value": "Nurgle Warlord Traits 3"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a melee attack (excluding attacks made against TITANIC** units), if a hit is scored, that attack automatically wounds the target."
       },
       "Warlord Trait§Warp Mists": {
-        "text": "At the end of each battle round, if this **WARLORD** is on the battlefield, you can retain up to 2 unspent [Warp Storm points](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warp-Storm-Effects).",
-        "stats": {
-          "Discipline": {
-            "value": "Slaanesh Warlord Traits 1"
-          }
-        }
+        "text": "At the end of each battle round, if this **WARLORD** is on the battlefield, you can retain up to 2 unspent [Warp Storm points](https://wahapedia.ru/wh40k9ed/factions/chaos-daemons/#Warp-Storm-Effects)."
       },
       "Warlord Trait§Warp Tether": {
-        "text": "* This **WARLORD** has the **WARP LOCUS** keyword.\n* This WARLORD** has the following ability:Warp Tether (Aura)**:** While a friendly **LEGIONES DAEMONICA** TZEENTCH** unit is within 12″ of this model, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for that unit, you can re-roll the result.",
-        "stats": {
-          "Discipline": {
-            "value": "Tzeentch Warlord Traits 4"
-          }
-        }
+        "text": "* This **WARLORD** has the **WARP LOCUS** keyword.\n* This WARLORD** has the following ability:Warp Tether (Aura)**:** While a friendly **LEGIONES DAEMONICA** TZEENTCH** unit is within 12″ of this model, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for that unit, you can re-roll the result."
       },
       "Warprot Discipline§Fleshy Abundance": {
         "text": "**Blessing:** *Fleshy Abundance* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly **LEGIONES DAEMONICA** NURGLE** CORE** unit within 18″ of and visible to this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), add 1 to the Toughness characteristic of models in that unit.",
@@ -14933,7 +15610,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -14995,7 +15673,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15035,7 +15714,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15055,7 +15735,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15074,7 +15755,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15090,7 +15772,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -15133,7 +15816,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15150,10 +15834,12 @@
             "value": -4
           },
           "D": {
-            "value": "3D3"
+            "value": "3D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault 1"
@@ -15250,7 +15936,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15266,7 +15953,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -15409,7 +16097,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15449,7 +16138,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15504,7 +16194,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -15546,7 +16237,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15566,7 +16258,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15585,7 +16278,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault D6+3"
@@ -15604,7 +16298,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15644,7 +16339,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15663,7 +16359,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15721,7 +16418,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15799,10 +16497,12 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15821,7 +16521,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15860,7 +16561,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault 6"
@@ -15957,7 +16659,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -15977,7 +16680,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16077,7 +16781,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16093,7 +16798,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 4
@@ -16116,7 +16822,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault 2D6"
@@ -16136,7 +16843,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault D6+3"
@@ -16155,7 +16863,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16215,7 +16924,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16275,7 +16985,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16294,7 +17005,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16355,7 +17067,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16375,7 +17088,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Assault 6"
@@ -16411,10 +17125,12 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16454,7 +17170,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16473,7 +17190,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16512,7 +17230,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16532,7 +17251,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16552,7 +17272,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16572,7 +17293,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16591,7 +17313,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16630,7 +17353,8 @@
             "value": -3
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
             "value": 2
@@ -16652,7 +17376,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16691,7 +17416,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16711,7 +17437,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16751,7 +17478,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Pistol 1"
@@ -16770,7 +17498,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16810,7 +17539,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16849,7 +17579,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16869,7 +17600,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16888,7 +17620,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16905,10 +17638,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -16925,10 +17660,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"

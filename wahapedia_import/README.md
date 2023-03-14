@@ -2,7 +2,7 @@
 
 ## Rough steps
 
-Install `mysql 5.7`, if not already installed, make a database called `wahapedia`
+Install `mysql 8`, if not already installed, make a database called `wahapedia`
 
 Create `config.py` based on `example.config.py` and populate with your credentials
 
@@ -10,7 +10,7 @@ Install `python 3` and run `python3 updateInputData.py`
 
 Run `python3 ingestion.py` to populate your local db
 
-Install node, then navigate to `cd exportion` and run `npm i` to install node modules
+Install node ~15, then navigate to `cd exportion` and run `npm i` to install node modules
 
 From `exportion/`, run `npm start` to start the server, then navigate to [http://localhost:3000/](http://localhost:3000/)
 

@@ -1,11 +1,11 @@
 {
   "name": "Rogue Traders",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -15,7 +15,21 @@
     }
   ],
   "manifest": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Executioner Shell",
+            "Stratagem§Digital Laser Regalia",
+            "Stratagem§Recover Archeotech At Any Cost",
+            "Stratagem§Combat Resuscitation",
+            "Stratagem§One With The Electro Motive Force",
+            "Stratagem§Logis-interrogator Scanner",
+            "Stratagem§Personal Teleportarium Chamber"
+          ]
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§Acts of Faith": {
         "text": "If your army includes any models with this ability, you will start the battle with 3 Faith Points, plus 1 additional Faith Point for every 10 models with this ability in your army (rounding down). These can be spent to attempt the Acts of Faith listed below. Each can only be attempted once per battle round, and you must spend one Faith Point each time you do so (if you have no Faith Points remaining, you cannot attempt an Act of Faith). To attempt an Act of Faith, select a unit in your army that has the Acts of Faith ability and then choose the Act of Faith you wish to attempt. Then make a Test of Faith for the unit by rolling a D6; if the result is less than that Act of Faith’s devotion value, or is an unmodified roll of 1, the test fails and nothing happens. Otherwise the test is successful and the Act of Faith takes effect.\n\n\n\n**Hand of the Emperor**\n\n*Devotion value 4\n\nUse this Act of Faith at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). If successful, add 3″ to the selected unit’s Move characteristic until the end of that phase.\n\n\n\nSpirit of the Martyr**\n\nDevotion value 3*\n\nUse this Act of Faith at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). If successful, one model in the selected unit regains D3 lost wounds, or, if there are no wounded models and any models in the unit have been slain, you can return one slain model to the unit with 1 wound remaining (this model is set up in [unit coherency](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Unit-Coherency) and cannot be set up within 1″ of any enemy models – if it is not possible to place this model, it is not returned to the unit).\n\n\n\nAegis of the Emperor**\n\nDevotion value 3*\n\nUse this Act of Faith at the start of your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). If successful, then until the end of that phase, roll a D6 each time the selected unit suffers a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). On a 4+ that mortal wound is ignored.\n\n\n\nDivine Guidance**\n\nDevotion value 4*\n\nUse this Act of Faith at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). If successful, add 1 to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made with this unit’s ranged weapons until the end of the phase.\n\n\n\nThe Passion**\n\nDevotion value 5*\n\nUse this Act of Faith at the start of your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). If successful, the selected unit can be chosen to Fight with twice in that phase, instead of only once.\n\n\n\nLight of the Emperor**\n\nDevotion value 3*\n\nUse this Act of Faith at the start of the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE). If successful, the selected unit automatically passes [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) that phase."
@@ -206,7 +220,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -283,7 +298,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -357,7 +373,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -431,7 +448,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -510,7 +528,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -585,7 +604,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -661,7 +681,8 @@
             "value": 7
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -776,7 +797,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -850,7 +872,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -921,7 +944,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -994,7 +1018,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1069,7 +1094,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1144,7 +1170,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1218,7 +1245,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1291,7 +1319,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1364,7 +1393,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1420,7 +1450,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -1441,7 +1472,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         }
       },
@@ -1478,7 +1510,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -1515,7 +1548,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -1552,7 +1586,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         }
       },
@@ -1589,11 +1624,124 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         }
       },
       "Roster§Army": {},
+      "Stratagem§Combat Resuscitation": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) after **SANISTASIA MINST** has attempted to heal a unit. She can immediately attempt to heal a unit again (this can be the same unit or a different **ELUCIDIAN STARSTRIDERS** INFANTRY** unit from your army).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
+      "Stratagem§Digital Laser Regalia": {
+        "text": "Use this Stratagem immediately after fighting with **ELUCIA VHANE**. Resolve one additional attack against an enemy unit within 1″ of her. If the attack hits, the enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) instead of the normal damage.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
+      "Stratagem§Executioner Shell": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) before [Voidmaster Nitsch](https://wahapedia.ru/wh40k9ed/factions/rogue-traders/Nitsch-s-Squad) attacks with his artificer shotgun. Only make a single [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for this weapon this phase, but add 3 to the roll. If the target is hit, it suffers 1 mortal wound instead of the normal damage.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
+      "Stratagem§Logis-interrogator Scanner": {
+        "text": "Use this Stratagem after both sides have deployed, if you are playing a mission that uses mysterious objectives (this is a rule used in some Theatres of War). Identify one mysterious objective anywhere on the battlefield. Alternatively, use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) when a **LARSEN VAN** DER** GRAUSS** model from your army is selected to shoot. Until the end of the phase, each time that model makes an attack, you can ignore any or all modifiers to the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
+      "Stratagem§One With The Electro Motive Force": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) before moving **LARSEN VAN** DER** GRAUSS**. Instead of moving him normally, remove him from the battlefield; at the end of that Movement phase, set him up anywhere on the battlefield that is more than 9″ from any enemy models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
+      "Stratagem§Personal Teleportarium Chamber": {
+        "text": "Use this Stratagem during deployment. Set up all **ELUCIDIAN STARSTRIDERS** units from your army in a teleportarium chamber instead of placing them on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) they can teleport into battle - set them up anywhere on the battlefield that is more than 9″ from any enemy models.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
+      "Stratagem§Recover Archeotech At Any Cost": {
+        "text": "Use this Stratagem at the end of your turn if **LARSEN VAN** DER** GRAUSS** is within 3″ of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers). Until the start of your next turn, add 1 to [saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for him and increase his Attacks characteristic by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Rogue Traders Strat"
+          ]
+        }
+      },
       "Troops§Nitsch’s Squad": {
         "stats": {
           "Power Level": {
@@ -1671,7 +1819,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -1754,7 +1903,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -1770,7 +1920,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -1833,7 +1984,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -1852,10 +2004,12 @@
             "value": 0
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -1910,10 +2064,12 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -1952,7 +2108,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -2047,7 +2204,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -2066,7 +2224,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -2124,7 +2283,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -2140,10 +2300,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -2240,7 +2402,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"

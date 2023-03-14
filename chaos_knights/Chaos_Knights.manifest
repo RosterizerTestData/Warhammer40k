@@ -1,11 +1,11 @@
 {
   "name": "Chaos Knights",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -59,7 +59,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitDread Household": {
             "evals": [
               {
                 "paths": [
@@ -77,6 +77,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -86,9 +87,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Dread Household",
                     "value"
@@ -101,6 +99,22 @@
                   "Dread Household",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Dread Household",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -120,6 +134,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -130,6 +158,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -155,6 +191,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -165,6 +215,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -190,6 +248,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -200,6 +272,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -225,6 +305,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -235,6 +329,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -260,6 +362,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -270,6 +386,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -295,6 +419,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -305,6 +443,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -330,6 +476,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -340,6 +500,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -365,6 +533,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -375,6 +557,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -400,6 +590,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -412,6 +616,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -422,17 +634,99 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Break Their Lines!",
+            "Stratagem§Hungry For Combat",
+            "Stratagem§Pack Hunters",
+            "Stratagem§Skies Of Fire",
+            "Stratagem§Murderbliss",
+            "Stratagem§Tormented Wrath",
+            "Stratagem§Crushed Like Vermin",
+            "Stratagem§Vengeful Outcasts",
+            "Stratagem§Trail Of Destruction",
+            "Stratagem§Unyielding Rage",
+            "Stratagem§Titanic Duel",
+            "Stratagem§Beseech The Dark Gods",
+            "Stratagem§Abominable Constitution",
+            "Stratagem§Doom And Despair",
+            "Stratagem§Death Grip",
+            "Stratagem§Spiteful Demise",
+            "Stratagem§Bind The Souls Of The Slain",
+            "Stratagem§Hunting Hounds",
+            "Stratagem§A Long Leash",
+            "Stratagem§Unleash The Hounds",
+            "Stratagem§Wrathsurge",
+            "Stratagem§Harrying Hunter",
+            "Stratagem§Reap And Rend",
+            "Stratagem§Diabolic Bulwark",
+            "Stratagem§Infernal Aegis",
+            "Stratagem§Macabre Projectiles",
+            "Stratagem§Ravenous Pterrorshades",
+            "Stratagem§Sorcerous Ammunition",
+            "Stratagem§Warping Presence",
+            "Stratagem§Trample Them",
+            "Stratagem§Fury Of Surtr’s Wake",
+            "Stratagem§Interception Array",
+            "Stratagem§Encircling Hounds",
+            "Stratagem§Knights Of Shade"
+          ]
+        }
+      },
       "Relics of Tyranny": {
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Dread Household": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Dreadblade": {
+                "order": 1
+              },
+              "House Herpetrax": {
+                "order": 2
+              },
+              "House Khymere": {
+                "order": 3
+              },
+              "House Lucaris": {
+                "order": 4
+              },
+              "House Khomentis": {
+                "order": 5
+              },
+              "House Vextrix": {
+                "order": 6
+              },
+              "House Korvax": {
+                "order": 7
+              },
+              "Iconoclast Household": {
+                "order": 8
+              },
+              "Infernal Household": {
+                "order": 9
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceDread HouseholdKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Dread Household",
                     "value"
@@ -440,7 +734,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -450,7 +745,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Dread Household>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -469,7 +764,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Dread Household>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -482,12 +777,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Dread Household",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityDread Household": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Dread Household",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Dread Household",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -507,8 +843,7 @@
             "statType": "term",
             "value": "&lt;DREAD HOUSEHOLD&gt;",
             "text": "While a friendly **{v}** WAR** DOG-CLASS** model is within 9″ of this model, that friendly model is eligble to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -528,8 +863,7 @@
             "statType": "term",
             "value": "&lt;DREAD HOUSEHOLD&gt;",
             "text": "While a friendly **{v}** WAR** DOG-CLASS** model is within 9″ of this model, each time that friendly model makes a melee attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -558,8 +892,7 @@
             "statType": "term",
             "value": "&lt;DREAD HOUSEHOLD&gt;",
             "text": "Whilst this model is within 6″ of any friendly **{v}** TITANIC** models, it can [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters). This model is eligible to perform a Heroic Intervention if it is within 6″ horizontally and 5″ vertically of any enemy unit. Each time this model makes a Heroic Intervention move, it can move up to 6″ instead of 3″. All other rules for Heroic Interventions still apply.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -573,8 +906,7 @@
             "statType": "term",
             "value": "&lt;DREAD HOUSEHOLD&gt;",
             "text": "While a friendly **{v}** WAR** DOG-CLASS** model is within 9″ of this model, each time that friendly model makes a ranged attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -625,7 +957,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -840,7 +1173,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Acastus autocannon",
@@ -1366,7 +1700,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1581,7 +1916,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1797,7 +2133,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2011,7 +2348,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2224,7 +2562,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Lightning cannon",
@@ -2751,7 +3090,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Graviton crusher",
@@ -3278,7 +3618,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3503,7 +3844,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Desecrator laser destructor",
@@ -3991,7 +4333,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Daemonbreath thermal cannon",
@@ -4759,7 +5102,8 @@
             "value": 3
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -4976,7 +5320,8 @@
             "value": 2
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Brimstone volcano lance",
@@ -6166,7 +6511,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Avenger chaincannon",
@@ -6525,7 +6871,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Daemonbreath meltagun",
@@ -6813,7 +7160,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Daemonbreath spear",
@@ -7172,7 +7520,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Havoc multi-launcher",
@@ -7531,7 +7880,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Rad cleanser",
@@ -7954,7 +8304,8 @@
             "value": 3
           },
           "Base": {
-            "value": "100mm"
+            "value": "100mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Avenger chaincannon",
@@ -8345,7 +8696,8 @@
             "value": 8
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8428,7 +8780,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -8457,7 +8810,8 @@
             "value": -5
           },
           "D": {
-            "value": "D3+6"
+            "value": "D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 16
@@ -8505,6 +8859,627 @@
         "text": "**HOUSE** KHYMERE** model only.\n\n* The bearer has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against melee attacks. \n* Each time a melee attack is made against the bearer, on an unmodified [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) of 6, the attacking model’s unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) after all of the unit’s attacks have been resolved (to a maximum of 6 mortal wounds per attacking unit)."
       },
       "Roster§Army": {},
+      "Stratagem§A Long Leash": {
+        "text": "Use this Stratagem in the [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **&lt;DREAD HOUSEHOLD&gt;** KNIGHT** DESPOILER**, **KNIGHT RAMPAGER** or **KNIGHT DESECRATOR** model from your army. Now select one friendly **&lt;DREAD HOUSEHOLD&gt;** WAR** DOG-CLASS** model from your army. Until the end of the turn, that WAR** DOG-CLASS** model is always considered to be within range of the [Aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) that the first model you selected has: Dread Dominion**; Frenzied Rampage**; Taskmaster**.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Abominable Constitution": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **CHAOS** KNIGHTS** NURGLE** model from your army. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use. If that model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Arch-tyrant": {
+        "text": "Use this Stratagem after nominating a **CHAOS KNIGHTS** CHARACTER** model to be your [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord). You can generate one additional [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) for them. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Beseech The Dark Gods": {
+        "text": "Use this Stratagem when a **CHAOS** KNIGHTS** PANTHEON** UNDIVIDED** model from your army is destroyed, but does not explode. Roll one D6 at the end of the phase: on a 4+, set that model back up on the battlefield with 3 wounds remaining, as close as possible to where they were destroyed and not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy models. If that model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; otherwise, it costs 2CP. This Stratagem can only be used once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Bind The Souls Of The Slain": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when an **INFERNAL HOUSEHOLD** model from your army is selected to fight. Until the end of the phase, each time that model makes a melee attack that destroys an enemy model, roll one D6: on a 4+, the INFERNAL** HOUSEHOLD** model regains 1 lost wound after it has resolved all of its attacks (to a maximum of 6 regained wounds). If that model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; otherwise, it costs 2CR",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Break Their Lines!": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an **ICONOCLAST HOUSEHOLD** model from your army is selected to fight. Until the end of the phase, each time that model makes an attack, if that model made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Chosen By The Gods": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **CHAOS KNIGHTS** model from your army that does not have a [Favour of the Dark Gods](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Favour-of-the-Dark-Gods). That model gains one of the following keywords: KHORNE**, TZEENTCH**, NURGLE**, SLAANESH**, PANTHEON** UNDIVIDED**. A KHORNE KNIGHT ABOMINANT** model loses the [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) keyword and cannot [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) psychic powers etc., its Weapon Skill characteristic is improved by 1 and its Attacks characteristic is increased by 1. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times). You cannot use this Stratagem on the same model more than once, and you cannot use it to add a keyword to a model in a [Crusade force](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Crusade-Forces).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Corrupted Heirlooms": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the CHAOS** KNIGHTS** keyword. Select one **CHAOS KNIGHTS** model from your army. That model can have one [Relic of Tyranny](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Relics-of-Tyranny), even if they are not a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) model (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Crushed Like Vermin": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **TITANIC CHAOS** KNIGHTS** model from your army is selected to fight. Until the end of the phase, each time that model makes a melee attack with its titanic feet:\n\n* Subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* If that attack successfully hits the target, unless the target of that attack is a MONSTER** or a VEHICLE** unit, the target suffers 2 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and the attack sequence ends.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Death Grip": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an attack made with a warpstrike claw or slaughterclaw (or a Relic that replaces such a weapon) by a **CHAOS KNIGHTS** model from your army is allocated to an enemy model. Before any [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is taken against that attack, both players [roll off](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Roll-offs) (if the Strength characteristic of this CHAOS** KNIGHTS** model is greater than that of the model the attack has been allocated to, add 1 to your result). If you win the roll off, [invulnerable saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be taken against that attack; otherwise, the Damage characteristic of that attack is 0.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Diabolic Bulwark": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **CHAOS KNIGHTS** model from your army is selected as the target of a ranged attack. Until the end of the phase, that model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. If that model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Doom And Despair": {
+        "text": "Use this Stratagem at the start of the third, fourth or fifth battle round, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is on the battlefield. Select one **Harbinger ability** from any previous battle round. While your WARLORD** is on the battlefield, that ability is active for every **CHAOS KNIGHTS** model from your army. You can only use this Stratagem if every unit from your army has the CHAOS** KNIGHTS** keyword (excluding units with the UNALIGNED** or [AGENT** OF** CHAOS**](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Fallen-Hero) keywords). This Stratagem can only be used once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Encircling Hounds": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **HOUSE KHOMENTIS** WAR** DOG-CLASS** unit from your army that is in [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves); that unit can arrive from Strategic Reserves during the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of this phase as if the battle round was one higher than it currently is, regardless of any mission rules.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Fury Of Surtr’s Wake": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **HOUSE KHYMERE** model from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Select one enemy unit within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of your model and roll four D6 (if this model is TITANIC**, roll six D6 instead). For each dice result that equals or exceeds that enemy unit’s Toughness characteristic, it suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (for each unmodified roll of a 6, that enemy unit instead suffers 2 mortal wounds). If this model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Harrying Hunter": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) when a **WAR DOG-CLASS** model from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). That model is still eligible to shoot and charge this turn even though it Fell Back.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Hungry For Combat": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one enemy unit from your opponent’s army. Until the end of the phase, each time a **WAR DOG-CLASS** model from your army makes a melee attack against that enemy unit, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Hunting Hounds": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select up to two **&lt;DREAD HOUSEHOLD&gt;** WAR** DOG-CLASS** models from your army that are more than 6″ away from any enemy models and within 6″ of a battlefield edge. If the mission you are playing is using the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rules, place those models into Strategic Reserves - those models cannot arrive from Strategic Reserves in the same turn it is placed into Strategic Reserves.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Infernal Aegis": {
+        "text": "Use this Stratagem in your opponent’s [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **TYRANT-CLASS** model from your army. Until the end of the turn, that model has the following ability: ‘Infernal Aegis (Aura)**:** While a friendly **&lt;DREAD HOUSEHOLD&gt;** WAR** DOG-CLASS** model is within 6″ of this model, that WAR** DOG-CLASS** model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged weapons.’",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Interception Array": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **HOUSE VEXTRIX** model from your army is selected to shoot. Until the end of the phase, each time that model makes a ranged attack, you can ignore any or all [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and Ballistic Skill [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Knights Of Shade": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) or at the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select up to two **HOUSE KORVAX** WAR** DOG-CLASS** models or one **HOUSE KORVAX** TITANIC** model from your army. Until the end of the phase, the selected model(s) can move horizontally through models and [terrain features](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-Features) as if they were not there.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Charge"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Macabre Projectiles": {
+        "text": "Use this Stratagem at the end of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **CHAOS KNIGHTS** model from your army equipped with a warpstrike claw (or a Relic that replaces a warpstrike claw). If a VEHICLE** or MONSTER** model was destroyed within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of the selected CHAOS** KNIGHTS** model during that phase, you can now select one enemy unit within 9″ of and visible to that CHAOS** KNIGHTS** model. Roll one D6, subtracting 1 from the result if the enemy unit you selected is a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) with a Wounds characteristic of 9 or less: on a 3-5, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6, that enemy unit suffers 3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Murderbliss": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CHAOS** KNIGHTS** SLAANESH** model from your army is selected to fight. If that model is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of one or more enemy units that contain 6 or more models, until the end of the phase, add 1 to this models Attacks characteristic (if one or more of those enemy units contains 11 or more models, until the end of the phase, add 2 to this models Attacks characteristic instead).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Pack Hunters": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of 2 or more **WAR DOG-CLASS** models from your army. Until the end of the phase, add 1 to the Attacks characteristic of each WAR** DOG-CLASS** model from your army that started the phase within Engagement Range of that enemy unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Ravenous Pterrorshades": {
+        "text": "Use this Stratagem in the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE). Select one enemy unit within **Dread range** of a PTERRORSHADES** model from your army. That enemy unit must take a **Dread test**. If that test is failed, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) for each point by which their Dread test was failed (to a maximum of 6 mortal wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Morale"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Reap And Rend": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when a **CHAOS KNIGHTS** model from your army that is equipped with a reaper chainsword or reaper chaintalon (or a Relic that replaces such a weapon) is selected to fight. Until the end of the phase, each time that model makes an attack, you can never re-roll that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), but if that attack is made using the sweep profile of a reaper chainsword or reaper chaintalon (or a Relic that replaces such a weapon), make 1 additional hit roll.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Skies Of Fire": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **WAR DOG-CLASS** model from your army is selected to shoot. Until the end of the phase, each time that model makes an attack against an [AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) unit, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Sorcerous Ammunition": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), before making the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for an attack made by a **CHAOS** KNIGHTS** TZEENTCH** model from your army. Do not make a wound roll for that attack: it automatically wounds the target and, if this wound is allocated to a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit, that unit must take a **Dread test**; if that test is failed, the target suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp) after this CHAOS** KNIGHTS** model’s attacks have been resolved.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Spiteful Demise": {
+        "text": "Use this Stratagem when a **CHAOS KNIGHTS** model from your army is destroyed. Do not roll to see if that model explodes: it does so automatically (if that model is a TYRANT-CLASS** model, roll one D6: on a 4+, the range of that explosion is 3D6\"). If that model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; if that model is an ABHORRENT-CLASS** model, this Stratagem costs 2CP; otherwise, it costs 3CP. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": "1-3",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Titanic Duel": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when a **CHAOS KNIGHTS** model from your army is selected to fight. Select one enemy TITANIC** unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of that model. You and your opponent secretly choose a number from 1 to 3 on a D6 (we suggest turning a D6 to show the number but concealing this behind your hand), then reveal your choice simultaneously; if they differ, then until the end of that phase, add the number you chose to the Attacks characteristic of your CHAOS** KNIGHTS** model but melee attacks made by that model can only target TITANIC** units.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Tormented Wrath": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit from your opponent’s army. Until the end of the phase, each time a **WAR DOG-CLASS** model from your army makes a ranged attack against that enemy unit, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Trail Of Destruction": {
+        "text": "Use the Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **CHAOS KNIGHTS** model from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a CHAOS** KNIGHTS** model from your army is selected to fight. Until the end of the phase, each time that model makes an attack, if the target of that attack is within range of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers), re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Trample Them": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when you select a **HOUSE LUCARIS** TITANIC** model from your army to make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) or [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). After this model has moved, select one enemy unit it moved across (excluding [AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) units) and roll one D6. Add 1 to the result if that enemy unit contains between 6-10 models and add 2 to the result if that enemy unit contains 11 or more models. On a 3-6, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 7+, that unit suffers D6 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Tyrannical Court": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the CHAOS** KNIGHTS** keyword. Select one **CHAOS KNIGHTS** model from your army. That model gains the [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) keyword and you must determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) for it (this must be a Warlord Trait they could have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Unleash The Hounds": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), after a **&lt;DREAD HOUSEHOLD&gt;** WAR** DOG-CLASS** model from your army finishes a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit). Until the end of the phase, each time a friendly &lt;DREAD** HOUSEHOLD&gt;** WAR** DOG-CLASS** model declares a charge against an enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this model, you can re-roll that [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Unyielding Rage": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CHAOS KNIGHTS** model from your army is selected as the target of an attack. Until the end of the phase, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack (to a minimum of 1). This is not cumulative with any other rules that reduce the Damage characteristic of an attack (e.g. the [Hellforged Construction](https://wahapedia.ru/wh40k9ed/factions/chaos-knights/#Hellforged-Construction) Fell Bond). If that model is a **WAR DOG-CLASS** model, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Vengeful Outcasts": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **CHAOS KNIGHTS** model from your army is selected to fight. Until the end of the phase, each time that model makes an attack against an [IMPERIAL** KNIGHTS**](https://wahapedia.ru/wh40k9ed/factions/imperial-knights) model, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Warping Presence": {
+        "text": "Use this Stratagem at the end of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one **HOUSE HERPETRAX** model from your army. Roll one D6 for each enemy unit within 6″ of that model: on a 2-5, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6, that enemy unit suffers D3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
+      "Stratagem§Wrathsurge": {
+        "text": "Use this Stratagem in your opponent’s [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) taken for a **PSYKER** unit is failed whilst that unit is within 18″ of a CHAOS** KNIGHTS** KHORNE** model from your army. That PSYKER** unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Chaos Knights Strat"
+          ]
+        }
+      },
       "Wargear§Atrapos lascutter": {
         "assets": {
           "traits": [
@@ -8617,100 +9592,40 @@
         }
       },
       "Warlord Trait§Aura Of Terror (dreaded)": {
-        "text": "While an enemy unit is within **Dread range** of this WARLORD**, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) or **Dread test** is taken for that unit, your opponent must roll one additional D6 and discard the lowest result.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "While an enemy unit is within **Dread range** of this WARLORD**, each time a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) or **Dread test** is taken for that unit, your opponent must roll one additional D6 and discard the lowest result."
       },
       "Warlord Trait§Bow To None": {
-        "text": "* This [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) can ignore any or all [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics) to their characteristics profile (the only exceptions are characteristics changes incurred as a result of Damage suffered, as shown on this WARLORD**’s [datasheet](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Datasheets-1)).\n* Each time this WARLORD** makes an attack, you can ignore any or all modifiers to its [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) or damage rolls.\n* Each time this WARLORD** [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), you can ignore any or all modifiers to its [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "* This [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) can ignore any or all [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics) to their characteristics profile (the only exceptions are characteristics changes incurred as a result of Damage suffered, as shown on this WARLORD**’s [datasheet](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Datasheets-1)).\n* Each time this WARLORD** makes an attack, you can ignore any or all modifiers to its [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) or damage rolls.\n* Each time this WARLORD** [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), you can ignore any or all modifiers to its [Advance rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit)."
       },
       "Warlord Trait§Dread Hunter": {
-        "text": "Once per battle, at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) can make a killing strike. If it does so, select one ranged weapon this WARLORD** is equipped with. Until the end of the phase, each time an attack is made with that weapon, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) and you add 1 to the Damage characteristic of that attack.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Once per battle, at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) can make a killing strike. If it does so, select one ranged weapon this WARLORD** is equipped with. Until the end of the phase, each time an attack is made with that weapon, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) and you add 1 to the Damage characteristic of that attack."
       },
       "Warlord Trait§Eager For The Kill": {
-        "text": "* Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* While this WARLORD** is within your opponent’s deployment zone, add 1 to its Attacks characteristic.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "* Add 1 to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) and [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for this **WARLORD**.\n* While this WARLORD** is within your opponent’s deployment zone, add 1 to its Attacks characteristic."
       },
       "Warlord Trait§Favour Of The Dark Mechanicum": {
-        "text": "* If this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is a **WAR DOG-CLASS** model, add 1 to its Wounds characteristic.\n* If this WARLORD** is a TITANIC** model, add 2 to its Wounds characteristic.\n* At the start of each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this WARLORD** regains D3 lost wounds.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "* If this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is a **WAR DOG-CLASS** model, add 1 to its Wounds characteristic.\n* If this WARLORD** is a TITANIC** model, add 2 to its Wounds characteristic.\n* At the start of each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this WARLORD** regains D3 lost wounds."
       },
       "Warlord Trait§Harbinger Of Scrapcode": {
-        "text": "In the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), select one enemy **VEHICLE** unit within 18″ of this WARLORD**. That unit must take a **Dread test**. If the test is failed:\n\n* That unit suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* Until the start of the next Morale phase, models in that unit whose characteristics can change as they suffer damage are considered to have half the number of wounds remaining for the purposes of determining what those characteristics are (models in that unit whose characteristics do not change as they suffer damage instead reduce their Ballistic Skill and Weapon Skill characteristics by 1).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "In the [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), select one enemy **VEHICLE** unit within 18″ of this WARLORD**. That unit must take a **Dread test**. If the test is failed:\n\n* That unit suffers 3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).\n* Until the start of the next Morale phase, models in that unit whose characteristics can change as they suffer damage are considered to have half the number of wounds remaining for the purposes of determining what those characteristics are (models in that unit whose characteristics do not change as they suffer damage instead reduce their Ballistic Skill and Weapon Skill characteristics by 1)."
       },
       "Warlord Trait§Infernal Quest": {
-        "text": "This **WARLORD** has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "This **WARLORD** has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability."
       },
       "Warlord Trait§Knight Diabolus": {
-        "text": "* Add 1 to this **WARLORD**’s Attacks characteristic.\n* Each time this WARLORD** makes a melee attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "* Add 1 to this **WARLORD**’s Attacks characteristic.\n* Each time this WARLORD** makes a melee attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1."
       },
       "Warlord Trait§Lord Of Dread": {
-        "text": "* Add 3″ to the range of this [**WARLORD**’s](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\").\n* Add 3″ to the range of this WARLORD**’s **Dreaded abilities**.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "* Add 3″ to the range of this [**WARLORD**’s](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\").\n* Add 3″ to the range of this WARLORD**’s **Dreaded abilities**."
       },
       "Warlord Trait§Maddened Cries (aura)": {
-        "text": "While an enemy unit is within 9″ of this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), at the start of each [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), it must take a **Dread test**. If that test is failed, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "While an enemy unit is within 9″ of this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), at the start of each [Morale phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MORALE-PHASE), it must take a **Dread test**. If that test is failed, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
       },
       "Warlord Trait§Strike First, Strike Often": {
-        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase."
       },
       "Warlord Trait§Warp-haunted Hull": {
-        "text": "* Once per turn, this **WARLORD** can attempt to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) as if it were a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). If this unit is a PSYKER**, then in each enemy [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can instead attempt to Deny the Witch one additional time.\n* Each time this WARLORD** loses a wound in the Psychic phase, roll one D6: on a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "* Once per turn, this **WARLORD** can attempt to [Deny the Witch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) as if it were a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). If this unit is a PSYKER**, then in each enemy [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can instead attempt to Deny the Witch one additional time.\n* Each time this WARLORD** loses a wound in the Psychic phase, roll one D6: on a 5+, that wound is not lost."
       },
       "Warp Storm Discipline§Coruscating Hate": {
         "text": "**Witchfire:** *Coruscating Hate* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), the closest enemy unit within 18″ of and visible to this PSYKER** suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). Then roll one D6: on a 2-3, the closest other enemy unit within 6″ of and visible to that enemy unit suffers 1 mortal wound; on a 4+, it suffers D3 mortal wounds.",
@@ -8785,7 +9700,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -8908,7 +9824,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8925,7 +9842,8 @@
             "value": -5
           },
           "D": {
-            "value": "D6+8"
+            "value": "D6+8",
+            "statType": "term"
           },
           "S": {
             "value": 16
@@ -8967,7 +9885,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -8989,7 +9908,8 @@
             "value": 8
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9027,7 +9947,8 @@
             "value": 6
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9044,7 +9965,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9067,7 +9989,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9087,7 +10010,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6+2"
+            "value": "D6+2",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9130,7 +10054,8 @@
             "value": -5
           },
           "D": {
-            "value": "D3+6"
+            "value": "D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -9216,7 +10141,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9253,7 +10179,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -9564,7 +10491,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9589,7 +10517,8 @@
             "value": 6
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9625,10 +10554,12 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9665,10 +10596,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9707,7 +10640,8 @@
             "value": 8
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9786,7 +10720,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9802,7 +10737,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -9908,7 +10844,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8

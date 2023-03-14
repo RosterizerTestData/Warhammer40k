@@ -1,11 +1,11 @@
 {
   "name": "T’au Empire",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -53,7 +53,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitSept": {
             "evals": [
               {
                 "paths": [
@@ -71,6 +71,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -80,9 +81,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Sept",
                     "value"
@@ -95,6 +93,22 @@
                   "Sept",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Sept",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -114,6 +128,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -124,6 +152,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -149,6 +185,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -159,6 +209,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -184,6 +242,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -194,6 +266,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -219,6 +299,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -229,6 +323,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -254,6 +356,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -264,6 +380,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -289,6 +413,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -299,6 +437,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -324,6 +470,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -334,6 +494,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -349,17 +517,94 @@
       "Enclave Relics": {
         "templateClass": "Relic"
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Focused Fire",
+            "Stratagem§Hot-blooded",
+            "Stratagem§Outflank",
+            "Stratagem§Orbital Uplink",
+            "Stratagem§Experimental Weaponry",
+            "Stratagem§Drop Zone Clear",
+            "Stratagem§Breach And Clear",
+            "Stratagem§Relentless Fusillade",
+            "Stratagem§On-board Sensors",
+            "Stratagem§Dynamic Offensive",
+            "Stratagem§Pulse Onslaught",
+            "Stratagem§Point-blank Volley",
+            "Stratagem§Drop Threat Acquisition",
+            "Stratagem§Saviour Protocols",
+            "Stratagem§Branched Nova Charge",
+            "Stratagem§Combat Debarkation",
+            "Stratagem§Wisdom Of The Many",
+            "Stratagem§Fail-safe Detonator",
+            "Stratagem§Backup Ai",
+            "Stratagem§Orbital Ion Beam",
+            "Stratagem§Wall Of Mirrors",
+            "Stratagem§The Grisly Feast",
+            "Stratagem§Coordinated Engagement",
+            "Stratagem§A Trap Well Laid",
+            "Stratagem§Recon Sweep",
+            "Stratagem§Shocking Firestorm",
+            "Stratagem§Counterfire Defence System",
+            "Stratagem§Designated Tasking",
+            "Stratagem§Strike And Fade",
+            "Stratagem§Frequency Lock",
+            "Stratagem§Neuroweb System Jammer",
+            "Stratagem§Repulsor Impact Field",
+            "Stratagem§Ionised Shockfield",
+            "Stratagem§Submunitions",
+            "Stratagem§Photon Grenades"
+          ]
+        }
+      },
       "Signature Systems": {
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Sept": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Bork’an": {
+                "order": 1
+              },
+              "Dal’yth": {
+                "order": 2
+              },
+              "Farsight Enclaves": {
+                "order": 3
+              },
+              "Ke’lshan": {
+                "order": 4
+              },
+              "Sa’cea": {
+                "order": 5
+              },
+              "T’au Sept": {
+                "order": 6
+              },
+              "Vior’la": {
+                "order": 7
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceSeptKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Sept",
                     "value"
@@ -367,7 +612,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -377,7 +623,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Sept>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -396,7 +642,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Sept>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -409,12 +655,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Sept",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilitySept": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Sept",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Sept",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -437,8 +724,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CRISIS** CORE** unit within 9″ of this unit’s COLDSTAR** BATTLESUIT** COMMANDER** model. Until the end of the turn, each time that unit Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 8″ to the Move characteristic of models in that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -464,8 +750,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), each time this model is selected to shoot, if no friendly **{v}** units are [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within it, until the end of the phase, this model has a Ballistic Skill characteristic of 5+ and you can only select one of the following targets for its attacks:\n\n* The closest eligible enemy unit.\n* The closest eligible enemy VEHICLE** unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -482,8 +767,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), then for each **{v} COMMANDER** unit included in a [Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachments), you can include one **{v} CRISIS** BODYGUARDS** unit in that Detachment without it taking up a [Battlefield Role slot](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role-Slots).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -521,8 +805,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if any friendly **{v}** units are embarked within this [TRANSPORT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Transports), you can select one DRONES** unit within 6″ of this TRANSPORT**. Until the start of your next Command phase:\n\n* DRONE** models in that unit have a Ballistic Skill characteristic of 4+.\n* **GUN DRONE** models in that unit lose the Threat Identification Protocol** ability.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -635,8 +918,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nThis model can be included in any [**T’AU** EMPIRE** Detachment](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Detachment-Rules) (excluding FARSIGHT** ENCLAVES** Detachments) without preventing that Detachment from being a [Sept Detachment](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Septs) and without preventing other units in your army from benefiting from a [Sept Tenet](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Sept-Tenets), but this model can only benefit from a Sept Tenet if every {v}** unit (excluding **SUPREME COMMANDER** units) in your army is from [VIOR’LA**](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Vior-la).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -659,8 +941,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "Once per battle, at the start of your turn, a single **{v} COMMANDER** unit from your army can declare either Kauyon or Mont’ka:\n\n\n\nKauyon**: In a turn in which a {v}** COMMANDER** unit from your army declared Kauyon, at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) you can select any friendly {v}** units within 6″ of that unit. Until the end of that turn, the selected units cannot move for any reason, but when resolving an attack made by a model in any of those units you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n\n\n\nMont’ka**: In a turn in which a {v}** COMMANDER** unit from your army declared Mont’ka, at the start of your Movement phase you can select any friendly {v}** units within 6″ of that unit. Until the end of that turn, the selected units can shoot as if they did not move this turn.\n\n\n\nUnless stated otherwise, you can only use the Master of War ability once per battle, irrespective of how many models in your army have this ability.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -671,8 +952,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhile a friendly **{v} CORE** unit is within 6″ of this unit’s COLDSTAR** BATTLESUIT** COMMANDER** model, each time a CORE** model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -686,8 +966,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one of the following protocols for this unit to perform:\n\n* **Repair Protocol**: This unit can repair one friendly **{v} BATTLESUIT** model within 3″ of it. That BATTLESUIT** model regains up to D3 lost wounds. Each model can only be repaired once per turn.\n* Surveillance Protocol**: Select one enemy unit within 12″ of this unit. Until the end of the turn, that enemy unit does not receive the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -716,8 +995,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "While a friendly **{v} INFANTRY** unit is within 6″ of this model, each time that unit fights, you can re-roll one [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll one [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) when resolving that unit’s attacks.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -743,8 +1021,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CRISIS** CORE** unit within 9″ of this unit’s ENFORCER** BATTLESUIT** COMMANDER** model. Until the start of your next Command phase, that unit gains the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -758,8 +1035,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "When resolving an attack made against a **{v} INFANTRY** or **{v} BATTLESUIT** unit whilst that unit is within 3″ of a friendly **{v} DRONES** unit, if the wound roll is successful, you can roll one D6; on a 2+ that DRONES unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and the attack sequence ends.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -806,8 +1082,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "While a friendly **{v} CHARACTER** model (excluding VEHICLE** and MONSTER** models) is within 3″ of any CRISIS** models in this unit, that CHARACTER** unit can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -821,8 +1096,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **FARSIGHT ENCLAVES** CRISIS** CORE** unit within 9″ of this model. Until the end of the turn:\n\n* That unit is eligible to shoot and declare a charge with in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back).\n* Each time a CORE** model in that unit makes a ranged attack, you can ignore any or all [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) modifiers.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **{v} CRISIS** CORE** unit within 9″ of this unit’s CRISIS** BATTLESUIT** COMMANDER** model. Until the end of the turn:\n\n* That unit is eligible to shoot and declare a charge with in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back).\n* Each time a Core model in that unit makes a ranged attack, you can ignore any or all [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) modifiers.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -836,8 +1110,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **{v} FIRE** WARRIOR** TEAM** unit within 9″ of this unit’s CADRE** FIREBLADE** model; until the start of your next Command phase, each time a CORE** model in that unit makes a ranged attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -887,8 +1160,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this unit’s CADRE** FIREBLADE** model, each time a CORE** model in that unit makes an attack with a [pulse weapon](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Pulse-Weapons), an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores one additional hit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -982,23 +1254,17 @@
             "value": "Crisis Shas’ui"
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1017,23 +1283,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1052,23 +1312,17 @@
             "dynamic": true
           },
           "Iridium battlesuit": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Iridium battlesuit"
@@ -1080,23 +1334,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1115,23 +1363,17 @@
             "dynamic": true
           },
           "Shield generator": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1150,23 +1392,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1185,23 +1421,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1293,23 +1523,17 @@
             "value": "Crisis Bodyguard Shas’ui"
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1328,23 +1552,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1363,23 +1581,17 @@
             "dynamic": true
           },
           "Iridium battlesuit": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Iridium battlesuit"
@@ -1391,23 +1603,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1426,23 +1632,17 @@
             "dynamic": true
           },
           "Shield generator": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1461,23 +1661,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1496,23 +1690,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1634,7 +1822,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1753,23 +1942,17 @@
             "value": 3
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1842,23 +2025,17 @@
             "value": 9
           },
           "Drone controller": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1877,23 +2054,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1912,23 +2083,17 @@
             "dynamic": true
           },
           "Flare launcher": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2003,23 +2168,17 @@
             "value": 4
           },
           "Pech’ra": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2150,23 +2309,17 @@
             "value": "Stealth Shas’ui"
           },
           "Drone controller": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2185,23 +2338,17 @@
             "dynamic": true
           },
           "Homing Beacon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Homing Beacon"
@@ -2213,23 +2360,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2321,23 +2462,17 @@
             "value": "XV9 Hazard Battlesuit"
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2356,23 +2491,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2391,23 +2520,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2426,23 +2549,17 @@
             "dynamic": true
           },
           "Shield generator": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2461,23 +2578,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2496,23 +2607,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2610,23 +2715,17 @@
             "value": "null"
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2838,23 +2937,17 @@
             "value": 5
           },
           "Drone controller": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2873,23 +2966,17 @@
             "dynamic": true
           },
           "Neuroweb system jammer": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2908,23 +2995,17 @@
             "dynamic": true
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3087,23 +3168,17 @@
             "value": "Gun Drone"
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3369,23 +3444,17 @@
             "value": 18
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3404,23 +3473,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3439,23 +3502,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3474,23 +3531,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3509,23 +3560,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3582,7 +3627,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse submunitions cannon",
@@ -3798,23 +3844,17 @@
             "value": 17
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3833,23 +3873,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3868,23 +3902,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3903,23 +3931,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3938,23 +3960,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -4011,7 +4027,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Fletchette pod",
@@ -4377,7 +4394,8 @@
             "value": 3
           },
           "Base": {
-            "value": "160mm"
+            "value": "160mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -4834,7 +4852,8 @@
             "value": 3
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Long-barrelled burst cannon",
@@ -5400,7 +5419,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Accelerator burst cannon",
@@ -5814,23 +5834,17 @@
             "value": 9
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -5945,7 +5959,8 @@
             "value": 3
           },
           "Base": {
-            "value": "160mm"
+            "value": "160mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -6524,13 +6539,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 6
@@ -6542,13 +6559,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6595,7 +6614,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -6619,7 +6639,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6678,7 +6699,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -6702,7 +6724,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -6802,23 +6825,17 @@
             "value": "Broadside Shas’ui"
           },
           "Advanced targeting system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6837,23 +6854,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6872,23 +6883,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6907,23 +6912,17 @@
             "dynamic": true
           },
           "Stabilised optics": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -6942,23 +6941,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7028,23 +7021,17 @@
             "value": 4
           },
           "Baggage harness": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7093,7 +7080,8 @@
             "value": 4
           },
           "Base": {
-            "value": "65mm"
+            "value": "65mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Great Knarloc beak and talons",
@@ -7352,23 +7340,17 @@
             "value": 13
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7387,23 +7369,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7422,23 +7398,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7457,23 +7427,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7492,23 +7456,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -7565,7 +7523,8 @@
             "value": 2
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy burst cannon",
@@ -8072,23 +8031,17 @@
             "value": 7
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8194,7 +8147,8 @@
             "value": 7
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -8288,23 +8242,17 @@
             "value": 3
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8353,7 +8301,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Fireblade pulse rifle",
@@ -8499,7 +8448,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -8551,23 +8501,17 @@
             "value": 7
           },
           "Positional relay": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8586,23 +8530,17 @@
             "dynamic": true
           },
           "Shield generator": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Shield generator"
@@ -8614,23 +8552,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8649,23 +8581,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8714,7 +8640,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "High-output burst cannon",
@@ -9021,23 +8948,17 @@
             "value": 7
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9056,23 +8977,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9091,23 +9006,17 @@
             "dynamic": true
           },
           "Iridium battlesuit": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Iridium battlesuit"
@@ -9119,23 +9028,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9154,23 +9057,17 @@
             "dynamic": true
           },
           "Shield generator": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Shield generator"
@@ -9182,23 +9079,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9217,23 +9108,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9282,7 +9167,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -9504,23 +9390,17 @@
             "value": 8
           },
           "Positional relay": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9539,23 +9419,17 @@
             "dynamic": true
           },
           "Shield generator": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Shield generator"
@@ -9567,23 +9441,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -9632,7 +9500,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -9884,7 +9753,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plasma rifle",
@@ -10505,23 +10375,17 @@
             "value": 6
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -10570,7 +10434,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plasma rifle",
@@ -11414,23 +11279,17 @@
             "value": 3
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -11479,7 +11338,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -11526,23 +11386,17 @@
             "value": 3
           },
           "Hover drone": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Hover drone"
@@ -11584,7 +11438,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Honour stave",
@@ -11707,7 +11562,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Shaper Kroot rifle",
@@ -11975,23 +11831,17 @@
             "value": 5
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -12102,7 +11952,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -12196,7 +12047,8 @@
             "value": 3
           },
           "Base": {
-            "value": "160mm"
+            "value": "160mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -12924,7 +12776,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13150,7 +13003,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -13324,23 +13178,17 @@
             "value": 17
           },
           "Counterfire defence system": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13359,23 +13207,17 @@
             "dynamic": true
           },
           "Drone controller": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13394,23 +13236,17 @@
             "dynamic": true
           },
           "Early warning override": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13429,23 +13265,17 @@
             "dynamic": true
           },
           "Multi-tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13464,23 +13294,17 @@
             "dynamic": true
           },
           "Target lock": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13499,23 +13323,17 @@
             "dynamic": true
           },
           "Velocity tracker": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -13572,7 +13390,8 @@
             "value": 2
           },
           "Base": {
-            "value": "170 x 109mm"
+            "value": "170 x 109mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Cluster rocket system",
@@ -14639,7 +14458,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -14676,7 +14496,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -14713,7 +14534,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         },
         "assets": {
@@ -14759,7 +14581,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -14796,7 +14619,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -14833,7 +14657,8 @@
             "value": 5
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -14875,7 +14700,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -14912,7 +14738,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -14949,7 +14776,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse blaster",
@@ -15127,7 +14955,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy rail rifle",
@@ -15374,7 +15203,8 @@
             "value": 2
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy rail rifle",
@@ -15621,7 +15451,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -15658,7 +15489,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Flechette launcher",
@@ -16080,7 +15912,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -16301,7 +16134,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -16522,7 +16356,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -16743,7 +16578,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -16972,7 +16808,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Accelerator burst cannon",
@@ -17233,13 +17070,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 6
@@ -17251,13 +17090,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plasma rifle",
@@ -17430,7 +17271,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           }
         },
         "assets": {
@@ -17473,7 +17315,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         },
         "assets": {
@@ -17515,7 +17358,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -17557,7 +17401,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -17594,7 +17439,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse rifle",
@@ -17796,7 +17642,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -17847,7 +17694,8 @@
             "value": 3
           },
           "Base": {
-            "value": "105 x 70mm"
+            "value": "105 x 70mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Fusion blaster",
@@ -18395,7 +18243,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -18574,7 +18423,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -18785,7 +18635,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -18996,7 +18847,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -19147,7 +18999,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -19312,7 +19165,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -19461,7 +19315,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         },
         "rules": {
@@ -19526,7 +19381,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Railgun",
@@ -19861,7 +19717,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           }
         },
         "rules": {
@@ -19918,7 +19775,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -20069,7 +19927,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Ion rifle",
@@ -20198,7 +20057,8 @@
             "value": 4
           },
           "Base": {
-            "value": "65mm"
+            "value": "65mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -20241,7 +20101,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -20284,7 +20145,8 @@
             "value": 6
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kroot pistol",
@@ -20712,7 +20574,8 @@
             "value": 3
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -20733,7 +20596,8 @@
             "value": 6
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -20775,7 +20639,8 @@
             "value": 6
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Kroot pistol",
@@ -21327,7 +21192,8 @@
             "value": 6
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -21378,7 +21244,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Railgun",
@@ -21695,7 +21562,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -21778,7 +21646,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Semi-automatic grenade launcher",
@@ -22035,7 +21904,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Semi-automatic grenade launcher",
@@ -22292,7 +22162,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -22423,7 +22294,8 @@
             "value": 3
           },
           "Base": {
-            "value": "65mm"
+            "value": "65mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -22465,7 +22337,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -22510,7 +22383,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Pulse carbine",
@@ -22835,7 +22709,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         },
         "assets": {
@@ -22880,7 +22755,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm flying base"
+            "value": "32mm flying base",
+            "statType": "term"
           }
         }
       },
@@ -22917,7 +22793,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -23030,7 +22907,8 @@
             "value": 3
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Burst cannon",
@@ -23151,7 +23029,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm flying base"
+            "value": "120 x 92mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Missile pod",
@@ -23474,7 +23353,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -23498,7 +23378,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -23531,7 +23412,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -23555,7 +23437,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "rules": {
@@ -23612,7 +23495,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           }
         },
         "assets": {
@@ -23630,10 +23514,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -23654,7 +23540,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -23667,10 +23554,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -23691,7 +23580,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -23728,7 +23618,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm flying base"
+            "value": "60mm flying base",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Plasma rifle",
@@ -23915,7 +23806,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -23958,7 +23850,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -24001,7 +23894,8 @@
             "value": 3
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin hazard burst cannons",
@@ -24189,29 +24083,621 @@
       "Signature Systems§Vectored Manoeuvring Thrusters": {
         "text": "**BATTLESUIT** model only.\n\n* Add 2″ to the bearer’s Move characteristic.\n* Once per battle round, when the bearer is selected as a target of a charge, if it is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units it can use this Relic. If it does, it can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move). Until the end of the phase, the bearer cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible). Your opponent can select new targets for the charge."
       },
+      "Stratagem§A Trap Well Laid": {
+        "text": "Use this Stratagem in the [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Heroic-Interventions) step of your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **KROOT** unit from your army that is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. Until the end of the turn:\n\n* Add 1 to the Attacks characteristic of models in that unit.\n* That unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).\n* That unit is eligible to perform a Heroic Intervention if it is within 6″ horizontally of an enemy unit, and when performing a Heroic Intervention move with that unit, you can move each model in that unit up to 6″. All other rules for Heroic Interventions still apply.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Backup Ai": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **T’AU EMPIRE** model in your army Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Branched Nova Charge": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), when a **RIPTIDE BATTLESUIT** model from your army uses its Nova Reactor** ability and it burns out. That model’s nova reactor does not burn out, and you can select one of its reactor abilities. This Stratagem cannot be used to prevent the same model’s reactor from burning out more than once per battle.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Breach And Clear": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **BREACHER TEAM** unit from your army is selected to shoot. Until the end of the phase, each time a CORE** model in that unit makes a ranged attack:\n\n* The target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.\n* You can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Combat Debarkation": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).\n\n* If you selected the Mont’ka [Tactical Philosophy](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Philosophies-of-War) at the start of the battle and it is the first, second or third battle round, select up to three **DEVILFISH** models from your army.\n* If you selected the Kauyon Tactical Philosophy at the start of the battle and it is the third, fourth or fifth battle round, select up to three DEVILFISH** models from your army.\n* Otherwise, select one DEVILFISH** model from your army.Until the end of the phase, each time one of those models makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), after it has moved, any units embarked within that transport can [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark). Any units that do so cannot charge this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Coordinated Engagement": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), before selecting a unit to shoot with. Select one enemy unit and two **&lt;SEPT&gt;** units from your army that are within 18″ of and visible to that enemy unit. Until the end of the phase, each time a model in one of those &lt;SEPT&gt;** units makes an attack:\n\n* That attack can only target that enemy unit (and only if it is an eligible target).\n* Improve the Armour Penetration characteristic of that attack by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Counterfire Defence System": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an attack is allocated to a **COUNTERFIRE DEFENCE** SYSTEM** model from your army. The Damage characteristic of that attack is changed to 1. If that model has a Wounds characteristic of 14 or more, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Designated Tasking": {
+        "text": "Use this Stratagem in your Command phase. Select one **T’AU** EMPIRE** unit from your army that is not within Engagement Range of any enemy units and contains both DRONE** models and models without the DRONE** keyword. Split that unit into two units, one containing all of the DRONE** models, and the other containing all of the models without the DRONE** keyword.\n\n\n\nIf any of those DRONE** models are docked with another model, set them up within 1″ of the model they are docked with before splitting the unit. Those DRONE** models are no longer docked with that model.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Drop Threat Acquisition": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **BATTLESUITS** unit from your army is set up on the battlefield using the **Manta Strike** ability or the Homing Beacon** action (see [Stealth Battlesuits](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/Stealth-Battlesuits) datasheet). Until the end of the turn, each time a BATTLESUIT** model in that unit makes a ranged attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). If that unit contains 4 or more BATTLESUIT** models, this Stratagem-costs 3CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "3/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Drop Zone Clear": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **FARSIGHT ENCLAVES** BATTLESUITS** unit from your army is set up on the battlefield using the **Manta Strike** ability or the Homing Beacon action (see [Stealth Battlesuits](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/Stealth-Battlesuits) datasheet). Until the end of the turn, each time a BATTLESUIT** model in that unit makes a ranged attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll). If that unit contains 4 or more BATTLESUIT** models, this Stratagem costs 3CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "3/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Dynamic Offensive": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **CRISIS BATTLESUIT** unit from your army is selected to move. Until the end of the turn:\n\n* Each time that unit Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of models in that unit.\n* Models in that unit do not suffer the penalty to [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) incurred for firing [Assault weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT) in the same turn that their unit has [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Emergency Dispensation": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the T’AU** EMPIRE** keyword. Select one **T’AU EMPIRE** CHARACTER** model in your army and give them one [Relic](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Signature-Systems) (this must be a Relic they can have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Experimental Weaponry": {
+        "text": "Use this Stratagem in your [shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **BORK’AN** unit from your army is selected to shoot. Select one model in that unit and one weapon that model is equipped with. Until the end of the phase, each time that model makes an attack with that weapon, [invulnerable saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be taken against that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Fail-safe Detonator": {
+        "text": "Use this Stratagem in any phase, when a **BATTLESUIT** model from your army is destroyed. Before removing that model from play, instead of using any rules that are triggered when that model is destroyed (e.g. the Explodes** ability), roll one D6 for each unit within 3″ of that model, adding 1 to the roll if the destroyed model has a Wounds characteristic of 12 or more: on a 3-5, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6+, that unit suffers 3 mortal wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Focused Fire": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an enemy model loses any wounds as a result of an attack made by a **T’AU** SEPT** model from your army. Until the end of the phase, each time a **T’AU SEPT** CORE** model from your army makes an attack against that enemy model’s unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Frequency Lock": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **T’AU EMPIRE** model from your army is selected to shoot. Until the end of the phase, each time that model makes an attack with a seeker missile, seeker missile rack or destroyer missile:\n\n* That attack can target units with one or more **Markerlight tokens** that are not visible to the attacking model.\n* Add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Hot-blooded": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **VIOR’LA** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit (excluding [DRONE**](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Drones) models) makes an attack that targets the closest eligible target, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage (to a maximum of 6 mortal wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Ionised Shockfield": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a model in an enemy unit is destroyed as a result of an attack made with an [ion weapon](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Ion-Weapons) by a **&lt;SEPT&gt;** model from your army. Until the start of your next Shooting phase, that enemy unit is not affected by the [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) of other enemy units.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Neuroweb System Jammer": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit within 18″ of and visible to a **NEUROWEB SYSTEM** JAMMER** unit from your army. Roll one D6: on a 3+, until the start of your next Shooting phase, each time a model in that enemy unit makes an attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§On-board Sensors": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **&lt;SEPT&gt; DEVILFISH** model from your army and one enemy unit within 24″ of and visible to that model. Until the end of the phase, that DEVILFISH** model gains the following ability:\n\n\n\n‘Sensor Link (Aura)**:** While a friendly **&lt;SEPT&gt; FIRE** WARRIOR** TEAM** unit is within 6″ of this model, each time a model in that unit makes a ranged attack against the selected enemy unit, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.’",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Orbital Ion Beam": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Place two Ion Beam markers anywhere on the battlefield within 12″ of each other. At the start of your next Command phase, draw a straight, imaginary line between the two Ion Beam markers, and then roll one D6 for each unit that this line crosses over, adding 1 if the unit being rolled for is a **BUILDING**: on a 2-5, that unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 6+, that unit suffers 3 mortal wounds. The Ion Beam markers are then removed. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Orbital Uplink": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit. Until the end of the phase, each time a model in a **SA’CEA** unit from your army makes a ranged attack against that enemy unit, the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Outflank": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **DAL’YTH CORE** unit or **T’AU AUXILIARY** unit from your army that is within 9″ of any battlefield edges. If the mission you are playing is using the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rule, you can remove that unit from the battlefield and place it in Strategic Reserves.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Photon Grenades": {
+        "text": "Use this Stratagem in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **PHOTON GRENADES** unit from your army is selected as a target of a charge declared with an enemy unit (excluding VEHICLE** and MONSTER** units). Until the end of the turn:\n\n* Subtract 2 from that unit’s [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit).\n* Each time a model in that unit makes an attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).The charge roll modifier incurred via this Stratagem is not cumulative with any other negative modifier to a unit’s charge roll.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Point-blank Volley": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **FIRE WARRIOR** TEAM** unit from your army that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. Until the end of the phase, pulse blasters, pulse carbines and pulse rifles that models in that unit are equipped with have the Type characteristic [Pistol 2](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PISTOL).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Promising Pupil": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the T’AU** EMPIRE** keyword. Select one **T’AU EMPIRE** CHARACTER** model in your army and determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) for that model (this must be a Warlord Trait they can have); that model is only regarded as your Warlord for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case you can use this Stratagem twice), or an Onslaught battle (in which case you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Pulse Onslaught": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **FIRE WARRIOR** TEAM** unit from your army is selected to shoot. Until the end of the phase, each time a CORE** model in that unit makes an attack with a [pulse weapon](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Pulse-Weapons), an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Recon Sweep": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **PATHFINDER TEAM** unit from your army successfully completes the **Fire Markerlights** action. Each time you roll to see if an enemy unit gains a Markerlight token as a result of that action completing, add 1 to the roll. That unit can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Relentless Fusillade": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **STRIKE TEAM** unit from your army is selected to shoot. Until the end of the phase:\n\n* Instead of following the normal rules for [Rapid Fire weapons](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#RAPID-FIRE), models in that unit shooting pulse rifles make double the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks).\n* Each time a CORE** model in that unit makes a ranged attack, improve the Armour Penetration characteristic of that attack by 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Repulsor Impact Field": {
+        "text": "Use this Stratagem in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE), when a **BATTLESUIT** unit from your army is selected as a target of a charge. Until the end of the phase, subtract 2 from [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for any unit that declares a charge against that BATTLESUIT** unit. The charge roll modifier incurred via this Stratagem is not cumulative with any other negative modifier to a unit’s charge roll.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Saviour Protocols": {
+        "text": "Use this Stratagem in any phase, when a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for a model in a **&lt;SEPT&gt;** unit from your army. Select one friendly **&lt;SEPT&gt; DRONE** model within 3″ of that unit, or within 6″ of that unit if it contains a model equipped with a drone controller. That DRONE** model is destroyed and the Damage characteristic of that attack is changed to 0.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Shocking Firestorm": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **&lt;SEPT&gt;** unit from your army is selected to shoot. Select one enemy unit within 18″ of that &lt;SEPT&gt;** unit. Until the end of the phase, each time a model in that enemy unit is destroyed as a result of an attack made by a model in that &lt;SEPT&gt;** unit, the destroyed model counts as two destroyed models for the purposes of [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) this turn.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Strike And Fade": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **T’AU EMPIRE** JET** PACK** unit from your army. You can shoot with that unit and then it can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) of up to 6″. That unit cannot shoot again this phase.\n\n\n\nIf that unit contains 5 or fewer models (excluding DRONE** models), this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Submunitions": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **HAMMERHEAD** model from your army is selected to shoot. If that model is equipped with a railgun, instead of making attacks with that weapon this phase, select one enemy unit that is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any units from your army and is within 36″ of and visible to that model. Roll one D6 for each model in that unit, adding 1 to each roll if that unit has 11 or more models: for each 4+, that unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) (to a maximum of 8 mortal wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§The Grisly Feast": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an enemy unit is destroyed by an attack made by a model in a **KROOT** unit from your army. Until the end of the battle, each time a model in that Kroot unit would lose a wound, roll one D6: on a 5+, that wound is not lost.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Wall Of Mirrors": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **STEALTH BATTLESUITS** or **GHOSTKEEL BATTLESUIT** unit from your army that is [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 9″ of any battlefield edges. Remove that unit from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your next Movement phase, you can set that unit back up on the battlefield anywhere that is wholly within 9″ of any battlefield edge and more than 9″ away from any enemy models. If the battle ends and that unit is not on the battlefield, it is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
+      "Stratagem§Wisdom Of The Many": {
+        "text": "Use this Stratagem at the start of any of your phases other than your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **ETHEREAL** unit from your army that has not intoned an [invocation](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Invocations-of-the-Ethereals) this turn. That model can intone one invocation that has not already been intoned by a friendly model this turn. That invocation is automatically inspiring (do not roll) and takes effect until the start of your next Command phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "T’au Empire Strat"
+          ]
+        }
+      },
       "Troops§Breacher Team": {
         "stats": {
           "Power Level": {
             "value": 5
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -24349,23 +24835,17 @@
             "value": 4
           },
           "Markerlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -24523,8 +25003,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "If this unit is equipped with a homing beacon, it can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n‘**Homing Beacon (Action):** In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), any number of units from your army that are equipped with homing beacons can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). The action is completed at the start of the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your next [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). When it is completed, the unit performing the action loses its homing beacon and one friendly **{v} CRISIS** CORE** unit that was setup in a Manta hold (see **Manta Strike**) can be set up on the battlefield within 3″ of the unit and more than 9″ away from any enemy models, even if it is the first battle round.’\n\n\n\n*We recommend placing a Homing Beacon model next to the unit as a reminder, removing it once this action has been completed (a Homing Beacon does not count as a model for any rules purposes).*",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -24616,8 +25095,7 @@
             "statType": "term",
             "value": "&lt;SEPT&gt;",
             "text": "Once per battle round, when you set up a friendly **{v}** [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) unit, the bearer can use this wargear item. If it does, that unit counts the battle round number as one higher than the current battle round number for the purpose of determining where it is set up, but when doing so it must be set up within 6″ of the bearer.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -24700,124 +25178,49 @@
         "text": "Each time a ranged attack is made by the bearer against a unit that can [**FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying), add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Maximum 1 per model."
       },
       "Warlord Trait§A Ghost Walks Among Us": {
-        "text": "* Each time an attack is made against this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Each time this WARLORD** Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of this WARLORD**.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "* Each time an attack is made against this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Each time this WARLORD** Advances, do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of this WARLORD**."
       },
       "Warlord Trait§Academy Luminary": {
-        "text": "While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a T’au Empire Strategic Ploy or T’au Empire Wargear Stratagem, roll one D6: on a 3+, that Command point is refunded.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "While this **WARLORD** is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a T’au Empire Strategic Ploy or T’au Empire Wargear Stratagem, roll one D6: on a 3+, that Command point is refunded."
       },
       "Warlord Trait§Exemplar Of The Kauyon": {
-        "text": "After both players have deployed their armies and determined who has the first turn, select up to one friendly **&lt;SEPT&gt;** unit, or up to three friendly &lt;SEPT&gt;** units if you selected the Kauyon [Tactical Philosophy](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Philosophies-of-War) this battle, and redeploy them. If the mission uses the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rules, any of those units can be placed into Strategic Reserves without having to spend any additional [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points), regardless of how many units are already in Strategic Reserves. If both players have abilities that redeploy units, [roll off](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Roll-offs): the winner chooses who redeploys their units first.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "After both players have deployed their armies and determined who has the first turn, select up to one friendly **&lt;SEPT&gt;** unit, or up to three friendly &lt;SEPT&gt;** units if you selected the Kauyon [Tactical Philosophy](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Philosophies-of-War) this battle, and redeploy them. If the mission uses the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rules, any of those units can be placed into Strategic Reserves without having to spend any additional [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points), regardless of how many units are already in Strategic Reserves. If both players have abilities that redeploy units, [roll off](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Roll-offs): the winner chooses who redeploys their units first."
       },
       "Warlord Trait§Exemplar Of The Mont’ka": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **&lt;SEPT&gt; CORE** unit within 9″ of this WARLORD**. Until the start of your next Command phase, each time a Core model in that unit makes a ranged attack that targets an enemy unit within 9\", or 12″ if you selected the Mont’ka [Tactical Philosophy](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Philosophies-of-War) this battle, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **&lt;SEPT&gt; CORE** unit within 9″ of this WARLORD**. Until the start of your next Command phase, each time a Core model in that unit makes a ranged attack that targets an enemy unit within 9\", or 12″ if you selected the Mont’ka [Tactical Philosophy](https://wahapedia.ru/wh40k9ed/factions/t-au-empire/#Philosophies-of-War) this battle, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Master Of The Hunt (aura)": {
-        "text": "While a friendly **KROOT** unit is within 6″ of this WARLORD**, each time a model in that unit makes a ranged attack that targets a unit within 12\", the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "While a friendly **KROOT** unit is within 6″ of this WARLORD**, each time a model in that unit makes a ranged attack that targets a unit within 12\", the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack."
       },
       "Warlord Trait§Master Of The Killing Blow": {
-        "text": "Each time this **WARLORD** makes an attack:\n\n* On an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 3.\n* The model that attack is allocated to cannot use any rules to ignore the wounds it loses.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time this **WARLORD** makes an attack:\n\n* On an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 3.\n* The model that attack is allocated to cannot use any rules to ignore the wounds it loses."
       },
       "Warlord Trait§Nomadic Hunter (aura)": {
-        "text": "While a friendly **KROOT** unit is within 6″ of this WARLORD**, each time a model in that unit makes a ranged attack, if that unit did not [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) this turn, it counts as having [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) during its previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "While a friendly **KROOT** unit is within 6″ of this WARLORD**, each time a model in that unit makes a ranged attack, if that unit did not [Fall Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) this turn, it counts as having [Remained Stationary](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Remain-Stationary) during its previous [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE)."
       },
       "Warlord Trait§Pack Leader (aura)": {
-        "text": "While a friendly **KROOT** unit is within 6″ of this WARLORD**, each time you make a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit, roll one additional D6 and discard one of the dice.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "While a friendly **KROOT** unit is within 6″ of this WARLORD**, each time you make a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for that unit, roll one additional D6 and discard one of the dice."
       },
       "Warlord Trait§Precision Of The Hunter": {
-        "text": "Each time this **WARLORD** makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "Each time this **WARLORD** makes an attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Seeker Of Perfection": {
-        "text": "Each time this **WARLORD** makes a ranged attack:\n\n* Improve the Armour Penetration characteristic of that attack by 1.\n* An unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage (to a maximum of 3 mortal wounds per phase).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time this **WARLORD** makes a ranged attack:\n\n* Improve the Armour Penetration characteristic of that attack by 1.\n* An unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage (to a maximum of 3 mortal wounds per phase)."
       },
       "Warlord Trait§Strategic Conqueror": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **SA’CEA** unit within 9″ of this WARLORD**. Until the start of your next Command phase, that unit gains the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If that unit already has this ability, models in that unit counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **SA’CEA** unit within 9″ of this WARLORD**. Until the start of your next Command phase, that unit gains the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If that unit already has this ability, models in that unit counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers)."
       },
       "Warlord Trait§Strength Of Conviction": {
-        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time this **WARLORD** would lose a wound, roll one D6: on a 5+, that wound is not lost."
       },
       "Warlord Trait§Through Boldness, Victory": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **&lt;SEPT&gt; CORE** unit within 9″ of this WARLORD**. Until the start of your next Command phase, each time a CORE** model in that unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **&lt;SEPT&gt; CORE** unit within 9″ of this WARLORD**. Until the start of your next Command phase, each time a CORE** model in that unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target."
       },
       "Warlord Trait§Through Unity, Devastation (aura)": {
-        "text": "While a friendly **&lt;SEPT&gt; CORE** unit is within 6″ of this WARLORD**, each time a CORE** model in that unit makes a ranged attack, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 1.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "While a friendly **&lt;SEPT&gt; CORE** unit is within 6″ of this WARLORD**, each time a CORE** model in that unit makes a ranged attack, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 1."
       },
       "Warlord Trait§Unifying Influence": {
-        "text": "This **WARLORD** gains the following abilities:\n\n\n\nDiplomatic Excellence (Aura)**:** While a friendly DAL’YTH** or **T’AU AUXILIARY** unit (excluding CHARACTER** units) is within 6″ of this WARLORD**, add 1 to the Leadership characteristic of models in that unit.\n\n\n\nIntegrated Command Structure (Aura)**:** While a friendly T’AU** AUXILIARY** unit is within 6″ of this WARLORD**, that unit is treated as not having the T’AU** AUXILIARY** keyword for the purpose of the Markerlights** rule.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "This **WARLORD** gains the following abilities:\n\n\n\nDiplomatic Excellence (Aura)**:** While a friendly DAL’YTH** or **T’AU AUXILIARY** unit (excluding CHARACTER** units) is within 6″ of this WARLORD**, add 1 to the Leadership characteristic of models in that unit.\n\n\n\nIntegrated Command Structure (Aura)**:** While a friendly T’AU** AUXILIARY** unit is within 6″ of this WARLORD**, that unit is treated as not having the T’AU** AUXILIARY** keyword for the purpose of the Markerlights** rule."
       },
       "Weapon§Accelerator bow": {
         "stats": {
@@ -24989,7 +25392,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25006,7 +25410,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -25047,7 +25452,8 @@
             "value": -5
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
             "value": 12
@@ -25326,7 +25732,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25349,7 +25756,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25372,7 +25780,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -25392,7 +25801,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25476,7 +25886,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -25561,7 +25972,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -25616,7 +26028,8 @@
             "value": -5
           },
           "D": {
-            "value": "D3+6"
+            "value": "D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -25636,7 +26049,8 @@
             "value": -5
           },
           "D": {
-            "value": "D6+6"
+            "value": "D6+6",
+            "statType": "term"
           },
           "S": {
             "value": 18
@@ -25656,7 +26070,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -25673,13 +26088,16 @@
       "Weapon§High intensity markerlight": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy 3"
@@ -25696,7 +26114,8 @@
             "value": -5
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -25716,7 +26135,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -25955,7 +26375,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26012,7 +26433,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26124,7 +26546,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26141,13 +26564,16 @@
       "Weapon§Markerlight": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy 1"
@@ -26319,7 +26745,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6+2"
+            "value": "D6+2",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26481,7 +26908,8 @@
             "value": -6
           },
           "D": {
-            "value": "D3+6"
+            "value": "D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -26501,7 +26929,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -26524,7 +26953,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26578,7 +27008,8 @@
             "value": -3
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -26601,7 +27032,8 @@
             "value": -3
           },
           "D": {
-            "value": "2D3"
+            "value": "2D3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -26723,7 +27155,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26742,7 +27175,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26758,7 +27192,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 12
@@ -26839,7 +27274,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -26888,7 +27324,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -26968,7 +27405,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6+2"
+            "value": "D6+2",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -26991,7 +27429,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 7

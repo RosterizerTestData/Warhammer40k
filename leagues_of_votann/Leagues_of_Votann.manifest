@@ -1,11 +1,11 @@
 {
   "name": "Leagues of Votann",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -50,7 +50,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitLeague": {
             "evals": [
               {
                 "paths": [
@@ -68,6 +68,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -77,9 +78,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "League",
                     "value"
@@ -92,6 +90,22 @@
                   "League",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "League",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -111,6 +125,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -121,6 +149,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -146,6 +182,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -156,6 +206,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -181,6 +239,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -191,6 +263,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -216,6 +296,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -226,6 +320,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -251,6 +353,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -263,6 +379,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -273,17 +397,86 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Appraising Glare",
+            "Stratagem§Cult Of Veneration",
+            "Stratagem§Bloody Expectations",
+            "Stratagem§Pulsed Beam Discharge",
+            "Stratagem§Waste Not Your Last Breath",
+            "Stratagem§Accelerated Response",
+            "Stratagem§Ancestral Sentence",
+            "Stratagem§Core-buster Fire Pattern",
+            "Stratagem§Cyberstimm Infusion",
+            "Stratagem§Huntr’s Mark",
+            "Stratagem§Kinbond",
+            "Stratagem§The Might Of The Einhyr",
+            "Stratagem§Optimised Volley",
+            "Stratagem§Point-blank Fusillade",
+            "Stratagem§Reactive Reprisal",
+            "Stratagem§Grimwrought Barrier",
+            "Stratagem§Bastion Running",
+            "Stratagem§Combat Surgery",
+            "Stratagem§Personal Grudge",
+            "Stratagem§Familial Loyalty",
+            "Stratagem§Light’em Up",
+            "Stratagem§Luck Has. Need Keeps. Toil Earns.",
+            "Stratagem§Mag-riders",
+            "Stratagem§New-found Nemesis",
+            "Stratagem§Outflanking Pioneers",
+            "Stratagem§Well-ordered Retreat",
+            "Stratagem§Concussion Blast",
+            "Stratagem§Ion Storm",
+            "Stratagem§Subterranean Explosives",
+            "Stratagem§Multiwave System Jammer",
+            "Stratagem§Overcharged Shield Crest",
+            "Stratagem§Pan Spectral Warning",
+            "Stratagem§Site-to-site Transport"
+          ]
+        }
+      },
       "Skeinwrought Discipline": {
         "templateClass": "Psychic Power"
       },
       "Unit": {
+        "stats": {
+          "League": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Greater Thurian League": {
+                "order": 1
+              },
+              "Kronus Hegemony": {
+                "order": 2
+              },
+              "Trans-Hyperian Alliance": {
+                "order": 3
+              },
+              "Urani-Surtr Regulates": {
+                "order": 4
+              },
+              "Ymyr Conglomerate": {
+                "order": 5
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceLeagueKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "League",
                     "value"
@@ -291,7 +484,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -301,7 +495,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<League>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -320,7 +514,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<League>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -333,12 +527,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "League",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityLeague": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "League",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "League",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -367,8 +602,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this unit can repair one friendly **{v} VEHICLE** or **{v} EXO-FRAME** model within 3″ of it. That model regains up to D3 lost wounds. Each model can only be repaired once per turn.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -388,8 +622,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "While a friendly **{v} HEARTHGUARD** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -412,8 +645,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this unit, add 1 to [Combat Attrition tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) taken for that unit.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -430,8 +662,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "While a friendly **GREATER THURIAN** LEAGUE** CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nWhile a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -448,8 +679,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if this unit contains a **BRÔKHYR** IRON-MASTER** model, you can select one friendly **{v} CORE** or **{v} VEHICLE** unit within 9″ of this unit. If you do so, until the start of your next Command phase, each time a model in that friendly unit makes an attack with a ranged weapon, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -489,10 +719,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -581,13 +813,16 @@
       "Ancestral Relics§The Captive Abyss": {
         "stats": {
           "AP": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "D": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "S": {
-            "value": "*"
+            "value": "*",
+            "statType": "term"
           },
           "Type": {
             "value": "Grenade 1"
@@ -769,23 +1004,17 @@
             "value": "Hearthguard"
           },
           "Weavefield crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -804,23 +1033,17 @@
             "dynamic": true
           },
           "Teleport crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -910,23 +1133,17 @@
             "value": "Pioneer"
           },
           "Rollbar searchlight": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Rollbar searchlight"
@@ -938,23 +1155,17 @@
             "dynamic": true
           },
           "Multiwave comms array": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Multiwave comms array"
@@ -966,23 +1177,17 @@
             "dynamic": true
           },
           "Pan spectral scanner": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Pan spectral scanner"
@@ -1199,23 +1404,17 @@
             "value": 13
           },
           "Pan spectral scanner": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1272,7 +1471,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Cyclic ion cannon",
@@ -1931,23 +2131,17 @@
             "value": 5
           },
           "Teleport crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1966,23 +2160,17 @@
             "dynamic": true
           },
           "Weavefield crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2031,7 +2219,8 @@
             "value": 2
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autoch-pattem combi-bolter",
@@ -2294,23 +2483,17 @@
             "value": 4
           },
           "Rampart crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2329,23 +2512,17 @@
             "dynamic": true
           },
           "Teleport crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2394,7 +2571,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autoch-pattem combi-bolter",
@@ -2629,23 +2807,17 @@
             "value": 7
           },
           "Rampart crest": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2694,7 +2866,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2774,7 +2947,8 @@
             "value": 6
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy plasma axe",
@@ -2905,7 +3079,8 @@
             "value": 4
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -2952,7 +3127,8 @@
             "value": 3
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt cannon",
@@ -3067,7 +3243,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -3110,7 +3287,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -3169,7 +3347,8 @@
             "value": 4
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -3212,7 +3391,8 @@
             "value": 2
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "EtaCarn plasma gun",
@@ -3501,7 +3681,8 @@
             "value": 4
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autoch-pattern bolt pistol",
@@ -4042,7 +4223,8 @@
             "value": 2
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "EtaCarn plasma gun",
@@ -4331,7 +4513,8 @@
             "value": 4
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -4378,7 +4561,8 @@
             "value": 4
           },
           "Base": {
-            "value": "90 x 52mm"
+            "value": "90 x 52mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Bolt revolver",
@@ -4695,7 +4879,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "HYLas beam cannon",
@@ -4897,7 +5082,8 @@
             "value": 4
           },
           "Base": {
-            "value": "28mm"
+            "value": "28mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autoch-pattern bolt pistol",
@@ -5454,6 +5640,593 @@
           }
         }
       },
+      "Stratagem§Accelerated Response": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **VOTANN ACCELERATED** unit from your army is selected to [Advance](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Until the end of the phase, add 12″ to the Move characteristic of each model in this unit (this is not cumulative with the similar bonus provided by the **Steady Advance** ability).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Ancestral Sentence": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **VOTANN** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a VOTANN** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack against a target that has 1 or more **Judgement tokens**, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Appraising Glare": {
+        "text": "Use this Stratagem when a **GREATER THURIAN** LEAGUE** KÂHL** model from your army uses its Grim Efficiency** ability. The selected enemy unit gains one additional **Judgement token**.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Bastion Running": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **HEKATON LAND** FORTRESS** model from your army. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Bequest Of The Votann": {
+        "text": "Use this Stratagem before the battle. Select one Theyn or Hesyr model from your army. That model can have one of the following [Ancestral Relics](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Ancestral-Relics), even though they are not a [**CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) model: [The Grey Crest](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#The-Grey-Crest); [Grudge’s End](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Grudge-s-End); [The Hearthfist](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#The-Hearthfist); [Wârpestryk](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#W-rpestryk). Each Relic in your army must be unique. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Bloody Expectations": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **KRONUS HEGEMONY** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Combat Surgery": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **VOTANN MEDIC** unit from your army that is below its [Starting Strength](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Starting-Strength-Half-strength-and-Destroyed-Units) and not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. Up to D3 destroyed models are returned to that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Concussion Blast": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **VOTANN CONCUSSION** unit from your army is selected to shoot. Select one enemy unit within 6″ of that unit. Until the start of your next Shooting phase:\n\n* The selected enemy unit cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible).\n* Each time a model in the selected enemy unit makes an attack, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Core-buster Fire Pattern": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) after an enemy unit is hit by an attack made by a [beam weapon](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Beam-Weapons) fired by a **VOTANN** model from your army. Until the end of the phase, each time that enemy unit is hit by another attack made by a beam weapon fired by a VOTANN** model from your army, roll one D6: on 4+, that enemy unit suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to the normal damage. A unit can only suffer a maximum of 6 mortal wounds per phase due to this Stratagem.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Cult Of Veneration": {
+        "text": "Use this Stratagem in any phase, when a **TRANS-HYPERIAN ALLIANCE** model from your army would lose a wound as the result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds). Until the end of the phase, each time that model, or another model in its unit, would lose a wound as the result of a mortal wound, roll one D6: on a 5+, that wound is not lost.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Cyberstimm Infusion": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **VOTANN BESERKS** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Familial Loyalty": {
+        "text": "Use this Stratagem in your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **VOTANN INFANTRY** or **VOTANN BIKER** unit from your army. Until the end of the phase, that unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it was a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Grimwrought Barrier": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **VOTANN** unit from your army that is within 9″ of a friendly GRIMNYR** model.\n\n* That unit, and the models it contains, stop being affected by any psychic powers that had been affecting it that had been [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by an enemy unit.\n* Until the start of your next Command phase, that unit, and the models it contains, are not affected by any Malediction psychic powers manifested.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Huntr’s Mark": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), before making a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for an attack made by a **VOTANN** model from your army. If the target unit has 1 or more **Judgement tokens**, do not make a hit roll for that attack: it automatically hits the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§In The Right Hands": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the VOTANN** keyword. Select one **VOTANN CHARACTER** model from your army and give them one [Ancestral Relic](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Ancestral-Relics) (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Ion Storm": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **VOTANN** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with an [ion weapon](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Ion-Weapons), an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any normal damage (to a maximum of 6 mortal wounds). If that unit contains 11 or more models, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "2/1",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Kinbond": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of 2 or more **VOTANN CORE** units from your army. Until the end of the phase, each time a VOTANN** CORE** model makes a melee attack against that enemy unit, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Legend Of The League": {
+        "text": "Use this Stratagem before the battle, when you arc mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the VOTANN** keyword. Select one **VOTANN CHARACTER** model from your army and determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) for it (this must be a Warlord Trait it can have); that model is only regarded as your WARLORD** for the purposes of that Warlord Trait. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results), and you cannot use this Stratagem to give a model two Warlord Traits. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Light’em Up": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), after a **VOTANN SEARCHLIGHT** unit from your army has resolved its attacks. Select one enemy unit that was hit by one or more of that unit’s ranged attacks this phase; if every unit in your army is from the same [League](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#The-Leagues) (excluding UNALIGNED** units), the selected enemy unit gains 1 **Judgement token**.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Luck Has. Need Keeps. Toil Earns.": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **VOTANN CORE** INFANTRY** unit from your army that is within range of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers). Until the start of your next Movement phase, while that unit is within range of that objective marker:\n\n* That unit automatically passes [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests).\n* Unless that unit makes a ranged attack or [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit), that unit can ignore any rules that would cause any [actions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) they are performing to fail.\n* Each time a model in that unit would lose a wound, roll one D6: on a 6, that wound is not lost.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Mag-riders": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **VOTANN BIKER** unit from your army is selected as the target of a ranged attack. Until the end of the phase, each time an attack is made against that unit:\n\n* Subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* If that unit has [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) during its previous turn, that attack’s hit roll cannot be [re-rolled](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Re-rolls).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Multiwave System Jammer": {
+        "text": "Use this Stratagem at the start of any phase. Select one **VOTANN COMMS** unit from your army, then select one enemy unit within 12″ of that unit. Until the end of the phase, that enemy unit cannot be affected by any [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) that units in your opponent’s army have.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§New-found Nemesis": {
+        "text": "Use this Stratagem when a **VOTANN** WARLORD** or GRIMNYR** model from your army is destroyed. The enemy unit that destroyed that model gains 2 **Judgement tokens**. If your destroyed model was a GRIMNYR**, that enemy unit gains 3 Judgement tokens instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Optimised Volley": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **VOTANN** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with a [bolt weapons](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Bolt-Weapons), on an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6, one additional hit is scored; if the target unit contained 11 or more models when this Stratagem was used, then 2 additional hits are scored instead.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Outflanking Pioneers": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **HERNKYN PIONEERS** unit from your army that is more than 6″ away from any enemy models and within 6″ of any battlefield edge. If the mission you are playing is using the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rules, place that unit into Strategic Reserves - that unit cannot arrive from Strategic Reserves in the same turn it is placed into Strategic Reserves.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Overcharged Shield Crest": {
+        "text": "Use this Stratagem in any phase, when a **VOTANN SHIELD** CREST** unit from your army is selected as the target of a ranged attack. Until the end of the phase, each time a ranged attack is made against that unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit contains 5 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Pan Spectral Warning": {
+        "text": "Use this Stratagem at the end of the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your opponent’s [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **VOTANN SCANNER** unit from your army that is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. That unit can shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), but its models can only target a single eligible enemy unit that was set up as Reinforcements this turn and that is within 12″ of their unit when doing so.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Personal Grudge": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **VOTANN CHARACTER** unit from your army and one enemy unit that is on the battlefield. Until the end of the battle, each time a model in that CHARACTER** unit makes an attack against the selected enemy unit, that enemy unit is considered to have 3 **Judgement tokens** on it for the purposes of determining what bonuses apply to the attacking model’s attacks. You can only use this Stratagem if every unit from your army is from the same [League](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#The-Leagues) (excluding UNALIGNED** unit). You can only use this Stratagem once, unless you are playing an Onslaught battle (in which case, you can use this Stratagem twice).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Point-blank Fusillade": {
+        "text": "Use this Stratagem at the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **VOTANN INFANTRY** or **VOTANN BIKER** unit from your army. Until the end of the phase, models in this unit can make attacks with ranged weapons even when their unit is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of enemy units, but they can only make such attacks against enemy units that they are within Engagement Range of (if a model makes an attack with a [beam weapon](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Beam-Weapons), that attack is only resolved against that target unit and it cannot hit any other unit). In such circumstances, those models can target an enemy unit even if other friendly units are within Engagement Range of the same enemy unit. Note that if a model in this unit has more than one ranged weapon, you can still choose to target units that are not within Engagement Range of that model’s unit, but that model will only be able to make the attacks with that weapon if all enemy units within Engagement Range of that model’s unit have been destroyed when you come to resolve those attacks. In addition, when a model in this unit shoots a [Heavy weapon](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#HEAVY), subtract 1 from the [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) when resolving that weapon’s attacks while any enemy units are within Engagement Range of that model’s unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Pulsed Beam Discharge": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **YMYR CONGLOMERATE** unit from your army is selected to shoot. Select one model in that unit, and then select one [beam weapon](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Beam-Weapons) that it is equipped with. Until the end of the phase, each time a hit is scored with that weapon, the target suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to the normal Damage.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Reactive Reprisal": {
+        "text": "Use this Stratagem in your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), after an enemy unit that had 1 or more **Judgement tokens** when it was selected to shoot has resolved its attacks. Select one **VOTANN CORE** unit from your army that was hit by one or more of that enemy unit’s attacks this phase, and that is not within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units. That VOTANN** CORE** unit can immediately shoot as if it were your Shooting phase, but its models can only target that enemy unit when doing so, and only if that enemy unit is an eligible target. After resolving its attacks, that VOTANN** CORE** unit is then not eligible to shoot in your next Shooting phase. If that VOTANN** CORE** unit was a unit of **HEARTHKYN WARRIORS**, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Site-to-site Transport": {
+        "text": "Use this Stratagem at the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one **VOTANN TELEPORTATION** unit from your army and remove it from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of this Movement phase, set this unit back up on the battlefield, anywhere that is more than 9″ away from any enemy models. You cannot select the same unit to use this Stratagem more than once per battle. If the unit you selected was a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters), this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Subterranean Explosives": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **SUBTERRANEAN EXPLOSIVES** unit from your army is selected to shoot. Until the end of the phase, each time that unit makes a ranged attack, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll), and, if a hit is scored against a target that is not TITANIC** and cannot [FLY**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying), then until the start of your next Shooting phase:\n\n* Halve the Move characteristic of models in the target unit.\n* The target unit is not eligible to fight until after all other eligible units from your army have fought.\n\nDesigner’s Note:** *We recommend placing a Mole Grenade model next to enemy units while they are under the effects of this Stratagem, removing it at the start of your next [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) (a Mole Grenade does not count as a model for any rules purposes).*",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Movement"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§The Might Of The Einhyr": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **EINHYR** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when an EINHYR** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Waste Not Your Last Breath": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE) when an **URANI-SURTR REGULATES** CHARACTER** model from your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play - it can fight after the attacking model’s unit has finished [making attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Making-Attacks). After resolving the destroyed model’s attacks, it is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
+      "Stratagem§Well-ordered Retreat": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **VOTANN CORE** unit from your army [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). That unit is still eligible to shoot this turn even though it Fell Back.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Leagues of Votann Strat"
+          ]
+        }
+      },
       "Troops§Hearthkyn Warriors": {
         "stats": {
           "Power Level": {
@@ -5463,23 +6236,17 @@
             "value": "Hearthkyn Warrior"
           },
           "Medipack": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Medipack"
@@ -5491,23 +6258,17 @@
             "dynamic": true
           },
           "Multiwave comms array": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Multiwave comms array"
@@ -5519,23 +6280,17 @@
             "dynamic": true
           },
           "Pan spectral scanner": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Pan spectral scanner"
@@ -5649,8 +6404,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "The bearer’s unit gains the **COMMS** keyword. Whilst the bearer’s unit is within 24″ of a friendly **{v} KÂHL** model, the bearer’s unit is considered to be within range of that model’s Kindred Hero** aura ability.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -5669,8 +6423,7 @@
             "statType": "term",
             "value": "&lt;LEAGUE&gt;",
             "text": "**Rampart Shield (Aura)**:** While a friendly **GREATER THURIAN** LEAGUE** INFANTRY** or **GREATER THURIAN** LEAGUE** BIKER** unit is within 6″ of this model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. The range of this ability cannot be increased by any means (e.g. [Ancestral Bearing](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Warlord-Traits))\n\n***ERROR***—*The following text was found on another wargear with the same name:*  \nThe bearer’s unit gains the **SHIELD CREST** keyword. In addition, the bearer has the following ability:‘Rampart Shield (Aura)**:** While a friendly **{v} INFANTRY** or **{v} BIKER** unit is within 6″ of this model, models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) against ranged attacks. The range of this ability cannot be increased by any means (e.g. [Ancestral Bearing](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Warlord-Traits)).’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -5689,116 +6442,46 @@
         "text": "The bearer’s unit gains the **SHIELD CREST** keyword. In addition, the bearer increases its Wounds characteristic to 6 and has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves).\n\n***ERROR***—*The following text was found on another wargear with the same name:*  \nThe bearer’s unit gains the **SHIELD CREST** keyword. In addition, the bearer increases its Wounds characteristic to 3 and has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
       },
       "Warlord Trait§A Long List": {
-        "text": "* Each time this **WARLORD** makes a ranged attack, the target does not receive the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover) against that attack.\n* Each time you select a target for this WARLORD**’s ranged weapons, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule for any unit that has one or more **Judgement tokens**.\n* At the end of each phase, if any enemy units with Judgement tokens were destroyed during that phase by a &lt;LEAGUE&gt;** unit from your army, select one enemy unit that is visible to this WARLORD**; that unit gains 1 Judgement token.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "* Each time this **WARLORD** makes a ranged attack, the target does not receive the benefits of [Light Cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover) against that attack.\n* Each time you select a target for this WARLORD**’s ranged weapons, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule for any unit that has one or more **Judgement tokens**.\n* At the end of each phase, if any enemy units with Judgement tokens were destroyed during that phase by a &lt;LEAGUE&gt;** unit from your army, select one enemy unit that is visible to this WARLORD**; that unit gains 1 Judgement token."
       },
       "Warlord Trait§Ancestral Bearing": {
-        "text": "* Each time this **WARLORD** uses an ability in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) that specifies a range, you can add 3″ to the range of that ability (to a maximum of 12\").\n* Add 3″ to the range of this WARLORD**’s [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\").",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "* Each time this **WARLORD** uses an ability in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE) that specifies a range, you can add 3″ to the range of that ability (to a maximum of 12\").\n* Add 3″ to the range of this WARLORD**’s [Aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) (to a maximum of 12\")."
       },
       "Warlord Trait§Ancestral Power": {
-        "text": "Add 6″ to the range of psychic powers from the **[Skeinwrought discipline](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Skeinwrought-Discipline)** that are [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Add 6″ to the range of psychic powers from the **[Skeinwrought discipline](https://wahapedia.ru/wh40k9ed/factions/leagues-of-votann/#Skeinwrought-Discipline)** that are [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord)."
       },
       "Warlord Trait§Exemplary Hero": {
-        "text": "Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) fights, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) or MONSTER** units, then until that fight is resolved, add 1 to this WARLORD**’s Attacks characteristic.\n\n* Each time this WARLORD** makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Each time this WARLORD** makes a melee attack against an enemy CHARACTER** or MONSTER** unit, add 1 to the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) fights, if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) or MONSTER** units, then until that fight is resolved, add 1 to this WARLORD**’s Attacks characteristic.\n\n* Each time this WARLORD** makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* Each time this WARLORD** makes a melee attack against an enemy CHARACTER** or MONSTER** unit, add 1 to the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Experienced Eye": {
-        "text": "In each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) can use their Grim Efficiency** ability one additional time, but only if you select an enemy unit that has not already been selected for this ability during this phase.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "In each of your [Command phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) can use their Grim Efficiency** ability one additional time, but only if you select an enemy unit that has not already been selected for this ability during this phase."
       },
       "Warlord Trait§Grim Demeanour (aura)": {
-        "text": "While a friendly **&lt;LEAGUE&gt; CORE** unit is within 6″ of this WARLORD**:\n\n* That unit can ignore any or all [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics) to its Leadership characteristic.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, you can ignore any or all modifiers.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "While a friendly **&lt;LEAGUE&gt; CORE** unit is within 6″ of this WARLORD**:\n\n* That unit can ignore any or all [modifiers](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Modifying-Characteristics) to its Leadership characteristic.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, you can ignore any or all modifiers."
       },
       "Warlord Trait§Grim Pragmatism": {
-        "text": "Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) would lose a wound, roll one D6: on a 5+, that wound is not lost.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) would lose a wound, roll one D6: on a 5+, that wound is not lost."
       },
       "Warlord Trait§Guild Affiliate": {
-        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **&lt;LEAGUE&gt; CORE** unit within 6″ of this WARLORD**. Until the start of your next Command phase, that unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), you can select one friendly **&lt;LEAGUE&gt; CORE** unit within 6″ of this WARLORD**. Until the start of your next Command phase, that unit has the [Objective Secured](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Secured) ability. If a model in that unit already has this ability, that model counts as one additional model when determining control of an [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers)."
       },
       "Warlord Trait§Guild Connections": {
-        "text": "The Damage characteristic of all weapons this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is equipped with (excluding Relics) is increased by 1.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "The Damage characteristic of all weapons this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is equipped with (excluding Relics) is increased by 1."
       },
       "Warlord Trait§Master Armourer": {
-        "text": "* Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) repairs a model using its Brôkhyr’s Guild** ability, the model being repaired regains up to 3 lost wounds instead of D3 (the model being repaired regains up to 4 lost wounds instead while this BRÔKHYR** FORGE-MASTER**’s unit includes 1 or more <span class=\"kwbs\">E-COG</span> models, as described in the E-COG Support** ability).\n* Once per battle round, when a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for a friendly **&lt;LEAGUE&gt; VEHICLE** or **&lt;LEAGUE&gt; EXO-FRAME** model that is within 6″ of this WARLORD**, this WARLORD** can use this trait. When it does so, the Damage characteristic of that attack is changed to 0.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "* Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) repairs a model using its Brôkhyr’s Guild** ability, the model being repaired regains up to 3 lost wounds instead of D3 (the model being repaired regains up to 4 lost wounds instead while this BRÔKHYR** FORGE-MASTER**’s unit includes 1 or more <span class=\"kwbs\">E-COG</span> models, as described in the E-COG Support** ability).\n* Once per battle round, when a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) is failed for a friendly **&lt;LEAGUE&gt; VEHICLE** or **&lt;LEAGUE&gt; EXO-FRAME** model that is within 6″ of this WARLORD**, this WARLORD** can use this trait. When it does so, the Damage characteristic of that attack is changed to 0."
       },
       "Warlord Trait§Nomad Strategist": {
-        "text": "At the start of the first battle round, you can select up to three friendly **TRANS-HYPERIAN ALLIANCE** units [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) your deployment zone. Remove those units from the battlefield, then set them up anywhere on the battlefield that is wholly within your deployment zone. If the mission uses the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rules, any of those units can be placed into Strategic Reserves without having to spend any additional [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points), regardless of how many units are already in Strategic Reserves. If both players have abilities that redeploy units, [roll off](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Roll-offs); the winner chooses who redeploys their units first.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "At the start of the first battle round, you can select up to three friendly **TRANS-HYPERIAN ALLIANCE** units [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) your deployment zone. Remove those units from the battlefield, then set them up anywhere on the battlefield that is wholly within your deployment zone. If the mission uses the [Strategic Reserves](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Strategic-Reserves) rules, any of those units can be placed into Strategic Reserves without having to spend any additional [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points), regardless of how many units are already in Strategic Reserves. If both players have abilities that redeploy units, [roll off](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Roll-offs); the winner chooses who redeploys their units first."
       },
       "Warlord Trait§Pragmatic Wisdom": {
-        "text": "While this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem you can roll one D6: on a 5+, that Command point is refunded.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "While this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is on the battlefield, each time you spend a [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to use a Stratagem you can roll one D6: on a 5+, that Command point is refunded."
       },
       "Warlord Trait§Unrelenting Toil (aura)": {
-        "text": "While a friendly **&lt;LEAGUE&gt; CORE** unit that is [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) is within 6″ of this WARLORD**, that unit can shoot without that action failing.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "While a friendly **&lt;LEAGUE&gt; CORE** unit that is [performing an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions) is within 6″ of this WARLORD**, that unit can shoot without that action failing."
       },
       "Warlord Trait§Warrior Lord": {
-        "text": "* Each time this **WARLORD** makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time a melee attack made by this WARLORD** is allocated to an enemy model, that enemy model cannot use any rules to ignore the wounds it loses.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "* Each time this **WARLORD** makes a melee attack, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* Each time a melee attack made by this WARLORD** is allocated to an enemy model, that enemy model cannot use any rules to ignore the wounds it loses."
       },
       "Weapon§Ancestor’s vengeance warhead": {
         "stats": {
@@ -5829,7 +6512,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -6024,7 +6708,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -6047,7 +6732,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -6188,7 +6874,8 @@
             "value": -2
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -6269,7 +6956,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -6306,7 +6994,8 @@
             "value": -4
           },
           "D": {
-            "value": "2D3+6"
+            "value": "2D3+6",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -6348,7 +7037,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -6522,7 +7212,8 @@
             "value": -4
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -6548,7 +7239,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -6588,10 +7280,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -6721,7 +7415,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -6844,7 +7539,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"

@@ -1,11 +1,11 @@
 {
   "name": "Unaligned",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -15,7 +15,13 @@
     }
   ],
   "manifest": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "In-game Stratagems": {
+        "assets": {
+          "traits": []
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§Automated Weapons": {
         "text": "Unless a friendly unit is [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) inside this model, each of its weapons can only target the nearest visible enemy. If two units are equally close, you may choose which is targeted.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nUnless a friendly unit is embarked aboard this model, this model’s weapons can only target the closest visible enemy unit. Attacks made with a quad Icarus lascannon can instead target the closest visible enemy unit that can [FLY](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Flying). In either case, if two or more units are equally close, you can choose which is targeted.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nUnless a friendly unit is [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) aboard, this model’s weapons can only target the closest visible enemy unit. If two or more units are equally close, you can choose which is targeted.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nEach time this unit is selected to shoot, for each Tower Section or Gate Tower Section model in this unit, if no friendly units are [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within that model, you can only select one of the following targets for that section’s attacks:\n\n* The closest eligible enemy unit.\n* The closest eligible enemy [**AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) unit.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), each time this model is selected to shoot, if no friendly units are embarked within it, you can only select one of the following targets for that weapon’s attacks:\n\n* The closest eligible enemy unit.\n* The closest eligible enemy [**AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) unit.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), each time a Gun Emplacement from your army is selected to shoot, you can only select one of the following targets for its attacks:\n\n* The closest eligible enemy unit.\n* The closest eligible enemy [**AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) unit.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), each time this model is selected to shoot, if no friendly units are [embarked](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Embark) within it, its Redemption missile silo can not be fired, its heavy bolters can only target the closest eligible enemy unit, and its Redemption lascannons can only select one of the following targets for that weapon’s attacks:\n\n* The closest eligible enemy unit.\n* The closest eligible enemy [**AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) unit.\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIn your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), each time this model is selected to shoot, if no friendly units are embarked within it then its heavy bolters can only target the closest eligible enemy unit and, if it is equipped with either an Icarus lascannon or a quad-gun, you can only select one of the following targets for that weapon’s attacks:\n\n* The closest eligible enemy unit.\n* The closest eligible enemy [**AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) unit."
@@ -131,7 +137,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -256,7 +263,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -326,7 +334,8 @@
             "value": 3
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -420,23 +429,17 @@
             "value": 10
           },
           "Comms antenna": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Comms antenna"
@@ -448,23 +451,17 @@
             "dynamic": true
           },
           "Roof hatch": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -489,7 +486,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -521,7 +519,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy bolter",
@@ -876,13 +875,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 8
@@ -894,13 +895,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -950,7 +953,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -982,7 +986,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Redemption lascannons",
@@ -1275,13 +1280,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 8
@@ -1293,13 +1300,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1444,13 +1453,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 10
@@ -1462,13 +1473,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1519,13 +1532,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 9
@@ -1537,13 +1552,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1592,7 +1609,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -1616,7 +1634,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Primaris Redoubt turbo-laser destructor",
@@ -1918,31 +1937,39 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "W": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "A": {
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2045,10 +2072,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -2069,7 +2098,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2116,13 +2146,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 10
@@ -2134,13 +2166,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2212,7 +2246,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         }
       },
@@ -2225,10 +2260,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -2249,7 +2286,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -2262,7 +2300,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -2286,7 +2325,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin heavy bolter",
@@ -2377,7 +2417,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
@@ -2401,7 +2442,8 @@
             "value": 4
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Quad gun",
@@ -2476,31 +2518,39 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "W": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "A": {
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -2513,31 +2563,39 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "W": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "A": {
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -2574,7 +2632,8 @@
             "value": 4
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -2592,7 +2651,8 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 4
@@ -2616,7 +2676,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Twin long-barrelled autocannon",
@@ -2707,13 +2768,15 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
             "value": 5
           },
           "S": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "T": {
             "value": 8
@@ -2725,13 +2788,15 @@
             "value": "null"
           },
           "Ld": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "Sv": {
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Punisher gatling cannon",
@@ -2822,10 +2887,12 @@
             "value": "-"
           },
           "WS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "BS": {
-            "value": "null"
+            "value": "null",
+            "statType": "term"
           },
           "S": {
             "value": 10
@@ -2846,7 +2913,8 @@
             "value": 2
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           }
         }
       },
@@ -2925,7 +2993,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -2945,7 +3014,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -3003,10 +3073,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -3025,7 +3097,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -3103,7 +3176,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3143,7 +3217,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 14
@@ -3166,7 +3241,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -3182,7 +3258,8 @@
             "value": -4
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -3225,7 +3302,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 8
@@ -3271,7 +3349,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3294,7 +3373,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3340,7 +3420,8 @@
             "value": -3
           },
           "D": {
-            "value": "2D6"
+            "value": "2D6",
+            "statType": "term"
           },
           "S": {
             "value": 16
@@ -3425,7 +3506,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3448,7 +3530,8 @@
             "value": -2
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3468,7 +3551,8 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3533,7 +3617,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -3577,7 +3662,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -3591,13 +3677,16 @@
       "Weapon§Vortex missile battery": {
         "stats": {
           "AP": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "D": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "S": {
-            "value": "-"
+            "value": "-",
+            "statType": "term"
           },
           "Type": {
             "value": "Heavy D6"

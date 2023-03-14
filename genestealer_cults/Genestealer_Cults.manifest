@@ -1,11 +1,11 @@
 {
   "name": "Genestealer Cults",
-  "revision": "0.0.15",
+  "revision": "0.0.17",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -53,7 +53,7 @@
           }
         },
         "rules": {
-          "populate faction": {
+          "populateUnitCult": {
             "evals": [
               {
                 "paths": [
@@ -71,6 +71,7 @@
               }
             ],
             "failState": "pass",
+            "order": 10,
             "evaluate": "OR",
             "actions": [
               {
@@ -80,9 +81,6 @@
                     "assets",
                     "templateClass",
                     "Unit",
-                    "traits",
-                    "classification",
-                    "Ability",
                     "stats",
                     "Cult",
                     "value"
@@ -95,6 +93,22 @@
                   "Cult",
                   "value"
                 ],
+                "iterations": 1
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "templateClass",
+                    "Unit",
+                    "stats",
+                    "Cult",
+                    "visibility"
+                  ]
+                ],
+                "actionType": "set",
+                "value": "hidden",
                 "iterations": 1
               }
             ]
@@ -114,6 +128,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -124,6 +152,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -149,6 +185,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -159,6 +209,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -184,6 +242,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -194,6 +266,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -219,6 +299,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -229,6 +323,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -254,6 +356,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -264,6 +380,14 @@
                 "paths": [
                   [
                     "{self}",
+                    "constraints",
+                    "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
                     "constraints",
                     "none"
                   ]
@@ -289,6 +413,20 @@
                 "operator": "AND",
                 "not": true,
                 "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
               }
             ],
             "failState": "pass",
@@ -301,6 +439,14 @@
                     "{self}",
                     "constraints",
                     "none"
+                  ],
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Unit",
+                    "constraints",
+                    "none"
                   ]
                 ],
                 "actionType": "add",
@@ -311,17 +457,98 @@
           }
         }
       },
+      "In-game Stratagems": {
+        "assets": {
+          "traits": [
+            "Stratagem§Bore Through",
+            "Stratagem§Rapid Advance",
+            "Stratagem§One With The Shadows",
+            "Stratagem§Dig Them Out",
+            "Stratagem§Overload Fuel Cells",
+            "Stratagem§Monstrous Vigour",
+            "Stratagem§Raking Fire",
+            "Stratagem§Massed Firearms",
+            "Stratagem§Devoted Crew",
+            "Stratagem§Hyper-metabolism",
+            "Stratagem§Rigged To Blow",
+            "Stratagem§Data Parasite",
+            "Stratagem§Legendary Demise",
+            "Stratagem§Gestalt Consciousness",
+            "Stratagem§Reckless Demolitions",
+            "Stratagem§Pack Hunters",
+            "Stratagem§Genetic Lineage",
+            "Stratagem§Meticulous Uprising",
+            "Stratagem§Clandestine Goals",
+            "Stratagem§Booby Trap",
+            "Stratagem§Lurk In The Shadows",
+            "Stratagem§Return To The Shadows",
+            "Stratagem§Covering Fire",
+            "Stratagem§Tunnel Crawlers",
+            "Stratagem§Fanatical Devotion",
+            "Stratagem§Roaming Engagement",
+            "Stratagem§Coordinated Assault",
+            "Stratagem§Neural Overload",
+            "Stratagem§Summon Familiar",
+            "Stratagem§Primed Explosive",
+            "Stratagem§Anointed Throng",
+            "Stratagem§Devotion Till Death",
+            "Stratagem§Fight For The Anointed One!",
+            "Stratagem§Deliverance Broodsurge",
+            "Stratagem§The First To Draw Blood",
+            "Stratagem§Reckless Manoeuvre",
+            "Stratagem§Subterranean Defence",
+            "Stratagem§A Plan Generations In The Making",
+            "Stratagem§Fire Discipline",
+            "Stratagem§Drive-by Demolitions",
+            "Stratagem§Vengeance For The Martyred",
+            "Stratagem§Monstrous Bio-horrors"
+          ]
+        }
+      },
       "Sacred Relics of the Cult": {
         "templateClass": "Relic"
       },
       "Unit": {
+        "stats": {
+          "Cult": {
+            "statType": "rank",
+            "value": "-",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Bladed Cog": {
+                "order": 1
+              },
+              "Cult of the Four-armed Emperor": {
+                "order": 2
+              },
+              "Hivecult": {
+                "order": 3
+              },
+              "Pauper Princes": {
+                "order": 4
+              },
+              "Rusted Claw": {
+                "order": 5
+              },
+              "Twisted Helix": {
+                "order": 6
+              }
+            },
+            "dynamic": true,
+            "group": "Options",
+            "statOrder": 20,
+            "visibility": "active"
+          }
+        },
         "rules": {
-          "replace subfaction keyword": {
+          "replaceCultKeyword": {
             "evals": [
               {
                 "paths": [
                   [
-                    "{parent}",
+                    "{self}",
                     "stats",
                     "Cult",
                     "value"
@@ -329,7 +556,8 @@
                 ],
                 "value": "-",
                 "operator": "AND",
-                "not": true
+                "not": true,
+                "actionable": true
               },
               {
                 "paths": [
@@ -339,7 +567,7 @@
                     "Faction"
                   ]
                 ],
-                "value": "<Cult>",
+                "value": "<Brotherhood>",
                 "contains": true,
                 "operator": "AND",
                 "not": false,
@@ -358,7 +586,7 @@
                   ]
                 ],
                 "actionType": "remove",
-                "value": "<Cult>",
+                "value": "<Brotherhood>",
                 "iterations": 1
               },
               {
@@ -371,12 +599,53 @@
                 ],
                 "actionType": "add",
                 "value": [
-                  "{parent}",
+                  "{self}",
                   "stats",
                   "Cult",
-                  "processed",
-                  "rank",
-                  "current"
+                  "value"
+                ],
+                "iterations": 1
+              }
+            ]
+          },
+          "populateAbilityCult": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "OR",
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "assets",
+                    "classification",
+                    "Ability",
+                    "stats",
+                    "Cult",
+                    "value"
+                  ]
+                ],
+                "actionType": "set",
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Cult",
+                  "value"
                 ],
                 "iterations": 1
               }
@@ -402,8 +671,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "During deployment, select one **{v} CHARACTER** model from your army (excluding a LOCUS** model) to be this model’s ward.\n\n* While this [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 3″ of its ward, that ward can use the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule even if this unit contains fewer than 3 models.\n* While this model is a viable target for melee attacks made by an enemy model, that enemy model cannot target this model’s ward with melee attacks.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -429,8 +697,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "While a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -447,8 +714,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "This model can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Twisted Experiment (Action):** At the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), one BIOPHAGUS** model from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). When this action is started, select one friendly **{v} CORE** or **{v} ABERRANTS** unit that is within 3″ of the model performing this action and does not have a genomic enhancement (see below). This action is completed at the end of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), provided the unit you selected is still within 3″ of the BIOPHAGUS** model performing this action. If this action is successfully completed, the unit you selected gains one genomic enhancement from the list below for the rest of the battle. If that unit is an ABERRANTS** unit, you can select which genomic enhancement it gains; otherwise, roll one D3 to randomly generate one.\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:36px;height:0px;\">D3**</td><td style=\"border-width:0 0 0 0;vertical-align:top;width:312px;height:0px;\">Genomic Enhancements**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:36px;height:0px;\">1**</td><td style=\"border-width:0 0 0 0;vertical-align:top;width:312px;height:0px;\">Enhanced Musculature:** Each time a model in this unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:36px;height:0px;\">2**</td><td style=\"border-width:0 0 0 0;vertical-align:top;width:312px;height:0px;\">Enhanced Aggression:** Each time a model in this unit makes a melee attack, an unmodified **hit roll** of 6 scores 1 additional hit.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:36px;height:0px;\">3**</td><td style=\"border-width:0 0 0 0;vertical-align:top;width:312px;height:0px;\">Enhanced Resilience:** Each time a model in this unit would lose a wound, roll one D6: on a 5+, that wound is not lost.</td></tr></tbody></table></td></tr></tbody></table>",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -462,8 +728,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "If this model destroys any enemy models in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), until the end of the phase, it is a heroic inspiration. If this model is a heroic inspiration, while a friendly **{v} CORE** unit is within 6″ of this model, each time a model in that unit makes an attack, re-roll a [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -486,8 +751,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "While a friendly **{v}** unit is within 6″ of this model, each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, you can ignore any or all modifiers.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -498,8 +762,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "While this [model is within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) 6″ of a friendly **{v} ATALAN** JACKALS** or **{v} VEHICLE** unit, enemy models cannot target this model with ranged weapons unless it is the closest eligible target. Each time an attack is made against this model, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -510,8 +773,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **{v} CORE** unit within 9″ of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, re-roll a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -525,8 +787,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), if a friendly **{v} CORE** unit is within 6″ of this model, that unit can **summon the** cult**.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -546,8 +807,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **{v} CORE** CROSSFIRE** unit within 9″ of this model, then select one enemy unit within 36″ of and visible to this model. Until the end of the turn, each time this model or a model in that friendly unit makes a ranged attack against that enemy unit, that enemy unit is treated as being Exposed** for that attack.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -558,8 +818,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **{v} CORE** unit within 12″ of this model. Until the start of your next Command phase:\n\n* Each time that unit [performs an action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions), it can shoot without that action failing.\n* Each time a [Combat Attrition test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Combat-Attrition-Tests) is taken for that unit, it is automatically passed.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -585,8 +844,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "This model can perform the following [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions):\n\n\n\n**Sacred Cult Banner (Action):** At the end of the [Move Units](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Move-Units) step of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), one **ACOLYTE ICONWARD** model from your army can start to [perform this action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-Actions). This action is completed at the start of your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). If this action is successfully completed, the model that performed this action gains the following [aura ability](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) until the end of the turn: ‘Sacred Cult Banner (Aura)**:** While a friendly **{v} INFANTRY**, **{v} BIKER** or **{v} CHARACTER** unit (excluding a GENESTEALER** unit) is within 6″ of this model, add 1 to [charge rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) made for that unit.’",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -615,8 +873,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "While a friendly **{v} INFANTRY** or **{v} BIKER** unit is within 6″ of this model, each time a model in that unit would lose a wound as a result of a [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in the [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), roll one D6: on a 5+, that wound is not lost.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -627,8 +884,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **{v} CORE** unit on the battlefield, then select one of the following friendly **{v} CHARACTER** models within 6″ of this model: PRIMUS**; **JACKAL ALPHUS**; CLAMAVUS**. Until the start of your next Command phase, that {v}** CORE** unit is considered to be within range of that {v}** CHARACTER** model’s [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities), and can be selected for any of that {v}** CHARACTER** model’s abilities that instruct you to select a friendly unit within a specified range (e.g. Priority Target**).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -645,8 +901,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "While a friendly **{v} ABERRANT** unit is within 6″ of this model, each time a model in that unit makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -657,8 +912,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "Each time a saving throw made for a **{v} CHARACTER** model from your army is failed, you can select one other friendly {v}** or [BROOD** BROTHERS**](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Brood-Brothers) model with this ability within 3″ of that CHARACTER** model and take an Unquestioning Loyalty test. To do so, roll one D6, adding 1 to the result if that CHARACTER** model is a PATRIARCH** model: on a 4+, the test is passed and that CHARACTER** model does not suffer damage. Instead, the friendly model you selected is destroyed and the attack sequence ends.",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -778,7 +1032,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy stubber",
@@ -1163,7 +1418,8 @@
             "value": 5
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1211,23 +1467,17 @@
             "value": 2
           },
           "Alchemicus familiar": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1276,7 +1526,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autopistol",
@@ -1506,7 +1757,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1555,23 +1807,17 @@
             "value": "Hybrid Metamorph"
           },
           "Cult icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Cult icon"
@@ -1583,23 +1829,17 @@
             "dynamic": true
           },
           "Cult lash whip": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -1717,7 +1957,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1796,7 +2037,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -1874,7 +2116,8 @@
             "value": 5
           },
           "Base": {
-            "value": "40mm"
+            "value": "40mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2017,7 +2260,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -2104,7 +2348,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Familiar’s claws",
@@ -2270,23 +2515,17 @@
             "value": "Achilles Ridgerunner"
           },
           "Flare launcher": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2305,23 +2544,17 @@
             "dynamic": true
           },
           "Spotter": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2340,23 +2573,17 @@
             "dynamic": true
           },
           "Survey augur": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -2552,7 +2779,8 @@
             "value": 3
           },
           "Base": {
-            "value": "Use model"
+            "value": "Use model",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy mining laser",
@@ -3005,7 +3233,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3082,7 +3311,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3133,23 +3363,17 @@
             "value": 4
           },
           "Psychic familiar": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3198,7 +3422,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autopistol",
@@ -3404,23 +3629,17 @@
             "value": 7
           },
           "Psychic familiar": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -3469,7 +3688,8 @@
             "value": 4
           },
           "Base": {
-            "value": "50mm"
+            "value": "50mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Patriarch’s claws",
@@ -3597,7 +3817,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           }
         },
         "keywords": {
@@ -3678,7 +3899,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy power weapon",
@@ -3793,7 +4015,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy power weapon",
@@ -3947,7 +4170,8 @@
             "value": 4
           },
           "Base": {
-            "value": "120 x 92mm"
+            "value": "120 x 92mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Heavy mining laser",
@@ -4172,7 +4396,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autopistol",
@@ -4684,7 +4909,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autopistol",
@@ -5196,7 +5422,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Atalan small arms",
@@ -5470,7 +5697,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60 x 35mm"
+            "value": "60 x 35mm",
+            "statType": "term"
           }
         }
       },
@@ -5507,7 +5735,8 @@
             "value": 4
           },
           "Base": {
-            "value": "60mm"
+            "value": "60mm",
+            "statType": "term"
           }
         }
       },
@@ -5544,7 +5773,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autopistol",
@@ -5896,7 +6126,8 @@
             "value": 5
           },
           "Base": {
-            "value": "32mm"
+            "value": "32mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autopistol",
@@ -6248,7 +6479,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autogun",
@@ -7035,7 +7267,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           },
           "loadout1": {
             "value": "Autogun",
@@ -7822,7 +8055,8 @@
             "value": 5
           },
           "Base": {
-            "value": "25mm"
+            "value": "25mm",
+            "statType": "term"
           }
         },
         "assets": {
@@ -7873,7 +8107,8 @@
             "value": 3
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8025,6 +8260,738 @@
         },
         "text": "**KELERMORPH** model only. Each time the bearer shoots, you can select any number of liberator autostubs it is equipped with to fire a liberator wyrmtooth round. If you do so, then until that shooting is resolved, each liberator autostub you selected has the following profile:"
       },
+      "Stratagem§A Plan Generations In The Making": {
+        "text": "Use this Stratagem after your opponent uses a Stratagem (excluding [Command Re-roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems)). Until the end of the battle, the CP cost your opponent must pay to use that Stratagem again is increased by 1. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 0
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Anointed Throng": {
+        "text": "Use this Stratagem when choosing your army. Pick a [GENESTEALER CULTS Detachment](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Detachment-Rules) from your army to be an Anointed Throng Specialist Detachment. **ABOMINANTS** and ABERRANTS** in that Detachment gain the ANOINTED THRONG keyword.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Booby Trap": {
+        "text": "Use this Stratagem at the end of your turn. Select one [objective marker](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Objective-Markers) you control that has a **REDUCTUS SABOTEUR** or **GENESTEALER CULTS** CORE** unit from your army within range of it. The next time an enemy unit (excluding [AIRCRAFT**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aircraft) units) ends any kind of move within range of that objective marker, roll one D6: on a 2-4, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds); on a 5+, that enemy unit suffers 3 mortal wounds. You can only select each objective marker for this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Bore Through": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **GENESTEALER** CULTS** unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes an attack with an [industrial weapon](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Industrial-Weapons) against an enemy MONSTER** or VEHICLE** unit, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Clandestine Goals": {
+        "text": "Use this Stratagem after selecting [secondary objectives](https://wahapedia.ru/wh40k9ed/the-rules/matched-play/#Secondary-Objectives) or [Agendas](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Agendas). Choose one of your selections; do not reveal that selection to your opponent. The first time you score victory points or [experience points](https://wahapedia.ru/wh40k9ed/the-rules/narrative-play/#Experience) for that selection, reveal it to your opponent. Note that you must still make a record of your selection; we recommend writing it down and concealing it until revealed. You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Coordinated Assault": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Select one enemy unit that has a **crossfire marker** and is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any GENESTEALER** CULTS** units from your army. Until the end of the phase, that enemy unit is not eligible to fight until after all eligible units from your army have done so.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Covering Fire": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one enemy unit that has a **crossfire marker**. Until the end of the turn, that unit cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch), [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible) or [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Data Parasite": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Select one enemy **VEHICLE** model within 18″ of and visible to a CLAMAVUS** model from your army. If that enemy VEHICLE** model’s characteristics can change as it suffers damage, roll one D6: on a 3+, until the start of your next [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), that enemy VEHICLE** model is considered to have half the number of wounds remaining for the purposes of determining what those characteristics are. If that enemy VEHICLE** model has the TITANIC** keyword, this Stratagem costs 2CP; otherwise, it costs 1CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Command"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Deliverance Broodsurge": {
+        "text": "Use this Stratagem when choosing your army. Pick a [GENESTEALER CULTS Detachment](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Detachment-Rules) from your army to be a Deliverance Broodsurge Specialist Detachment. **ACOLYTE ICONWARDS**, **NEOPHYTE HYBRIDS**, **ACOLYTE HYBRIDS** and **GOLIATH TRUCKS** in that Detachment gain the DELIVERANCE BROODSURGE keyword.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Devoted Crew": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **GENESTEALER CULTS** VEHICLE** model from your army. Until the start of your next Command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Devotion Till Death": {
+        "text": "Use this Stratagem at the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Pick an ANOINTED THRONG **ABERRANT** unit from your army. Until the end of that phase, when a model from that unit is slain, that model is not removed from the battlefield as normal, but can instead immediately [pile in](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Pile-In) and fight, even if it has already been chosen to fight that phase. After its attacks have been resolved, it is then removed from the battlefield.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Dig Them Out": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GENESTEALER** CULTS** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack with an [industrial weapon](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Industrial-Weapons) that targets a unit within 12″ of it, the target is treated as being Exposed** for that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Drive-by Demolitions": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), after a **RUSTED CLAW** ATALAN** unit from your army makes a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move), [Advances](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance) or [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back). One model in that unit can shoot with a [Grenade](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#GRENADE) weapon it is equipped with as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). If it does so:\n\n* When selecting a target for that attack, enemy units that RUSTED** CLAW** ATALAN** unit moved within 6″ of in this phase are eligible targets (even if they are not visible to or in range of the model that has been selected to shoot).\n* Until the end of the phase, do not roll to determine the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) made with that weapon; instead, the maximum number of attacks are made with that weapon (e.g. 6 attacks are made with a [Grenade D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#GRENADE) weapon).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Fanatical Devotion": {
+        "text": "Use this Stratagem in the [Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) step of your opponent’s [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of a **&lt;CULT&gt; PATRIARCH**, **&lt;CULT&gt; PRIMUS** or **&lt;CULT&gt; MAGUS** unit from your army. One friendly **&lt;CULT&gt; CORE** unit that is within 6″ of that enemy unit and not within Engagement Range of any enemy units can [perform a Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention). When performing that Heroic Intervention, each model in that friendly &lt;CULT&gt;** Core unit can move up to 6″ instead of up to 3″ and does not have to finish that move closer to the closest enemy model; instead, at least one model from that unit must end that move within Engagement Range of the selected enemy unit, and no models from that unit can end that move within Engagement Range of any other enemy units (otherwise it does not move).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Fight For The Anointed One!": {
+        "text": "Use this Stratagem at the start of your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Pick an ANOINTED THRONG **ABERRANT** unit within 6″ of an ANOINTED THRONG ABOMINANT**. Re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1 for attacks made by that unit until the end of that phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Fire Discipline": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **HIVECULT CORE** CROSSFIRE** unit from your army is selected to shoot. Select one enemy unit without a **crossfire marker**; that enemy unit gains a crossfire marker before any attacks are resolved against it. Until the end of the phase, models in that CROSSFIRE** unit can only target that enemy unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Gene-sire’s Gifts": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) has the GENESTEALER** CULTS** keyword. Select one **GENESTEALER CULTS** CHARACTER** model from your army and give them one [Sacred Relic of the Cult](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Sacred-Relics-of-the-Cult) (this must be a Relic they could have). Each Relic in your army must be unique, and you cannot use this Stratagem to give a model two Relics. You can only use this Stratagem once, unless you are playing a Strike Force battle (in which case, you can use this Stratagem twice) or an Onslaught battle (in which case, you can use this Stratagem three times).",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Genetic Lineage": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one **ACOLYTE HYBRIDS** or **HYBRID METAMORPHS** unit from your army. Until the end of the turn, that unit is [eligible to charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Charges) in a turn in which it [Advanced](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Gestalt Consciousness": {
+        "text": "Use this Stratagem in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when a **&lt;CULT&gt; PSYKER** model from your army [manifests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) a Blessing psychic power that instructs you to select a friendly unit. When selecting a unit to be affected by that psychic power, you can select one friendly &lt;CULT&gt;** unit anywhere on the battlefield (that unit does not have to be visible to or within any specified range of that PSYKER** model).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Psychic"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Hyper-metabolism": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **GENESTEALER CULTS** CHARACTER** model from your army. That model regains up to D3 lost wounds.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Leaders Of The Cult": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army, if your [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is a **&lt;CULT&gt; PATRIARCH**. Select up to two other &lt;CULT&gt;** models with the HQ [Battlefield Role](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role) from your army and determine one [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits) for each of them (these must be Warlord Traits they could have); those models are only regarded as your WARLORD** for the purposes of those Warlord Traits. Each Warlord Trait in your army must be unique (if randomly generated, re-roll duplicate results). You can only use this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1,
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Legendary Demise": {
+        "text": "Use this Stratagem in any phase, when a **KELERMORPH** model from your army is destroyed by an enemy model. Do not remove that KELERMORPH** model from play; it can, after the attacking model’s unit has finished making its attacks, shoot as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). After resolving these attacks, the destroyed KELERMORPH** model is then removed.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Lurk In The Shadows": {
+        "text": "Use this Stratagem at the start of your opponent’s [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one **GENESTEALER CULTS** INFANTRY** unit from your army. Until the end of the phase, each time an enemy model shoots, if that unit is not the closest eligible target or within 12″ of that enemy model, then until that shooting is resolved, that enemy model cannot target that unit. In addition, until the end of the phase, if the selected unit has the Bodyguard** ability (see [Locus](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/Locus) datasheet), it loses that ability.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Massed Firearms": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GENESTEALER CULTS** CROSSFIRE** unit from your army that contains 6 or more models is selected to shoot. Until the end of the phase, each time a model in that unit makes a ranged attack, if all the models in that unit target one enemy unit that has a **crossfire marker**, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 automatically wounds the target.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Meticulous Uprising": {
+        "text": "Use this Stratagem when you would reveal your [ambush markers](https://wahapedia.ru/wh40k8ed/img/AmbushMarkers.png). If you are playing a Combat Patrol or Incursion battle, you can remove one of your ambush markers. If you are playing a Strike Force or Onslaught battle, you can remove up to two of your ambush markers. For each ambush marker removed, set them up again anywhere on the battlefield that is [wholly within](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Within-and-Wholly-Within) your deployment zone and more than 9″ away from any enemy models. Once you have done so, reveal all of your ambush markers as normal.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Monstrous Bio-horrors": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **TWISTED HELIX** ABERRANT** or **TWISTED HELIX** ABOMINANT** unit from your army is selected to fight. Until the end of the turn:\n\n* Each enemy model destroyed by an attack made by a model in that unit counts as two for the purposes of [Morale tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests).\n* Each time a model in that unit fights, it can frenzy. If it does so, until that fight is resolved, add 1 to that model’s Attacks characteristic and change the Damage characteristic of melee weapons it is equipped with to 1.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Monstrous Vigour": {
+        "text": "Use this Stratagem in any phase, when an **ABERRANT** or ABOMINANT** unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit contains 5 or fewer models, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Neural Overload": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) or the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), after making an attack with a **SANCTUS** model from your army. If an enemy model lost any wounds as a result of that attack but was not destroyed, roll 3D6. If the result is greater than that enemy model’s Leadership characteristic:\n\n* Until the start of your next Shooting phase, that enemy model’s unit loses any [aura abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Aura-Abilities) it has.\n* If that enemy model is a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), its unit suffers [Perils of the Warp](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Perils-of-the-Warp).Each enemy unit can only be affected by this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§One With The Shadows": {
+        "text": "Use this Stratagem in your opponents [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GENESTEALER CULTS** INFANTRY** unit from your army is selected as the target of an attack. Until the end of the phase, each time a ranged attack is allocated to a model in that unit while it is receiving the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover), add an additional 1 to any armour [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made against that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Overload Fuel Cells": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GENESTEALER** CULTS** unit from your army is selected to shoot, or in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a GENESTEALER** CULTS** unit from your army is selected to fight. Until the end of the phase, each time an [industrial weapon](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Industrial-Weapons) is selected for a model in that unit to attack with, that model can overload it. If it does so, then until that shooting or fight is resolved, each time that model makes an attack with that weapon:\n\n* If it is a ranged weapon, add 1 to the Damage characteristic of that attack.\n* If it is a melee weapon, add 1 to the Strength characteristic of that attack.\n* If any unmodified [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1 are made for attacks with that weapon, after the attacking models unit has finished making its attacks, it suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Pack Hunters": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). Select one enemy unit within 6″ of and visible to a **&lt;CULT&gt; ATALAN** JACKALS** unit from your army. Until the end of the phase, each time a model in another friendly &lt;CULT&gt;** unit makes a ranged attack against that enemy unit, treat that enemy unit as being Exposed** for that attack.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Primed Explosive": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when a **GENESTEALER** CULTS** model from your army shoots with a [Grenade weapon](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#GRENADE) or a cache of demolition charges. Until the end of the phase, do not roll to determine the [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) made with that weapon; instead, the maximum number of attacks are made with that weapon (e.g. 6 attacks are made with an [Assault D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT) weapon).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Raking Fire": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), when an **ATALAN** or **ACHILLES RIDGERUNNERS** unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes an attack, if the target has a **crossfire marker** and was Exposed** when it was selected as the target, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). Note that the target must be Exposed (see Crossfire** rule), rather than by any other means (e.g. the Priority Target** ability).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Rapid Advance": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **GENESTEALER CULTS** GENESTEALER**, **GENESTEALER CULTS** BIKER** or **GENESTEALER CULTS** VEHICLE** unit from your army Advances. Do not make an [Advance roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Advance). Instead, until the end of the phase, add 6″ to the Move characteristic of models in that unit.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Reckless Demolitions": {
+        "text": "Use this Stratagem in the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), when a **GENESTEALER** CULTS** unit from your army is selected to fight. Select one model in that unit, then select one [Grenade weapon](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#GRENADE) that model is equipped with (excluding weapons that can only be shot with once per battle which that model has already shot with). Until the end of the phase:\n\n* That model can only attack with that Grenade weapon (even though it is not a melee weapon and even if it has the [Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons) special rule), and can do so even if it is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of an enemy unit. When it does so, it makes a [number of attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Number-of-Attacks) equal to that weapons Type characteristic.\n* Each time that model makes an attack with that weapon, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 2+ is always successful. On an unmodified hit roll of 1, after that model’s unit has finished making all of its attacks, one model in that unit is destroyed.After using this Stratagem, if you selected a weapon that can only be shot with once per battle for this Stratagem, that model is considered to have shot with that weapon.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Reckless Manoeuvre": {
+        "text": "Use this Stratagem at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Pick a DELIVERANCE BROODSURGE **GOLIATH TRUCK** unit from your army. DELIVERANCE BROODSURGE units embarked within that GOLIATH TRUCK can immediately [disembark](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Disembark) if they did not embark within it this turn. If any units do so, roll a D6 for each model disembarking. For each 1, a model that disembarked (your choice) is slain. Models that disembark in this manner must be set up more than 9″ from any enemy models and cannot move that phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Return To The Shadows": {
+        "text": "Use this Stratagem in your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), when a **GENESTEALER CULTS** INFANTRY** unit from your army is selected to move, or in your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), after a GENESTEALER** CULTS** INFANTRY** unit from your army has resolved all of its attacks but before it makes a [consolidation move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate). If that unit is more than 6″ away from any enemy units, remove it from the battlefield. In the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of your next Movement phase, set that unit back up on the battlefield anywhere that is more than 9″ away from any enemy models. If the battle ends and that unit is not on the battlefield, it is destroyed.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Movement",
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Rigged To Blow": {
+        "text": "Use this Stratagem in any phase, when a **GENESTEALER CULTS** VEHICLE** model from your army equipped with a cache of demolition charges is destroyed. Do not roll to see if that model explodes: it does so automatically.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Roaming Engagement": {
+        "text": "Use this Stratagem in your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE) after [making attacks](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Making-Attacks) with an **ATALAN** or **ACHILLES RIDGERUNNERS** unit from your army. That unit can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) of up to 7″ as if it were your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE). Until the end of the turn, that unit is not eligible to [declare a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) with.",
+        "stats": {
+          "Command Cost": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Shooting",
+            "Movement"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Subterranean Defence": {
+        "text": "Use this Stratagem if your army contains any **GENESTEALER** CULTS** units and you are the Defender in a Planetstrike mission, before revealing your **Cult Ambush** markers. For each CP spent on this Stratagem, you can select a different one of your Cult Ambush markers. Halve the number of [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) noted for that Cult Ambush marker (rounding down), before revealing it and resolving the remaining mortal wounds (if any).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Summon Familiar": {
+        "text": "Use this Stratagem in your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE). Select one **GENESTEALER** CULTS** model from your army that is equipped with a psychic familiar or alchemicus familiar and has already used that familiar’s ability. That model can use that familiar’s ability one additional time during the battle. Each GENESTEALER** CULTS** model from your army can only be selected for this Stratagem once.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Command"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§The First To Draw Blood": {
+        "text": "Use this Stratagem at the start of your [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). Pick a DELIVERANCE BROODSURGE unit from your army that made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn. Add 1 to [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made by that unit until the end of that phase.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Tunnel Crawlers": {
+        "text": "Use this Stratagem in your [Charge phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#CHARGE-PHASE). Select one [Area Terrain](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Area-Terrain) feature. Until the end of the turn, each time a **GENESTEALER CULTS** INFANTRY** unit from your army [declares a charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) against an enemy unit within that Area Terrain feature:\n\n* Enemy units within that Area Terrain feature cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch) or [Set to Defend](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Defensible).\n* That GENESTEALER** CULTS** INFANTRY** unit ignores the effects of the [Difficult Ground](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Difficult-Ground) trait from that Area Terrain feature.",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Charge"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Vengeance For The Martyred": {
+        "text": "Use this Stratagem when a **PAUPER PRINCES** CHARACTER** model from your army is destroyed by an enemy unit. Until the end of the battle, each time a friendly PAUPER** PRINCES** model makes a melee attack that targets that enemy unit, add 1 to that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
+        "stats": {
+          "Command Cost": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Special timing"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
+      "Stratagem§Xenoform Bionics": {
+        "text": "Use this Stratagem before the battle, when you are mustering your army. Select one **BLADED <span class=\"kwbs\">COG** INFANTRY**</span> or BLADED <span class=\"kwbs\">COG** BIKER**</span> unit from your army. Models in that unit have a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves). If that unit has a [Power Rating](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Power-Ratings) of 6 or less, this Stratagem costs 1CP; otherwise, it costs 2CP.",
+        "stats": {
+          "Command Cost": {
+            "value": "1/2",
+            "statType": "term",
+            "tracked": true
+          }
+        },
+        "keywords": {
+          "Phase": [
+            "Pre-battle"
+          ],
+          "Tags": [
+            "Genestealer Cults Strat"
+          ]
+        }
+      },
       "Troops§Acolyte Hybrids": {
         "stats": {
           "Power Level": {
@@ -8034,23 +9001,17 @@
             "value": "Acolyte Hybrid"
           },
           "Cult icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Cult icon"
@@ -8062,23 +9023,17 @@
             "dynamic": true
           },
           "Cult lash whip": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": {
@@ -8168,23 +9123,17 @@
             "value": "Neophyte Hybrid"
           },
           "Cult icon": {
-            "value": "❌",
+            "value": "-",
             "statType": "rank",
             "statOrder": 10,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "❌": {
-                "order": 0,
-                "icons": [
-                  "cancel"
-                ]
+              "-": {
+                "order": 0
               },
-              "✅": {
+              "✓": {
                 "order": 1,
-                "icons": [
-                  "confirmed"
-                ],
                 "traits": [
                   {
                     "trait": "Wargear§Cult icon"
@@ -8262,8 +9211,7 @@
             "statType": "term",
             "value": "&lt;CULT&gt;",
             "text": "Once per battle, when this model starts to perform the Twisted Experiment [action](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Actions), you can select one friendly **{v} CORE** or **{v} ABERRANT** unit that is within 18″ of this model and does not have a genomic enhancement, instead of one within 3″. If you do so, for the purposes of determining if the action is completed, that selected unit is treated as being within 3″ of this model.\n\n\n\n*We recommend placing an Alchemicus Familiar model next to this model as a reminder, removing it once this ability has been used (an Alchemicus Familiar does not count as a model for any rules purposes).*",
-            "visibility": "hidden",
-            "dynamic": true
+            "visibility": "hidden"
           }
         }
       },
@@ -8320,92 +9268,37 @@
         "text": "Each time a ranged attack made by the bearer targets an enemy unit within 24\", the target does not receive the [benefits of cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-and-Cover) against that attack."
       },
       "Warlord Trait§Alien Majesty": {
-        "text": "* Add 3″ to the range of this **WARLORD**’s aura abilities (to a maximum of 9\").\n* Add 3″ to the range of the following abilities this WARLORD** has (if any): Meticulous Planner**; Priority Target**.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 5"
-          }
-        }
+        "text": "* Add 3″ to the range of this **WARLORD**’s aura abilities (to a maximum of 9\").\n* Add 3″ to the range of the following abilities this WARLORD** has (if any): Meticulous Planner**; Priority Target**."
       },
       "Warlord Trait§Bio-alchemist": {
-        "text": "Add 1 to the Damage characteristic of melee weapons this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is equipped with (excluding Relics).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Add 1 to the Damage characteristic of melee weapons this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is equipped with (excluding Relics)."
       },
       "Warlord Trait§Biomorph Adaptation": {
-        "text": "Add 1 to the Attacks and Toughness characteristics of this **WARLORD**.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 3"
-          }
-        }
+        "text": "Add 1 to the Attacks and Toughness characteristics of this **WARLORD**."
       },
       "Warlord Trait§Focus Of Adoration": {
-        "text": "While a friendly **&lt;CULT&gt; CORE** or **&lt;CULT&gt; PURESTRAIN** GENESTEALERS** unit is within 6″ of this WARLORD**, that unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 1"
-          }
-        }
+        "text": "While a friendly **&lt;CULT&gt; CORE** or **&lt;CULT&gt; PURESTRAIN** GENESTEALERS** unit is within 6″ of this WARLORD**, that unit is eligible to [perform Heroic Interventions](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) as if it were a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit."
       },
       "Warlord Trait§Hivelord (aura)": {
-        "text": "While a friendly **HIVECULT CORE** unit is within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), each time a model in that unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "While a friendly **HIVECULT CORE** unit is within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), each time a model in that unit makes a ranged attack, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 1 additional hit."
       },
       "Warlord Trait§Inscrutable Cunning": {
-        "text": "Once per battle round, when you use a Genestealer Cults Strategic Ploy Stratagem or Battle Tactic Stratagem, if that Stratagem is used on a **CULT** OF** THE** FOUR-ARMED** EMPEROR** unit within 12″ of this WARLORD**, you can reduce the CP cost of that Stratagem by 1CP (to a minimum of 0CP). Note that the CP cost is only reduced by 1CP for that use of the Stratagem, any future usages of it cost the normal amount of [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points). You can only use this ability on each Stratagem once.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Once per battle round, when you use a Genestealer Cults Strategic Ploy Stratagem or Battle Tactic Stratagem, if that Stratagem is used on a **CULT** OF** THE** FOUR-ARMED** EMPEROR** unit within 12″ of this WARLORD**, you can reduce the CP cost of that Stratagem by 1CP (to a minimum of 0CP). Note that the CP cost is only reduced by 1CP for that use of the Stratagem, any future usages of it cost the normal amount of [CPs](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points). You can only use this ability on each Stratagem once."
       },
       "Warlord Trait§Preternatural Speed": {
-        "text": "* Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 6"
-          }
-        }
+        "text": "* Each time this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) makes a melee attack, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this WARLORD** is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of any enemy units, it can fight first that phase."
       },
       "Warlord Trait§Prowling Agitant": {
-        "text": "Once per turn, when this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is selected as the target of a charge, before the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) is made and after firing any [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch), it can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) of up to 6″. Your opponent can then select new targets for that charge if they wish.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 4"
-          }
-        }
+        "text": "Once per turn, when this [**WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord) is selected as the target of a charge, before the [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) is made and after firing any [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch), it can make a [Normal Move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Normal-Move) of up to 6″. Your opponent can then select new targets for that charge if they wish."
       },
       "Warlord Trait§Shadow Stalker": {
-        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits 2"
-          }
-        }
+        "text": "Each time an attack is made against this **WARLORD**, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
       },
       "Warlord Trait§Single-minded Obsession (aura)": {
-        "text": "Before the battle, select one enemy unit from your opponent’s army. While a friendly **BLADED <span class=\"kwbs\">COG** CORE**</span> unit is within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), each time a model in that unit makes an attack against that enemy unit, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "Before the battle, select one enemy unit from your opponent’s army. While a friendly **BLADED <span class=\"kwbs\">COG** CORE**</span> unit is within 6″ of this [WARLORD**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#The-Warlord), each time a model in that unit makes an attack against that enemy unit, you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)."
       },
       "Warlord Trait§Xenoprophet": {
-        "text": "* Each time you take an **Unquestioning Loyalty** test** after a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for this WARLORD** is failed, do not roll the dice; it is automatically passed.\n* Each time a saving throw made for this WARLORD** is failed, for the purposes of the Unquestioning Loyalty ability, you can select one other friendly **PAUPER PRINCES** or [BROOD** BROTHERS**](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Brood-Brothers) model with that ability within 6″ of this WARLORD** instead of 3\".\n* While a friendly **PAUPER PRINCES** CORE** unit is within 6″ of this WARLORD**, models in that unit can use this model’s Leadership characteristic instead of their own.",
-        "stats": {
-          "Discipline": {
-            "value": "Warlord Traits"
-          }
-        }
+        "text": "* Each time you take an **Unquestioning Loyalty** test** after a [saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for this WARLORD** is failed, do not roll the dice; it is automatically passed.\n* Each time a saving throw made for this WARLORD** is failed, for the purposes of the Unquestioning Loyalty ability, you can select one other friendly **PAUPER PRINCES** or [BROOD** BROTHERS**](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Brood-Brothers) model with that ability within 6″ of this WARLORD** instead of 3\".\n* While a friendly **PAUPER PRINCES** CORE** unit is within 6″ of this WARLORD**, models in that unit can use this model’s Leadership characteristic instead of their own."
       },
       "Weapon§Achilles missile launcher": {
         "stats": {
@@ -8590,7 +9483,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8672,7 +9566,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8691,7 +9586,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8711,7 +9607,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -8849,7 +9746,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 3
@@ -8951,7 +9849,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9013,7 +9912,8 @@
             "value": 3
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9036,7 +9936,8 @@
             "value": 1
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9059,7 +9960,8 @@
             "value": 2
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9100,7 +10002,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9117,7 +10020,8 @@
             "value": 0
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 1
@@ -9137,7 +10041,8 @@
             "value": -1
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 6
@@ -9253,7 +10158,8 @@
             "value": -3
           },
           "D": {
-            "value": "D6"
+            "value": "D6",
+            "statType": "term"
           },
           "S": {
             "value": 9
@@ -9278,7 +10184,8 @@
             "value": 2
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9333,10 +10240,12 @@
             "value": -3
           },
           "D": {
-            "value": "D3+3"
+            "value": "D3+3",
+            "statType": "term"
           },
           "S": {
-            "value": "x2"
+            "value": "x2",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
@@ -9392,7 +10301,8 @@
             "value": 0
           },
           "D": {
-            "value": "D3"
+            "value": "D3",
+            "statType": "term"
           },
           "S": {
             "value": 1
@@ -9434,7 +10344,8 @@
             "value": 1
           },
           "S": {
-            "value": "User"
+            "value": "User",
+            "statType": "term"
           },
           "Type": {
             "value": "Melee"
