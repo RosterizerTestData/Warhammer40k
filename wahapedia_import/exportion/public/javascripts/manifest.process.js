@@ -32,8 +32,8 @@ processInfo = (data,factionKey) => {
     genre: 'sci-fi',
     publisher: 'Games Workshop',
     url: 'https://warhammer40000.com/',
-    notes: '0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
-    revision: '0.0.17',
+    notes: '0.1.18: Utility tag on in-game strats\n\n0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any "model" assets\n\n0.0.6: "source" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.',
+    revision: '0.0.18',
     wip: true,
     dependencies: [
       {
@@ -822,6 +822,10 @@ processStratagems = (allResults) => {
       strat.keywords = strat.keywords || {};
       strat.keywords.Phase = strat.keywords.Phase || [];
       strat.keywords.Phase.push('Pre-battle');
+    }else{
+      strat.keywords = strat.keywords || {};
+      strat.keywords.Tags = strat.keywords.Tags || [];
+      strat.keywords.Tags.push('In-game');
     }
     if(!strat.keywords?.Phase?.length) strat.keywords = {Phase: ['Special timing']};
     strat.keywords.Tags = [allResults['!'].name + ' Strat'];

@@ -1,11 +1,11 @@
 {
   "name": "Grey Knights",
-  "revision": "9.1.16",
+  "revision": "9.1.18",
   "game": "Warhammer 40,000",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com/",
-  "notes": "9.0.15: Dedicated rules to turn off subfaction-specific units\n\n9.0.14: Clean up loadouts & text\n\n0.0.14: No more special stat for unit model qty.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "notes": "9.1.18: Utility tag on in-game strats\n\n9.1.17: Stratagems??\n\n9.1.16: Adjust toggle stats to be less silly looking\n\n9.0.15: Dedicated rules to turn off subfaction-specific units\n\n9.0.14: Clean up loadouts & text\n\n0.0.14: No more special stat for unit model qty.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis manifest is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
   "wip": true,
   "dependencies": [
     {
@@ -53,6 +53,9 @@
             "dynamic": true,
             "group": "Options",
             "statOrder": 20
+          },
+          "Faction": {
+            "value": "Grey Knights"
           }
         },
         "rules": {
@@ -776,6 +779,88 @@
                 "iterations": 1
               }
             ]
+          },
+          "greyKnightsWarlord": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warlord"
+                  ]
+                ],
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Grey Knights",
+                "contains": true,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 6,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "greyKnightsWarlord"
+                  ]
+                ],
+                "actionType": "set",
+                "value": 1,
+                "iterations": 1
+              }
+            ]
+          },
+          "allowRelicsOfTitan": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "greyKnightsWarlord"
+                  ]
+                ],
+                "min": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "pass",
+            "evaluate": "AND",
+            "order": 7,
+            "actions": [
+              {
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "actionType": "add",
+                "value": "Relics of Titan",
+                "iterations": 1
+              }
+            ]
           }
         }
       },
@@ -797,6 +882,11 @@
         "aspects": {
           "Lock Qty": true,
           "Unique": true
+        },
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
         }
       }
     },
@@ -9434,6 +9524,9 @@
             "visibility": "hidden",
             "tracked": true,
             "max": 1
+          },
+          "Faction Group": {
+            "value": "Imperium"
           }
         }
       },
@@ -9497,6 +9590,7 @@
             "Movement"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights",
             "Silver Blades"
           ]
@@ -9514,6 +9608,7 @@
             "Command"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9538,6 +9633,140 @@
         "removed": {
           "rules": {
             "There are multiples of this unique stratagem.": {}
+          }
+        },
+        "rules": {
+          "A Strike Force can only use this stratagem twice.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Battle Size",
+                    "value"
+                  ]
+                ],
+                "value": "Strike Force",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Armoury of Titan"
+                  ]
+                ],
+                "max": 2,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "error",
+            "evaluate": "OR"
+          },
+          "An Onslaught can only use this stratagem three times.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Battle Size",
+                    "value"
+                  ]
+                ],
+                "value": "Onslaught",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Armoury of Titan"
+                  ]
+                ],
+                "max": 3,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "error",
+            "evaluate": "OR"
+          },
+          "A Combat Patrol can only use this stratagem once.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Battle Size",
+                    "value"
+                  ]
+                ],
+                "value": "Combat Patrol",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Armoury of Titan"
+                  ]
+                ],
+                "max": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "error",
+            "evaluate": "OR"
+          },
+          "An Incursion can only use this stratagem once.": {
+            "evals": [
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Battle Size",
+                    "value"
+                  ]
+                ],
+                "value": "Incursion",
+                "operator": "AND",
+                "not": true,
+                "actionable": true
+              },
+              {
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Armoury of Titan"
+                  ]
+                ],
+                "max": 1,
+                "operator": "AND",
+                "not": false,
+                "actionable": true
+              }
+            ],
+            "failState": "error",
+            "evaluate": "OR"
           }
         }
       },
@@ -9577,6 +9806,7 @@
             "Movement"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9593,6 +9823,7 @@
             "Fight"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights",
             "Rapiers"
           ]
@@ -9610,6 +9841,7 @@
             "Shooting"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9626,6 +9858,7 @@
             "Command"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9678,6 +9911,7 @@
             "Movement"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9694,6 +9928,7 @@
             "Fight"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9710,6 +9945,7 @@
             "Special timing"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9727,6 +9963,7 @@
             "Fight"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights",
             "Prescient Brethren"
           ]
@@ -9744,6 +9981,7 @@
             "Charge"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9760,6 +9998,7 @@
             "Movement"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9781,6 +10020,7 @@
             "Psychic"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9797,6 +10037,7 @@
             "Shooting"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9813,6 +10054,7 @@
             "Fight"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9829,6 +10071,7 @@
             "Command"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9845,6 +10088,7 @@
             "Psychic"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9861,6 +10105,7 @@
             "Shooting"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9877,6 +10122,7 @@
             "Psychic"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9893,6 +10139,7 @@
             "Command"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9926,6 +10173,7 @@
             "Psychic"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9942,6 +10190,7 @@
             "Psychic"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9958,6 +10207,7 @@
             "Shooting"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9974,6 +10224,7 @@
             "Shooting"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -9990,6 +10241,7 @@
             "Command"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10006,6 +10258,7 @@
             "Charge"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10022,6 +10275,7 @@
             "Charge"
           ],
           "Tags": [
+            "In-game",
             "Exactors",
             "Grey Knights"
           ]
@@ -10039,6 +10293,7 @@
             "Shooting"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10055,6 +10310,7 @@
             "Command"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10093,6 +10349,7 @@
             "Movement"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10109,6 +10366,7 @@
             "Movement"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10125,6 +10383,7 @@
             "Special timing"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10141,6 +10400,7 @@
             "Fight"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10157,6 +10417,7 @@
             "Charge"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10174,6 +10435,7 @@
             "Special timing"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10190,6 +10452,7 @@
             "Special timing"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
@@ -10207,6 +10470,7 @@
             "Special timing"
           ],
           "Tags": [
+            "In-game",
             "Grey Knights"
           ]
         }
