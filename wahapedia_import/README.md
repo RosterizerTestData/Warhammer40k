@@ -14,4 +14,4 @@ Install node ~15, then navigate to `cd exportion` and run `npm i` to install nod
 
 From `exportion/`, run `npm start` to start the server, then navigate to [http://localhost:3000/](http://localhost:3000/)
 
-Click a faction and then, in the browser’s network inspector, copy the returned object to paste into a manifest’s (im/ex)port window
+Click a faction and then, in the browser’s network inspector, copy the returned object to paste into a rulebook’s (im/ex)port window

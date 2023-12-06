@@ -1,5 +1,5 @@
 # Heretic Titan Legions!
 
-https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/main/heretic_titan_legions/Heretic_Titan_Legions.manifest
+https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/main/heretic_titan_legions/Heretic_Titan_Legions.rulebook
 
-Info about the manifest (the hash should perhaps be published here when versions are complete, so as to be googlable by people who want to match data versions)
+Info about the rulebook (the hash should perhaps be published here when versions are complete, so as to be googlable by people who want to match data versions)

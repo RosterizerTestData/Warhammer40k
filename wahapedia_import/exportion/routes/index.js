@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const pool = require('../config/data');
 const SqlString = require('sqlstring');
-const { processItems } = require('../public/javascripts/manifest.process');
+const { processItems } = require('../public/javascripts/rulebook.process');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -49,8 +49,8 @@ router.get('/:faction', async function (req, res, next) {
   allResults.sources = await getSources();
   // console.log('allresults',allResults)
   allResults['!'] = processInfo(allResults,req.params.faction);
-  allResults['!'].manifest.assetTaxonomy = processClasses(allResults);
-  allResults['!'].manifest.assetCatalog = processItems(allResults);
+  allResults['!'].rulebook.assetTaxonomy = processClasses(allResults);
+  allResults['!'].rulebook.assetCatalog = processItems(allResults);
   processStratagems(allResults);
   res.send(JSON.stringify(allResults['!']));
 });
