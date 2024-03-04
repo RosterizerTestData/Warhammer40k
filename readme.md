@@ -1,7 +1,5 @@
-# WH40k Rulebooks
+# 40k!
 
-Use these URLs to import (and link) the rulebook in Rosterizer in the rulebook import dialog. Import the base 40k rulebook first in order for dependencies to resolve automatically.
+https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k/main/40k9e/40k9e_Core.ruleboo
 
-If you're going to author stuff for 40k, it's wise to make it similar in structure to other 40k rulebooks.
-
-URLs trimmed out to soft-retire 9e
+info about this rulebook should go here

@@ -1,0 +1,5209 @@
+{
+  "name": "Agents of the Imperium",
+  "revision": "9.0.17",
+  "game": "Warhammer 40,000 9e",
+  "genre": "sci-fi",
+  "publisher": "Games Workshop",
+  "url": "https://warhammer40000.com/",
+  "notes": "0.0.17: Stratagems??\n\n0.0.16: Adjust toggle stats to be less silly looking\n\n0.0.15: Dedicated rules to turn off subfaction-specific units\n\n0.0.14: No more special stat for unit model qty + no more auto-trait units.\n\n0.0.13: Don’t blindly make loadout stats for units with no options\n\n0.0.12: Allow understrength units\n\n0.0.11: single-model units as game pieces\n\n0.0.10: waha update\n\n0.0.9: points update\n\n0.0.8: dynamic damage min/max variable type\n\n0.0.7: single-model units no longer have any \"model\" assets\n\n0.0.6: \"source\" keyword category\n\n0.0.5: add relics\n\nThis rulebook is provided for the purposes of testing the features of *Rosterizer* and is not intended for distribution.\n\nThe data included herein was programatically compiled from freely-available sources on the internet and likely contains some errors. Use with caution.",
+  "wip": true,
+  "dependencies": [
+    {
+      "slug": "123456",
+      "name": "40k9e",
+      "game": "Warhammer 40,000 9e",
+      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k9e/main/40k9e_Core.rulebook"
+    }
+  ],
+  "rulebook": {
+    "assetTaxonomy": {
+      "In-game Stratagems": {
+        "assets": {
+          "traits": []
+        }
+      },
+      "Telethesia Discipline": {
+        "templateClass": "Psychic Power"
+      }
+    },
+    "assetCatalog": {
+      "Ability§Abomination": {
+        "text": "This model can never be targeted or affected by psychic powers in any way. [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) units that are within 18″ of any CULEXUS** ASSASSINS** must subtract 2 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) and [Deny the Witch tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) they take."
+      },
+      "Ability§Agent": {
+        "text": "If this unit contains 1 **ACOLYTE** model at the start of the battle, it gains the [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) keyword."
+      },
+      "Ability§Agent of the Imperium": {
+        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can include one **AGENT OF** THE** IMPERIUM** unit in each IMPERIUM** (excluding FALLEN** units) [Patrol](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment), Boarding Patrol, [Battalion](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battalion-Detachment), [Brigade](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Brigade-Detachment) and [Arks of Omen Detachment](https://wahapedia.ru/wh40k9ed/the-rules/arks-of-omen-grand-tournament/#Arks-of-Omen-Detachment) in your army without those units taking up [Battlefield Role slots](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role-Slots) in those [Detachments](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachments). The inclusion of an AGENT** OF** THE** IMPERIUM** unit does not prevent other units from their Detachment benefiting from [Detachment abilities](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachment-Abilities) (e.g. [Chapter Tactics](https://wahapedia.ru/wh40k9ed/factions/space-marines/#Chapter-Tactics-1)), and it does not prevent other units from your army benefiting from abilities that require every model in your army to have that ability (e.g. **Combat Doctrines**). An AGENT** OF** THE** IMPERIUM** unit included in a Patrol, Boarding Patrol, Battalion, Brigade or Arks of Omen Detachment in this manner is ignored for any rules that state all units from that Detachment must have at least one Faction keyword in common (e.g. in a [matched play](https://wahapedia.ru/wh40k9ed/the-rules/matched-play) game), and when determining your [Army Faction](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Army-Faction).\n\n\n\nAn AGENT** OF** THE** IMPERIUM** unit can never be included in a [BROOD** BROTHERS** Detachment](https://wahapedia.ru/wh40k9ed/factions/genestealer-cults/#Brood-Brothers)."
+      },
+      "Ability§Authority of the Inquisition": {
+        "text": "**INFANTRY** units with this ability can embark within any **IMPERIUM TRANSPORT** model, even if that model normally only permits models with other Faction keywords to do so. All other restrictions apply normally (e.g. TERMINATOR** models can only embark within TRANSPORTS** that allow TERMINATOR** models to do so).\n\n\n\nIf your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), no more than one INQUISITOR** unit can be included in each INQUISITON** Detachment (i.e. a Detachment that includes only INQUISITION** units)."
+      },
+      "Ability§Bio-meltdown": {
+        "text": "If this model is destroyed, before removing the model from the battlefield, roll one D6 for each enemy unit that is within 6″ of this model. On a 4+ that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      },
+      "Ability§Captain on Deck": {
+        "text": "In your [Command phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#COMMAND-PHASE), select one friendly **NAVIS IMPERIALIS** CORE** unit within 9″ of this unit’s Cartographica Rogue Trader model. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+      },
+      "Ability§Daemonic": {
+        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Daemonic Power": {
+        "text": "At the start of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), roll one D6 for each model with this ability and apply the following result:\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">**D6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Result**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">1-2**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Daemonic Speed:** Until the start of your next turn, this model has a Move characteristic of 12″ and can **FLY**.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">3-4**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Re-knit Host Form:** This model regains all its lost wounds.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">5-6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Energy Torrent:** Roll one D6 for each enemy unit within 3″ of this model; on a 2+ that enemy unit suffers D3 **mortal wounds**.</td></tr></tbody></table></td></tr></tbody></table>"
+      },
+      "Ability§Deadshot": {
+        "text": "Each time you make a ranged attack, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule. In addition, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 for an attack made with an exitus pistol or exitus rifle, change the Damage characteristic of that weapon to D6 for that attack."
+      },
+      "Ability§Defence Orbs": {
+        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Dread Reputation (Aura)": {
+        "text": "While an enemy **INFANTRY** unit is within 6″ of this model, subtract 1 from the Leadership characteristic of models in that unit."
+      },
+      "Ability§Etherium": {
+        "text": "When resolving an attack that targets this model, the attacking model is treated as having a Weapon Skill and Ballistic Skill characteristic of 6+."
+      },
+      "Ability§Faultless Aim": {
+        "text": "Attacks made with ranged weapons by this model always hit on a 2+ if this model did not move this turn ([hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 are still required when firing [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch))."
+      },
+      "Ability§Field Generators and Uncanny Reflexes": {
+        "text": "This unit’s Cartographica Rogue Trader model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves). Other models in this unit have a 5+ invulnerable save."
+      },
+      "Ability§Frenzon": {
+        "text": "When making a [charge roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) for this model, roll 3D6 rather than 2D6. In addition, add 2 to this model’s Attacks characteristic if it charged or made a [Heroic Intervention](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Performing-a-Heroic-Intervention) this turn."
+      },
+      "Ability§Head Shot": {
+        "text": "If, after resolving an attack with an exitus pistol or exitus rifle by this model, a model in an enemy unit lost any wounds as a result of that attack but was not destroyed, roll one D6; on a 3+ that model suffers 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) and, if that model is not destroyed, you can roll one more D6. This time, that model suffers 1 mortal wound on a 4+. Keep rolling one D6, increasing the result required to cause a mortal wound by 1 each time, until the model in the enemy unit being rolled for is destroyed or the roll is failed."
+      },
+      "Ability§Healing Serum": {
+        "text": "While this unit includes a Rejuvenat Adept model, each time a model in this unit would lose a wound, roll one D6: on a 5+, that wound is not lost."
+      },
+      "Ability§Hit and Run": {
+        "text": "This model can shoot and charge in a turn in which it [Fell Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back)."
+      },
+      "Ability§Inconceivable Customisation": {
+        "text": "At the start of your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), you can select one friendly **&lt;ORDO&gt;** unit within 3″ of this model and roll one D6: apply the result from the table below to the selected unit until the end of the turn. A unit can be affected by more than one source of this ability (e.g. from multiple JOKAERO** WEAPONSMITHS**) in the same Shooting phase, but duplicated results will have no effect.\n\n\n\n<table border=\"0\" bordercolor=\"#888\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse:collapse;border-width:0px\"><tbody><tr><td><table class=\" customTable\" border=\"1\" bordercolor=\"#888\" cellpadding=\"4\" style=\"border-collapse:collapse;border-color:#888888;border-width:0px\"><tbody><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">D6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Result**</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">1-2**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Augmented Targeting:** When resolving an attack made by a model in this unit, you can re-roll the **hit roll**.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">3-4**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Augmented Penetration:** When resolving an attack made by a model in this unit, you can re-roll the **wound roll**.</td></tr><tr><td style=\"border-width:0 0 0 0;text-align:center;vertical-align:top;width:60px;height:0px;\">5-6**</td><td style=\"border-width:0 0 0 0;text-align:left;vertical-align:top;width:320px;height:0px;\">Total Augmentation:** When resolving an attack made by a model in this unit, you can re-roll the **hit roll** and you can re-roll the **wound roll**.</td></tr></tbody></table></td></tr></tbody></table>"
+      },
+      "Ability§Independent Operative": {
+        "text": "Units with the **OFFICIO ASSASSINORUM** keyword gain the abilities below:\n\n* This unit can never have a [Warlord Trait](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Warlord-Traits).\n* During deployment, you can set up this unit in concealment instead of placing it on the battlefield. If you do, then in the [Reinforcements step](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements) of one of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE) you can set up this unit anywhere on the battlefield that is more than 9″ away from any enemy models."
+      },
+      "Ability§Indomitable": {
+        "text": "When a [Deny the Witch test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) is taken for this model, add 1 to the total."
+      },
+      "Ability§Iron Will": {
+        "text": "If this model is not a [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and a psychic power [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by an enemy model targets this model, roll 2D6; if the total is greater than or equal to the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) total, this model is not affected by that power (other models are still affected normally).\n\n***ERROR***—*The following text was found on another ability with the same name:*  \nIf a psychic power [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) by an enemy model targets this model, roll 2D6: if the total is greater than or equal to the [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) total, this model is not affected by that power (other models are still affected normally)."
+      },
+      "Ability§Killing Rampage": {
+        "text": "Each time a model in an enemy unit is destroyed as the result of an attack made with a melee weapon by this model, you can immediately make one additional attack with a melee weapon this model is equipped with against the same unit. These additional attacks cannot themselves generate further attacks. In addition, this model can [consolidate](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Consolidate) up to 6″ instead of up to 3\"."
+      },
+      "Ability§Life Drain": {
+        "text": "When resolving an attack made with a melee weapon by this model, [saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) and **Daemonic saving** throws** cannot be made unless it is an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Lightning Reflexes": {
+        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Loyal Servant": {
+        "text": "When a friendly **&lt;ORDO&gt; INQUISITOR** model within 3″ of this unit would lose any wounds as a result of an attack made against that model, this unit can attempt to intercept that attack. Roll one D6; on a 2+ that model does not lose those wounds and one model from this unit is destroyed. Only one attempt can be made to intercept each attack."
+      },
+      "Ability§Malus Codicium": {
+        "text": "Once per battle, at the end of your [Movement phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), you can use this ability. If you do so, this model loses the **Unquestionable Wisdom** ability. Set up a DAEMONHOST** model within 6″ of this model and more than 9″ away from any enemy models. Add 2 to that model’s Strength, Toughness, Wounds and Attacks characteristics. If this model is destroyed, that DAEMONHOST** model is also destroyed."
+      },
+      "Ability§Master and Commander": {
+        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), you can include a maximum of one Cartographica Rogue Trader model in each [Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachments) in your army. This model cannot be taken in a compulsory [Battlefield Role slot](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Battlefield-Role-Slots)."
+      },
+      "Ability§Masters of Close Confines": {
+        "text": "Each time a model in this unit makes a ranged attack that targets a unit within 12\", an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores one additional hit."
+      },
+      "Ability§Motive Force Evocation": {
+        "text": "While this unit includes a Lectro-Maester model, each time a model in this unit makes an attack, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6, improve the Armour Penetration characteristic of that attack by 1."
+      },
+      "Ability§No Stranger to Pain": {
+        "text": "When this model would lose a wound, roll one D6; on a 6, that wound is not lost."
+      },
+      "Ability§Paralysis Grenades": {
+        "text": "At the start of the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE), if this model made a [charge move](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Charging-with-a-Unit) this turn, you can select one enemy unit that is within [Engagement Range](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Engagement-Range) of this model. Until the end of that phase, that enemy unit cannot be selected to fight until all other eligible units have done so."
+      },
+      "Ability§Polymorphine": {
+        "text": "During deployment, you can set up this model in disguise instead of setting it up on the battlefield. At the end of any of your [Movement phases](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#MOVEMENT-PHASE), this model can revert to its true form – set it up anywhere on the battlefield that is more than D6+3\" away from any enemy models. For example, if you roll a 4, the model can be set up anywhere that is more than 7″ away from any enemy model."
+      },
+      "Ability§Psychic Assassin": {
+        "text": "Each time you select a target for a ranged weapon this model is making an attack with, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule if you select a **PSYKER CHARACTER** unit. In addition, this model can shoot with its psyk-out grenades in the same phase that it shoots with its animus speculum."
+      },
+      "Ability§Psyocculum": {
+        "text": "Each time you select a target for a ranged weapon this model is making an attack with, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule if you select a **PSYKER** CHARACTER** or DAEMON** CHARACTER** unit."
+      },
+      "Ability§Quarry": {
+        "text": "Units with the **ORDO MALLEUS**, **ORDO HERETICUS**, **ORDO XENOS** or **ORDO MINORIS** keyword gain the relevant ability below:\n\n* ORDO** MALLEUS**: When resolving an attack made by a model in this unit that targets a CHAOS** or DAEMON** unit, you can re-roll the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and you can re-roll the [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).\n* ORDO** HERETICUS**: When resolving an attack made by a model in this unit that targets a CHAOS** or [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) unit, you can re-roll the hit roll and you can re-roll the wound roll.\n* ORDO** XENOS**: When resolving an attack made by a model in this unit that targets a unit that is not CHAOS**, IMPERIUM** or UNALIGNED** unit, you can re-roll the hit roll and you can re-roll the wound roll.\n* ORDO** MINORIS**: When resolving an attack made by a model in this unit that targets a [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit, you can re-roll the hit roll and you can re-roll the wound roll."
+      },
+      "Ability§Radical Bond (Aura)": {
+        "text": "Whilst the **DAEMONHOST** model that was set up with this model’s Malus Codicium** ability is within 6″ of this model, when resolving an attack made by that model, add 1 to that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) and [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll), and when resolving an attack made against that model, add 1 to its [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) for that attack."
+      },
+      "Ability§Refractor Field": {
+        "text": "This model has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Reign of Confusion": {
+        "text": "If you have any models with this ability in your army, then in the first battle round, roll one D6 each time your opponent spends [Command Points](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) (CPs) to use a Stratagem. On a 4+ your opponent must spend one additional CP to use that Stratagem, or else it has no effect (any CPs spent so far are lost). This ability cannot affect [Stratagems](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems) used before the battle."
+      },
+      "Ability§Sentinel Array": {
+        "text": "Each time an enemy unit [Falls Back](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Fall-Back) whilst within 1″ of this model, before moving any models, this model can shoot as if it were its [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). These attacks must target the unit that is Falling Back."
+      },
+      "Ability§Shang": {
+        "text": "When this model [manifests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) the [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) psychic power, you can select one enemy unit within 18″ of and visible to this model to be affected, instead of the closest enemy unit."
+      },
+      "Ability§Shipborne Personnel": {
+        "text": "If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES), this unit cannot be used as a compulsory selection in a [Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Detachments) (e.g. as the only Troops unit in a [Patrol Detachment](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Patrol-Detachment)), unless that Detachment is a **NAVIS** IMPERIALIS** Detachment."
+      },
+      "Ability§Spy Network": {
+        "text": "When an enemy unit is set up on the battlefield as [Reinforcements](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Reinforcements), you can select one friendly **ORDO MALLEUS** unit within 6″ of this model. The selected unit can shoot at that enemy unit as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE). In addition, once per battle, when your opponent uses a [Stratagem](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Stratagems), this model can use its spy network. If it does, your opponent must spend 1 additional [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points) to resolve that Stratagem, or else it has no effect and any Command points spent on that Stratagem are considered not to have been spent. This ability cannot affect Stratagems used ‘before the battle’."
+      },
+      "Ability§Spymask": {
+        "text": "When resolving an attack made with a ranged weapon by this model, the target does not receive the benefit of [Light cover](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Light-Cover)."
+      },
+      "Ability§Stealth Suit": {
+        "text": "When resolving an attack made with a ranged weapon against this model, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll). If this model is on or in a [terrain feature](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Terrain-Features-1), subtract 2 from the hit roll instead."
+      },
+      "Ability§Supreme Will (Aura)": {
+        "text": "When a [Psychic test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) is taken for an enemy model within 12″ of this model, subtract 1 from the total."
+      },
+      "Ability§Throne of Judgement": {
+        "text": "This model has a 4+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves)."
+      },
+      "Ability§Unquestionable Wisdom (Aura)": {
+        "text": "While a friendly **IMPERIUM** unit is within 6″ of this model, models in that unit can use this model’s Leadership characteristic instead of their own."
+      },
+      "Ability§Void Armour": {
+        "text": "Each time an attack is allocated to a model in this unit, the Armour Penetration characteristic of that attack is worsened by 1."
+      },
+      "Elites§Acolytes": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "model": {
+            "value": "Acolyte"
+          },
+          "minModels": {
+            "value": 1
+          },
+          "Acolyte": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 6,
+            "value": 0,
+            "min": 1
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Acolytes",
+            "Character",
+            "Infantry"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Quarry",
+            "Ability§Agent",
+            "Ability§Loyal Servant"
+          ],
+          "included": [
+            "Model§Acolyte"
+          ]
+        },
+        "text": "This unit’s **Power Rating** is equal to the number of models in this unit. Every model is equipped with: laspistol; chainsword.\n\n• Any model can be equipped with 1 weapon from the ***Pistol Weapons*** list instead of 1 laspistol.\n\n• Any model can be equipped with 1 weapon from the **Melee Weapons** or **Ranged Weapons*** lists instead of 1 chainsword.\n\nnull\n\n***ERROR***—*there might be a problem with Power Rating that will require a custom rule.*",
+        "allowed": {
+          "items": [
+            "Model§Acolyte"
+          ]
+        }
+      },
+      "Elites§Daemonhost": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 25
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "A": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 7
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Daemon",
+            "Daemonhost",
+            "Infantry"
+          ],
+          "Faction": [
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Daemonic Power",
+            "Ability§Daemonic",
+            "Weapon§Unholy gaze",
+            "Weapon§Warp grasp"
+          ],
+          "included": []
+        },
+        "text": "A Daemonhost is equipped with: unholy gaze; warp grasp.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "Elites§Jokaero Weaponsmith": {
+        "stats": {
+          "Power Level": {
+            "value": 1
+          },
+          "Points": {
+            "value": 20
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 6
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 2
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 3
+          },
+          "A": {
+            "value": 2
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 7
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Infantry",
+            "Jokaero Weaponsmith"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition",
+            "Jokaero"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Defence Orbs",
+            "Ability§Inconceivable Customisation",
+            "Wargear§Jokaero weapons"
+          ],
+          "included": []
+        },
+        "text": "A Jokaero Weaponsmith is equipped with: Jokaero weapons.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Callidus Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          },
+          "Points": {
+            "value": 90
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Callidus Assassin",
+            "Character",
+            "Infantry"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Polymorphine",
+            "Ability§Hit and Run",
+            "Ability§Reign of Confusion"
+          ],
+          "included": []
+        },
+        "text": "A Callidus Assassin is a single model equipped with: neural shredder; phase sword; poison blades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Cartographica Rogue Trader": {
+        "stats": {
+          "Power Level": {
+            "value": 3
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Cartographica Rogue Trader",
+            "Character",
+            "Concussion Grenades",
+            "Infantry",
+            "Rogue Trader",
+            "Rogue Trader Retinue"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Astra Cartographica",
+            "Imperium",
+            "Navis Imperialis"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Captain on Deck",
+            "Ability§Field Generators and Uncanny Reflexes",
+            "Ability§Healing Serum",
+            "Ability§Motive Force Evocation",
+            "Ability§Master and Commander",
+            "Model§Cartographica Rogue Trader"
+          ]
+        },
+        "text": "Increase this unit’s **Power Rating** by +1** for every model it includes other than the Cartographica Rogue Trader.\n\n• The Cartographica Rogue Trader is equipped with: household pistol; monomolecular cane-rapier.\n\n• The Death Cult Executioner is equipped with: dartmask; Death Cult power blade.\n\n• The Lectro-Maester is equipped with: voltaic pistol.\n\n• The Rejuvenat Adept is equipped with: laspistol.\n\n\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§Death Cult Executioner",
+            "Model§Lectro-Maester",
+            "Model§Rejuvenat Adept"
+          ]
+        }
+      },
+      "HQ§Culexus Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          },
+          "Points": {
+            "value": 90
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Culexus Assassin",
+            "Infantry"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Abomination",
+            "Ability§Etherium",
+            "Ability§Life Drain",
+            "Ability§Psychic Assassin"
+          ],
+          "included": []
+        },
+        "text": "A Culexus Assassin is a single model equipped with: animus speculum; psyk-out grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Eversor Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          },
+          "Points": {
+            "value": 90
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 6
+          },
+          "A": {
+            "value": 6
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Eversor Assassin",
+            "Infantry"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Bio-meltdown",
+            "Ability§Sentinel Array",
+            "Ability§Frenzon",
+            "Ability§Killing Rampage"
+          ],
+          "included": []
+        },
+        "text": "An Eversor Assassin is a single model equipped with: executioner pistol; neuro-gauntlet; power sword; melta bombs.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Inquisitor": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 60
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          },
+          "loadout1": {
+            "value": "Bolt pistol",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Force axe": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force axe"
+                  }
+                ]
+              },
+              "Force stave": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force stave"
+                  }
+                ]
+              },
+              "Force sword": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force sword"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Inferno pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Chainsword",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Force axe": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force axe"
+                  }
+                ]
+              },
+              "Force stave": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force stave"
+                  }
+                ]
+              },
+              "Force sword": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force sword"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Inferno pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "Frag grenades",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Force axe": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force axe"
+                  }
+                ]
+              },
+              "Force stave": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force stave"
+                  }
+                ]
+              },
+              "Force sword": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force sword"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Inferno pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout4": {
+            "value": "Krak grenades",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 4,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Force axe": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force axe"
+                  }
+                ]
+              },
+              "Force stave": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force stave"
+                  }
+                ]
+              },
+              "Force sword": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force sword"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Inferno pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout5": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 5,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Force axe": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force axe"
+                  }
+                ]
+              },
+              "Force stave": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force stave"
+                  }
+                ]
+              },
+              "Force sword": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Force sword"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Inferno pistol",
+                      "stats": {
+                        "Points": {
+                          "value": 5
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Krak grenades": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Krak grenades"
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Nemesis daemon hammer": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Nemesis daemon hammer"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "<Ordo>",
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Quarry",
+            "Ability§Refractor Field",
+            "Ability§Iron Will",
+            "Psychic Power§Smite"
+          ],
+          "included": []
+        },
+        "text": "An Inquisitor is equipped with: bolt pistol; chainsword; frag grenades; krak grenades.\n\n• This model can have the [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) keyword. If it does, it can be equipped with 1 weapon from the ***Force Weapons*** list instead of 1 chainsword.\n\n• This model can be equipped with one of the following instead of 1 bolt pistol: 1 weapon from the **Pistol Weapons*** list; 1 weapon from the [Ranged Weapons](https://wahapedia.ru/wh40k9ed/factions/agents-of-the-imperium/#Ranged-Weapons) list.\n\n• This model can be equipped with 1 weapon from the **Melee Weapons*** list instead of 1 chainsword.\n\nIf this model is a [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), it can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the [Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/agents-of-the-imperium/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Inquisitor Coteaz": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 95
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "Sv": {
+            "value": 2
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Coteaz",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition",
+            "Ordo Malleus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Quarry",
+            "Ability§Refractor Field",
+            "Ability§Spy Network",
+            "Psychic Power§Smite",
+            "Weapon§Bolt pistol",
+            "Weapon§Master-crafted Nemesis Daemon hammer",
+            "Weapon§Psyber-eagle"
+          ],
+          "included": []
+        },
+        "text": "Inquisitor Coteaz is equipped with: bolt pistol; psyber-eagle; master-crafted Nemesis daemon hammer. Your army can only include one <s class=\"kwbs\">COTEAZ</s> model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic powerfrom the **[Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/agents-of-the-imperium/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Inquisitor Eisenhorn": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 85
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Eisenhorn",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition",
+            "Ordo Xenos"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Quarry",
+            "Ability§Malus Codicium",
+            "Ability§Radical Bond (Aura)",
+            "Ability§No Stranger to Pain",
+            "Psychic Power§Smite",
+            "Weapon§Artificer bolt pistol",
+            "Weapon§Barbarisater",
+            "Weapon§Electrobane grenades",
+            "Weapon§Runestaff"
+          ],
+          "included": []
+        },
+        "text": "Inquisitor Eisenhorn is equipped with: artificer bolt pistol; Barbarisater; runestaff; electrobane grenades. Your army can only include one <s class=\"kwbs\">EISENHORN</s> model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) two psychic powers in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and two psychic powers from the **[Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/agents-of-the-imperium/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Inquisitor Greyfax": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 90
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "Sv": {
+            "value": 3
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Greyfax",
+            "Infantry",
+            "Inquisitor",
+            "Psyker"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition",
+            "Ordo Hereticus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Quarry",
+            "Ability§Refractor Field",
+            "Ability§Indomitable",
+            "Ability§Psyocculum",
+            "Psychic Power§Smite",
+            "Wargear§Master-crafted condemnor boltgun",
+            "Weapon§Frag grenades",
+            "Weapon§Krak grenades",
+            "Weapon§Master-crafted power sword",
+            "Weapon§Psyk-out grenades"
+          ],
+          "included": []
+        },
+        "text": "Inquisitor Greyfax is equipped with: master-crafted condemnor boltgun; master-crafted power sword; frag grenades; krak grenades; psyk-out grenades. Your army can only include one <s class=\"kwbs\">GREYFAX</s> model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) two psychic powers in your opponent’s Psychic phase. It knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/agents-of-the-imperium/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Inquisitor Karamazov": {
+        "stats": {
+          "Power Level": {
+            "value": 6
+          },
+          "Points": {
+            "value": 125
+          },
+          "M": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 8
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 10
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "60mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Inquisitor",
+            "Karamazov",
+            "Vehicle"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition",
+            "Ordo Hereticus"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Quarry",
+            "Ability§Supreme Will (Aura)",
+            "Ability§Throne of Judgement",
+            "Ability§Iron Will",
+            "Ability§Dread Reputation (Aura)",
+            "Weapon§Master-crafted multi-melta",
+            "Weapon§Master-crafted power sword",
+            "Weapon§Throne of Judgement’s stomping feet"
+          ],
+          "included": []
+        },
+        "text": "Inquisitor Karamazov is equipped with: master-crafted multi-melta; master-crafted power sword; Throne of Judgement’s stomping feet. Your army can only include one <s class=\"kwbs\">KARAMAZOV</s> model.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Lord Inquisitor Kyria Draxus": {
+        "stats": {
+          "Power Level": {
+            "value": 4
+          },
+          "Points": {
+            "value": 85
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 4
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 3
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Infantry",
+            "Inquisitor",
+            "Kyria Draxus",
+            "Psyker"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Inquisition",
+            "Ordo Xenos"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Authority of the Inquisition",
+            "Ability§Unquestionable Wisdom (Aura)",
+            "Ability§Refractor Field",
+            "Ability§Shang",
+            "Ability§Paralysis Grenades",
+            "Psychic Power§Smite",
+            "Weapon§Dirgesinger",
+            {
+              "item": "Weapon§Power fist",
+              "stats": {
+                "Points": {
+                  "value": 0
+                }
+              }
+            }
+          ],
+          "included": []
+        },
+        "text": "Lord Inquisitor Kyria Draxus is equipped with: Dirgesinger; power fist. Your army can only include one <s class=\"kwbs\">KYRIA DRAXUS</s> model.\n\n\n\nThis model can attempt to [manifest](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers) one psychic power in your [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) and attempt to [deny](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Deny-the-Witch) one psychic power in your opponent’s Psychic phase. She knows [Smite](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Smite) and one psychic power from the **[Telethesia discipline](https://wahapedia.ru/wh40k9ed/factions/agents-of-the-imperium/#Telethesia-Discipline)**.",
+        "allowed": {
+          "classifications": [
+            "Telethesia Discipline"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "HQ§Vindicare Assassin": {
+        "stats": {
+          "Power Level": {
+            "value": 5
+          },
+          "Points": {
+            "value": 90
+          },
+          "M": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 5
+          },
+          "A": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 6
+          },
+          "Base": {
+            "value": "32mm",
+            "statType": "term"
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Character",
+            "Infantry",
+            "Vindicare Assassin"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Officio Assassinorum"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Independent Operative",
+            "Ability§Lightning Reflexes",
+            "Ability§Deadshot",
+            "Ability§Faultless Aim",
+            "Ability§Head Shot",
+            "Ability§Spymask",
+            "Ability§Stealth Suit"
+          ],
+          "included": []
+        },
+        "text": "A Vindicare Assassin is a single model equipped with: exitus pistol; exitus rifle; blind grenades.\n\n\n\nnull",
+        "aspects": {
+          "Type": "game piece"
+        }
+      },
+      "Model§Acolyte": {
+        "stats": {
+          "Points": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          },
+          "A": {
+            "value": 2
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 5
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          },
+          "loadout1": {
+            "value": "Laspistol",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-flamer"
+                  }
+                ]
+              },
+              "Combi-melta": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-melta"
+                  }
+                ]
+              },
+              "Combi-plasma": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-plasma"
+                  }
+                ]
+              },
+              "Condemnor boltgun": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Wargear§Condemnor boltgun"
+                  }
+                ]
+              },
+              "Plasma gun": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Wargear§Plasma gun",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Plasma pistol": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Boltgun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hot-shot lasgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hot-shot lasgun"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Inferno pistol"
+                  }
+                ]
+              },
+              "Laspistol": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Laspistol"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Meltagun",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 17,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 18,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 19,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 20,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 21,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "Chainsword",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-flamer"
+                  }
+                ]
+              },
+              "Combi-melta": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-melta"
+                  }
+                ]
+              },
+              "Combi-plasma": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-plasma"
+                  }
+                ]
+              },
+              "Condemnor boltgun": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Wargear§Condemnor boltgun"
+                  }
+                ]
+              },
+              "Plasma gun": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Wargear§Plasma gun",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Plasma pistol": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Boltgun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hot-shot lasgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hot-shot lasgun"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Inferno pistol"
+                  }
+                ]
+              },
+              "Laspistol": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Laspistol"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Meltagun",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 17,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 18,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 19,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 20,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 21,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-flamer"
+                  }
+                ]
+              },
+              "Combi-melta": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-melta"
+                  }
+                ]
+              },
+              "Combi-plasma": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Combi-plasma"
+                  }
+                ]
+              },
+              "Condemnor boltgun": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Wargear§Condemnor boltgun"
+                  }
+                ]
+              },
+              "Plasma gun": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Wargear§Plasma gun",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Plasma pistol": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma pistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Boltgun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Boltgun"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Flamer": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Flamer"
+                  }
+                ]
+              },
+              "Hot-shot lasgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Hot-shot lasgun"
+                  }
+                ]
+              },
+              "Incinerator": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Incinerator"
+                  }
+                ]
+              },
+              "Inferno pistol": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": "Weapon§Inferno pistol"
+                  }
+                ]
+              },
+              "Laspistol": {
+                "order": 14,
+                "traits": [
+                  {
+                    "trait": "Weapon§Laspistol"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 15,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Meltagun",
+                      "stats": {
+                        "Points": {
+                          "value": 10
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Needle pistol": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Weapon§Needle pistol"
+                  }
+                ]
+              },
+              "Power fist": {
+                "order": 17,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power fist"
+                  }
+                ]
+              },
+              "Power maul": {
+                "order": 18,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power maul"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 19,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power sword"
+                  }
+                ]
+              },
+              "Storm bolter": {
+                "order": 20,
+                "traits": [
+                  {
+                    "trait": "Weapon§Storm bolter"
+                  }
+                ]
+              },
+              "Thunder hammer": {
+                "order": 21,
+                "traits": [
+                  {
+                    "trait": "Weapon§Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        }
+      },
+      "Model§Canid": {
+        "stats": {
+          "Points": {
+            "value": 8
+          },
+          "M": {
+            "value": 8
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": "null",
+            "statType": "term"
+          },
+          "S": {
+            "value": 4
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          },
+          "A": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        }
+      },
+      "Model§Cartographica Rogue Trader": {
+        "stats": {
+          "Points": {
+            "value": 60
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 4
+          },
+          "A": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 9
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Dartmask",
+            "Weapon§Death Cult power blade",
+            "Weapon§Household pistol",
+            "Weapon§Laspistol",
+            "Weapon§Monomolecular cane-rapier",
+            "Weapon§Voltaic pistol"
+          ]
+        }
+      },
+      "Model§Death Cult Executioner": {
+        "stats": {
+          "Points": {
+            "value": 15
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 2
+          },
+          "A": {
+            "value": 5
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 5
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Dartmask",
+            "Weapon§Death Cult power blade",
+            "Weapon§Household pistol",
+            "Weapon§Laspistol",
+            "Weapon§Monomolecular cane-rapier",
+            "Weapon§Voltaic pistol"
+          ]
+        }
+      },
+      "Model§Lectro-Maester": {
+        "stats": {
+          "Points": {
+            "value": 15
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 2
+          },
+          "A": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 5
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Dartmask",
+            "Weapon§Death Cult power blade",
+            "Weapon§Household pistol",
+            "Weapon§Laspistol",
+            "Weapon§Monomolecular cane-rapier",
+            "Weapon§Voltaic pistol"
+          ]
+        }
+      },
+      "Model§Navis Armsman": {
+        "stats": {
+          "Points": {
+            "value": 0
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          },
+          "A": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          },
+          "loadout1": {
+            "value": "Navis shotgun",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma gun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Autopistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Autopistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainfist": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainfist"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Demolition charge": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Demolition charge"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Navis heavy shotgun": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis heavy shotgun"
+                  }
+                ]
+              },
+              "Navis las-volley": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis las-volley"
+                  }
+                ]
+              },
+              "Navis shotgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis shotgun"
+                  }
+                ]
+              },
+              "Power axe": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power axe"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma gun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Autopistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Autopistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainfist": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainfist"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Demolition charge": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Demolition charge"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Navis heavy shotgun": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis heavy shotgun"
+                  }
+                ]
+              },
+              "Navis las-volley": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis las-volley"
+                  }
+                ]
+              },
+              "Navis shotgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis shotgun"
+                  }
+                ]
+              },
+              "Power axe": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power axe"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout3": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 3,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma gun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Autopistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Autopistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainfist": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainfist"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Demolition charge": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Demolition charge"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Navis heavy shotgun": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis heavy shotgun"
+                  }
+                ]
+              },
+              "Navis las-volley": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis las-volley"
+                  }
+                ]
+              },
+              "Navis shotgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis shotgun"
+                  }
+                ]
+              },
+              "Power axe": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power axe"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        }
+      },
+      "Model§Navis Sergeant-at-Arms": {
+        "stats": {
+          "Points": {
+            "value": 0
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          },
+          "A": {
+            "value": 2
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          },
+          "loadout1": {
+            "value": "Navis shotgun",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 1,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma gun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Autopistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Autopistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainfist": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainfist"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Demolition charge": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Demolition charge"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Navis heavy shotgun": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis heavy shotgun"
+                  }
+                ]
+              },
+              "Navis las-volley": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis las-volley"
+                  }
+                ]
+              },
+              "Navis shotgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis shotgun"
+                  }
+                ]
+              },
+              "Power axe": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power axe"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "loadout2": {
+            "value": "-",
+            "label": "Loadout",
+            "statType": "rank",
+            "statOrder": 2,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Plasma gun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Plasma gun"
+                  }
+                ]
+              },
+              "Autopistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Autopistol"
+                  }
+                ]
+              },
+              "Bolt pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Bolt pistol"
+                  }
+                ]
+              },
+              "Chainfist": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainfist"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Weapon§Chainsword"
+                  }
+                ]
+              },
+              "Demolition charge": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Weapon§Demolition charge"
+                  }
+                ]
+              },
+              "Frag grenades": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Weapon§Frag grenades"
+                  }
+                ]
+              },
+              "Meltagun": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Weapon§Meltagun"
+                  }
+                ]
+              },
+              "Navis heavy shotgun": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis heavy shotgun"
+                  }
+                ]
+              },
+              "Navis las-volley": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis las-volley"
+                  }
+                ]
+              },
+              "Navis shotgun": {
+                "order": 11,
+                "traits": [
+                  {
+                    "trait": "Weapon§Navis shotgun"
+                  }
+                ]
+              },
+              "Power axe": {
+                "order": 12,
+                "traits": [
+                  {
+                    "trait": "Weapon§Power axe"
+                  }
+                ]
+              },
+              "Power sword": {
+                "order": 13,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Weapon§Power sword",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        }
+      },
+      "Model§Rejuvenat Adept": {
+        "stats": {
+          "Points": {
+            "value": 10
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 2
+          },
+          "A": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 5
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Dartmask",
+            "Weapon§Death Cult power blade",
+            "Weapon§Household pistol",
+            "Weapon§Laspistol",
+            "Weapon§Monomolecular cane-rapier",
+            "Weapon§Voltaic pistol"
+          ]
+        }
+      },
+      "Model§Voidmaster": {
+        "stats": {
+          "Points": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          },
+          "A": {
+            "value": 2
+          },
+          "Ld": {
+            "value": 7
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Artificer shotgun",
+            "Weapon§Lasgun",
+            "Weapon§Laspistol",
+            "Weapon§Voidsman rotor cannon"
+          ]
+        }
+      },
+      "Model§Voidsmen": {
+        "stats": {
+          "Points": {
+            "value": 8
+          },
+          "M": {
+            "value": 6
+          },
+          "WS": {
+            "value": 4
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          },
+          "A": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 4
+          },
+          "Base": {
+            "value": "25mm",
+            "statType": "term"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Artificer shotgun",
+            "Weapon§Lasgun",
+            "Weapon§Laspistol",
+            "Weapon§Voidsman rotor cannon",
+            "Weapon§Artificer shotgun",
+            "Weapon§Lasgun",
+            "Weapon§Laspistol",
+            "Weapon§Voidsman rotor cannon"
+          ]
+        }
+      },
+      "Roster§Roster": {},
+      "Telethesia Discipline§Castigation": {
+        "text": "**Witchfire:** *Castigation* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of and visible to this PSYKER** and roll 3D6: if the total exceeds the lowest Leadership characteristic in that enemy unit, that enemy unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds).",
+        "stats": {
+          "Roll": {
+            "value": 6
+          }
+        }
+      },
+      "Telethesia Discipline§Dominate": {
+        "text": "**Malediction:** *Dominate* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy model (excluding VEHICLE** models) within 12″ of this PSYKER** and roll 3D6. If the total is equal to or greater than that enemy model’s Leadership characteristic, that enemy model can immediately shoot with one weapon it is equipped with as if it were your [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), or make one attack as if it were the [Fight phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#FIGHT-PHASE). In either case, treat that enemy model as if it is a separate unit that is part of your army while shooting or making that melee attack.",
+        "stats": {
+          "Roll": {
+            "value": 3
+          }
+        }
+      },
+      "Telethesia Discipline§Mental Interrogation": {
+        "text": "**Malediction:** *Mental Interrogation* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) model within 12″ of and visible to this PSYKER**.\n\n* Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when resolving an attack made by that enemy model, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll).\n* If your army is [Battle-forged](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#BATTLE-FORGED-ARMIES) roll, 3D6: if the result is equal to or greater than that enemy model’s Leadership characteristic, you gain 1 [Command point](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Command-Points).",
+        "stats": {
+          "Roll": {
+            "value": 4
+          }
+        }
+      },
+      "Telethesia Discipline§Psychic Fortitude": {
+        "text": "**Blessing:** *Psychic Fortitude* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 4. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one friendly IMPERIUM** unit within 12″ of this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE), when a [Morale test](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Morale-Tests) is taken for that unit, do not roll the dice; it is automatically passed.",
+        "stats": {
+          "Roll": {
+            "value": 2
+          }
+        }
+      },
+      "Telethesia Discipline§Psychic Pursuit": {
+        "text": "**Blessing:** *Psychic Pursuit* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy [CHARACTER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Characters) unit that only contains models with a Wounds characteristic of 9 or less and is within 18″ of and visible to this PSYKER**. Then, select one friendly **&lt;ORDO&gt; INFANTRY** unit within 6″ of this PSYKER**. Until the end of your next [Shooting phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#SHOOTING-PHASE), each time you select a target for a ranged weapon a model in that friendly &lt;ORDO&gt;** INFANTRY** unit is making an attack with, you can ignore the [Look Out, Sir](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Look-out-Sir) rule if you select that enemy CHARACTER** unit as the target.",
+        "stats": {
+          "Roll": {
+            "value": 5
+          }
+        }
+      },
+      "Telethesia Discipline§Ritual Shackle": {
+        "text": "**Malediction:** *Ritual Shackle* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 7. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of this [PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE). Until your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Subtract 1 from [Psychic tests](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) made for that enemy unit.\n* Each time a model in that unit makes a melee attack, subtract 1 from that attack’s [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll).If the result of the Psychic test was 10 or more, you can select one enemy unit within 24″ of this PSYKER**, instead of within 18\".",
+        "stats": {
+          "Roll": {
+            "value": 1
+          }
+        }
+      },
+      "Telethesia Discipline§Terrify": {
+        "text": "**Malediction:** *Terrify* has a [warp charge](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Psychic-Tests) value of 6. If [manifested](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Manifesting-Psychic-Powers), select one enemy unit within 18″ of and visible to this PSYKER**. Until the start of your next [Psychic phase](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE):\n\n* Subtract 1 from the Leadership characteristic of models in that unit.\n* That unit cannot fire [Overwatch](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Overwatch).",
+        "stats": {
+          "Roll": {
+            "value": 1
+          }
+        }
+      },
+      "Troops§Imperial Navy Breachers": {
+        "stats": {
+          "Power Level": {
+            "value": 6
+          },
+          "Endurant shield": {
+            "value": "-",
+            "statType": "rank",
+            "statOrder": 10,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Wargear§Endurant shield",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          },
+          "Smoke grenades": {
+            "value": "-",
+            "statType": "rank",
+            "statOrder": 10,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": {
+                      "item": "Wargear§Smoke grenades",
+                      "stats": {
+                        "Points": {
+                          "value": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "visibility": "active",
+            "dynamic": true
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Core",
+            "Imperial Navy Breachers",
+            "Infantry",
+            "Smokescreen"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Navis Imperialis"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Void Armour",
+            "Ability§Shipborne Personnel",
+            {
+              "item": "Model§Navis Armsman",
+              "quantity": 9
+            },
+            "Model§Navis Sergeant-at-Arms"
+          ]
+        },
+        "text": "• One Navis Armsman model is equipped with: Navis las-volley.\n\n• One Navis Armsman model is equipped with: Navis heavy shotgun; endurant shield.\n\n• Every other model is equipped with: Navis shotgun.\n\n• The Navis Sergeant-at-Arms’ Navis shotgun can be replaced with one of the following: 1 autopistol and 1 chainsword; 1 bolt pistol and 1 power sword.\n\n• 1 Navis Armsman’s Navis las-volley can be replaced with one of the following: 1 meltagun; 1 plasma gun.\n\n• 1 Navis Armsman’s Navis shotgun can be replaced with 1 autopistol and 1 power axe.\n\n• 1 Navis Armsman’s Navis shotgun can be replaced with 1 autopistol and 1 chainfist.\n\n• 1 Navis Armsman can be equipped with 1 demolition charge, 1 frag grenades and 1 smoke grenades.\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§Navis Armsman"
+          ]
+        }
+      },
+      "Troops§Voidsmen-at-arms": {
+        "stats": {
+          "Power Level": {
+            "value": 2
+          },
+          "model": {
+            "value": "Voidsmen"
+          },
+          "minModels": {
+            "value": 4
+          },
+          "poweri": {
+            "value": 2
+          },
+          "power1": {
+            "value": 5
+          },
+          "Voidsmen": {
+            "visibility": "hidden",
+            "tracked": true,
+            "statType": "numeric",
+            "max": 8,
+            "value": 0,
+            "min": 1
+          }
+        },
+        "keywords": {
+          "Keywords": [
+            "Concussion Grenades",
+            "Core",
+            "Infantry",
+            "Voidsmen-at-Arms"
+          ],
+          "Faction": [
+            "Agents of the Imperium",
+            "Imperium",
+            "Navis Imperialis"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Agent of the Imperium",
+            "Ability§Masters of Close Confines",
+            "Ability§Shipborne Personnel",
+            "Model§Voidmaster"
+          ],
+          "included": [
+            {
+              "item": "Model§Voidsmen",
+              "quantity": 4
+            }
+          ]
+        },
+        "text": "If this unit contains 6 or more models, it has **Power Rating 4**.\n\n• For every 5 models in this unit, one Voidsman model is equipped with: laspistol; Voidsman rotor cannon.\n\n• Every other Voidsman model is equipped with: lasgun; laspistol.\n\n• The Voidmaster is equipped with: artificer shotgun; laspistol.\n\n\n\nnull",
+        "allowed": {
+          "items": [
+            "Model§Voidsmen",
+            "Model§Canid"
+          ]
+        }
+      },
+      "Wargear§Combi-flamer": {
+        "assets": {
+          "traits": [
+            "Weapon§Boltgun",
+            "Weapon§Flamer"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        }
+      },
+      "Wargear§Combi-melta": {
+        "assets": {
+          "traits": [
+            "Weapon§Boltgun",
+            "Weapon§Meltagun"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        }
+      },
+      "Wargear§Combi-plasma": {
+        "assets": {
+          "traits": [
+            "Weapon§Boltgun",
+            "Weapon§Plasma gun (standard)",
+            "Weapon§Plasma gun (supercharge)"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        }
+      },
+      "Wargear§Condemnor boltgun": {
+        "assets": {
+          "traits": [
+            "Weapon§Boltgun",
+            "Weapon§Condemnor stake"
+          ]
+        }
+      },
+      "Wargear§Endurant shield": {
+        "text": "The bearer has a 5+ [invulnerable save](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves). In addition, add 1 to armour [saving throws](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#4.-Saving-Throw) made for the bearer."
+      },
+      "Wargear§Jokaero weapons": {
+        "assets": {
+          "traits": [
+            "Weapon§Focused strike",
+            "Weapon§Scatter shot"
+          ]
+        }
+      },
+      "Wargear§Master-crafted condemnor boltgun": {
+        "assets": {
+          "traits": [
+            "Weapon§Master-crafted boltgun",
+            "Weapon§Condemnor stake"
+          ]
+        }
+      },
+      "Wargear§Plasma gun": {
+        "assets": {
+          "traits": [
+            "Weapon§Standard",
+            "Weapon§Supercharge"
+          ]
+        }
+      },
+      "Wargear§Plasma pistol": {
+        "assets": {
+          "traits": [
+            "Weapon§Standard",
+            "Weapon§Supercharge"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Wargear§Smoke grenades": {
+        "text": "The bearer gains the **SMOKESCREEN** keyword."
+      },
+      "Weapon§Animus speculum": {
+        "stats": {
+          "AP": {
+            "value": -4
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 5
+          },
+          "Type": {
+            "value": "Assault D3"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        },
+        "text": "Whilst there are any enemy [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) units within 18″ of the bearer, change this weapon’s Type characteristic to [Assault D6](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#ASSAULT)."
+      },
+      "Weapon§Artificer bolt pistol": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Artificer shotgun": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault 2"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        }
+      },
+      "Weapon§Autopistol": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Barbarisater": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When making an attack with this weapon, add 1 to the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+      },
+      "Weapon§Blind grenades": {
+        "stats": {
+          "AP": {
+            "value": "*",
+            "statType": "term"
+          },
+          "D": {
+            "value": "*",
+            "statType": "term"
+          },
+          "S": {
+            "value": "*",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Grenade D6"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "This weapon does not inflict any damage (do not make any [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll)). Instead, if a unit is hit by any blind grenades, subtract 1 from all [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) for attacks made by that unit until the end of the turn."
+      },
+      "Weapon§Bolt pistol": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Boltgun": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Chainfist": {
+        "stats": {
+          "AP": {
+            "value": -4
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": "x2",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "Each time an attack is made with this weapon, subtract 1 from that attack’s [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll), and if that attack is allocated to a **VEHICLE** model, that attack has a Damage characteristic of 3."
+      },
+      "Weapon§Chainsword": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": "User",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When the bearer fights, it makes 1 additional attack with this weapon."
+      },
+      "Weapon§Condemnor stake": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        },
+        "text": "Each time an attack made with this weapon profile is allocated to a [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) model, that model’s unit suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) in addition to the normal damage."
+      },
+      "Weapon§Dartmask": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 2
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "Each time an attack is made with this weapon against a unit (excluding **VEHICLE** or TITANIC** units), an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 2+ is always successful."
+      },
+      "Weapon§Death Cult power blade": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Weapon§Demolition charge": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade D6"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). The bearer can only shoot with each demolition charge it is equipped with once per battle."
+      },
+      "Weapon§Dirgesinger": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault 2"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 this weapon has an Armour Penetration characteristic of -3 for that attack."
+      },
+      "Weapon§Electrobane grenades": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Grenade 1"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon against a **VEHICLE** unit, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 4-5 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target in addition to any other damage, and an unmodified wound roll of 6 inflicts D3 mortal wounds on the target in addition to any other damage."
+      },
+      "Weapon§Executioner pistol": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Pistol 4"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon that target **INFANTRY** units."
+      },
+      "Weapon§Exitus pistol": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made. Attacks made with this weapon wound **INFANTRY** units on a 2+."
+      },
+      "Weapon§Exitus rifle": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 5
+          },
+          "Type": {
+            "value": "Heavy 1"
+          },
+          "Range": {
+            "value": "72″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made. Attacks made with this weapon wound **INFANTRY** units on a 2+."
+      },
+      "Weapon§Flamer": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault D6"
+          },
+          "Range": {
+            "value": "12″"
+          },
+          "Points": {
+            "value": 5
+          }
+        },
+        "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
+      },
+      "Weapon§Focused strike": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Heavy 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Force axe": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 2
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 10
+          }
+        }
+      },
+      "Weapon§Force stave": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 10
+          }
+        }
+      },
+      "Weapon§Force sword": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 10
+          }
+        }
+      },
+      "Weapon§Frag grenades": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Grenade D6"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons)"
+      },
+      "Weapon§Hot-shot lasgun": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        }
+      },
+      "Weapon§Household pistol": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Incinerator": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Heavy D6"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "Each time an attack is made with this weapon, that attack automatically hits the target."
+      },
+      "Weapon§Inferno pistol": {
+        "stats": {
+          "AP": {
+            "value": -4
+          },
+          "D": {
+            "value": "D6",
+            "statType": "term"
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        },
+        "text": "Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+2."
+      },
+      "Weapon§Krak grenades": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Grenade 1"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        }
+      },
+      "Weapon§Lasgun": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Laspistol": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Master-crafted boltgun": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Master-crafted multi-melta": {
+        "stats": {
+          "AP": {
+            "value": -4
+          },
+          "D": {
+            "value": "D6",
+            "statType": "term"
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Heavy 2"
+          },
+          "Range": {
+            "value": "30″"
+          }
+        },
+        "text": "Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+2."
+      },
+      "Weapon§Master-crafted Nemesis Daemon hammer": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": "x2",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Weapon§Master-crafted power sword": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Weapon§Melta bombs": {
+        "stats": {
+          "AP": {
+            "value": -4
+          },
+          "D": {
+            "value": "D6",
+            "statType": "term"
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Grenade 1"
+          },
+          "Range": {
+            "value": "4″"
+          }
+        },
+        "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon that target **VEHICLE** units."
+      },
+      "Weapon§Meltagun": {
+        "stats": {
+          "AP": {
+            "value": -4
+          },
+          "D": {
+            "value": "D6",
+            "statType": "term"
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Assault 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+2."
+      },
+      "Weapon§Monomolecular cane-rapier": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "Each time the bearer fights, it makes 3 additional attacks with this weapon."
+      },
+      "Weapon§Navis heavy shotgun": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault 4"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        }
+      },
+      "Weapon§Navis las-volley": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Heavy 4"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Navis shotgun": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault 2"
+          },
+          "Range": {
+            "value": "18″"
+          }
+        }
+      },
+      "Weapon§Needle pistol": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 is successful if the target is a **VEHICLE** unit or TITANIC** unit; otherwise an unmodified wound roll of 2+ is successful."
+      },
+      "Weapon§Nemesis daemon hammer": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": "x2",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 20
+          }
+        },
+        "text": "When resolving an attack made with this weapon, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+      },
+      "Weapon§Neural shredder": {
+        "stats": {
+          "AP": {
+            "value": "*",
+            "statType": "term"
+          },
+          "D": {
+            "value": "*",
+            "statType": "term"
+          },
+          "S": {
+            "value": "*",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Assault 1"
+          },
+          "Range": {
+            "value": "9″"
+          }
+        },
+        "text": "When resolving an attack with this weapon, if a hit is scored, do not make a [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll): instead roll 3D6; if the result is equal to or greater than the target unit’s highest Leadership characteristic, it suffers D3 [mortal wounds](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds)."
+      },
+      "Weapon§Neuro-gauntlet": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "You can re-roll [wound rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) for attacks made with this weapon."
+      },
+      "Weapon§Phase sword": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": "User",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, an [invulnerable saving throw](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Invulnerable-Saves) cannot be made."
+      },
+      "Weapon§Plasma gun (standard)": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 7
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Plasma gun (supercharge)": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Rapid Fire 1"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        },
+        "text": "If any unmodified [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1 are made for attacks with this weapon profile, the bearer is destroyed after shooting with this weapon."
+      },
+      "Weapon§Poison blades": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 2
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When the bearer fights, it makes 1 additional attack with this weapon. Attacks made with this weapon wound on a 3+ unless the target is a **VEHICLE** unit."
+      },
+      "Weapon§Power axe": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 2
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Weapon§Power fist": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": "x2",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "text": "When resolving an attack made with this weapon, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+      },
+      "Weapon§Power maul": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Weapon§Power sword": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 1
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Weapon§Psyber-eagle": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault D6"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Psyk-out grenades": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 2
+          },
+          "Type": {
+            "value": "Grenade D3"
+          },
+          "Range": {
+            "value": "6″"
+          }
+        },
+        "text": "[Blast](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Blast-Weapons). When resolving an attack made with this weapon against a [**PSYKER**](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#PSYCHIC-PHASE) or DAEMON** unit, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 inflicts 1 [mortal wound](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#Mortal-Wounds) on the target and the attack sequence ends."
+      },
+      "Weapon§Runestaff": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": "D3",
+            "statType": "term"
+          },
+          "S": {
+            "value": 3
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      },
+      "Weapon§Scatter shot": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Assault 6"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Standard": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 7
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        }
+      },
+      "Weapon§Storm bolter": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "Type": {
+            "value": "Rapid Fire 2"
+          },
+          "Range": {
+            "value": "24″"
+          },
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Weapon§Supercharge": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "If any unmodified [hit rolls](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 1 are made for attacks with this weapon profile, the bearer is destroyed after shooting with this weapon."
+      },
+      "Weapon§Throne of Judgement’s stomping feet": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": "User",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        },
+        "text": "When the bearer fights, it makes 2D3 additional attacks with this weapon."
+      },
+      "Weapon§Thunder hammer": {
+        "stats": {
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          },
+          "S": {
+            "value": "x2",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          },
+          "Points": {
+            "value": 15
+          }
+        },
+        "text": "When resolving an attack made with this weapon, subtract 1 from the [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll)."
+      },
+      "Weapon§Unholy gaze": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 8
+          },
+          "Type": {
+            "value": "Assault 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "When resolving an attack made with this weapon, on an unmodified [wound roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#2.-Wound-Roll) of 6 this weapon has a Damage characteristic of 3 for that attack."
+      },
+      "Weapon§Voidsman rotor cannon": {
+        "stats": {
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 6
+          },
+          "Type": {
+            "value": "Heavy 4"
+          },
+          "Range": {
+            "value": "24″"
+          }
+        }
+      },
+      "Weapon§Voltaic pistol": {
+        "stats": {
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "Type": {
+            "value": "Pistol 1"
+          },
+          "Range": {
+            "value": "12″"
+          }
+        },
+        "text": "Each time an attack is made with this weapon, an unmodified [hit roll](https://wahapedia.ru/wh40k9ed/the-rules/core-rules/#1.-Hit-Roll) of 6 scores 2 additional hits."
+      },
+      "Weapon§Warp grasp": {
+        "stats": {
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": "User",
+            "statType": "term"
+          },
+          "Type": {
+            "value": "Melee"
+          },
+          "Range": {
+            "value": "Melee"
+          }
+        }
+      }
+    }
+  }
+}
